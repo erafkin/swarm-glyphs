@@ -7,7 +7,7 @@ Three phases in one log folder:
 3. Optional monitors read only the task chat under separate briefings. Storm Shelter presets
    defer this to src.enc_dec.monitor so the same saved transcript can be replayed independently.
 
-Usage: .venv/bin/python -m src.enc_dec.run <config.json>
+Usage: .venv/bin/python -m src.enc_dec.run <config.json> [--creation-only | --language-file swarmish.txt]
 """
 
 import argparse
@@ -51,9 +51,12 @@ FATAL_STATUS_CODES = {400, 401, 402, 404, 413}
 
 
 class LanguageExperiment:
-    def __init__(self, config: LanguageExperimentConfig, language_text: str | None = None):
+    def __init__(self, config: LanguageExperimentConfig, language_text: str | None = None, creation_only: bool = False):
         if language_text is not None and not language_text.strip():
             raise ValueError("The supplied swarmish document is empty")
+        if creation_only and language_text is not None:
+            raise ValueError("creation_only skips the task, so a supplied swarmish document would never be used")
+        self.creation_only = creation_only  # stop after swarmish.txt is written; no task, no monitors
         self.config = config
         self.rng = random.Random(config.seed)
         self.logger = GameLogger(config.log_dir)
@@ -399,6 +402,9 @@ class LanguageExperiment:
                 self.creation_stop_reason = "usage_cost_missing"
             if self.creation_stop_reason not in ("time_limit", "all_done", "provided_language"):
                 return
+            if self.creation_only:
+                print(f"Creation only: {LANGUAGE_FILE} is written; the task and monitors were not run.")
+                return
 
             ids = [a.agent_id for a in self.task_agents]
             self.task_prompts = {
@@ -434,6 +440,7 @@ class LanguageExperiment:
         summary = {
             "game_id": self.logger.game_id,
             "task_kind": self.config.task_kind,
+            "creation_only": self.creation_only,
             "creation_stop_reason": self.creation_stop_reason,
             "task_stop_reason": self.task_stop_reason,
             "elapsed_s": round(time.monotonic() - self.start_time, 1),
@@ -452,9 +459,9 @@ class LanguageExperiment:
         )
 
 
-def run_config(config: LanguageExperimentConfig, language_text: str | None = None) -> None:
+def run_config(config: LanguageExperimentConfig, language_text: str | None = None, creation_only: bool = False) -> None:
     try:
-        asyncio.run(LanguageExperiment(config, language_text).run())
+        asyncio.run(LanguageExperiment(config, language_text, creation_only).run())
     except KeyboardInterrupt:
         pass
 
@@ -464,15 +471,18 @@ def main() -> None:
     parser.add_argument("config", help="path to a LanguageExperimentConfig JSON file")
     parser.add_argument("--language-file", type=Path, help="use a frozen swarmish document and skip language creation")
     parser.add_argument("--prepare-only", action="store_true", help="save initial prompts and researcher ground truth without making API calls")
+    parser.add_argument("--creation-only", action="store_true", help="run language creation only: write swarmish.txt, then stop before the task")
     args = parser.parse_args()
+    if args.creation_only and args.language_file:
+        parser.error("--creation-only and --language-file exclude each other")
     config = LanguageExperimentConfig.from_file(args.config)
     language = args.language_file.read_text(encoding="utf-8") if args.language_file else None
     if args.prepare_only:
-        experiment = LanguageExperiment(config, language)
+        experiment = LanguageExperiment(config, language, args.creation_only)
         experiment.prepare()
         print(f"Prepared without API calls: {experiment.logger.path}")
     else:
-        run_config(config, language)
+        run_config(config, language, args.creation_only)
 
 
 if __name__ == "__main__":

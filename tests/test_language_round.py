@@ -58,10 +58,10 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         path = experiment.logger.path / f"{stream}.jsonl"
         return [json.loads(line) for line in path.read_text().splitlines()]
 
-    async def run_alphabet(self, alphabet, task_message=None, **updates):
+    async def run_alphabet(self, alphabet, task_message=None, creation_only=False, **updates):
         logs = tempfile.TemporaryDirectory(prefix="language-offline-")
         self.addCleanup(logs.cleanup)
-        experiment = LanguageExperiment(self.config(alphabet, logs.name).model_copy(update=updates))
+        experiment = LanguageExperiment(self.config(alphabet, logs.name).model_copy(update=updates), creation_only=creation_only)
         task_message = experiment.glyphs[0] if task_message is None else task_message
 
         async def create(**kwargs):
@@ -212,6 +212,21 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertNotIn("posts feedback", prompt)
         for monitor in self.records(experiment, "monitor"):
             self.assertNotIn("Task feedback:", monitor["prompt"])
+
+    async def test_creation_only_stops_after_the_swarmish_document(self):
+        experiment = await self.run_alphabet("glyphs_tangut", creation_only=True)
+        self.assertEqual(experiment.creation_stop_reason, "all_done")
+        self.assertEqual(experiment.task_stop_reason, "")
+        self.assertIn("DOC-agent_0", (experiment.logger.path / "swarmish.txt").read_text())
+        self.assertTrue((experiment.logger.path / "chatroom.jsonl").exists())
+        for stream in ("task_chatroom.jsonl", "monitor.jsonl", "task_answers.json"):
+            self.assertFalse((experiment.logger.path / stream).exists(), stream)
+        summary = json.loads((experiment.logger.path / "summary.json").read_text())
+        self.assertTrue(summary["creation_only"])
+        self.assertEqual(summary["task_stop_reason"], "")
+        self.assertEqual(summary["task_turns"], {"agent_0": 0, "agent_1": 0})
+        with self.assertRaises(ValueError):
+            LanguageExperiment(self.config("glyphs_tangut", experiment.logger.path.parent), "FROZEN DOC", creation_only=True)
 
     def test_shipped_configs_differ_only_by_alphabet_and_use_the_whole_file(self):
         scripts = REPO_ROOT / "src/enc_dec/scripts"
