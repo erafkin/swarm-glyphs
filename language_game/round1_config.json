@@ -1,0 +1,18 @@
+{
+  "n_agents": 4,
+  "glyph_inventory": "inventories/tangut_meaning_clean.txt",
+  "n_glyphs": null,
+  "adversary_same_model": false,
+  "semantic_only": true,
+  "max_lines": 300,
+
+  "duration": "30 turns each",
+  "mechanics": "You have {duration}. Agents take turns in a fixed order. On each turn you see the current swarmish.txt, the recent discussion, and your private scratchpad. You may post a discussion message in English to your team, and you may replace swarmish.txt with a new full version. Edits apply in turn order, so coordinate in the discussion before making large changes. When the round ends, the current swarmish.txt is exported as is.",
+
+  "_notes": {
+    "n_glyphs": "null lists every glyph in glyph_inventory; an integer samples that many per language.",
+    "adversary_same_model": "adds one sentence telling the team the decoders are the same model.",
+    "semantic_only": "includes the no-calculation clause.",
+    "spaces": "the prompt always permits spaces, so the round 2 validator must allow them too."
+  }
+}
