@@ -27,10 +27,11 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 Two modes (`mode` in the config):
 - `features`: agents guess every feature; feedback is per-feature accuracy across agents.
 - `board`: agents see the board of 32 people (`src/game_object/board.json`) and guess the goal
-  person's number (scored as % of agents correct).
+  person's name, a random UUID (scored as % of agents correct).
 
-In both modes the goal is a board person chosen by `seed`: seed 0 (the default) is person 22, other
-seeds pick a different fixed person, and `goal_person` overrides the seed.
+In both modes the goal is a board person chosen by `seed`: seed 0 (the default) is
+`c5cfd9c46c6840e9bd503464fab926f0` (formerly person 22), other seeds pick a different fixed person,
+and `goal_person` (a name) overrides the seed.
 Each game samples `n_glyphs` (default 18) glyphs from `glyph_dictionary` (`dictionary_a` (default) or
 `dictionary_b`, the .txt files at the repo root), shared by all agents. Each agent sees the glyphs,
 feature options, and board in its own random order.

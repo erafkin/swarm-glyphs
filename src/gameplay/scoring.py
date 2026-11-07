@@ -35,7 +35,7 @@ class ScoreReport(BaseModel):
     person_correct: int | None = None  # number of agents who guessed the goal person
     person_accuracy: float | None = None
     person_chance: float | None = None  # clue-aware mean; unavailable without the actual board
-    person_guesses: dict[str, int | None] | None = None
+    person_guesses: dict[str, str | None] | None = None
     blind_person_chance: float | None = None  # 1 / board size
     person_chance_by_agent: dict[str, float] | None = None
     person_candidate_counts: dict[str, int] | None = None
@@ -46,7 +46,7 @@ def score_round(
     elapsed_s: float,
     agents: list[AgentState],
     goal: GoalObject,
-    goal_person: int | None = None,
+    goal_person: str | None = None,
     board_size: int | None = None,
     *,
     board: Board | None = None,
@@ -103,7 +103,7 @@ def score_round(
             report.person_candidate_counts = {}
             for agent in agents:
                 candidates = [
-                    number for number, values in board.people.items()
+                    name for name, values in board.people.items()
                     if values[agent.known_feature] == agent.known_value
                 ]
                 report.person_candidate_counts[agent.agent_id] = len(candidates)

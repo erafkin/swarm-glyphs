@@ -17,8 +17,9 @@ class GameConfig(BaseModel):
     mode: Literal["features", "board"] = "features"
     board_path: str = str(DEFAULT_BOARD_PATH)
     # The goal is a person from the board in both modes (features mode uses their features).
-    # None derives it from seed: seed 0 -> person 22, other seeds -> a fixed person per seed.
-    goal_person: int | None = None
+    # Person name from board.json; None derives it from seed: seed 0 -> c5cf... (formerly person 22),
+    # other seeds -> a fixed person per seed.
+    goal_person: str | None = None
     # Glyphs: n_glyphs sampled from this dictionary file (repo root), shared by all agents.
     glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
     n_glyphs: int = Field(default=18, ge=1)

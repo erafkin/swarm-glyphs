@@ -48,7 +48,7 @@ def _ordering_text(board: Board | None) -> str:
         return f"""Each agent is shown {shuffled} in its own randomly shuffled order. The order you see
 is not the order the other agents see."""
     return f"""Each agent is shown {shuffled}, and the people on the board, in its own randomly shuffled
-order. The order you see is not the order the other agents see. Person numbers are the same for
+order. The order you see is not the order the other agents see. Person names are the same for
 every agent."""
 
 
@@ -82,7 +82,7 @@ def _response_format_text(board: Board | None) -> str:
     return f"""{fields}
 - "guess": your current belief for every feature of the goal person, using one of its possible
   values. These are notes for you; they are not scored. Always fill in every feature.
-- "person_guess": the number of the person on the board you think is the goal person. This is
+- "person_guess": the name of the person on the board you think is the goal person. This is
   what is scored. You must always guess a person, even when you are unsure."""
 
 
@@ -103,6 +103,8 @@ The glyphs have no predefined meaning.
 Any chat message containing anything else (letters, digits, punctuation, other symbols) is
 discarded and replaced with "{VIOLATION_TOKEN}", which everyone understands to mean that agent
 tried to speak outside the glyphs.
+Each turn you are shown only the most recent {config.chat_context_messages} chatroom messages; older
+messages are not shown to you again.
 
 ORDERING
 {_ordering_text(board)}
@@ -168,7 +170,7 @@ def response_json_schema(agent: AgentState, board: Board | None) -> dict[str, An
         },
     }
     if board is not None:
-        properties["person_guess"] = {"type": "integer", "enum": agent.board_order or board.numbers}
+        properties["person_guess"] = {"type": "string", "enum": agent.board_order or board.names}
 
     return {
         "name": "agent_response",

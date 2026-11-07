@@ -1,9 +1,10 @@
 """
-Board for the "Guess Who" game: a fixed set of numbered people, each a full assignment of feature values.
-Every agent sees the whole board. The board also supplies the default goal in both game modes.
+Board for the "Guess Who" game: a fixed set of people, each identified by a random ID ("name") and
+a full assignment of feature values. Every agent sees the whole board (in its own shuffled order)
+and guesses by name. The board also supplies the goal in both game modes.
 
-board.json maps person number -> person, with features in one-hot (or label) form:
-  {"22": {"number": 22, "hair_colour": {"black": 0, "brown": 1, ...}, ...}, ...}
+board.json maps name -> person, with features in one-hot (or label) form:
+  {"c5cf...": {"name": "c5cf...", "hair_colour": {"black": 0, "brown": 1, ...}, ...}, ...}
 """
 
 import json
@@ -15,12 +16,12 @@ from pydantic import BaseModel, model_validator
 from src.game_object.features import FEATURES, Feature, GoalObject, check_values, labels_from_one_hot
 
 DEFAULT_BOARD_PATH = Path(__file__).parent / "board.json"
-DEFAULT_GOAL_PERSON = 22  # the goal for seed 0
+DEFAULT_GOAL_PERSON = "c5cfd9c46c6840e9bd503464fab926f0"  # the goal for seed 0 (formerly person 22)
 
 
 class Board(BaseModel):
     features: list[Feature]
-    people: dict[int, dict[str, str]]  # person number -> feature labels
+    people: dict[str, dict[str, str]]  # name -> feature labels
 
     @model_validator(mode="after")
     def _check_people(self) -> "Board":
@@ -35,34 +36,34 @@ class Board(BaseModel):
         return len(self.people)
 
     @property
-    def numbers(self) -> list[int]:
+    def names(self) -> list[str]:
         return sorted(self.people)
 
-    def goal(self, number: int) -> GoalObject:
-        return GoalObject(features=self.features, values=self.people[number])
+    def goal(self, name: str) -> GoalObject:
+        return GoalObject(features=self.features, values=self.people[name])
 
-    def render(self, order: list[int] | None = None) -> str:
-        """One line per person. order changes only the listing order; person numbers stay fixed."""
-        names = [f.name for f in self.features]
+    def render(self, order: list[str] | None = None) -> str:
+        """One line per person, in the given order (an agent's shuffled view)."""
+        features = [f.name for f in self.features]
         return "\n".join(
-            f"person {i}: " + ", ".join(f"{n}={self.people[i][n]}" for n in names) for i in (order or self.numbers)
+            f"person {n}: " + ", ".join(f"{f}={self.people[n][f]}" for f in features) for n in (order or self.names)
         )
 
 
-def goal_person_for_seed(seed: int | None, board: Board) -> int:
+def goal_person_for_seed(seed: int | None, board: Board) -> str:
     """Seed 0 is always DEFAULT_GOAL_PERSON; other seeds pick a fixed person per seed; None is random."""
     if seed == 0:
         return DEFAULT_GOAL_PERSON
     # Separate RNG so the goal doesn't depend on (or shift) the game's other random draws.
-    return random.Random(seed).choice(board.numbers)
+    return random.Random(seed).choice(board.names)
 
 
 def load_board(path: str | Path = DEFAULT_BOARD_PATH, features: list[Feature] = FEATURES) -> Board:
     people = {}
     for key, person in json.loads(Path(path).read_text()).items():
-        number = person.pop("number", int(key))
-        if number != int(key):
-            raise ValueError(f"board key {key!r} doesn't match its number {number}")
+        name = person.pop("name", key)
+        if name != key:
+            raise ValueError(f"board key {key!r} doesn't match its name {name!r}")
         one_hot = isinstance(next(iter(person.values())), dict)
-        people[number] = labels_from_one_hot(person) if one_hot else person
+        people[name] = labels_from_one_hot(person) if one_hot else person
     return Board(features=features, people=people)
