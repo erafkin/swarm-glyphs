@@ -86,7 +86,7 @@ class Game:
         agents = []
         for i in range(self.config.n_agents):
             feature = features[i % len(features)]
-            board_order = self.rng.sample(self.board.numbers, len(self.board)) if self.board else None
+            board_order = self.rng.sample(self.board.names, len(self.board)) if self.board else None
             agents.append(
                 AgentState(
                     agent_id=f"agent_{i}",
@@ -97,7 +97,7 @@ class Game:
                     glyphs_view=self.rng.sample(self.glyphs, len(self.glyphs)),
                     board_order=board_order,
                     guess=Guess.random(features, self.rng),
-                    person_guess=self.rng.choice(self.board.numbers) if self.board else None,
+                    person_guess=self.rng.choice(self.board.names) if self.board else None,
                 )
             )
         return agents
