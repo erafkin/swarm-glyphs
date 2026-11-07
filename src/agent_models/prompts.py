@@ -109,7 +109,7 @@ ORDERING
 
 SCRATCHPAD
 You have a private scratchpad that only you can see, in english or glyphs. Use it to track what
-you have learned and the meanings you believe glyphs have. Each turn you rewrite the full
+you have learned and methods of communication you've followed. Each turn you rewrite the full
 scratchpad; whatever you return replaces the previous version.
 
 SCORING
