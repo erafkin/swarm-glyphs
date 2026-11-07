@@ -10,7 +10,8 @@ The only communication in the chatroom is in glyphs for the agents except:
   to mean that that model tried to respond not in glyphs.
 Every M seconds (default 90), every agent's guess is scored and the result is posted in the chatroom.
 The game ends when the win condition is met or after max_score_rounds scoring rounds. Afterwards each
-agent is asked to explain its communication strategy (unless the game was interrupted).
+agent is asked to explain its communication strategy (unless the game was interrupted or hit a fatal
+API error such as an invalid key, no credits, or an unknown model, which stops the game immediately).
 
 Usage: python -m src.gameplay.play_game [--config path/to/config.json]
 """
@@ -24,7 +25,7 @@ from openai import AsyncOpenAI
 
 from src.agent_models.api_call import CallResult, call_agent, make_client
 from src.agent_models.model_obj import AgentResponse, AgentState, Guess
-from src.agent_models.potential_glyphs import VIOLATION_TOKEN, is_glyph_only, load_glyphs
+from src.agent_models.potential_glyphs import VIOLATION_TOKEN, is_glyph_only, sample_glyphs
 from src.agent_models.prompts import (
     build_final_interview_prompt,
     build_system_prompt,
@@ -37,6 +38,12 @@ from src.game_object.features import GoalObject, shuffle_options
 from src.gameplay.chatroom import SYSTEM_SENDER, Chatroom
 from src.gameplay.game_log import GameLogger
 from src.gameplay.scoring import ScoreReport, format_score, is_won, score_round
+
+# OpenRouter errors that retrying won't fix: invalid API key, out of credits, unknown model.
+# 403 is excluded because OpenRouter also uses it for per-request moderation flags.
+FATAL_STATUS_CODES = {401, 402, 404}
+# The final interview runs after these (for cost_limit_reached it adds one small call per agent past the limit).
+COMPLETED_STOP_REASONS = {"win_threshold_reached", "max_score_rounds_reached", "cost_limit_reached"}
 
 
 class Game:
@@ -55,7 +62,7 @@ class Game:
         if self.goal_person not in full_board.people:
             raise ValueError(f"goal_person {self.goal_person} is not on the board")
         self.goal: GoalObject = full_board.goal(self.goal_person)
-        self.glyphs = load_glyphs(config.glyphs_path)
+        self.glyphs = sample_glyphs(config.glyph_dictionary, config.n_glyphs, self.rng)
 
         if config.n_agents < len(self.goal.features):
             print(f"Warning: {config.n_agents} agents < {len(self.goal.features)} features; some features are unknown to everyone")
@@ -70,6 +77,7 @@ class Game:
         self.start_time = 0.0
         self.last_report: ScoreReport | None = None
         self.total_cost_usd = 0.0
+        self._warned_missing_cost = False
 
     def _create_agents(self) -> list[AgentState]:
         # Option, glyph, and board order and the starting guess are randomized per agent so that
@@ -98,7 +106,17 @@ class Game:
         return time.monotonic() - self.start_time
 
     def _add_cost(self, result: CallResult) -> None:
-        self.total_cost_usd += (result.usage or {}).get("cost") or 0.0
+        cost = (result.usage or {}).get("cost")
+        if cost is None and self.config.max_cost_usd is not None and not self._warned_missing_cost:
+            self._warned_missing_cost = True
+            print("Warning: OpenRouter didn't report cost for a call; max_cost_usd can't be fully enforced")
+        self.total_cost_usd += cost or 0.0
+        limit = self.config.max_cost_usd
+        if limit is not None and self.total_cost_usd >= limit and not self.stop.is_set():
+            # Calls already in flight still finish and are counted, so the total can overshoot slightly.
+            self.stop_reason = "cost_limit_reached"
+            print(f"Stopping: total cost ${self.total_cost_usd:.2f} reached max_cost_usd=${limit:.2f}")
+            self.stop.set()
 
     async def take_turn(self, client: AsyncOpenAI, agent: AgentState) -> None:
         turn_prompt = build_turn_prompt(
@@ -166,7 +184,17 @@ class Game:
                 await self.take_turn(client, agent)
                 backoff = self.config.min_turn_interval_s
             except Exception as e:  # API/network errors shouldn't kill the agent; log and back off
-                self.logger.log("errors", {"agent_id": agent.agent_id, "timestamp": time.time(), "error": repr(e)})
+                status = getattr(e, "status_code", None)
+                self.logger.log(
+                    "errors",
+                    {"agent_id": agent.agent_id, "timestamp": time.time(), "status_code": status, "error": repr(e)},
+                )
+                if status in FATAL_STATUS_CODES and not self.stop.is_set():
+                    # Retrying can't fix these, and a game where agents can't act isn't a valid run.
+                    self.stop_reason = f"fatal_api_error_{status}: {agent.agent_id} ({agent.model})"
+                    print(f"Stopping: OpenRouter returned {status} for {agent.agent_id} ({agent.model}): {e}")
+                    self.stop.set()
+                    return
                 backoff = min(max(backoff * 2, 5), 120)
             try:
                 await asyncio.wait_for(self.stop.wait(), timeout=backoff)
@@ -174,8 +202,15 @@ class Game:
                 pass
 
     async def scorer_loop(self) -> None:
-        for round_num in range(1, self.config.max_score_rounds + 1):
-            await asyncio.sleep(self.config.score_interval_s)
+        max_rounds = self.config.max_score_rounds
+        round_num = 0
+        while max_rounds is None or round_num < max_rounds:
+            round_num += 1
+            try:
+                await asyncio.wait_for(self.stop.wait(), timeout=self.config.score_interval_s)
+                return  # an agent stopped the game (cost limit or fatal API error); stop_reason is already set
+            except asyncio.TimeoutError:
+                pass
             if self.board is not None:
                 report = score_round(
                     round_num, self.elapsed(), self.agents, self.goal, self.goal_person, len(self.board)
@@ -248,7 +283,7 @@ class Game:
                 task.cancel()
             await asyncio.gather(*agent_tasks, return_exceptions=True)
             try:
-                if self.config.final_interview and self.stop_reason != "interrupted":
+                if self.config.final_interview and self.stop_reason in COMPLETED_STOP_REASONS:
                     await self.final_interview(client)
             finally:
                 await client.close()
@@ -270,16 +305,18 @@ class Game:
         print(f"Game over ({self.stop_reason}). Summary in {self.logger.path / 'summary.json'}")
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Run one swarm-glyphs game.")
-    parser.add_argument("--config", help="path to a JSON GameConfig; defaults are used if omitted")
-    args = parser.parse_args()
-
-    config = GameConfig.from_file(args.config) if args.config else GameConfig()
+def run_config(config: GameConfig) -> None:
     try:
         asyncio.run(Game(config).run())
     except KeyboardInterrupt:
         pass  # summary is written by Game.run's finally block
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Run one swarm-glyphs game.")
+    parser.add_argument("--config", help="path to a JSON GameConfig; defaults are used if omitted")
+    args = parser.parse_args()
+    run_config(GameConfig.from_file(args.config) if args.config else GameConfig())
 
 
 if __name__ == "__main__":

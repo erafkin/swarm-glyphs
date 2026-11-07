@@ -21,6 +21,15 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   (= number of features) so every feature is known by someone; fewer agents prints a warning.
 - **The system prompt tells agents scoring happens every N seconds**, plus the win condition and round limit.
 - **Responses arriving after the game stops are discarded** (cost is still counted).
+- **Cost cap** (`max_cost_usd`): the game stops once total OpenRouter cost (from per-call usage
+  accounting) reaches the cap. In-flight calls and the final interview still run, so the total can
+  overshoot by roughly one call per agent for each. `max_score_rounds: null` disables the round limit.
+- **Transient API errors are retried; fatal ones stop the game.** Rate limits, 5xx, and timeouts get
+  the SDK's 2 retries, then per-agent exponential backoff (5s to 120s) with the error in `errors.jsonl`.
+  401 (bad key), 402 (no credits), and 404 (unknown model) stop the game immediately with
+  `stop_reason = fatal_api_error_<code>: <agent> (<model>)`, skipping the final interview, since a
+  game where agents can't act isn't a valid run. 403 is not fatal (OpenRouter uses it for
+  per-request moderation flags).
 
 ## Agent responses
 
@@ -41,10 +50,14 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   allowed in messages so agents can address each other.
 - **A message with anything else is replaced entirely** by the shared violation token `⊘`. Newlines
   count as violations.
-- **Glyphs load from a .txt file** (`glyphs_path`, default `src/agent_models/glyphs.txt`). Every
+- **Glyphs come from one of two dictionaries** (`glyph_dictionary`: `dictionary_a` (default) or
+  `dictionary_b`, 50 glyphs each in `dictionary_a.txt` / `dictionary_b.txt` at the repo root). Every
   non-whitespace character is one glyph; duplicates and the violation token are rejected.
-  We start with 18 glyphs. The current file is a placeholder until the real set is pasted in.
+  Dictionary A is Tangut-block characters; dictionary B is unassigned code points (plane 4).
+- **Each game samples `n_glyphs` (default 18) from the dictionary**, without replacement, using the
+  game seed. All agents share that set; a dictionary glyph outside the sampled set is a violation.
 - **Glyph order is shuffled per agent** (`glyphs_view`), so each model sees a differently ordered list.
+  The sampled set is saved to `glyphs.json`; each agent's order is in `agents.json`.
 
 ## Goal object and modes
 
@@ -86,6 +99,10 @@ mode), which inflated scores for goals whose values happened to be listed first.
 - **Agents start from a random guess** (and a random person in board mode) instead of an empty one.
   Since every response must fill in every guess, this only matters before an agent's first response.
 - Per-agent views are recorded in `agents.json`.
+- **Agents are told the order is shuffled per agent** (ORDERING section of the system prompt), and
+  that person numbers are shared. Added after a GPT-6.1 Sol test turn proposed a protocol based on
+  "listed order", which can't work when every agent's lists are ordered differently. The prompt
+  states the fact only; it doesn't suggest a protocol.
 
 ## End-of-game interview
 
@@ -94,6 +111,17 @@ mode), which inflated scores for goals whose values happened to be listed first.
   system prompt, recent chat, scratchpad, and current guess are included as context.
 - Answers go to `final_interviews.jsonl`. Toggle with `final_interview` in config.
 - Replaced an earlier per-glyph "what does each glyph mean" interview.
+
+## First test runs (`src/scripts/`)
+
+- Two runs, seed 0 (goal person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
+  scoring every 90s: `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
+- **Stop only when every agent is right or the run's cost hits $50**: `win_threshold: 1.0`
+  (features mode: `win_mode: agents`, i.e. every agent has every feature right), `max_cost_usd: 50`,
+  no round limit.
+- GPT-6.1 Sol is a reasoning model that doesn't list `temperature` as supported, so `temperature` is
+  omitted and `max_tokens` is raised to 16000 (it includes hidden reasoning tokens). Request timeout
+  raised to 300s. Reasoning effort is left at the model default (`reasoning_effort` can set it).
 
 ## Logging
 

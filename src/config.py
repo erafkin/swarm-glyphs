@@ -8,7 +8,6 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, model_validator
 
-from src.agent_models.potential_glyphs import DEFAULT_GLYPHS_PATH
 from src.game_object.board import DEFAULT_BOARD_PATH
 
 
@@ -20,7 +19,9 @@ class GameConfig(BaseModel):
     # The goal is a person from the board in both modes (features mode uses their features).
     # None derives it from seed: seed 0 -> person 22, other seeds -> a fixed person per seed.
     goal_person: int | None = None
-    glyphs_path: str = str(DEFAULT_GLYPHS_PATH)
+    # Glyphs: n_glyphs sampled from this dictionary file (repo root), shared by all agents.
+    glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
+    n_glyphs: int = Field(default=18, ge=1)
 
     # Features are assigned round-robin, so n_agents >= number of features means every feature is known.
     n_agents: int = Field(default=8, ge=1)
@@ -29,8 +30,10 @@ class GameConfig(BaseModel):
     model: str = "openai/gpt-4o-mini"
     agent_models: list[str] | None = None
 
+    # Stop conditions besides winning; None disables that limit.
     score_interval_s: float = Field(default=90, gt=0)
-    max_score_rounds: int = Field(default=100, ge=1)
+    max_score_rounds: int | None = Field(default=100, ge=1)
+    max_cost_usd: float | None = Field(default=None, gt=0)  # total OpenRouter cost for the run
 
     # Features mode only ("board" mode always wins when win_threshold of agents guess the right person):
     # "agents": fraction of agents with every feature correct must reach win_threshold.
@@ -40,8 +43,9 @@ class GameConfig(BaseModel):
 
     chat_context_messages: int = Field(default=50, ge=0)
     min_turn_interval_s: float = Field(default=5, ge=0)
-    temperature: float = 1.0
-    max_tokens: int = 1500
+    temperature: float | None = 1.0  # None omits it (some reasoning models don't accept it)
+    reasoning_effort: Literal["minimal", "low", "medium", "high"] | None = None  # None uses the model default
+    max_tokens: int = 1500  # includes hidden reasoning tokens on reasoning models
     request_timeout_s: float = 120
 
     final_interview: bool = True  # after the game, ask each agent to explain its communication strategy

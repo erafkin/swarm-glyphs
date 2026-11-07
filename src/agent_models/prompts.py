@@ -42,23 +42,34 @@ The team wins when the agents identify which person on the board is the goal per
 share what you know and learn what the others know."""
 
 
+def _ordering_text(board: Board | None) -> str:
+    shuffled = "the glyphs and the possible values of each feature"
+    if board is None:
+        return f"""Each agent is shown {shuffled} in its own randomly shuffled order. The order you see
+is not the order the other agents see."""
+    return f"""Each agent is shown {shuffled}, and the people on the board, in its own randomly shuffled
+order. The order you see is not the order the other agents see. Person numbers are the same for
+every agent."""
+
+
 def _scoring_text(config: GameConfig, board: Board | None) -> str:
-    rounds = f"or after {config.max_score_rounds} scoring rounds"
+    rounds = f", or after {config.max_score_rounds} scoring rounds" if config.max_score_rounds else ""
+    agents = "all agents" if config.win_threshold == 1 else f"at least {config.win_threshold:.0%} of agents"
     if board is not None:
         return f"""Every {config.score_interval_s:g} seconds, every agent's current person guess is collected and scored.
 The group result is posted in the chatroom in english by "{SYSTEM_SENDER}", showing the percentage of
-agents who guessed the correct person. Individual guesses are not revealed. The game ends when at
-least {config.win_threshold:.0%} of agents guess the correct person, {rounds}."""
+agents who guessed the correct person. Individual guesses are not revealed. The game ends when
+{agents} guess the correct person{rounds}."""
 
     if config.win_mode == "agents":
-        win = f"at least {config.win_threshold:.0%} of agents have every feature correct"
+        win = f"{agents} have every feature correct"
     else:
-        win = f"every feature is guessed correctly by at least {config.win_threshold:.0%} of agents"
+        win = f"every feature is guessed correctly by {agents}"
     return f"""Every {config.score_interval_s:g} seconds, every agent's current guess is collected and scored.
 The group result is posted in the chatroom in english by "{SYSTEM_SENDER}", showing for each
 feature the percentage of agents who guessed it correctly, and the percentage of agents with
 every feature correct. Individual guesses are not revealed. The game ends when
-{win}, {rounds}."""
+{win}{rounds}."""
 
 
 def _response_format_text(board: Board | None) -> str:
@@ -92,6 +103,9 @@ The glyphs have no predefined meaning.
 Any chat message containing anything else (letters, digits, punctuation, other symbols) is
 discarded and replaced with "{VIOLATION_TOKEN}", which everyone understands to mean that agent
 tried to speak outside the glyphs.
+
+ORDERING
+{_ordering_text(board)}
 
 SCRATCHPAD
 You have a private scratchpad that only you can see, in english or glyphs. Use it to track what

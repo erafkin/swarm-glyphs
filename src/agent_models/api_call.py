@@ -64,13 +64,12 @@ async def call_agent(
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": turn_prompt},
     ]
-    kwargs = dict(
-        model=model,
-        messages=messages,
-        temperature=config.temperature,
-        max_tokens=config.max_tokens,
-        extra_body={"usage": {"include": True}},  # asks OpenRouter to report per-call cost
-    )
+    extra_body: dict = {"usage": {"include": True}}  # asks OpenRouter to report per-call cost
+    if config.reasoning_effort is not None:
+        extra_body["reasoning"] = {"effort": config.reasoning_effort}
+    kwargs = dict(model=model, messages=messages, max_tokens=config.max_tokens, extra_body=extra_body)
+    if config.temperature is not None:
+        kwargs["temperature"] = config.temperature
 
     # Prefer schema-enforced output; some OpenRouter models reject response_format, so fall back to plain text.
     structured = json_schema is not None

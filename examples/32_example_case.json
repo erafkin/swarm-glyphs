@@ -1,0 +1,1634 @@
+{
+  "1": {
+    "number": 1,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "2": {
+    "number": 2,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "3": {
+    "number": 3,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "4": {
+    "number": 4,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 0,
+      "red": 1
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 1,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 1,
+      "smile": 0,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "5": {
+    "number": 5,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 1,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "6": {
+    "number": 6,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 1,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "7": {
+    "number": 7,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "8": {
+    "number": 8,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "9": {
+    "number": 9,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "10": {
+    "number": 10,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "11": {
+    "number": 11,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "12": {
+    "number": 12,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 1,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "13": {
+    "number": 13,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 0,
+      "red": 1
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 1,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "14": {
+    "number": 14,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "15": {
+    "number": 15,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 1,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 1,
+      "smile": 0,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "16": {
+    "number": 16,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "17": {
+    "number": 17,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "18": {
+    "number": 18,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "19": {
+    "number": 19,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 1,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "20": {
+    "number": 20,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "21": {
+    "number": 21,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 1,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 1,
+      "smile": 0,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "22": {
+    "number": 22,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "23": {
+    "number": 23,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 1,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "24": {
+    "number": 24,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "25": {
+    "number": 25,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 0,
+      "red": 1
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "26": {
+    "number": 26,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "27": {
+    "number": 27,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 1
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "28": {
+    "number": 28,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 1,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 1,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "29": {
+    "number": 29,
+    "hair_colour": {
+      "black": 0,
+      "brown": 1,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 1
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 1,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 1,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "30": {
+    "number": 30,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 1,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 0,
+      "ponytail": 1
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 1,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 1,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 1,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "31": {
+    "number": 31,
+    "hair_colour": {
+      "black": 0,
+      "brown": 0,
+      "blonde": 0,
+      "red": 1
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 0,
+      "spikes": 1,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 1,
+      "moustache": 0,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 1,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 0
+    },
+    "clothing": {
+      "shirt": 1,
+      "sweater": 0,
+      "hoodie": 0,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 0,
+      "blue": 0,
+      "green": 0,
+      "yellow": 1
+    },
+    "background": {
+      "green": 0,
+      "blue": 0,
+      "yellow": 0,
+      "purple": 1
+    },
+    "expression": {
+      "neutral": 0,
+      "smile": 1,
+      "frown": 0,
+      "surprised": 0
+    }
+  },
+  "32": {
+    "number": 32,
+    "hair_colour": {
+      "black": 1,
+      "brown": 0,
+      "blonde": 0,
+      "red": 0
+    },
+    "hairstyle": {
+      "bob": 0,
+      "curls": 1,
+      "spikes": 0,
+      "ponytail": 0
+    },
+    "facial_hair": {
+      "none": 0,
+      "moustache": 1,
+      "goatee": 0,
+      "beard": 0
+    },
+    "glasses": {
+      "none": 0,
+      "round": 0,
+      "square": 0,
+      "sunglasses": 1
+    },
+    "clothing": {
+      "shirt": 0,
+      "sweater": 0,
+      "hoodie": 1,
+      "jacket": 0
+    },
+    "clothing_colour": {
+      "red": 1,
+      "blue": 0,
+      "green": 0,
+      "yellow": 0
+    },
+    "background": {
+      "green": 0,
+      "blue": 1,
+      "yellow": 0,
+      "purple": 0
+    },
+    "expression": {
+      "neutral": 1,
+      "smile": 0,
+      "frown": 0,
+      "surprised": 0
+    }
+  }
+}
