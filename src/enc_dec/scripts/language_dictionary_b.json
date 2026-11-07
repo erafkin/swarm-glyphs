@@ -1,6 +1,5 @@
 {
-  "chat_mode": "free",
-  "glyph_dictionary": "dictionary_a",
+  "glyph_dictionary": "dictionary_b",
   "n_glyphs": null,
   "allow_spaces": true,
   "n_agents": 8,

@@ -11,7 +11,7 @@ from openai.types.chat import ChatCompletion
 
 from src.core.potential_glyphs import dictionary_path, load_dictionary
 from src.enc_dec.config import LanguageExperimentConfig
-from src.enc_dec.prompts import MONITOR_CONDITIONS
+from src.enc_dec.prompts import MONITOR_CONDITIONS, render_prompt
 from src.enc_dec.run import LanguageExperiment
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -32,9 +32,9 @@ def completion(text):
 
 
 class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
-    def config(self, chat_mode, log_dir):
+    def config(self, glyph_dictionary, log_dir):
         return LanguageExperimentConfig(
-            chat_mode=chat_mode,
+            glyph_dictionary=glyph_dictionary,
             n_agents=2,
             log_dir=log_dir,
             language_minutes=30,
@@ -52,11 +52,12 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         path = experiment.logger.path / f"{stream}.jsonl"
         return [json.loads(line) for line in path.read_text().splitlines()]
 
-    async def run_mode(self, chat_mode, **updates):
+    async def run_mode(self, glyph_dictionary="dictionary_a", task_message=None, **updates):
         logs = tempfile.TemporaryDirectory(prefix="language-offline-")
         self.addCleanup(logs.cleanup)
-        experiment = LanguageExperiment(self.config(chat_mode, logs.name).model_copy(update=updates))
-        task_message = "TASK FREE" if chat_mode == "free" else experiment.glyphs[0]
+        experiment = LanguageExperiment(self.config(glyph_dictionary, logs.name).model_copy(update=updates))
+        if task_message is None:
+            task_message = experiment.glyphs[0]
 
         async def create(**kwargs):
             system = kwargs["messages"][0]["content"]
@@ -81,7 +82,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         return experiment
 
     async def test_glyphs_mode_plans_in_english_and_task_chat_is_language_plus_feedback(self):
-        experiment = await self.run_mode("glyphs")
+        experiment = await self.run_mode("dictionary_a")
         self.assertEqual(experiment.creation_stop_reason, "all_done")
         self.assertEqual(experiment.task_stop_reason, "time_limit")
         self.assertEqual(set(experiment.glyphs), set(load_dictionary(dictionary_path("dictionary_a"))))
@@ -100,9 +101,10 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertNotIn("ENGLISH PLAN", task_prompt)
         self.assertIn("You did not create the language", task_prompt)
         creation_prompt = experiment.creation_prompts["agent_0"]
-        self.assertIn("ordinary English", creation_prompt)
-        self.assertIn("the most recent 100 messages and the current\nlanguage.txt", creation_prompt)
-        self.assertNotIn("scratchpad", creation_prompt)
+        self.assertIn("one of 2 agents", creation_prompt)
+        self.assertIn("Swarmish", creation_prompt)
+        self.assertIn(experiment.creation_agents[0].glyphs_view[0], creation_prompt)
+        self.assertIn("Forbidden: any rule defined over the letters", creation_prompt)
         self.assertNotIn(TASK, creation_prompt)
         creation_turns = [r for r in self.records(experiment, "agent_calls") if r["phase"] == "creation"]
         self.assertTrue(creation_turns)
@@ -139,19 +141,20 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
             self.assertNotIn("DOC-", prompt)
             self.assertNotIn("ENGLISH PLAN", prompt)
 
-    async def test_free_mode_posts_any_characters(self):
-        experiment = await self.run_mode("free")
-        self.assertEqual(experiment.glyphs, [])
+    async def test_dictionary_b_replaces_illegal_round2_messages(self):
+        experiment = await self.run_mode("dictionary_b", task_message="NOT_A_GLYPH")
+        self.assertEqual(set(experiment.glyphs), set(load_dictionary(dictionary_path("dictionary_b"))))
         chat = self.records(experiment, "chatroom")
         self.assertEqual([m["text"] for m in chat], ["ENGLISH PLAN", "ENGLISH PLAN"])
         self.assertFalse(any(m["is_violation"] for m in chat))
         task_chat = self.records(experiment, "task_chatroom")
-        self.assertEqual([m["text"] for m in task_chat[:2]], ["TASK FREE", "TASK FREE"])
+        self.assertEqual([m["text"] for m in task_chat[:2]], ["⊘", "⊘"])
+        self.assertTrue(all(m["is_violation"] for m in task_chat[:2]))
+        self.assertNotIn("NOT_A_GLYPH", json.dumps(task_chat))
         self.assertEqual(task_chat[-1]["sender"], "task")
-        self.assertEqual(len(self.records(experiment, "monitor")), 4)
 
     async def test_task_feedback_can_be_left_out_of_the_chat(self):
-        experiment = await self.run_mode("free", task_feedback=False)
+        experiment = await self.run_mode("dictionary_a", task_feedback=False)
         task_chat = self.records(experiment, "task_chatroom")
         self.assertTrue(task_chat)
         self.assertNotIn("task", [m["sender"] for m in task_chat])
@@ -162,13 +165,30 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         for monitor in self.records(experiment, "monitor"):
             self.assertNotIn("Task feedback:", monitor["prompt"])
 
-    def test_shipped_configs_differ_only_by_chat_mode_and_use_the_whole_dictionary(self):
+    def test_round1_flag_drops_the_semantic_only_block(self):
+        text = render_prompt(
+            "round1",
+            agent_id="agent_0",
+            n_agents=2,
+            other_agent_ids="agent_1",
+            n_glyphs=1,
+            glyphs="𘜎",
+            semantic_only=False,
+        )
+        self.assertTrue(text.startswith("You are agent_0,"))
+        self.assertIn("under 300 lines", text)
+        self.assertNotIn("Forbidden:", text)
+        self.assertNotIn("[[", text)
+
+    def test_shipped_configs_differ_only_by_dictionary_and_use_the_whole_file(self):
         scripts = REPO_ROOT / "src/enc_dec/scripts"
-        glyphs = LanguageExperimentConfig.from_file(scripts / "language_glyphs.json")
-        free = LanguageExperimentConfig.from_file(scripts / "language_free.json")
-        self.assertIsNone(glyphs.n_glyphs)
-        self.assertEqual(free.model_dump(), glyphs.model_copy(update={"chat_mode": "free"}).model_dump())
-        self.assertIn("PLACEHOLDER TASK", glyphs.task_prompt)
+        glyphs_a = LanguageExperimentConfig.from_file(scripts / "language_glyphs.json")
+        glyphs_b = LanguageExperimentConfig.from_file(scripts / "language_dictionary_b.json")
+        self.assertIsNone(glyphs_a.n_glyphs)
+        self.assertEqual(glyphs_a.glyph_dictionary, "dictionary_a")
+        self.assertEqual(
+            glyphs_b.model_dump(), glyphs_a.model_copy(update={"glyph_dictionary": "dictionary_b"}).model_dump()
+        )
 
 
 if __name__ == "__main__":

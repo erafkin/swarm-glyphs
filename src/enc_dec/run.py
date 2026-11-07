@@ -67,8 +67,6 @@ class LanguageExperiment:
         self.task_stop_reason = ""
 
     def _sample_glyphs(self) -> list[str]:
-        if self.config.chat_mode != "glyphs":
-            return []
         dictionary = load_dictionary(dictionary_path(self.config.glyph_dictionary))
         n = len(dictionary) if self.config.n_glyphs is None else self.config.n_glyphs
         return sample_glyphs(self.config.glyph_dictionary, n, self.rng)
@@ -96,13 +94,13 @@ class LanguageExperiment:
             self.stop.set()
 
     def _post(self, chat: Chatroom, agent_ids: list[str], sender: str, message: str) -> bool:
-        """Post a message. The planning chat is English. Only the task chat is glyph-checked."""
-        if self.phase == "task" and self.config.chat_mode == "glyphs":
-            violation = not is_glyph_only(message, agent_ids, self.glyphs, self.config.allow_spaces)
-            chat.post(sender, VIOLATION_TOKEN if violation else message, violation)
-            return violation
-        chat.post(sender, message)
-        return False
+        """Post a message. Planning chat is English. Round 2 uses the Guess Who glyph filter."""
+        if self.phase != "task":
+            chat.post(sender, message)
+            return False
+        violation = not is_glyph_only(message, agent_ids, self.glyphs, self.config.allow_spaces)
+        chat.post(sender, VIOLATION_TOKEN if violation else message, violation)
+        return violation
 
     def _post_feedback(self) -> None:
         self.task_chat.post(TASK_SENDER, feedback_text(self.task_agents))
@@ -348,7 +346,7 @@ class LanguageExperiment:
     def _write_summary(self) -> None:
         summary = {
             "game_id": self.logger.game_id,
-            "chat_mode": self.config.chat_mode,
+            "glyph_dictionary": self.config.glyph_dictionary,
             "creation_stop_reason": self.creation_stop_reason,
             "task_stop_reason": self.task_stop_reason,
             "elapsed_s": round(time.monotonic() - self.start_time, 1),

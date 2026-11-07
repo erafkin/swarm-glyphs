@@ -211,9 +211,11 @@ Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round
   stated the same way as the true task. Output is prose: how the language works, and what the task
   and conclusion were. `monitor_max_tokens` 16000 and medium reasoning are the "time to decipher".
   Logged to `monitor.jsonl`. The monitor still runs after a cost stop, not after a fatal API error.
-- **Two chat modes.** `language_glyphs.json`: only `dictionary_a` (all of it when `n_glyphs` is
-  null), spaces and agent IDs allowed. `language_free.json`: any characters. The configs match
-  apart from `chat_mode`. Task text in both is a placeholder.
+- **Two glyph inventories, no free-text round.** `language_glyphs.json` uses all of `dictionary_a`.
+  `language_dictionary_b.json` is the same config with `dictionary_b`. The configs match apart
+  from `glyph_dictionary`. Round 2 uses the Guess Who filter: a message with anything other than
+  the sampled glyphs (and spaces and agent IDs, when `allow_spaces` is on) is replaced with `⊘`
+  and the rejected text is not posted. The planning chat stays English. Task text in both is a placeholder.
 
 ## Logging
 

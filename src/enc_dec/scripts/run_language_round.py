@@ -7,7 +7,7 @@ wrong_task_near before treating a run as data.
 
 Usage:
   .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
-  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
+  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_dictionary_b.json
 """
 
 import argparse

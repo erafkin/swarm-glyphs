@@ -84,13 +84,14 @@ A new team then receives only that file and the task, and works on it in the lan
 `task_minutes`. With `task_feedback` true (the default), the task posts status updates into that
 chatroom; set it false to leave them out. The saved task chat is the agents'
 language messages plus that feedback. One monitor model reads only that chatroom, four times:
-the true task, no task, a distant wrong task, and a close wrong task. In `language_glyphs.json`
-the task chat may use only characters from `dictionary_a` (the whole file). In
-`language_free.json` it may use any characters. The task strings in both files are placeholders.
+the true task, no task, a distant wrong task, and a close wrong task. `language_glyphs.json`
+uses every character in `dictionary_a`; `language_dictionary_b.json` is the same run with
+`dictionary_b`. A round 2 message that uses anything else is replaced with `⊘` and the original
+text is not posted. The task strings in both files are placeholders.
 
 ```
 .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
-.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_dictionary_b.json
 ```
 
 ## Game and logs

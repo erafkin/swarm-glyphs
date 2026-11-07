@@ -13,13 +13,11 @@ from src.core.types import ReasoningEffort
 
 
 class LanguageExperimentConfig(BaseModel):
-    # Applies to the task chat, not the planning chat (that one is English).
-    # "glyphs": task chat may use only the sampled dictionary characters.
-    # "free": task chat may use any characters.
-    chat_mode: Literal["glyphs", "free"] = "glyphs"
+    # Round 2 chat may use only glyphs from this dictionary (dictionary_a.txt or dictionary_b.txt).
+    # The planning chat is English and is not filtered.
     glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
-    n_glyphs: int | None = Field(default=None, ge=1)  # glyphs mode only; None uses the whole dictionary
-    allow_spaces: bool = True  # glyphs mode only
+    n_glyphs: int | None = Field(default=None, ge=1)  # None uses the whole dictionary
+    allow_spaces: bool = True  # round 2: also allow spaces and agent IDs, same rule as Guess Who
 
     n_agents: int = Field(default=8, ge=1)
     model: str = "openai/gpt-4o-mini"
