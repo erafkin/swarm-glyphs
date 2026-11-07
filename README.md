@@ -23,12 +23,15 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 .venv/bin/python -m src.scripts.run_board_seed0
 .venv/bin/python -m src.scripts.run_board_seed0 src/scripts/board_seed0_no_spaces.json  # no spaces in chat
 .venv/bin/python -m src.scripts.run_features_seed0
+.venv/bin/python -m src.scripts.run_features_seed0 src/scripts/features_seed0_no_spaces.json  # glyphs only
 ```
 
 `allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
+The features no-spaces variant keeps the same eight agents, seed, model, scoring, and budget
+as `features_seed0.json`; only the communication restriction changes. Sender labels remain visible.
 
 Scoring runs every **4 minutes** (`score_interval_s: 240`) in the defaults and all shipped run configs.
-The two Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay
+The Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay
 call. End-of-game interviews use a separate English-only prompt, **medium** reasoning, and a 16,000-token
 budget. These budgets include hidden reasoning tokens. Temperature is omitted.
 The $50 cap is soft: calls already in flight finish and are logged before the interviews run.

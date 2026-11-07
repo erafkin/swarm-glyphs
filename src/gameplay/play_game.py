@@ -6,7 +6,7 @@ In board mode the goal is one person on a shared board (Guess Who); agents still
 and a guess counts as the correct person only if every feature matches.
 The agents have access to a chatroom where they can communicate with each other.
 The only communication in the chatroom is in glyphs for the agents except:
-- They can refer to each other using their unique identifier.
+- When allow_spaces is true, they can also use spaces and agent IDs in messages.
 - If they respond not in glyphs, a shared indication will be posted in the chatroom that is understood
   to mean that that model tried to respond not in glyphs.
 Every M seconds (default 240 / four minutes), every agent's guess is scored and the result is posted in the chatroom.

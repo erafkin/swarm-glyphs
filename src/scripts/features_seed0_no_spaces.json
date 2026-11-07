@@ -1,0 +1,20 @@
+{
+  "mode": "features",
+  "seed": 0,
+  "n_agents": 8,
+  "model": "openai/gpt-6.1-sol",
+  "temperature": null,
+  "reasoning_effort": "medium",
+  "max_tokens": 16000,
+  "final_interview_max_tokens": 16000,
+  "final_interview_reasoning_effort": "medium",
+  "request_timeout_s": 300,
+  "glyph_dictionary": "dictionary_a",
+  "n_glyphs": 18,
+  "score_interval_s": 240,
+  "max_score_rounds": null,
+  "max_cost_usd": 50,
+  "win_mode": "agents",
+  "win_threshold": 1.0,
+  "allow_spaces": false
+}

@@ -25,7 +25,7 @@ class GameConfig(BaseModel):
     # Glyphs: n_glyphs sampled from this dictionary file (repo root), shared by all agents.
     glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
     n_glyphs: int = Field(default=18, ge=1)
-    allow_spaces: bool = True  # False: chat messages may contain only glyphs and agent IDs, no spaces
+    allow_spaces: bool = True  # False: chat messages may contain only glyphs, no spaces or agent IDs
 
     # Features are assigned round-robin, so n_agents >= number of features means every feature is known.
     n_agents: int = Field(default=8, ge=1)

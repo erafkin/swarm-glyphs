@@ -58,10 +58,12 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   allowed in messages so agents can address each other.
 - **Spaces are configurable** (`allow_spaces`, default true). With `allow_spaces: false`, any space
   makes the message a violation, and the prompts say so. Agent IDs are not allowed in messages
-  either (a brief prefix-only version was dropped), so nothing can stand in for spaces as a
-  delimiter; messages are glyphs only. Agents still see each message's sender in the chat log.
+  either (a brief prefix-only version was dropped), so IDs cannot stand in for spaces as
+  delimiters; messages are glyphs only. Agents still see each message's sender in the chat log.
   With spaces on, IDs may appear anywhere.
-  `src/scripts/board_seed0_no_spaces.json` is the board seed-0 run with only this changed.
+  `src/scripts/board_seed0_no_spaces.json` and `src/scripts/features_seed0_no_spaces.json`
+  are the board and features seed-0 runs with only this changed. Both launchers accept
+  an optional config path; the original configs remain their defaults.
 - **A message with anything else is replaced entirely** by the shared violation token `⊘`. Newlines
   count as violations.
 - **Glyphs come from one of two dictionaries** (`glyph_dictionary`: `dictionary_a` (default) or
