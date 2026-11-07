@@ -74,8 +74,7 @@ class FeaturesLaunchTests(unittest.IsolatedAsyncioTestCase):
             prompt = self.game.system_prompts[agent.agent_id]
             self.assertIn(f"You know:\n  {agent.known_feature} = {agent.known_value}", prompt)
             self.assertEqual(agent.known_value, self.game.goal.values[agent.known_feature])
-            self.assertNotIn("BOARD:", prompt)
-            self.assertNotIn(self.game.goal_person, prompt)
+            self.assertNotIn("BOARD (", prompt)
             schema = self.game.json_schemas[agent.agent_id]["schema"]
             self.assertEqual(set(schema["required"]), {"scratchpad", "message", "guess"})
             guesses = schema["properties"]["guess"]
@@ -139,16 +138,38 @@ class FeaturesLaunchTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual([a.turn_count for a in self.game.agents], [0] * 8)
         self.assertEqual(len(self.game.chatroom), 0)
 
-    async def test_board_interview_preserves_person_name_context(self):
+    async def test_board_interview_includes_board_and_scoring_context(self):
         self.game = Game(self.config.model_copy(update={"mode": "board"}))
         client = self.fake_client(lambda _: self.fail("interview requested gameplay output"))
         await self.game.final_interview(client)
         for call, agent in zip(self.create.call_args_list, self.game.agents):
             system_prompt = call.kwargs["messages"][0]["content"]
-            self.assertIn("the person guess was scored", system_prompt)
+            self.assertIn("a guess counted as correct only if every feature matched", system_prompt)
             self.assertIn(self.game.board.render(agent.board_order), system_prompt)
             self.assertIn("ordinary English prose, not JSON", system_prompt)
             self.assertNotIn("Respond with a single JSON object", system_prompt)
+
+    async def test_board_mode_scores_full_feature_guesses_as_person_accuracy(self):
+        self.config.final_interview = False
+        self.game = Game(self.config.model_copy(update={"mode": "board"}))
+        for agent in self.game.agents:
+            prompt = self.game.system_prompts[agent.agent_id]
+            self.assertIn(self.game.board.render(agent.board_order), prompt)
+            self.assertNotIn("person_guess", json.dumps(self.game.json_schemas[agent.agent_id]))
+
+        def response(agent_id):
+            labels = dict(self.game.goal.values)
+            if agent_id == "agent_7":
+                labels["expression"] = next(o for o in self.game.goal.features[-1].options if o != labels["expression"])
+            return json.dumps({"scratchpad": "", "message": self.game.glyphs[0], "guess": labels})
+
+        await self.run_with(self.fake_client(response))
+        self.assertEqual(self.game.stop_reason, "max_score_rounds_reached")
+        scores = self.records("scores")
+        self.assertEqual(scores[-1]["person_correct"], 7)
+        self.assertEqual(scores[-1]["person_accuracy"], 7 / 8)
+        feedback = [m["text"] for m in self.records("chatroom") if m["sender"] == "system"]
+        self.assertEqual(feedback[-1], "Score round 2: 7 of 8 agents (88%) guessed the correct person.")
 
     async def test_partial_accuracy_feedback_and_glyph_violation_do_not_win(self):
         self.config.final_interview = False

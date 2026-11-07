@@ -34,11 +34,11 @@ what you know and learn what the others know."""
 described by these features (name: possible values):
 {feature_lines}
 
-BOARD:
+BOARD (one person per line):
 {board.render(agent.board_order)}
 
 {known}
-The team wins when the agents identify which person on the board is the goal person. You must
+The team wins when every agent's guess of all of the goal person's features is correct. You must
 share what you know and learn what the others know."""
 
 
@@ -48,17 +48,17 @@ def _ordering_text(board: Board | None) -> str:
         return f"""Each agent is shown {shuffled} in its own randomly shuffled order. The order you see
 is not the order the other agents see."""
     return f"""Each agent is shown {shuffled}, and the people on the board, in its own randomly shuffled
-order. The order you see is not the order the other agents see. Person names are the same for
-every agent."""
+order. The order you see is not the order the other agents see."""
 
 
 def _scoring_text(config: GameConfig, board: Board | None) -> str:
     rounds = f", or after {config.max_score_rounds} scoring rounds" if config.max_score_rounds else ""
     agents = "all agents" if config.win_threshold == 1 else f"at least {config.win_threshold:.0%} of agents"
     if board is not None:
-        return f"""Every {config.score_interval_s:g} seconds, every agent's current person guess is collected and scored.
-The group result is posted in the chatroom in english by "{SYSTEM_SENDER}", showing the percentage of
-agents who guessed the correct person. Individual guesses are not revealed. The game ends when
+        return f"""Every {config.score_interval_s:g} seconds, every agent's current guess is collected and scored.
+A guess counts as the correct person only if every feature matches the goal person. The group
+result is posted in the chatroom in english by "{SYSTEM_SENDER}", showing the percentage of agents
+who guessed the correct person. Individual guesses are not revealed. The game ends when
 {agents} guess the correct person{rounds}."""
 
     if config.win_mode == "agents":
@@ -75,15 +75,10 @@ every feature correct. Individual guesses are not revealed. The game ends when
 def _response_format_text(board: Board | None) -> str:
     fields = """- "scratchpad": your full updated scratchpad.
 - "message": your chat message (glyphs, spaces, and agent IDs only), or "" to stay silent."""
-    if board is None:
-        return f"""{fields}
-- "guess": your current guess for every feature, using one of its possible values. You must
-  always guess a value for every feature, even when you are unsure."""
+    target = "every feature" if board is None else "every feature of the goal person"
     return f"""{fields}
-- "guess": your current belief for every feature of the goal person, using one of its possible
-  values. These are notes for you; they are not scored. Always fill in every feature.
-- "person_guess": the name of the person on the board you think is the goal person. This is
-  what is scored. You must always guess a person, even when you are unsure."""
+- "guess": your current guess for {target}, using one of its possible values. You must
+  always guess a value for every feature, even when you are unsure."""
 
 
 def build_system_prompt(agent: AgentState, all_agent_ids: list[str], config: GameConfig, board: Board | None) -> str:
@@ -125,7 +120,6 @@ Respond with a single JSON object with these fields:
 def _state_text(agent: AgentState, recent_chat: list[ChatMessage], features: list[Feature]) -> str:
     chat = "\n".join(m.render() for m in recent_chat) or "(no messages yet)"
     guess = json.dumps(agent.guess.to_labels(features), ensure_ascii=False)
-    person = "" if agent.person_guess is None else f"\nYOUR CURRENT PERSON GUESS: {agent.person_guess}\n"
 
     return f"""CHATROOM (most recent last):
 {chat}
@@ -133,9 +127,9 @@ def _state_text(agent: AgentState, recent_chat: list[ChatMessage], features: lis
 YOUR SCRATCHPAD:
 {agent.scratchpad or "(empty)"}
 
-YOUR CURRENT FEATURE GUESS:
+YOUR CURRENT GUESS:
 {guess}
-{person}"""
+"""
 
 
 def build_turn_prompt(agent: AgentState, recent_chat: list[ChatMessage], features: list[Feature], elapsed_s: float) -> str:
@@ -154,8 +148,8 @@ def build_final_interview_system_prompt(agent: AgentState, board: Board | None =
     if board is None:
         task_context = "The task was to guess every feature of the hidden goal object."
     else:
-        task_context = f"""The task was to identify the hidden person on the shared board by name.
-Feature guesses were private notes; the person guess was scored.
+        task_context = f"""The task was to identify the hidden person on the shared board by guessing all of
+their features; a guess counted as correct only if every feature matched.
 BOARD (in the order you saw it):
 {board.render(agent.board_order)}"""
     return f"""You are {agent.agent_id}, taking part in a private research interview after a cooperative game.
@@ -186,7 +180,7 @@ def build_final_interview_prompt(agent: AgentState, recent_chat: list[ChatMessag
 {FINAL_INTERVIEW_QUESTION}"""
 
 
-def response_json_schema(agent: AgentState, board: Board | None) -> dict[str, Any]:
+def response_json_schema(agent: AgentState) -> dict[str, Any]:
     """JSON schema for AgentResponse, with enums (in this agent's option order) so models can only pick valid options."""
     guess_props = {f.name: {"type": "string", "enum": f.options} for f in agent.features_view}
     properties: dict[str, Any] = {
@@ -199,8 +193,6 @@ def response_json_schema(agent: AgentState, board: Board | None) -> dict[str, An
             "additionalProperties": False,
         },
     }
-    if board is not None:
-        properties["person_guess"] = {"type": "string", "enum": agent.board_order or board.names}
 
     return {
         "name": "agent_response",

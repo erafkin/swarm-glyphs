@@ -1,5 +1,5 @@
 """
-Board (Guess Who) test run, seed 0 (goal c5cfd9c4..., formerly person 22), 8 agents on GPT-6.1 Sol.
+Board (Guess Who) test run, seed 0 (goal person 22), 8 agents on GPT-6.1 Sol.
 Stops when every agent guesses the right person or total cost reaches $50.
 
 Usage: .venv/bin/python -m src.scripts.run_board_seed0

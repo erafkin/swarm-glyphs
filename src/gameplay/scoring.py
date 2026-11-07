@@ -1,13 +1,13 @@
 """
 Scoring feedback for the game.
-For each agent, pull its current guess and compare it to the true goal object.
+For each agent, pull its current guess (one value per feature) and compare it to the true goal object.
 - features mode: per-feature accuracy across agents, plus the fraction of agents with every feature correct.
-- board mode: the fraction of agents who guessed the correct person.
+- board mode: the fraction of agents who guessed the correct person, i.e. got every feature right.
 The group-level result is posted to the chatroom in english. Feature accuracy is computed in both
 modes so it's always in the logs, but in board mode it isn't shown to the agents.
 Chance baselines use each agent's private clue, then guess uniformly without communication or
-scoring feedback. Feature guesses sample each unknown option independently; person guesses sample
-the clue-compatible board members. The original blind baselines are retained explicitly.
+scoring feedback. Feature guesses sample each unknown option independently; person baselines pick a
+uniformly random clue-compatible board member. The original blind baselines are retained explicitly.
 These reference probabilities are logged next to each score, not posted or used to determine wins.
 """
 
@@ -32,10 +32,9 @@ class ScoreReport(BaseModel):
     blind_feature_chance: dict[str, float] | None = None
     blind_fully_correct_chance: float | None = None
     # board mode only
-    person_correct: int | None = None  # number of agents who guessed the goal person
+    person_correct: int | None = None  # number of agents whose guess matches the goal on every feature
     person_accuracy: float | None = None
-    person_chance: float | None = None  # clue-aware mean; unavailable without the actual board
-    person_guesses: dict[str, str | None] | None = None
+    person_chance: float | None = None  # clue-aware: random clue-compatible board member, averaged
     blind_person_chance: float | None = None  # 1 / board size
     person_chance_by_agent: dict[str, float] | None = None
     person_candidate_counts: dict[str, int] | None = None
@@ -46,16 +45,9 @@ def score_round(
     elapsed_s: float,
     agents: list[AgentState],
     goal: GoalObject,
-    goal_person: str | None = None,
-    board_size: int | None = None,
-    *,
     board: Board | None = None,
 ) -> ScoreReport:
-    """Score current guesses and log one-shot random baselines conditioned on private clues.
-
-    Pass the actual board for the person baseline, including when using a custom board. Legacy
-    callers supplying only board_size still receive the blind baseline; person_chance is None.
-    """
+    """Score current guesses and log random baselines conditioned on private clues. Pass board in board mode."""
     guesses = {a.agent_id: a.guess.to_labels(goal.features) for a in agents}
     n = len(agents)
 
@@ -90,34 +82,23 @@ def score_round(
         blind_feature_chance=blind_feature_chance,
         blind_fully_correct_chance=math.prod(blind_feature_chance.values()),
     )
-    if goal_person is not None:
-        report.person_guesses = {a.agent_id: a.person_guess for a in agents}
-        report.person_correct = sum(a.person_guess == goal_person for a in agents)
-        report.person_accuracy = report.person_correct / n
-        size = len(board) if board is not None else board_size
-        if size is None or size <= 0:
-            raise ValueError("board or a positive board_size is required for person scoring")
-        report.blind_person_chance = 1 / size
-        if board is not None:
-            report.person_chance_by_agent = {}
-            report.person_candidate_counts = {}
-            for agent in agents:
-                candidates = [
-                    name for name, values in board.people.items()
-                    if values[agent.known_feature] == agent.known_value
-                ]
-                report.person_candidate_counts[agent.agent_id] = len(candidates)
-                report.person_chance_by_agent[agent.agent_id] = (
-                    1 / len(candidates) if goal_person in candidates else 0.0
-                )
-            report.person_chance = sum(report.person_chance_by_agent.values()) / n
+    if board is not None:
+        report.person_correct = fully_correct
+        report.person_accuracy = fully_correct / n
+        report.blind_person_chance = 1 / len(board)
+        report.person_chance_by_agent = {}
+        report.person_candidate_counts = {}
+        for agent in agents:
+            n_candidates = sum(p[agent.known_feature] == agent.known_value for p in board.people.values())
+            report.person_candidate_counts[agent.agent_id] = n_candidates
+            goal_is_candidate = goal.values[agent.known_feature] == agent.known_value
+            report.person_chance_by_agent[agent.agent_id] = 1 / n_candidates if goal_is_candidate else 0
+        report.person_chance = sum(report.person_chance_by_agent.values()) / n
     return report
 
 
 def is_won(report: ScoreReport, config: GameConfig) -> bool:
-    if config.mode == "board":
-        return report.person_accuracy >= config.win_threshold
-    if config.win_mode == "agents":
+    if config.mode == "board" or config.win_mode == "agents":
         return report.fully_correct_rate >= config.win_threshold
     return all(acc >= config.win_threshold for acc in report.feature_accuracy.values())
 
@@ -125,7 +106,7 @@ def is_won(report: ScoreReport, config: GameConfig) -> bool:
 def format_score(report: ScoreReport, config: GameConfig) -> str:
     if config.mode == "board":
         return (
-            f"Score round {report.round}: {report.person_correct} of {len(report.person_guesses)} agents "
+            f"Score round {report.round}: {report.person_correct} of {len(report.guesses)} agents "
             f"({report.person_accuracy:.0%}) guessed the correct person."
         )
     per_feature = ", ".join(f"{name} {acc:.0%}" for name, acc in report.feature_accuracy.items())

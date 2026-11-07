@@ -76,21 +76,21 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   - `features`: agents guess every feature; feedback is per-feature accuracy across agents.
     Win condition is configurable (`win_mode`): `agents` (default; ≥ threshold of agents have every
     feature right) or `features` (every feature right for ≥ threshold of agents).
-  - `board` (Guess Who): agents see a board of 32 people and output the goal person's number. They
-    still fill in per-feature guesses as notes (logged, not scored). Score is the fraction of agents
-    who picked the right person; win when that's ≥ `win_threshold`.
-- **One universal board** in `src/game_object/board.json`: 32 people, features in one-hot form.
-- **People are identified by a random UUID "name"** (32 hex characters), not by index; agents guess
-  a name. Originally people were numbered 1-32, which gave agents a shared order to enumerate
-  through the scoreboard (guess person 1, then 2, ...). Names are the same for every agent; the board
-  is listed in a different shuffled order per agent. Since chat allows only glyphs, agents can't
-  write names in the chat. (They could still sort names alphabetically to get a shared order.)
-  Former person 22 is `c5cfd9c46c6840e9bd503464fab926f0`.
+  - `board` (Guess Who): agents see a board of 32 people and guess every feature of the goal person,
+    same output as features mode. A guess counts as the correct person only if every feature
+    matches. Score is the fraction of agents who guessed the correct person; win when that's
+    ≥ `win_threshold`.
+- **One universal board** in `src/game_object/board.json`: 32 people numbered 1-32, features in one-hot form.
+- **Agents never see a person identifier.** The board is listed without numbers or names, in a
+  different shuffled order per agent. Earlier versions had agents guess a person number, then a
+  random UUID name; both were replaced by guessing the features directly, which removes any shared
+  identifier order to enumerate through the scoreboard. Numbers are only used internally (goal
+  selection, logs, `board_order` in `agents.json`).
 - **Remaining scoreboard probing is accepted.** Agents could still enumerate guesses via the score
-  posts (e.g. all sorting names alphabetically), but that takes enough coordination to be acceptable.
+  posts, but that takes enough coordination to be acceptable.
   No guess-consistency restriction, guess-change budget, or coarser feedback for now.
 - **The goal is always a board person, chosen by seed, in both modes.** The default seed 0 is always
-  `c5cfd9c4...` / former person 22 (brown curls, beard, no glasses, blue shirt, green background, smile). Other seeds pick
+  person 22 (brown curls, beard, no glasses, blue shirt, green background, smile). Other seeds pick
   a fixed person per seed (separate RNG, so the same seed gives the same goal in both modes); seed
   `null` is random. `goal_person` overrides the seed. In features mode the board is only used to
   look up the goal's characteristics; it isn't shown to agents.
@@ -101,7 +101,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 - **Only group-level results are posted** to the chatroom, in english; individual guesses are never revealed.
 - **Per-feature accuracy is logged in board mode too**, but not shown to agents.
 - **Chance baselines are logged, not posted**: `feature_chance` (1/options), `fully_correct_chance`,
-  and `person_chance` (1/board size) are in every `scores.jsonl` record.
+  and `person_chance` (board mode) are in every `scores.jsonl` record.
 
 ## Bias mitigation
 
@@ -110,13 +110,11 @@ mode), which inflated scores for goals whose values happened to be listed first.
 
 - **Option order is shuffled per agent** (`features_view`), in both the prompt and the response
   schema enum. Feature order is unchanged.
-- **Board listing order is shuffled per agent** (`board_order`). Person names stay fixed across
-  agents, so a name means the same person to everyone; only the order they're listed in differs.
-- **Agents start from a random guess** (and a random person in board mode) instead of an empty one.
+- **Board listing order is shuffled per agent** (`board_order`).
+- **Agents start from a random guess** instead of an empty one.
   Since every response must fill in every guess, this only matters before an agent's first response.
 - Per-agent views are recorded in `agents.json`.
-- **Agents are told the order is shuffled per agent** (ORDERING section of the system prompt), and
-  that person names are shared. Added after a GPT-6.1 Sol test turn proposed a protocol based on
+- **Agents are told the order is shuffled per agent** (ORDERING section of the system prompt). Added after a GPT-6.1 Sol test turn proposed a protocol based on
   "listed order", which can't work when every agent's lists are ordered differently. The prompt
   states the fact only; it doesn't suggest a protocol.
 
@@ -138,7 +136,7 @@ mode), which inflated scores for goals whose values happened to be listed first.
 
 ## First test runs (`src/scripts/`)
 
-- Two runs, seed 0 (goal `c5cfd9c4...`, former person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
+- Two runs, seed 0 (goal person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
   scoring every 4 minutes (240 seconds): `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
 - **Stop only when every agent is right or the run's cost hits $50**: `win_threshold: 1.0`
   (features mode: `win_mode: agents`, i.e. every agent has every feature right), `max_cost_usd: 50`,

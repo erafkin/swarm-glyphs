@@ -9,7 +9,7 @@ from src.game_object.features import Feature
 from src.gameplay.scoring import format_score, is_won, score_round
 
 
-def agent(agent_id, goal, known_feature, known_value=None, labels=None, person_guess=None):
+def agent(agent_id, goal, known_feature, known_value=None, labels=None):
     guess, rejected = Guess.empty(goal.features).updated(goal.features, labels or goal.values)
     assert not rejected
     return AgentState(
@@ -20,7 +20,6 @@ def agent(agent_id, goal, known_feature, known_value=None, labels=None, person_g
         features_view=goal.features,
         glyphs_view=[],
         guess=guess,
-        person_guess=person_guess,
     )
 
 
@@ -31,9 +30,9 @@ def small_board():
             Feature(name="shape", options=["circle", "square", "triangle"]),
         ],
         people={
-            "one": {"colour": "red", "shape": "circle"},
-            "two": {"colour": "red", "shape": "square"},
-            "three": {"colour": "blue", "shape": "circle"},
+            1: {"colour": "red", "shape": "circle"},
+            2: {"colour": "red", "shape": "square"},
+            3: {"colour": "blue", "shape": "circle"},
         },
     )
 
@@ -57,7 +56,7 @@ class ScoringBaselineTests(unittest.TestCase):
         )
         agents = [agent(f"agent_{i}", goal, feature.name) for i, feature in enumerate(goal.features)]
 
-        report = score_round(1, 240, agents, goal, DEFAULT_GOAL_PERSON, len(board), board=board)
+        report = score_round(1, 240, agents, goal, board=board)
 
         expected_counts = dict(zip((a.agent_id for a in agents), [9, 15, 6, 19, 8, 10, 9, 28]))
         self.assertEqual(report.person_candidate_counts, expected_counts)
@@ -72,27 +71,27 @@ class ScoringBaselineTests(unittest.TestCase):
 
     def test_custom_board_counts_and_incompatible_or_empty_candidates(self):
         board = small_board()
-        goal = board.goal("one")
+        goal = board.goal(1)
         agents = [
             agent("red", goal, "colour"),
             agent("circle", goal, "shape"),
             agent("blue", goal, "colour", "blue"),
             agent("triangle", goal, "shape", "triangle"),
         ]
-        report = score_round(1, 0, agents, goal, "one", len(board), board=board)
+        report = score_round(1, 0, agents, goal, board=board)
         self.assertEqual(report.person_candidate_counts, {"red": 2, "circle": 2, "blue": 1, "triangle": 0})
         self.assertEqual(report.person_chance_by_agent, {"red": 0.5, "circle": 0.5, "blue": 0, "triangle": 0})
         self.assertEqual(report.person_chance, 0.25)
         self.assertEqual(report.blind_person_chance, 1 / 3)
 
-        reduced_board = Board(features=board.features, people={i: board.people[i] for i in ("one", "three")})
-        reduced = score_round(1, 0, agents, goal, "one", len(reduced_board), board=reduced_board)
+        reduced_board = Board(features=board.features, people={i: board.people[i] for i in (1, 3)})
+        reduced = score_round(1, 0, agents, goal, board=reduced_board)
         self.assertEqual(reduced.person_candidate_counts, {"red": 1, "circle": 2, "blue": 1, "triangle": 0})
         self.assertEqual(reduced.person_chance, 0.375)
         self.assertEqual(reduced.blind_person_chance, 0.5)
 
     def test_uneven_assignments_and_option_counts_average_agent_probabilities(self):
-        goal = small_board().goal("one")
+        goal = small_board().goal(1)
         agents = [agent("a", goal, "colour"), agent("b", goal, "colour"), agent("c", goal, "shape")]
         report = score_round(1, 0, agents, goal)
 
@@ -112,20 +111,19 @@ class ScoringBaselineTests(unittest.TestCase):
 
     def test_actual_scores_win_checks_and_agent_feedback_are_unchanged(self):
         board = small_board()
-        goal = board.goal("one")
+        goal = board.goal(1)
         agents = [
-            agent("a", goal, "colour", person_guess="one"),
-            agent("b", goal, "shape", labels=board.people["three"], person_guess="three"),
+            agent("a", goal, "colour"),
+            agent("b", goal, "shape", labels=board.people[3]),
         ]
-        report = score_round(2, 240.24, agents, goal, "one", len(board), board=board)
+        report = score_round(2, 240.24, agents, goal, board=board)
 
         self.assertEqual(report.elapsed_s, 240.2)
         self.assertEqual(report.feature_accuracy, {"colour": 0.5, "shape": 1.0})
         self.assertEqual(report.fully_correct_rate, 0.5)
-        self.assertEqual(report.guesses, {"a": board.people["one"], "b": board.people["three"]})
+        self.assertEqual(report.guesses, {"a": board.people[1], "b": board.people[3]})
         self.assertEqual(report.person_correct, 1)
         self.assertEqual(report.person_accuracy, 0.5)
-        self.assertEqual(report.person_guesses, {"a": "one", "b": "three"})
         for mode, win_mode in [("board", "agents"), ("features", "agents"), ("features", "features")]:
             with self.subTest(mode=mode, win_mode=win_mode):
                 self.assertTrue(is_won(report, GameConfig(mode=mode, win_mode=win_mode, win_threshold=0.5)))
@@ -138,18 +136,6 @@ class ScoringBaselineTests(unittest.TestCase):
             format_score(report, GameConfig(mode="features")),
             "Score round 2: colour 50%, shape 100%. Agents with every feature correct: 50%.",
         )
-
-    def test_legacy_positional_board_size_does_not_claim_a_conditional_baseline(self):
-        goal = small_board().goal("one")
-        agents = [agent("a", goal, "colour", person_guess="one")]
-
-        report = score_round(1, 0, agents, goal, "one", 3)
-
-        self.assertIsNone(report.person_chance)
-        self.assertIsNone(report.person_chance_by_agent)
-        self.assertIsNone(report.person_candidate_counts)
-        self.assertEqual(report.blind_person_chance, 1 / 3)
-        self.assertEqual(report.person_accuracy, 1)
 
 
 if __name__ == "__main__":

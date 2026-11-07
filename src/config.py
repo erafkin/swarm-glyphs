@@ -15,13 +15,13 @@ ReasoningEffort = Literal["minimal", "low", "medium", "high", "xhigh", "max"]
 
 class GameConfig(BaseModel):
     # "features": agents guess every feature and get per-feature feedback.
-    # "board": agents see a board of people (Guess Who) and guess which person is the goal.
+    # "board": agents also see a board of people (Guess Who) and guess the goal person's features;
+    #   a guess counts as correct only if every feature matches.
     mode: Literal["features", "board"] = "features"
     board_path: str = str(DEFAULT_BOARD_PATH)
-    # The goal is a person from the board in both modes (features mode uses their features).
-    # Person name from board.json; None derives it from seed: seed 0 -> c5cf... (formerly person 22),
-    # other seeds -> a fixed person per seed.
-    goal_person: str | None = None
+    # The goal is a person from the board in both modes (by its internal number in board.json).
+    # None derives it from seed: seed 0 -> person 22, other seeds -> a fixed person per seed.
+    goal_person: int | None = None
     # Glyphs: n_glyphs sampled from this dictionary file (repo root), shared by all agents.
     glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
     n_glyphs: int = Field(default=18, ge=1)
@@ -38,7 +38,7 @@ class GameConfig(BaseModel):
     max_score_rounds: int | None = Field(default=100, ge=1)
     max_cost_usd: float | None = Field(default=None, gt=0)  # total OpenRouter cost for the run
 
-    # Features mode only ("board" mode always wins when win_threshold of agents guess the right person):
+    # Features mode only ("board" mode wins when win_threshold of agents have every feature right):
     # "agents": fraction of agents with every feature correct must reach win_threshold.
     # "features": every feature must be guessed correctly by at least win_threshold of agents.
     win_mode: Literal["agents", "features"] = "agents"

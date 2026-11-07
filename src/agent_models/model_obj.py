@@ -69,10 +69,9 @@ class AgentState(BaseModel):
     # Guess one-hot vectors always use the canonical option order from features.py.
     features_view: list[Feature]
     glyphs_view: list[str]
-    board_order: list[str] | None = None  # board mode only: order the person names are listed in
+    board_order: list[int] | None = None  # board mode only: order the people are listed in (internal numbers)
     scratchpad: str = ""
-    guess: Guess  # per-feature beliefs; scored in features mode, notes only in board mode
-    person_guess: str | None = None  # board mode only: name of a person on the board
+    guess: Guess  # scored in both modes
     turn_count: int = 0
 
 
@@ -80,4 +79,3 @@ class AgentResponse(BaseModel):
     scratchpad: str = ""
     message: str = ""
     guess: dict[str, str | None] = Field(default_factory=dict)
-    person_guess: str | None = None

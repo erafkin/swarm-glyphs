@@ -2,7 +2,8 @@
 Main gameplay loop.
 There is a goal object with F features. There are N agents; features are assigned round-robin,
 so each agent knows the true value of exactly one feature.
-In board mode the goal is one person on a shared board (Guess Who), and agents guess a person index.
+In board mode the goal is one person on a shared board (Guess Who); agents still guess every feature,
+and a guess counts as the correct person only if every feature matches.
 The agents have access to a chatroom where they can communicate with each other.
 The only communication in the chatroom is in glyphs for the agents except:
 - They can refer to each other using their unique identifier.
@@ -71,7 +72,7 @@ class Game:
         self.agents = self._create_agents()
         self.agent_ids = [a.agent_id for a in self.agents]
         self.system_prompts = {a.agent_id: build_system_prompt(a, self.agent_ids, config, self.board) for a in self.agents}
-        self.json_schemas = {a.agent_id: response_json_schema(a, self.board) for a in self.agents}
+        self.json_schemas = {a.agent_id: response_json_schema(a) for a in self.agents}
 
         self.stop = asyncio.Event()
         self.stop_reason = ""
@@ -87,7 +88,7 @@ class Game:
         agents = []
         for i in range(self.config.n_agents):
             feature = features[i % len(features)]
-            board_order = self.rng.sample(self.board.names, len(self.board)) if self.board else None
+            board_order = self.rng.sample(self.board.numbers, len(self.board)) if self.board else None
             agents.append(
                 AgentState(
                     agent_id=f"agent_{i}",
@@ -98,7 +99,6 @@ class Game:
                     glyphs_view=self.rng.sample(self.glyphs, len(self.glyphs)),
                     board_order=board_order,
                     guess=Guess.random(features, self.rng),
-                    person_guess=self.rng.choice(self.board.names) if self.board else None,
                 )
             )
         return agents
@@ -160,12 +160,6 @@ class Game:
             response = result.parsed
             agent.scratchpad = response.scratchpad
             agent.guess, rejected = agent.guess.updated(self.goal.features, response.guess)
-            if self.board is not None:
-                # Agents must always guess a person; invalid or missing guesses keep the previous one.
-                if response.person_guess in self.board.people:
-                    agent.person_guess = response.person_guess
-                else:
-                    rejected.append(f"person_guess={response.person_guess}")
 
             message = response.message.strip()
             is_violation = bool(message) and not is_glyph_only(message, self.agent_ids, self.glyphs)
@@ -179,7 +173,6 @@ class Game:
                 is_violation=is_violation,
                 guess=agent.guess.to_labels(self.goal.features),
                 guess_one_hot=agent.guess.one_hot,
-                person_guess=agent.person_guess,
                 rejected_guess_updates=rejected,
             )
 
@@ -219,12 +212,7 @@ class Game:
                 return  # an agent stopped the game (cost limit or fatal API error); stop_reason is already set
             except asyncio.TimeoutError:
                 pass
-            if self.board is not None:
-                report = score_round(
-                    round_num, self.elapsed(), self.agents, self.goal, self.goal_person, len(self.board), board=self.board
-                )
-            else:
-                report = score_round(round_num, self.elapsed(), self.agents, self.goal)
+            report = score_round(round_num, self.elapsed(), self.agents, self.goal, board=self.board)
             self.last_report = report
             self.chatroom.post(SYSTEM_SENDER, format_score(report, self.config))
             self.logger.log("scores", report.model_dump())
