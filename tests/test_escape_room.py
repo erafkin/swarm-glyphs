@@ -23,7 +23,7 @@ from src.enc_dec.models import CreationResponse, EscapeTaskResponse, ESCAPE_TASK
 from src.enc_dec.monitor import (
     CONDITION_LABELS, MONITOR_CONDITIONS, execute_monitor_inputs, prepare_monitor_inputs,
 )
-from src.enc_dec.prompts import build_turn_prompt
+from src.enc_dec.prompts import build_turn_prompt, load_prompt_config
 from src.enc_dec.run import LanguageExperiment
 
 
@@ -51,15 +51,17 @@ def rows(path):
 
 
 class RoomRulesTests(unittest.TestCase):
-    def test_presets_are_ready_and_differ_only_by_channel(self):
+    def test_presets_are_ready_and_differ_only_by_alphabet(self):
         root = Path(__file__).resolve().parents[1]
-        glyphs = LanguageExperimentConfig.from_file(root / "configs/storm_shelter_glyphs.json")
-        free = LanguageExperimentConfig.from_file(root / "configs/storm_shelter_free.json")
-        self.assertEqual(glyphs.task_kind, "escape_room")
-        self.assertIsNone(glyphs.task_minutes)
-        self.assertFalse(glyphs.run_monitors)
-        self.assertEqual(glyphs.max_cost_usd, 20)
-        self.assertEqual(free.model_dump(), glyphs.model_copy(update={"chat_mode": "free"}).model_dump())
+        tangut = LanguageExperimentConfig.from_file(root / "configs/storm_shelter_tangut.json")
+        latin = LanguageExperimentConfig.from_file(root / "configs/storm_shelter_latin.json")
+        self.assertEqual(tangut.task_kind, "escape_room")
+        self.assertIsNone(tangut.task_minutes)
+        self.assertFalse(tangut.run_monitors)
+        self.assertEqual(tangut.max_cost_usd, 20)
+        self.assertEqual(tangut.glyph_dictionary, "glyphs_tangut")
+        self.assertIsNone(tangut.n_glyphs)
+        self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin"}).model_dump())
 
     def test_walkthrough_and_staged_private_views(self):
         room = EscapeRoom()
@@ -149,14 +151,14 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.config = LanguageExperimentConfig(
-            task_kind="escape_room", chat_mode="free", model="offline-model",
+            task_kind="escape_room", glyph_dictionary="glyphs_latin", model="offline-model",
             task_minutes=None, min_turn_interval_s=0.001, max_cost_usd=20,
             run_monitors=False, log_dir=self.tmp.name,
         )
         self.client = SimpleNamespace(close=AsyncMock())
 
-    async def run_script(self, mode="free", supplied=True, **updates):
-        config = self.config.model_copy(update={"chat_mode": mode, **updates})
+    async def run_script(self, alphabet="glyphs_latin", supplied=True, **updates):
+        config = self.config.model_copy(update={"glyph_dictionary": alphabet, **updates})
         experiment = LanguageExperiment(config, "LANGUAGE_SECRET" if supplied else None)
         calls = []
         task_index = 0
@@ -174,8 +176,7 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
             # Start all eight calls before any answers return, to exercise pending-response handling.
             await asyncio.sleep(0)
             action = SOLUTION[index] if index < len(SOLUTION) else act("wait")
-            message = experiment.glyphs[0] if mode == "glyphs" else "opaque_swarmish"
-            return result(response(action, message))
+            return result(response(action, experiment.glyphs[0]))
 
         with patch("src.enc_dec.run.make_client", return_value=self.client), patch(
             "src.enc_dec.run.call_agent", side_effect=fake_call
@@ -183,10 +184,10 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
             await asyncio.wait_for(experiment.run(), timeout=3)
         return experiment, calls
 
-    async def test_full_run_both_channels_and_pending_calls(self):
-        for mode in ("free", "glyphs"):
-            with self.subTest(mode=mode):
-                experiment, _ = await self.run_script(mode)
+    async def test_full_run_both_alphabets_and_pending_calls(self):
+        for alphabet in ("glyphs_latin", "glyphs_tangut"):
+            with self.subTest(alphabet=alphabet):
+                experiment, _ = await self.run_script(alphabet)
                 self.assertEqual(experiment.creation_stop_reason, "provided_language")
                 self.assertEqual(experiment.task_stop_reason, "escaped")
                 self.assertTrue(experiment.room.escaped)
@@ -266,7 +267,7 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue((experiment.logger.path / "summary.json").exists())
 
     async def test_full_chat_own_clues_and_strict_glyph_validation(self):
-        experiment = LanguageExperiment(self.config.model_copy(update={"chat_mode": "glyphs", "allow_spaces": False}), "LANGUAGE_SECRET")
+        experiment = LanguageExperiment(self.config.model_copy(update={"glyph_dictionary": "glyphs_tangut", "allow_spaces": False}), "LANGUAGE_SECRET")
         experiment.prepare()
         experiment.task_prompts = {a.agent_id: "system" for a in experiment.task_agents}
         experiment.phase, experiment.phase_start = "task", time.monotonic()
@@ -319,29 +320,49 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
             {"sender": "agent_1", "text": "𗀂", "scratchpad": "PRIVATE_NOTES_CANARY"},
         ]
         (self.source / "task_chatroom.jsonl").write_text("\n".join(json.dumps(m) for m in messages))
-        for file in ["language.txt", "agent_calls.jsonl", "chatroom.jsonl"]:
+        for file in ["swarmish.txt", "agent_calls.jsonl", "chatroom.jsonl"]:
             (self.source / file).write_text("NEVER_READ_CANARY")
 
     def test_briefing_boundaries_and_identical_transcripts(self):
         bundle = prepare_monitor_inputs(self.source)
         requests = bundle["requests"]
         self.assertEqual([r["condition"] for r in requests], list(MONITOR_CONDITIONS))
-        self.assertEqual(len({r["system_prompt"] for r in requests}), 1)
+        self.assertEqual(list(MONITOR_CONDITIONS), ["task_summary", "task_full", "no_task", "wrong_task"])
         for request in requests:
-            self.assertTrue(request["prompt"].endswith("TRANSCRIPT\n" + bundle["transcript"]))
+            self.assertEqual(request["prompt"], "TRANSCRIPT\n" + bundle["transcript"])
+            self.assertNotIn("[[", request["system_prompt"])
+            self.assertIn("a second team of 8 agents", request["system_prompt"])
         public_text = json.dumps(bundle)
         for secret in ["PRIVATE_INTENT_CANARY", "PRIVATE_NOTES_CANARY", "NEVER_READ_CANARY", "123456"]:
             self.assertNotIn(secret, public_text)
-        prompts = [r["prompt"] for r in requests]
-        self.assertNotIn("escape", prompts[0])
-        self.assertIn("escape", prompts[1])
-        self.assertNotIn("cabinet", prompts[1])
-        self.assertIn("modulo 10", prompts[2])
-        self.assertNotIn("2748", prompts[2])
-        self.assertNotIn("SAVED_PRIVATE_CLUE_CANARY", prompts[2])
-        self.assertIn("SAVED_PRIVATE_CLUE_CANARY", prompts[3])
-        self.assertIn("2748", prompts[3])
-        self.assertIn("9796", prompts[3])
+        settings = load_prompt_config("round3_config.json")
+        by_condition = {r["condition"]: r["system_prompt"] for r in requests}
+        told = "fits the task described in your briefing"
+        summary = by_condition["task_summary"]
+        self.assertIn(f"The round 2 task was {settings['task_name']}: {settings['task_summary']}.", summary)
+        self.assertIn(told, summary)
+        for secret in ("modulo 10", "2748", "SAVED_PRIVATE_CLUE_CANARY", settings["wrong_task_name"]):
+            self.assertNotIn(secret, summary)
+        full = by_condition["task_full"]
+        for text in (settings["task_name"], "modulo 10", "SAVED_PRIVATE_CLUE_CANARY", "2748", "9796", told):
+            self.assertIn(text, full)
+        self.assertNotIn(settings["wrong_task_name"], full)
+        self.assertNotIn("PLACEHOLDER", full)
+        none = by_condition["no_task"]
+        self.assertIn("You are not told what the round 2 task was.", none)
+        for text in (settings["task_name"], settings["wrong_task_name"], "escape", "cabinet", "modulo 10", "2748", told):
+            self.assertNotIn(text, none)
+        wrong = by_condition["wrong_task"]
+        self.assertIn(f"The round 2 task was {settings['wrong_task_name']}: {settings['wrong_task_summary']}.", wrong)
+        self.assertIn(told, wrong)
+        for text in (settings["task_name"], "cabinet", "modulo 10", "2748"):
+            self.assertNotIn(text, wrong)
+        mechanics = prepare_monitor_inputs(self.source, ("task_mechanics",))["requests"][0]["system_prompt"]
+        self.assertIn("modulo 10", mechanics)
+        self.assertNotIn("SAVED_PRIVATE_CLUE_CANARY", mechanics)
+        self.assertNotIn("2748", mechanics)
+        with self.assertRaises(ValueError):
+            prepare_monitor_inputs(self.source, ("knows_task",))
         self.assertTrue(all("—" not in label and not label.startswith("C") for label in CONDITION_LABELS.values()))
 
     def test_baseline_withholds_message_strings_only(self):

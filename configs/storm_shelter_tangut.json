@@ -1,8 +1,7 @@
 {
   "task_kind": "escape_room",
   "run_monitors": false,
-  "chat_mode": "free",
-  "glyph_dictionary": "dictionary_a",
+  "glyph_dictionary": "glyphs_tangut",
   "n_glyphs": null,
   "allow_spaces": true,
   "n_agents": 8,

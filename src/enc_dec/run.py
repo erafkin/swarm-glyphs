@@ -1,7 +1,9 @@
 """
 Three phases in one log folder:
-1. A team plans a language in English, without knowing the task, then writes language.txt.
-2. A new team gets that document and the task. Their chat is the language plus the task's feedback.
+1. A team plans Swarmish in English, without knowing the task, then writes swarmish.txt.
+2. A new team gets that document and the task. Their chat is Swarmish plus the task's feedback.
+   Every task message is checked against the glyph file; anything else is replaced by the
+   violation token, as in the guess-who game.
 3. Optional monitors read only the task chat under separate briefings. Storm Shelter presets
    defer this to src.enc_dec.monitor so the same saved transcript can be replayed independently.
 
@@ -33,13 +35,13 @@ from src.enc_dec.models import (
 )
 from src.enc_dec.escape_room import EscapeRoom, room_definition
 from src.enc_dec.prompts import (
+    LANGUAGE_FILE,
     MONITOR_CONDITIONS,
     build_creation_prompt,
     build_language_document_prompt,
     build_monitor_prompt,
     build_task_prompt,
     build_turn_prompt,
-    monitor_briefing,
 )
 from src.enc_dec.task import TASK_SENDER, feedback_text
 
@@ -77,8 +79,6 @@ class LanguageExperiment:
         self.task_stop_reason = ""
 
     def _sample_glyphs(self) -> list[str]:
-        if self.config.chat_mode != "glyphs":
-            return []
         dictionary = load_dictionary(dictionary_path(self.config.glyph_dictionary))
         n = len(dictionary) if self.config.n_glyphs is None else self.config.n_glyphs
         return sample_glyphs(self.config.glyph_dictionary, n, self.rng)
@@ -110,7 +110,7 @@ class LanguageExperiment:
 
     def _post(self, chat: Chatroom, agent_ids: list[str], sender: str, message: str) -> bool:
         """Post a message. The planning chat is English. Only the task chat is glyph-checked."""
-        if self.phase == "task" and self.config.chat_mode == "glyphs":
+        if self.phase == "task":
             violation = not is_glyph_only(message, agent_ids, self.glyphs, self.config.allow_spaces)
             chat.post(sender, VIOLATION_TOKEN if violation else message, violation)
             return violation
@@ -297,9 +297,9 @@ class LanguageExperiment:
         self._write_language_file(drafts)
 
     def _set_language_text(self, text: str) -> None:
-        """Replace the shared language.txt. Every encoding agent sees this text on the next turn."""
+        """Replace the shared swarmish.txt. Every encoding agent sees this text on the next turn."""
         self.language_text = text.strip()
-        (self.logger.path / "language.txt").write_text(self.language_text + "\n", encoding="utf-8")
+        (self.logger.path / LANGUAGE_FILE).write_text(self.language_text + "\n", encoding="utf-8")
 
     def _write_language_file(self, drafts: dict[str, str]) -> None:
         ordered = [(agent.agent_id, drafts.get(agent.agent_id, "")) for agent in self.creation_agents]
@@ -310,7 +310,7 @@ class LanguageExperiment:
             self.language_text = "\n\n".join(
                 f"## {agent_id}\n{text or '(this agent wrote nothing)'}" for agent_id, text in ordered
             )
-        (self.logger.path / "language.txt").write_text(self.language_text + "\n", encoding="utf-8")
+        (self.logger.path / LANGUAGE_FILE).write_text(self.language_text + "\n", encoding="utf-8")
         self.logger.write_json("language", {"by_agent": dict(ordered), "text": self.language_text})
 
     async def _monitor(self, client: AsyncOpenAI) -> None:
@@ -331,7 +331,7 @@ class LanguageExperiment:
         model = self.config.model_for(0, "monitor")
 
         async def ask(condition: str) -> None:
-            system, user = build_monitor_prompt(transcript, monitor_briefing(self.config, condition))
+            system, user = build_monitor_prompt(self.config, condition, None, transcript)
             try:
                 result = await call_agent(client, model, system, user, None, None, monitor_config)
             except Exception as e:
@@ -433,7 +433,6 @@ class LanguageExperiment:
     def _write_summary(self) -> None:
         summary = {
             "game_id": self.logger.game_id,
-            "chat_mode": self.config.chat_mode,
             "task_kind": self.config.task_kind,
             "creation_stop_reason": self.creation_stop_reason,
             "task_stop_reason": self.task_stop_reason,

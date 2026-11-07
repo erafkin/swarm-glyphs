@@ -1,13 +1,14 @@
 """
-Language handoff experiment. The creation team does not know the task. A new team then gets their
-language descriptions and the task. A monitor reads only the new team's chat under four briefings.
+Language handoff experiment with a custom text task. The creation team does not know the task.
+A new team then gets swarmish.txt and the task. The monitor reads only the new team's chat under
+the briefings listed in src/enc_dec/prompts/round3_config.json.
 
-The task text in the configs is a placeholder. Replace task_prompt, wrong_task_far, and
-wrong_task_near before treating a run as data.
+The task text in the configs is a placeholder. Replace task_prompt, and the task texts in
+src/enc_dec/prompts/round3_config.json, before treating a run as data.
 
 Usage:
-  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
-  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
+  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_tangut.json
+  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_latin.json
 """
 
 import argparse

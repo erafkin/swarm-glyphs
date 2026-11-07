@@ -84,13 +84,13 @@ for up to ten minutes, then a fresh eight-agent task team. The newer
 
 ```sh
 # Inspect the eight starting prompts without API calls.
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --prepare-only
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --prepare-only
 
 # Create swarmish, then play with a fresh team ($20 soft cap).
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json
 
 # Or import a frozen language, skipping creation.
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --language-file /path/to/swarmish.txt
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --language-file /path/to/swarmish.txt
 
 # After the task, inspect four monitor briefings on the SAME saved chat.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
@@ -101,27 +101,31 @@ The room has no rounds or invalid-attempt loss limit. Clues unlock as the team o
 cabinet, restores power and solves the exit. Private submissions never enter the chat;
 public feedback is only numeric stage and invalid-attempt count. The presets stop on
 escape or an operational spending/error stop, retain pending responses in the logs,
-and defer all monitors. `storm_shelter_free.json` provides the unrestricted-character
-variant. Both presets name the language **swarmish**.
+and defer all monitors. `storm_shelter_latin.json` restricts the chat to a-z and 0-9 instead of
+Tangut. Both presets name the language **swarmish**.
 
 The legacy custom-task pipeline below remains available with `task_kind: custom`:
 
 A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
 shipped configs) to invent a language without being told the task. That planning chat is ordinary
 English, with no scratchpad. Each turn they see the latest 100 messages and the current shared
-`language.txt`, which any of them can replace. At the end they write `language.txt` once more;
-the other saved output is the planning chatroom.
+`swarmish.txt`, which any of them can replace. At the end they write `swarmish.txt` once more;
+the other saved output is the planning chatroom. The round 1 system prompt is the template
+`src/enc_dec/prompts/round1_prompt.md`, with its toggles in `round1_config.json`.
 A new team then receives only that file and the task, and works on it in the language for
 `task_minutes`. With `task_feedback` true (the default), the task posts status updates into that
 chatroom; set it false to leave them out. The saved task chat is the agents'
-language messages plus that feedback. One monitor model reads only that chatroom, four times:
-the true task, no task, a distant wrong task, and a close wrong task. In `language_glyphs.json`
-the task chat may use only characters from `dictionary_a` (the whole file). In
-`language_free.json` it may use any characters. The task strings in both files are placeholders.
+language messages plus that feedback. One monitor model reads only that chatroom, once per
+briefing listed in `src/enc_dec/prompts/round3_config.json` (by default task summary, full task
+knowledge, no task, and a wrong task), with the system prompt from `round3_prompt.md`. The task
+chat may use only characters from the glyph file named by `glyph_dictionary`:
+`glyphs_tangut.txt` (every Tangut ideograph, 6,136 of them) in `language_tangut.json`, or
+`glyphs_latin.txt` (a-z and 0-9) in `language_latin.json`. Anything else is replaced by `⊘`.
+The task strings in both files are placeholders.
 
 ```
-.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
-.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_tangut.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_latin.json
 ```
 
 ## Game and logs
@@ -142,4 +146,4 @@ Logs go to `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `glyphs.js
 `agents.json` (system prompts), `chatroom.jsonl`, `agent_calls.jsonl` (every response, scratchpad,
 and guess), `scores.jsonl`, `final_interviews.jsonl` (each agent's end-of-game explanation of its communication strategy),
 `errors.jsonl`, `summary.json` (stop reason, final score, total cost).
-Glyph dictionaries live under dictionary_n.txt. Each contains 50 symbols that should be sampled and randomly ordered when read into model context. dictionary_a.txt contains Tangut ideographs (https://en.wikipedia.org/wiki/Tangut_script) and dictionary_b.txt contains unassigned plane-4 Unicode characters (https://en.wikipedia.org/wiki/Plane_(Unicode)).
+For the language experiment, `glyphs_tangut.txt` holds every Tangut ideograph (6,136, unscreened) and `glyphs_latin.txt` holds a-z and 0-9; `glyph_dictionary` in a config names one of them. For the guessing game, glyph dictionaries live under dictionary_n.txt. Each contains 50 symbols that should be sampled and randomly ordered when read into model context. dictionary_a.txt contains Tangut ideographs (https://en.wikipedia.org/wiki/Tangut_script) and dictionary_b.txt contains unassigned plane-4 Unicode characters (https://en.wikipedia.org/wiki/Plane_(Unicode)).

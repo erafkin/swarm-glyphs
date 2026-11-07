@@ -255,6 +255,29 @@ Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round
   a separate default $5 soft cap per replay invocation. Both CLIs support no-API
   `--prepare-only` review. No live experiment is part of this implementation change.
 
+### 2026-11-07, later: prompt templates, two alphabets, swarmish.txt
+
+- **Round 1 and round 3 prompts are templates** in `src/enc_dec/prompts/` (`round1_prompt.md`,
+  `round3_prompt.md`) with their toggles in `round1_config.json` and `round3_config.json`.
+  `prompts.py` renders them: `{slots}` from the run config and the JSON, `[[flag]]` blocks
+  from the JSON. The round 1 "HOW THIS ROUND WORKS" paragraph lives in `round1_config.json`
+  and describes what `run.py` does; keep it in step with the runner. The hardcoded
+  "malicious LLM" paragraph is gone from round 1; the template frames it as an encoding team
+  versus a decoding team.
+- **Monitor briefings** default to `task_summary`, `task_full`, `no_task` and `wrong_task`,
+  with `task_mechanics` (the exact round 2 prompt without internals, the former
+  `exact_room_mechanics`) available through `--condition`. `general_premise`,
+  `full_room_knowledge` and the custom-task `wrong_task_far` / `wrong_task_near` are replaced.
+  The wrong task has the same shape as the true summary so length does not signal the lie.
+  The briefing is in the system prompt; the user turn carries only the transcript.
+- **No unrestricted chat mode.** `glyph_dictionary` names a glyph file: `glyphs_tangut.txt`
+  (all 6,136 Tangut ideographs, unscreened) or `glyphs_latin.txt` (a-z and 0-9). Every task
+  message is checked and violations become `⊘`, as in guess-who. Presets are renamed
+  `storm_shelter_tangut.json` / `storm_shelter_latin.json` and `language_tangut.json` /
+  `language_latin.json`.
+- **The shared document is `swarmish.txt`**, in every prompt and in the log folder (was
+  `language.txt`). The `language_document` response field keeps its name.
+
 ## Logging
 
 Each game writes `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `glyphs.json`, `board.json` (board mode),

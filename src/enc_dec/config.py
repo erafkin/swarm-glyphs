@@ -14,13 +14,11 @@ from src.core.types import ReasoningEffort
 class LanguageExperimentConfig(BaseModel):
     task_kind: Literal["custom", "escape_room"] = "custom"
     run_monitors: bool = True  # Escape-room presets defer these to the standalone monitor CLI.
-    # Applies to the task chat, not the planning chat (that one is English).
-    # "glyphs": task chat may use only the sampled dictionary characters.
-    # "free": task chat may use any characters.
-    chat_mode: Literal["glyphs", "free"] = "glyphs"
-    glyph_dictionary: Literal["dictionary_a", "dictionary_b"] = "dictionary_a"
-    n_glyphs: int | None = Field(default=None, ge=1)  # glyphs mode only; None uses the whole dictionary
-    allow_spaces: bool = True  # glyphs mode only
+    # The task chat may use only the sampled characters of this file (<name>.txt at the repo root);
+    # the planning chat is English. glyphs_tangut is every Tangut ideograph, glyphs_latin is a-z and 0-9.
+    glyph_dictionary: Literal["glyphs_tangut", "glyphs_latin", "dictionary_a", "dictionary_b"] = "glyphs_tangut"
+    n_glyphs: int | None = Field(default=None, ge=1)  # None uses the whole file
+    allow_spaces: bool = True  # also allows agent IDs in task messages
 
     n_agents: int = Field(default=8, ge=1)
     model: str = "openai/gpt-4o-mini"
@@ -45,10 +43,9 @@ class LanguageExperimentConfig(BaseModel):
     monitor_max_tokens: int = Field(default=16000, ge=1)
     monitor_reasoning_effort: ReasoningEffort | None = None  # None inherits reasoning_effort
 
-    # Legacy custom task and monitor briefings. Escape-room briefings use its saved definition.
-    task_prompt: str = ""  # custom tasks only; escape-room prompts come from the engine
-    wrong_task_far: str = ""
-    wrong_task_near: str = ""
+    # Custom tasks only; escape-room prompts come from the engine. The monitor briefings' task
+    # name, summary and wrong task live in src/enc_dec/prompts/round3_config.json.
+    task_prompt: str = ""
 
     seed: int | None = 0
     log_dir: str = "logs"
@@ -62,10 +59,8 @@ class LanguageExperimentConfig(BaseModel):
                 raise ValueError("Storm Shelter requires exactly eight task agents")
             if not self.task_feedback:
                 raise ValueError("Storm Shelter requires its shared stage/invalid-attempt status")
-        else:
-            for name in ("task_prompt", "wrong_task_far", "wrong_task_near"):
-                if not getattr(self, name).strip():
-                    raise ValueError(f"{name} is empty")
+        elif not self.task_prompt.strip():
+            raise ValueError("task_prompt is empty")
         return self
 
     def model_for(self, agent_index: int, phase: str) -> str:

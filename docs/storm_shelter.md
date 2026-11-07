@@ -14,25 +14,17 @@ handoff runner. Existing custom-task presets and the Guess Who experiments remai
 The selected setup is the current runner: **eight creators, asynchronous discussion,
 up to ten minutes**, followed by a fresh eight-agent escape-room team. Language creation
 can end earlier if every creator marks it done. The shipped presets already match this
-choice. The newer Round 1 template is deferred; its missing inventory is not a blocker
-for this run, which uses the existing `dictionary_a.txt`.
+choice.
 
-### Comparison with the deferred Round 1 design
+### Round 1 and round 3 prompts
 
-`language_game/round1_prompt.md` and `round1_config.json` are a separate, newer design
-template. The executable presets below intentionally use the selected asynchronous
-creation runner. If the newer protocol is adopted later, these differences must be
-resolved before calling a run an evaluation of that protocol:
-
-| Setting | Current executable creation runner | Newer Round 1 template |
-| --- | --- | --- |
-| Creation team | 8 agents | 4 agents |
-| Scheduling | Asynchronous, up to 10 minutes | Fixed order, 30 turns each |
-| Private creation notes | None | Per-agent scratchpad |
-| Final reference | Final per-agent rewrites, combined if different | Export the current shared file unchanged |
-| Alphabet | `dictionary_a.txt` | `inventories/tangut_meaning_clean.txt`, currently absent from main |
-| Task message validation | Glyphs, spaces and agent IDs; violations become `⊘` | Glyphs and spaces only; invalid messages discarded |
-| Language constraints | No Latin substitution or English encoding | Stricter semantic-only rules; document under 300 lines |
+The creation team's system prompt is the template `src/enc_dec/prompts/round1_prompt.md`,
+rendered by `src/enc_dec/prompts.py` with the toggles in `round1_config.json`. The "HOW THIS
+ROUND WORKS" paragraph comes from that JSON and describes this runner (asynchronous turns,
+`language_minutes`, the shared `swarmish.txt`, the JSON response fields), so it must be
+updated whenever `run.py` changes. The monitor's system prompt is `round3_prompt.md`, with
+its briefings configured in `round3_config.json`. The alphabet is `glyphs_tangut.txt`
+(every Tangut ideograph, unscreened) or `glyphs_latin.txt` (a-z and 0-9).
 
 Both can hand a document to the same **eight-agent task team**. A supplied `swarmish.txt`
 can already be imported, but importing a file does not implement the newer validation or
@@ -114,8 +106,8 @@ code is a rejected game action. A message is posted before its accompanying acti
 
 Only `message` is public. Scratchpads, intended meanings, submitted codes and action
 results are private. A glyph violation replaces the public message with `⊘`; the valid
-private action still executes. In free mode, using swarmish is a prompt instruction
-rather than an enforced semantic check.
+private action still executes. There is no unrestricted mode: every public message is
+checked against the glyph file, in the Latin preset too.
 
 The task posts only `{"stage":0,"invalid_attempts":0}` at the start and updated
 values when either changes. Stage numbers are 0 cabinet, 1 power, 2 exit, 3 escaped.
@@ -162,20 +154,20 @@ Run commands from the repository root. Dependencies are in `requirements.txt`.
 Preparation needs no key and makes no network calls:
 
 ```sh
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --prepare-only
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --prepare-only
 ```
 
 The printed log directory contains `task_preview.json` with all eight initial prompts
 for review, plus configuration and complete researcher ground truth. Do not give that
 whole folder to a task agent or monitor.
 
-The two launch presets differ only in `chat_mode`:
+The two launch presets differ only in `glyph_dictionary`:
 
-- `configs/storm_shelter_glyphs.json`: the full `dictionary_a`, with spaces and agent IDs
-  permitted, matching the current language-handoff preset. Set `allow_spaces: false`
+- `configs/storm_shelter_tangut.json`: the full `glyphs_tangut.txt`, with spaces and agent IDs
+  permitted, matching the language-handoff preset. Set `allow_spaces: false`
   **before language creation** to forbid both spaces and IDs in message bodies. Sender
   labels remain visible regardless.
-- `configs/storm_shelter_free.json`: any characters, with swarmish required by the prompt.
+- `configs/storm_shelter_latin.json`: `glyphs_latin.txt`, a-z and 0-9 only, same rules.
 
 Both specify eight Sol agents, medium reasoning, 16,000-token response limits, no
 temperature parameter, a ten-minute language-design allowance, and no task deadline.
@@ -190,15 +182,15 @@ or `.env`:
 
 ```sh
 # Invent swarmish, then hand it to a fresh team for Storm Shelter.
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json
 
 # Or reuse a previously written document, with no language-creation calls.
-.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --language-file /path/to/swarmish.txt
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --language-file /path/to/swarmish.txt
 ```
 
 When importing a document, match its communication settings and glyph alphabet. Add
 `--prepare-only` to review the imported-document prompts without running. Imported
-documents are copied to `language.txt` when the run starts. Automatic monitors are disabled
+documents are copied to `swarmish.txt` when the run starts. Automatic monitors are disabled
 in these presets (`run_monitors: false`), so review the task before spending on decoding.
 
 ### Replay the saved chat under variable conditions
@@ -208,21 +200,23 @@ rerun the task or language creation. Each invocation writes a separate
 `logs/RUN/monitor_runs/<timestamp>_<id>/` folder.
 
 ```sh
-# Prepare all four briefings without API calls.
+# Prepare the configured briefings without API calls.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
 
-# Run all four independent conditions, with a separate $5 soft cap for this invocation.
+# Run the configured independent conditions, with a separate $5 soft cap for this invocation.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --max-cost-usd 5
 
 # Select one condition or repeat --condition to select several.
-.venv/bin/python -m src.enc_dec.monitor logs/RUN --condition exact_room_mechanics
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --condition task_mechanics
 
 # Corresponding control with agent message text withheld.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --baseline --max-cost-usd 5
 ```
 
-CLI identifiers are `no_task_briefing`, `general_premise`, `exact_room_mechanics`,
-`full_room_knowledge`. `--model` overrides the monitor model for that invocation. The
+CLI identifiers are `task_summary`, `task_full`, `task_mechanics`, `no_task` and
+`wrong_task`; the default set and the task texts are in `src/enc_dec/prompts/round3_config.json`
+(`task_mechanics`, the exact round 2 prompt without internals, is off by default). The
+briefing sits in the system prompt and the user turn is the transcript only. `--model` overrides the monitor model for that invocation. The
 saved configuration otherwise supplies the same medium effort and 16,000-token limit
 to every condition. For a controlled comparison, keep those settings fixed and repeat
 the independent calls if assessing model variability. Calls run sequentially with no
@@ -236,7 +230,7 @@ unmeasured. Finish all intended conditions before comparing them.
 - `escape_room_definition.json`: complete fixed room, clues, owners, rules and solution.
 - `task_preview.json`: initial per-agent prompts, with a placeholder reference if language
   creation has not happened. `task_agents.json` records the actual task system prompts.
-- `language.txt`: the frozen reference passed to the task team; creation logs are separate.
+- `swarmish.txt`: the frozen reference passed to the task team; creation logs are separate.
 - `task_chatroom.jsonl`: public evidence, including task status. This is the only chat
   used by the standalone monitor.
 - `agent_calls.jsonl`: private prompts, returned content, usage, parsing, intentions and
