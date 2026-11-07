@@ -27,21 +27,46 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 ```
 
 `allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
-<<<<<<< HEAD
 `language_instruction: true` (on in both board configs) tells agents to build a language from the
 glyphs rather than a 1-to-1 mapping to Latin characters.
-=======
 The features no-spaces variant keeps the same eight agents, seed, model, scoring, and budget
 as `features_seed0.json`; only the communication restriction changes. Sender labels remain visible.
->>>>>>> c939c1de1e15c7011453568a374b95f0913e530e
 
-Scoring runs every **4 minutes** (`score_interval_s: 240`) in the defaults and all shipped run configs.
+Scoring runs every **60 seconds** (`score_interval_s: 60`) by default and in all current run configs.
+All shipped configs enable `randomize_feature_assignment`: with eight agents and eight features,
+each feature is privately assigned to exactly one agent by a seeded random permutation. Agents are
+told that IDs do not reveal feature ownership. The public feature list stays in the same order;
+the assignment uses a separate RNG so it does not change glyph, option, or initial-guess shuffles.
+The flag defaults to false when omitted, preserving older saved configurations.
 The Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay
 call. End-of-game interviews use a separate English-only prompt, **medium** reasoning, and a 16,000-token
 budget. These budgets include hidden reasoning tokens. Temperature is omitted.
 The $50 cap is soft: calls already in flight finish and are logged before the interviews run.
 Responses received after stopping are retained with `state_applied: false` and `ignored_reason`;
 they do not update guesses or chat.
+
+## Random feature ownership: five Gemini runs
+
+[`configs/gemini_random_features_5x60s`](configs/gemini_random_features_5x60s/README.md) contains
+five independent eight-agent Gemini 3.8 Flash configurations, with seeds 0–4, 60-second feedback,
+strict glyph-only messages, medium reasoning, and a **$20 soft cap per run**. Each run starts with
+a fresh chatroom and scratchpads. Launch only run 1 initially; review it before starting runs 2–5.
+There is no automatic batch continuation.
+
+```sh
+.venv/bin/python -m src.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
+```
+
+## Archived experiments
+
+- [Gemini count encoding and glyph-choice follow-up interviews](logs/20261107_074528_12f02cc3/README.md)
+- [Mixed Sol/Gemini binary ASCII and cross-model translation](logs/20261107_082059_9490e69c/README.md)
+- [Strict Sol binary ASCII and Morse SOS](logs/20261106_223314_5e5f03a8/README.md)
+
+Archives retain the exact settings used at the time, including four-minute scoring and fixed
+feature ownership in these earlier runs. Current launch presets use the settings described above.
+
+## Game and logs
 
 Two modes (`mode` in the config):
 - `features`: agents guess every feature; feedback is per-feature accuracy across agents.

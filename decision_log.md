@@ -14,11 +14,15 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 ## Game loop
 
 - **Real-time, not rounds.** Each agent runs its own async loop and calls the model whenever it's
-  ready (throttled by `min_turn_interval_s`). A separate scorer wakes every `score_interval_s` (default 240 seconds / 4 minutes).
+  ready (throttled by `min_turn_interval_s`). A separate scorer wakes every `score_interval_s` (default 60 seconds).
 - **A "try" is one scoring round.** The game ends at the win threshold or after `max_score_rounds`
   (default 100).
-- **Features are assigned round-robin.** Agent *i* knows feature *i mod F*. Default `n_agents` is 8
-  (= number of features) so every feature is known by someone; fewer agents prints a warning.
+- **Feature ownership can be randomized.** Current run presets enable `randomize_feature_assignment`:
+  a separate seeded RNG permutes the assignment, giving each of eight agents one distinct feature.
+  Public feature ordering and the existing glyph/options/initial-guess RNG stream are unchanged.
+  Agents are told that IDs do not reveal feature ownership; only their own clue is revealed.
+  Omitted/false retains the historical round-robin mapping for archived configurations.
+  With unequal counts, assignment cycles through the permuted feature list; fewer agents prints a warning.
 - **The system prompt tells agents scoring happens every N seconds**, plus the win condition and round limit.
 - **Agents see only the most recent `chat_context_messages` (default 50) chat messages per turn**, and
   the system prompt tells them so (anything older has to be kept in their scratchpad).
@@ -148,6 +152,27 @@ mode), which inflated scores for goals whose values happened to be listed first.
 
 ## First test runs (`src/scripts/`)
 
+- **Randomized-ownership Gemini batch:** `configs/gemini_random_features_5x60s/` prepares five
+  independent fresh games with seeds 0–4, medium reasoning, 16000-token gameplay/interview caps,
+  strict glyph-only messages, and a user-approved $20 soft limit per run. Launch only run 1 and
+  pause for review; no process or automation is authorized to advance to runs 2–5 yet.
+  All current run presets now use randomized ownership and 60-second scoring. Older archives
+  retain their original four-minute scoring and fixed ownership. More frequent scoring also
+  supplies more frequent feedback, so this is a joint intervention rather than a pure stop-timer change.
+- **Mixed-family comparison:** `features_seed0_no_spaces_mixed.json` repeats the strict seed-0
+  features experiment with four `openai/gpt-6.1-sol` agents (0, 2, 4, 6) and four
+  `google/gemini-3.8-flash` agents (1, 3, 5, 7), using `agent_models` and a $30 soft cost limit.
+  Medium reasoning, 16000-token gameplay/interview caps, four-minute scoring, and all other
+  effective settings match the single-family runs. Feature ownership follows agent index;
+  this is one fixed assignment, not a counterbalanced comparison. Pending calls and interviews
+  may exceed the soft cap. These describe the completed run's archived settings; current presets
+  have since moved to randomized ownership and 60-second scoring.
+- **Gemini comparison prepared:** `features_seed0_no_spaces_gemini.json` repeats strict features
+  run `5e5f03a8` with `google/gemini-3.8-flash` and a $20 soft cost limit. All other effective
+  settings match, including medium reasoning, 16000-token gameplay/interview caps, seed 0,
+  four-minute scoring, and `language_instruction: false`. Use the existing features launcher
+  with this config path. In-flight calls and final interviews can exceed the soft limit. These
+  were the archived comparison settings; the current launch preset has since changed as above.
 - Two runs, seed 0 (goal person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
   scoring every 4 minutes (240 seconds): `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
   `run_board_seed0.py` takes an optional config path (default `board_seed0.json`).

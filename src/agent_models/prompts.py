@@ -51,6 +51,20 @@ is not the order the other agents see."""
 order. The order you see is not the order the other agents see."""
 
 
+def _feature_assignment_text(n_agents: int, n_features: int) -> str:
+    if n_agents == n_features:
+        coverage = f"Each of the {n_agents} agents knows one different feature; every feature has exactly one owner."
+    elif n_agents < n_features:
+        coverage = "Each agent knows one different feature; some features are not known by any agent."
+    else:
+        coverage = "Every feature is known by at least one agent; some agents know the same feature."
+    return f"""\n\nFEATURE OWNERSHIP
+Feature ownership is randomized independently of the order of the feature list.
+{coverage}
+Agent IDs do not indicate which feature an agent knows. You are told only your own assignment;
+the assignments of the other agents are not revealed to you."""
+
+
 def _scoring_text(config: GameConfig, board: Board | None) -> str:
     rounds = f", or after {config.max_score_rounds} scoring rounds" if config.max_score_rounds else ""
     agents = "all agents" if config.win_threshold == 1 else f"at least {config.win_threshold:.0%} of agents"
@@ -95,12 +109,16 @@ def build_system_prompt(agent: AgentState, all_agent_ids: list[str], config: Gam
     others = ", ".join(a for a in all_agent_ids if a != agent.agent_id)
     forbidden = "letters, digits, punctuation, other symbols" + ("" if config.allow_spaces else ", spaces, agent IDs")
     language = f"\n{LANGUAGE_INSTRUCTION}" if config.language_instruction else ""
+    assignment = (
+        _feature_assignment_text(len(all_agent_ids), len(agent.features_view))
+        if config.randomize_feature_assignment else ""
+    )
 
     return f"""You are {agent.agent_id}, one of {len(all_agent_ids)} agents playing a cooperative game.
 The other agents are: {others}.
 
 GOAL
-{_goal_text(agent, board)}
+{_goal_text(agent, board)}{assignment}
 
 COMMUNICATION
 You can only talk to the other agents through a shared chatroom, and chat messages may ONLY

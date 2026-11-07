@@ -29,15 +29,18 @@ class GameConfig(BaseModel):
     # True adds "use these glyphs to create a language ... no 1-to-1 mapping to Latin characters".
     language_instruction: bool = False
 
-    # Features are assigned round-robin, so n_agents >= number of features means every feature is known.
+    # Features cycle across agents, so n_agents >= number of features covers every feature.
     n_agents: int = Field(default=8, ge=1)
+    # Shuffle private ownership independently of public feature order and all other random draws.
+    # False preserves legacy runs whose agent index identifies the feature.
+    randomize_feature_assignment: bool = False
 
     # Default model for every agent; agent_models (if set) overrides per agent, by index.
     model: str = "openai/gpt-4o-mini"
     agent_models: list[str] | None = None
 
     # Stop conditions besides winning; None disables that limit.
-    score_interval_s: float = Field(default=240, gt=0)
+    score_interval_s: float = Field(default=60, gt=0)
     max_score_rounds: int | None = Field(default=100, ge=1)
     max_cost_usd: float | None = Field(default=None, gt=0)  # total OpenRouter cost for the run
 

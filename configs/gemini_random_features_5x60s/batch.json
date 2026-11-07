@@ -1,0 +1,38 @@
+{
+  "experiment": "gemini_random_features_5x60s",
+  "model": "google/gemini-3.8-flash",
+  "n_agents": 8,
+  "score_interval_s": 60,
+  "randomize_feature_assignment": true,
+  "soft_cost_limit_usd_per_run": 20,
+  "auto_advance": false,
+  "review_required_after_run": 1,
+  "independence": "Fresh Game instances, scratchpads and chatrooms; distinct local seeds 0-4. No previous transcripts or interviews enter prompts. Model sampling is not deterministically seeded.",
+  "runs": [
+    {
+      "run": 1,
+      "seed": 0,
+      "config": "run_1_seed0.json"
+    },
+    {
+      "run": 2,
+      "seed": 1,
+      "config": "run_2_seed1.json"
+    },
+    {
+      "run": 3,
+      "seed": 2,
+      "config": "run_3_seed2.json"
+    },
+    {
+      "run": 4,
+      "seed": 3,
+      "config": "run_4_seed3.json"
+    },
+    {
+      "run": 5,
+      "seed": 4,
+      "config": "run_5_seed4.json"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 """
 Main gameplay loop.
-There is a goal object with F features. There are N agents; features are assigned round-robin,
-so each agent knows the true value of exactly one feature.
+There is a goal object with F features. There are N agents; each agent knows the true value of
+exactly one feature. Features cycle across agents, optionally in a seeded random ownership order
+independent of the public feature list. With N = F, each feature has exactly one owner.
 In board mode the goal is one person on a shared board (Guess Who); agents still guess every feature,
 and a guess counts as the correct person only if every feature matches.
 The agents have access to a chatroom where they can communicate with each other.
@@ -9,7 +10,7 @@ The only communication in the chatroom is in glyphs for the agents except:
 - When allow_spaces is true, they can also use spaces and agent IDs in messages.
 - If they respond not in glyphs, a shared indication will be posted in the chatroom that is understood
   to mean that that model tried to respond not in glyphs.
-Every M seconds (default 240 / four minutes), every agent's guess is scored and the result is posted in the chatroom.
+Every M seconds (default 60 / one minute), every agent's guess is scored and the result is posted in the chatroom.
 The game ends when the win condition is met or after max_score_rounds scoring rounds. Afterwards each
 agent is asked to explain its communication strategy (unless the game was interrupted or hit a fatal
 API error such as an invalid key, no credits, or an unknown model, which stops the game immediately).
@@ -85,9 +86,19 @@ class Game:
         # Option, glyph, and board order and the starting guess are randomized per agent so that
         # "pick the first thing listed" doesn't line up across agents or with the goal.
         features = self.goal.features
+        assignments = list(features)
+        if self.config.randomize_feature_assignment:
+            # A separate domain-tagged RNG keeps glyphs, options, board order, and guesses
+            # identical when only ownership randomization is toggled. Never shuffle features:
+            # exposing the assignment order as the public schema would reveal ownership again.
+            assignment_seed = (
+                None if self.config.seed is None
+                else f"swarm-glyphs:feature-assignment:v1:{self.config.seed}"
+            )
+            random.Random(assignment_seed).shuffle(assignments)
         agents = []
         for i in range(self.config.n_agents):
-            feature = features[i % len(features)]
+            feature = assignments[i % len(assignments)]
             board_order = self.rng.sample(self.board.numbers, len(self.board)) if self.board else None
             agents.append(
                 AgentState(

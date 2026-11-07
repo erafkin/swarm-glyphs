@@ -2,8 +2,9 @@
   "mode": "features",
   "n_agents": 8,
   "model": "openai/gpt-4o-mini",
-  "score_interval_s": 240,
+  "score_interval_s": 60,
   "max_score_rounds": 2,
   "min_turn_interval_s": 5,
-  "seed": 0
+  "seed": 0,
+  "randomize_feature_assignment": true
 }

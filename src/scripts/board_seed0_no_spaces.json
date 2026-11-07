@@ -11,10 +11,11 @@
   "request_timeout_s": 300,
   "glyph_dictionary": "dictionary_a",
   "n_glyphs": 18,
-  "score_interval_s": 240,
+  "score_interval_s": 60,
   "max_score_rounds": null,
   "max_cost_usd": 50,
   "win_threshold": 1.0,
   "allow_spaces": false,
-  "language_instruction": true
+  "language_instruction": true,
+  "randomize_feature_assignment": true
 }
