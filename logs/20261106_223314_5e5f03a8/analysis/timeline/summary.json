@@ -1,0 +1,1341 @@
+{
+  "method": "Replay full applied guess snapshots in JSONL completion order, starting from first-turn YOUR CURRENT GUESS for each agent. Ignore four state_applied:false late responses. Rounded elapsed timestamps; source lines are authoritative ordering. Cost is recorded completed-response cost, not counterfactual savings.",
+  "initial_guesses": {
+    "agent_4": {
+      "hair_colour": "blonde",
+      "hairstyle": "curls",
+      "facial_hair": "moustache",
+      "glasses": "square",
+      "clothing": "hoodie",
+      "clothing_colour": "yellow",
+      "background": "blue",
+      "expression": "frown"
+    },
+    "agent_1": {
+      "hair_colour": "black",
+      "hairstyle": "bob",
+      "facial_hair": "none",
+      "glasses": "round",
+      "clothing": "sweater",
+      "clothing_colour": "red",
+      "background": "purple",
+      "expression": "smile"
+    },
+    "agent_5": {
+      "hair_colour": "brown",
+      "hairstyle": "spikes",
+      "facial_hair": "moustache",
+      "glasses": "sunglasses",
+      "clothing": "sweater",
+      "clothing_colour": "green",
+      "background": "green",
+      "expression": "neutral"
+    },
+    "agent_2": {
+      "hair_colour": "black",
+      "hairstyle": "spikes",
+      "facial_hair": "none",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "purple",
+      "expression": "frown"
+    },
+    "agent_7": {
+      "hair_colour": "red",
+      "hairstyle": "bob",
+      "facial_hair": "beard",
+      "glasses": "sunglasses",
+      "clothing": "jacket",
+      "clothing_colour": "red",
+      "background": "green",
+      "expression": "surprised"
+    },
+    "agent_0": {
+      "hair_colour": "red",
+      "hairstyle": "bob",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "green",
+      "background": "blue",
+      "expression": "smile"
+    },
+    "agent_6": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "none",
+      "glasses": "square",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "yellow",
+      "expression": "smile"
+    },
+    "agent_3": {
+      "hair_colour": "black",
+      "hairstyle": "curls",
+      "facial_hair": "none",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    }
+  },
+  "initial_correct_cells": 19,
+  "call_timestamps_monotonic": true,
+  "global_convergence": {
+    "first": {
+      "elapsed_s": 257.0,
+      "source_line": 234,
+      "agent_id": "agent_6",
+      "turn": 31,
+      "cumulative_gameplay_cost_usd": 7.174876,
+      "correct_cells": 64,
+      "fully_correct_agents": 8
+    },
+    "sustained": {
+      "elapsed_s": 257.0,
+      "source_line": 234,
+      "agent_id": "agent_6",
+      "turn": 31,
+      "cumulative_gameplay_cost_usd": 7.174876,
+      "correct_cells": 64,
+      "fully_correct_agents": 8
+    }
+  },
+  "seven_agents_correct": {
+    "first": {
+      "elapsed_s": 56.2,
+      "source_line": 26,
+      "agent_id": "agent_0",
+      "turn": 3,
+      "cumulative_gameplay_cost_usd": 0.5402405,
+      "correct_cells": 63,
+      "fully_correct_agents": 7
+    },
+    "sustained": {
+      "elapsed_s": 56.2,
+      "source_line": 26,
+      "agent_id": "agent_0",
+      "turn": 3,
+      "cumulative_gameplay_cost_usd": 0.5402405,
+      "correct_cells": 63,
+      "fully_correct_agents": 7
+    }
+  },
+  "per_agent_convergence": {
+    "agent_0": {
+      "first": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      },
+      "sustained": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      }
+    },
+    "agent_1": {
+      "first": {
+        "elapsed_s": 43.3,
+        "source_line": 16,
+        "agent_id": "agent_1",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.276188,
+        "correct_cells": 47,
+        "fully_correct_agents": 1
+      },
+      "sustained": {
+        "elapsed_s": 43.3,
+        "source_line": 16,
+        "agent_id": "agent_1",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.276188,
+        "correct_cells": 47,
+        "fully_correct_agents": 1
+      }
+    },
+    "agent_2": {
+      "first": {
+        "elapsed_s": 44.7,
+        "source_line": 17,
+        "agent_id": "agent_2",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.2993465,
+        "correct_cells": 51,
+        "fully_correct_agents": 2
+      },
+      "sustained": {
+        "elapsed_s": 44.7,
+        "source_line": 17,
+        "agent_id": "agent_2",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.2993465,
+        "correct_cells": 51,
+        "fully_correct_agents": 2
+      }
+    },
+    "agent_3": {
+      "first": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      },
+      "sustained": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      }
+    },
+    "agent_4": {
+      "first": {
+        "elapsed_s": 47.1,
+        "source_line": 19,
+        "agent_id": "agent_4",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.347776,
+        "correct_cells": 56,
+        "fully_correct_agents": 4
+      },
+      "sustained": {
+        "elapsed_s": 47.1,
+        "source_line": 19,
+        "agent_id": "agent_4",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.347776,
+        "correct_cells": 56,
+        "fully_correct_agents": 4
+      }
+    },
+    "agent_5": {
+      "first": {
+        "elapsed_s": 45.2,
+        "source_line": 18,
+        "agent_id": "agent_5",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.3208225,
+        "correct_cells": 53,
+        "fully_correct_agents": 3
+      },
+      "sustained": {
+        "elapsed_s": 45.2,
+        "source_line": 18,
+        "agent_id": "agent_5",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.3208225,
+        "correct_cells": 53,
+        "fully_correct_agents": 3
+      }
+    },
+    "agent_6": {
+      "first": {
+        "elapsed_s": 257.0,
+        "source_line": 234,
+        "agent_id": "agent_6",
+        "turn": 31,
+        "cumulative_gameplay_cost_usd": 7.174876,
+        "correct_cells": 64,
+        "fully_correct_agents": 8
+      },
+      "sustained": {
+        "elapsed_s": 257.0,
+        "source_line": 234,
+        "agent_id": "agent_6",
+        "turn": 31,
+        "cumulative_gameplay_cost_usd": 7.174876,
+        "correct_cells": 64,
+        "fully_correct_agents": 8
+      }
+    },
+    "agent_7": {
+      "first": {
+        "elapsed_s": 51.2,
+        "source_line": 22,
+        "agent_id": "agent_7",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.4325015,
+        "correct_cells": 61,
+        "fully_correct_agents": 6
+      },
+      "sustained": {
+        "elapsed_s": 51.2,
+        "source_line": 22,
+        "agent_id": "agent_7",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.4325015,
+        "correct_cells": 61,
+        "fully_correct_agents": 6
+      }
+    }
+  },
+  "per_feature_convergence": {
+    "hair_colour": {
+      "first": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      },
+      "sustained": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      }
+    },
+    "hairstyle": {
+      "first": {
+        "elapsed_s": 37.9,
+        "source_line": 15,
+        "agent_id": "agent_0",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.250997,
+        "correct_cells": 44,
+        "fully_correct_agents": 0
+      },
+      "sustained": {
+        "elapsed_s": 37.9,
+        "source_line": 15,
+        "agent_id": "agent_0",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.250997,
+        "correct_cells": 44,
+        "fully_correct_agents": 0
+      }
+    },
+    "facial_hair": {
+      "first": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      },
+      "sustained": {
+        "elapsed_s": 49.3,
+        "source_line": 21,
+        "agent_id": "agent_3",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.4044705,
+        "correct_cells": 59,
+        "fully_correct_agents": 5
+      }
+    },
+    "glasses": {
+      "first": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      },
+      "sustained": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      }
+    },
+    "clothing": {
+      "first": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      },
+      "sustained": {
+        "elapsed_s": 56.2,
+        "source_line": 26,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.5402405,
+        "correct_cells": 63,
+        "fully_correct_agents": 7
+      }
+    },
+    "clothing_colour": {
+      "first": {
+        "elapsed_s": 257.0,
+        "source_line": 234,
+        "agent_id": "agent_6",
+        "turn": 31,
+        "cumulative_gameplay_cost_usd": 7.174876,
+        "correct_cells": 64,
+        "fully_correct_agents": 8
+      },
+      "sustained": {
+        "elapsed_s": 257.0,
+        "source_line": 234,
+        "agent_id": "agent_6",
+        "turn": 31,
+        "cumulative_gameplay_cost_usd": 7.174876,
+        "correct_cells": 64,
+        "fully_correct_agents": 8
+      }
+    },
+    "background": {
+      "first": {
+        "elapsed_s": 47.1,
+        "source_line": 19,
+        "agent_id": "agent_4",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.347776,
+        "correct_cells": 56,
+        "fully_correct_agents": 4
+      },
+      "sustained": {
+        "elapsed_s": 47.1,
+        "source_line": 19,
+        "agent_id": "agent_4",
+        "turn": 3,
+        "cumulative_gameplay_cost_usd": 0.347776,
+        "correct_cells": 56,
+        "fully_correct_agents": 4
+      }
+    },
+    "expression": {
+      "first": {
+        "elapsed_s": 33.0,
+        "source_line": 12,
+        "agent_id": "agent_5",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.185429,
+        "correct_cells": 37,
+        "fully_correct_agents": 0
+      },
+      "sustained": {
+        "elapsed_s": 33.0,
+        "source_line": 12,
+        "agent_id": "agent_5",
+        "turn": 2,
+        "cumulative_gameplay_cost_usd": 0.185429,
+        "correct_cells": 37,
+        "fully_correct_agents": 0
+      }
+    }
+  },
+  "regressions": [
+    {
+      "elapsed_s": 30.3,
+      "source_line": 10,
+      "agent_id": "agent_2",
+      "turn": 2,
+      "feature": "clothing_colour",
+      "before": "blue",
+      "after": "yellow",
+      "before_correct": true,
+      "after_correct": false
+    }
+  ],
+  "guess_change_count": 47,
+  "last_guess_change": {
+    "elapsed_s": 257.0,
+    "source_line": 234,
+    "agent_id": "agent_6",
+    "turn": 31,
+    "feature": "clothing_colour",
+    "before": "yellow",
+    "after": "blue",
+    "before_correct": false,
+    "after_correct": true
+  },
+  "score_checks": [
+    {
+      "round": 1,
+      "elapsed_s": 240.0,
+      "last_completed_call_line": 223,
+      "guesses_match_replay": true,
+      "accuracy_matches_replay": true,
+      "fully_correct_rate_matches": true
+    },
+    {
+      "round": 2,
+      "elapsed_s": 480.0,
+      "last_completed_call_line": 472,
+      "guesses_match_replay": true,
+      "accuracy_matches_replay": true,
+      "fully_correct_rate_matches": true
+    }
+  ],
+  "first_score_in_inputs": {
+    "agent_2": {
+      "source_line": 227,
+      "elapsed_s": 249.3,
+      "turn": 29,
+      "input_elapsed_s": 240,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_7": {
+      "source_line": 228,
+      "elapsed_s": 250.9,
+      "turn": 28,
+      "input_elapsed_s": 242,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_1": {
+      "source_line": 229,
+      "elapsed_s": 251.2,
+      "turn": 30,
+      "input_elapsed_s": 243,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_0": {
+      "source_line": 230,
+      "elapsed_s": 251.2,
+      "turn": 28,
+      "input_elapsed_s": 243,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_5": {
+      "source_line": 231,
+      "elapsed_s": 253.8,
+      "turn": 30,
+      "input_elapsed_s": 245,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_3": {
+      "source_line": 232,
+      "elapsed_s": 254.8,
+      "turn": 28,
+      "input_elapsed_s": 245,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_4": {
+      "source_line": 233,
+      "elapsed_s": 256.0,
+      "turn": 30,
+      "input_elapsed_s": 247,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    },
+    "agent_6": {
+      "source_line": 234,
+      "elapsed_s": 257.0,
+      "turn": 31,
+      "input_elapsed_s": 247,
+      "score_lines": [
+        "[system] Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+      ]
+    }
+  },
+  "first_score_aware_chat_inputs_identical": true,
+  "first_score_aware_agent_message_count": 27,
+  "first_explicit_full_correct_decoding_claim": {
+    "agent_0": {
+      "source_line": 26,
+      "elapsed_s": 56.2,
+      "turn": 3,
+      "scratchpad": "All features decoded. hair_colour=brown (private). agent1 hairstyle=curls. agent2 facial_hair=beard (ASCII with 𗾧=0 𗅋=1). agent3 latest ASCII says glasses=none. agent4 latest ASCII says clothing=shirt. agent5 says clothing_colour=blue. agent6 background=green. agent7 expression=smile. Common ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Previously broadcast brown in this protocol. Now broadcasting hair_colour=brown explicitly. Full guess solved."
+    },
+    "agent_1": {
+      "source_line": 16,
+      "elapsed_s": 43.3,
+      "turn": 3,
+      "scratchpad": "All decoded. hairstyle=curls private. agent0 binary 𗄌0𘞌1 sep𗮘: hair_color=brown. agent2 𗾧0𗅋1 sep𘜎: beard => facial_hair=beard. agent3 𗄌0𗅋1 sep𗈰: glasses=none. agent4 same binary: clothing=shirt. agent5 continuous binary same 0/1: clothing_colour=blue. agent7 same binary: expression=smile. agent6 Morse 𘑻 dot 𗰷 dash 𗏠 letter separator 𗡝 word separator: SOS BACKGROUND GREEN => background=green. My prior ASCII curls sent. Now broadcasting background=green in common ASCII binary protocol to aid Morse decoding."
+    },
+    "agent_2": {
+      "source_line": 17,
+      "elapsed_s": 44.7,
+      "turn": 3,
+      "scratchpad": "All decoded: hair_colour=brown (agent0 binary ASCII); hairstyle=curls (agent1 ASCII); facial_hair=beard (my private fact); glasses=none (agent3 ASCII glasses=none); clothing=shirt (agent4 ASCII clothing=shirt); clothing_colour=blue (agent5 clarified ASCII clothing_colour=blue, supersedes earlier yellow interpretation); background=green (agent6 Morse SOS BACKGROUND GREEN, 𘑻 dot 𗰷 dash 𗏠 letter delimiter 𗡝 word delimiter); expression=smile (agent7 ASCII). Shared common ASCII encoding 𗄌=0 𗅋=1 𗈰 byte separator. Sending beard in common encoding. My earlier encoding was 𗾧=0 𗅋=1 𘜎 separator."
+    },
+    "agent_3": {
+      "source_line": 31,
+      "elapsed_s": 62.7,
+      "turn": 3,
+      "scratchpad": "All features decoded with confidence: hair_colour=brown (agent0); hairstyle=curls (agent1); facial_hair=beard (agent2); glasses=none (my private fact); clothing=shirt (agent4 message decoded clothing=shirt); clothing_colour=blue (agent5); background=green (agent6, echoed by agents1/4); expression=smile (agent7). Common ASCII binary code: 𗄌=0, 𗅋=1, separator 𗈰 between 8-bit bytes. agent4 clothing message reads clothing=shirt. Repeating that to help others. Full guess now correct; preserve all fields."
+    },
+    "agent_4": {
+      "source_line": 19,
+      "elapsed_s": 47.1,
+      "turn": 3,
+      "scratchpad": "All features decoded. clothing=shirt (private). hair_colour=brown from agent0 ASCII. hairstyle=curls from agent1 ASCII/unary. facial_hair=beard from agent2 ASCII. expression=smile from agent7 ASCII. glasses=none from agent3 ASCII (𗄌=0 𗅋=1 separator𗈰). clothing_colour=blue from agent5 latest ASCII clothing_colour=blue. background=green from agent6 Morse: 𘑻 dot, 𗰷 dash, 𗏠 letter separator, 𗡝 word separator. Message SOS background green. Sending background=green in standard shared ASCII binary."
+    },
+    "agent_5": {
+      "source_line": 18,
+      "elapsed_s": 45.2,
+      "turn": 3,
+      "scratchpad": "All features decoded. Binary protocol: 𗄌=0,𗅋=1,𗈰 separates 8-bit ASCII bytes. agent0 hair=brown; agent1 curls (hairstyle), confirmed initial unary alphabet hairstyle=curls; agent2 initial alternative binary spells beard (facial_hair); agent3 glasses=none; agent4 clothing=shirt; agent5 (me) clothing_colour=blue, broadcast clothing_colour=blue using common binary; agent6 background=green; agent7 expression=smile. Complete target: brown, curls, beard, none, shirt, blue, green, smile. Recent agent0 common binary spells brown. Everyone has shared in common binary except agent2 uses 𗾧=0,𗅋=1,𘜎 separator spelling beard. No uncertainty."
+    },
+    "agent_6": {
+      "source_line": 234,
+      "elapsed_s": 257.0,
+      "turn": 31,
+      "scratchpad": "ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Corrected prior scratchpad error: agent5's explicit clothing_colour message decodes clothing_colour=blue (last bytes 01100010 01101100 01110101 01100101), NOT yellow. Round1 clothing_colour 88% likely reflected my wrong yellow guess. All other features confirmed: agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; my background=green; agent7 expression=smile. Now full correct guess with blue."
+    },
+    "agent_7": {
+      "source_line": 22,
+      "elapsed_s": 51.2,
+      "turn": 3,
+      "scratchpad": "All features decoded with shared ASCII binary protocol: 𗄌=0, 𗅋=1, 𗈰 separates bytes. agent0 hair_colour=brown (latest brown); agent1 hairstyle=curls (latest curls); agent2 facial_hair=beard (alternate protocol 𗾧=0,𗅋=1,𘜎 separator spells beard); agent3 glasses=none; agent4 clothing=shirt; agent5 clothing_colour=blue; agent6 background=green. My private expression=smile, already broadcast expression=smile in ASCII binary. Full goal brown,curls,beard,none,shirt,blue,green,smile. Latest messages from agents3,4,5,6 are full named assignments in shared binary protocol. Broadcast own assignment again so all receive."
+    }
+  },
+  "claim_caveat": "Explicit full-decoding milestones are manually identified model-written scratchpad claims, corroborated with correct guesses; these are not access to hidden reasoning. Agent3 happened to guess shirt correctly before decoding it. Agent6 falsely claimed all decoded from48.8s while yellow was wrong.",
+  "gameplay_usage": {
+    "calls": 476,
+    "cost_usd": 18.5173605,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 6909751,
+    "completion_tokens": 124766,
+    "total_tokens": 7034517,
+    "reasoning_tokens": 12960,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 6900397,
+    "prompt_cost_usd": 17.2697005,
+    "completion_cost_usd": 1.24766
+  },
+  "interview_usage": {
+    "calls": 8,
+    "cost_usd": 0.3722805,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 139965,
+    "completion_tokens": 2238,
+    "total_tokens": 142203,
+    "reasoning_tokens": 171,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 139941,
+    "prompt_cost_usd": 0.3499005,
+    "completion_cost_usd": 0.02238
+  },
+  "total_usage": {
+    "calls": 484,
+    "cost_usd": 18.889641,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 7049716,
+    "completion_tokens": 127004,
+    "total_tokens": 7176720,
+    "reasoning_tokens": 13131,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 7040338,
+    "prompt_cost_usd": 17.619601,
+    "completion_cost_usd": 1.27004
+  },
+  "usage_to_seven_agents_correct": {
+    "calls": 26,
+    "cost_usd": 0.5402405,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 113729,
+    "completion_tokens": 25992,
+    "total_tokens": 139721,
+    "reasoning_tokens": 10867,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 105725,
+    "prompt_cost_usd": 0.2803205,
+    "completion_cost_usd": 0.25992
+  },
+  "usage_to_first_score": {
+    "calls": 223,
+    "cost_usd": 6.7595875,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 2442554,
+    "completion_tokens": 65750,
+    "total_tokens": 2508304,
+    "reasoning_tokens": 11572,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 2433959,
+    "prompt_cost_usd": 6.1020875,
+    "completion_cost_usd": 0.6575
+  },
+  "usage_to_convergence": {
+    "calls": 234,
+    "cost_usd": 7.174876,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 2574348,
+    "completion_tokens": 74332,
+    "total_tokens": 2648680,
+    "reasoning_tokens": 12854,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 2565720,
+    "prompt_cost_usd": 6.431556,
+    "completion_cost_usd": 0.74332
+  },
+  "usage_after_convergence": {
+    "calls": 242,
+    "cost_usd": 11.3424845,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 4335403,
+    "completion_tokens": 50434,
+    "total_tokens": 4385837,
+    "reasoning_tokens": 106,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 4334677,
+    "prompt_cost_usd": 10.8381445,
+    "completion_cost_usd": 0.50434
+  },
+  "usage_after_last_post": {
+    "calls": 238,
+    "cost_usd": 11.162513,
+    "missing_cost_calls": 0,
+    "prompt_tokens": 4269340,
+    "completion_tokens": 48952,
+    "total_tokens": 4318292,
+    "reasoning_tokens": 84,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 4268626,
+    "prompt_cost_usd": 10.672993,
+    "completion_cost_usd": 0.48952
+  },
+  "usage_by_agent": {
+    "agent_0": {
+      "calls": 59,
+      "cost_usd": 2.298471,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 862586,
+      "completion_tokens": 14259,
+      "total_tokens": 876845,
+      "reasoning_tokens": 1713,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 861418,
+      "prompt_cost_usd": 2.155881,
+      "completion_cost_usd": 0.14259
+    },
+    "agent_1": {
+      "calls": 61,
+      "cost_usd": 2.377229,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 883386,
+      "completion_tokens": 16935,
+      "total_tokens": 900321,
+      "reasoning_tokens": 1439,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 882214,
+      "prompt_cost_usd": 2.207879,
+      "completion_cost_usd": 0.16935
+    },
+    "agent_2": {
+      "calls": 60,
+      "cost_usd": 2.333789,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 870302,
+      "completion_tokens": 15862,
+      "total_tokens": 886164,
+      "reasoning_tokens": 1493,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 869130,
+      "prompt_cost_usd": 2.175169,
+      "completion_cost_usd": 0.15862
+    },
+    "agent_3": {
+      "calls": 57,
+      "cost_usd": 2.252273,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 833645,
+      "completion_tokens": 16874,
+      "total_tokens": 850519,
+      "reasoning_tokens": 2497,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 832486,
+      "prompt_cost_usd": 2.083533,
+      "completion_cost_usd": 0.16874
+    },
+    "agent_4": {
+      "calls": 60,
+      "cost_usd": 2.3188165,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 867437,
+      "completion_tokens": 15081,
+      "total_tokens": 882518,
+      "reasoning_tokens": 1764,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 866265,
+      "prompt_cost_usd": 2.1680065,
+      "completion_cost_usd": 0.15081
+    },
+    "agent_5": {
+      "calls": 60,
+      "cost_usd": 2.330773,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 867664,
+      "completion_tokens": 16220,
+      "total_tokens": 883884,
+      "reasoning_tokens": 1183,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 866490,
+      "prompt_cost_usd": 2.168573,
+      "completion_cost_usd": 0.1622
+    },
+    "agent_6": {
+      "calls": 61,
+      "cost_usd": 2.337772,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 879371,
+      "completion_tokens": 13993,
+      "total_tokens": 893364,
+      "reasoning_tokens": 1399,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 878200,
+      "prompt_cost_usd": 2.197842,
+      "completion_cost_usd": 0.13993
+    },
+    "agent_7": {
+      "calls": 58,
+      "cost_usd": 2.268237,
+      "missing_cost_calls": 0,
+      "prompt_tokens": 845360,
+      "completion_tokens": 15542,
+      "total_tokens": 860902,
+      "reasoning_tokens": 1472,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 844194,
+      "prompt_cost_usd": 2.112817,
+      "completion_cost_usd": 0.15542
+    }
+  },
+  "applied_calls": 472,
+  "silences": 436,
+  "posted_messages": 36,
+  "posted_messages_before_first_score": 27,
+  "last_post_before_first_score": {
+    "agent_id": "agent_2",
+    "turn": 7,
+    "elapsed_s": 82.0,
+    "source_line": 52
+  },
+  "posted_messages_by_agent": {
+    "agent_4": 4,
+    "agent_1": 4,
+    "agent_5": 3,
+    "agent_2": 9,
+    "agent_7": 3,
+    "agent_0": 4,
+    "agent_6": 4,
+    "agent_3": 5
+  },
+  "last_posted_message": {
+    "agent_id": "agent_2",
+    "turn": 30,
+    "elapsed_s": 260.1,
+    "source_line": 238,
+    "message": "𗄌𗅋𗅋𗄌𗄌𗄌𗅋𗅋𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗄌𗄌𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗅋𗅋𗈰𗄌𗅋𗅋𗅋𗄌𗅋𗄌𗄌𗈰𗄌𗅋𗅋𗄌𗅋𗄌𗄌𗄌𗈰𗄌𗅋𗅋𗄌𗅋𗄌𗄌𗅋𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗅋𗄌𗈰𗄌𗅋𗅋𗄌𗄌𗅋𗅋𗅋𗈰𗄌𗅋𗄌𗅋𗅋𗅋𗅋𗅋𗈰𗄌𗅋𗅋𗄌𗄌𗄌𗅋𗅋𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗅋𗅋𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗄌𗄌𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗅋𗅋𗈰𗄌𗅋𗅋𗅋𗄌𗅋𗄌𗅋𗈰𗄌𗅋𗅋𗅋𗄌𗄌𗅋𗄌𗈰𗄌𗄌𗅋𗅋𗅋𗅋𗄌𗅋𗈰𗄌𗅋𗅋𗄌𗄌𗄌𗅋𗄌𗈰𗄌𗅋𗅋𗄌𗅋𗅋𗄌𗄌𗈰𗄌𗅋𗅋𗅋𗄌𗅋𗄌𗅋𗈰𗄌𗅋𗅋𗄌𗄌𗅋𗄌𗅋"
+  },
+  "system_messages": [
+    {
+      "source_line": 28,
+      "timestamp": 1794033434.539785,
+      "text": "Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 88%, background 100%, expression 100%. Agents with every feature correct: 88%."
+    },
+    {
+      "source_line": 38,
+      "timestamp": 1794033674.547551,
+      "text": "Score round 2: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 100%, background 100%, expression 100%. Agents with every feature correct: 100%."
+    }
+  ],
+  "chat_matches_posts": true,
+  "parse_errors": 0,
+  "violations": 0,
+  "rejected_guess_updates": 0,
+  "all_calls_used_structured_output": true,
+  "agent6_evidence": {
+    "first_misdecode": {
+      "source_line": 14,
+      "elapsed_s": 36.8,
+      "turn": 2
+    },
+    "false_full_decoding_claim": {
+      "source_line": 20,
+      "elapsed_s": 48.8,
+      "turn": 3
+    },
+    "last_wrong_response": {
+      "source_line": 226,
+      "elapsed_s": 242.5,
+      "turn": 30,
+      "input_elapsed_s": 240,
+      "score_feedback_present": false
+    },
+    "repair": {
+      "source_line": 234,
+      "elapsed_s": 257.0,
+      "turn": 31,
+      "input_elapsed_s": 247,
+      "score_feedback_present": true,
+      "new_postscore_peer_messages_seen": 0
+    },
+    "inference": "First score identified clothing_colour as only imperfect feature. Agent6 explicitly re-decoded original agent5 binary into blue in first score-aware call. Seven peers independently rebroadcast blue, but those replies had not appeared in this call input. Whole conversation fit within50messagewindow, so original clue was never truncated."
+  },
+  "ignored_calls": [
+    {
+      "agent_id": "agent_2",
+      "turn": 60,
+      "elapsed_s": 480.5,
+      "source_line": 473,
+      "ignored_reason": "win_threshold_reached"
+    },
+    {
+      "agent_id": "agent_5",
+      "turn": 60,
+      "elapsed_s": 480.8,
+      "source_line": 474,
+      "ignored_reason": "win_threshold_reached"
+    },
+    {
+      "agent_id": "agent_7",
+      "turn": 58,
+      "elapsed_s": 481.2,
+      "source_line": 475,
+      "ignored_reason": "win_threshold_reached"
+    },
+    {
+      "agent_id": "agent_0",
+      "turn": 59,
+      "elapsed_s": 481.4,
+      "source_line": 476,
+      "ignored_reason": "win_threshold_reached"
+    }
+  ],
+  "gameplay_token_stats": {
+    "prompt_tokens": {
+      "mean": 14516.283613445377,
+      "min": 991,
+      "max": 17975
+    },
+    "completion_tokens": {
+      "mean": 262.11344537815125,
+      "min": 158,
+      "max": 1904
+    }
+  },
+  "snapshots": {
+    "0": {
+      "elapsed_s": 0,
+      "source_line": 0,
+      "agent_id": null,
+      "turn": 0,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 2,
+        "agent_1": 1,
+        "agent_2": 1,
+        "agent_3": 6,
+        "agent_4": 1,
+        "agent_5": 2,
+        "agent_6": 4,
+        "agent_7": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 2,
+        "glasses": 1,
+        "clothing": 2,
+        "clothing_colour": 2,
+        "background": 3,
+        "expression": 4
+      },
+      "correct_cells": 19,
+      "fully_correct_agents": 0,
+      "cumulative_gameplay_cost_usd": 0
+    },
+    "20": {
+      "elapsed_s": 19.0,
+      "source_line": 7,
+      "agent_id": "agent_6",
+      "turn": 1,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 3,
+        "agent_1": 2,
+        "agent_2": 2,
+        "agent_3": 6,
+        "agent_4": 2,
+        "agent_5": 3,
+        "agent_6": 5,
+        "agent_7": 3
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 4,
+        "expression": 5
+      },
+      "correct_cells": 26,
+      "fully_correct_agents": 0,
+      "cumulative_gameplay_cost_usd": 0.081428,
+      "input_elapsed_s": 0,
+      "score_feedback_in_input": false,
+      "posted_message": true
+    },
+    "30": {
+      "elapsed_s": 26.8,
+      "source_line": 9,
+      "agent_id": "agent_1",
+      "turn": 2,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 3,
+        "agent_1": 5,
+        "agent_2": 2,
+        "agent_3": 6,
+        "agent_4": 2,
+        "agent_5": 3,
+        "agent_6": 5,
+        "agent_7": 3
+      },
+      "correct_by_feature": {
+        "hair_colour": 4,
+        "hairstyle": 4,
+        "facial_hair": 4,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 4,
+        "background": 4,
+        "expression": 5
+      },
+      "correct_cells": 29,
+      "fully_correct_agents": 0,
+      "cumulative_gameplay_cost_usd": 0.116431,
+      "input_elapsed_s": 17,
+      "score_feedback_in_input": false,
+      "posted_message": true
+    },
+    "40": {
+      "elapsed_s": 37.9,
+      "source_line": 15,
+      "agent_id": "agent_0",
+      "turn": 2,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 6,
+        "agent_1": 5,
+        "agent_2": 4,
+        "agent_3": 6,
+        "agent_4": 5,
+        "agent_5": 6,
+        "agent_6": 6,
+        "agent_7": 6
+      },
+      "correct_by_feature": {
+        "hair_colour": 7,
+        "hairstyle": 8,
+        "facial_hair": 7,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 5,
+        "background": 5,
+        "expression": 8
+      },
+      "correct_cells": 44,
+      "fully_correct_agents": 0,
+      "cumulative_gameplay_cost_usd": 0.250997,
+      "input_elapsed_s": 19,
+      "score_feedback_in_input": false,
+      "posted_message": true
+    },
+    "50": {
+      "elapsed_s": 49.3,
+      "source_line": 21,
+      "agent_id": "agent_3",
+      "turn": 2,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 6,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 7,
+        "agent_7": 6
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 6,
+        "clothing": 6,
+        "clothing_colour": 7,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 59,
+      "fully_correct_agents": 5,
+      "cumulative_gameplay_cost_usd": 0.4044705,
+      "input_elapsed_s": 29,
+      "score_feedback_in_input": false,
+      "posted_message": true
+    },
+    "60": {
+      "elapsed_s": 58.3,
+      "source_line": 28,
+      "agent_id": "agent_4",
+      "turn": 4,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 7,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 7,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 63,
+      "fully_correct_agents": 7,
+      "cumulative_gameplay_cost_usd": 0.593075,
+      "input_elapsed_s": 52,
+      "score_feedback_in_input": false,
+      "posted_message": false
+    },
+    "90": {
+      "elapsed_s": 89.3,
+      "source_line": 60,
+      "agent_id": "agent_2",
+      "turn": 8,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 7,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 7,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 63,
+      "fully_correct_agents": 7,
+      "cumulative_gameplay_cost_usd": 1.5802495,
+      "input_elapsed_s": 87,
+      "score_feedback_in_input": false,
+      "posted_message": false
+    },
+    "120": {
+      "elapsed_s": 119.1,
+      "source_line": 92,
+      "agent_id": "agent_2",
+      "turn": 12,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 7,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 7,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 63,
+      "fully_correct_agents": 7,
+      "cumulative_gameplay_cost_usd": 2.5983615,
+      "input_elapsed_s": 116,
+      "score_feedback_in_input": false,
+      "posted_message": false
+    },
+    "240": {
+      "elapsed_s": 240.0,
+      "source_line": 223,
+      "agent_id": "agent_5",
+      "turn": 29,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 7,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 7,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 63,
+      "fully_correct_agents": 7,
+      "cumulative_gameplay_cost_usd": 6.7595875,
+      "input_elapsed_s": 238,
+      "score_feedback_in_input": false,
+      "posted_message": false
+    },
+    "257": {
+      "elapsed_s": 257.0,
+      "source_line": 234,
+      "agent_id": "agent_6",
+      "turn": 31,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 8,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 64,
+      "fully_correct_agents": 8,
+      "cumulative_gameplay_cost_usd": 7.174876,
+      "input_elapsed_s": 247,
+      "score_feedback_in_input": true,
+      "posted_message": true
+    },
+    "300": {
+      "elapsed_s": 297.7,
+      "source_line": 278,
+      "agent_id": "agent_7",
+      "turn": 34,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 8,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 64,
+      "fully_correct_agents": 8,
+      "cumulative_gameplay_cost_usd": 9.2275225,
+      "input_elapsed_s": 295,
+      "score_feedback_in_input": true,
+      "posted_message": false
+    },
+    "480": {
+      "elapsed_s": 478.9,
+      "source_line": 472,
+      "agent_id": "agent_1",
+      "turn": 61,
+      "state_applied": true,
+      "correct_by_agent": {
+        "agent_0": 8,
+        "agent_1": 8,
+        "agent_2": 8,
+        "agent_3": 8,
+        "agent_4": 8,
+        "agent_5": 8,
+        "agent_6": 8,
+        "agent_7": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      },
+      "correct_cells": 64,
+      "fully_correct_agents": 8,
+      "cumulative_gameplay_cost_usd": 18.3298415,
+      "input_elapsed_s": 477,
+      "score_feedback_in_input": true,
+      "posted_message": false
+    }
+  },
+  "raw_folder_bytes": 8817613
+}

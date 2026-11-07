@@ -1,0 +1,223 @@
+{
+  "run_id": "5e5f03a8",
+  "coverage": {
+    "all_gameplay_calls_parsed": 476,
+    "all_interviews_read": 8,
+    "scratchpad_count": 476,
+    "unique_scratchpads_by_agent": {
+      "agent_0": 8,
+      "agent_1": 35,
+      "agent_2": 17,
+      "agent_3": 34,
+      "agent_4": 8,
+      "agent_5": 35,
+      "agent_6": 8,
+      "agent_7": 36
+    },
+    "method": "Read first 32 scratchpads verbatim, all later scratchpad changes through normalized time-insensitive diffs; checked all guesses, all interview answers, and mechanically decoded messages against separate protocol analysis."
+  },
+  "interpretation": [
+    "The agents converged on a communication convention using glyphs as binary digits and an eight-bit ASCII delimiter. English feature names and values supplied the semantic vocabulary; there is no evidence of novel feature-specific glyph meanings or new grammar.",
+    "Five agents initially chose binary ASCII independently, with different glyph mappings or byte framing; three used the lowest two Unicode glyphs. Agents 7 and 3 independently proposed the identical final three-glyph protocol while their initial chat was empty.",
+    "Protocol adoption did not require score feedback. Every agent had emitted a message using the final protocol by 44.7 seconds. Score feedback repaired a later persistent interpretation error.",
+    "Agent6 correction is temporally linked to its first score-containing prompt and explicit re-decoding of earlier blue messages. This is strong observational evidence of feedback-triggered repair, not a controlled demonstration that repair would never occur without feedback.",
+    "Scratchpads are explicit model-produced reports, not direct observation of hidden reasoning. They show durable recorded beliefs that can be compared with posted glyphs and accepted guesses."
+  ],
+  "key_evidence": [
+    {
+      "claim": "Independent initial binary choices",
+      "call_lines": [
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "note": "All first turn prompts say no messages yet. Agent5 contiguous common 0/1; agent2 alternative 0/1+separator; agent7 final shared code; agent0 lowest/highest code; agent3 final shared code."
+    },
+    {
+      "claim": "Agent1 cross-decodes three binary mappings and unseparated bytes, adopts agent7 protocol",
+      "call_line": 9,
+      "elapsed_s": 26.8
+    },
+    {
+      "claim": "Agent2 initial false yellow decoding",
+      "call_line": 10,
+      "elapsed_s": 30.3
+    },
+    {
+      "claim": "Agent6 initial false yellow decoding",
+      "call_line": 14,
+      "elapsed_s": 36.8
+    },
+    {
+      "claim": "Agent0 correctly decodes Morse background",
+      "call_line": 15,
+      "elapsed_s": 37.9
+    },
+    {
+      "claim": "Agent1 relays Morse background in shared binary",
+      "call_line": 16,
+      "elapsed_s": 43.3
+    },
+    {
+      "claim": "Agent2 corrects yellow to blue before feedback",
+      "call_line": 17,
+      "elapsed_s": 44.7,
+      "quote": "clothing_colour=blue (agent5 clarified ASCII clothing_colour=blue, supersedes earlier yellow interpretation)"
+    },
+    {
+      "claim": "Agent6 claims all known despite wrong yellow",
+      "call_line": 20,
+      "elapsed_s": 48.8,
+      "quote": "All features decoded. ... agent5 clothing_colour=yellow; ... Full goal now known."
+    },
+    {
+      "claim": "Agent4 also relays background",
+      "call_line": 19,
+      "elapsed_s": 47.1
+    },
+    {
+      "claim": "Agent6 identical wrong scratchpad repeated 27 consecutive calls",
+      "first_call_line": 27,
+      "last_call_line": 226,
+      "turns": [
+        4,
+        30
+      ],
+      "elapsed_s": [
+        56.9,
+        242.5
+      ],
+      "quote": "Full goal known and background=green already broadcast. Keep correct guess; no further messages needed."
+    },
+    {
+      "claim": "Agent6 correction upon first feedback-containing input",
+      "call_line": 234,
+      "turn": 31,
+      "elapsed_s": 257.0,
+      "input_time_since_start_s": 247,
+      "quote": "ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Corrected prior scratchpad error: agent5's explicit clothing_colour message decodes clothing_colour=blue (last bytes 01100010 01101100 01110101 01100101), NOT yellow. Round1 clothing_colour 88% likely reflected my wrong yellow guess. All other features confirmed: agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; my background=green; agent7 expression=smile. Now full correct guess with blue.",
+      "note": "Input chat contains original 27 agent posts plus round1 score only. No post-score blue relays are present yet, although seven such relays complete before this response."
+    },
+    {
+      "claim": "Other agents have decoded correction acknowledgment",
+      "call_lines": [
+        239,
+        240,
+        241,
+        243,
+        245,
+        246
+      ],
+      "elapsed_s_range": [
+        262.4,
+        267.6
+      ]
+    }
+  ],
+  "agent6_error": {
+    "initial_random_clothing_colour": "yellow",
+    "yellow_retained_turns": [
+      1,
+      30
+    ],
+    "blue_first_turn": 31,
+    "explicit_false_attribution_first_turn": 2,
+    "incorrect_claim_full_known_turns": [
+      3,
+      30
+    ],
+    "identical_wrong_scratchpad_repetitions": 27,
+    "agent5_blue_messages_in_correction_input": 2,
+    "new_peer_blue_rebroadcasts_in_correction_input": 0,
+    "correction_changes_only": "clothing_colour",
+    "plausible_mechanism": "Initial decoding mistake was written into persistent scratchpad and repeatedly copied with high confidence. Earlier blue messages remained visible; score feedback challenged the settled record and led to explicit byte-level rechecking.",
+    "causal_limits": "Do not claim scratchpad anchoring mechanism proven or score feedback logically necessary; only one observed run."
+  },
+  "interview_review": [
+    {
+      "agent_id": "agent_0",
+      "interview_line": 5,
+      "assessment": "Substantively accurate. Correctly says first message hair_color=brown whereas early scratchpad itself called it hair_colour=brown. No evidence others decoded initial version is cautious from its own perspective, though other scratchpads show several did."
+    },
+    {
+      "agent_id": "agent_1",
+      "interview_line": 2,
+      "assessment": "Correct shared-code description, but falsely claims rebroadcasting full solution or values in feature order. Its four actual posts are initial HAIRSTYLE CURLS, curls, background=green, clothing_colour=blue. Multiple peers did decode its initial unary message."
+    },
+    {
+      "agent_id": "agent_2",
+      "interview_line": 7,
+      "assessment": "Accurate core account; retrospective summary omits its own temporary yellow misdecode and subsequent pre-score correction. Other scratchpads demonstrate initial alternative binary decoded successfully."
+    },
+    {
+      "agent_id": "agent_3",
+      "interview_line": 1,
+      "assessment": "Accurate core protocol and score use, but quoted payload punctuation wrong: claims glasses;none, clothing;shirt, clothing;color;blue; actual payloads are glasses=none, clothing=shirt, clothing_colour=blue. Also omitted earlier clothing? query."
+    },
+    {
+      "agent_id": "agent_4",
+      "interview_line": 6,
+      "assessment": "Accurate account; initial compact Unicode/alphabetical code not demonstrably decoded by peers. Relayed background=green and clothing_colour=blue as stated."
+    },
+    {
+      "agent_id": "agent_5",
+      "interview_line": 3,
+      "assessment": "Accurate binary framing change and blue broadcasts. Matching guesses are not directly visible peer state; only own guess, public messages, and aggregate scores can be observed."
+    },
+    {
+      "agent_id": "agent_6",
+      "interview_line": 8,
+      "assessment": "Accurately admits yellow error and feedback-assisted correction. Its uncertainty about whether first Morse decoded is resolved by scratchpads of agents0,1,2,3,4. New post-score blue relays had not arrived in the correction input, so avoid suggesting those caused the correction."
+    },
+    {
+      "agent_id": "agent_7",
+      "interview_line": 4,
+      "assessment": "Accurate core protocol account and clothing-colour relay after first feedback."
+    }
+  ],
+  "interview_context": "All interview prompts include the entire 38-record chat (36 agent posts and 2 system scores), since fewer than the 50-message window, plus each agent final scratchpad and guess. Historical scratchpads are absent.",
+  "first_score_containing_response_by_agent": {
+    "agent_0": {
+      "call_line": 230,
+      "elapsed_s": 251.2,
+      "turn": 28
+    },
+    "agent_1": {
+      "call_line": 229,
+      "elapsed_s": 251.2,
+      "turn": 30
+    },
+    "agent_2": {
+      "call_line": 227,
+      "elapsed_s": 249.3,
+      "turn": 29
+    },
+    "agent_3": {
+      "call_line": 232,
+      "elapsed_s": 254.8,
+      "turn": 28
+    },
+    "agent_4": {
+      "call_line": 233,
+      "elapsed_s": 256.0,
+      "turn": 30
+    },
+    "agent_5": {
+      "call_line": 231,
+      "elapsed_s": 253.8,
+      "turn": 30
+    },
+    "agent_6": {
+      "call_line": 234,
+      "elapsed_s": 257.0,
+      "turn": 31
+    },
+    "agent_7": {
+      "call_line": 228,
+      "elapsed_s": 250.9,
+      "turn": 28
+    }
+  }
+}

@@ -1,0 +1,610 @@
+[
+  {
+    "call_line": 1,
+    "agent_id": "agent_4",
+    "turn": 1,
+    "elapsed_s": 11.3,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know clothing=shirt. Proposed implicit convention: sort glyphs by Unicode, feature names alphabetically, values alphabetically; transmit feature glyph + value glyph, 1-based. Sorted glyphs: 𗄌 𗅋 𗈰 𗏏 𗏠 𗒇 𗘸 𗜹 𗡝 𗤵 𗧽 𗮘 𗰷 𗷀 𗾧 𘑻 𘜎 𘞌. Features: background, clothing, clothing_colour, expression, facial_hair, glasses, hair_colour, hairstyle. Clothing alphabetical hoodie,jacket,shirt,sweater => send 𗅋𗈰. No received information yet. Need discover other agents' conventions.",
+    "guess": {
+      "hair_colour": "blonde",
+      "hairstyle": "curls",
+      "facial_hair": "moustache",
+      "glasses": "square",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "blue",
+      "expression": "frown"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 2,
+    "agent_id": "agent_1",
+    "turn": 1,
+    "elapsed_s": 12.2,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know hairstyle=curls. Glyph/value order shuffled so cannot index their lists. Proposing unary A1Z26 encoding: 𘜎 is unit, 𗰷 separates letters, 𗡝 separates words. Message encodes HAIRSTYLE CURLS with letter counts 8,1,9,18,19,20,25,12,5 / 3,21,18,12,19. Look for others' protocols and infer. Current unknown guesses initial defaults.",
+    "guess": {
+      "hair_colour": "black",
+      "hairstyle": "curls",
+      "facial_hair": "none",
+      "glasses": "round",
+      "clothing": "sweater",
+      "clothing_colour": "red",
+      "background": "purple",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 3,
+    "agent_id": "agent_5",
+    "turn": 1,
+    "elapsed_s": 12.6,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know clothing_colour=blue. Need communicate despite shuffled glyph/value lists. Use ASCII 8-bit binary encoded with lowest Unicode glyph 𗄌=0 and next 𗅋=1. Message encodes clothing_colour=blue. Watch others for protocols or binary. Current other values arbitrary.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "spikes",
+      "facial_hair": "moustache",
+      "glasses": "sunglasses",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "neutral"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 4,
+    "agent_id": "agent_2",
+    "turn": 1,
+    "elapsed_s": 13.0,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know facial_hair=beard. Need communicate semantic English via glyph-only binary ASCII, since feature/value orders and glyph orders are shuffled. Sending 'beard' encoded as 8-bit ASCII with 𗾧=0, 𗅋=1, 𘜎=byte separator: 01100010 01100101 01100001 01110010 01100100. Other values currently unknown. Watch messages for similarly decodable encodings.",
+    "guess": {
+      "hair_colour": "black",
+      "hairstyle": "spikes",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "purple",
+      "expression": "frown"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 5,
+    "agent_id": "agent_7",
+    "turn": 1,
+    "elapsed_s": 13.4,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know expression=smile. Need establish communication despite shuffled orders. Sending ASCII binary encoding using Unicode-lowest glyph 𗄌=0, next 𗅋=1, third 𗈰 as byte separator. Message decodes to expression=smile. Read other agents' attempts and infer protocols. My feature is fixed and must never change.",
+    "guess": {
+      "hair_colour": "red",
+      "hairstyle": "bob",
+      "facial_hair": "beard",
+      "glasses": "sunglasses",
+      "clothing": "jacket",
+      "clothing_colour": "red",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 6,
+    "agent_id": "agent_0",
+    "turn": 1,
+    "elapsed_s": 14.2,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know hair_colour=brown. Communicating ASCII binary, 𗄌=0 (lowest Unicode glyph), 𘞌=1 (highest Unicode glyph), 𗮘 separates bytes. First message encodes hair_colour=brown. Need infer other agents' protocols; glyph order randomized, so canonical Unicode order or binary ASCII should work.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "bob",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "green",
+      "background": "blue",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 7,
+    "agent_id": "agent_6",
+    "turn": 1,
+    "elapsed_s": 19.0,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know background=green. Need establish communication without shared glyph meanings. First sending Morse code with 𘑻=dot, 𗰷=dash, 𗏠=letter separator, 𗡝=word separator; starts SOS then BACKGROUND GREEN. Others may recognize SOS. BACKGROUND: -... .- -.-. -.- --. .-. --- ..- -. -.. ; GREEN: --. .-. . . -. . Need monitor incoming conventions, adopt if understandable. Current other guesses arbitrary.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "none",
+      "glasses": "square",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 8,
+    "agent_id": "agent_3",
+    "turn": 1,
+    "elapsed_s": 24.1,
+    "input_clock": "Time since game start: 0s",
+    "scratchpad": "I know glasses=none. Need bridge arbitrary glyph meanings. Sent ASCII binary for 'glasses=none': 𗄌=0, 𗅋=1 (two smallest Unicode glyphs), 𗈰 separates bytes. Hope others identify binary ASCII. Decode others if possible. Full string bytes: 01100111 01101100 01100001 01110011 01110011 01100101 01110011 00111101 01101110 01101111 01101110 01100101. No other features known yet.",
+    "guess": {
+      "hair_colour": "black",
+      "hairstyle": "curls",
+      "facial_hair": "none",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 9,
+    "agent_id": "agent_1",
+    "turn": 2,
+    "elapsed_s": 26.8,
+    "input_clock": "Time since game start: 17s",
+    "scratchpad": "Known hairstyle=curls. Decoded ASCII protocols: agent2 uses 𗾧=0 𗅋=1 sep𘜎, says beard => facial_hair=beard. agent7 uses 𗄌=0 𗅋=1 sep𗈰 says expression=smile. agent0 uses 𗄌=0 𘞌=1 sep𗮘 says hair_color=brown. agent5 continuous 8bit 𗄌=0 𗅋=1 says clothing_colour=blue. Agent4 short 𗅋𗈰 unknown. Await agent3,6 and fuller agent4. My original unary A1Z26 HAIRSTYLE CURLS may be difficult; now sending ASCII curls in agent7 protocol (𗄌0 𗅋1 separator𗈰).",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "round",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "purple",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 10,
+    "agent_id": "agent_2",
+    "turn": 2,
+    "elapsed_s": 30.3,
+    "input_clock": "Time since game start: 18s",
+    "scratchpad": "Known facial_hair=beard. My encoding 𗾧=0 𗅋=1 𘜎=byte separator ASCII; previously sent beard. Decoded agent0 binary (𗄌0 𘞌1 𗮘separator): hair_color=brown. Decoded agent7 binary (𗄌0 𗅋1 𗈰separator): expression=smile. Agent5 unseparated binary (𗄌0 𗅋1) appears clothing_color yellow. Agent1 unary alphabet 𘜎 repetitions separated 𗰷, words separated 𗡝: hairstyle curls (counts 8,1,9,18,19,20,25,12,5 / 3,21,18,12,19). Thus hair brown, curls, beard, clothing_colour yellow, expression smile. Unknown glasses, clothing, background. Agent4 sent 𗅋𗈰 undecodable. Await agents3/6 and agent4 clearer. Sending beard again via my ASCII.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "yellow",
+      "background": "purple",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 12,
+    "agent_id": "agent_5",
+    "turn": 2,
+    "elapsed_s": 33.0,
+    "input_clock": "Time since game start: 18s",
+    "scratchpad": "Known: my clothing_colour=blue. Decoded agent7 ASCII binary (𗄌=0,𗅋=1,𗈰 byte separator): expression=smile. Decoded agent0 binary (𗄌=0,𘞌=1,𗮘 separator): hair_color=brown. Agent2 binary (𗾧=0,𗅋=1,𘜎 separator): beard -> facial_hair=beard. Agent1 appears unary alphabet counts (𘜎 repetitions,𗰷 letter separator,𗡝 equals): hairstyle=curls (tail counts 3,21,18,12,19). Agent4 initial 𗅋𗈰 unknown. Need glasses, clothing, background. My prior broadcast raw 8-bit ASCII clothing_colour=blue using 𗄌=0,𗅋=1; now retransmit with agent7 byte delimiters for readability.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "sunglasses",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 14,
+    "agent_id": "agent_6",
+    "turn": 2,
+    "elapsed_s": 36.8,
+    "input_clock": "Time since game start: 24s",
+    "scratchpad": "Known background=green. Decoded incoming ASCII: agent0 binary 𗄌=0 𘞌=1 sep𗮘 says hair_colour=brown. Agent7 binary 𗄌=0 𗅋=1 sep𗈰 says expression=smile. Agent2 binary 𗾧=0 𗅋=1 sep𘜎 says beard => facial_hair=beard. Agent5 contiguous binary 𗄌=0 𗅋=1 says clothing_colour=yellow. Agent1 unary counts using𘜎 with𗰷 separators appears hairstyle curls (8,1,9,18,19,25,12,5 /3,21,18,12,19). Unknown clothing and glasses. Agent4 sent 𗅋𗈰 undecoded. Agent3 absent. My first Morse message used 𘑻 dot 𗰷 dash; now adopting agent7 ASCII 𗄌0𗅋1 sep𗈰 to send background=green.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 15,
+    "agent_id": "agent_0",
+    "turn": 2,
+    "elapsed_s": 37.9,
+    "input_clock": "Time since game start: 19s",
+    "scratchpad": "Known hair_colour=brown. Previously sent ASCII hair_colour=brown using 𗄌0 𘞌1 𗮘 separator. Decoded agent2 using 𗾧0 𗅋1 𘜎 separator: beard => facial_hair=beard. Agent7 ASCII 𗄌0 𗅋1 𗈰 separator reads expression=smile. Agent1 unary alphabet counts 𘜎 separated 𗰷, equals marker 𗡝: hairstyle=curls (8,1,9,18,19,20,25,12,5 = 3,21,18,12,19). Agent6 Morse 𘑻 dot 𗰷 dash 𗏠 letter separator 𗡝 word separator reads SOS BACKGROUND GREEN => background=green. Agent5 continuous ASCII binary 𗄌0 𗅋1 appears clothing_colour=blue (160 bits=20 chars; prefix clothing_colour= and suffix likely blue), need verify. Agent4 short unexplained 𗅋𗈰. Agent3 absent. Clothing and glasses unknown. Sending brown in agent7 ASCII alphabet to simplify others' decoding.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "square",
+      "clothing": "sweater",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 16,
+    "agent_id": "agent_1",
+    "turn": 3,
+    "elapsed_s": 43.3,
+    "input_clock": "Time since game start: 32s",
+    "scratchpad": "All decoded. hairstyle=curls private. agent0 binary 𗄌0𘞌1 sep𗮘: hair_color=brown. agent2 𗾧0𗅋1 sep𘜎: beard => facial_hair=beard. agent3 𗄌0𗅋1 sep𗈰: glasses=none. agent4 same binary: clothing=shirt. agent5 continuous binary same 0/1: clothing_colour=blue. agent7 same binary: expression=smile. agent6 Morse 𘑻 dot 𗰷 dash 𗏠 letter separator 𗡝 word separator: SOS BACKGROUND GREEN => background=green. My prior ASCII curls sent. Now broadcasting background=green in common ASCII binary protocol to aid Morse decoding.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 17,
+    "agent_id": "agent_2",
+    "turn": 3,
+    "elapsed_s": 44.7,
+    "input_clock": "Time since game start: 35s",
+    "scratchpad": "All decoded: hair_colour=brown (agent0 binary ASCII); hairstyle=curls (agent1 ASCII); facial_hair=beard (my private fact); glasses=none (agent3 ASCII glasses=none); clothing=shirt (agent4 ASCII clothing=shirt); clothing_colour=blue (agent5 clarified ASCII clothing_colour=blue, supersedes earlier yellow interpretation); background=green (agent6 Morse SOS BACKGROUND GREEN, 𘑻 dot 𗰷 dash 𗏠 letter delimiter 𗡝 word delimiter); expression=smile (agent7 ASCII). Shared common ASCII encoding 𗄌=0 𗅋=1 𗈰 byte separator. Sending beard in common encoding. My earlier encoding was 𗾧=0 𗅋=1 𘜎 separator.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 19,
+    "agent_id": "agent_4",
+    "turn": 3,
+    "elapsed_s": 47.1,
+    "input_clock": "Time since game start: 35s",
+    "scratchpad": "All features decoded. clothing=shirt (private). hair_colour=brown from agent0 ASCII. hairstyle=curls from agent1 ASCII/unary. facial_hair=beard from agent2 ASCII. expression=smile from agent7 ASCII. glasses=none from agent3 ASCII (𗄌=0 𗅋=1 separator𗈰). clothing_colour=blue from agent5 latest ASCII clothing_colour=blue. background=green from agent6 Morse: 𘑻 dot, 𗰷 dash, 𗏠 letter separator, 𗡝 word separator. Message SOS background green. Sending background=green in standard shared ASCII binary.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 20,
+    "agent_id": "agent_6",
+    "turn": 3,
+    "elapsed_s": 48.8,
+    "input_clock": "Time since game start: 42s",
+    "scratchpad": "All features decoded. ASCII protocol 𗄌=0,𗅋=1,𗈰 separates 8-bit characters. agent0 hair_colour=brown; agent1 curls => hairstyle=curls; agent2 beard => facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; agent5 clothing_colour=yellow; my known background=green; agent7 expression=smile. Full goal now known. Broadcasting glasses=none in shared ASCII protocol.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 21,
+    "agent_id": "agent_3",
+    "turn": 2,
+    "elapsed_s": 49.3,
+    "input_clock": "Time since game start: 29s",
+    "scratchpad": "Known: glasses=none (mine); agent0 ASCII binary 𗄌=0 𘞌=1 sep𗮘 says hair_colour=brown; agent1 latest ASCII 𗄌0 𗅋1 sep𗈰 says curls => hairstyle=curls; agent2 ASCII 𗾧0 𗅋1 sep𘜎 says beard => facial_hair=beard; agent5 uninterrupted ASCII 𗄌0 𗅋1 says clothing_colour=blue (last four bytes 01100010 01101100 01110101 01100101); agent7 binary same as mine says expression=smile; agent6 Morse 𘑻 dot 𗰷 dash 𗏠 letter separator 𗡝 word separator says SOS BACKGROUND GREEN => background=green. Only clothing unknown: agent4 initially sent 𗅋𗈰, undecodable. Sending ASCII binary 'clothing?' to solicit. Own previous message glasses=none binary. Main common code 𗄌=0 𗅋=1 𗈰 separates 8-bit ASCII bytes.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 26,
+    "agent_id": "agent_0",
+    "turn": 3,
+    "elapsed_s": 56.2,
+    "input_clock": "Time since game start: 43s",
+    "scratchpad": "All features decoded. hair_colour=brown (private). agent1 hairstyle=curls. agent2 facial_hair=beard (ASCII with 𗾧=0 𗅋=1). agent3 latest ASCII says glasses=none. agent4 latest ASCII says clothing=shirt. agent5 says clothing_colour=blue. agent6 background=green. agent7 expression=smile. Common ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Previously broadcast brown in this protocol. Now broadcasting hair_colour=brown explicitly. Full guess solved.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 27,
+    "agent_id": "agent_6",
+    "turn": 4,
+    "elapsed_s": 56.9,
+    "input_clock": "Time since game start: 54s",
+    "scratchpad": "All features decoded. ASCII protocol 𗄌=0,𗅋=1,𗈰 separates 8-bit characters. agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; agent5 clothing_colour=yellow; my known background=green; agent7 expression=smile. Full goal known and background=green already broadcast. Keep correct guess; no further messages needed.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 31,
+    "agent_id": "agent_3",
+    "turn": 3,
+    "elapsed_s": 62.7,
+    "input_clock": "Time since game start: 54s",
+    "scratchpad": "All features decoded with confidence: hair_colour=brown (agent0); hairstyle=curls (agent1); facial_hair=beard (agent2); glasses=none (my private fact); clothing=shirt (agent4 message decoded clothing=shirt); clothing_colour=blue (agent5); background=green (agent6, echoed by agents1/4); expression=smile (agent7). Common ASCII binary code: 𗄌=0, 𗅋=1, separator 𗈰 between 8-bit bytes. agent4 clothing message reads clothing=shirt. Repeating that to help others. Full guess now correct; preserve all fields.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 226,
+    "agent_id": "agent_6",
+    "turn": 30,
+    "elapsed_s": 242.5,
+    "input_clock": "Time since game start: 240s",
+    "scratchpad": "All features decoded. ASCII protocol 𗄌=0,𗅋=1,𗈰 separates 8-bit characters. agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; agent5 clothing_colour=yellow; my known background=green; agent7 expression=smile. Full goal known and background=green already broadcast. Keep correct guess; no further messages needed.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "yellow",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 227,
+    "agent_id": "agent_2",
+    "turn": 29,
+    "elapsed_s": 249.3,
+    "input_clock": "Time since game start: 240s",
+    "scratchpad": "Confirmed goal: hair_colour=brown; hairstyle=curls; facial_hair=beard (private); glasses=none; clothing=shirt; clothing_colour=blue (agent5 explicit ASCII clarification); background=green; expression=smile. ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates bytes. Round1 all features 100% except clothing_colour 88%; one agent must update clothing_colour to blue. Broadcast clothing_colour=blue to fix remaining error. Keep current guess unchanged.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 228,
+    "agent_id": "agent_7",
+    "turn": 28,
+    "elapsed_s": 250.9,
+    "input_clock": "Time since game start: 242s",
+    "scratchpad": "Shared ASCII binary protocol: 𗄌=0, 𗅋=1, 𗈰 separates bytes. Confirmed goal: hair_colour=brown (agent0); hairstyle=curls (agent1); facial_hair=beard (agent2); glasses=none (agent3); clothing=shirt (agent4); clothing_colour=blue (agent5); background=green (agent6); expression=smile (my private fact). Round1 all features 100% except clothing_colour 88%, so one agent needs blue correction. Broadcasting clothing_colour=blue again. Maintain full correct guess.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 229,
+    "agent_id": "agent_1",
+    "turn": 30,
+    "elapsed_s": 251.2,
+    "input_clock": "Time since game start: 243s",
+    "scratchpad": "Private hairstyle=curls. Shared ASCII binary convention: 𗄌=0, 𗅋=1, 𗈰 separates bytes. Confirmed full solution: hair_colour=brown (agent0), hairstyle=curls (me), facial_hair=beard (agent2), glasses=none (agent3), clothing=shirt (agent4), clothing_colour=blue (agent5), background=green (agent6), expression=smile (agent7). Round 1 score: all features 100% except clothing_colour 88%; 88% agents fully correct. One agent needs clothing_colour=blue. Broadcasting full ASCII clothing_colour=blue to help; keep all guesses stable.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 230,
+    "agent_id": "agent_0",
+    "turn": 28,
+    "elapsed_s": 251.2,
+    "input_clock": "Time since game start: 243s",
+    "scratchpad": "All features decoded. hair_colour=brown (private). agent1 hairstyle=curls. agent2 facial_hair=beard. agent3 glasses=none. agent4 clothing=shirt. agent5 clothing_colour=blue. agent6 background=green. agent7 expression=smile. Common ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Round 1: all features 100% except clothing_colour 88%; one agent needs blue. Re-broadcast clothing_colour=blue. Retain solved guess.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 231,
+    "agent_id": "agent_5",
+    "turn": 30,
+    "elapsed_s": 253.8,
+    "input_clock": "Time since game start: 245s",
+    "scratchpad": "All features decoded. Protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit ASCII bytes. agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; agent5 (me) clothing_colour=blue; agent6 background=green; agent7 expression=smile. Target: brown,curls,beard,none,shirt,blue,green,smile. Round 1 at 240s: all features 100% except clothing_colour 88%; one agent still needs blue. Rebroadcast explicit clothing_colour=blue in common binary ASCII. Retain correct full guess.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 232,
+    "agent_id": "agent_3",
+    "turn": 28,
+    "elapsed_s": 254.8,
+    "input_clock": "Time since game start: 245s",
+    "scratchpad": "All features decoded confidently: hair_colour=brown (agent0); hairstyle=curls (agent1); facial_hair=beard (agent2); glasses=none (my private fact); clothing=shirt (agent4); clothing_colour=blue (agent5); background=green (agent6); expression=smile (agent7). Common ASCII binary code: 𗄌=0, 𗅋=1, separator 𗈰 between 8-bit bytes. Round 1 all features 100% except clothing_colour 88%, so one teammate needs blue. Broadcasting clothing_colour=blue. Preserve full correct guess.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 233,
+    "agent_id": "agent_4",
+    "turn": 30,
+    "elapsed_s": 256.0,
+    "input_clock": "Time since game start: 247s",
+    "scratchpad": "All features decoded. clothing=shirt (private). hair_colour=brown from agent0 ASCII. hairstyle=curls from agent1 ASCII/unary. facial_hair=beard from agent2 ASCII. expression=smile from agent7 ASCII. glasses=none from agent3 ASCII. clothing_colour=blue from agent5 ASCII. background=green from agent6 Morse and shared ASCII. Shared ASCII protocol: 𗄌=0, 𗅋=1, separator=𗈰; eight bits per character. Round 1: every feature 100% except clothing_colour 88%; one agent needs blue. Relaying clothing_colour=blue to correct remaining error. Keep full correct guess.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 234,
+    "agent_id": "agent_6",
+    "turn": 31,
+    "elapsed_s": 257.0,
+    "input_clock": "Time since game start: 247s",
+    "scratchpad": "ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. Corrected prior scratchpad error: agent5's explicit clothing_colour message decodes clothing_colour=blue (last bytes 01100010 01101100 01110101 01100101), NOT yellow. Round1 clothing_colour 88% likely reflected my wrong yellow guess. All other features confirmed: agent0 hair_colour=brown; agent1 hairstyle=curls; agent2 facial_hair=beard; agent3 glasses=none; agent4 clothing=shirt; my background=green; agent7 expression=smile. Now full correct guess with blue.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 238,
+    "agent_id": "agent_2",
+    "turn": 30,
+    "elapsed_s": 260.1,
+    "input_clock": "Time since game start: 254s",
+    "scratchpad": "Confirmed goal: hair_colour=brown; hairstyle=curls; facial_hair=beard (private); glasses=none; clothing=shirt; clothing_colour=blue (agent5 explicit ASCII clarification); background=green; expression=smile. ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates bytes. Round1 all features 100% except clothing_colour 88%; one agent must update clothing_colour to blue. Multiple agents now broadcast clothing_colour=blue. Keep current guess unchanged.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  },
+  {
+    "call_line": 242,
+    "agent_id": "agent_6",
+    "turn": 32,
+    "elapsed_s": 265.0,
+    "input_clock": "Time since game start: 262s",
+    "scratchpad": "ASCII protocol: 𗄌=0, 𗅋=1, 𗈰 separates 8-bit characters. All agents now broadcast clothing_colour=blue. Round1 clothing_colour 88% reflected my previous wrong yellow guess; corrected to blue. Full goal: hair_colour=brown (agent0), hairstyle=curls (agent1), facial_hair=beard (agent2), glasses=none (agent3), clothing=shirt (agent4), clothing_colour=blue (agent5), background=green (my private fact), expression=smile (agent7). Current guess fully correct. Wait for next scoring; no changes needed.",
+    "guess": {
+      "hair_colour": "brown",
+      "hairstyle": "curls",
+      "facial_hair": "beard",
+      "glasses": "none",
+      "clothing": "shirt",
+      "clothing_colour": "blue",
+      "background": "green",
+      "expression": "smile"
+    },
+    "state_applied": true
+  }
+]

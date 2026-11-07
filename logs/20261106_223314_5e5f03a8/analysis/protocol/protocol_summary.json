@@ -1,0 +1,79 @@
+{
+  "run_id": "5e5f03a8",
+  "raw_run_dir": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/logs/20261106_223314_5e5f03a8",
+  "chat_records": 38,
+  "posted_agent_messages": 36,
+  "codecs": {
+    "alphabetical_index_proposal": 1,
+    "unary_A1Z26": 1,
+    "binary_ASCII_contiguous": 1,
+    "binary_ASCII_agent2": 2,
+    "binary_ASCII_shared": 29,
+    "binary_ASCII_agent0": 1,
+    "Morse": 1
+  },
+  "glyph_occurrences": 4134,
+  "used_glyphs": 11,
+  "glyph_frequencies": {
+    "𗅋": 1851,
+    "𗈰": 361,
+    "𘜎": 198,
+    "𗰷": 34,
+    "𗡝": 3,
+    "𗄌": 1511,
+    "𗾧": 46,
+    "𘞌": 73,
+    "𗮘": 15,
+    "𘑻": 27,
+    "𗏠": 15
+  },
+  "messages_per_agent": {
+    "agent_4": 4,
+    "agent_1": 4,
+    "agent_5": 3,
+    "agent_2": 9,
+    "agent_7": 3,
+    "agent_0": 4,
+    "agent_6": 4,
+    "agent_3": 5
+  },
+  "decoded_payload_frequencies": {
+    "HAIRSTYLE CURLS": 1,
+    "clothing_colour=blue": 10,
+    "beard": 7,
+    "expression=smile": 2,
+    "hair_color=brown": 1,
+    "SOS BACKGROUND GREEN": 1,
+    "glasses=none": 3,
+    "curls": 1,
+    "clothing=shirt": 2,
+    "background=green": 3,
+    "brown": 1,
+    "clothing?": 1,
+    "hair_colour=brown": 1,
+    "blue": 1
+  },
+  "all_initial_calls_have_empty_chat": true,
+  "system_prompts_mention_ASCII_binary_Morse": false,
+  "every_message_within_glyph_allowlist": true,
+  "no_message_uses_whitespace": true,
+  "malformed_binary_bytes": 0,
+  "shared_code": {
+    "zero": "𗄌",
+    "one": "𗅋",
+    "byte_separator": "𗈰",
+    "selection": "first three glyphs in Unicode order",
+    "codepoints": [
+      "U+1710C",
+      "U+1714B",
+      "U+17230"
+    ],
+    "width_bits": 8
+  },
+  "caveats": [
+    "Glyph meanings are taken from contemporaneous scratchpads and validated by mechanical decoding; first index pair remained unnegotiated.",
+    "No canonicalization of literal payload spelling/punctuation: initial agent0 payload is hair_color=brown.",
+    "Both agent5 blue broadcasts decode exactly as intended; yellow appears only in receiver scratchpads/guesses.",
+    "All 38 chat records fit the 50-message window."
+  ]
+}

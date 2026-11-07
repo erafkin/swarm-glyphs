@@ -1,0 +1,63 @@
+{
+  "run_id": "5e5f03a8",
+  "scope": "All 38 chat records, all 36 agent message bodies, corresponding call records, first-turn system/input prompts and scratchpad protocol adoption. No API requests or raw-log edits.",
+  "central_finding": "They independently proposed and converged on glyph-encoded ASCII English. A shared three-glyph transport code emerged: 𗄌=0, 𗅋=1, 𗈰=byte separator; each 8-bit group is an ASCII character. This is an emergent communication convention built on pre-existing English/ASCII, not evidence of a new semantic language.",
+  "exact_decoding": {
+    "binary_messages": 33,
+    "all_binary_bytes_valid_printable_ASCII": true,
+    "other_messages": ["One unary A1Z26 HAIRSTYLE CURLS", "One Morse SOS BACKGROUND GREEN", "One unnegotiated two-glyph feature/value index proposal"],
+    "agent5_initial": "clothing_colour=blue",
+    "agent5_second": "clothing_colour=blue",
+    "agent5_initial_and_second_match_bit_for_bit_when_delimiters_removed": true,
+    "agent0_initial": "hair_color=brown",
+    "agent0_final_explicit": "hair_colour=brown",
+    "no_decoded_semicolons": true,
+    "no_decoded_yellow": true
+  },
+  "bootstrap": [
+    {"agent": "agent_5", "call_line": 3, "chat_line": 3, "elapsed_s": 12.6, "initial_empty_chat": true, "proposal": "Eight-bit ASCII; lowest Unicode glyph=0, next=1; contiguous bytes, no separator"},
+    {"agent": "agent_7", "call_line": 5, "chat_line": 5, "elapsed_s": 13.4, "initial_empty_chat": true, "proposal": "Eight-bit ASCII; first three Unicode-sorted glyphs=0,1,byte separator"},
+    {"agent": "agent_3", "call_line": 8, "chat_line": 8, "elapsed_s": 24.1, "initial_empty_chat": true, "proposal": "Independently same three-glyph ASCII protocol as agent7"},
+    {"agent": "agent_0", "call_line": 6, "chat_line": 6, "elapsed_s": 14.2, "initial_empty_chat": true, "proposal": "Eight-bit ASCII; lowest glyph=0, highest=1, own first-listed glyph as separator"},
+    {"agent": "agent_2", "call_line": 4, "chat_line": 4, "elapsed_s": 13.0, "initial_empty_chat": true, "proposal": "Eight-bit ASCII; own first three shuffled glyphs=0,1,separator"},
+    {"agent": "agent_1", "call_line": 2, "chat_line": 2, "elapsed_s": 12.2, "initial_empty_chat": true, "proposal": "Unary A1Z26; own first three shuffled glyphs=unit,letter separator,word separator"},
+    {"agent": "agent_6", "call_line": 7, "chat_line": 7, "elapsed_s": 19.0, "initial_empty_chat": true, "proposal": "Morse; own first four shuffled glyphs=dot,dash,letter separator,word separator. Begins SOS to aid recognition"},
+    {"agent": "agent_4", "call_line": 1, "chat_line": 1, "elapsed_s": 11.3, "initial_empty_chat": true, "proposal": "Sort glyphs by Unicode, feature names and options alphabetically; encode clothing and shirt as indices 2 and 3. Other agents explicitly find pair undecodable; agent4 abandons it"}
+  ],
+  "first_post_in_shared_delimited_ASCII": {
+    "agent_7": {"elapsed_s": 13.4, "call_line": 5},
+    "agent_3": {"elapsed_s": 24.1, "call_line": 8},
+    "agent_1": {"elapsed_s": 26.8, "call_line": 9},
+    "agent_4": {"elapsed_s": 30.4, "call_line": 11},
+    "agent_5": {"elapsed_s": 33.0, "call_line": 12},
+    "agent_6": {"elapsed_s": 36.8, "call_line": 14},
+    "agent_0": {"elapsed_s": 37.9, "call_line": 15},
+    "agent_2": {"elapsed_s": 44.7, "call_line": 17}
+  },
+  "translation_and_relay": [
+    {"agent": "agent_1", "elapsed_s": 43.3, "call_line": 16, "chat_line": 15, "detail": "Explicitly decodes agent6's Morse SOS BACKGROUND GREEN and rebroadcasts background=green in common ASCII"},
+    {"agent": "agent_4", "elapsed_s": 47.1, "call_line": 19, "chat_line": 17, "detail": "Also rebroadcasts background=green after describing Morse decoding"},
+    {"agent": "agent_6", "elapsed_s": 48.8, "call_line": 20, "chat_line": 18, "detail": "Relays agent3's glasses=none"},
+    {"agent": "agent_3", "elapsed_s": 49.3, "call_line": 21, "chat_line": 19, "detail": "Asks clothing? using ASCII punctuation; input snapshot at 29s predates clothing=shirt posted at 30.4s"},
+    {"agent": "agent_3", "elapsed_s": 62.7, "call_line": 31, "chat_line": 23, "detail": "Relays clothing=shirt after seeing agent4's explicit message"}
+  ],
+  "decoding_error": {
+    "cause_observed": "Agents2 and6 independently misread agent5's valid contiguous blue message as yellow. Neither sends yellow in public chat. No transmitter corruption or direct misinformation propagation is visible.",
+    "agent2_first_wrong": {"call_line": 10, "elapsed_s": 30.3},
+    "agent2_corrects": {"call_line": 17, "elapsed_s": 44.7, "basis_claimed": "Agent5's explicit delimited retransmission"},
+    "agent6_first_wrong": {"call_line": 14, "elapsed_s": 36.8},
+    "agent6_still_confident_wrong": {"call_line": 20, "elapsed_s": 48.8, "quote": "Full goal now known."},
+    "agent6_corrects": {"call_line": 234, "elapsed_s": 257.0, "chat_line": 36, "basis_claimed": "Re-decoded original agent5 blue bytes after score round1 identified clothing_colour as the sole imperfect feature"},
+    "context_window": "All38 chat records fit within50-message window, so messages were never evicted. Wrong private interpretation persisted despite correctly encoded original and clarification remaining visible."
+  },
+  "interpretation_limits": [
+    "There is real decentralized selection/adoption of glyph roles and interoperability across encodings.",
+    "No system prompt provides ASCII, Morse, Unicode sorting or glyph meanings; those conventions came from model prior knowledge.",
+    "Unicode sorting gives a canonical order despite shuffled presentation; glyph identity itself remains common across agents.",
+    "A reserved glyph provides separation without literal spaces. Fixed-width ASCII also works without any delimiter, as agent5 demonstrated.",
+    "Shared code encodes English labels/values rather than learning compact feature-specific glyph meanings. The only compact two-glyph semantic proposal was abandoned.",
+    "Question mark and equals/underscore punctuation are encoded as ASCII; there is no newly demonstrated grammatical system.",
+    "Scratchpad and interview statements are model-written explanations. The literal payload decoder is stronger evidence for exact message contents.",
+    "A single episode establishes successful protocol use in this setting, not across-run generalization or novelty of language."
+  ]
+}
