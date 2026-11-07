@@ -26,6 +26,8 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 ```
 
 `allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
+`language_instruction: true` (on in both board configs) tells agents to build a language from the
+glyphs rather than a 1-to-1 mapping to Latin characters.
 
 Scoring runs every **4 minutes** (`score_interval_s: 240`) in the defaults and all shipped run configs.
 The two Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay

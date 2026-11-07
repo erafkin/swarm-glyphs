@@ -14,5 +14,6 @@
   "score_interval_s": 240,
   "max_score_rounds": null,
   "max_cost_usd": 50,
-  "win_threshold": 1.0
+  "win_threshold": 1.0,
+  "language_instruction": true
 }

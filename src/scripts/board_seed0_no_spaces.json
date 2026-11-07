@@ -15,5 +15,6 @@
   "max_score_rounds": null,
   "max_cost_usd": 50,
   "win_threshold": 1.0,
-  "allow_spaces": false
+  "allow_spaces": false,
+  "language_instruction": true
 }

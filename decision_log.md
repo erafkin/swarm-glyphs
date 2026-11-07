@@ -56,6 +56,10 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 
 - **Each glyph is a single unicode character; spaces are allowed between glyphs.** Agent IDs are also
   allowed in messages so agents can address each other.
+- **Optional language instruction** (`language_instruction`, default false): adds "Use these glyphs
+  to create a language with the other agents. Do not make a 1-to-1 mapping to Latin characters."
+  after "The glyphs have no predefined meaning." On in both board seed-0 configs (with and without
+  spaces), off in features mode.
 - **Spaces are configurable** (`allow_spaces`, default true). With `allow_spaces: false`, any space
   makes the message a violation, and the prompts say so. Agent IDs are not allowed in messages
   either (a brief prefix-only version was dropped), so nothing can stand in for spaces as a

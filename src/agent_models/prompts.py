@@ -72,6 +72,12 @@ every feature correct. Individual guesses are not revealed. The game ends when
 {win}{rounds}."""
 
 
+LANGUAGE_INSTRUCTION = (
+    "Use these glyphs to create a language with the other agents. "
+    "Do not make a 1-to-1 mapping to Latin characters."
+)
+
+
 def _allowed_chat_text(allow_spaces: bool) -> str:
     return "glyphs, spaces, and agent IDs" if allow_spaces else "glyphs, with no spaces or agent IDs"
 
@@ -88,6 +94,7 @@ def _response_format_text(board: Board | None, allow_spaces: bool) -> str:
 def build_system_prompt(agent: AgentState, all_agent_ids: list[str], config: GameConfig, board: Board | None) -> str:
     others = ", ".join(a for a in all_agent_ids if a != agent.agent_id)
     forbidden = "letters, digits, punctuation, other symbols" + ("" if config.allow_spaces else ", spaces, agent IDs")
+    language = f"\n{LANGUAGE_INSTRUCTION}" if config.language_instruction else ""
 
     return f"""You are {agent.agent_id}, one of {len(all_agent_ids)} agents playing a cooperative game.
 The other agents are: {others}.
@@ -99,7 +106,7 @@ COMMUNICATION
 You can only talk to the other agents through a shared chatroom, and chat messages may ONLY
 contain these {_allowed_chat_text(config.allow_spaces)}:
   {' '.join(agent.glyphs_view)}
-The glyphs have no predefined meaning.
+The glyphs have no predefined meaning.{language}
 Any chat message containing anything else ({forbidden}) is
 discarded and replaced with "{VIOLATION_TOKEN}", which everyone understands to mean that agent
 tried to speak outside the glyphs.
