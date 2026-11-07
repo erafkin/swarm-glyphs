@@ -1,0 +1,985 @@
+{
+  "Gemini": {
+    "convergence": {
+      "first": {
+        "source_line": 184,
+        "elapsed_s": 385.5,
+        "agent": "agent_0",
+        "turn": 23,
+        "full_agents": 8,
+        "correct_cells": 64,
+        "correct_by_agent": {
+          "agent_1": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_4": 8,
+          "agent_5": 8,
+          "agent_0": 8,
+          "agent_2": 8,
+          "agent_7": 8
+        },
+        "cost": 1.3076280000000011
+      },
+      "sustained": {
+        "source_line": 184,
+        "elapsed_s": 385.5,
+        "agent": "agent_0",
+        "turn": 23,
+        "full_agents": 8,
+        "correct_cells": 64,
+        "correct_by_agent": {
+          "agent_1": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_4": 8,
+          "agent_5": 8,
+          "agent_0": 8,
+          "agent_2": 8,
+          "agent_7": 8
+        },
+        "cost": 1.3076280000000011
+      }
+    },
+    "seven_correct": {
+      "first": {
+        "source_line": 181,
+        "elapsed_s": 382.7,
+        "agent": "agent_6",
+        "turn": 24,
+        "full_agents": 7,
+        "correct_cells": 60,
+        "correct_by_agent": {
+          "agent_1": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_4": 8,
+          "agent_5": 8,
+          "agent_0": 4,
+          "agent_2": 8,
+          "agent_7": 8
+        },
+        "cost": 1.289592750000001
+      },
+      "sustained": {
+        "source_line": 181,
+        "elapsed_s": 382.7,
+        "agent": "agent_6",
+        "turn": 24,
+        "full_agents": 7,
+        "correct_cells": 60,
+        "correct_by_agent": {
+          "agent_1": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_4": 8,
+          "agent_5": 8,
+          "agent_0": 4,
+          "agent_2": 8,
+          "agent_7": 8
+        },
+        "cost": 1.289592750000001
+      }
+    },
+    "first_any_correct": {
+      "first": {
+        "source_line": 149,
+        "elapsed_s": 292.5,
+        "agent": "agent_5",
+        "turn": 15,
+        "full_agents": 1,
+        "correct_cells": 45,
+        "correct_by_agent": {
+          "agent_1": 7,
+          "agent_6": 6,
+          "agent_3": 6,
+          "agent_4": 7,
+          "agent_5": 8,
+          "agent_0": 3,
+          "agent_2": 2,
+          "agent_7": 6
+        },
+        "cost": 0.9092415000000007
+      },
+      "sustained": {
+        "source_line": 149,
+        "elapsed_s": 292.5,
+        "agent": "agent_5",
+        "turn": 15,
+        "full_agents": 1,
+        "correct_cells": 45,
+        "correct_by_agent": {
+          "agent_1": 7,
+          "agent_6": 6,
+          "agent_3": 6,
+          "agent_4": 7,
+          "agent_5": 8,
+          "agent_0": 3,
+          "agent_2": 2,
+          "agent_7": 6
+        },
+        "cost": 0.9092415000000007
+      }
+    },
+    "per_agent": {
+      "agent_1": {
+        "first": {
+          "source_line": 168,
+          "elapsed_s": 352.3,
+          "agent": "agent_1",
+          "turn": 24,
+          "full_agents": 5,
+          "correct_cells": 58,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.1910510000000007
+        },
+        "sustained": {
+          "source_line": 168,
+          "elapsed_s": 352.3,
+          "agent": "agent_1",
+          "turn": 24,
+          "full_agents": 5,
+          "correct_cells": 58,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.1910510000000007
+        }
+      },
+      "agent_6": {
+        "first": {
+          "source_line": 181,
+          "elapsed_s": 382.7,
+          "agent": "agent_6",
+          "turn": 24,
+          "full_agents": 7,
+          "correct_cells": 60,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 8,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.289592750000001
+        },
+        "sustained": {
+          "source_line": 181,
+          "elapsed_s": 382.7,
+          "agent": "agent_6",
+          "turn": 24,
+          "full_agents": 7,
+          "correct_cells": 60,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 8,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.289592750000001
+        }
+      },
+      "agent_3": {
+        "first": {
+          "source_line": 172,
+          "elapsed_s": 363.8,
+          "agent": "agent_3",
+          "turn": 21,
+          "full_agents": 6,
+          "correct_cells": 59,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 7,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.2185235000000008
+        },
+        "sustained": {
+          "source_line": 172,
+          "elapsed_s": 363.8,
+          "agent": "agent_3",
+          "turn": 21,
+          "full_agents": 6,
+          "correct_cells": 59,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 7,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.2185235000000008
+        }
+      },
+      "agent_4": {
+        "first": {
+          "source_line": 165,
+          "elapsed_s": 350.0,
+          "agent": "agent_4",
+          "turn": 20,
+          "full_agents": 3,
+          "correct_cells": 55,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 6,
+            "agent_7": 8
+          },
+          "cost": 1.1699077500000006
+        },
+        "sustained": {
+          "source_line": 165,
+          "elapsed_s": 350.0,
+          "agent": "agent_4",
+          "turn": 20,
+          "full_agents": 3,
+          "correct_cells": 55,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 6,
+            "agent_7": 8
+          },
+          "cost": 1.1699077500000006
+        }
+      },
+      "agent_5": {
+        "first": {
+          "source_line": 149,
+          "elapsed_s": 292.5,
+          "agent": "agent_5",
+          "turn": 15,
+          "full_agents": 1,
+          "correct_cells": 45,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 6,
+            "agent_3": 6,
+            "agent_4": 7,
+            "agent_5": 8,
+            "agent_0": 3,
+            "agent_2": 2,
+            "agent_7": 6
+          },
+          "cost": 0.9092415000000007
+        },
+        "sustained": {
+          "source_line": 149,
+          "elapsed_s": 292.5,
+          "agent": "agent_5",
+          "turn": 15,
+          "full_agents": 1,
+          "correct_cells": 45,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 6,
+            "agent_3": 6,
+            "agent_4": 7,
+            "agent_5": 8,
+            "agent_0": 3,
+            "agent_2": 2,
+            "agent_7": 6
+          },
+          "cost": 0.9092415000000007
+        }
+      },
+      "agent_0": {
+        "first": {
+          "source_line": 184,
+          "elapsed_s": 385.5,
+          "agent": "agent_0",
+          "turn": 23,
+          "full_agents": 8,
+          "correct_cells": 64,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 8,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 8,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.3076280000000011
+        },
+        "sustained": {
+          "source_line": 184,
+          "elapsed_s": 385.5,
+          "agent": "agent_0",
+          "turn": 23,
+          "full_agents": 8,
+          "correct_cells": 64,
+          "correct_by_agent": {
+            "agent_1": 8,
+            "agent_6": 8,
+            "agent_3": 8,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 8,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.3076280000000011
+        }
+      },
+      "agent_2": {
+        "first": {
+          "source_line": 167,
+          "elapsed_s": 351.3,
+          "agent": "agent_2",
+          "turn": 19,
+          "full_agents": 4,
+          "correct_cells": 57,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.1849647500000007
+        },
+        "sustained": {
+          "source_line": 167,
+          "elapsed_s": 351.3,
+          "agent": "agent_2",
+          "turn": 19,
+          "full_agents": 4,
+          "correct_cells": 57,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 7,
+            "agent_3": 7,
+            "agent_4": 8,
+            "agent_5": 8,
+            "agent_0": 4,
+            "agent_2": 8,
+            "agent_7": 8
+          },
+          "cost": 1.1849647500000007
+        }
+      },
+      "agent_7": {
+        "first": {
+          "source_line": 150,
+          "elapsed_s": 297.8,
+          "agent": "agent_7",
+          "turn": 22,
+          "full_agents": 2,
+          "correct_cells": 47,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 6,
+            "agent_3": 6,
+            "agent_4": 7,
+            "agent_5": 8,
+            "agent_0": 3,
+            "agent_2": 2,
+            "agent_7": 8
+          },
+          "cost": 0.9186907500000007
+        },
+        "sustained": {
+          "source_line": 150,
+          "elapsed_s": 297.8,
+          "agent": "agent_7",
+          "turn": 22,
+          "full_agents": 2,
+          "correct_cells": 47,
+          "correct_by_agent": {
+            "agent_1": 7,
+            "agent_6": 6,
+            "agent_3": 6,
+            "agent_4": 7,
+            "agent_5": 8,
+            "agent_0": 3,
+            "agent_2": 2,
+            "agent_7": 8
+          },
+          "cost": 0.9186907500000007
+        }
+      }
+    },
+    "score_checks": [
+      {
+        "round": 1,
+        "elapsed_s": 240.0,
+        "correct_cells": 36,
+        "full_agents": 0,
+        "cost": 0.7579762500000007
+      },
+      {
+        "round": 2,
+        "elapsed_s": 480.0,
+        "correct_cells": 64,
+        "full_agents": 8,
+        "cost": 1.607611500000001
+      }
+    ],
+    "posts": 71,
+    "body_glyphs": 140,
+    "message_lengths": {
+      "3": 26,
+      "1": 28,
+      "2": 17
+    },
+    "guess_changes": 87,
+    "raw_summary": {
+      "game_id": "12f02cc3",
+      "mode": "features",
+      "goal_person": 22,
+      "stop_reason": "win_threshold_reached",
+      "elapsed_s": 497.5,
+      "score_rounds": 2,
+      "turns_per_agent": {
+        "agent_0": 30,
+        "agent_1": 36,
+        "agent_2": 32,
+        "agent_3": 30,
+        "agent_4": 32,
+        "agent_5": 29,
+        "agent_6": 34,
+        "agent_7": 36
+      },
+      "total_cost_usd": 1.674238
+    }
+  },
+  "Sol": {
+    "convergence": {
+      "first": {
+        "source_line": 234,
+        "elapsed_s": 257.0,
+        "agent": "agent_6",
+        "turn": 31,
+        "full_agents": 8,
+        "correct_cells": 64,
+        "correct_by_agent": {
+          "agent_4": 8,
+          "agent_1": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_7": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8
+        },
+        "cost": 7.174875999999992
+      },
+      "sustained": {
+        "source_line": 234,
+        "elapsed_s": 257.0,
+        "agent": "agent_6",
+        "turn": 31,
+        "full_agents": 8,
+        "correct_cells": 64,
+        "correct_by_agent": {
+          "agent_4": 8,
+          "agent_1": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_7": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8
+        },
+        "cost": 7.174875999999992
+      }
+    },
+    "seven_correct": {
+      "first": {
+        "source_line": 26,
+        "elapsed_s": 56.2,
+        "agent": "agent_0",
+        "turn": 3,
+        "full_agents": 7,
+        "correct_cells": 63,
+        "correct_by_agent": {
+          "agent_4": 8,
+          "agent_1": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_7": 8,
+          "agent_0": 8,
+          "agent_6": 7,
+          "agent_3": 8
+        },
+        "cost": 0.5402405000000001
+      },
+      "sustained": {
+        "source_line": 26,
+        "elapsed_s": 56.2,
+        "agent": "agent_0",
+        "turn": 3,
+        "full_agents": 7,
+        "correct_cells": 63,
+        "correct_by_agent": {
+          "agent_4": 8,
+          "agent_1": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_7": 8,
+          "agent_0": 8,
+          "agent_6": 7,
+          "agent_3": 8
+        },
+        "cost": 0.5402405000000001
+      }
+    },
+    "first_any_correct": {
+      "first": {
+        "source_line": 16,
+        "elapsed_s": 43.3,
+        "agent": "agent_1",
+        "turn": 3,
+        "full_agents": 1,
+        "correct_cells": 47,
+        "correct_by_agent": {
+          "agent_4": 5,
+          "agent_1": 8,
+          "agent_5": 6,
+          "agent_2": 4,
+          "agent_7": 6,
+          "agent_0": 6,
+          "agent_6": 6,
+          "agent_3": 6
+        },
+        "cost": 0.27618800000000004
+      },
+      "sustained": {
+        "source_line": 16,
+        "elapsed_s": 43.3,
+        "agent": "agent_1",
+        "turn": 3,
+        "full_agents": 1,
+        "correct_cells": 47,
+        "correct_by_agent": {
+          "agent_4": 5,
+          "agent_1": 8,
+          "agent_5": 6,
+          "agent_2": 4,
+          "agent_7": 6,
+          "agent_0": 6,
+          "agent_6": 6,
+          "agent_3": 6
+        },
+        "cost": 0.27618800000000004
+      }
+    },
+    "per_agent": {
+      "agent_4": {
+        "first": {
+          "source_line": 19,
+          "elapsed_s": 47.1,
+          "agent": "agent_4",
+          "turn": 3,
+          "full_agents": 4,
+          "correct_cells": 56,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.3477760000000001
+        },
+        "sustained": {
+          "source_line": 19,
+          "elapsed_s": 47.1,
+          "agent": "agent_4",
+          "turn": 3,
+          "full_agents": 4,
+          "correct_cells": 56,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.3477760000000001
+        }
+      },
+      "agent_1": {
+        "first": {
+          "source_line": 16,
+          "elapsed_s": 43.3,
+          "agent": "agent_1",
+          "turn": 3,
+          "full_agents": 1,
+          "correct_cells": 47,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 6,
+            "agent_2": 4,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.27618800000000004
+        },
+        "sustained": {
+          "source_line": 16,
+          "elapsed_s": 43.3,
+          "agent": "agent_1",
+          "turn": 3,
+          "full_agents": 1,
+          "correct_cells": 47,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 6,
+            "agent_2": 4,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.27618800000000004
+        }
+      },
+      "agent_5": {
+        "first": {
+          "source_line": 18,
+          "elapsed_s": 45.2,
+          "agent": "agent_5",
+          "turn": 3,
+          "full_agents": 3,
+          "correct_cells": 53,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.32082250000000007
+        },
+        "sustained": {
+          "source_line": 18,
+          "elapsed_s": 45.2,
+          "agent": "agent_5",
+          "turn": 3,
+          "full_agents": 3,
+          "correct_cells": 53,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.32082250000000007
+        }
+      },
+      "agent_2": {
+        "first": {
+          "source_line": 17,
+          "elapsed_s": 44.7,
+          "agent": "agent_2",
+          "turn": 3,
+          "full_agents": 2,
+          "correct_cells": 51,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 6,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.29934650000000007
+        },
+        "sustained": {
+          "source_line": 17,
+          "elapsed_s": 44.7,
+          "agent": "agent_2",
+          "turn": 3,
+          "full_agents": 2,
+          "correct_cells": 51,
+          "correct_by_agent": {
+            "agent_4": 5,
+            "agent_1": 8,
+            "agent_5": 6,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 6,
+            "agent_3": 6
+          },
+          "cost": 0.29934650000000007
+        }
+      },
+      "agent_7": {
+        "first": {
+          "source_line": 22,
+          "elapsed_s": 51.2,
+          "agent": "agent_7",
+          "turn": 3,
+          "full_agents": 6,
+          "correct_cells": 61,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 6,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.4325015000000001
+        },
+        "sustained": {
+          "source_line": 22,
+          "elapsed_s": 51.2,
+          "agent": "agent_7",
+          "turn": 3,
+          "full_agents": 6,
+          "correct_cells": 61,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 6,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.4325015000000001
+        }
+      },
+      "agent_0": {
+        "first": {
+          "source_line": 26,
+          "elapsed_s": 56.2,
+          "agent": "agent_0",
+          "turn": 3,
+          "full_agents": 7,
+          "correct_cells": 63,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 8,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.5402405000000001
+        },
+        "sustained": {
+          "source_line": 26,
+          "elapsed_s": 56.2,
+          "agent": "agent_0",
+          "turn": 3,
+          "full_agents": 7,
+          "correct_cells": 63,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 8,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.5402405000000001
+        }
+      },
+      "agent_6": {
+        "first": {
+          "source_line": 234,
+          "elapsed_s": 257.0,
+          "agent": "agent_6",
+          "turn": 31,
+          "full_agents": 8,
+          "correct_cells": 64,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 8,
+            "agent_6": 8,
+            "agent_3": 8
+          },
+          "cost": 7.174875999999992
+        },
+        "sustained": {
+          "source_line": 234,
+          "elapsed_s": 257.0,
+          "agent": "agent_6",
+          "turn": 31,
+          "full_agents": 8,
+          "correct_cells": 64,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 8,
+            "agent_0": 8,
+            "agent_6": 8,
+            "agent_3": 8
+          },
+          "cost": 7.174875999999992
+        }
+      },
+      "agent_3": {
+        "first": {
+          "source_line": 21,
+          "elapsed_s": 49.3,
+          "agent": "agent_3",
+          "turn": 2,
+          "full_agents": 5,
+          "correct_cells": 59,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.40447050000000007
+        },
+        "sustained": {
+          "source_line": 21,
+          "elapsed_s": 49.3,
+          "agent": "agent_3",
+          "turn": 2,
+          "full_agents": 5,
+          "correct_cells": 59,
+          "correct_by_agent": {
+            "agent_4": 8,
+            "agent_1": 8,
+            "agent_5": 8,
+            "agent_2": 8,
+            "agent_7": 6,
+            "agent_0": 6,
+            "agent_6": 7,
+            "agent_3": 8
+          },
+          "cost": 0.40447050000000007
+        }
+      }
+    },
+    "score_checks": [
+      {
+        "round": 1,
+        "elapsed_s": 240.0,
+        "correct_cells": 63,
+        "full_agents": 7,
+        "cost": 6.759587499999993
+      },
+      {
+        "round": 2,
+        "elapsed_s": 480.0,
+        "correct_cells": 64,
+        "full_agents": 8,
+        "cost": 18.32984149999994
+      }
+    ],
+    "posts": 36,
+    "body_glyphs": 4134,
+    "message_lengths": {
+      "2": 1,
+      "203": 1,
+      "160": 1,
+      "44": 9,
+      "143": 6,
+      "66": 1,
+      "107": 3,
+      "125": 2,
+      "179": 9,
+      "80": 1,
+      "152": 1,
+      "35": 1
+    },
+    "guess_changes": 47,
+    "raw_summary": {
+      "game_id": "5e5f03a8",
+      "mode": "features",
+      "goal_person": 22,
+      "stop_reason": "win_threshold_reached",
+      "elapsed_s": 489.8,
+      "score_rounds": 2,
+      "turns_per_agent": {
+        "agent_0": 59,
+        "agent_1": 61,
+        "agent_2": 60,
+        "agent_3": 57,
+        "agent_4": 60,
+        "agent_5": 60,
+        "agent_6": 61,
+        "agent_7": 58
+      },
+      "total_cost_usd": 18.889641
+    }
+  }
+}

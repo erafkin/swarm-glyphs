@@ -1,0 +1,19 @@
+{
+  "source_run": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/logs/20261107_074528_12f02cc3",
+  "purpose": "Glyph-choice follow-up interviews",
+  "created_at": "2026-11-07T16:31:35.140176+00:00",
+  "model": "google/gemini-3.8-flash",
+  "reasoning_effort": "medium",
+  "max_tokens": 16000,
+  "calls_planned": 8,
+  "concurrency": 4,
+  "soft_cost_limit_usd": 2,
+  "original_run_unchanged": true,
+  "source_sha256": {
+    "agents.json": "6753cc9469439b0afb234ae7391fb4a10c6b74edd7ed53500c267b389678885c",
+    "config.json": "c4d28762e9aa94495e828171059c912fa95baf0f1a7e9ec6769f23a605f636bc",
+    "agent_calls.jsonl": "11f9cfcdc7ae8845b4c139925bc6e18d62a46ea8a85f67c9c21ae5fe33ee7fbf",
+    "chatroom.jsonl": "abe74d568fd7304640210a716b71c6fe497eb946505677831327abc722ed8b07",
+    "final_interviews.jsonl": "ed3f9cc368f4b2a6efbaef14887580e90f1aac48534f210013dd01caf2da681e"
+  }
+}

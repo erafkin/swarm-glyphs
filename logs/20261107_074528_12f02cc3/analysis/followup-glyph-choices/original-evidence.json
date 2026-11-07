@@ -1,0 +1,82 @@
+[
+  {
+    "agent_id": "agent_0",
+    "first_character": "𗮘",
+    "position_in_own_glyph_list_1_based": 1,
+    "first_message": "𗮘𗮘𗮘",
+    "first_message_turn": 4,
+    "first_message_call_line": 28,
+    "first_message_elapsed_s": 63.3,
+    "contemporaneous_scratchpad": "Time 47s: agent_7 sent '𗈰𗈰𗈰' and agent_4 sent '𗏏𗏏𗏏'. Both agents sent a single distinct glyph repeated 3 times. Following this pattern to signal presence and test if agents are claiming unique identifier glyphs. Sending '𗮘𗮘𗮘'. My known feature: hair_colour = brown."
+  },
+  {
+    "agent_id": "agent_1",
+    "first_character": "𗰷",
+    "position_in_own_glyph_list_1_based": 2,
+    "first_message": "𗰷𗰷𗰷",
+    "first_message_turn": 4,
+    "first_message_call_line": 31,
+    "first_message_elapsed_s": 67.5,
+    "contemporaneous_scratchpad": "Time: 46s. Known: hairstyle = curls. Observed in chat: [agent_7] 𗈰𗈰𗈰, [agent_4] 𗏏𗏏𗏏. Both agents sent 3 identical glyphs. Possible interpretations: (1) establishing presence / claiming an identification glyph, (2) communicating an index (3), or (3) initial handshake. Note: Feature value orders and glyph orders are shuffled per agent, so numeric indices of values/glyphs are not directly aligned without a shared reference or feedback. I will emit 3 identical glyphs of my own (𗰷𗰷𗰷) to signal presence as agent_1, while continuing to track how the communication protocol develops across rounds."
+  },
+  {
+    "agent_id": "agent_2",
+    "first_character": "𗾧",
+    "position_in_own_glyph_list_1_based": 1,
+    "first_message": "𗾧𗾧𗾧",
+    "first_message_turn": 5,
+    "first_message_call_line": 49,
+    "first_message_elapsed_s": 105.6,
+    "contemporaneous_scratchpad": "Time 70s. Chat history:\nagent_7: 𗈰𗈰𗈰\nagent_4: 𗏏𗏏𗏏\nagent_5: 𗈰\nagent_6: 𗈰𗈰\nagent_0: 𗮘𗮘𗮘\nagent_1: 𗰷𗰷𗰷\n\nAgents 0, 1, 4, 7 all announced with 3 repetitions of a unique glyph (𗮘, 𗰷, 𗏏, 𗈰). Meanwhile agents 5 and 6 sent 1 and 2 repetitions of 𗈰. Following the dominant convention of announcing a unique identifier/signal with 3 repetitions using an unused glyph (𗾧). My private truth is facial_hair = beard. First scoring round is at 240s."
+  },
+  {
+    "agent_id": "agent_3",
+    "first_character": "𗄌",
+    "position_in_own_glyph_list_1_based": 1,
+    "first_message": "𗄌𗄌",
+    "first_message_turn": 5,
+    "first_message_call_line": 37,
+    "first_message_elapsed_s": 82.4,
+    "contemporaneous_scratchpad": "Time: 52s. agent_7 sent '𗈰𗈰𗈰' and agent_4 sent '𗏏𗏏𗏏'. Both sent length-3 messages with a single repeated glyph. If agents correspond to features (agent_0..7 -> features 0..7), agent_3 corresponds to glasses (my known feature: glasses = none). If message length corresponds to 1-based value index, 'none' is 2nd in my glasses list (round, none, square, sunglasses). Sending '𗄌𗄌' to signal 2, or test repetition patterns. Keeping glasses='none' in guess."
+  },
+  {
+    "agent_id": "agent_4",
+    "first_character": "𗏏",
+    "position_in_own_glyph_list_1_based": 1,
+    "first_message": "𗏏𗏏𗏏",
+    "first_message_turn": 3,
+    "first_message_call_line": 21,
+    "first_message_elapsed_s": 44.7,
+    "contemporaneous_scratchpad": "Turn 2 (29s). agent_7 sent 3 glyphs: 𗈰𗈰𗈰. Since agent_0..7 map to the 8 features in prompt order (agent_7 = expression, agent_4 = clothing), and values are alphabetically canonicalized (1-4): expression sorted = frown(1), neutral(2), smile(3), surprised(4). Thus agent_7 indicates expression = smile. My feature is clothing = shirt. Alphabetical clothing: hoodie(1), jacket(2), shirt(3), sweater(4). Shirt = 3. Sending 3 glyphs to broadcast clothing = shirt."
+  },
+  {
+    "agent_id": "agent_5",
+    "first_character": "𗈰",
+    "position_in_own_glyph_list_1_based": 8,
+    "first_message": "𗈰",
+    "first_message_turn": 3,
+    "first_message_call_line": 24,
+    "first_message_elapsed_s": 51.9,
+    "contemporaneous_scratchpad": "My known feature: clothing_colour = blue. Agent 7 sent 𗈰𗈰𗈰 (length 3). Hypothesis: agent_i corresponds to feature i in the prompt list (agent_0: hair_colour, agent_1: hairstyle, agent_2: facial_hair, agent_3: glasses, agent_4: clothing, agent_5: clothing_colour, agent_6: background, agent_7: expression). Since value order is shuffled per agent, canonical alphabetical order (1-4) is the natural protocol. Alphabetical clothing_colour: 1=blue, 2=green, 3=red, 4=yellow. Blue is 1. Alphabetical expression: 1=frown, 2=neutral, 3=smile, 4=surprised. Agent 7 sent 3 -> smile. Sending 1 glyph (𗈰) to signal clothing_colour = blue."
+  },
+  {
+    "agent_id": "agent_6",
+    "first_character": "𗈰",
+    "position_in_own_glyph_list_1_based": 15,
+    "first_message": "𗈰𗈰",
+    "first_message_turn": 3,
+    "first_message_call_line": 26,
+    "first_message_elapsed_s": 56.4,
+    "contemporaneous_scratchpad": "Known feature: background = green. Observing agent assignments: 8 agents map to the 8 listed features in order (agent_0: hair_colour, agent_1: hairstyle, agent_2: facial_hair, agent_3: glasses, agent_4: clothing, agent_5: clothing_colour, agent_6: background, agent_7: expression). Agent_7 sent length 3 glyphs. In alphabetical order for expression (1: frown, 2: neutral, 3: smile, 4: surprised), 3 corresponds to smile. For agent_6 (background), alphabetical values are: 1: blue, 2: green, 3: purple, 4: yellow. Green is index 2, so sending 2 glyphs."
+  },
+  {
+    "agent_id": "agent_7",
+    "first_character": "𗈰",
+    "position_in_own_glyph_list_1_based": 1,
+    "first_message": "𗈰𗈰𗈰",
+    "first_message_turn": 1,
+    "first_message_call_line": 11,
+    "first_message_elapsed_s": 23.7,
+    "contemporaneous_scratchpad": "I am agent_7. I know expression = smile. There are 8 agents and 8 features; in alphabetical or standard prompt order, agent_7 naturally corresponds to expression. Alphabetical order of expression values: 1: frown, 2: neutral, 3: smile, 4: surprised. Since smile is the 3rd value, I am sending a message of length 3 (𗈰𗈰𗈰) to signal value index 3."
+  }
+]

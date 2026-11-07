@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "file": "agent_calls.jsonl",
+      "bytes": 2557854,
+      "sha256": "4651f5019cf9a45a88bbbdeb3b6c985fde942dc4fb1934e928e5114f9ef1047a"
+    },
+    {
+      "file": "agents.json",
+      "bytes": 35716,
+      "sha256": "4371b739192c1ee488cbbb656dc41d9f78fc7bd1d010c37bff2f256e44051edc"
+    },
+    {
+      "file": "chatroom.jsonl",
+      "bytes": 13768,
+      "sha256": "7346dddf57c9ea4225a40152c7674a37390c703f36ed98e25d26379b2c81684f"
+    },
+    {
+      "file": "config.json",
+      "bytes": 1006,
+      "sha256": "5dc49e1443f2c724f4ba658d95b2e615befeaefed6e77398defef4a0ac5159ff"
+    },
+    {
+      "file": "final_interviews.jsonl",
+      "bytes": 132178,
+      "sha256": "4575233d44bc9deba7d13bbdf616f10e6e4124aafe3bc311551a9333999460dc"
+    },
+    {
+      "file": "glyphs.json",
+      "bytes": 182,
+      "sha256": "ed8e2755081927291a5ee53239e5636c7fc15c1a1977eeafbe97b13e60cdca1a"
+    },
+    {
+      "file": "goal.json",
+      "bytes": 1376,
+      "sha256": "6efa8b0ed2e420e66fa9a9893a9bcbc032822dd2c1f8fe53091462004d86d679"
+    },
+    {
+      "file": "scores.jsonl",
+      "bytes": 2464,
+      "sha256": "249d13954c78fc8260f3cf31a9f213dd6340aa6d3a752a075be265cf42ae7a43"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 3702,
+      "sha256": "b438dff836b268f8986e0ba1b74928ee9083f4098527808811a8ea83be72d9c0"
+    }
+  ],
+  "total_bytes": 2748246
+}

@@ -1,0 +1,144 @@
+{
+  "game_id": "12f02cc3",
+  "mode": "features",
+  "goal_person": 22,
+  "stop_reason": "win_threshold_reached",
+  "elapsed_s": 497.5,
+  "score_rounds": 2,
+  "final_score": {
+    "round": 2,
+    "elapsed_s": 480.0,
+    "feature_accuracy": {
+      "hair_colour": 1.0,
+      "hairstyle": 1.0,
+      "facial_hair": 1.0,
+      "glasses": 1.0,
+      "clothing": 1.0,
+      "clothing_colour": 1.0,
+      "background": 1.0,
+      "expression": 1.0
+    },
+    "feature_chance": {
+      "hair_colour": 0.34375,
+      "hairstyle": 0.34375,
+      "facial_hair": 0.34375,
+      "glasses": 0.34375,
+      "clothing": 0.34375,
+      "clothing_colour": 0.34375,
+      "background": 0.34375,
+      "expression": 0.34375
+    },
+    "fully_correct_rate": 1.0,
+    "fully_correct_chance": 6.103515625e-05,
+    "guesses": {
+      "agent_0": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_1": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_2": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_3": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_4": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_5": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_6": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_7": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "beard",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      }
+    },
+    "blind_feature_chance": {
+      "hair_colour": 0.25,
+      "hairstyle": 0.25,
+      "facial_hair": 0.25,
+      "glasses": 0.25,
+      "clothing": 0.25,
+      "clothing_colour": 0.25,
+      "background": 0.25,
+      "expression": 0.25
+    },
+    "blind_fully_correct_chance": 1.52587890625e-05,
+    "person_correct": null,
+    "person_accuracy": null,
+    "person_chance": null,
+    "blind_person_chance": null,
+    "person_chance_by_agent": null,
+    "person_candidate_counts": null
+  },
+  "turns_per_agent": {
+    "agent_0": 30,
+    "agent_1": 36,
+    "agent_2": 32,
+    "agent_3": 30,
+    "agent_4": 32,
+    "agent_5": 29,
+    "agent_6": 34,
+    "agent_7": 36
+  },
+  "total_cost_usd": 1.674238
+}

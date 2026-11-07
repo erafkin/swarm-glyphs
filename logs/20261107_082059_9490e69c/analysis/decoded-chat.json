@@ -1,0 +1,389 @@
+{
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/logs/20261107_082059_9490e69c",
+  "first_all_correct": {
+    "time_s": 102.0,
+    "call": 52,
+    "agent_id": "agent_7",
+    "turn": 3,
+    "cost_usd": 1.11292675,
+    "chat_messages": 21,
+    "glyphs": 2738
+  },
+  "first_correct_per_agent": {
+    "agent_3": {
+      "time_s": 53.8,
+      "call": 23,
+      "turn": 3,
+      "model": "google/gemini-3.8-flash"
+    },
+    "agent_6": {
+      "time_s": 59.3,
+      "call": 27,
+      "turn": 5,
+      "model": "openai/gpt-6.1-sol"
+    },
+    "agent_0": {
+      "time_s": 59.8,
+      "call": 28,
+      "turn": 4,
+      "model": "openai/gpt-6.1-sol"
+    },
+    "agent_4": {
+      "time_s": 70.3,
+      "call": 29,
+      "turn": 6,
+      "model": "openai/gpt-6.1-sol"
+    },
+    "agent_5": {
+      "time_s": 73.2,
+      "call": 32,
+      "turn": 3,
+      "model": "google/gemini-3.8-flash"
+    },
+    "agent_2": {
+      "time_s": 73.6,
+      "call": 33,
+      "turn": 6,
+      "model": "openai/gpt-6.1-sol"
+    },
+    "agent_1": {
+      "time_s": 76.1,
+      "call": 34,
+      "turn": 3,
+      "model": "google/gemini-3.8-flash"
+    },
+    "agent_7": {
+      "time_s": 102.0,
+      "call": 52,
+      "turn": 3,
+      "model": "google/gemini-3.8-flash"
+    }
+  },
+  "chat": [
+    {
+      "call": 3,
+      "agent_id": "agent_6",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 1,
+      "elapsed_s": 10.4,
+      "glyph_count": 4,
+      "decoding": null,
+      "message": "𗄌𗅋𗄌𗄌"
+    },
+    {
+      "call": 5,
+      "agent_id": "agent_4",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 1,
+      "elapsed_s": 12.2,
+      "glyph_count": 125,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "clothing=shirt"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𘜎𘜎𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𗏏"
+    },
+    {
+      "call": 6,
+      "agent_id": "agent_2",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 1,
+      "elapsed_s": 13.5,
+      "glyph_count": 152,
+      "decoding": {
+        "zero": "𗅋",
+        "one": "𗾧",
+        "separator": "𘜎",
+        "text": "facial_hair=beard"
+      },
+      "message": "𗅋𗾧𗾧𗅋𗅋𗾧𗾧𗅋𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗾧𗾧𘜎𗅋𗾧𗾧𗅋𗾧𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗾧𗾧𗅋𗅋𘜎𗅋𗾧𗅋𗾧𗾧𗾧𗾧𗾧𘜎𗅋𗾧𗾧𗅋𗾧𗅋𗅋𗅋𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗾧𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗾧𗅋𗅋𗾧𗅋𘜎𗅋𗅋𗾧𗾧𗾧𗾧𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗾧𗅋𘜎𗅋𗾧𗾧𗅋𗅋𗾧𗅋𗾧𘜎𗅋𗾧𗾧𗅋𗅋𗅋𗅋𗾧𘜎𗅋𗾧𗾧𗾧𗅋𗅋𗾧𗅋𘜎𗅋𗾧𗾧𗅋𗅋𗾧𗅋𗅋"
+    },
+    {
+      "call": 8,
+      "agent_id": "agent_0",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 1,
+      "elapsed_s": 18.2,
+      "glyph_count": 152,
+      "decoding": {
+        "zero": "𗄌",
+        "one": "𘞌",
+        "separator": "𗅋",
+        "text": "hair_colour=brown"
+      },
+      "message": "𗄌𘞌𘞌𗄌𘞌𗄌𗄌𗄌𗅋𗄌𘞌𘞌𗄌𗄌𗄌𗄌𘞌𗅋𗄌𘞌𘞌𗄌𘞌𗄌𗄌𘞌𗅋𗄌𘞌𘞌𘞌𗄌𗄌𘞌𗄌𗅋𗄌𘞌𗄌𘞌𘞌𘞌𘞌𘞌𗅋𗄌𘞌𘞌𗄌𗄌𗄌𘞌𘞌𗅋𗄌𘞌𘞌𗄌𘞌𘞌𘞌𘞌𗅋𗄌𘞌𘞌𗄌𘞌𘞌𗄌𗄌𗅋𗄌𘞌𘞌𗄌𘞌𘞌𘞌𘞌𗅋𗄌𘞌𘞌𘞌𗄌𘞌𗄌𘞌𗅋𗄌𘞌𘞌𘞌𗄌𗄌𘞌𗄌𗅋𗄌𗄌𘞌𘞌𘞌𘞌𗄌𘞌𗅋𗄌𘞌𘞌𗄌𗄌𗄌𘞌𗄌𗅋𗄌𘞌𘞌𘞌𗄌𗄌𘞌𗄌𗅋𗄌𘞌𘞌𗄌𘞌𘞌𘞌𘞌𗅋𗄌𘞌𘞌𘞌𗄌𘞌𘞌𘞌𗅋𗄌𘞌𘞌𗄌𘞌𘞌𘞌𗄌"
+    },
+    {
+      "call": 10,
+      "agent_id": "agent_6",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 2,
+      "elapsed_s": 23.8,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "background=green"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𗏏𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏"
+    },
+    {
+      "call": 12,
+      "agent_id": "agent_3",
+      "model": "google/gemini-3.8-flash",
+      "turn": 2,
+      "elapsed_s": 29.8,
+      "glyph_count": 107,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "glasses=none"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 16,
+      "agent_id": "agent_2",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 3,
+      "elapsed_s": 39.1,
+      "glyph_count": 152,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "facial_hair=beard"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𗏏𘜎𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𗏏"
+    },
+    {
+      "call": 17,
+      "agent_id": "agent_5",
+      "model": "google/gemini-3.8-flash",
+      "turn": 2,
+      "elapsed_s": 41.6,
+      "glyph_count": 179,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "clothing_colour=blue"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𘜎𘜎𗘸𗏏𘜎𗏏𘜎𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 19,
+      "agent_id": "agent_0",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 3,
+      "elapsed_s": 45.7,
+      "glyph_count": 152,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "hair_colour=brown"
+      },
+      "message": "𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𗏏𘜎𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏"
+    },
+    {
+      "call": 20,
+      "agent_id": "agent_1",
+      "model": "google/gemini-3.8-flash",
+      "turn": 2,
+      "elapsed_s": 46.4,
+      "glyph_count": 134,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "hairstyle=curls"
+      },
+      "message": "𗏏𘜎𘜎𗏏𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𗏏𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎"
+    },
+    {
+      "call": 24,
+      "agent_id": "agent_7",
+      "model": "google/gemini-3.8-flash",
+      "turn": 2,
+      "elapsed_s": 56.1,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗈰",
+        "one": "𗰷",
+        "separator": "𗒇",
+        "text": "expression=smile"
+      },
+      "message": "𗈰𗰷𗰷𗈰𗈰𗰷𗈰𗰷𗒇𗈰𗰷𗰷𗰷𗰷𗈰𗈰𗈰𗒇𗈰𗰷𗰷𗰷𗈰𗈰𗈰𗈰𗒇𗈰𗰷𗰷𗰷𗈰𗈰𗰷𗈰𗒇𗈰𗰷𗰷𗈰𗈰𗰷𗈰𗰷𗒇𗈰𗰷𗰷𗰷𗈰𗈰𗰷𗰷𗒇𗈰𗰷𗰷𗰷𗈰𗈰𗰷𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗈰𗈰𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗰷𗰷𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗰷𗰷𗈰𗒇𗈰𗈰𗰷𗰷𗰷𗰷𗈰𗰷𗒇𗈰𗰷𗰷𗰷𗈰𗈰𗰷𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗰷𗈰𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗈰𗈰𗰷𗒇𗈰𗰷𗰷𗈰𗰷𗰷𗈰𗈰𗒇𗈰𗰷𗰷𗈰𗈰𗰷𗈰𗰷"
+    },
+    {
+      "call": 25,
+      "agent_id": "agent_4",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 5,
+      "elapsed_s": 57.7,
+      "glyph_count": 98,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression?"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𘜎𘜎"
+    },
+    {
+      "call": 27,
+      "agent_id": "agent_6",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 5,
+      "elapsed_s": 59.3,
+      "glyph_count": 98,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression?"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𘜎𘜎"
+    },
+    {
+      "call": 28,
+      "agent_id": "agent_0",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 4,
+      "elapsed_s": 59.8,
+      "glyph_count": 98,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression?"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𘜎𘜎"
+    },
+    {
+      "call": 29,
+      "agent_id": "agent_4",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 6,
+      "elapsed_s": 70.3,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 30,
+      "agent_id": "agent_6",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 6,
+      "elapsed_s": 71.8,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 31,
+      "agent_id": "agent_0",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 5,
+      "elapsed_s": 72.9,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 33,
+      "agent_id": "agent_2",
+      "model": "openai/gpt-6.1-sol",
+      "turn": 6,
+      "elapsed_s": 73.6,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 47,
+      "agent_id": "agent_5",
+      "model": "google/gemini-3.8-flash",
+      "turn": 4,
+      "elapsed_s": 97.8,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 48,
+      "agent_id": "agent_3",
+      "model": "google/gemini-3.8-flash",
+      "turn": 5,
+      "elapsed_s": 97.8,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 52,
+      "agent_id": "agent_7",
+      "model": "google/gemini-3.8-flash",
+      "turn": 3,
+      "elapsed_s": 102.0,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    },
+    {
+      "call": 54,
+      "agent_id": "agent_1",
+      "model": "google/gemini-3.8-flash",
+      "turn": 4,
+      "elapsed_s": 105.7,
+      "glyph_count": 143,
+      "decoding": {
+        "zero": "𗏏",
+        "one": "𘜎",
+        "separator": "𗘸",
+        "text": "expression=smile"
+      },
+      "message": "𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𘜎𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𗏏𗏏𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𘜎𗏏𗘸𗏏𗏏𘜎𘜎𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𘜎𗏏𗏏𘜎𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𗏏𗏏𘜎𗘸𗏏𘜎𘜎𗏏𘜎𘜎𗏏𗏏𗘸𗏏𘜎𘜎𗏏𗏏𘜎𗏏𘜎"
+    }
+  ]
+}

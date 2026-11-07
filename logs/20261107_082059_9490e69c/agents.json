@@ -1,0 +1,834 @@
+[
+  {
+    "agent_id": "agent_0",
+    "model": "openai/gpt-6.1-sol",
+    "known_feature": "hair_colour",
+    "known_value": "brown",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "blonde",
+          "red",
+          "black",
+          "brown"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "bob",
+          "spikes",
+          "ponytail",
+          "curls"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "beard",
+          "goatee",
+          "none",
+          "moustache"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "sunglasses",
+          "round",
+          "none",
+          "square"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "jacket",
+          "hoodie",
+          "sweater",
+          "shirt"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "red",
+          "yellow",
+          "blue",
+          "green"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "purple",
+          "blue",
+          "green",
+          "yellow"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "neutral",
+          "surprised",
+          "frown",
+          "smile"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗮘",
+      "𗅋",
+      "𗒇",
+      "𗄌",
+      "𘜎",
+      "𗷀",
+      "𗤵",
+      "𗏠",
+      "𗏏",
+      "𗈰",
+      "𘞌",
+      "𗡝",
+      "𘑻",
+      "𗜹",
+      "𗧽",
+      "𗾧",
+      "𗘸",
+      "𗰷"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_0, one of 8 agents playing a cooperative game.\nThe other agents are: agent_1, agent_2, agent_3, agent_4, agent_5, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: blonde, red, black, brown\n- hairstyle: bob, spikes, ponytail, curls\n- facial_hair: beard, goatee, none, moustache\n- glasses: sunglasses, round, none, square\n- clothing: jacket, hoodie, sweater, shirt\n- clothing_colour: red, yellow, blue, green\n- background: purple, blue, green, yellow\n- expression: neutral, surprised, frown, smile\n\nEach agent privately knows the true value of one feature. You know:\n  hair_colour = brown\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗮘 𗅋 𗒇 𗄌 𘜎 𗷀 𗤵 𗏠 𗏏 𗈰 𘞌 𗡝 𘑻 𗜹 𗧽 𗾧 𗘸 𗰷\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_1",
+    "model": "google/gemini-3.8-flash",
+    "known_feature": "hairstyle",
+    "known_value": "curls",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "brown",
+          "black",
+          "red",
+          "blonde"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "bob",
+          "ponytail",
+          "spikes",
+          "curls"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "none",
+          "beard",
+          "moustache",
+          "goatee"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "round",
+          "none",
+          "sunglasses",
+          "square"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "jacket",
+          "sweater",
+          "hoodie",
+          "shirt"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "green",
+          "yellow",
+          "red",
+          "blue"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "yellow",
+          "green",
+          "purple",
+          "blue"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "frown",
+          "neutral",
+          "surprised",
+          "smile"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𘜎",
+      "𗰷",
+      "𗡝",
+      "𗧽",
+      "𘑻",
+      "𗄌",
+      "𗒇",
+      "𗾧",
+      "𗅋",
+      "𗷀",
+      "𗈰",
+      "𘞌",
+      "𗘸",
+      "𗤵",
+      "𗏏",
+      "𗮘",
+      "𗏠",
+      "𗜹"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_1, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_2, agent_3, agent_4, agent_5, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: brown, black, red, blonde\n- hairstyle: bob, ponytail, spikes, curls\n- facial_hair: none, beard, moustache, goatee\n- glasses: round, none, sunglasses, square\n- clothing: jacket, sweater, hoodie, shirt\n- clothing_colour: green, yellow, red, blue\n- background: yellow, green, purple, blue\n- expression: frown, neutral, surprised, smile\n\nEach agent privately knows the true value of one feature. You know:\n  hairstyle = curls\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𘜎 𗰷 𗡝 𗧽 𘑻 𗄌 𗒇 𗾧 𗅋 𗷀 𗈰 𘞌 𗘸 𗤵 𗏏 𗮘 𗏠 𗜹\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_2",
+    "model": "openai/gpt-6.1-sol",
+    "known_feature": "facial_hair",
+    "known_value": "beard",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "black",
+          "blonde",
+          "red",
+          "brown"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "bob",
+          "curls",
+          "ponytail",
+          "spikes"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "none",
+          "goatee",
+          "moustache",
+          "beard"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "sunglasses",
+          "none",
+          "square",
+          "round"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "shirt",
+          "hoodie",
+          "jacket",
+          "sweater"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "blue",
+          "yellow",
+          "green",
+          "red"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "blue",
+          "yellow",
+          "green",
+          "purple"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "smile",
+          "neutral",
+          "surprised",
+          "frown"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗾧",
+      "𗅋",
+      "𘜎",
+      "𘑻",
+      "𗤵",
+      "𗰷",
+      "𗘸",
+      "𘞌",
+      "𗷀",
+      "𗮘",
+      "𗧽",
+      "𗏏",
+      "𗡝",
+      "𗒇",
+      "𗄌",
+      "𗈰",
+      "𗏠",
+      "𗜹"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_2, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_3, agent_4, agent_5, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: black, blonde, red, brown\n- hairstyle: bob, curls, ponytail, spikes\n- facial_hair: none, goatee, moustache, beard\n- glasses: sunglasses, none, square, round\n- clothing: shirt, hoodie, jacket, sweater\n- clothing_colour: blue, yellow, green, red\n- background: blue, yellow, green, purple\n- expression: smile, neutral, surprised, frown\n\nEach agent privately knows the true value of one feature. You know:\n  facial_hair = beard\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗾧 𗅋 𘜎 𘑻 𗤵 𗰷 𗘸 𘞌 𗷀 𗮘 𗧽 𗏏 𗡝 𗒇 𗄌 𗈰 𗏠 𗜹\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_3",
+    "model": "google/gemini-3.8-flash",
+    "known_feature": "glasses",
+    "known_value": "none",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "blonde",
+          "red",
+          "brown",
+          "black"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "spikes",
+          "curls",
+          "ponytail",
+          "bob"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "none",
+          "goatee",
+          "beard",
+          "moustache"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "round",
+          "none",
+          "square",
+          "sunglasses"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "jacket",
+          "hoodie",
+          "sweater",
+          "shirt"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "yellow",
+          "green",
+          "blue",
+          "red"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "blue",
+          "purple",
+          "green",
+          "yellow"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "smile",
+          "surprised",
+          "frown",
+          "neutral"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗄌",
+      "𗧽",
+      "𗰷",
+      "𗮘",
+      "𗡝",
+      "𗤵",
+      "𘑻",
+      "𗘸",
+      "𗾧",
+      "𗷀",
+      "𗏏",
+      "𗏠",
+      "𘜎",
+      "𗈰",
+      "𗜹",
+      "𗅋",
+      "𗒇",
+      "𘞌"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_3, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_2, agent_4, agent_5, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: blonde, red, brown, black\n- hairstyle: spikes, curls, ponytail, bob\n- facial_hair: none, goatee, beard, moustache\n- glasses: round, none, square, sunglasses\n- clothing: jacket, hoodie, sweater, shirt\n- clothing_colour: yellow, green, blue, red\n- background: blue, purple, green, yellow\n- expression: smile, surprised, frown, neutral\n\nEach agent privately knows the true value of one feature. You know:\n  glasses = none\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗄌 𗧽 𗰷 𗮘 𗡝 𗤵 𘑻 𗘸 𗾧 𗷀 𗏏 𗏠 𘜎 𗈰 𗜹 𗅋 𗒇 𘞌\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_4",
+    "model": "openai/gpt-6.1-sol",
+    "known_feature": "clothing",
+    "known_value": "shirt",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "blonde",
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "ponytail",
+          "curls",
+          "bob",
+          "spikes"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "goatee",
+          "moustache",
+          "none",
+          "beard"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "round",
+          "square",
+          "sunglasses",
+          "none"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "sweater",
+          "jacket",
+          "shirt",
+          "hoodie"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "red",
+          "yellow",
+          "blue",
+          "green"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "yellow",
+          "purple",
+          "green",
+          "blue"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "surprised",
+          "frown",
+          "smile",
+          "neutral"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗏏",
+      "𘜎",
+      "𗘸",
+      "𗧽",
+      "𘞌",
+      "𗮘",
+      "𘑻",
+      "𗒇",
+      "𗰷",
+      "𗈰",
+      "𗏠",
+      "𗡝",
+      "𗅋",
+      "𗜹",
+      "𗤵",
+      "𗾧",
+      "𗷀",
+      "𗄌"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_4, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_2, agent_3, agent_5, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: blonde, brown, black, red\n- hairstyle: ponytail, curls, bob, spikes\n- facial_hair: goatee, moustache, none, beard\n- glasses: round, square, sunglasses, none\n- clothing: sweater, jacket, shirt, hoodie\n- clothing_colour: red, yellow, blue, green\n- background: yellow, purple, green, blue\n- expression: surprised, frown, smile, neutral\n\nEach agent privately knows the true value of one feature. You know:\n  clothing = shirt\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗏏 𘜎 𗘸 𗧽 𘞌 𗮘 𘑻 𗒇 𗰷 𗈰 𗏠 𗡝 𗅋 𗜹 𗤵 𗾧 𗷀 𗄌\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_5",
+    "model": "google/gemini-3.8-flash",
+    "known_feature": "clothing_colour",
+    "known_value": "blue",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "black",
+          "brown",
+          "red",
+          "blonde"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "spikes",
+          "bob",
+          "ponytail",
+          "curls"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "beard",
+          "moustache",
+          "goatee",
+          "none"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "none",
+          "sunglasses",
+          "round",
+          "square"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "hoodie",
+          "sweater",
+          "shirt",
+          "jacket"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "red",
+          "green",
+          "blue",
+          "yellow"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "green",
+          "blue",
+          "yellow",
+          "purple"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "smile",
+          "frown",
+          "surprised",
+          "neutral"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗒇",
+      "𗏏",
+      "𗘸",
+      "𗜹",
+      "𗾧",
+      "𘑻",
+      "𗧽",
+      "𗈰",
+      "𗄌",
+      "𗅋",
+      "𗮘",
+      "𗡝",
+      "𗷀",
+      "𗤵",
+      "𘞌",
+      "𘜎",
+      "𗰷",
+      "𗏠"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_5, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_2, agent_3, agent_4, agent_6, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: black, brown, red, blonde\n- hairstyle: spikes, bob, ponytail, curls\n- facial_hair: beard, moustache, goatee, none\n- glasses: none, sunglasses, round, square\n- clothing: hoodie, sweater, shirt, jacket\n- clothing_colour: red, green, blue, yellow\n- background: green, blue, yellow, purple\n- expression: smile, frown, surprised, neutral\n\nEach agent privately knows the true value of one feature. You know:\n  clothing_colour = blue\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗒇 𗏏 𗘸 𗜹 𗾧 𘑻 𗧽 𗈰 𗄌 𗅋 𗮘 𗡝 𗷀 𗤵 𘞌 𘜎 𗰷 𗏠\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_6",
+    "model": "openai/gpt-6.1-sol",
+    "known_feature": "background",
+    "known_value": "green",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "black",
+          "blonde",
+          "brown",
+          "red"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "bob",
+          "curls",
+          "spikes",
+          "ponytail"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "moustache",
+          "goatee",
+          "none",
+          "beard"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "round",
+          "none",
+          "square",
+          "sunglasses"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "jacket",
+          "sweater",
+          "shirt",
+          "hoodie"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "yellow",
+          "red",
+          "blue",
+          "green"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "purple",
+          "yellow",
+          "blue",
+          "green"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "surprised",
+          "frown",
+          "neutral",
+          "smile"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𘑻",
+      "𗰷",
+      "𗏠",
+      "𗡝",
+      "𘜎",
+      "𗏏",
+      "𗷀",
+      "𗒇",
+      "𗮘",
+      "𗧽",
+      "𗘸",
+      "𘞌",
+      "𗜹",
+      "𗾧",
+      "𗈰",
+      "𗤵",
+      "𗅋",
+      "𗄌"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_6, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_2, agent_3, agent_4, agent_5, agent_7.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: black, blonde, brown, red\n- hairstyle: bob, curls, spikes, ponytail\n- facial_hair: moustache, goatee, none, beard\n- glasses: round, none, square, sunglasses\n- clothing: jacket, sweater, shirt, hoodie\n- clothing_colour: yellow, red, blue, green\n- background: purple, yellow, blue, green\n- expression: surprised, frown, neutral, smile\n\nEach agent privately knows the true value of one feature. You know:\n  background = green\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𘑻 𗰷 𗏠 𗡝 𘜎 𗏏 𗷀 𗒇 𗮘 𗧽 𗘸 𘞌 𗜹 𗾧 𗈰 𗤵 𗅋 𗄌\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  },
+  {
+    "agent_id": "agent_7",
+    "model": "google/gemini-3.8-flash",
+    "known_feature": "expression",
+    "known_value": "smile",
+    "features_view": [
+      {
+        "name": "hair_colour",
+        "options": [
+          "brown",
+          "blonde",
+          "red",
+          "black"
+        ]
+      },
+      {
+        "name": "hairstyle",
+        "options": [
+          "ponytail",
+          "spikes",
+          "bob",
+          "curls"
+        ]
+      },
+      {
+        "name": "facial_hair",
+        "options": [
+          "none",
+          "goatee",
+          "moustache",
+          "beard"
+        ]
+      },
+      {
+        "name": "glasses",
+        "options": [
+          "square",
+          "sunglasses",
+          "round",
+          "none"
+        ]
+      },
+      {
+        "name": "clothing",
+        "options": [
+          "jacket",
+          "hoodie",
+          "shirt",
+          "sweater"
+        ]
+      },
+      {
+        "name": "clothing_colour",
+        "options": [
+          "red",
+          "green",
+          "yellow",
+          "blue"
+        ]
+      },
+      {
+        "name": "background",
+        "options": [
+          "yellow",
+          "blue",
+          "green",
+          "purple"
+        ]
+      },
+      {
+        "name": "expression",
+        "options": [
+          "frown",
+          "smile",
+          "surprised",
+          "neutral"
+        ]
+      }
+    ],
+    "glyphs_view": [
+      "𗈰",
+      "𗄌",
+      "𘜎",
+      "𗰷",
+      "𗒇",
+      "𗾧",
+      "𗮘",
+      "𗧽",
+      "𘑻",
+      "𘞌",
+      "𗤵",
+      "𗏏",
+      "𗏠",
+      "𗘸",
+      "𗷀",
+      "𗡝",
+      "𗜹",
+      "𗅋"
+    ],
+    "board_order": null,
+    "scratchpad": "",
+    "turn_count": 0,
+    "system_prompt": "You are agent_7, one of 8 agents playing a cooperative game.\nThe other agents are: agent_0, agent_1, agent_2, agent_3, agent_4, agent_5, agent_6.\n\nGOAL\nThere is a hidden goal object described by these features (name: possible values):\n- hair_colour: brown, blonde, red, black\n- hairstyle: ponytail, spikes, bob, curls\n- facial_hair: none, goatee, moustache, beard\n- glasses: square, sunglasses, round, none\n- clothing: jacket, hoodie, shirt, sweater\n- clothing_colour: red, green, yellow, blue\n- background: yellow, blue, green, purple\n- expression: frown, smile, surprised, neutral\n\nEach agent privately knows the true value of one feature. You know:\n  expression = smile\nThe team wins when every agent's guess of the full goal object is correct. You must share\nwhat you know and learn what the others know.\n\nCOMMUNICATION\nYou can only talk to the other agents through a shared chatroom, and chat messages may ONLY\ncontain these glyphs, with no spaces or agent IDs:\n  𗈰 𗄌 𘜎 𗰷 𗒇 𗾧 𗮘 𗧽 𘑻 𘞌 𗤵 𗏏 𗏠 𗘸 𗷀 𗡝 𗜹 𗅋\nThe glyphs have no predefined meaning.\nAny chat message containing anything else (letters, digits, punctuation, other symbols, spaces, agent IDs) is\ndiscarded and replaced with \"⊘\", which everyone understands to mean that agent\ntried to speak outside the glyphs.\nEach turn you are shown only the most recent 50 chatroom messages; older\nmessages are not shown to you again.\n\nORDERING\nEach agent is shown the glyphs and the possible values of each feature in its own randomly shuffled order. The order you see\nis not the order the other agents see.\n\nSCRATCHPAD\nYou have a private scratchpad that only you can see, in english or glyphs. Use it to track what\nyou have learned and methods of communication you've followed. Each turn you rewrite the full\nscratchpad; whatever you return replaces the previous version.\n\nSCORING\nEvery 240 seconds, every agent's current guess is collected and scored.\nThe group result is posted in the chatroom in english by \"system\", showing for each\nfeature the percentage of agents who guessed it correctly, and the percentage of agents with\nevery feature correct. Individual guesses are not revealed. The game ends when\nall agents have every feature correct.\n\nRESPONSE FORMAT\nRespond with a single JSON object with these fields:\n- \"scratchpad\": your full updated scratchpad.\n- \"message\": your chat message (glyphs, with no spaces or agent IDs only), or \"\" to stay silent.\n- \"guess\": your current guess for every feature, using one of its possible values. You must\n  always guess a value for every feature, even when you are unsure."
+  }
+]

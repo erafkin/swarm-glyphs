@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-11-07T16:32:39.711045+00:00",
+  "successful_calls": 8,
+  "total_reported_cost_usd": 0.1411005,
+  "calls_missing_cost": 0,
+  "agents": [
+    "agent_2",
+    "agent_0",
+    "agent_3",
+    "agent_1",
+    "agent_4",
+    "agent_6",
+    "agent_5",
+    "agent_7"
+  ]
+}

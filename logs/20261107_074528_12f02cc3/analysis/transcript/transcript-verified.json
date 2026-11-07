@@ -1,0 +1,670 @@
+{
+  "source_run": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/logs/20261107_074528_12f02cc3",
+  "first_correct": {
+    "call": 184,
+    "timestamp": 1794066713.77384,
+    "elapsed_s": 385.5
+  },
+  "before_correct_posts": 14,
+  "before_correct_glyphs": 30,
+  "total_posts": 71,
+  "total_glyphs": 140,
+  "system_posts": 2,
+  "chat": [
+    {
+      "timestamp": 1794066351.899767,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 23.7,
+      "sequence": 1,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066372.8912508,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 44.7,
+      "sequence": 2,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066380.0814831,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 51.9,
+      "sequence": 3,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066384.661278,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 56.4,
+      "sequence": 4,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066391.573005,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 63.3,
+      "sequence": 5,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066395.772274,
+      "sender": "agent_1",
+      "text": "𗰷𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 67.5,
+      "sequence": 6,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066410.599159,
+      "sender": "agent_3",
+      "text": "𗄌𗄌",
+      "is_violation": false,
+      "elapsed_s": 82.4,
+      "sequence": 7,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066433.8518882,
+      "sender": "agent_2",
+      "text": "𗾧𗾧𗾧",
+      "is_violation": false,
+      "elapsed_s": 105.6,
+      "sequence": 8,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066440.381098,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 112.2,
+      "sequence": 9,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066568.23122,
+      "sender": "system",
+      "text": "Score round 1: hair_colour 75%, hairstyle 12%, facial_hair 25%, glasses 50%, clothing 62%, clothing_colour 75%, background 62%, expression 88%. Agents with every feature correct: 0%.",
+      "is_violation": false,
+      "elapsed_s": 240.0,
+      "sequence": null
+    },
+    {
+      "timestamp": 1794066598.8770912,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 270.6,
+      "sequence": 10,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066665.7726898,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 337.5,
+      "sequence": 11,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066703.0161762,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 374.8,
+      "sequence": 12,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066710.950096,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 382.7,
+      "sequence": 13,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066711.4602282,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 383.2,
+      "sequence": 14,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066715.9850109,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 387.8,
+      "sequence": 15,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066722.73139,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 394.5,
+      "sequence": 16,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066725.051601,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 396.8,
+      "sequence": 17,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066731.109959,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 402.9,
+      "sequence": 18,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066732.258924,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 404.0,
+      "sequence": 19,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066741.8327098,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 413.6,
+      "sequence": 20,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066742.3139641,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 414.1,
+      "sequence": 21,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066742.835762,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 414.6,
+      "sequence": 22,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066746.6482098,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 418.4,
+      "sequence": 23,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066750.070112,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 421.8,
+      "sequence": 24,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066750.898365,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 422.7,
+      "sequence": 25,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066751.855765,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 423.6,
+      "sequence": 26,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066754.253488,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 426.0,
+      "sequence": 27,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066755.93954,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 427.7,
+      "sequence": 28,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066758.0408242,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 429.8,
+      "sequence": 29,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066759.492259,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 431.3,
+      "sequence": 30,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066759.857027,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 431.6,
+      "sequence": 31,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066760.354555,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 432.1,
+      "sequence": 32,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066760.434956,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 432.2,
+      "sequence": 33,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066760.6591291,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 432.4,
+      "sequence": 34,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066764.579911,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 436.3,
+      "sequence": 35,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066765.251334,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 437.0,
+      "sequence": 36,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066767.091064,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 438.9,
+      "sequence": 37,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066769.362914,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 441.1,
+      "sequence": 38,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066769.7505841,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 441.5,
+      "sequence": 39,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066770.195551,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 442.0,
+      "sequence": 40,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066770.708031,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 442.5,
+      "sequence": 41,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066773.679028,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 445.4,
+      "sequence": 42,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066773.6849558,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 445.5,
+      "sequence": 43,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066774.813893,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 446.6,
+      "sequence": 44,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066776.126444,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 447.9,
+      "sequence": 45,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066778.0488708,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 449.8,
+      "sequence": 46,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066780.140789,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 451.9,
+      "sequence": 47,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066780.922409,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 452.7,
+      "sequence": 48,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066781.103285,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 452.9,
+      "sequence": 49,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066782.874136,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 454.6,
+      "sequence": 50,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066783.085767,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 454.9,
+      "sequence": 51,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066784.90992,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 456.7,
+      "sequence": 52,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066785.826526,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 457.6,
+      "sequence": 53,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066786.422741,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 458.2,
+      "sequence": 54,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066789.194579,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 461.0,
+      "sequence": 55,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066791.736032,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 463.5,
+      "sequence": 56,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066792.4105139,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 464.2,
+      "sequence": 57,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066792.476249,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 464.2,
+      "sequence": 58,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066792.789966,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 464.6,
+      "sequence": 59,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066793.96726,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 465.7,
+      "sequence": 60,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066795.789388,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 467.6,
+      "sequence": 61,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066795.919011,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 467.7,
+      "sequence": 62,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066797.9232929,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 469.7,
+      "sequence": 63,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066800.6664581,
+      "sender": "agent_1",
+      "text": "𗰷𗰷",
+      "is_violation": false,
+      "elapsed_s": 472.4,
+      "sequence": 64,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066800.7318559,
+      "sender": "agent_6",
+      "text": "𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 472.5,
+      "sequence": 65,
+      "glyph_count": 2
+    },
+    {
+      "timestamp": 1794066802.876841,
+      "sender": "agent_3",
+      "text": "𗄌",
+      "is_violation": false,
+      "elapsed_s": 474.6,
+      "sequence": 66,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066803.428311,
+      "sender": "agent_4",
+      "text": "𗏏𗏏𗏏",
+      "is_violation": false,
+      "elapsed_s": 475.2,
+      "sequence": 67,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066804.063073,
+      "sender": "agent_0",
+      "text": "𗮘𗮘𗮘",
+      "is_violation": false,
+      "elapsed_s": 475.8,
+      "sequence": 68,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066805.238604,
+      "sender": "agent_5",
+      "text": "𗈰",
+      "is_violation": false,
+      "elapsed_s": 477.0,
+      "sequence": 69,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066806.027678,
+      "sender": "agent_7",
+      "text": "𗈰𗈰𗈰",
+      "is_violation": false,
+      "elapsed_s": 477.8,
+      "sequence": 70,
+      "glyph_count": 3
+    },
+    {
+      "timestamp": 1794066807.32212,
+      "sender": "agent_2",
+      "text": "𗾧",
+      "is_violation": false,
+      "elapsed_s": 479.1,
+      "sequence": 71,
+      "glyph_count": 1
+    },
+    {
+      "timestamp": 1794066808.2426581,
+      "sender": "system",
+      "text": "Score round 2: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 100%, background 100%, expression 100%. Agents with every feature correct: 100%.",
+      "is_violation": false,
+      "elapsed_s": 480.0,
+      "sequence": null
+    }
+  ]
+}

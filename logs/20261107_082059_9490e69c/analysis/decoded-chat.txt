@@ -1,0 +1,25 @@
+MIXED RUN 9490e69c: DECODED AGENT MESSAGES
+Binary ASCII decoded mechanically from exact logged glyph strings. The first unary message is interpreted from its original scratchpad.
+
+ 10.4s | agent_6 (Sol) | Unary proposal: feature index 1 | value index 2 (from sender scratchpad) | 4 glyphs | original call 3
+ 12.2s | agent_4 (Sol) | clothing=shirt | 125 glyphs | original call 5
+ 13.5s | agent_2 (Sol) | facial_hair=beard | 152 glyphs | original call 6
+ 18.2s | agent_0 (Sol) | hair_colour=brown | 152 glyphs | original call 8
+ 23.8s | agent_6 (Sol) | background=green | 143 glyphs | original call 10
+ 29.8s | agent_3 (Gemini) | glasses=none | 107 glyphs | original call 12
+ 39.1s | agent_2 (Sol) | facial_hair=beard | 152 glyphs | original call 16
+ 41.6s | agent_5 (Gemini) | clothing_colour=blue | 179 glyphs | original call 17
+ 45.7s | agent_0 (Sol) | hair_colour=brown | 152 glyphs | original call 19
+ 46.4s | agent_1 (Gemini) | hairstyle=curls | 134 glyphs | original call 20
+ 56.1s | agent_7 (Gemini) | expression=smile | 143 glyphs | original call 24
+ 57.7s | agent_4 (Sol) | expression? | 98 glyphs | original call 25
+ 59.3s | agent_6 (Sol) | expression? | 98 glyphs | original call 27
+ 59.8s | agent_0 (Sol) | expression? | 98 glyphs | original call 28
+ 70.3s | agent_4 (Sol) | expression=smile | 143 glyphs | original call 29
+ 71.8s | agent_6 (Sol) | expression=smile | 143 glyphs | original call 30
+ 72.9s | agent_0 (Sol) | expression=smile | 143 glyphs | original call 31
+ 73.6s | agent_2 (Sol) | expression=smile | 143 glyphs | original call 33
+ 97.8s | agent_5 (Gemini) | expression=smile | 143 glyphs | original call 47
+ 97.8s | agent_3 (Gemini) | expression=smile | 143 glyphs | original call 48
+102.0s | agent_7 (Gemini) | expression=smile | 143 glyphs | original call 52
+105.7s | agent_1 (Gemini) | expression=smile | 143 glyphs | original call 54
