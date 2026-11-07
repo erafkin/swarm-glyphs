@@ -1,0 +1,7658 @@
+{
+  "summary": {
+    "method": "Initialize from each agent's first turn_prompt CURRENT FEATURE GUESS JSON. Replay agent_calls.jsonl in append order, updating only state_applied=true records; use accepted top-level guess rather than response. elapsed_s values are rounded to 0.1 seconds. Record order and timestamp preserve completion order.",
+    "call_timestamps_monotonic": true,
+    "initial_guesses": {
+      "agent_7": {
+        "hair_colour": "red",
+        "hairstyle": "bob",
+        "facial_hair": "beard",
+        "glasses": "sunglasses",
+        "clothing": "jacket",
+        "clothing_colour": "red",
+        "background": "green",
+        "expression": "surprised"
+      },
+      "agent_5": {
+        "hair_colour": "brown",
+        "hairstyle": "spikes",
+        "facial_hair": "moustache",
+        "glasses": "sunglasses",
+        "clothing": "sweater",
+        "clothing_colour": "green",
+        "background": "green",
+        "expression": "neutral"
+      },
+      "agent_2": {
+        "hair_colour": "black",
+        "hairstyle": "spikes",
+        "facial_hair": "none",
+        "glasses": "square",
+        "clothing": "sweater",
+        "clothing_colour": "blue",
+        "background": "purple",
+        "expression": "frown"
+      },
+      "agent_4": {
+        "hair_colour": "blonde",
+        "hairstyle": "curls",
+        "facial_hair": "moustache",
+        "glasses": "square",
+        "clothing": "hoodie",
+        "clothing_colour": "yellow",
+        "background": "blue",
+        "expression": "frown"
+      },
+      "agent_0": {
+        "hair_colour": "red",
+        "hairstyle": "bob",
+        "facial_hair": "beard",
+        "glasses": "square",
+        "clothing": "sweater",
+        "clothing_colour": "green",
+        "background": "blue",
+        "expression": "smile"
+      },
+      "agent_6": {
+        "hair_colour": "brown",
+        "hairstyle": "curls",
+        "facial_hair": "none",
+        "glasses": "square",
+        "clothing": "shirt",
+        "clothing_colour": "yellow",
+        "background": "yellow",
+        "expression": "smile"
+      },
+      "agent_3": {
+        "hair_colour": "black",
+        "hairstyle": "curls",
+        "facial_hair": "none",
+        "glasses": "none",
+        "clothing": "shirt",
+        "clothing_colour": "blue",
+        "background": "green",
+        "expression": "smile"
+      },
+      "agent_1": {
+        "hair_colour": "black",
+        "hairstyle": "bob",
+        "facial_hair": "none",
+        "glasses": "round",
+        "clothing": "sweater",
+        "clothing_colour": "red",
+        "background": "purple",
+        "expression": "smile"
+      }
+    },
+    "initial_correct_count": 19,
+    "first_global_convergence": {
+      "elapsed_s": 53.1,
+      "call_line": 26,
+      "agent_id": "agent_7",
+      "turn": 4,
+      "completed_calls": 26,
+      "gameplay_cost_usd": 0.384907
+    },
+    "per_agent": {
+      "agent_0": {
+        "known_feature": "hair_colour",
+        "known_value": "brown",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 32.9,
+          "call_line": 13,
+          "agent_id": "agent_0",
+          "turn": 2,
+          "completed_calls": 13,
+          "gameplay_cost_usd": 0.1522415
+        },
+        "stayed_correct": true,
+        "completed_calls": 29,
+        "accepted_calls": 29,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 44.6,
+          "call_line": 21,
+          "agent_id": "agent_0",
+          "turn": 3,
+          "completed_calls": 21,
+          "gameplay_cost_usd": 0.2931395,
+          "evidence": "All features decoded and complete. hair_colour=brown (my private fact, broadcast as agent-ID octal ASCII hair_colour=brown). hairstyle=curls (agent_1 unary A1Z26 and octal ASCII). facial_hair=beard (agent_2 octal ASCII). glasses=none (agent_3 binary ASCII, \ud81e\uddfd=1 \ud81c\udd0c=0, and octal ASCII). clothing=shirt (agent_4 octal ASCII). clothing_colour=blue (agent_5 octal ASCII). background=green (agent_6 unary A1Z26 and octal ASCII). expression=smile (agent_7 latest octal ASCII explicitly decodes expression=smile). Encoding shared by most agents: each ASCII character encoded as three agent IDs representing its octal digits, double spaces between characters. All current guesses correct; retain them."
+        }
+      },
+      "agent_1": {
+        "known_feature": "hairstyle",
+        "known_value": "curls",
+        "initial_correct": 1,
+        "first_all_correct": {
+          "elapsed_s": 49.4,
+          "call_line": 24,
+          "agent_id": "agent_1",
+          "turn": 3,
+          "completed_calls": 24,
+          "gameplay_cost_usd": 0.34697
+        },
+        "stayed_correct": true,
+        "completed_calls": 26,
+        "accepted_calls": 26,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 49.4,
+          "call_line": 24,
+          "agent_id": "agent_1",
+          "turn": 3,
+          "completed_calls": 24,
+          "gameplay_cost_usd": 0.34697,
+          "evidence": "All features now known: hair_colour=brown (agent0 octal ASCII hair_colour=brown), hairstyle=curls (my private fact), facial_hair=beard (agent2 initial), glasses=none (agent3), clothing=shirt (agent4), clothing_colour=blue (agent5), background=green (agent6 and agent2), expression=smile (agent7). Protocol: ASCII characters encoded as 3 octal digits using agent_0..agent_7; double spaces separate characters. Broadcast agent0's hair_colour=brown so everyone converges. Maintain complete correct guess."
+        }
+      },
+      "agent_2": {
+        "known_feature": "facial_hair",
+        "known_value": "beard",
+        "initial_correct": 1,
+        "first_all_correct": {
+          "elapsed_s": 42.9,
+          "call_line": 18,
+          "agent_id": "agent_2",
+          "turn": 3,
+          "completed_calls": 18,
+          "gameplay_cost_usd": 0.2399865
+        },
+        "stayed_correct": true,
+        "completed_calls": 27,
+        "accepted_calls": 27,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 42.9,
+          "call_line": 18,
+          "agent_id": "agent_2",
+          "turn": 3,
+          "completed_calls": 18,
+          "gameplay_cost_usd": 0.2399865,
+          "evidence": "All features decoded. Mine facial_hair=beard. Octal ASCII using agent IDs digits: agent_0 hair_colour=brown; agent_7 expression=smile; agent_3 glasses=none; agent_4 clothing=shirt; agent_5 clothing_colour=blue; agent_6 background=green. Agent_1 unary A1Z26 glyph counts spells hairstyle curls (8 1 9 18 19 20 25 12 5 / 3 21 18 12 19). Broadcast hairstyle=curls in octal ASCII now. Full goal brown,curls,beard,none,shirt,blue,green,smile."
+        }
+      },
+      "agent_3": {
+        "known_feature": "glasses",
+        "known_value": "none",
+        "initial_correct": 6,
+        "first_all_correct": {
+          "elapsed_s": 45.2,
+          "call_line": 22,
+          "agent_id": "agent_3",
+          "turn": 3,
+          "completed_calls": 22,
+          "gameplay_cost_usd": 0.3103455
+        },
+        "stayed_correct": true,
+        "completed_calls": 27,
+        "accepted_calls": 27,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 45.2,
+          "call_line": 22,
+          "agent_id": "agent_3",
+          "turn": 3,
+          "completed_calls": 22,
+          "gameplay_cost_usd": 0.3103455,
+          "evidence": "All features decoded from octal ASCII agent-ID triplets (suffixes are octal digits). agent_0: hair_colour=brown (150 141 151 162 137 143 157 154 157 165 162 075 142 162 157 167 156). agent_1 hairstyle=curls. agent_2 facial_hair=beard. Self agent_3 glasses=none. agent_4 clothing=shirt. agent_5 clothing_colour=blue. agent_6 background=green. agent_7 expression=smile. Full guess now correct based on all private disclosures. Repeat hair_colour=brown to help others."
+        }
+      },
+      "agent_4": {
+        "known_feature": "clothing",
+        "known_value": "shirt",
+        "initial_correct": 1,
+        "first_all_correct": {
+          "elapsed_s": 48.1,
+          "call_line": 23,
+          "agent_id": "agent_4",
+          "turn": 3,
+          "completed_calls": 23,
+          "gameplay_cost_usd": 0.328324
+        },
+        "stayed_correct": true,
+        "completed_calls": 27,
+        "accepted_calls": 26,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 48.1,
+          "call_line": 23,
+          "agent_id": "agent_4",
+          "turn": 3,
+          "completed_calls": 23,
+          "gameplay_cost_usd": 0.328324,
+          "evidence": "All features decoded. clothing=shirt privately known. Messages use three agent IDs as octal ASCII digits. agent0 hair_colour=brown (150 141 151 162 137 143 157 154 157 165 162 075 142 162 157 167 156). agent7 expression=smile (145 170 160 162 145 163 163 151 157 156 075 163 155 151 154 145). agent5 clothing_colour=blue. agent2 facial_hair=beard. agent6 background=green (also unary A1Z26). agent1 hairstyle=curls (also unary A1Z26). agent3 glasses=none (also binary ASCII). Have sent clothing=shirt in octal and unary. Full target: brown, curls, beard, none, shirt, blue, green, smile. All current guesses now correct; wait for scoring."
+        }
+      },
+      "agent_5": {
+        "known_feature": "clothing_colour",
+        "known_value": "blue",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 44.0,
+          "call_line": 20,
+          "agent_id": "agent_5",
+          "turn": 3,
+          "completed_calls": 20,
+          "gameplay_cost_usd": 0.275921
+        },
+        "stayed_correct": true,
+        "completed_calls": 26,
+        "accepted_calls": 26,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 54.7,
+          "call_line": 29,
+          "agent_id": "agent_5",
+          "turn": 4,
+          "completed_calls": 29,
+          "gameplay_cost_usd": 0.4418625,
+          "evidence": "All features decoded. hair_colour=brown (agent_0 octal ASCII hair_colour=brown: 150 141 151 162 137 143 157 154 157 165 162 075 142 162 157 167 156). hairstyle=curls (agent_1 unary A1Z26). facial_hair=beard (agent_2 octal ASCII). glasses=none (agent_3 binary ASCII, \ud81e\uddfd=1 \ud81c\udd0c=0). clothing=shirt (agent_4 octal ASCII). clothing_colour=blue (my private known fact). background=green (agent_6 unary A1Z26). expression=smile (agent_7 octal ASCII). Protocol: agent_N encodes octal digit N; each triple ASCII character. Broadcasting confirmation of hair_colour=brown. Keep all guesses unchanged."
+        }
+      },
+      "agent_6": {
+        "known_feature": "background",
+        "known_value": "green",
+        "initial_correct": 4,
+        "first_all_correct": {
+          "elapsed_s": 31.2,
+          "call_line": 12,
+          "agent_id": "agent_6",
+          "turn": 2,
+          "completed_calls": 12,
+          "gameplay_cost_usd": 0.135473
+        },
+        "stayed_correct": true,
+        "completed_calls": 27,
+        "accepted_calls": 26,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 43.4,
+          "call_line": 19,
+          "agent_id": "agent_6",
+          "turn": 3,
+          "completed_calls": 19,
+          "gameplay_cost_usd": 0.257485,
+          "evidence": "All features decoded. Agent-ID triples are octal ASCII, e.g. agent_1 agent_4 agent_2 = 142 = b. agent_0 says hair_colour=brown. agent_7 says expression=smile. agent_5 says clothing_colour=blue; agent_4 clothing=shirt; agent_2 facial_hair=beard. agent_1 unary A1Z26 says HAIRSTYLE CURLS. agent_3 binary ASCII (\ud81e\uddfd=1, \ud81c\udd0c=0) says glasses=none, and now octal confirms glasses=none. My private truth background=green. Full target: brown, curls, beard, none, shirt, blue, green, smile. Broadcast background=green in octal again; keep full correct guess unchanged."
+        }
+      },
+      "agent_7": {
+        "known_feature": "expression",
+        "known_value": "smile",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 53.1,
+          "call_line": 26,
+          "agent_id": "agent_7",
+          "turn": 4,
+          "completed_calls": 26,
+          "gameplay_cost_usd": 0.384907
+        },
+        "stayed_correct": true,
+        "completed_calls": 27,
+        "accepted_calls": 27,
+        "first_explicit_all_decoded_scratchpad": {
+          "elapsed_s": 53.1,
+          "call_line": 26,
+          "agent_id": "agent_7",
+          "turn": 4,
+          "completed_calls": 26,
+          "gameplay_cost_usd": 0.384907,
+          "evidence": "All features decoded. True goal: hair_colour=brown (agent_0 octal ASCII hair_colour=brown), hairstyle=curls (agent_1), facial_hair=beard (agent_2), glasses=none (agent_3), clothing=shirt (agent_4), clothing_colour=blue (agent_5), background=green (agent_6), expression=smile (my private fact). Shared encoding: ASCII octal digits via agent IDs, three IDs per character. agent_6 initially unary A1Z26 background green; agent_1 initially unary A1Z26 hairstyle curls; agent_3 initially binary ASCII with \ud81e\uddfd=1 and \ud81c\udd0c=0. All guesses now correct. Repeating expression=smile to ensure everyone has it."
+        }
+      }
+    },
+    "per_feature": {
+      "hair_colour": {
+        "value": "brown",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 53.1,
+          "call_line": 26,
+          "agent_id": "agent_7",
+          "turn": 4,
+          "completed_calls": 26,
+          "gameplay_cost_usd": 0.384907
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 53.1,
+          "call_line": 26,
+          "agent_id": "agent_7",
+          "turn": 4,
+          "completed_calls": 26,
+          "gameplay_cost_usd": 0.384907
+        }
+      },
+      "hairstyle": {
+        "value": "curls",
+        "initial_correct": 3,
+        "first_all_correct": {
+          "elapsed_s": 44.0,
+          "call_line": 20,
+          "agent_id": "agent_5",
+          "turn": 3,
+          "completed_calls": 20,
+          "gameplay_cost_usd": 0.275921
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 44.0,
+          "call_line": 20,
+          "agent_id": "agent_5",
+          "turn": 3,
+          "completed_calls": 20,
+          "gameplay_cost_usd": 0.275921
+        }
+      },
+      "facial_hair": {
+        "value": "beard",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        }
+      },
+      "glasses": {
+        "value": "none",
+        "initial_correct": 1,
+        "first_all_correct": {
+          "elapsed_s": 44.0,
+          "call_line": 20,
+          "agent_id": "agent_5",
+          "turn": 3,
+          "completed_calls": 20,
+          "gameplay_cost_usd": 0.275921
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 44.0,
+          "call_line": 20,
+          "agent_id": "agent_5",
+          "turn": 3,
+          "completed_calls": 20,
+          "gameplay_cost_usd": 0.275921
+        }
+      },
+      "clothing": {
+        "value": "shirt",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        }
+      },
+      "clothing_colour": {
+        "value": "blue",
+        "initial_correct": 2,
+        "first_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        }
+      },
+      "background": {
+        "value": "green",
+        "initial_correct": 3,
+        "first_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 36.4,
+          "call_line": 16,
+          "agent_id": "agent_1",
+          "turn": 2,
+          "completed_calls": 16,
+          "gameplay_cost_usd": 0.2039195
+        }
+      },
+      "expression": {
+        "value": "smile",
+        "initial_correct": 4,
+        "first_all_correct": {
+          "elapsed_s": 48.1,
+          "call_line": 23,
+          "agent_id": "agent_4",
+          "turn": 3,
+          "completed_calls": 23,
+          "gameplay_cost_usd": 0.328324
+        },
+        "stayed_correct": true,
+        "sustained_all_correct": {
+          "elapsed_s": 48.1,
+          "call_line": 23,
+          "agent_id": "agent_4",
+          "turn": 3,
+          "completed_calls": 23,
+          "gameplay_cost_usd": 0.328324
+        }
+      }
+    },
+    "first_all_agents_explicitly_claim_all_decoded": {
+      "elapsed_s": 54.7,
+      "call_line": 29,
+      "agent_id": "agent_5",
+      "turn": 4,
+      "completed_calls": 29,
+      "gameplay_cost_usd": 0.4418625
+    },
+    "gameplay_usage": {
+      "calls": 216,
+      "prompt_tokens": 1799338,
+      "completion_tokens": 79997,
+      "total_tokens": 1879335,
+      "cost": 5.2940519999999935,
+      "reasoning_tokens": 9683,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 1790812,
+      "upstream_inference_cost": 5.2940519999999935,
+      "upstream_inference_prompt_cost": 4.494082000000003,
+      "upstream_inference_completions_cost": 0.7999699999999992
+    },
+    "interview_usage": {
+      "calls": 8,
+      "prompt_tokens": 68818,
+      "completion_tokens": 1842,
+      "total_tokens": 70660,
+      "cost": 0.19045299999999998,
+      "reasoning_tokens": 0,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 68794,
+      "upstream_inference_cost": 0.19045299999999998,
+      "upstream_inference_prompt_cost": 0.17203300000000002,
+      "upstream_inference_completions_cost": 0.01842
+    },
+    "total_usage": {
+      "calls": 224,
+      "prompt_tokens": 1868156,
+      "completion_tokens": 81839,
+      "total_tokens": 1949995,
+      "cost": 5.484504999999993,
+      "reasoning_tokens": 9683,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 1859606,
+      "upstream_inference_cost": 5.484504999999993,
+      "upstream_inference_prompt_cost": 4.666115000000004,
+      "upstream_inference_completions_cost": 0.8183899999999992
+    },
+    "usage_to_convergence": {
+      "calls": 26,
+      "prompt_tokens": 79786,
+      "completion_tokens": 18942,
+      "total_tokens": 98728,
+      "cost": 0.384907,
+      "reasoning_tokens": 8767,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 71830,
+      "upstream_inference_cost": 0.384907,
+      "upstream_inference_prompt_cost": 0.195487,
+      "upstream_inference_completions_cost": 0.18942
+    },
+    "usage_after_convergence": {
+      "calls": 190,
+      "prompt_tokens": 1719552,
+      "completion_tokens": 61055,
+      "total_tokens": 1780607,
+      "cost": 4.909144999999997,
+      "reasoning_tokens": 916,
+      "cached_prompt_tokens": 0,
+      "cache_write_tokens": 1718982,
+      "upstream_inference_cost": 4.909144999999997,
+      "upstream_inference_prompt_cost": 4.2985950000000015,
+      "upstream_inference_completions_cost": 0.6105499999999998
+    },
+    "gameplay_usage_by_agent": {
+      "agent_0": {
+        "calls": 29,
+        "prompt_tokens": 244385,
+        "completion_tokens": 7443,
+        "total_tokens": 251828,
+        "cost": 0.6848565,
+        "reasoning_tokens": 1298,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 243313,
+        "upstream_inference_cost": 0.6848565,
+        "upstream_inference_prompt_cost": 0.6104264999999998,
+        "upstream_inference_completions_cost": 0.07442999999999997
+      },
+      "agent_1": {
+        "calls": 26,
+        "prompt_tokens": 218133,
+        "completion_tokens": 10521,
+        "total_tokens": 228654,
+        "cost": 0.6500119999999999,
+        "reasoning_tokens": 1373,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 217072,
+        "upstream_inference_cost": 0.6500119999999999,
+        "upstream_inference_prompt_cost": 0.5448019999999999,
+        "upstream_inference_completions_cost": 0.10521000000000001
+      },
+      "agent_2": {
+        "calls": 27,
+        "prompt_tokens": 224158,
+        "completion_tokens": 10441,
+        "total_tokens": 234599,
+        "cost": 0.6642715000000001,
+        "reasoning_tokens": 1068,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 223091,
+        "upstream_inference_cost": 0.6642715000000001,
+        "upstream_inference_prompt_cost": 0.5598614999999998,
+        "upstream_inference_completions_cost": 0.10440999999999999
+      },
+      "agent_3": {
+        "calls": 27,
+        "prompt_tokens": 225776,
+        "completion_tokens": 9275,
+        "total_tokens": 235051,
+        "cost": 0.6566585000000001,
+        "reasoning_tokens": 1099,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 224713,
+        "upstream_inference_cost": 0.6566585000000001,
+        "upstream_inference_prompt_cost": 0.5639084999999999,
+        "upstream_inference_completions_cost": 0.09275000000000003
+      },
+      "agent_4": {
+        "calls": 27,
+        "prompt_tokens": 226377,
+        "completion_tokens": 10080,
+        "total_tokens": 236457,
+        "cost": 0.6662089999999999,
+        "reasoning_tokens": 1208,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 225310,
+        "upstream_inference_cost": 0.6662089999999999,
+        "upstream_inference_prompt_cost": 0.5654089999999999,
+        "upstream_inference_completions_cost": 0.10079999999999995
+      },
+      "agent_5": {
+        "calls": 26,
+        "prompt_tokens": 214380,
+        "completion_tokens": 11350,
+        "total_tokens": 225730,
+        "cost": 0.6489170000000001,
+        "reasoning_tokens": 1341,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 213314,
+        "upstream_inference_cost": 0.6489170000000001,
+        "upstream_inference_prompt_cost": 0.5354170000000001,
+        "upstream_inference_completions_cost": 0.11350000000000003
+      },
+      "agent_6": {
+        "calls": 27,
+        "prompt_tokens": 224366,
+        "completion_tokens": 10815,
+        "total_tokens": 235181,
+        "cost": 0.6685335000000001,
+        "reasoning_tokens": 1105,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 223303,
+        "upstream_inference_cost": 0.6685335000000001,
+        "upstream_inference_prompt_cost": 0.5603835000000001,
+        "upstream_inference_completions_cost": 0.10815000000000001
+      },
+      "agent_7": {
+        "calls": 27,
+        "prompt_tokens": 221763,
+        "completion_tokens": 10072,
+        "total_tokens": 231835,
+        "cost": 0.6545939999999999,
+        "reasoning_tokens": 1191,
+        "cached_prompt_tokens": 0,
+        "cache_write_tokens": 220696,
+        "upstream_inference_cost": 0.6545939999999999,
+        "upstream_inference_prompt_cost": 0.5538740000000003,
+        "upstream_inference_completions_cost": 0.10071999999999995
+      }
+    },
+    "ignored_calls": [
+      {
+        "call_line": 215,
+        "agent_id": "agent_4",
+        "turn": 27,
+        "elapsed_s": 240.3,
+        "state_applied": false,
+        "ignored_reason": "win_threshold_reached",
+        "usage": {
+          "completion_tokens": 309,
+          "prompt_tokens": 9188,
+          "total_tokens": 9497,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null,
+            "text_tokens": null,
+            "image_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 9185,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": null,
+            "video_tokens": 0
+          },
+          "cost": 0.0260585,
+          "is_byok": false,
+          "cost_details": {
+            "upstream_inference_cost": 0.0260585,
+            "upstream_inference_prompt_cost": 0.0229685,
+            "upstream_inference_completions_cost": 0.00309
+          }
+        }
+      },
+      {
+        "call_line": 216,
+        "agent_id": "agent_6",
+        "turn": 27,
+        "elapsed_s": 242.5,
+        "state_applied": false,
+        "ignored_reason": "win_threshold_reached",
+        "usage": {
+          "completion_tokens": 347,
+          "prompt_tokens": 9176,
+          "total_tokens": 9523,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null,
+            "text_tokens": null,
+            "image_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": 9173,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": null,
+            "video_tokens": 0
+          },
+          "cost": 0.0264085,
+          "is_byok": false,
+          "cost_details": {
+            "upstream_inference_cost": 0.0264085,
+            "upstream_inference_prompt_cost": 0.0229385,
+            "upstream_inference_completions_cost": 0.00347
+          }
+        }
+      }
+    ],
+    "accepted_calls": 214,
+    "gameplay_messages": 186,
+    "messages_to_convergence": 24,
+    "system_messages": [
+      {
+        "timestamp": 1794030845.845723,
+        "sender": "system",
+        "text": "Score round 1: hair_colour 100%, hairstyle 100%, facial_hair 100%, glasses 100%, clothing 100%, clothing_colour 100%, background 100%, expression 100%. Agents with every feature correct: 100%.",
+        "is_violation": false
+      }
+    ],
+    "gameplay_prompts_containing_score_feedback": [],
+    "sample_snapshots": {
+      "0": {
+        "elapsed_s": 0.0,
+        "call_line": 0,
+        "gameplay_cost_usd": 0.0,
+        "completed_calls": 0,
+        "correct_by_agent": {
+          "agent_7": 2,
+          "agent_5": 2,
+          "agent_2": 1,
+          "agent_4": 1,
+          "agent_0": 2,
+          "agent_6": 4,
+          "agent_3": 6,
+          "agent_1": 1
+        },
+        "correct_by_feature": {
+          "hair_colour": 2,
+          "hairstyle": 3,
+          "facial_hair": 2,
+          "glasses": 1,
+          "clothing": 2,
+          "clothing_colour": 2,
+          "background": 3,
+          "expression": 4
+        }
+      },
+      "15": {
+        "elapsed_s": 13.5,
+        "timestamp": 1794030619.332315,
+        "call_line": 3,
+        "agent_id": "agent_2",
+        "turn": 1,
+        "state_applied": true,
+        "completed_calls": 3,
+        "gameplay_cost_usd": 0.024728,
+        "correct_by_agent": {
+          "agent_7": 3,
+          "agent_5": 3,
+          "agent_2": 2,
+          "agent_4": 1,
+          "agent_0": 2,
+          "agent_6": 4,
+          "agent_3": 6,
+          "agent_1": 1
+        },
+        "correct_by_feature": {
+          "hair_colour": 2,
+          "hairstyle": 3,
+          "facial_hair": 3,
+          "glasses": 1,
+          "clothing": 2,
+          "clothing_colour": 3,
+          "background": 3,
+          "expression": 5
+        }
+      },
+      "30": {
+        "elapsed_s": 29.7,
+        "timestamp": 1794030635.5215201,
+        "call_line": 11,
+        "agent_id": "agent_2",
+        "turn": 2,
+        "state_applied": true,
+        "completed_calls": 11,
+        "gameplay_cost_usd": 0.1181795,
+        "correct_by_agent": {
+          "agent_7": 5,
+          "agent_5": 5,
+          "agent_2": 4,
+          "agent_4": 2,
+          "agent_0": 3,
+          "agent_6": 5,
+          "agent_3": 6,
+          "agent_1": 2
+        },
+        "correct_by_feature": {
+          "hair_colour": 3,
+          "hairstyle": 4,
+          "facial_hair": 4,
+          "glasses": 1,
+          "clothing": 6,
+          "clothing_colour": 4,
+          "background": 5,
+          "expression": 5
+        }
+      },
+      "45": {
+        "elapsed_s": 44.6,
+        "timestamp": 1794030650.466791,
+        "call_line": 21,
+        "agent_id": "agent_0",
+        "turn": 3,
+        "state_applied": true,
+        "completed_calls": 21,
+        "gameplay_cost_usd": 0.2931395,
+        "correct_by_agent": {
+          "agent_7": 7,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 6,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 7,
+          "agent_1": 7
+        },
+        "correct_by_feature": {
+          "hair_colour": 4,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 7
+        }
+      },
+      "60": {
+        "elapsed_s": 59.9,
+        "timestamp": 1794030665.709034,
+        "call_line": 32,
+        "agent_id": "agent_1",
+        "turn": 4,
+        "state_applied": true,
+        "completed_calls": 32,
+        "gameplay_cost_usd": 0.500873,
+        "correct_by_agent": {
+          "agent_7": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_1": 8
+        },
+        "correct_by_feature": {
+          "hair_colour": 8,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 8
+        }
+      },
+      "90": {
+        "elapsed_s": 87.3,
+        "timestamp": 1794030693.140206,
+        "call_line": 61,
+        "agent_id": "agent_3",
+        "turn": 8,
+        "state_applied": true,
+        "completed_calls": 61,
+        "gameplay_cost_usd": 1.2204445,
+        "correct_by_agent": {
+          "agent_7": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_1": 8
+        },
+        "correct_by_feature": {
+          "hair_colour": 8,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 8
+        }
+      },
+      "120": {
+        "elapsed_s": 119.4,
+        "timestamp": 1794030725.2655182,
+        "call_line": 93,
+        "agent_id": "agent_3",
+        "turn": 12,
+        "state_applied": true,
+        "completed_calls": 93,
+        "gameplay_cost_usd": 2.0842715,
+        "correct_by_agent": {
+          "agent_7": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_1": 8
+        },
+        "correct_by_feature": {
+          "hair_colour": 8,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 8
+        }
+      },
+      "180": {
+        "elapsed_s": 178.7,
+        "timestamp": 1794030784.56832,
+        "call_line": 152,
+        "agent_id": "agent_0",
+        "turn": 21,
+        "state_applied": true,
+        "completed_calls": 152,
+        "gameplay_cost_usd": 3.623028,
+        "correct_by_agent": {
+          "agent_7": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_1": 8
+        },
+        "correct_by_feature": {
+          "hair_colour": 8,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 8
+        }
+      },
+      "240": {
+        "elapsed_s": 238.4,
+        "timestamp": 1794030844.25788,
+        "call_line": 214,
+        "agent_id": "agent_3",
+        "turn": 27,
+        "state_applied": true,
+        "completed_calls": 214,
+        "gameplay_cost_usd": 5.241585,
+        "correct_by_agent": {
+          "agent_7": 8,
+          "agent_5": 8,
+          "agent_2": 8,
+          "agent_4": 8,
+          "agent_0": 8,
+          "agent_6": 8,
+          "agent_3": 8,
+          "agent_1": 8
+        },
+        "correct_by_feature": {
+          "hair_colour": 8,
+          "hairstyle": 8,
+          "facial_hair": 8,
+          "glasses": 8,
+          "clothing": 8,
+          "clothing_colour": 8,
+          "background": 8,
+          "expression": 8
+        }
+      }
+    },
+    "parse_errors": 0,
+    "violations": 0,
+    "rejected_guess_updates": 0,
+    "run_summary": {
+      "game_id": "762a9229",
+      "mode": "features",
+      "goal_person": "c5cfd9c46c6840e9bd503464fab926f0",
+      "stop_reason": "win_threshold_reached",
+      "elapsed_s": 248.6,
+      "score_rounds": 1,
+      "final_score": {
+        "round": 1,
+        "elapsed_s": 240.0,
+        "feature_accuracy": {
+          "hair_colour": 1.0,
+          "hairstyle": 1.0,
+          "facial_hair": 1.0,
+          "glasses": 1.0,
+          "clothing": 1.0,
+          "clothing_colour": 1.0,
+          "background": 1.0,
+          "expression": 1.0
+        },
+        "feature_chance": {
+          "hair_colour": 0.34375,
+          "hairstyle": 0.34375,
+          "facial_hair": 0.34375,
+          "glasses": 0.34375,
+          "clothing": 0.34375,
+          "clothing_colour": 0.34375,
+          "background": 0.34375,
+          "expression": 0.34375
+        },
+        "fully_correct_rate": 1.0,
+        "fully_correct_chance": 6.103515625e-05,
+        "guesses": {
+          "agent_0": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_1": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_2": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_3": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_4": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_5": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_6": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          },
+          "agent_7": {
+            "hair_colour": "brown",
+            "hairstyle": "curls",
+            "facial_hair": "beard",
+            "glasses": "none",
+            "clothing": "shirt",
+            "clothing_colour": "blue",
+            "background": "green",
+            "expression": "smile"
+          }
+        },
+        "blind_feature_chance": {
+          "hair_colour": 0.25,
+          "hairstyle": 0.25,
+          "facial_hair": 0.25,
+          "glasses": 0.25,
+          "clothing": 0.25,
+          "clothing_colour": 0.25,
+          "background": 0.25,
+          "expression": 0.25
+        },
+        "blind_fully_correct_chance": 1.52587890625e-05,
+        "person_correct": null,
+        "person_accuracy": null,
+        "person_chance": null,
+        "person_guesses": null,
+        "blind_person_chance": null,
+        "person_chance_by_agent": null,
+        "person_candidate_counts": null
+      },
+      "turns_per_agent": {
+        "agent_0": 29,
+        "agent_1": 26,
+        "agent_2": 27,
+        "agent_3": 27,
+        "agent_4": 27,
+        "agent_5": 26,
+        "agent_6": 27,
+        "agent_7": 27
+      },
+      "total_cost_usd": 5.484505
+    }
+  },
+  "events": [
+    {
+      "elapsed_s": 0.0,
+      "call_line": 0,
+      "gameplay_cost_usd": 0.0,
+      "completed_calls": 0,
+      "correct_by_agent": {
+        "agent_7": 2,
+        "agent_5": 2,
+        "agent_2": 1,
+        "agent_4": 1,
+        "agent_0": 2,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 2,
+        "glasses": 1,
+        "clothing": 2,
+        "clothing_colour": 2,
+        "background": 3,
+        "expression": 4
+      }
+    },
+    {
+      "elapsed_s": 11.6,
+      "timestamp": 1794030617.4483058,
+      "call_line": 1,
+      "agent_id": "agent_7",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 1,
+      "gameplay_cost_usd": 0.005998,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 2,
+        "agent_2": 1,
+        "agent_4": 1,
+        "agent_0": 2,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 2,
+        "glasses": 1,
+        "clothing": 2,
+        "clothing_colour": 2,
+        "background": 3,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 12.8,
+      "timestamp": 1794030618.642262,
+      "call_line": 2,
+      "agent_id": "agent_5",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 2,
+      "gameplay_cost_usd": 0.01535,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 1,
+        "agent_4": 1,
+        "agent_0": 2,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 2,
+        "glasses": 1,
+        "clothing": 2,
+        "clothing_colour": 3,
+        "background": 3,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 13.5,
+      "timestamp": 1794030619.332315,
+      "call_line": 3,
+      "agent_id": "agent_2",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 3,
+      "gameplay_cost_usd": 0.024728,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 1,
+        "agent_0": 2,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 2,
+        "clothing_colour": 3,
+        "background": 3,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 16.0,
+      "timestamp": 1794030621.890794,
+      "call_line": 4,
+      "agent_id": "agent_4",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 4,
+      "gameplay_cost_usd": 0.034686,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 2,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 2,
+        "hairstyle": 3,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 3,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 16.1,
+      "timestamp": 1794030621.9760451,
+      "call_line": 5,
+      "agent_id": "agent_0",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 5,
+      "gameplay_cost_usd": 0.043892,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 4,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 3,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 3,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 17.1,
+      "timestamp": 1794030622.975588,
+      "call_line": 6,
+      "agent_id": "agent_6",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 6,
+      "gameplay_cost_usd": 0.056142,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 3,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 4,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 19.2,
+      "timestamp": 1794030625.0006669,
+      "call_line": 7,
+      "agent_id": "agent_3",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 7,
+      "gameplay_cost_usd": 0.068102,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 1
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 3,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 4,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 20.5,
+      "timestamp": 1794030626.3515708,
+      "call_line": 8,
+      "agent_id": "agent_1",
+      "turn": 1,
+      "state_applied": true,
+      "completed_calls": 8,
+      "gameplay_cost_usd": 0.084794,
+      "correct_by_agent": {
+        "agent_7": 3,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 3,
+        "clothing_colour": 3,
+        "background": 4,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 23.7,
+      "timestamp": 1794030629.502101,
+      "call_line": 9,
+      "agent_id": "agent_7",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 9,
+      "gameplay_cost_usd": 0.0943525,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 3,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 3,
+        "glasses": 1,
+        "clothing": 4,
+        "clothing_colour": 4,
+        "background": 4,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 27.4,
+      "timestamp": 1794030633.218961,
+      "call_line": 10,
+      "agent_id": "agent_5",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 10,
+      "gameplay_cost_usd": 0.105841,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 2,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 4,
+        "glasses": 1,
+        "clothing": 5,
+        "clothing_colour": 4,
+        "background": 4,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 29.7,
+      "timestamp": 1794030635.5215201,
+      "call_line": 11,
+      "agent_id": "agent_2",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 11,
+      "gameplay_cost_usd": 0.1181795,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 5,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 4,
+        "glasses": 1,
+        "clothing": 6,
+        "clothing_colour": 4,
+        "background": 5,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 31.2,
+      "timestamp": 1794030637.066746,
+      "call_line": 12,
+      "agent_id": "agent_6",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 12,
+      "gameplay_cost_usd": 0.135473,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 2,
+        "agent_0": 3,
+        "agent_6": 8,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 4,
+        "facial_hair": 5,
+        "glasses": 2,
+        "clothing": 6,
+        "clothing_colour": 5,
+        "background": 5,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 32.9,
+      "timestamp": 1794030638.7304819,
+      "call_line": 13,
+      "agent_id": "agent_0",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 13,
+      "gameplay_cost_usd": 0.1522415,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 2,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 5,
+        "facial_hair": 5,
+        "glasses": 3,
+        "clothing": 7,
+        "clothing_colour": 6,
+        "background": 6,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 34.3,
+      "timestamp": 1794030640.1486762,
+      "call_line": 14,
+      "agent_id": "agent_4",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 14,
+      "gameplay_cost_usd": 0.1715225,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 6,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 5,
+        "facial_hair": 6,
+        "glasses": 4,
+        "clothing": 7,
+        "clothing_colour": 7,
+        "background": 7,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 34.5,
+      "timestamp": 1794030640.395357,
+      "call_line": 15,
+      "agent_id": "agent_3",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 15,
+      "gameplay_cost_usd": 0.187186,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 2
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 5,
+        "facial_hair": 7,
+        "glasses": 4,
+        "clothing": 7,
+        "clothing_colour": 7,
+        "background": 7,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 36.4,
+      "timestamp": 1794030642.288151,
+      "call_line": 16,
+      "agent_id": "agent_1",
+      "turn": 2,
+      "state_applied": true,
+      "completed_calls": 16,
+      "gameplay_cost_usd": 0.2039195,
+      "correct_by_agent": {
+        "agent_7": 5,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 5,
+        "facial_hair": 8,
+        "glasses": 5,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 41.4,
+      "timestamp": 1794030647.228937,
+      "call_line": 17,
+      "agent_id": "agent_7",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 17,
+      "gameplay_cost_usd": 0.2222405,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 5,
+        "agent_2": 4,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 3,
+        "hairstyle": 6,
+        "facial_hair": 8,
+        "glasses": 6,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 5
+      }
+    },
+    {
+      "elapsed_s": 42.9,
+      "timestamp": 1794030648.7581198,
+      "call_line": 18,
+      "agent_id": "agent_2",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 18,
+      "gameplay_cost_usd": 0.2399865,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 5,
+        "agent_2": 8,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 4,
+        "hairstyle": 7,
+        "facial_hair": 8,
+        "glasses": 7,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 6
+      }
+    },
+    {
+      "elapsed_s": 43.4,
+      "timestamp": 1794030649.200096,
+      "call_line": 19,
+      "agent_id": "agent_6",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 19,
+      "gameplay_cost_usd": 0.257485,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 5,
+        "agent_2": 8,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 4,
+        "hairstyle": 7,
+        "facial_hair": 8,
+        "glasses": 7,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 6
+      }
+    },
+    {
+      "elapsed_s": 44.0,
+      "timestamp": 1794030649.8193011,
+      "call_line": 20,
+      "agent_id": "agent_5",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 20,
+      "gameplay_cost_usd": 0.275921,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 4,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 7
+      }
+    },
+    {
+      "elapsed_s": 44.6,
+      "timestamp": 1794030650.466791,
+      "call_line": 21,
+      "agent_id": "agent_0",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 21,
+      "gameplay_cost_usd": 0.2931395,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 7,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 4,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 7
+      }
+    },
+    {
+      "elapsed_s": 45.2,
+      "timestamp": 1794030651.0034618,
+      "call_line": 22,
+      "agent_id": "agent_3",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 22,
+      "gameplay_cost_usd": 0.3103455,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 6,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 5,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 7
+      }
+    },
+    {
+      "elapsed_s": 48.1,
+      "timestamp": 1794030653.931684,
+      "call_line": 23,
+      "agent_id": "agent_4",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 23,
+      "gameplay_cost_usd": 0.328324,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 7
+      },
+      "correct_by_feature": {
+        "hair_colour": 6,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 49.4,
+      "timestamp": 1794030655.279501,
+      "call_line": 24,
+      "agent_id": "agent_1",
+      "turn": 3,
+      "state_applied": true,
+      "completed_calls": 24,
+      "gameplay_cost_usd": 0.34697,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 7,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 52.0,
+      "timestamp": 1794030657.806478,
+      "call_line": 25,
+      "agent_id": "agent_6",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 25,
+      "gameplay_cost_usd": 0.3650235,
+      "correct_by_agent": {
+        "agent_7": 7,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 7,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 53.1,
+      "timestamp": 1794030658.918178,
+      "call_line": 26,
+      "agent_id": "agent_7",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 26,
+      "gameplay_cost_usd": 0.384907,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 53.5,
+      "timestamp": 1794030659.384247,
+      "call_line": 27,
+      "agent_id": "agent_2",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 27,
+      "gameplay_cost_usd": 0.404188,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 53.9,
+      "timestamp": 1794030659.7268648,
+      "call_line": 28,
+      "agent_id": "agent_0",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 28,
+      "gameplay_cost_usd": 0.4219615,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 54.7,
+      "timestamp": 1794030660.578528,
+      "call_line": 29,
+      "agent_id": "agent_5",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 29,
+      "gameplay_cost_usd": 0.4418625,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 55.2,
+      "timestamp": 1794030661.0170271,
+      "call_line": 30,
+      "agent_id": "agent_3",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 30,
+      "gameplay_cost_usd": 0.460641,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 57.5,
+      "timestamp": 1794030663.3664708,
+      "call_line": 31,
+      "agent_id": "agent_4",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 31,
+      "gameplay_cost_usd": 0.480497,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 59.9,
+      "timestamp": 1794030665.709034,
+      "call_line": 32,
+      "agent_id": "agent_1",
+      "turn": 4,
+      "state_applied": true,
+      "completed_calls": 32,
+      "gameplay_cost_usd": 0.500873,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 60.5,
+      "timestamp": 1794030666.348023,
+      "call_line": 33,
+      "agent_id": "agent_6",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 33,
+      "gameplay_cost_usd": 0.5211215,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 62.1,
+      "timestamp": 1794030667.9219708,
+      "call_line": 34,
+      "agent_id": "agent_7",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 34,
+      "gameplay_cost_usd": 0.542665,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 62.1,
+      "timestamp": 1794030667.9500952,
+      "call_line": 35,
+      "agent_id": "agent_0",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 35,
+      "gameplay_cost_usd": 0.5626835,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 63.2,
+      "timestamp": 1794030669.0758882,
+      "call_line": 36,
+      "agent_id": "agent_2",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 36,
+      "gameplay_cost_usd": 0.5843145,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 63.5,
+      "timestamp": 1794030669.343434,
+      "call_line": 37,
+      "agent_id": "agent_3",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 37,
+      "gameplay_cost_usd": 0.605003,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 65.4,
+      "timestamp": 1794030671.286987,
+      "call_line": 38,
+      "agent_id": "agent_4",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 38,
+      "gameplay_cost_usd": 0.626784,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 66.1,
+      "timestamp": 1794030671.967339,
+      "call_line": 39,
+      "agent_id": "agent_5",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 39,
+      "gameplay_cost_usd": 0.649345,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 67.7,
+      "timestamp": 1794030673.537062,
+      "call_line": 40,
+      "agent_id": "agent_1",
+      "turn": 5,
+      "state_applied": true,
+      "completed_calls": 40,
+      "gameplay_cost_usd": 0.671651,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 68.3,
+      "timestamp": 1794030674.176119,
+      "call_line": 41,
+      "agent_id": "agent_6",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 41,
+      "gameplay_cost_usd": 0.6945945,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 69.3,
+      "timestamp": 1794030675.193707,
+      "call_line": 42,
+      "agent_id": "agent_0",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 42,
+      "gameplay_cost_usd": 0.717128,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 69.8,
+      "timestamp": 1794030675.670306,
+      "call_line": 43,
+      "agent_id": "agent_7",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 43,
+      "gameplay_cost_usd": 0.7403715,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 71.0,
+      "timestamp": 1794030676.861973,
+      "call_line": 44,
+      "agent_id": "agent_2",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 44,
+      "gameplay_cost_usd": 0.7642075,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 71.4,
+      "timestamp": 1794030677.208857,
+      "call_line": 45,
+      "agent_id": "agent_3",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 45,
+      "gameplay_cost_usd": 0.7881635,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 73.9,
+      "timestamp": 1794030679.713844,
+      "call_line": 46,
+      "agent_id": "agent_4",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 46,
+      "gameplay_cost_usd": 0.812782,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 74.3,
+      "timestamp": 1794030680.103026,
+      "call_line": 47,
+      "agent_id": "agent_5",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 47,
+      "gameplay_cost_usd": 0.8385905,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 75.6,
+      "timestamp": 1794030681.398506,
+      "call_line": 48,
+      "agent_id": "agent_1",
+      "turn": 6,
+      "state_applied": true,
+      "completed_calls": 48,
+      "gameplay_cost_usd": 0.863724,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 76.7,
+      "timestamp": 1794030682.5210829,
+      "call_line": 49,
+      "agent_id": "agent_6",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 49,
+      "gameplay_cost_usd": 0.8891425,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 76.7,
+      "timestamp": 1794030682.55943,
+      "call_line": 50,
+      "agent_id": "agent_0",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 50,
+      "gameplay_cost_usd": 0.9145135,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 77.4,
+      "timestamp": 1794030683.234422,
+      "call_line": 51,
+      "agent_id": "agent_7",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 51,
+      "gameplay_cost_usd": 0.9405945,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 78.9,
+      "timestamp": 1794030684.778847,
+      "call_line": 52,
+      "agent_id": "agent_2",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 52,
+      "gameplay_cost_usd": 0.967268,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 79.4,
+      "timestamp": 1794030685.265901,
+      "call_line": 53,
+      "agent_id": "agent_3",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 53,
+      "gameplay_cost_usd": 0.993649,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 81.9,
+      "timestamp": 1794030687.718632,
+      "call_line": 54,
+      "agent_id": "agent_4",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 54,
+      "gameplay_cost_usd": 1.021105,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 83.6,
+      "timestamp": 1794030689.398289,
+      "call_line": 55,
+      "agent_id": "agent_1",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 55,
+      "gameplay_cost_usd": 1.0490735,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 83.6,
+      "timestamp": 1794030689.475295,
+      "call_line": 56,
+      "agent_id": "agent_5",
+      "turn": 7,
+      "state_applied": true,
+      "completed_calls": 56,
+      "gameplay_cost_usd": 1.0777195,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 84.3,
+      "timestamp": 1794030690.1333592,
+      "call_line": 57,
+      "agent_id": "agent_0",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 57,
+      "gameplay_cost_usd": 1.105053,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 84.6,
+      "timestamp": 1794030690.4787872,
+      "call_line": 58,
+      "agent_id": "agent_6",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 58,
+      "gameplay_cost_usd": 1.133309,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 85.1,
+      "timestamp": 1794030690.9404852,
+      "call_line": 59,
+      "agent_id": "agent_7",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 59,
+      "gameplay_cost_usd": 1.161715,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 86.7,
+      "timestamp": 1794030692.592163,
+      "call_line": 60,
+      "agent_id": "agent_2",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 60,
+      "gameplay_cost_usd": 1.191226,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 87.3,
+      "timestamp": 1794030693.140206,
+      "call_line": 61,
+      "agent_id": "agent_3",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 61,
+      "gameplay_cost_usd": 1.2204445,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 90.4,
+      "timestamp": 1794030696.243047,
+      "call_line": 62,
+      "agent_id": "agent_4",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 62,
+      "gameplay_cost_usd": 1.2500255,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 91.3,
+      "timestamp": 1794030697.126823,
+      "call_line": 63,
+      "agent_id": "agent_1",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 63,
+      "gameplay_cost_usd": 1.279319,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 91.9,
+      "timestamp": 1794030697.7810402,
+      "call_line": 64,
+      "agent_id": "agent_0",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 64,
+      "gameplay_cost_usd": 1.3079775,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 93.0,
+      "timestamp": 1794030698.8250282,
+      "call_line": 65,
+      "agent_id": "agent_6",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 65,
+      "gameplay_cost_usd": 1.3375585,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 93.0,
+      "timestamp": 1794030698.893575,
+      "call_line": 66,
+      "agent_id": "agent_7",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 66,
+      "gameplay_cost_usd": 1.366927,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 93.2,
+      "timestamp": 1794030699.089232,
+      "call_line": 67,
+      "agent_id": "agent_5",
+      "turn": 8,
+      "state_applied": true,
+      "completed_calls": 67,
+      "gameplay_cost_usd": 1.3972105,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 95.0,
+      "timestamp": 1794030700.8772008,
+      "call_line": 68,
+      "agent_id": "agent_2",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 68,
+      "gameplay_cost_usd": 1.4263615,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 96.0,
+      "timestamp": 1794030701.89433,
+      "call_line": 69,
+      "agent_id": "agent_3",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 69,
+      "gameplay_cost_usd": 1.45493,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 98.4,
+      "timestamp": 1794030704.2403042,
+      "call_line": 70,
+      "agent_id": "agent_4",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 70,
+      "gameplay_cost_usd": 1.481751,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 98.9,
+      "timestamp": 1794030704.76734,
+      "call_line": 71,
+      "agent_id": "agent_1",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 71,
+      "gameplay_cost_usd": 1.5085345,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 99.0,
+      "timestamp": 1794030704.886498,
+      "call_line": 72,
+      "agent_id": "agent_0",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 72,
+      "gameplay_cost_usd": 1.534203,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 100.8,
+      "timestamp": 1794030706.6676412,
+      "call_line": 73,
+      "agent_id": "agent_7",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 73,
+      "gameplay_cost_usd": 1.5610615,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 101.3,
+      "timestamp": 1794030707.106721,
+      "call_line": 74,
+      "agent_id": "agent_5",
+      "turn": 9,
+      "state_applied": true,
+      "completed_calls": 74,
+      "gameplay_cost_usd": 1.588565,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 101.3,
+      "timestamp": 1794030707.15255,
+      "call_line": 75,
+      "agent_id": "agent_6",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 75,
+      "gameplay_cost_usd": 1.615636,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 102.8,
+      "timestamp": 1794030708.66341,
+      "call_line": 76,
+      "agent_id": "agent_2",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 76,
+      "gameplay_cost_usd": 1.6425195,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 103.9,
+      "timestamp": 1794030709.722913,
+      "call_line": 77,
+      "agent_id": "agent_3",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 77,
+      "gameplay_cost_usd": 1.6679755,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 106.2,
+      "timestamp": 1794030712.0241878,
+      "call_line": 78,
+      "agent_id": "agent_4",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 78,
+      "gameplay_cost_usd": 1.694009,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 106.2,
+      "timestamp": 1794030712.044938,
+      "call_line": 79,
+      "agent_id": "agent_0",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 79,
+      "gameplay_cost_usd": 1.71887,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 108.6,
+      "timestamp": 1794030714.430733,
+      "call_line": 80,
+      "agent_id": "agent_7",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 80,
+      "gameplay_cost_usd": 1.745041,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 109.1,
+      "timestamp": 1794030714.950859,
+      "call_line": 81,
+      "agent_id": "agent_5",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 81,
+      "gameplay_cost_usd": 1.7717395,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 109.4,
+      "timestamp": 1794030715.206057,
+      "call_line": 82,
+      "agent_id": "agent_6",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 82,
+      "gameplay_cost_usd": 1.798073,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 110.0,
+      "timestamp": 1794030715.86208,
+      "call_line": 83,
+      "agent_id": "agent_1",
+      "turn": 10,
+      "state_applied": true,
+      "completed_calls": 83,
+      "gameplay_cost_usd": 1.824509,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 110.8,
+      "timestamp": 1794030716.622006,
+      "call_line": 84,
+      "agent_id": "agent_2",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 84,
+      "gameplay_cost_usd": 1.850735,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 111.6,
+      "timestamp": 1794030717.478466,
+      "call_line": 85,
+      "agent_id": "agent_3",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 85,
+      "gameplay_cost_usd": 1.876481,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 113.3,
+      "timestamp": 1794030719.1589131,
+      "call_line": 86,
+      "agent_id": "agent_0",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 86,
+      "gameplay_cost_usd": 1.901417,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 113.9,
+      "timestamp": 1794030719.791445,
+      "call_line": 87,
+      "agent_id": "agent_4",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 87,
+      "gameplay_cost_usd": 1.9274505,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 116.3,
+      "timestamp": 1794030722.1559029,
+      "call_line": 88,
+      "agent_id": "agent_7",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 88,
+      "gameplay_cost_usd": 1.9535715,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 116.8,
+      "timestamp": 1794030722.662209,
+      "call_line": 89,
+      "agent_id": "agent_5",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 89,
+      "gameplay_cost_usd": 1.980195,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 117.4,
+      "timestamp": 1794030723.241131,
+      "call_line": 90,
+      "agent_id": "agent_6",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 90,
+      "gameplay_cost_usd": 2.0064535,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 117.9,
+      "timestamp": 1794030723.712706,
+      "call_line": 91,
+      "agent_id": "agent_1",
+      "turn": 11,
+      "state_applied": true,
+      "completed_calls": 91,
+      "gameplay_cost_usd": 2.0324245,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 118.6,
+      "timestamp": 1794030724.4890099,
+      "call_line": 92,
+      "agent_id": "agent_2",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 92,
+      "gameplay_cost_usd": 2.0585755,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 119.4,
+      "timestamp": 1794030725.2655182,
+      "call_line": 93,
+      "agent_id": "agent_3",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 93,
+      "gameplay_cost_usd": 2.0842715,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 120.5,
+      "timestamp": 1794030726.3623428,
+      "call_line": 94,
+      "agent_id": "agent_0",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 94,
+      "gameplay_cost_usd": 2.1092575,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 121.7,
+      "timestamp": 1794030727.539741,
+      "call_line": 95,
+      "agent_id": "agent_4",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 95,
+      "gameplay_cost_usd": 2.135366,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 124.1,
+      "timestamp": 1794030729.906055,
+      "call_line": 96,
+      "agent_id": "agent_7",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 96,
+      "gameplay_cost_usd": 2.161562,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 124.7,
+      "timestamp": 1794030730.532512,
+      "call_line": 97,
+      "agent_id": "agent_5",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 97,
+      "gameplay_cost_usd": 2.1883855,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 125.5,
+      "timestamp": 1794030731.325258,
+      "call_line": 98,
+      "agent_id": "agent_6",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 98,
+      "gameplay_cost_usd": 2.214844,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 125.5,
+      "timestamp": 1794030731.3580039,
+      "call_line": 99,
+      "agent_id": "agent_1",
+      "turn": 12,
+      "state_applied": true,
+      "completed_calls": 99,
+      "gameplay_cost_usd": 2.241015,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 126.7,
+      "timestamp": 1794030732.586161,
+      "call_line": 100,
+      "agent_id": "agent_2",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 100,
+      "gameplay_cost_usd": 2.267366,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 127.2,
+      "timestamp": 1794030733.021497,
+      "call_line": 101,
+      "agent_id": "agent_3",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 101,
+      "gameplay_cost_usd": 2.293212,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 127.6,
+      "timestamp": 1794030733.4029062,
+      "call_line": 102,
+      "agent_id": "agent_0",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 102,
+      "gameplay_cost_usd": 2.318208,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 129.3,
+      "timestamp": 1794030735.123469,
+      "call_line": 103,
+      "agent_id": "agent_4",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 103,
+      "gameplay_cost_usd": 2.3442915,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 131.8,
+      "timestamp": 1794030737.633396,
+      "call_line": 104,
+      "agent_id": "agent_7",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 104,
+      "gameplay_cost_usd": 2.3704875,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 133.4,
+      "timestamp": 1794030739.20816,
+      "call_line": 105,
+      "agent_id": "agent_1",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 105,
+      "gameplay_cost_usd": 2.3967285,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 133.9,
+      "timestamp": 1794030739.720813,
+      "call_line": 106,
+      "agent_id": "agent_5",
+      "turn": 13,
+      "state_applied": true,
+      "completed_calls": 106,
+      "gameplay_cost_usd": 2.423552,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 134.0,
+      "timestamp": 1794030739.797596,
+      "call_line": 107,
+      "agent_id": "agent_6",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 107,
+      "gameplay_cost_usd": 2.4500105,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 134.7,
+      "timestamp": 1794030740.519125,
+      "call_line": 108,
+      "agent_id": "agent_2",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 108,
+      "gameplay_cost_usd": 2.4763615,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 134.9,
+      "timestamp": 1794030740.7076218,
+      "call_line": 109,
+      "agent_id": "agent_0",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 109,
+      "gameplay_cost_usd": 2.50136,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 135.1,
+      "timestamp": 1794030740.93043,
+      "call_line": 110,
+      "agent_id": "agent_3",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 110,
+      "gameplay_cost_usd": 2.527206,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 137.1,
+      "timestamp": 1794030742.987293,
+      "call_line": 111,
+      "agent_id": "agent_4",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 111,
+      "gameplay_cost_usd": 2.5532895,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 139.6,
+      "timestamp": 1794030745.492382,
+      "call_line": 112,
+      "agent_id": "agent_7",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 112,
+      "gameplay_cost_usd": 2.5794855,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 141.2,
+      "timestamp": 1794030747.058199,
+      "call_line": 113,
+      "agent_id": "agent_1",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 113,
+      "gameplay_cost_usd": 2.605744,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 141.7,
+      "timestamp": 1794030747.581204,
+      "call_line": 114,
+      "agent_id": "agent_5",
+      "turn": 14,
+      "state_applied": true,
+      "completed_calls": 114,
+      "gameplay_cost_usd": 2.6325675,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 142.7,
+      "timestamp": 1794030748.50388,
+      "call_line": 115,
+      "agent_id": "agent_2",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 115,
+      "gameplay_cost_usd": 2.6589685,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 142.8,
+      "timestamp": 1794030748.650522,
+      "call_line": 116,
+      "agent_id": "agent_0",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 116,
+      "gameplay_cost_usd": 2.683967,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 142.9,
+      "timestamp": 1794030748.776672,
+      "call_line": 117,
+      "agent_id": "agent_3",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 117,
+      "gameplay_cost_usd": 2.709813,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 143.4,
+      "timestamp": 1794030749.2241988,
+      "call_line": 118,
+      "agent_id": "agent_6",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 118,
+      "gameplay_cost_usd": 2.7362715,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 146.6,
+      "timestamp": 1794030752.445194,
+      "call_line": 119,
+      "agent_id": "agent_4",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 119,
+      "gameplay_cost_usd": 2.762355,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 147.4,
+      "timestamp": 1794030753.238501,
+      "call_line": 120,
+      "agent_id": "agent_7",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 120,
+      "gameplay_cost_usd": 2.788551,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 149.0,
+      "timestamp": 1794030754.811477,
+      "call_line": 121,
+      "agent_id": "agent_1",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 121,
+      "gameplay_cost_usd": 2.8147595,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 149.6,
+      "timestamp": 1794030755.395363,
+      "call_line": 122,
+      "agent_id": "agent_5",
+      "turn": 15,
+      "state_applied": true,
+      "completed_calls": 122,
+      "gameplay_cost_usd": 2.841533,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 150.1,
+      "timestamp": 1794030755.969455,
+      "call_line": 123,
+      "agent_id": "agent_0",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 123,
+      "gameplay_cost_usd": 2.8665315,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 150.5,
+      "timestamp": 1794030756.367929,
+      "call_line": 124,
+      "agent_id": "agent_2",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 124,
+      "gameplay_cost_usd": 2.8929325,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 150.7,
+      "timestamp": 1794030756.576685,
+      "call_line": 125,
+      "agent_id": "agent_3",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 125,
+      "gameplay_cost_usd": 2.9187785,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 151.6,
+      "timestamp": 1794030757.4711812,
+      "call_line": 126,
+      "agent_id": "agent_6",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 126,
+      "gameplay_cost_usd": 2.945287,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 154.1,
+      "timestamp": 1794030759.911371,
+      "call_line": 127,
+      "agent_id": "agent_4",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 127,
+      "gameplay_cost_usd": 2.9712955,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 155.1,
+      "timestamp": 1794030760.9062479,
+      "call_line": 128,
+      "agent_id": "agent_7",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 128,
+      "gameplay_cost_usd": 2.9974915,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 156.9,
+      "timestamp": 1794030762.7493382,
+      "call_line": 129,
+      "agent_id": "agent_1",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 129,
+      "gameplay_cost_usd": 3.0237,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 157.2,
+      "timestamp": 1794030763.088804,
+      "call_line": 130,
+      "agent_id": "agent_5",
+      "turn": 16,
+      "state_applied": true,
+      "completed_calls": 130,
+      "gameplay_cost_usd": 3.050461,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 157.3,
+      "timestamp": 1794030763.19218,
+      "call_line": 131,
+      "agent_id": "agent_0",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 131,
+      "gameplay_cost_usd": 3.0754595,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 158.4,
+      "timestamp": 1794030764.2325099,
+      "call_line": 132,
+      "agent_id": "agent_2",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 132,
+      "gameplay_cost_usd": 3.1018605,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 158.8,
+      "timestamp": 1794030764.628567,
+      "call_line": 133,
+      "agent_id": "agent_3",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 133,
+      "gameplay_cost_usd": 3.1277065,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 159.5,
+      "timestamp": 1794030765.32782,
+      "call_line": 134,
+      "agent_id": "agent_6",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 134,
+      "gameplay_cost_usd": 3.154215,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 161.8,
+      "timestamp": 1794030767.636626,
+      "call_line": 135,
+      "agent_id": "agent_4",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 135,
+      "gameplay_cost_usd": 3.1802235,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 162.8,
+      "timestamp": 1794030768.6042821,
+      "call_line": 136,
+      "agent_id": "agent_7",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 136,
+      "gameplay_cost_usd": 3.2064195,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 164.7,
+      "timestamp": 1794030770.568983,
+      "call_line": 137,
+      "agent_id": "agent_0",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 137,
+      "gameplay_cost_usd": 3.231368,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 165.2,
+      "timestamp": 1794030771.072115,
+      "call_line": 138,
+      "agent_id": "agent_5",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 138,
+      "gameplay_cost_usd": 3.258129,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 166.0,
+      "timestamp": 1794030771.8579452,
+      "call_line": 139,
+      "agent_id": "agent_2",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 139,
+      "gameplay_cost_usd": 3.28453,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 166.3,
+      "timestamp": 1794030772.100093,
+      "call_line": 140,
+      "agent_id": "agent_1",
+      "turn": 17,
+      "state_applied": true,
+      "completed_calls": 140,
+      "gameplay_cost_usd": 3.3107885,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 167.0,
+      "timestamp": 1794030772.814232,
+      "call_line": 141,
+      "agent_id": "agent_3",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 141,
+      "gameplay_cost_usd": 3.3366345,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 167.6,
+      "timestamp": 1794030773.47567,
+      "call_line": 142,
+      "agent_id": "agent_6",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 142,
+      "gameplay_cost_usd": 3.363143,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 169.7,
+      "timestamp": 1794030775.511035,
+      "call_line": 143,
+      "agent_id": "agent_4",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 143,
+      "gameplay_cost_usd": 3.3892265,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 171.7,
+      "timestamp": 1794030777.5813959,
+      "call_line": 144,
+      "agent_id": "agent_0",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 144,
+      "gameplay_cost_usd": 3.414175,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 172.5,
+      "timestamp": 1794030778.388791,
+      "call_line": 145,
+      "agent_id": "agent_7",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 145,
+      "gameplay_cost_usd": 3.440371,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 173.8,
+      "timestamp": 1794030779.6059031,
+      "call_line": 146,
+      "agent_id": "agent_2",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 146,
+      "gameplay_cost_usd": 3.466722,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 173.9,
+      "timestamp": 1794030779.740448,
+      "call_line": 147,
+      "agent_id": "agent_5",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 147,
+      "gameplay_cost_usd": 3.493483,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 174.1,
+      "timestamp": 1794030779.963347,
+      "call_line": 148,
+      "agent_id": "agent_1",
+      "turn": 18,
+      "state_applied": true,
+      "completed_calls": 148,
+      "gameplay_cost_usd": 3.5197415,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 174.8,
+      "timestamp": 1794030780.603542,
+      "call_line": 149,
+      "agent_id": "agent_3",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 149,
+      "gameplay_cost_usd": 3.5455375,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 175.5,
+      "timestamp": 1794030781.379788,
+      "call_line": 150,
+      "agent_id": "agent_6",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 150,
+      "gameplay_cost_usd": 3.572046,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 178.5,
+      "timestamp": 1794030784.32223,
+      "call_line": 151,
+      "agent_id": "agent_4",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 151,
+      "gameplay_cost_usd": 3.5981295,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 178.7,
+      "timestamp": 1794030784.56832,
+      "call_line": 152,
+      "agent_id": "agent_0",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 152,
+      "gameplay_cost_usd": 3.623028,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 180.3,
+      "timestamp": 1794030786.101829,
+      "call_line": 153,
+      "agent_id": "agent_7",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 153,
+      "gameplay_cost_usd": 3.649224,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 181.6,
+      "timestamp": 1794030787.406734,
+      "call_line": 154,
+      "agent_id": "agent_2",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 154,
+      "gameplay_cost_usd": 3.675575,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 182.0,
+      "timestamp": 1794030787.853943,
+      "call_line": 155,
+      "agent_id": "agent_1",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 155,
+      "gameplay_cost_usd": 3.7018335,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 182.1,
+      "timestamp": 1794030787.983325,
+      "call_line": 156,
+      "agent_id": "agent_5",
+      "turn": 19,
+      "state_applied": true,
+      "completed_calls": 156,
+      "gameplay_cost_usd": 3.7285945,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 182.8,
+      "timestamp": 1794030788.619731,
+      "call_line": 157,
+      "agent_id": "agent_3",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 157,
+      "gameplay_cost_usd": 3.7543905,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 183.9,
+      "timestamp": 1794030789.705753,
+      "call_line": 158,
+      "agent_id": "agent_6",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 158,
+      "gameplay_cost_usd": 3.780899,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 185.9,
+      "timestamp": 1794030791.794123,
+      "call_line": 159,
+      "agent_id": "agent_0",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 159,
+      "gameplay_cost_usd": 3.8058225,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 186.2,
+      "timestamp": 1794030792.018508,
+      "call_line": 160,
+      "agent_id": "agent_4",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 160,
+      "gameplay_cost_usd": 3.831831,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 188.1,
+      "timestamp": 1794030793.931147,
+      "call_line": 161,
+      "agent_id": "agent_7",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 161,
+      "gameplay_cost_usd": 3.858027,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 189.3,
+      "timestamp": 1794030795.1697888,
+      "call_line": 162,
+      "agent_id": "agent_2",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 162,
+      "gameplay_cost_usd": 3.884378,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 189.9,
+      "timestamp": 1794030795.7832808,
+      "call_line": 163,
+      "agent_id": "agent_5",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 163,
+      "gameplay_cost_usd": 3.911139,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 190.0,
+      "timestamp": 1794030795.824545,
+      "call_line": 164,
+      "agent_id": "agent_1",
+      "turn": 20,
+      "state_applied": true,
+      "completed_calls": 164,
+      "gameplay_cost_usd": 3.9373975,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 190.5,
+      "timestamp": 1794030796.355139,
+      "call_line": 165,
+      "agent_id": "agent_3",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 165,
+      "gameplay_cost_usd": 3.9631935,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 192.7,
+      "timestamp": 1794030798.541908,
+      "call_line": 166,
+      "agent_id": "agent_6",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 166,
+      "gameplay_cost_usd": 3.989702,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 193.1,
+      "timestamp": 1794030798.9702442,
+      "call_line": 167,
+      "agent_id": "agent_0",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 167,
+      "gameplay_cost_usd": 4.0146255,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 193.8,
+      "timestamp": 1794030799.6380491,
+      "call_line": 168,
+      "agent_id": "agent_4",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 168,
+      "gameplay_cost_usd": 4.040634,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 195.7,
+      "timestamp": 1794030801.527616,
+      "call_line": 169,
+      "agent_id": "agent_7",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 169,
+      "gameplay_cost_usd": 4.06683,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 197.3,
+      "timestamp": 1794030803.121898,
+      "call_line": 170,
+      "agent_id": "agent_2",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 170,
+      "gameplay_cost_usd": 4.093181,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 197.8,
+      "timestamp": 1794030803.649798,
+      "call_line": 171,
+      "agent_id": "agent_1",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 171,
+      "gameplay_cost_usd": 4.1194395,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 197.9,
+      "timestamp": 1794030803.715513,
+      "call_line": 172,
+      "agent_id": "agent_5",
+      "turn": 21,
+      "state_applied": true,
+      "completed_calls": 172,
+      "gameplay_cost_usd": 4.1462005,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 198.6,
+      "timestamp": 1794030804.400021,
+      "call_line": 173,
+      "agent_id": "agent_3",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 173,
+      "gameplay_cost_usd": 4.1719965,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 200.2,
+      "timestamp": 1794030806.025855,
+      "call_line": 174,
+      "agent_id": "agent_0",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 174,
+      "gameplay_cost_usd": 4.19702,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 200.9,
+      "timestamp": 1794030806.706078,
+      "call_line": 175,
+      "agent_id": "agent_6",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 175,
+      "gameplay_cost_usd": 4.2235535,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 201.8,
+      "timestamp": 1794030807.6096482,
+      "call_line": 176,
+      "agent_id": "agent_4",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 176,
+      "gameplay_cost_usd": 4.249537,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 204.1,
+      "timestamp": 1794030809.906689,
+      "call_line": 177,
+      "agent_id": "agent_7",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 177,
+      "gameplay_cost_usd": 4.275733,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 204.9,
+      "timestamp": 1794030810.780386,
+      "call_line": 178,
+      "agent_id": "agent_2",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 178,
+      "gameplay_cost_usd": 4.302084,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 205.6,
+      "timestamp": 1794030811.416987,
+      "call_line": 179,
+      "agent_id": "agent_1",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 179,
+      "gameplay_cost_usd": 4.3283425,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 205.8,
+      "timestamp": 1794030811.649533,
+      "call_line": 180,
+      "agent_id": "agent_5",
+      "turn": 22,
+      "state_applied": true,
+      "completed_calls": 180,
+      "gameplay_cost_usd": 4.3551035,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 206.3,
+      "timestamp": 1794030812.180711,
+      "call_line": 181,
+      "agent_id": "agent_3",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 181,
+      "gameplay_cost_usd": 4.3808995,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 207.2,
+      "timestamp": 1794030813.011636,
+      "call_line": 182,
+      "agent_id": "agent_0",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 182,
+      "gameplay_cost_usd": 4.405923,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 208.9,
+      "timestamp": 1794030814.74087,
+      "call_line": 183,
+      "agent_id": "agent_6",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 183,
+      "gameplay_cost_usd": 4.4324565,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 209.5,
+      "timestamp": 1794030815.294676,
+      "call_line": 184,
+      "agent_id": "agent_4",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 184,
+      "gameplay_cost_usd": 4.45844,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 211.8,
+      "timestamp": 1794030817.59787,
+      "call_line": 185,
+      "agent_id": "agent_7",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 185,
+      "gameplay_cost_usd": 4.484736,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 212.7,
+      "timestamp": 1794030818.495949,
+      "call_line": 186,
+      "agent_id": "agent_2",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 186,
+      "gameplay_cost_usd": 4.511087,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 213.4,
+      "timestamp": 1794030819.2866051,
+      "call_line": 187,
+      "agent_id": "agent_1",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 187,
+      "gameplay_cost_usd": 4.5373455,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 213.6,
+      "timestamp": 1794030819.455105,
+      "call_line": 188,
+      "agent_id": "agent_5",
+      "turn": 23,
+      "state_applied": true,
+      "completed_calls": 188,
+      "gameplay_cost_usd": 4.5641065,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 214.1,
+      "timestamp": 1794030819.929194,
+      "call_line": 189,
+      "agent_id": "agent_0",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 189,
+      "gameplay_cost_usd": 4.589105,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 215.0,
+      "timestamp": 1794030820.854708,
+      "call_line": 190,
+      "agent_id": "agent_3",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 190,
+      "gameplay_cost_usd": 4.614901,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 216.9,
+      "timestamp": 1794030822.772809,
+      "call_line": 191,
+      "agent_id": "agent_6",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 191,
+      "gameplay_cost_usd": 4.6414345,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 217.2,
+      "timestamp": 1794030823.071084,
+      "call_line": 192,
+      "agent_id": "agent_4",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 192,
+      "gameplay_cost_usd": 4.667543,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 219.4,
+      "timestamp": 1794030825.278065,
+      "call_line": 193,
+      "agent_id": "agent_7",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 193,
+      "gameplay_cost_usd": 4.693739,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 220.6,
+      "timestamp": 1794030826.4272661,
+      "call_line": 194,
+      "agent_id": "agent_2",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 194,
+      "gameplay_cost_usd": 4.72009,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 221.3,
+      "timestamp": 1794030827.1442502,
+      "call_line": 195,
+      "agent_id": "agent_0",
+      "turn": 27,
+      "state_applied": true,
+      "completed_calls": 195,
+      "gameplay_cost_usd": 4.7450385,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 221.3,
+      "timestamp": 1794030827.1500711,
+      "call_line": 196,
+      "agent_id": "agent_1",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 196,
+      "gameplay_cost_usd": 4.771297,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 221.6,
+      "timestamp": 1794030827.452703,
+      "call_line": 197,
+      "agent_id": "agent_5",
+      "turn": 24,
+      "state_applied": true,
+      "completed_calls": 197,
+      "gameplay_cost_usd": 4.798058,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 222.9,
+      "timestamp": 1794030828.717563,
+      "call_line": 198,
+      "agent_id": "agent_3",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 198,
+      "gameplay_cost_usd": 4.823904,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 225.0,
+      "timestamp": 1794030830.880061,
+      "call_line": 199,
+      "agent_id": "agent_4",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 199,
+      "gameplay_cost_usd": 4.8499625,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 225.9,
+      "timestamp": 1794030831.752241,
+      "call_line": 200,
+      "agent_id": "agent_6",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 200,
+      "gameplay_cost_usd": 4.876446,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 227.6,
+      "timestamp": 1794030833.435499,
+      "call_line": 201,
+      "agent_id": "agent_7",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 201,
+      "gameplay_cost_usd": 4.902642,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 228.4,
+      "timestamp": 1794030834.238977,
+      "call_line": 202,
+      "agent_id": "agent_0",
+      "turn": 28,
+      "state_applied": true,
+      "completed_calls": 202,
+      "gameplay_cost_usd": 4.9275905,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 228.4,
+      "timestamp": 1794030834.283318,
+      "call_line": 203,
+      "agent_id": "agent_2",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 203,
+      "gameplay_cost_usd": 4.9539415,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 229.0,
+      "timestamp": 1794030834.865987,
+      "call_line": 204,
+      "agent_id": "agent_1",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 204,
+      "gameplay_cost_usd": 4.9802,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 229.6,
+      "timestamp": 1794030835.4043489,
+      "call_line": 205,
+      "agent_id": "agent_5",
+      "turn": 25,
+      "state_applied": true,
+      "completed_calls": 205,
+      "gameplay_cost_usd": 5.006961,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 230.7,
+      "timestamp": 1794030836.580589,
+      "call_line": 206,
+      "agent_id": "agent_3",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 206,
+      "gameplay_cost_usd": 5.032807,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 232.7,
+      "timestamp": 1794030838.551341,
+      "call_line": 207,
+      "agent_id": "agent_4",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 207,
+      "gameplay_cost_usd": 5.0588655,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 234.2,
+      "timestamp": 1794030840.057757,
+      "call_line": 208,
+      "agent_id": "agent_6",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 208,
+      "gameplay_cost_usd": 5.085274,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 235.5,
+      "timestamp": 1794030841.347339,
+      "call_line": 209,
+      "agent_id": "agent_0",
+      "turn": 29,
+      "state_applied": true,
+      "completed_calls": 209,
+      "gameplay_cost_usd": 5.1102225,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 236.0,
+      "timestamp": 1794030841.826539,
+      "call_line": 210,
+      "agent_id": "agent_7",
+      "turn": 27,
+      "state_applied": true,
+      "completed_calls": 210,
+      "gameplay_cost_usd": 5.1364185,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 236.2,
+      "timestamp": 1794030842.00135,
+      "call_line": 211,
+      "agent_id": "agent_2",
+      "turn": 27,
+      "state_applied": true,
+      "completed_calls": 211,
+      "gameplay_cost_usd": 5.1627695,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 236.9,
+      "timestamp": 1794030842.7341921,
+      "call_line": 212,
+      "agent_id": "agent_1",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 212,
+      "gameplay_cost_usd": 5.189028,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 238.1,
+      "timestamp": 1794030843.939648,
+      "call_line": 213,
+      "agent_id": "agent_5",
+      "turn": 26,
+      "state_applied": true,
+      "completed_calls": 213,
+      "gameplay_cost_usd": 5.215789,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 238.4,
+      "timestamp": 1794030844.25788,
+      "call_line": 214,
+      "agent_id": "agent_3",
+      "turn": 27,
+      "state_applied": true,
+      "completed_calls": 214,
+      "gameplay_cost_usd": 5.241585,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 240.3,
+      "timestamp": 1794030846.106708,
+      "call_line": 215,
+      "agent_id": "agent_4",
+      "turn": 27,
+      "state_applied": false,
+      "completed_calls": 215,
+      "gameplay_cost_usd": 5.2676435,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    },
+    {
+      "elapsed_s": 242.5,
+      "timestamp": 1794030848.29669,
+      "call_line": 216,
+      "agent_id": "agent_6",
+      "turn": 27,
+      "state_applied": false,
+      "completed_calls": 216,
+      "gameplay_cost_usd": 5.294052,
+      "correct_by_agent": {
+        "agent_7": 8,
+        "agent_5": 8,
+        "agent_2": 8,
+        "agent_4": 8,
+        "agent_0": 8,
+        "agent_6": 8,
+        "agent_3": 8,
+        "agent_1": 8
+      },
+      "correct_by_feature": {
+        "hair_colour": 8,
+        "hairstyle": 8,
+        "facial_hair": 8,
+        "glasses": 8,
+        "clothing": 8,
+        "clothing_colour": 8,
+        "background": 8,
+        "expression": 8
+      }
+    }
+  ]
+}

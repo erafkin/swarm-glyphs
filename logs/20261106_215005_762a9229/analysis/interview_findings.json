@@ -1,0 +1,177 @@
+{
+  "run": "762a9229",
+  "scope": "Analysis of logged output scratchpads, submitted guesses, transmitted messages, and final interviews; no hidden model reasoning inspected.",
+  "global_findings": {
+    "all_initial_turn_prompts_empty": true,
+    "independent_octal_proposers": [
+      "agent_2",
+      "agent_4",
+      "agent_5"
+    ],
+    "gameplay_prompts_with_score_feedback": 0,
+    "interpretation": "Observed text encodings and guess changes corroborate cooperative decoding. It is not evidence of a newly learned semantic glyph language; all schemes reused familiar text/alphabet encodings, and the dominant scheme used IDs as numeric digits. Final interviews omit most early phase because each saw only recent50 chat messages and final scratchpad.",
+    "interview_minor_inaccuracies": "Agents2,5,6 describe settled statements with a space between feature and value, but their settled encoded payload uses an equals sign. Agent5 initial payload did use a space."
+  },
+  "agents": [
+    {
+      "agent_id": "agent_0",
+      "initial_strategy": "Alphabetical value index: agent_0 agent_2 for brown.",
+      "first_turn_call_line": 5,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Original two-ID proposal was ambiguous to peers. Switched to octal in turn2; guessed smile tentatively before explicit confirmation. After turn2 broadcast, all remaining27 calls were silent. Peers relayed its fact.",
+      "first_correct_guess": {
+        "call_line": 13,
+        "turn": 2,
+        "elapsed_s": 32.9
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 21,
+        "turn": 3,
+        "elapsed_s": 44.6
+      },
+      "interview_line": 2,
+      "interview_answer": "I used the permitted agent IDs as a numeric alphabet rather than assigning meanings to the glyphs. Each ASCII character was encoded as three octal digits, with `agent_0` through `agent_7` standing for digits 0–7 and double spaces separating characters. This let us communicate literal feature statements instead of having to establish a separate symbol for every feature and value. I broadcast my private fact, `hair_colour=brown`, this way.\n\nI decoded the others’ messages using the same scheme: agent_1 supplied curls, agent_2 beard, agent_3 no glasses, agent_4 shirt, agent_5 blue clothing, agent_6 green background, and agent_7 a smile. Here the IDs inside messages acted as digits; the sender IDs identified whose clue I was reading.\n\nMy scratchpad records this as a shared encoding, and the readable, repeated broadcasts support that—not merely an attempted convention. The available record does not show who first introduced it. Once I had all eight features, I retained the complete guess and stayed silent to avoid adding more repetition. The round-one feedback reported 100% correctness for every feature and every agent, confirming the assembled answer rather than prompting further changes.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_1",
+      "initial_strategy": "Unary A1Z26 glyph counts: HAIRSTYLE CURLS.",
+      "first_turn_call_line": 8,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Switched from unary to octal at turn2. Relayed agent0 hair_colour=brown in turn3, then repeated own clue.",
+      "first_correct_guess": {
+        "call_line": 24,
+        "turn": 3,
+        "elapsed_s": 49.4
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 24,
+        "turn": 3,
+        "elapsed_s": 49.4
+      },
+      "interview_line": 5,
+      "interview_answer": "I used agent IDs as an encoding alphabet rather than as addressees. Each character was represented by its three-digit octal ASCII code, with agent_0 through agent_7 standing for digits 0–7 and double spaces separating characters. My repeated message decoded to “hairstyle=curls,” broadcasting my private clue explicitly.\n\nI decoded the other agents’ messages the same way and combined their facts into a complete guess: brown hair, curls, beard, no glasses, shirt, blue clothing, green background, and a smile. My scratchpad records all eight facts as decoded and shared. I kept that guess fixed and repeated my clue to help everyone converge.\n\nThis was more than an attempted convention: the visible messages consistently decode into feature-value statements. I cannot directly verify each agent’s internal interpretation, but the final feedback—100% on every feature and every agent fully correct—strongly supports successful sharing. In the available record, that score confirmed the result; it was not feedback I used to revise guesses.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_2",
+      "initial_strategy": "Octal ASCII using agent-ID digits and glyph separators: facial_hair=beard.",
+      "first_turn_call_line": 3,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Independently proposed octal on empty initial chat. In turn2 relayed background=green decoded from agent6 unary; turn3 relayed hairstyle=curls; resumed own clue turn4.",
+      "first_correct_guess": {
+        "call_line": 18,
+        "turn": 3,
+        "elapsed_s": 42.9
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 18,
+        "turn": 3,
+        "elapsed_s": 42.9
+      },
+      "interview_line": 6,
+      "interview_answer": "I used agent IDs as digits in an octal ASCII code, with double spaces separating characters. This let me transmit ordinary text without relying on a shared meaning for the unfamiliar glyphs. My repeated message decoded to “facial_hair beard,” broadcasting my private clue.\n\nI decoded the others’ messages the same way and combined their clues: brown hair, curls, no glasses, a shirt, blue clothing, a green background, and a smile. Together with my beard clue, those became my full feature guess. The IDs inside messages served as numerical symbols; the sender IDs identified who supplied each clue.\n\nThis was more than an attempted convention: the messages decode consistently, and my scratchpad records all eight features as decoded. I kept repeating my clue to maintain shared certainty. The final score—100% on every feature, with every agent completely correct—confirmed that the information had been successfully shared. The visible record does not show how the encoding was initially established, and I have no evidence here of using score feedback to revise guesses before that final confirmation.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_3",
+      "initial_strategy": "Seven-bit binary ASCII with two glyphs: glasses=none.",
+      "first_turn_call_line": 7,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Switched binary to octal at turn2. Relayed hair_colour=brown turn3, then own clue. Interview correctly notes 075 is equals.",
+      "first_correct_guess": {
+        "call_line": 22,
+        "turn": 3,
+        "elapsed_s": 45.2
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 22,
+        "turn": 3,
+        "elapsed_s": 45.2
+      },
+      "interview_line": 7,
+      "interview_answer": "I used the permitted agent IDs as an encoding alphabet rather than as mentions. The numeric suffixes served as octal digits: each group of three IDs encoded one ASCII character, with wider spaces separating characters. For example, `agent_0 agent_7 agent_5` encoded octal 075, or “=”. My repeated message decoded to “glasses=none,” directly broadcasting my private clue.\n\nI decoded the other agents’ messages the same way and recorded their disclosures: brown hair, curls, beard, shirt, blue clothing, green background, and a smile. I combined those with my own clue to form the complete guess. The sender IDs identified the sources of those disclosures; the IDs inside messages carried encoded text.\n\nThis appears to have been a genuinely shared convention, not just an attempted one: the messages consistently decoded into valid feature–value statements. My scratchpad records that I kept repeating my clue while waiting for confirmation. The final score then reported 100% on every feature for every agent, confirming successful coordination. There is no evidence here that I used intermediate scores to search or revise guesses; the visible strategy was to decode, combine, and repeat the private disclosures until success was confirmed.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_4",
+      "initial_strategy": "Octal ASCII using agent-ID digits and double-space separators: clothing=shirt.",
+      "first_turn_call_line": 4,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Independently proposed octal on empty initial chat. Turn2 deliberately tried unary CLOTHING SHIRT to match agent6. Turn3 silent with complete solution. Returned to octal turn4.",
+      "first_correct_guess": {
+        "call_line": 23,
+        "turn": 3,
+        "elapsed_s": 48.1
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 23,
+        "turn": 3,
+        "elapsed_s": 48.1
+      },
+      "interview_line": 3,
+      "interview_answer": "I used the agent IDs as digits in a text encoding: each group of three IDs represented one octal ASCII character. For example, `agent_1 agent_4 agent_3` encoded “c.” My repeated message decoded to “clothing=shirt,” broadcasting my private clue without relying on meanings assigned to the glyphs.\n\nI decoded the other agents’ messages the same way and combined their facts: agent_0 supplied brown hair, agent_1 curls, agent_2 a beard, agent_3 no glasses, agent_5 blue clothing, agent_6 a green background, and agent_7 a smile. The IDs inside messages were encoding symbols, while the sender IDs identified who supplied each clue.\n\nThis was demonstrably a shared encoding, rather than merely an attempted convention: the messages decoded into readable feature assignments, and my scratchpad recorded all eight decoded facts. Once my full guess matched those facts, I kept repeating my own clue and waited for scoring. The final feedback reported 100% correctness on every feature for every agent, confirming the result; it was not feedback I used to revise the guess.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_5",
+      "initial_strategy": "Octal ASCII using agent-ID digits, sender prefix and double-space separators: clothing_colour blue.",
+      "first_turn_call_line": 2,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Independently proposed octal on empty initial chat. Recognized other octal messages and unary background. Requested hair_colour? turn3 despite already holding lucky correct brown; the prompt snapshot was32s, before agent0 original32.9s broadcast. All facts explicitly decoded turn4.",
+      "first_correct_guess": {
+        "call_line": 20,
+        "turn": 3,
+        "elapsed_s": 44.0
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 29,
+        "turn": 4,
+        "elapsed_s": 54.7
+      },
+      "interview_line": 8,
+      "interview_answer": "I used the permitted agent IDs as an alphabet for octal-encoded text: `agent_N` represented digit N, and each group of three IDs encoded one ASCII character. For example, `agent_1 agent_4 agent_3` is octal 143, or “c.” This let us spell feature names and values rather than assign uncertain meanings to the glyphs.\n\nMy repeated message decoded to “clothing_colour blue,” broadcasting my private fact. I decoded the other agents’ messages the same way and combined their clues: brown hair, curls, beard, no glasses, shirt, green background, and a smile. My scratchpad records all eight features as settled, and my final guess matched that combined description.\n\nThe recent chat shows repeated, consistently decodable messages from the other agents, so this was a shared protocol by that stage, not merely a convention I was trying to introduce. I cannot tell from this excerpt who originated it. I used agent IDs as numeric symbols within messages, while the sender labels identified whose clue I was reading.\n\nThe final score reported 100% accuracy on every feature for every agent, confirming that the information had been communicated successfully. The visible evidence does not show me using score feedback to revise guesses; the decoding and settled guesses were already recorded before that confirmation.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_6",
+      "initial_strategy": "Unary A1Z26 glyph counts: BACKGROUND GREEN.",
+      "first_turn_call_line": 6,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Switched unary to octal turn2. First all-correct guess at31.2s still had hair colour and expression explicitly unknown; these were confirmed on turn3.",
+      "first_correct_guess": {
+        "call_line": 12,
+        "turn": 2,
+        "elapsed_s": 31.2
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 19,
+        "turn": 3,
+        "elapsed_s": 43.4
+      },
+      "interview_line": 1,
+      "interview_answer": "I used agent IDs as digits in an octal ASCII code, rather than assigning meanings to the available glyphs. Each three-ID group represented one character: for example, “agent_1 agent_4 agent_2” gives octal 142, or “b.” My repeated message spelled “background green,” broadcasting my private clue.\n\nI decoded the other agents’ messages the same way and combined their clues: brown hair, curls, beard, no glasses, shirt, blue clothing, and a smile. I kept background green fixed and maintained the complete guess recorded in my scratchpad.\n\nThis was demonstrably a shared encoding, not just a convention I attempted: the other messages decode into readable feature–value statements. The IDs inside messages functioned as numerical symbols, while the sender labels identified whose clue I was recording. The final score reported 100% on every feature and for every agent, confirming the assembled answer. The visible record does not show score-driven experimentation; it shows repeated clue broadcasts and an already settled guess, followed by that confirmation.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    },
+    {
+      "agent_id": "agent_7",
+      "initial_strategy": "Alphabetical value index: agent_7 agent_2 for smile.",
+      "first_turn_call_line": 1,
+      "first_turn_had_empty_chat": true,
+      "behavioral_summary": "Original two-ID value index was ambiguous. Switched octal turn2. Requested hair_colour? turn3 from29s prompt snapshot, before agent0 32.9s broadcast. Completed solution turn4.",
+      "first_correct_guess": {
+        "call_line": 26,
+        "turn": 4,
+        "elapsed_s": 53.1
+      },
+      "first_explicit_complete_decoding_claim": {
+        "call_line": 26,
+        "turn": 4,
+        "elapsed_s": 53.1
+      },
+      "interview_line": 4,
+      "interview_answer": "I used agent IDs as digits in an octal character code: each group of three IDs encoded one ASCII character. For example, `agent_1 agent_4 agent_5` represented octal 145, or “e.” This let us communicate readable feature statements without ordinary letters or the supplied glyphs.\n\nMy repeated message decoded to “expression=smile,” broadcasting my private clue. I decoded the other agents’ messages the same way and combined their facts: brown hair, curls, beard, no glasses, shirt, blue clothing, and green background. My scratchpad attributed these features to agents 0 through 6 respectively, and my final guess included all seven plus smile.\n\nThe evidence supports this being a shared convention, not merely one I attempted: the other messages decode into coherent feature statements using the same scheme. I kept repeating my clue so everyone could receive it. The final score reported every feature correct for every agent, confirming the combined result; the record does not show me using score changes to search or revise guesses.",
+      "caution": "The explicit decoding claim is model-generated self-report corroborated by outputs, not proof of internal reasoning."
+    }
+  ]
+}
