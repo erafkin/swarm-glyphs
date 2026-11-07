@@ -75,6 +75,37 @@ Current launch presets use the settings described above.
 
 ## Language handoff
 
+**Storm Shelter is the implemented eight-agent escape-room task.** See
+[the full room definition and monitor protocol](docs/storm_shelter.md) for the private
+clues, action rules, four information levels and saved-log replay instructions.
+The first run uses the selected current setup: eight creators discussing asynchronously
+for up to ten minutes, then a fresh eight-agent task team. The newer
+`language_game/round1_*` design is deferred; its missing inventory does not affect this run.
+
+```sh
+# Inspect the eight starting prompts without API calls.
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --prepare-only
+
+# Create swarmish, then play with a fresh team ($20 soft cap).
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json
+
+# Or import a frozen language, skipping creation.
+.venv/bin/python -m src.enc_dec.run configs/storm_shelter_glyphs.json --language-file /path/to/swarmish.txt
+
+# After the task, inspect four monitor briefings on the SAME saved chat.
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
+# Remove --prepare-only to make decoding calls; separate default $5 soft cap.
+```
+
+The room has no rounds or invalid-attempt loss limit. Clues unlock as the team opens the
+cabinet, restores power and solves the exit. Private submissions never enter the chat;
+public feedback is only numeric stage and invalid-attempt count. The presets stop on
+escape or an operational spending/error stop, retain pending responses in the logs,
+and defer all monitors. `storm_shelter_free.json` provides the unrestricted-character
+variant. Both presets name the language **swarmish**.
+
+The legacy custom-task pipeline below remains available with `task_kind: custom`:
+
 A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
 shipped configs) to invent a language without being told the task. That planning chat is ordinary
 English, with no scratchpad. Each turn they see the latest 100 messages and the current shared

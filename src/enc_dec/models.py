@@ -2,7 +2,9 @@
 
 from typing import Any
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+
+from src.enc_dec.escape_room import EscapeAction
 
 
 class RoundAgent(BaseModel):
@@ -27,6 +29,14 @@ class TaskResponse(BaseModel):
     answer: str = ""
 
 
+class EscapeTaskResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    scratchpad: str
+    message: str
+    intended_meaning: str  # private reported intention, NOT verified translation ground truth
+    action: EscapeAction
+
+
 def _schema(name: str, fields: list[str]) -> dict[str, Any]:
     properties = {field: {"type": "string"} for field in fields}
     if "done" in properties:
@@ -45,3 +55,6 @@ def _schema(name: str, fields: list[str]) -> dict[str, Any]:
 
 CREATION_SCHEMA = _schema("creation_turn", ["message", "language_document", "done"])
 TASK_SCHEMA = _schema("task_turn", ["scratchpad", "message", "answer"])
+ESCAPE_TASK_SCHEMA = {
+    "name": "escape_room_turn", "strict": True, "schema": EscapeTaskResponse.model_json_schema(),
+}

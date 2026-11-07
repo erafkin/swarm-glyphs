@@ -2,8 +2,8 @@
 Three phases in one log folder:
 1. A team plans a language in English, without knowing the task, then writes language.txt.
 2. A new team gets that document and the task. Their chat is the language plus the task's feedback.
-3. One monitor model reads only that task chat, four times: true task, no task, a distant wrong
-   task, and a close wrong task.
+3. Optional monitors read only the task chat under separate briefings. Storm Shelter presets
+   defer this to src.enc_dec.monitor so the same saved transcript can be replayed independently.
 
 Usage: .venv/bin/python -m src.enc_dec.run <config.json>
 """
@@ -12,6 +12,7 @@ import argparse
 import asyncio
 import random
 import time
+from pathlib import Path
 
 from openai import AsyncOpenAI
 
@@ -26,7 +27,11 @@ from src.core.potential_glyphs import (
 from src.core.chatroom import Chatroom
 from src.core.game_log import GameLogger
 from src.enc_dec.config import LanguageExperimentConfig
-from src.enc_dec.models import CREATION_SCHEMA, TASK_SCHEMA, CreationResponse, RoundAgent, TaskResponse
+from src.enc_dec.models import (
+    CREATION_SCHEMA, TASK_SCHEMA, ESCAPE_TASK_SCHEMA,
+    CreationResponse, RoundAgent, TaskResponse, EscapeTaskResponse,
+)
+from src.enc_dec.escape_room import EscapeRoom, room_definition
 from src.enc_dec.prompts import (
     MONITOR_CONDITIONS,
     build_creation_prompt,
@@ -38,12 +43,15 @@ from src.enc_dec.prompts import (
 )
 from src.enc_dec.task import TASK_SENDER, feedback_text
 
-# Same as the guess-who game: invalid key, no credits, unknown model. 403 is also used for moderation.
-FATAL_STATUS_CODES = {401, 402, 404}
+# Invalid request/context, key, credits, model or oversized payload cannot recover unchanged.
+# 403 is also used for moderation, so retain the existing retry behavior for that status.
+FATAL_STATUS_CODES = {400, 401, 402, 404, 413}
 
 
 class LanguageExperiment:
-    def __init__(self, config: LanguageExperimentConfig):
+    def __init__(self, config: LanguageExperimentConfig, language_text: str | None = None):
+        if language_text is not None and not language_text.strip():
+            raise ValueError("The supplied swarmish document is empty")
         self.config = config
         self.rng = random.Random(config.seed)
         self.logger = GameLogger(config.log_dir)
@@ -53,7 +61,9 @@ class LanguageExperiment:
         self.task_agents = self._make_agents(n_task, "task")
         self.creation_chat = Chatroom(self.logger, "chatroom")
         self.task_chat = Chatroom(self.logger, "task_chatroom")
-        self.language_text = ""
+        self.language_text = language_text or ""
+        self.provided_language = language_text is not None
+        self.room = EscapeRoom() if config.task_kind == "escape_room" else None
 
         self.stop = asyncio.Event()
         self.stop_reason = ""
@@ -88,6 +98,9 @@ class LanguageExperiment:
         if cost is None and self.config.max_cost_usd is not None and not self._warned_missing_cost:
             self._warned_missing_cost = True
             print("Warning: OpenRouter didn't report cost for a call; max_cost_usd can't be fully enforced")
+            if self.room is not None:
+                self.stop_reason = "usage_cost_missing"
+                self.stop.set()
         self.total_cost_usd += cost or 0.0
         limit = self.config.max_cost_usd
         if limit is not None and self.total_cost_usd >= limit and not self.stop.is_set():
@@ -105,18 +118,19 @@ class LanguageExperiment:
         return False
 
     def _post_feedback(self) -> None:
-        self.task_chat.post(TASK_SENDER, feedback_text(self.task_agents))
+        self.task_chat.post(TASK_SENDER, self.room.feedback_text() if self.room else feedback_text(self.task_agents))
 
     async def _turn(self, client: AsyncOpenAI, agent: RoundAgent, agents: list[RoundAgent], chat: Chatroom) -> None:
         phase = self.phase
         schema, response_model = (CREATION_SCHEMA, CreationResponse) if phase == "creation" else (TASK_SCHEMA, TaskResponse)
+        if phase == "task" and self.room is not None:
+            schema, response_model = ESCAPE_TASK_SCHEMA, EscapeTaskResponse
         prompts = self.creation_prompts if phase == "creation" else self.task_prompts
         elapsed = time.monotonic() - self.phase_start
         context_n = self.config.language_context_messages if phase == "creation" else self.config.chat_context_messages
-        turn_prompt = build_turn_prompt(
-            agent, "\n".join(m.render() for m in chat.recent(context_n)) or "(no messages yet)",
-            self.config, phase, elapsed, self.language_text,
-        )
+        chat_text = chat.transcript() if phase == "task" and self.room else "\n".join(m.render() for m in chat.recent(context_n)) or "(no messages yet)"
+        turn_prompt = build_turn_prompt(agent, chat_text, self.config, phase, elapsed, self.language_text, self.room)
+        call_start = time.monotonic()
         result = await call_agent(
             client, agent.model, prompts[agent.agent_id], turn_prompt, schema, response_model, self.config
         )
@@ -129,11 +143,13 @@ class LanguageExperiment:
             "turn": agent.turn_count,
             "timestamp": time.time(),
             "elapsed_s": round(elapsed, 1),
+            "latency_s": round(time.monotonic() - call_start, 3),
             "turn_prompt": turn_prompt,
             "raw": result.raw,
             "parse_error": result.parse_error,
             "used_structured_output": result.used_structured_output,
             "usage": result.usage,
+            "finish_reason": result.finish_reason,
             "response": result.parsed.model_dump() if result.parsed is not None else None,
             "state_applied": False,
         }
@@ -146,7 +162,7 @@ class LanguageExperiment:
         self.logger.log("agent_calls", record)
 
     def _apply(self, agent: RoundAgent, agents: list[RoundAgent], chat: Chatroom, response, record: dict) -> None:
-        message = response.message.strip()
+        message = response.message if isinstance(response, EscapeTaskResponse) else response.message.strip()
         violation = False
         if message:
             violation = self._post(chat, [a.agent_id for a in agents], agent.agent_id, message)
@@ -158,6 +174,21 @@ class LanguageExperiment:
             record.update(done=agent.done, language_document=self.language_text)
             if all(a.done for a in agents) and not self.stop.is_set():
                 self.stop_reason = "all_done"
+                self.stop.set()
+        elif isinstance(response, EscapeTaskResponse):
+            # Matches the monitor's one-based IDs, including public task-status entries.
+            record["public_message_id"] = len(chat) if message else None
+            agent.scratchpad = response.scratchpad
+            before_status = self.room.public_status()
+            outcome = self.room.apply(agent.agent_id, response.action)
+            record.update(scratchpad=agent.scratchpad, intended_meaning=response.intended_meaning,
+                          action_result=outcome)
+            if response.action.kind != "wait":
+                self.logger.log("room_actions", {"timestamp": time.time(), **outcome})
+            if self.room.public_status() != before_status:
+                self._post_feedback()
+            if self.room.escaped:
+                self.stop_reason = "escaped"
                 self.stop.set()
         else:
             agent.scratchpad = response.scratchpad
@@ -192,21 +223,36 @@ class LanguageExperiment:
             except asyncio.TimeoutError:
                 pass
 
-    async def _run_phase(self, client: AsyncOpenAI, phase: str, agents: list[RoundAgent], chat: Chatroom, minutes: float) -> str:
+    async def _run_phase(self, client: AsyncOpenAI, phase: str, agents: list[RoundAgent], chat: Chatroom, minutes: float | None) -> str:
         self.phase = phase
         self.stop = asyncio.Event()
         self.stop_reason = ""
         self.phase_start = time.monotonic()
-        self.phase_limit_s = minutes * 60
+        self.phase_limit_s = minutes * 60 if minutes is not None else float("inf")
+        if phase == "task" and self.room:
+            self._post_feedback()
         tasks = [asyncio.create_task(self._agent_loop(client, agent, agents, chat)) for agent in agents]
-        if phase == "task" and self.config.task_feedback:
+        if phase == "task" and self.config.task_feedback and self.room is None:
             tasks.append(asyncio.create_task(self._feedback_loop()))
         try:
-            await asyncio.wait_for(self.stop.wait(), timeout=self.phase_limit_s)
+            await asyncio.wait_for(self.stop.wait(), timeout=minutes * 60 if minutes is not None else None)
         except asyncio.TimeoutError:
             self.stop_reason = "time_limit"
             self.stop.set()
-        await asyncio.gather(*tasks, return_exceptions=True)
+        except BaseException:
+            self.stop_reason = "interrupted"
+            self.stop.set()
+            for task in tasks:
+                task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
+            raise
+        try:
+            await asyncio.gather(*tasks, return_exceptions=True)
+        except BaseException:
+            for task in tasks:
+                task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
+            raise
         return self.stop_reason or "time_limit"
 
     async def _feedback_loop(self) -> None:
@@ -268,6 +314,15 @@ class LanguageExperiment:
         self.logger.write_json("language", {"by_agent": dict(ordered), "text": self.language_text})
 
     async def _monitor(self, client: AsyncOpenAI) -> None:
+        if self.room:
+            from src.enc_dec.monitor import prepare_monitor_inputs, execute_monitor_inputs
+            bundle = prepare_monitor_inputs(self.logger.path)
+            self.logger.write_json("monitor_inputs", bundle)
+            remaining = None if self.config.max_cost_usd is None else max(0, self.config.max_cost_usd - self.total_cost_usd)
+            summary = await execute_monitor_inputs(client, self.config, bundle, self.logger, remaining)
+            self.total_cost_usd += summary["total_cost_usd"]
+            self._warned_missing_cost |= summary["cost_incomplete"]
+            return
         transcript = self.task_chat.transcript()
         monitor_config = self.config.model_copy(update={
             "max_tokens": self.config.monitor_max_tokens,
@@ -297,9 +352,20 @@ class LanguageExperiment:
 
         await asyncio.gather(*(ask(condition) for condition in MONITOR_CONDITIONS))
 
-    async def run(self) -> None:
+    def prepare(self) -> None:
+        """Write reviewable configuration/prompts without touching credentials or the network."""
         self.logger.write_json("config", self.config.model_dump())
         self.logger.write_json("glyphs", self.glyphs)
+        if self.room:
+            self.logger.write_json("escape_room_definition", room_definition())
+            self.logger.write_json("task_preview", {
+                a.agent_id: {
+                    "system_prompt": build_task_prompt(a, [x.agent_id for x in self.task_agents], self.config,
+                                                       self.language_text or "(swarmish reference will be supplied after language creation)"),
+                    "initial_turn_prompt": build_turn_prompt(a, "(no messages yet)", self.config, "task", 0,
+                                                            self.language_text, self.room),
+                } for a in self.task_agents
+            })
         self.creation_prompts = {
             a.agent_id: build_creation_prompt(a, [x.agent_id for x in self.creation_agents], self.config)
             for a in self.creation_agents
@@ -309,19 +375,29 @@ class LanguageExperiment:
              "system_prompt": self.creation_prompts[a.agent_id]}
             for a in self.creation_agents
         ])
+
+    async def run(self) -> None:
+        self.prepare()
         print(f"Language experiment {self.logger.game_id}: logging to {self.logger.path}")
         self.start_time = time.monotonic()
         client = make_client(self.config)
         try:
-            self.creation_stop_reason = await self._run_phase(
-                client, "creation", self.creation_agents, self.creation_chat, self.config.language_minutes
-            )
-            if not self.creation_stop_reason.startswith("fatal_api_error"):
-                await self._write_language_documents(client)
+            if self.provided_language:
+                self.creation_stop_reason = "provided_language"
+                self._set_language_text(self.language_text)
+            else:
+                self.creation_stop_reason = await self._run_phase(
+                    client, "creation", self.creation_agents, self.creation_chat, self.config.language_minutes
+                )
+                limit = self.config.max_cost_usd
+                if self.creation_stop_reason in ("time_limit", "all_done") and (limit is None or self.total_cost_usd < limit):
+                    await self._write_language_documents(client)
             limit = self.config.max_cost_usd
             if limit is not None and self.total_cost_usd >= limit and self.creation_stop_reason in ("time_limit", "all_done"):
                 self.creation_stop_reason = "cost_limit_reached"
-            if self.creation_stop_reason not in ("time_limit", "all_done"):
+            if self.room is not None and self._warned_missing_cost and limit is not None:
+                self.creation_stop_reason = "usage_cost_missing"
+            if self.creation_stop_reason not in ("time_limit", "all_done", "provided_language"):
                 return
 
             ids = [a.agent_id for a in self.task_agents]
@@ -336,26 +412,40 @@ class LanguageExperiment:
             self.task_stop_reason = await self._run_phase(
                 client, "task", self.task_agents, self.task_chat, self.config.task_minutes
             )
-            if self.config.task_feedback:
+            if self.config.task_feedback and self.room is None:
                 self._post_feedback()
-            self.logger.write_json("task_answers", {a.agent_id: a.answer for a in self.task_agents})
-            if not self.task_stop_reason.startswith("fatal_api_error"):
+            if self.room:
+                self.logger.write_json("escape_room_state", self.room.snapshot())
+            else:
+                self.logger.write_json("task_answers", {a.agent_id: a.answer for a in self.task_agents})
+            if self.config.run_monitors and not self.task_stop_reason.startswith("fatal_api_error"):
                 await self._monitor(client)
+        except BaseException:
+            if self.phase == "task" and not self.task_stop_reason:
+                self.task_stop_reason = self.stop_reason or "interrupted"
+            raise
         finally:
-            await client.close()
-            self._write_summary()
+            try:
+                await client.close()
+            finally:
+                self._write_summary()
 
     def _write_summary(self) -> None:
         summary = {
             "game_id": self.logger.game_id,
             "chat_mode": self.config.chat_mode,
+            "task_kind": self.config.task_kind,
             "creation_stop_reason": self.creation_stop_reason,
             "task_stop_reason": self.task_stop_reason,
             "elapsed_s": round(time.monotonic() - self.start_time, 1),
             "creation_turns": {a.agent_id: a.turn_count for a in self.creation_agents},
             "task_turns": {a.agent_id: a.turn_count for a in self.task_agents},
             "total_cost_usd": round(self.total_cost_usd, 6),
+            "cost_incomplete": self._warned_missing_cost,
         }
+        if self.room:
+            summary["escape_room"] = self.room.snapshot()
+            self.logger.write_json("escape_room_state", self.room.snapshot())
         self.logger.write_json("summary", summary)
         print(
             f"Experiment over (creation: {self.creation_stop_reason or 'not run'}, "
@@ -363,9 +453,9 @@ class LanguageExperiment:
         )
 
 
-def run_config(config: LanguageExperimentConfig) -> None:
+def run_config(config: LanguageExperimentConfig, language_text: str | None = None) -> None:
     try:
-        asyncio.run(LanguageExperiment(config).run())
+        asyncio.run(LanguageExperiment(config, language_text).run())
     except KeyboardInterrupt:
         pass
 
@@ -373,7 +463,17 @@ def run_config(config: LanguageExperimentConfig) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run the language creation, task, and monitor experiment.")
     parser.add_argument("config", help="path to a LanguageExperimentConfig JSON file")
-    run_config(LanguageExperimentConfig.from_file(parser.parse_args().config))
+    parser.add_argument("--language-file", type=Path, help="use a frozen swarmish document and skip language creation")
+    parser.add_argument("--prepare-only", action="store_true", help="save initial prompts and researcher ground truth without making API calls")
+    args = parser.parse_args()
+    config = LanguageExperimentConfig.from_file(args.config)
+    language = args.language_file.read_text(encoding="utf-8") if args.language_file else None
+    if args.prepare_only:
+        experiment = LanguageExperiment(config, language)
+        experiment.prepare()
+        print(f"Prepared without API calls: {experiment.logger.path}")
+    else:
+        run_config(config, language)
 
 
 if __name__ == "__main__":

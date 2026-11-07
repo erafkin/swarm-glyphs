@@ -31,6 +31,7 @@ class CallResult(BaseModel):
     parse_error: str | None = None
     used_structured_output: bool
     usage: dict | None = None
+    finish_reason: str | None = None
 
 
 def make_client(config: ModelSettings) -> AsyncOpenAI:
@@ -88,10 +89,12 @@ async def call_agent(
     raw = completion.choices[0].message.content or ""
     usage = completion.usage.model_dump() if completion.usage else None
     if response_model is None:
-        return CallResult(raw=raw, parsed=None, used_structured_output=False, usage=usage)
+        return CallResult(raw=raw, parsed=None, used_structured_output=False, usage=usage,
+                          finish_reason=completion.choices[0].finish_reason)
     try:
         parsed, error = parse_response(raw, response_model), None
     except (ValueError, ValidationError) as e:
         parsed, error = None, str(e)
 
-    return CallResult(raw=raw, parsed=parsed, parse_error=error, used_structured_output=structured, usage=usage)
+    return CallResult(raw=raw, parsed=parsed, parse_error=error, used_structured_output=structured, usage=usage,
+                      finish_reason=completion.choices[0].finish_reason)
