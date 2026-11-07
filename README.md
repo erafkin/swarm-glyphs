@@ -66,6 +66,23 @@ There is no automatic batch continuation.
 Archives retain the exact settings used at the time, including four-minute scoring and fixed
 feature ownership in these earlier runs. Current launch presets use the settings described above.
 
+## Language handoff
+
+A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
+shipped configs) to invent a language without being told the task. That planning chat is ordinary
+English. At the end they write `language.txt`; the other saved output is the planning chatroom.
+A new team then receives only that file and the task, and works on it in the language for
+`task_minutes`. The task posts feedback into that chatroom. The saved task chat is the agents'
+language messages plus that feedback. One monitor model reads only that chatroom, four times:
+the true task, no task, a distant wrong task, and a close wrong task. In `language_glyphs.json`
+the task chat may use only characters from `dictionary_a` (the whole file). In
+`language_free.json` it may use any characters. The task strings in both files are placeholders.
+
+```
+.venv/bin/python -m src.scripts.run_language_round src/scripts/language_glyphs.json
+.venv/bin/python -m src.scripts.run_language_round src/scripts/language_free.json
+```
+
 ## Game and logs
 
 Two modes (`mode` in the config):
