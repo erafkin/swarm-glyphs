@@ -1,0 +1,9 @@
+{
+  "mode": "board",
+  "n_agents": 8,
+  "model": "openai/gpt-4o-mini",
+  "score_interval_s": 30,
+  "max_score_rounds": 2,
+  "min_turn_interval_s": 5,
+  "seed": 0
+}
