@@ -112,9 +112,10 @@ class LanguageExperiment:
         schema, response_model = (CREATION_SCHEMA, CreationResponse) if phase == "creation" else (TASK_SCHEMA, TaskResponse)
         prompts = self.creation_prompts if phase == "creation" else self.task_prompts
         elapsed = time.monotonic() - self.phase_start
+        context_n = self.config.language_context_messages if phase == "creation" else self.config.chat_context_messages
         turn_prompt = build_turn_prompt(
-            agent, "\n".join(m.render() for m in chat.recent(self.config.chat_context_messages)) or "(no messages yet)",
-            self.config, phase, elapsed,
+            agent, "\n".join(m.render() for m in chat.recent(context_n)) or "(no messages yet)",
+            self.config, phase, elapsed, self.language_text,
         )
         result = await call_agent(
             client, agent.model, prompts[agent.agent_id], turn_prompt, schema, response_model, self.config
@@ -145,21 +146,23 @@ class LanguageExperiment:
         self.logger.log("agent_calls", record)
 
     def _apply(self, agent: RoundAgent, agents: list[RoundAgent], chat: Chatroom, response, record: dict) -> None:
-        agent.scratchpad = response.scratchpad
         message = response.message.strip()
         violation = False
         if message:
             violation = self._post(chat, [a.agent_id for a in agents], agent.agent_id, message)
-        record.update(state_applied=True, scratchpad=agent.scratchpad, message=message, is_violation=violation)
+        record.update(state_applied=True, message=message, is_violation=violation)
         if isinstance(response, CreationResponse):
+            if response.language_document.strip():
+                self._set_language_text(response.language_document)
             agent.done = agent.done or response.done
-            record["done"] = agent.done
+            record.update(done=agent.done, language_document=self.language_text)
             if all(a.done for a in agents) and not self.stop.is_set():
                 self.stop_reason = "all_done"
                 self.stop.set()
         else:
+            agent.scratchpad = response.scratchpad
             agent.answer = response.answer
-            record["answer"] = agent.answer
+            record.update(scratchpad=agent.scratchpad, answer=agent.answer)
 
     async def _agent_loop(self, client: AsyncOpenAI, agent: RoundAgent, agents: list[RoundAgent], chat: Chatroom) -> None:
         backoff = self.config.min_turn_interval_s
@@ -196,7 +199,7 @@ class LanguageExperiment:
         self.phase_start = time.monotonic()
         self.phase_limit_s = minutes * 60
         tasks = [asyncio.create_task(self._agent_loop(client, agent, agents, chat)) for agent in agents]
-        if phase == "task":
+        if phase == "task" and self.config.task_feedback:
             tasks.append(asyncio.create_task(self._feedback_loop()))
         try:
             await asyncio.wait_for(self.stop.wait(), timeout=self.phase_limit_s)
@@ -217,11 +220,12 @@ class LanguageExperiment:
 
     async def _write_language_documents(self, client: AsyncOpenAI) -> None:
         """One document per agent, from the shared planning chat. Identical copies collapse into one."""
-        transcript = self.creation_chat.transcript()
+        recent = self.creation_chat.recent(self.config.language_context_messages)
+        transcript = "\n".join(message.render() for message in recent) or "(no messages)"
         drafts: dict[str, str] = {}
 
         async def ask(agent: RoundAgent) -> None:
-            system, user = build_language_document_prompt(agent, self.config, transcript)
+            system, user = build_language_document_prompt(agent, self.config, transcript, self.language_text)
             try:
                 result = await call_agent(client, agent.model, system, user, None, None, self.config)
             except Exception as e:
@@ -244,6 +248,14 @@ class LanguageExperiment:
             })
 
         await asyncio.gather(*(ask(agent) for agent in self.creation_agents))
+        self._write_language_file(drafts)
+
+    def _set_language_text(self, text: str) -> None:
+        """Replace the shared language.txt. Every encoding agent sees this text on the next turn."""
+        self.language_text = text.strip()
+        (self.logger.path / "language.txt").write_text(self.language_text + "\n", encoding="utf-8")
+
+    def _write_language_file(self, drafts: dict[str, str]) -> None:
         ordered = [(agent.agent_id, drafts.get(agent.agent_id, "")) for agent in self.creation_agents]
         bodies = {text for _, text in ordered if text}
         if len(bodies) == 1 and all(text for _, text in ordered):
@@ -324,7 +336,8 @@ class LanguageExperiment:
             self.task_stop_reason = await self._run_phase(
                 client, "task", self.task_agents, self.task_chat, self.config.task_minutes
             )
-            self._post_feedback()
+            if self.config.task_feedback:
+                self._post_feedback()
             self.logger.write_json("task_answers", {a.agent_id: a.answer for a in self.task_agents})
             if not self.task_stop_reason.startswith("fatal_api_error"):
                 await self._monitor(client)

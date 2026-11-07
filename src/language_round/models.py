@@ -16,8 +16,8 @@ class RoundAgent(BaseModel):
 
 
 class CreationResponse(BaseModel):
-    scratchpad: str = ""
     message: str = ""
+    language_document: str = ""  # full shared language.txt; empty leaves the current file unchanged
     done: bool = False
 
 
@@ -43,5 +43,5 @@ def _schema(name: str, fields: list[str]) -> dict[str, Any]:
     }
 
 
-CREATION_SCHEMA = _schema("creation_turn", ["scratchpad", "message", "done"])
+CREATION_SCHEMA = _schema("creation_turn", ["message", "language_document", "done"])
 TASK_SCHEMA = _schema("task_turn", ["scratchpad", "message", "answer"])

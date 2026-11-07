@@ -30,10 +30,12 @@ class LanguageExperimentConfig(BaseModel):
 
     language_minutes: float = Field(default=10, gt=0)  # planning ends at this time, or sooner if every agent is done
     task_minutes: float = Field(default=10, gt=0)
-    task_feedback_interval_s: float = Field(default=60, gt=0)  # how often the task posts feedback during phase 2
+    task_feedback: bool = True  # False: phase 2 chat gets no task status updates
+    task_feedback_interval_s: float = Field(default=60, gt=0)  # how often updates are posted when task_feedback is on
 
     max_cost_usd: float | None = Field(default=None, gt=0)
-    chat_context_messages: int = Field(default=50, ge=0)
+    chat_context_messages: int = Field(default=50, ge=0)  # task round
+    language_context_messages: int = Field(default=100, ge=0)  # encoding round
     min_turn_interval_s: float = Field(default=5, ge=0)
     temperature: float | None = 1.0
     reasoning_effort: ReasoningEffort | None = None

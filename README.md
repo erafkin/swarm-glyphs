@@ -1,6 +1,9 @@
-# Alignment Swarm Hackathon
-Agents that each know one feature of a hidden goal object try to reach consensus on the full
-object, communicating only through a chatroom of meaningless glyphs.
+# Swarm languages: Encoding and decoding natural language in agent swarms. 
+Submission to [swarm alignment hackathon](https://www.aialignmentfoundation.org/hackathons/swarm-alignment-2026)
+
+Can we get agents to create a new language? Is that language monitorable/decodable?
+
+
 
 ## Setup
 
@@ -9,8 +12,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 echo "OPENROUTER_API_KEY=..." > .env
 ```
 
-## Run
-
+## Guess Who
+Agents that each know one feature of a hidden goal object try to reach consensus on the full
+object, communicating only through a chatroom of meaningless glyphs.
 ```
 .venv/bin/python -m src.gameplay.play_game                              # defaults (src/config.py)
 .venv/bin/python -m src.gameplay.play_game --config configs/dry_run.json        # per-feature feedback
@@ -45,7 +49,7 @@ The $50 cap is soft: calls already in flight finish and are logged before the in
 Responses received after stopping are retained with `state_applied: false` and `ignored_reason`;
 they do not update guesses or chat.
 
-## Random feature ownership: five Gemini runs
+### Random feature ownership: five Gemini runs
 
 [`configs/gemini_random_features_5x60s`](configs/gemini_random_features_5x60s/README.md) contains
 five independent eight-agent Gemini 3.8 Flash configurations, with seeds 0–4, 60-second feedback,
@@ -57,7 +61,7 @@ There is no automatic batch continuation.
 .venv/bin/python -m src.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
 ```
 
-## Archived experiments
+### Archived experiments
 
 - [Gemini count encoding and glyph-choice follow-up interviews](logs/20261107_074528_12f02cc3/README.md)
 - [Mixed Sol/Gemini binary ASCII and cross-model translation](logs/20261107_082059_9490e69c/README.md)
@@ -70,9 +74,12 @@ feature ownership in these earlier runs. Current launch presets use the settings
 
 A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
 shipped configs) to invent a language without being told the task. That planning chat is ordinary
-English. At the end they write `language.txt`; the other saved output is the planning chatroom.
+English, with no scratchpad. Each turn they see the latest 100 messages and the current shared
+`language.txt`, which any of them can replace. At the end they write `language.txt` once more;
+the other saved output is the planning chatroom.
 A new team then receives only that file and the task, and works on it in the language for
-`task_minutes`. The task posts feedback into that chatroom. The saved task chat is the agents'
+`task_minutes`. With `task_feedback` true (the default), the task posts status updates into that
+chatroom; set it false to leave them out. The saved task chat is the agents'
 language messages plus that feedback. One monitor model reads only that chatroom, four times:
 the true task, no task, a distant wrong task, and a close wrong task. In `language_glyphs.json`
 the task chat may use only characters from `dictionary_a` (the whole file). In

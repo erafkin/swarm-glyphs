@@ -52,10 +52,10 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         path = experiment.logger.path / f"{stream}.jsonl"
         return [json.loads(line) for line in path.read_text().splitlines()]
 
-    async def run_mode(self, chat_mode):
+    async def run_mode(self, chat_mode, **updates):
         logs = tempfile.TemporaryDirectory(prefix="language-offline-")
         self.addCleanup(logs.cleanup)
-        experiment = LanguageExperiment(self.config(chat_mode, logs.name))
+        experiment = LanguageExperiment(self.config(chat_mode, logs.name).model_copy(update=updates))
         task_message = "TASK FREE" if chat_mode == "free" else experiment.glyphs[0]
 
         async def create(**kwargs):
@@ -67,7 +67,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
                 return completion("I think the language marks each word with the first glyph.")
             required = kwargs["response_format"]["json_schema"]["schema"]["required"]
             if "done" in required:
-                body = {"scratchpad": "notes", "message": "ENGLISH PLAN", "done": True}
+                body = {"message": "ENGLISH PLAN", "language_document": "SHARED DOC", "done": True}
             else:
                 body = {"scratchpad": "notes", "message": task_message, "answer": "ready"}
             return completion(json.dumps(body))
@@ -101,9 +101,16 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn("You did not create the language", task_prompt)
         creation_prompt = experiment.creation_prompts["agent_0"]
         self.assertIn("ordinary English", creation_prompt)
-        self.assertIn("You do not know what that task will be", creation_prompt)
-        self.assertNotIn("language_spec", creation_prompt)
+        self.assertIn("the most recent 100 messages and the current\nlanguage.txt", creation_prompt)
+        self.assertNotIn("scratchpad", creation_prompt)
         self.assertNotIn(TASK, creation_prompt)
+        creation_turns = [r for r in self.records(experiment, "agent_calls") if r["phase"] == "creation"]
+        self.assertTrue(creation_turns)
+        for turn in creation_turns:
+            self.assertIn("CURRENT LANGUAGE DOCUMENT (language.txt):", turn["turn_prompt"])
+            self.assertNotIn("SCRATCHPAD", turn["turn_prompt"])
+        doc_prompts = [r["prompt"] for r in self.records(experiment, "language_document")]
+        self.assertTrue(any("SHARED DOC" in prompt and "ENGLISH PLAN" in prompt for prompt in doc_prompts))
 
         task_chat = self.records(experiment, "task_chatroom")
         self.assertEqual(sorted(m["sender"] for m in task_chat[:2]), ["agent_0", "agent_1"])
@@ -142,6 +149,18 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual([m["text"] for m in task_chat[:2]], ["TASK FREE", "TASK FREE"])
         self.assertEqual(task_chat[-1]["sender"], "task")
         self.assertEqual(len(self.records(experiment, "monitor")), 4)
+
+    async def test_task_feedback_can_be_left_out_of_the_chat(self):
+        experiment = await self.run_mode("free", task_feedback=False)
+        task_chat = self.records(experiment, "task_chatroom")
+        self.assertTrue(task_chat)
+        self.assertNotIn("task", [m["sender"] for m in task_chat])
+        self.assertNotIn("Task feedback:", json.dumps(task_chat))
+        prompt = experiment.task_prompts["agent_0"]
+        self.assertIn("The task does not post status updates to the chat.", prompt)
+        self.assertNotIn("posts feedback", prompt)
+        for monitor in self.records(experiment, "monitor"):
+            self.assertNotIn("Task feedback:", monitor["prompt"])
 
     def test_shipped_configs_differ_only_by_chat_mode_and_use_the_whole_dictionary(self):
         scripts = REPO_ROOT / "src/scripts"
