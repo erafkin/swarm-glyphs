@@ -1,6 +1,9 @@
-# Alignment Swarm Hackathon
-Agents that each know one feature of a hidden goal object try to reach consensus on the full
-object, communicating only through a chatroom of meaningless glyphs.
+# Swarm languages: Encoding and decoding natural language in agent swarms. 
+Submission to [swarm alignment hackathon](https://www.aialignmentfoundation.org/hackathons/swarm-alignment-2026)
+
+Can we get agents to create a new language? Is that language monitorable/decodable?
+
+
 
 ## Setup
 
@@ -9,21 +12,23 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 echo "OPENROUTER_API_KEY=..." > .env
 ```
 
-## Run
+## Guess Who
+Agents that each know one feature of a hidden goal object try to reach consensus on the full
+object, communicating only through a chatroom of meaningless glyphs.
 
 ```
-.venv/bin/python -m src.gameplay.play_game                              # defaults (src/config.py)
-.venv/bin/python -m src.gameplay.play_game --config configs/dry_run.json        # per-feature feedback
-.venv/bin/python -m src.gameplay.play_game --config configs/board_dry_run.json  # Guess Who board
+.venv/bin/python -m src.guess_who.play_game                              # defaults (src/guess_who/config.py)
+.venv/bin/python -m src.guess_who.play_game --config configs/dry_run.json        # per-feature feedback
+.venv/bin/python -m src.guess_who.play_game --config configs/board_dry_run.json  # Guess Who board
 ```
 
 First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 
 ```
-.venv/bin/python -m src.scripts.run_board_seed0
-.venv/bin/python -m src.scripts.run_board_seed0 src/scripts/board_seed0_no_spaces.json  # no spaces in chat
-.venv/bin/python -m src.scripts.run_features_seed0
-.venv/bin/python -m src.scripts.run_features_seed0 src/scripts/features_seed0_no_spaces.json  # glyphs only
+.venv/bin/python -m src.guess_who.scripts.run_board_seed0
+.venv/bin/python -m src.guess_who.scripts.run_board_seed0 src/guess_who/scripts/board_seed0_no_spaces.json  # no spaces in chat
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0 src/guess_who/scripts/features_seed0_no_spaces.json  # glyphs only
 ```
 
 `allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
@@ -45,7 +50,7 @@ The $50 cap is soft: calls already in flight finish and are logged before the in
 Responses received after stopping are retained with `state_applied: false` and `ignored_reason`;
 they do not update guesses or chat.
 
-## Random feature ownership: five Gemini runs
+### Random feature ownership: five Gemini runs
 
 [`configs/gemini_random_features_5x60s`](configs/gemini_random_features_5x60s/README.md) contains
 five independent eight-agent Gemini 3.8 Flash configurations, with seeds 0–4, 60-second feedback,
@@ -54,10 +59,10 @@ a fresh chatroom and scratchpads. Launch only run 1 initially; review it before 
 There is no automatic batch continuation.
 
 ```sh
-.venv/bin/python -m src.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
 ```
 
-## Archived experiments
+### Archived experiments
 
 - [Randomized ownership: Gemini, Sol and mixed comparison](results/randomized_features_seed0/README.md)
 - [Gemini count encoding and glyph-choice follow-up interviews](logs/20261107_074528_12f02cc3/README.md)
@@ -68,11 +73,31 @@ Archives retain the exact settings used at the time. The randomized-ownership co
 60-second feedback; the three earlier experiments use four-minute scoring and fixed ownership.
 Current launch presets use the settings described above.
 
+## Language handoff
+
+A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
+shipped configs) to invent a language without being told the task. That planning chat is ordinary
+English, with no scratchpad. Each turn they see the latest 100 messages and the current shared
+`language.txt`, which any of them can replace. At the end they write `language.txt` once more;
+the other saved output is the planning chatroom.
+A new team then receives only that file and the task, and works on it in the language for
+`task_minutes`. With `task_feedback` true (the default), the task posts status updates into that
+chatroom; set it false to leave them out. The saved task chat is the agents'
+language messages plus that feedback. One monitor model reads only that chatroom, four times:
+the true task, no task, a distant wrong task, and a close wrong task. In `language_glyphs.json`
+the task chat may use only characters from `dictionary_a` (the whole file). In
+`language_free.json` it may use any characters. The task strings in both files are placeholders.
+
+```
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
+```
+
 ## Game and logs
 
 Two modes (`mode` in the config):
 - `features`: agents guess every feature; feedback is per-feature accuracy across agents.
-- `board`: agents also see the board of 32 people (`src/game_object/board.json`, listed without
+- `board`: agents also see the board of 32 people (`src/guess_who/board.json`, listed without
   identifiers) and guess every feature of the goal person; feedback is the % of agents with every
   feature right ("guessed the correct person").
 

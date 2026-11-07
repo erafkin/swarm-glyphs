@@ -15,10 +15,10 @@ import math
 
 from pydantic import BaseModel
 
-from src.agent_models.model_obj import AgentState
-from src.config import GameConfig
-from src.game_object.board import Board
-from src.game_object.features import GoalObject
+from src.guess_who.model_obj import AgentState
+from src.guess_who.config import GameConfig
+from src.guess_who.board import Board
+from src.guess_who.features import GoalObject
 
 
 class ScoreReport(BaseModel):

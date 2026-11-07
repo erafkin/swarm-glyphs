@@ -15,7 +15,7 @@ The game ends when the win condition is met or after max_score_rounds scoring ro
 agent is asked to explain its communication strategy (unless the game was interrupted or hit a fatal
 API error such as an invalid key, no credits, or an unknown model, which stops the game immediately).
 
-Usage: python -m src.gameplay.play_game [--config path/to/config.json]
+Usage: python -m src.guess_who.play_game [--config path/to/config.json]
 """
 
 import argparse
@@ -25,22 +25,22 @@ import time
 
 from openai import AsyncOpenAI
 
-from src.agent_models.api_call import CallResult, call_agent, make_client
-from src.agent_models.model_obj import AgentResponse, AgentState, Guess
-from src.agent_models.potential_glyphs import VIOLATION_TOKEN, is_glyph_only, sample_glyphs
-from src.agent_models.prompts import (
+from src.core.api_call import CallResult, call_agent, make_client
+from src.guess_who.model_obj import AgentResponse, AgentState, Guess
+from src.core.potential_glyphs import VIOLATION_TOKEN, is_glyph_only, sample_glyphs
+from src.guess_who.prompts import (
     build_final_interview_prompt,
     build_final_interview_system_prompt,
     build_system_prompt,
     build_turn_prompt,
     response_json_schema,
 )
-from src.config import GameConfig
-from src.game_object.board import Board, goal_person_for_seed, load_board
-from src.game_object.features import GoalObject, shuffle_options
-from src.gameplay.chatroom import SYSTEM_SENDER, Chatroom
-from src.gameplay.game_log import GameLogger
-from src.gameplay.scoring import ScoreReport, format_score, is_won, score_round
+from src.guess_who.config import GameConfig
+from src.guess_who.board import Board, goal_person_for_seed, load_board
+from src.guess_who.features import GoalObject, shuffle_options
+from src.core.chatroom import SYSTEM_SENDER, Chatroom
+from src.core.game_log import GameLogger
+from src.guess_who.scoring import ScoreReport, format_score, is_won, score_round
 
 # OpenRouter errors that retrying won't fix: invalid API key, out of credits, unknown model.
 # 403 is excluded because OpenRouter also uses it for per-request moderation flags.

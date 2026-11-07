@@ -9,8 +9,8 @@ from unittest.mock import AsyncMock, patch
 
 from openai.types.chat import ChatCompletion
 
-from src.config import GameConfig
-from src.gameplay.play_game import Game
+from src.guess_who.config import GameConfig
+from src.guess_who.play_game import Game
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -34,7 +34,7 @@ class FeaturesLaunchTests(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
         self.logs = tempfile.TemporaryDirectory(prefix="features-offline-")
         self.addCleanup(self.logs.cleanup)
-        launch = GameConfig.from_file(REPO_ROOT / "src/scripts/features_seed0.json")
+        launch = GameConfig.from_file(REPO_ROOT / "src/guess_who/scripts/features_seed0.json")
         self.config = launch.model_copy(update={
             "log_dir": self.logs.name,
             "score_interval_s": 0.02,
@@ -59,7 +59,7 @@ class FeaturesLaunchTests(unittest.IsolatedAsyncioTestCase):
                                close=AsyncMock())
 
     async def run_with(self, client):
-        with patch("src.gameplay.play_game.make_client", return_value=client):
+        with patch("src.guess_who.play_game.make_client", return_value=client):
             await self.game.run()
         client.close.assert_awaited_once()
         self.assertFalse((self.game.logger.path / "errors.jsonl").exists())

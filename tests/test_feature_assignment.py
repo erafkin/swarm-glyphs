@@ -6,9 +6,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from src.config import GameConfig
-from src.game_object.features import FEATURES
-from src.gameplay.play_game import Game
+from src.guess_who.config import GameConfig
+from src.guess_who.features import FEATURES
+from src.guess_who.play_game import Game
 
 
 class FeatureAssignmentTests(unittest.TestCase):
@@ -106,7 +106,7 @@ class FeatureAssignmentTests(unittest.TestCase):
         # Inspect the assignment RNG constructor without probabilistic assertions about its output.
         import random
         original_random = random.Random
-        with patch("src.gameplay.play_game.random.Random", wraps=original_random) as rng:
+        with patch("src.guess_who.play_game.random.Random", wraps=original_random) as rng:
             self.game(seed=None, randomize_feature_assignment=True)
         # The game, goal selection, and ownership each request independent entropy.
         self.assertEqual([call.args for call in rng.call_args_list], [(None,), (None,), (None,)])

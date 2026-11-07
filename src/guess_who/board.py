@@ -14,7 +14,7 @@ from pathlib import Path
 
 from pydantic import BaseModel, model_validator
 
-from src.game_object.features import FEATURES, Feature, GoalObject, check_values, labels_from_one_hot
+from src.guess_who.features import FEATURES, Feature, GoalObject, check_values, labels_from_one_hot
 
 DEFAULT_BOARD_PATH = Path(__file__).parent / "board.json"
 DEFAULT_GOAL_PERSON = 22  # the goal for seed 0

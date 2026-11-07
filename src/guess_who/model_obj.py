@@ -13,7 +13,7 @@ import random
 
 from pydantic import BaseModel, Field, model_validator
 
-from src.game_object.features import Feature
+from src.guess_who.features import Feature
 
 
 class Guess(BaseModel):

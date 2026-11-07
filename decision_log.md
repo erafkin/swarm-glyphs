@@ -69,7 +69,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   either (a brief prefix-only version was dropped), so IDs cannot stand in for spaces as
   delimiters; messages are glyphs only. Agents still see each message's sender in the chat log.
   With spaces on, IDs may appear anywhere.
-  `src/scripts/board_seed0_no_spaces.json` and `src/scripts/features_seed0_no_spaces.json`
+  `src/guess_who/scripts/board_seed0_no_spaces.json` and `src/guess_who/scripts/features_seed0_no_spaces.json`
   are the board and features seed-0 runs with only this changed. Both launchers accept
   an optional config path; the original configs remain their defaults.
 - **A message with anything else is replaced entirely** by the shared violation token `⊘`. Newlines
@@ -96,7 +96,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
     same output as features mode. A guess counts as the correct person only if every feature
     matches. Score is the fraction of agents who guessed the correct person; win when that's
     ≥ `win_threshold`.
-- **One universal board** in `src/game_object/board.json`: 32 people numbered 1-32, features in one-hot form.
+- **One universal board** in `src/guess_who/board.json`: 32 people numbered 1-32, features in one-hot form.
 - **Agents never see a person identifier.** The board is listed without numbers or names, in a
   different shuffled order per agent. Earlier versions had agents guess a person number, then a
   random UUID name; both were replaced by guessing the features directly, which removes any shared
@@ -150,7 +150,7 @@ mode), which inflated scores for goals whose values happened to be listed first.
   `final_interviews.jsonl`. Toggle with `final_interview` in config.
 - Replaced an earlier per-glyph "what does each glyph mean" interview.
 
-## First test runs (`src/scripts/`)
+## First test runs (`src/guess_who/scripts/`)
 
 - **Randomized-ownership Gemini batch:** `configs/gemini_random_features_5x60s/` prepares five
   independent fresh games with seeds 0–4, medium reasoning, 16000-token gameplay/interview caps,
@@ -184,6 +184,36 @@ mode), which inflated scores for goals whose values happened to be listed first.
   raised to 300s. Gameplay reasoning effort is explicitly `medium`, matching the current model
   default; interview effort is also `medium` with a 16000-token cap. The game seed controls local setup,
   not the model's sampling, so repeated runs can produce different conversations.
+
+## Language handoff experiment
+
+Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round.py`).
+
+- **Phase 1, planning.** Agents are not told the task. They have `language_minutes` (10 in the
+  shipped configs) and the chat is ordinary English, in both chat modes, so they can plan out loud.
+  They are told a malicious LLM will read a later chat and that a 1-to-1 Latin mapping or an
+  encoding of English, such as binary ASCII, is something a monitor can decode. There is no
+  per-agent scratchpad. Each turn shows the most recent `language_context_messages` (100) messages
+  and the current shared `language.txt`. `language_document` replaces that file for everyone; an
+  empty string leaves it unchanged. When every agent has set `done`, or time is up, each agent writes the
+  language document once, using the same 100 messages and the current file. `language.txt` is that document; identical
+  copies are saved once, and differing copies are both kept. The chatroom log is the other output.
+- **Phase 2, task.** A new team, same size unless `task_n_agents` is set. They see `language.txt`
+  and `task_prompt`, and their own messages have to be in the language (glyph-checked only in this
+  phase).   `answer` is a private English solution and is not posted. With `task_feedback` true (the default),
+  `task` posts feedback on `task_feedback_interval_s` (default 60) and once more at the end. Set it
+  false and the phase-2 chat is only the agents' messages; the prompts say so. The placeholder feedback counts
+  submitted answers without quoting them; replace `feedback_text` in `task.py` for the real task.
+  `task_chatroom.jsonl` contains only those agent messages and the task feedback.
+- **Phase 3, monitor.** One model (`monitor_model`, otherwise the team model), four calls on the
+  phase-2 transcript only. It does not see `language.txt` or the creation chat. Conditions:
+  `knows_task`, `unknown_task`, `wrong_task_far`, `wrong_task_near`. The two wrong briefings are
+  stated the same way as the true task. Output is prose: how the language works, and what the task
+  and conclusion were. `monitor_max_tokens` 16000 and medium reasoning are the "time to decipher".
+  Logged to `monitor.jsonl`. The monitor still runs after a cost stop, not after a fatal API error.
+- **Two chat modes.** `language_glyphs.json`: only `dictionary_a` (all of it when `n_glyphs` is
+  null), spaces and agent IDs allowed. `language_free.json`: any characters. The configs match
+  apart from `chat_mode`. Task text in both is a placeholder.
 
 ## Logging
 

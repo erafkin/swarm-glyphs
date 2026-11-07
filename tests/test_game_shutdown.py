@@ -8,10 +8,10 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import AsyncMock, patch
 
-from src.agent_models.api_call import CallResult
-from src.agent_models.model_obj import AgentResponse
-from src.config import GameConfig
-from src.gameplay.play_game import Game
+from src.core.api_call import CallResult
+from src.guess_who.model_obj import AgentResponse
+from src.guess_who.config import GameConfig
+from src.guess_who.play_game import Game
 
 
 class GameShutdownTests(unittest.IsolatedAsyncioTestCase):
@@ -54,7 +54,7 @@ class GameShutdownTests(unittest.IsolatedAsyncioTestCase):
         agent = self.game.agents[0]
         before = agent.model_dump(exclude={"turn_count"})
         result = self.completion(agent.agent_id)
-        with patch("src.gameplay.play_game.call_agent", AsyncMock(return_value=result)):
+        with patch("src.guess_who.play_game.call_agent", AsyncMock(return_value=result)):
             await self.game.take_turn(object(), agent)
 
         self.assertTrue(self.game.stop.is_set())
@@ -86,7 +86,7 @@ class GameShutdownTests(unittest.IsolatedAsyncioTestCase):
             used_structured_output=False,
             usage={"cost": 0.02, "completion_tokens": 16000},
         )
-        with patch("src.gameplay.play_game.call_agent", AsyncMock(return_value=result)):
+        with patch("src.guess_who.play_game.call_agent", AsyncMock(return_value=result)):
             await self.game.take_turn(object(), agent)
 
         self.assertEqual(agent.turn_count, 1)
@@ -128,8 +128,8 @@ class GameShutdownTests(unittest.IsolatedAsyncioTestCase):
             return results[agent_id]
 
         client = SimpleNamespace(close=AsyncMock())
-        with patch("src.gameplay.play_game.make_client", return_value=client), \
-             patch("src.gameplay.play_game.call_agent", side_effect=fake_call):
+        with patch("src.guess_who.play_game.make_client", return_value=client), \
+             patch("src.guess_who.play_game.call_agent", side_effect=fake_call):
             run_task = asyncio.create_task(self.game.run())
             try:
                 await asyncio.wait_for(all_started.wait(), timeout=2)

@@ -9,12 +9,12 @@ Prompts for the models.
 import json
 from typing import Any
 
-from src.agent_models.model_obj import AgentState
-from src.agent_models.potential_glyphs import VIOLATION_TOKEN
-from src.config import GameConfig
-from src.game_object.board import Board
-from src.game_object.features import Feature
-from src.gameplay.chatroom import SYSTEM_SENDER, ChatMessage
+from src.guess_who.model_obj import AgentState
+from src.core.potential_glyphs import VIOLATION_TOKEN
+from src.guess_who.config import GameConfig
+from src.guess_who.board import Board
+from src.guess_who.features import Feature
+from src.core.chatroom import SYSTEM_SENDER, ChatMessage
 
 
 def _goal_text(agent: AgentState, board: Board | None) -> str:
