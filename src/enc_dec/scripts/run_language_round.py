@@ -6,15 +6,15 @@ The task text in the configs is a placeholder. Replace task_prompt, wrong_task_f
 wrong_task_near before treating a run as data.
 
 Usage:
-  .venv/bin/python -m src.scripts.run_language_round src/scripts/language_glyphs.json
-  .venv/bin/python -m src.scripts.run_language_round src/scripts/language_free.json
+  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
+  .venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
 """
 
 import argparse
 from pathlib import Path
 
-from src.language_round.config import LanguageExperimentConfig
-from src.language_round.run import run_config
+from src.enc_dec.config import LanguageExperimentConfig
+from src.enc_dec.run import run_config
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)

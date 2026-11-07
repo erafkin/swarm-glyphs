@@ -8,9 +8,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, model_validator
 
-from src.game_object.board import DEFAULT_BOARD_PATH
-
-ReasoningEffort = Literal["minimal", "low", "medium", "high", "xhigh", "max"]
+from src.core.types import ReasoningEffort
+from src.guess_who.board import DEFAULT_BOARD_PATH
 
 
 class GameConfig(BaseModel):

@@ -2,11 +2,11 @@
 
 import unittest
 
-from src.agent_models.model_obj import AgentState, Guess
-from src.config import GameConfig
-from src.game_object.board import DEFAULT_GOAL_PERSON, Board, load_board
-from src.game_object.features import Feature
-from src.gameplay.scoring import format_score, is_won, score_round
+from src.guess_who.model_obj import AgentState, Guess
+from src.guess_who.config import GameConfig
+from src.guess_who.board import DEFAULT_GOAL_PERSON, Board, load_board
+from src.guess_who.features import Feature
+from src.guess_who.scoring import format_score, is_won, score_round
 
 
 def agent(agent_id, goal, known_feature, known_value=None, labels=None):

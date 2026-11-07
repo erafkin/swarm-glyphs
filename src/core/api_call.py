@@ -1,25 +1,26 @@
 """
 OpenRouter API calls (OPENROUTER_API_KEY in .env).
 
-Each call passes the system prompt plus a turn prompt containing the recent chatroom, the agent's
-scratchpad, and its current guess. The response is parsed into an AgentResponse: the scratchpad
-(english or glyphs), the chatroom message (must be glyphs; checked by the game loop, which posts
-the shared violation token otherwise), and guess updates. The same call is used for the free-text
-end-of-game interview, with no schema.
-
-The game loop logs every call (raw output, parsed scratchpad/message/guess, usage) to
-agent_calls.jsonl in the game's log folder.
+Each call sends a system prompt and a turn prompt. With a schema, the reply is parsed into
+response_model. With both set to None, the reply is free text and only `raw` is filled in.
+The caller logs the result.
 """
 
 import json
 import os
 import re
+from typing import Any, Protocol
 
 from dotenv import load_dotenv
 from openai import AsyncOpenAI, BadRequestError
 from pydantic import BaseModel, ValidationError
 
-from src.config import GameConfig
+
+class ModelSettings(Protocol):
+    request_timeout_s: float
+    max_tokens: int
+    temperature: float | None
+    reasoning_effort: Any
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
@@ -32,7 +33,7 @@ class CallResult(BaseModel):
     usage: dict | None = None
 
 
-def make_client(config: GameConfig) -> AsyncOpenAI:
+def make_client(config: ModelSettings) -> AsyncOpenAI:
     load_dotenv()
     return AsyncOpenAI(
         base_url=OPENROUTER_BASE_URL,
@@ -57,7 +58,7 @@ async def call_agent(
     turn_prompt: str,
     json_schema: dict | None,
     response_model: type[BaseModel] | None,
-    config: GameConfig,
+    config: ModelSettings,
 ) -> CallResult:
     """With json_schema/response_model set to None, the reply is free text and only `raw` is filled in."""
     messages = [

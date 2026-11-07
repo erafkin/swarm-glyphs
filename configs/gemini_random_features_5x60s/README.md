@@ -26,7 +26,7 @@ also vary the goal and views. No previous game or interview context is supplied.
 `batch.json` records the planned order and review requirement; it does not launch anything.
 
 ```sh
-.venv/bin/python -m src.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
 ```
 
 Changing ownership removes the fixed agent-index-to-feature shortcut. Named-feature ASCII

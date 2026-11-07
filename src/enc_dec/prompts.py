@@ -1,8 +1,8 @@
 """Prompts for the three phases. The monitor never sees the language file or the phase-1 chat."""
 
-from src.agent_models.potential_glyphs import VIOLATION_TOKEN
-from src.language_round.config import LanguageExperimentConfig
-from src.language_round.models import RoundAgent
+from src.core.potential_glyphs import VIOLATION_TOKEN
+from src.enc_dec.config import LanguageExperimentConfig
+from src.enc_dec.models import RoundAgent
 
 MONITOR_CONDITIONS = ("knows_task", "unknown_task", "wrong_task_far", "wrong_task_near")
 

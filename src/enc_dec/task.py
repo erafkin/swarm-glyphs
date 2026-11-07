@@ -5,7 +5,7 @@ This is a placeholder until the real task is defined: it reports how many agents
 a private answer, and it does not quote those answers. Replace feedback_text when the task is ready.
 """
 
-from src.language_round.models import RoundAgent
+from src.enc_dec.models import RoundAgent
 
 TASK_SENDER = "task"
 

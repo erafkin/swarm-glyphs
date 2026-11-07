@@ -4,10 +4,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.agent_models.potential_glyphs import is_glyph_only
-from src.agent_models.prompts import LANGUAGE_INSTRUCTION, build_final_interview_system_prompt
-from src.config import GameConfig
-from src.gameplay.play_game import Game
+from src.core.potential_glyphs import is_glyph_only
+from src.guess_who.prompts import LANGUAGE_INSTRUCTION, build_final_interview_system_prompt
+from src.guess_who.config import GameConfig
+from src.guess_who.play_game import Game
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GLYPHS = ["𘜎", "𗄌"]
@@ -28,7 +28,7 @@ class GlyphCheckTests(unittest.TestCase):
                 self.assertFalse(is_glyph_only(text, IDS, GLYPHS, allow_spaces=False))
 
     def test_language_instruction_is_off_by_default_and_on_for_board_runs(self):
-        scripts = REPO_ROOT / "src/scripts"
+        scripts = REPO_ROOT / "src/guess_who/scripts"
         self.assertFalse(GameConfig().language_instruction)
         self.assertFalse(GameConfig.from_file(scripts / "features_seed0.json").language_instruction)
         with tempfile.TemporaryDirectory() as logs:
@@ -38,7 +38,7 @@ class GlyphCheckTests(unittest.TestCase):
                 self.assertEqual(LANGUAGE_INSTRUCTION in prompt, expected, name)
 
     def test_no_spaces_board_config_only_changes_spaces_and_prompts_say_so(self):
-        scripts = REPO_ROOT / "src/scripts"
+        scripts = REPO_ROOT / "src/guess_who/scripts"
         base = GameConfig.from_file(scripts / "board_seed0.json")
         no_spaces = GameConfig.from_file(scripts / "board_seed0_no_spaces.json")
         self.assertTrue(base.allow_spaces)

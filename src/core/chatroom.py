@@ -9,7 +9,7 @@ import time
 
 from pydantic import BaseModel
 
-from src.gameplay.game_log import GameLogger
+from src.core.game_log import GameLogger
 
 SYSTEM_SENDER = "system"
 

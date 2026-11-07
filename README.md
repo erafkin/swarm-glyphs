@@ -15,19 +15,20 @@ echo "OPENROUTER_API_KEY=..." > .env
 ## Guess Who
 Agents that each know one feature of a hidden goal object try to reach consensus on the full
 object, communicating only through a chatroom of meaningless glyphs.
+
 ```
-.venv/bin/python -m src.gameplay.play_game                              # defaults (src/config.py)
-.venv/bin/python -m src.gameplay.play_game --config configs/dry_run.json        # per-feature feedback
-.venv/bin/python -m src.gameplay.play_game --config configs/board_dry_run.json  # Guess Who board
+.venv/bin/python -m src.guess_who.play_game                              # defaults (src/guess_who/config.py)
+.venv/bin/python -m src.guess_who.play_game --config configs/dry_run.json        # per-feature feedback
+.venv/bin/python -m src.guess_who.play_game --config configs/board_dry_run.json  # Guess Who board
 ```
 
 First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 
 ```
-.venv/bin/python -m src.scripts.run_board_seed0
-.venv/bin/python -m src.scripts.run_board_seed0 src/scripts/board_seed0_no_spaces.json  # no spaces in chat
-.venv/bin/python -m src.scripts.run_features_seed0
-.venv/bin/python -m src.scripts.run_features_seed0 src/scripts/features_seed0_no_spaces.json  # glyphs only
+.venv/bin/python -m src.guess_who.scripts.run_board_seed0
+.venv/bin/python -m src.guess_who.scripts.run_board_seed0 src/guess_who/scripts/board_seed0_no_spaces.json  # no spaces in chat
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0 src/guess_who/scripts/features_seed0_no_spaces.json  # glyphs only
 ```
 
 `allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
@@ -58,7 +59,7 @@ a fresh chatroom and scratchpads. Launch only run 1 initially; review it before 
 There is no automatic batch continuation.
 
 ```sh
-.venv/bin/python -m src.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
+.venv/bin/python -m src.guess_who.scripts.run_features_seed0 configs/gemini_random_features_5x60s/run_1_seed0.json
 ```
 
 ### Archived experiments
@@ -86,15 +87,15 @@ the task chat may use only characters from `dictionary_a` (the whole file). In
 `language_free.json` it may use any characters. The task strings in both files are placeholders.
 
 ```
-.venv/bin/python -m src.scripts.run_language_round src/scripts/language_glyphs.json
-.venv/bin/python -m src.scripts.run_language_round src/scripts/language_free.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_glyphs.json
+.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_free.json
 ```
 
 ## Game and logs
 
 Two modes (`mode` in the config):
 - `features`: agents guess every feature; feedback is per-feature accuracy across agents.
-- `board`: agents also see the board of 32 people (`src/game_object/board.json`, listed without
+- `board`: agents also see the board of 32 people (`src/guess_who/board.json`, listed without
   identifiers) and guess every feature of the goal person; feedback is the % of agents with every
   feature right ("guessed the correct person").
 

@@ -9,7 +9,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, model_validator
 
-from src.config import ReasoningEffort
+from src.core.types import ReasoningEffort
 
 
 class LanguageExperimentConfig(BaseModel):

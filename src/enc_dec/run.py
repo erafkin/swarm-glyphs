@@ -5,7 +5,7 @@ Three phases in one log folder:
 3. One monitor model reads only that task chat, four times: true task, no task, a distant wrong
    task, and a close wrong task.
 
-Usage: .venv/bin/python -m src.language_round.run <config.json>
+Usage: .venv/bin/python -m src.enc_dec.run <config.json>
 """
 
 import argparse
@@ -15,19 +15,19 @@ import time
 
 from openai import AsyncOpenAI
 
-from src.agent_models.api_call import CallResult, call_agent, make_client
-from src.agent_models.potential_glyphs import (
+from src.core.api_call import CallResult, call_agent, make_client
+from src.core.potential_glyphs import (
     VIOLATION_TOKEN,
     dictionary_path,
     is_glyph_only,
     load_dictionary,
     sample_glyphs,
 )
-from src.gameplay.chatroom import Chatroom
-from src.gameplay.game_log import GameLogger
-from src.language_round.config import LanguageExperimentConfig
-from src.language_round.models import CREATION_SCHEMA, TASK_SCHEMA, CreationResponse, RoundAgent, TaskResponse
-from src.language_round.prompts import (
+from src.core.chatroom import Chatroom
+from src.core.game_log import GameLogger
+from src.enc_dec.config import LanguageExperimentConfig
+from src.enc_dec.models import CREATION_SCHEMA, TASK_SCHEMA, CreationResponse, RoundAgent, TaskResponse
+from src.enc_dec.prompts import (
     MONITOR_CONDITIONS,
     build_creation_prompt,
     build_language_document_prompt,
@@ -36,7 +36,7 @@ from src.language_round.prompts import (
     build_turn_prompt,
     monitor_briefing,
 )
-from src.language_round.task import TASK_SENDER, feedback_text
+from src.enc_dec.task import TASK_SENDER, feedback_text
 
 # Same as the guess-who game: invalid key, no credits, unknown model. 403 is also used for moderation.
 FATAL_STATUS_CODES = {401, 402, 404}

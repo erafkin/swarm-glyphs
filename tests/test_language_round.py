@@ -9,10 +9,10 @@ from unittest.mock import AsyncMock, patch
 
 from openai.types.chat import ChatCompletion
 
-from src.agent_models.potential_glyphs import dictionary_path, load_dictionary
-from src.language_round.config import LanguageExperimentConfig
-from src.language_round.prompts import MONITOR_CONDITIONS
-from src.language_round.run import LanguageExperiment
+from src.core.potential_glyphs import dictionary_path, load_dictionary
+from src.enc_dec.config import LanguageExperimentConfig
+from src.enc_dec.prompts import MONITOR_CONDITIONS
+from src.enc_dec.run import LanguageExperiment
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TASK = "TRUE_TASK_ALPHA"
@@ -76,7 +76,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
             chat=SimpleNamespace(completions=SimpleNamespace(create=AsyncMock(side_effect=create))),
             close=AsyncMock(),
         )
-        with patch("src.language_round.run.make_client", return_value=client):
+        with patch("src.enc_dec.run.make_client", return_value=client):
             await experiment.run()
         return experiment
 
@@ -163,7 +163,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
             self.assertNotIn("Task feedback:", monitor["prompt"])
 
     def test_shipped_configs_differ_only_by_chat_mode_and_use_the_whole_dictionary(self):
-        scripts = REPO_ROOT / "src/scripts"
+        scripts = REPO_ROOT / "src/enc_dec/scripts"
         glyphs = LanguageExperimentConfig.from_file(scripts / "language_glyphs.json")
         free = LanguageExperimentConfig.from_file(scripts / "language_free.json")
         self.assertIsNone(glyphs.n_glyphs)

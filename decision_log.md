@@ -69,7 +69,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   either (a brief prefix-only version was dropped), so IDs cannot stand in for spaces as
   delimiters; messages are glyphs only. Agents still see each message's sender in the chat log.
   With spaces on, IDs may appear anywhere.
-  `src/scripts/board_seed0_no_spaces.json` and `src/scripts/features_seed0_no_spaces.json`
+  `src/guess_who/scripts/board_seed0_no_spaces.json` and `src/guess_who/scripts/features_seed0_no_spaces.json`
   are the board and features seed-0 runs with only this changed. Both launchers accept
   an optional config path; the original configs remain their defaults.
 - **A message with anything else is replaced entirely** by the shared violation token `⊘`. Newlines
@@ -96,7 +96,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
     same output as features mode. A guess counts as the correct person only if every feature
     matches. Score is the fraction of agents who guessed the correct person; win when that's
     ≥ `win_threshold`.
-- **One universal board** in `src/game_object/board.json`: 32 people numbered 1-32, features in one-hot form.
+- **One universal board** in `src/guess_who/board.json`: 32 people numbered 1-32, features in one-hot form.
 - **Agents never see a person identifier.** The board is listed without numbers or names, in a
   different shuffled order per agent. Earlier versions had agents guess a person number, then a
   random UUID name; both were replaced by guessing the features directly, which removes any shared
@@ -150,7 +150,7 @@ mode), which inflated scores for goals whose values happened to be listed first.
   `final_interviews.jsonl`. Toggle with `final_interview` in config.
 - Replaced an earlier per-glyph "what does each glyph mean" interview.
 
-## First test runs (`src/scripts/`)
+## First test runs (`src/guess_who/scripts/`)
 
 - **Randomized-ownership Gemini batch:** `configs/gemini_random_features_5x60s/` prepares five
   independent fresh games with seeds 0–4, medium reasoning, 16000-token gameplay/interview caps,
@@ -187,7 +187,7 @@ mode), which inflated scores for goals whose values happened to be listed first.
 
 ## Language handoff experiment
 
-Separate from the guessing game (`src/language_round/`, launched by `run_language_round.py`).
+Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round.py`).
 
 - **Phase 1, planning.** Agents are not told the task. They have `language_minutes` (10 in the
   shipped configs) and the chat is ordinary English, in both chat modes, so they can plan out loud.
