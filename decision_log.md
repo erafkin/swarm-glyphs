@@ -318,6 +318,23 @@ were subsequently updated in the dated entries below.
   Standalone decoding has its own budget. Historical Guess Who configurations and logs
   retain their recorded limits.
 
+### 2026-11-07, evening: decoding teams for round 3, round labels on log folders
+
+- **Round 3 is a team per condition**, not one call. `monitor_n_agents` decoders (default 1,
+  `--agents N` on the CLI) work like the round 1 creation team: an English discussion, one shared
+  draft of the judged document, a done flag per decoder, and a stop on all-done or
+  `monitor_minutes` (default 10, `--minutes M`). The draft at the stop is the condition's answer.
+  A single decoder gets the same loop with its messages as private notes. Conditions still run one
+  after another under one cap; a cap hit mid-condition saves that draft and stops the batch.
+  The turn format is the round 1 shape: `message`, `document`, `done`.
+- **Mechanics text lives in `round3_config.json`** (`mechanics`, with `[[team]]` / `[[single]]`
+  blocks) and must describe `monitor.py`, as `round1_config.json` does for `run.py`.
+- **Log folder names carry the rounds covered**: `<timestamp>_<id>_round_1` for creation only,
+  `_round_2` for a task run on a frozen document, `_round_1_2_3` for a full run with inline
+  monitors, and `_round_3` for monitor replays under `monitor_runs/`. The guessing game keeps the
+  old `<timestamp>_<id>` form; the viewer only parses the timestamp prefix.
+- **New per-condition logs:** `monitor_chat_<condition>.jsonl` and the shared `monitor_calls.jsonl`.
+
 ## Logging
 
 Each game writes `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `glyphs.json`, `board.json` (board mode),

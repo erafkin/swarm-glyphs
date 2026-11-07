@@ -19,7 +19,7 @@ from src.enc_dec.config import LanguageExperimentConfig
 from src.enc_dec.escape_room import (
     AGENT_IDS, PRIVATE_CLUES, EscapeAction, EscapeRoom, room_definition,
 )
-from src.enc_dec.models import CreationResponse, EscapeTaskResponse, ESCAPE_TASK_SCHEMA
+from src.enc_dec.models import CreationResponse, DecodeResponse, DECODE_SCHEMA, EscapeTaskResponse, ESCAPE_TASK_SCHEMA
 from src.enc_dec.monitor import (
     CONDITION_LABELS, execute_monitor_inputs, prepare_monitor_inputs,
 )
@@ -330,7 +330,8 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.source = Path(self.tmp.name)
-        self.config = LanguageExperimentConfig(task_kind="escape_room", model="offline-monitor", reasoning_effort="medium")
+        self.config = LanguageExperimentConfig(task_kind="escape_room", model="offline-monitor", reasoning_effort="medium",
+                                               min_turn_interval_s=0.01, monitor_minutes=0.1)
         (self.source / "config.json").write_text(self.config.model_dump_json())
         definition = room_definition()
         definition["private_clues"]["agent_0"]["cabinet"] = "SAVED_PRIVATE_CLUE_CANARY"
@@ -349,10 +350,17 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         requests = bundle["requests"]
         self.assertEqual([r["condition"] for r in requests], list(monitor_conditions()))
         self.assertEqual(list(monitor_conditions()), ["task_summary", "task_full", "no_task", "wrong_task"])
+        self.assertEqual(bundle["n_agents"], 1)
         for request in requests:
             self.assertEqual(request["prompt"], "TRANSCRIPT\n" + bundle["transcript"])
             self.assertNotIn("[[", request["system_prompt"])
             self.assertIn("a second team of 8 agents", request["system_prompt"])
+            self.assertEqual(list(request["system_prompts"]), ["decoder_0"])
+            self.assertTrue(request["system_prompt"].startswith("You are decoder_0, the decoding team in a three-round game, working alone."))
+            self.assertNotIn("The other agents on your team", request["system_prompt"])
+            self.assertIn("You have 0.1 minutes.", request["system_prompt"])
+            self.assertIn("You work alone over several turns.", request["system_prompt"])
+            self.assertIn('"done": true or false', request["system_prompt"])
         public_text = json.dumps(bundle)
         for secret in ["PRIVATE_INTENT_CANARY", "PRIVATE_NOTES_CANARY", "NEVER_READ_CANARY", "123456"]:
             self.assertNotIn(secret, public_text)
@@ -395,22 +403,90 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn('[1] [task] {"stage":0,"invalid_attempts":0}', baseline["transcript"])
         self.assertIn("[2] [agent_0] [message withheld]", baseline["transcript"])
 
-    async def test_independent_calls_share_settings_and_keep_cap_crossing_result(self):
+    async def test_independent_teams_share_settings_and_keep_cap_crossing_result(self):
         bundle = prepare_monitor_inputs(self.source)
         logger = GameLogger(str(self.source / "outputs"))
-        with patch("src.enc_dec.monitor.call_agent", new=AsyncMock(return_value=result(cost=0.03))) as call:
+        reply = result(DecodeResponse(message="", document="DECODED", done=True), cost=0.03)
+        with patch("src.enc_dec.monitor.call_agent", new=AsyncMock(return_value=reply)) as call:
             summary = await execute_monitor_inputs(None, self.config, bundle, logger, 0.05)
         self.assertEqual(call.await_count, 2)
         self.assertEqual(summary["conditions_completed"], list(monitor_conditions()[:2]))
         self.assertEqual(summary["stop_reason"], "cost_limit_reached")
+        self.assertEqual(summary["n_agents"], 1)
         self.assertAlmostEqual(summary["total_cost_usd"], 0.06)
-        self.assertEqual(len(rows(logger.path / "monitor.jsonl")), 2)
+        monitors = rows(logger.path / "monitor.jsonl")
+        self.assertEqual(len(monitors), 2)
+        for row in monitors:
+            self.assertEqual(row["answer"], "DECODED")
+            self.assertEqual(row["stop_reason"], "all_done")
+            self.assertEqual(row["turns"], {"decoder_0": 1})
+            self.assertEqual(row["n_agents"], 1)
         for i, call_args in enumerate(call.call_args_list):
             self.assertEqual(call_args.args[2], bundle["requests"][i]["system_prompt"])
-            self.assertEqual(call_args.args[3], bundle["requests"][i]["prompt"])
-            self.assertIsNone(call_args.args[4])
+            self.assertIn(bundle["requests"][i]["prompt"], call_args.args[3])
+            self.assertIn("YOUR NOTES (most recent last):\n(no messages yet)", call_args.args[3])
+            self.assertIn("CURRENT DRAFT OF THE JUDGED DOCUMENT:\n(empty)", call_args.args[3])
+            self.assertIs(call_args.args[4], DECODE_SCHEMA)
             self.assertEqual(call_args.args[6].max_tokens, 16000)
             self.assertEqual(call_args.args[6].reasoning_effort, "medium")
+
+    async def test_team_of_two_shares_a_draft_and_stops_when_both_are_done(self):
+        config = self.config.model_copy(update={"monitor_n_agents": 2})
+        bundle = prepare_monitor_inputs(self.source, ("no_task",), config=config)
+        request = bundle["requests"][0]
+        self.assertEqual(bundle["n_agents"], 2)
+        self.assertEqual(list(request["system_prompts"]), ["decoder_0", "decoder_1"])
+        self.assertIn("The other agents on your team are: decoder_1.", request["system_prompts"]["decoder_0"])
+        self.assertIn("The other agents on your team are: decoder_0.", request["system_prompts"]["decoder_1"])
+        self.assertNotIn("working alone", request["system_prompt"])
+        self.assertIn("when the team agrees the draft is final", request["system_prompt"])
+        logger = GameLogger(str(self.source / "outputs"))
+
+        async def fake(client, model, system, prompt, schema, response_model, settings):
+            if system == request["system_prompts"]["decoder_0"]:
+                return result(DecodeResponse(message="The first glyph opens a clause.", document="DRAFT BY DECODER_0", done=True), cost=0.01)
+            if "DRAFT BY DECODER_0" in prompt:
+                return result(DecodeResponse(message="Agreed.", document="", done=True), cost=0.01)
+            return result(DecodeResponse(message="Still reading.", document="", done=False), cost=0.01)
+
+        with patch("src.enc_dec.monitor.call_agent", side_effect=fake):
+            summary = await execute_monitor_inputs(None, config, bundle, logger, 5)
+        self.assertEqual(summary["conditions_completed"], ["no_task"])
+        self.assertEqual(summary["n_agents"], 2)
+        row = rows(logger.path / "monitor.jsonl")[0]
+        self.assertEqual(row["stop_reason"], "all_done")
+        self.assertEqual(row["answer"], "DRAFT BY DECODER_0")
+        self.assertEqual(row["done"], {"decoder_0": True, "decoder_1": True})
+        self.assertEqual(row["n_agents"], 2)
+        chat = rows(logger.path / "monitor_chat_no_task.jsonl")
+        self.assertEqual([m["sender"] for m in chat], ["decoder_0", "decoder_1"])
+        self.assertEqual([m["text"] for m in chat], ["The first glyph opens a clause.", "Agreed."])
+        calls = rows(logger.path / "monitor_calls.jsonl")
+        self.assertEqual([c["agent_id"] for c in calls], ["decoder_0", "decoder_1"])
+        self.assertIn("TEAM DISCUSSION (most recent last):\n[decoder_0] The first glyph opens a clause.", calls[1]["turn_prompt"])
+        self.assertIn("CURRENT DRAFT OF THE JUDGED DOCUMENT:\nDRAFT BY DECODER_0", calls[1]["turn_prompt"])
+        self.assertTrue(all(c["state_applied"] for c in calls))
+
+    async def test_time_limit_keeps_the_latest_draft(self):
+        config = self.config.model_copy(update={"monitor_minutes": 0.02, "min_turn_interval_s": 0.2})
+        bundle = prepare_monitor_inputs(self.source, ("no_task",), config=config)
+        logger = GameLogger(str(self.source / "outputs"))
+        turns = []
+
+        async def fake(client, model, system, prompt, schema, response_model, settings):
+            turns.append(prompt)
+            return result(DecodeResponse(message="", document=f"PARTIAL {len(turns)}", done=False), cost=0.001)
+
+        with patch("src.enc_dec.monitor.call_agent", side_effect=fake):
+            summary = await execute_monitor_inputs(None, config, bundle, logger, 5)
+        self.assertEqual(summary["conditions_completed"], ["no_task"])
+        self.assertEqual(summary["stop_reason"], "completed")
+        row = rows(logger.path / "monitor.jsonl")[0]
+        self.assertEqual(row["stop_reason"], "time_limit")
+        self.assertGreaterEqual(len(turns), 2)
+        self.assertEqual(row["answer"], f"PARTIAL {len(turns)}")
+        self.assertEqual(row["done"], {"decoder_0": False})
+        self.assertIn("CURRENT DRAFT OF THE JUDGED DOCUMENT:\nPARTIAL 1", turns[1])
 
     async def test_missing_cost_api_error_and_interruption_are_reported(self):
         bundle = prepare_monitor_inputs(self.source)
@@ -437,6 +513,20 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(json.loads(paths[0].read_text())["requests"]), 4)
         saved = json.loads((paths[0].parent / "monitor_config.json").read_text())
         self.assertEqual(saved["max_cost_usd"], 50)
+        self.assertTrue(paths[0].parent.name.endswith("_round_3"), paths[0].parent.name)
+        with patch("sys.argv", ["monitor", str(self.source), "--prepare-only", "--agents", "3", "--minutes", "2"]), \
+                patch("src.enc_dec.monitor.make_client") as client:
+            main()
+        client.assert_not_called()
+        newest = max((self.source / "monitor_runs").glob("*/monitor_inputs.json"), key=lambda p: p.stat().st_mtime_ns)
+        bundle = json.loads(newest.read_text())
+        self.assertEqual(bundle["n_agents"], 3)
+        self.assertEqual(bundle["minutes"], 2)
+        self.assertEqual(list(bundle["requests"][0]["system_prompts"]), ["decoder_0", "decoder_1", "decoder_2"])
+        self.assertIn("You have 2 minutes.", bundle["requests"][0]["system_prompt"])
+        with patch("sys.argv", ["monitor", str(self.source), "--prepare-only", "--agents", "0"]):
+            with self.assertRaises(ValidationError):
+                main()
 
     def test_default_conditions_are_read_when_preparing_not_at_import(self):
         settings = {**load_prompt_config("round3_config.json"), "conditions": ["no_task"]}

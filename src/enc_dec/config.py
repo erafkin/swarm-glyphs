@@ -44,6 +44,12 @@ class LanguageExperimentConfig(BaseModel):
     request_timeout_s: float = 120
     monitor_max_tokens: int = Field(default=16000, ge=1)
     monitor_reasoning_effort: ReasoningEffort | None = None  # None inherits reasoning_effort
+    # Round 3 decoding team, per condition: monitor_n_agents decoders discuss in English and share one
+    # draft of the judged document, like round 1. The round ends when every decoder sets done, or at
+    # monitor_minutes. Each turn shows the most recent monitor_context_messages discussion messages.
+    monitor_n_agents: int = Field(default=1, ge=1)
+    monitor_minutes: float = Field(default=10, gt=0)
+    monitor_context_messages: int = Field(default=100, ge=0)
 
     # Custom tasks only; escape-room prompts come from the engine. The monitor briefings' task
     # name, summary and wrong task live in src/enc_dec/prompts/round3_config.json.

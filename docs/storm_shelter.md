@@ -210,9 +210,17 @@ in these presets (`run_monitors: false`), so review the task before spending on 
 
 ### Replay the saved chat under variable conditions
 
-Replace `logs/RUN` below with a finished escape-room run directory. These commands never
-rerun the task or language creation. Each invocation writes a separate
-`logs/RUN/monitor_runs/<timestamp>_<id>/` folder.
+Replace `logs/RUN` below with a finished escape-room run directory (run folders end in the
+rounds they covered, such as `_round_1_2` or `_round_2`). These commands never rerun the task or
+language creation. Each invocation writes a separate `logs/RUN/monitor_runs/<timestamp>_<id>_round_3/`
+folder.
+
+Each condition is decoded by a team of `monitor_n_agents` decoders (1 in the shipped presets;
+`--agents N` overrides it). The team works like round 1: an English discussion, one shared draft
+of the judged document that any decoder can replace, and a done flag per decoder. The condition
+ends when every decoder has set done, or after `monitor_minutes` (10; `--minutes M` overrides it).
+The draft at that moment is the condition's answer. With one decoder the discussion channel is its
+own notes between turns.
 
 ```sh
 # Prepare the configured briefings without API calls.
@@ -220,6 +228,9 @@ rerun the task or language creation. Each invocation writes a separate
 
 # Run the configured independent conditions, with a separate $50 soft cap for the whole batch.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --max-cost-usd 50
+
+# A decoding team of three per condition, five minutes each.
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --agents 3 --minutes 5
 
 # Select one condition or repeat --condition to select several.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --condition task_mechanics
@@ -231,12 +242,17 @@ rerun the task or language creation. Each invocation writes a separate
 CLI identifiers are `task_summary`, `task_full`, `task_mechanics`, `no_task` and
 `wrong_task`; the default set and the task texts are in `src/enc_dec/prompts/round3_config.json`
 (`task_mechanics`, public task rules without internals, is off by default). The
-briefing sits in the system prompt and the user turn is the transcript only. `--model` overrides the monitor model for that invocation. The
-saved configuration otherwise supplies the same medium effort and 16,000-token limit
-to every condition. For a controlled comparison, keep those settings fixed and repeat
-the independent calls if assessing model variability. Calls run sequentially with no
-shared conversational state. If the monitor cap is reached, the response is saved and
-remaining conditions are skipped; the summary lists completed and requested conditions.
+briefing and the team mechanics sit in the system prompt; each turn's user message carries the
+transcript, the team discussion so far and the current draft. `--model` overrides the monitor
+model for that invocation. The saved configuration otherwise supplies the same medium effort and
+16,000-token limit per reply to every condition. For a controlled comparison, keep those settings
+fixed and repeat the independent runs if assessing model variability. Conditions run one after
+another with no shared state; within a condition the decoders run concurrently. If the monitor
+cap is reached mid-condition, that condition's current draft is saved with stop reason
+`cost_limit_reached` and remaining conditions are skipped; the summary lists completed and
+requested conditions. Per condition the logs hold `monitor_chat_<condition>.jsonl` (the
+discussion) and the shared `monitor_calls.jsonl` (every decoder turn); `monitor.jsonl` has one
+row per condition with the final draft as `answer`.
 The standalone monitor defaults to $50 total per invocation, not per condition. Inline
 monitors, if enabled, use the remaining run budget. Standalone decoding is a separate budget
 from the creation/task run. The ten-minute creation discussion limit is unchanged.

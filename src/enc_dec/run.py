@@ -58,7 +58,8 @@ class LanguageExperiment:
         self.creation_only = creation_only  # stop after swarmish.txt is written; no task, no monitors
         self.config = config
         self.rng = random.Random(config.seed)
-        self.logger = GameLogger(config.log_dir)
+        rounds = ([] if language_text is not None else ["1"]) + ([] if creation_only else ["2"] + (["3"] if config.run_monitors else []))
+        self.logger = GameLogger(config.log_dir, "round_" + "_".join(rounds))
         self.glyphs = self._sample_glyphs()
         self.creation_agents = self._make_agents(config.n_agents, "creation")
         n_task = config.task_n_agents or config.n_agents

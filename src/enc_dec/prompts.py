@@ -265,14 +265,25 @@ def task_briefing_parts(config: LanguageExperimentConfig, definition: dict | Non
 
 def build_monitor_prompt(
     config: LanguageExperimentConfig, condition: str, definition: dict | None = None, transcript: str = "",
-    language_protocol: dict | None = None,
+    language_protocol: dict | None = None, agent_id: str = "decoder_0", agent_ids: list[str] | None = None,
 ) -> tuple[str, str]:
-    """Round 3, from prompts/round3_prompt.md: the system prompt carries the briefing, the user turn the transcript."""
+    """Round 3, from prompts/round3_prompt.md, per decoder: the system prompt carries the briefing and the
+    team mechanics from round3_config.json, the user turn the transcript. One decoder is the single case."""
     if condition not in ALL_MONITOR_CONDITIONS:
         raise ValueError(f"Unknown monitor condition: {condition}")
     settings = load_prompt_config("round3_config.json")
     task_prompt, task_details = task_briefing_parts(config, definition)
+    agent_ids = agent_ids or [agent_id]
+    team_flags = {"team": len(agent_ids) > 1, "single": len(agent_ids) == 1}
+    run_slots = {
+        "monitor_minutes": f"{config.monitor_minutes:g}",
+        "monitor_context_messages": config.monitor_context_messages,
+    }
     slots = {
+        "agent_id": agent_id,
+        "n_agents": len(agent_ids),
+        "other_agent_ids": ", ".join(a for a in agent_ids if a != agent_id),
+        "mechanics": render(settings["mechanics"], run_slots, team_flags),
         "n_round2_agents": config.task_n_agents or config.n_agents,
         "task_sender": TASK_SENDER,
         "violation_token": VIOLATION_TOKEN,
@@ -294,4 +305,23 @@ def build_monitor_prompt(
     flags = {name: name == condition for name in ALL_MONITOR_CONDITIONS}
     flags["told_task"] = condition != "no_task"
     flags["tell_constraints"] = bool(settings["tell_constraints"])
+    flags.update(team_flags)
     return render(load_template("round3_prompt.md"), slots, flags), f"TRANSCRIPT\n{transcript}"
+
+
+def build_decode_turn_prompt(
+    transcript_prompt: str, chat: str, draft: str, elapsed_s: float, limit_s: float, team: bool
+) -> str:
+    """One round 3 turn: the clock, the round 2 log, the team discussion (or own notes), the shared draft."""
+    discussion = "TEAM DISCUSSION (most recent last)" if team else "YOUR NOTES (most recent last)"
+    return f"""Time elapsed in this round: {elapsed_s:.0f}s of {limit_s:.0f}s.
+
+{transcript_prompt}
+
+{discussion}:
+{chat}
+
+CURRENT DRAFT OF THE JUDGED DOCUMENT:
+{draft or "(empty)"}
+
+Respond with the JSON object."""

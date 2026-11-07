@@ -55,6 +55,15 @@ def _schema(name: str, fields: list[str]) -> dict[str, Any]:
 
 CREATION_SCHEMA = _schema("creation_turn", ["message", "language_document", "done"])
 TASK_SCHEMA = _schema("task_turn", ["scratchpad", "message", "answer"])
+
+
+class DecodeResponse(BaseModel):
+    message: str = ""  # English, to the decoding team; a private note to self when working alone
+    document: str = ""  # full shared draft of the judged document; empty leaves it unchanged
+    done: bool = False
+
+
+DECODE_SCHEMA = _schema("decode_turn", ["message", "document", "done"])
 ESCAPE_TASK_SCHEMA = {
     "name": "escape_room_turn", "strict": True, "schema": EscapeTaskResponse.model_json_schema(),
 }

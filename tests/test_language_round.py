@@ -18,6 +18,7 @@ from src.enc_dec.run import LanguageExperiment
 REPO_ROOT = Path(__file__).resolve().parents[1]
 TASK = "TRUE_TASK_ALPHA"
 ROUND3 = {
+    **prompts.load_prompt_config("round3_config.json"),  # keeps the real mechanics text
     "conditions": ["task_summary", "task_full", "no_task", "wrong_task"],
     "tell_constraints": False,
     "task_name": "Alpha Game",
@@ -72,7 +73,9 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
                     return completion(f"DOC-{agent_id}")
                 return completion("I think the language marks each word with the first glyph.")
             required = kwargs["response_format"]["json_schema"]["schema"]["required"]
-            if "done" in required:
+            if "document" in required:
+                body = {"message": "DECODER NOTE", "document": f"DECODED-{agent_id}", "done": True}
+            elif "done" in required:
                 body = {"message": "ENGLISH PLAN", "language_document": "SHARED DOC", "done": True}
             else:
                 body = {"scratchpad": "notes", "message": task_message, "answer": "ready"}
@@ -97,6 +100,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         experiment = await self.run_alphabet("glyphs_tangut")
         self.assertEqual(experiment.creation_stop_reason, "all_done")
         self.assertEqual(experiment.task_stop_reason, "time_limit")
+        self.assertTrue(experiment.logger.path.name.endswith("_round_1_2_3"), experiment.logger.path.name)
         self.assertEqual(set(experiment.glyphs), set(load_dictionary(dictionary_path("glyphs_tangut"))))
         self.assertEqual(len(experiment.glyphs), 6136)
 
@@ -140,7 +144,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(any("SHARED DOC" in prompt and "ENGLISH PLAN" in prompt for prompt in doc_prompts))
         for record in self.records(experiment, "language_document"):
             self.assertIn("Meaning must come from what glyphs", record["system_prompt"])
-            self.assertIn("under 300 lines", record["system_prompt"])
+            self.assertIn(f"under {prompts.load_prompt_config('round1_config.json')['max_lines']} lines", record["system_prompt"])
         self.assertIn("Meaning must come from what glyphs", task_prompt)
         self.assertIn("replaced with", creation_prompt)
 
@@ -184,6 +188,20 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn(told, wrong)
         for text in ("Alpha", "SUMMARY_ALPHA", TASK, "DETAILS_ALPHA"):
             self.assertNotIn(text, wrong)
+        for m in monitors:
+            self.assertEqual(m["answer"], "DECODED-decoder_0")
+            self.assertEqual(m["stop_reason"], "all_done")
+            self.assertEqual(m["n_agents"], 1)
+            self.assertEqual(m["turns"], {"decoder_0": 1})
+            self.assertIn("working alone", m["system_prompt"])
+            self.assertIn("You have 10 minutes.", m["system_prompt"])
+        decode_calls = self.records(experiment, "monitor_calls")
+        self.assertEqual(len(decode_calls), 4)
+        for call in decode_calls:
+            self.assertIn("YOUR NOTES (most recent last):\n(no messages yet)", call["turn_prompt"])
+            self.assertIn("CURRENT DRAFT OF THE JUDGED DOCUMENT:\n(empty)", call["turn_prompt"])
+            self.assertTrue(call["state_applied"])
+        self.assertEqual([m["text"] for m in self.records(experiment, "monitor_chat_task_summary")], ["DECODER NOTE"])
         for text in by_condition.values():
             self.assertIn("a second team of 2 agents", text)
             self.assertIn(experiment.glyphs[0], text)
@@ -227,6 +245,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         experiment = await self.run_alphabet("glyphs_tangut", creation_only=True)
         self.assertEqual(experiment.creation_stop_reason, "all_done")
         self.assertEqual(experiment.task_stop_reason, "")
+        self.assertTrue(experiment.logger.path.name.endswith("_round_1"), experiment.logger.path.name)
         self.assertIn("DOC-agent_0", (experiment.logger.path / "swarmish.txt").read_text())
         self.assertTrue((experiment.logger.path / "chatroom.jsonl").exists())
         for stream in ("task_chatroom.jsonl", "monitor.jsonl", "task_answers.json"):

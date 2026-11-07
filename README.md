@@ -99,6 +99,8 @@ settings (model, alphabet, agent count, timing and budget) live in `configs/stor
 # After the task, inspect four monitor briefings on the SAME saved chat.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
 # Remove --prepare-only to make decoding calls; separate default $50 cap for the whole monitor batch.
+# A decoding team of three per condition, five minutes each; both override the saved config.
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --agents 3 --minutes 5
 ```
 
 The room has no rounds or invalid-attempt loss limit. Clues unlock as the team opens the
@@ -119,9 +121,12 @@ the other saved output is the planning chatroom. The round 1 system prompt is th
 A new team then receives only that file and the task, and works on it in the language for
 `task_minutes`. With `task_feedback` true (the default), the task posts status updates into that
 chatroom; set it false to leave them out. The saved task chat is the agents'
-language messages plus that feedback. One monitor model reads only that chatroom, once per
-briefing listed in `src/enc_dec/prompts/round3_config.json` (by default task summary, full task
-knowledge, no task, and a wrong task), with the system prompt from `round3_prompt.md`. The task
+language messages plus that feedback. A decoding team of `monitor_n_agents` decoders (1 by
+default) then reads only that chatroom, once per briefing listed in
+`src/enc_dec/prompts/round3_config.json` (by default task summary, full task knowledge, no task,
+and a wrong task). Like round 1, the team discusses in English and shares one draft of the judged
+document until every decoder sets done or `monitor_minutes` (10) run out; the system prompt is
+`round3_prompt.md` with the mechanics from `round3_config.json`. The task
 chat may use only characters from the glyph file named by `glyph_dictionary`:
 `glyphs_tangut.txt` (every Tangut ideograph, 6,136 of them) in `language_tangut.json`, or
 `glyphs_latin.txt` (a-z and 0-9) in `language_latin.json`. Anything else is replaced by `⊘`.
@@ -151,7 +156,7 @@ Each game samples `n_glyphs` (default 18) glyphs from `glyph_dictionary` (`dicti
 `dictionary_b`, the .txt files at the repo root), shared by all agents. Each agent sees the glyphs,
 feature options, and board in its own random order.
 
-Logs go to `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `glyphs.json`, `board.json` (board mode),
+Logs go to `logs/<timestamp>_<game_id>/` (the language experiment appends what the run covered, such as `_round_1`, `_round_2` or `_round_1_2_3`, and monitor replays end in `_round_3`): `config.json`, `goal.json`, `glyphs.json`, `board.json` (board mode),
 `agents.json` (system prompts), `chatroom.jsonl`, `agent_calls.jsonl` (every response, scratchpad,
 and guess), `scores.jsonl`, `final_interviews.jsonl` (each agent's end-of-game explanation of its communication strategy),
 `errors.jsonl`, `summary.json` (stop reason, final score, total cost).
