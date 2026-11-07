@@ -72,9 +72,13 @@ every feature correct. Individual guesses are not revealed. The game ends when
 {win}{rounds}."""
 
 
-def _response_format_text(board: Board | None) -> str:
-    fields = """- "scratchpad": your full updated scratchpad.
-- "message": your chat message (glyphs, spaces, and agent IDs only), or "" to stay silent."""
+def _allowed_chat_text(allow_spaces: bool) -> str:
+    return "glyphs, spaces, and agent IDs" if allow_spaces else "glyphs, with no spaces or agent IDs"
+
+
+def _response_format_text(board: Board | None, allow_spaces: bool) -> str:
+    fields = f"""- "scratchpad": your full updated scratchpad.
+- "message": your chat message ({_allowed_chat_text(allow_spaces)} only), or "" to stay silent."""
     target = "every feature" if board is None else "every feature of the goal person"
     return f"""{fields}
 - "guess": your current guess for {target}, using one of its possible values. You must
@@ -83,6 +87,7 @@ def _response_format_text(board: Board | None) -> str:
 
 def build_system_prompt(agent: AgentState, all_agent_ids: list[str], config: GameConfig, board: Board | None) -> str:
     others = ", ".join(a for a in all_agent_ids if a != agent.agent_id)
+    forbidden = "letters, digits, punctuation, other symbols" + ("" if config.allow_spaces else ", spaces, agent IDs")
 
     return f"""You are {agent.agent_id}, one of {len(all_agent_ids)} agents playing a cooperative game.
 The other agents are: {others}.
@@ -92,10 +97,10 @@ GOAL
 
 COMMUNICATION
 You can only talk to the other agents through a shared chatroom, and chat messages may ONLY
-contain these glyphs, spaces, and agent IDs:
+contain these {_allowed_chat_text(config.allow_spaces)}:
   {' '.join(agent.glyphs_view)}
 The glyphs have no predefined meaning.
-Any chat message containing anything else (letters, digits, punctuation, other symbols) is
+Any chat message containing anything else ({forbidden}) is
 discarded and replaced with "{VIOLATION_TOKEN}", which everyone understands to mean that agent
 tried to speak outside the glyphs.
 Each turn you are shown only the most recent {config.chat_context_messages} chatroom messages; older
@@ -114,7 +119,7 @@ SCORING
 
 RESPONSE FORMAT
 Respond with a single JSON object with these fields:
-{_response_format_text(board)}"""
+{_response_format_text(board, config.allow_spaces)}"""
 
 
 def _state_text(agent: AgentState, recent_chat: list[ChatMessage], features: list[Feature]) -> str:
@@ -142,7 +147,7 @@ Respond with the JSON object."""
 FINAL_INTERVIEW_QUESTION = "Explain your communication strategy with the other agents"
 
 
-def build_final_interview_system_prompt(agent: AgentState, board: Board | None = None) -> str:
+def build_final_interview_system_prompt(agent: AgentState, board: Board | None = None, allow_spaces: bool = True) -> str:
     """Retrospective instructions, separate from the game's JSON/glyph response contract."""
     feature_lines = "\n".join(f"- {f.name}: {', '.join(f.options)}" for f in agent.features_view)
     if board is None:
@@ -164,10 +169,11 @@ The possible feature values were:
 {task_context}
 Your available chat glyphs were:
   {' '.join(agent.glyphs_view)}
-Spaces and agent IDs were also allowed in chat messages.
+{"Spaces and agent IDs were also allowed in chat messages." if allow_spaces else
+   "Spaces and agent IDs were not allowed in chat messages."}
 
 Use your recorded scratchpad, recent chat, and final guesses as evidence. Describe the strategy
-you actually used, including any use of score feedback or agent IDs. Distinguish attempted
+you actually used, including any use of score feedback{" or agent IDs" if allow_spaces else ""}. Distinguish attempted
 conventions from meanings you believe were shared, and say when the evidence is uncertain.
 Keep your explanation concise."""
 

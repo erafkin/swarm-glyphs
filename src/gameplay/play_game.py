@@ -162,7 +162,7 @@ class Game:
             agent.guess, rejected = agent.guess.updated(self.goal.features, response.guess)
 
             message = response.message.strip()
-            is_violation = bool(message) and not is_glyph_only(message, self.agent_ids, self.glyphs)
+            is_violation = bool(message) and not is_glyph_only(message, self.agent_ids, self.glyphs, self.config.allow_spaces)
             if message:
                 self.chatroom.post(agent.agent_id, VIOLATION_TOKEN if is_violation else message, is_violation)
 
@@ -236,7 +236,7 @@ class Game:
         })
 
         async def ask(agent: AgentState) -> None:
-            system_prompt = build_final_interview_system_prompt(agent, self.board)
+            system_prompt = build_final_interview_system_prompt(agent, self.board, self.config.allow_spaces)
             prompt = build_final_interview_prompt(agent, recent_chat, self.goal.features)
             try:
                 result = await call_agent(

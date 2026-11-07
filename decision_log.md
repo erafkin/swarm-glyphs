@@ -56,6 +56,12 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 
 - **Each glyph is a single unicode character; spaces are allowed between glyphs.** Agent IDs are also
   allowed in messages so agents can address each other.
+- **Spaces are configurable** (`allow_spaces`, default true). With `allow_spaces: false`, any space
+  makes the message a violation, and the prompts say so. Agent IDs are not allowed in messages
+  either (a brief prefix-only version was dropped), so nothing can stand in for spaces as a
+  delimiter; messages are glyphs only. Agents still see each message's sender in the chat log.
+  With spaces on, IDs may appear anywhere.
+  `src/scripts/board_seed0_no_spaces.json` is the board seed-0 run with only this changed.
 - **A message with anything else is replaced entirely** by the shared violation token `⊘`. Newlines
   count as violations.
 - **Glyphs come from one of two dictionaries** (`glyph_dictionary`: `dictionary_a` (default) or
@@ -138,6 +144,7 @@ mode), which inflated scores for goals whose values happened to be listed first.
 
 - Two runs, seed 0 (goal person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
   scoring every 4 minutes (240 seconds): `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
+  `run_board_seed0.py` takes an optional config path (default `board_seed0.json`).
 - **Stop only when every agent is right or the run's cost hits $50**: `win_threshold: 1.0`
   (features mode: `win_mode: agents`, i.e. every agent has every feature right), `max_cost_usd: 50`,
   no round limit.

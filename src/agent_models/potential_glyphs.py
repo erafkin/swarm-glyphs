@@ -1,6 +1,6 @@
 """
-Potential glyphs for the game. The models can only use these glyphs (plus spaces and
-agent IDs) in chatroom messages to communicate with other agents.
+Potential glyphs for the game. The models can only use these glyphs (plus spaces and agent IDs,
+unless config.allow_spaces is off) in chatroom messages to communicate with other agents.
 
 Glyphs come from a dictionary file (dictionary_a.txt or dictionary_b.txt at the repo root, chosen
 in config). Every non-whitespace character in the file is one glyph. Each game samples
@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-# Posted in place of any message that contains something other than glyphs, spaces, and agent IDs.
+# Posted in place of any message that contains something other than the allowed characters.
 VIOLATION_TOKEN = "⊘"
 
 
@@ -38,10 +38,15 @@ def sample_glyphs(name: str, n: int, rng: random.Random) -> list[str]:
     return rng.sample(dictionary, n)
 
 
-def is_glyph_only(text: str, agent_ids: list[str], glyphs: list[str]) -> bool:
-    """True if text consists only of glyphs, spaces, and agent IDs."""
-    # Longest IDs first so e.g. "agent_10" isn't partially matched as "agent_1".
-    for agent_id in sorted(agent_ids, key=len, reverse=True):
-        text = re.sub(rf"(?<!\w){re.escape(agent_id)}(?!\w)", " ", text)
-    allowed = set(glyphs) | {" "}
-    return all(ch in allowed for ch in text)
+def is_glyph_only(text: str, agent_ids: list[str], glyphs: list[str], allow_spaces: bool = True) -> bool:
+    """
+    With spaces: text is only glyphs, spaces, and agent IDs.
+    Without spaces: text is only glyphs (no agent IDs either, so nothing can act as a delimiter).
+    """
+    if not allow_spaces:
+        return all(ch in set(glyphs) for ch in text)
+    # Longest first so e.g. "agent_10" isn't partially matched as "agent_1". IDs may touch
+    # glyphs directly, but not other ASCII word characters.
+    ids = "|".join(re.escape(a) for a in sorted(agent_ids, key=len, reverse=True)) or r"(?!)"
+    text = re.sub(rf"(?<![A-Za-z0-9_])(?:{ids})(?![A-Za-z0-9_])", "", text)
+    return all(ch in set(glyphs) | {" "} for ch in text)

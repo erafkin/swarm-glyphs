@@ -21,8 +21,11 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 
 ```
 .venv/bin/python -m src.scripts.run_board_seed0
+.venv/bin/python -m src.scripts.run_board_seed0 src/scripts/board_seed0_no_spaces.json  # no spaces in chat
 .venv/bin/python -m src.scripts.run_features_seed0
 ```
+
+`allow_spaces: false` in any config forbids spaces and agent IDs in chat messages: glyphs only.
 
 Scoring runs every **4 minutes** (`score_interval_s: 240`) in the defaults and all shipped run configs.
 The two Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay
