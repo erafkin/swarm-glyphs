@@ -213,7 +213,7 @@ class Game:
                 pass
             if self.board is not None:
                 report = score_round(
-                    round_num, self.elapsed(), self.agents, self.goal, self.goal_person, len(self.board)
+                    round_num, self.elapsed(), self.agents, self.goal, self.goal_person, len(self.board), board=self.board
                 )
             else:
                 report = score_round(round_num, self.elapsed(), self.agents, self.goal)
