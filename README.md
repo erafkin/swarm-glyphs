@@ -59,12 +59,14 @@ There is no automatic batch continuation.
 
 ## Archived experiments
 
+- [Randomized ownership: Gemini, Sol and mixed comparison](results/randomized_features_seed0/README.md)
 - [Gemini count encoding and glyph-choice follow-up interviews](logs/20261107_074528_12f02cc3/README.md)
 - [Mixed Sol/Gemini binary ASCII and cross-model translation](logs/20261107_082059_9490e69c/README.md)
 - [Strict Sol binary ASCII and Morse SOS](logs/20261106_223314_5e5f03a8/README.md)
 
-Archives retain the exact settings used at the time, including four-minute scoring and fixed
-feature ownership in these earlier runs. Current launch presets use the settings described above.
+Archives retain the exact settings used at the time. The randomized-ownership comparison uses
+60-second feedback; the three earlier experiments use four-minute scoring and fixed ownership.
+Current launch presets use the settings described above.
 
 ## Game and logs
 

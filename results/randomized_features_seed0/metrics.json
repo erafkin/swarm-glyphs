@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "matched_setup_except_models": true,
+  "runs": [
+    {
+      "label": "gemini",
+      "run": "logs/20261107_085050_d116b353",
+      "game_id": "d116b353",
+      "raw_files_verified": 9,
+      "raw_bytes": 21228385,
+      "models_by_agent": {
+        "agent_0": "google/gemini-3.8-flash",
+        "agent_1": "google/gemini-3.8-flash",
+        "agent_2": "google/gemini-3.8-flash",
+        "agent_3": "google/gemini-3.8-flash",
+        "agent_4": "google/gemini-3.8-flash",
+        "agent_5": "google/gemini-3.8-flash",
+        "agent_6": "google/gemini-3.8-flash",
+        "agent_7": "google/gemini-3.8-flash"
+      },
+      "stop_reason": "cost_limit_reached",
+      "first_all_correct": null,
+      "first_correct_by_agent_s": {
+        "agent_3": 1756.5,
+        "agent_4": 1313.6,
+        "agent_6": 872.0,
+        "agent_0": 2209.6,
+        "agent_5": 1137.6,
+        "agent_1": 1637.9,
+        "agent_2": 835.2,
+        "agent_7": 1513.0
+      },
+      "all_agents_ever_correct": true,
+      "peak_simultaneously_correct_agents": 7,
+      "regressions_after_first_all_correct": 0,
+      "victory_detected_s": null,
+      "full_run": {
+        "elapsed_s": 5178.0,
+        "gameplay_calls": 3248,
+        "interview_calls": 8,
+        "total_logged_calls": 3256,
+        "gameplay_reported_cost_usd": "20.02384800",
+        "reported_cost_usd": "20.09661900",
+        "summary_rounded_cost_usd": 20.096619,
+        "agent_posts": 3169,
+        "glyphs": 20921,
+        "system_posts": 85,
+        "applied_silent_calls": 68,
+        "unapplied_calls": 11,
+        "unapplied_reasons": {
+          "cost_limit_reached": 5,
+          "parse_error": 6
+        },
+        "parse_errors": 6,
+        "glyph_violations": 0,
+        "logged_api_errors": 0
+      },
+      "final_accuracy": {
+        "fully_correct_agents": 7,
+        "agents": 8,
+        "correct_feature_guesses": 61,
+        "feature_guesses": 64,
+        "feature_accuracy_percent": 95.3125,
+        "remaining_errors": {
+          "agent_2": {
+            "hair_colour": {
+              "guess": "red",
+              "correct": "brown"
+            },
+            "facial_hair": {
+              "guess": "none",
+              "correct": "beard"
+            },
+            "background": {
+              "guess": "yellow",
+              "correct": "green"
+            }
+          }
+        }
+      },
+      "last_guess_change_s": 2209.6,
+      "last_applied_response_s": 5152.5,
+      "final_score_unchanged_from_round": 37,
+      "final_score_unchanged_from_s": 2220.3,
+      "final_score_s": 5100.6
+    },
+    {
+      "label": "sol",
+      "run": "logs/20261107_102027_75544e8a",
+      "game_id": "75544e8a",
+      "raw_files_verified": 9,
+      "raw_bytes": 1527750,
+      "models_by_agent": {
+        "agent_0": "openai/gpt-6.1-sol",
+        "agent_1": "openai/gpt-6.1-sol",
+        "agent_2": "openai/gpt-6.1-sol",
+        "agent_3": "openai/gpt-6.1-sol",
+        "agent_4": "openai/gpt-6.1-sol",
+        "agent_5": "openai/gpt-6.1-sol",
+        "agent_6": "openai/gpt-6.1-sol",
+        "agent_7": "openai/gpt-6.1-sol"
+      },
+      "stop_reason": "win_threshold_reached",
+      "first_all_correct": {
+        "elapsed_s": 75.1,
+        "gameplay_calls": 36,
+        "reported_cost_usd": "0.7821135",
+        "agent_posts": 33,
+        "glyphs": 3321,
+        "last_agent": "agent_7"
+      },
+      "first_correct_by_agent_s": {
+        "agent_6": 58.2,
+        "agent_0": 53.7,
+        "agent_5": 59.4,
+        "agent_4": 63.4,
+        "agent_2": 58.8,
+        "agent_1": 63.9,
+        "agent_7": 75.1,
+        "agent_3": 66.3
+      },
+      "all_agents_ever_correct": true,
+      "peak_simultaneously_correct_agents": 8,
+      "regressions_after_first_all_correct": 0,
+      "victory_detected_s": 120.0,
+      "full_run": {
+        "elapsed_s": 126.6,
+        "gameplay_calls": 81,
+        "interview_calls": 8,
+        "total_logged_calls": 89,
+        "gameplay_reported_cost_usd": "2.8550710",
+        "reported_cost_usd": "3.2368240",
+        "summary_rounded_cost_usd": 3.236824,
+        "agent_posts": 40,
+        "glyphs": 4259,
+        "system_posts": 2,
+        "applied_silent_calls": 41,
+        "unapplied_calls": 0,
+        "unapplied_reasons": {},
+        "parse_errors": 0,
+        "glyph_violations": 0,
+        "logged_api_errors": 0
+      },
+      "final_accuracy": {
+        "fully_correct_agents": 8,
+        "agents": 8,
+        "correct_feature_guesses": 64,
+        "feature_guesses": 64,
+        "feature_accuracy_percent": 100.0,
+        "remaining_errors": {}
+      },
+      "last_guess_change_s": 75.1,
+      "last_applied_response_s": 119.7,
+      "final_score_unchanged_from_round": 2,
+      "final_score_unchanged_from_s": 120.0,
+      "final_score_s": 120.0
+    },
+    {
+      "label": "mixed",
+      "run": "logs/20261107_103151_5e02de73",
+      "game_id": "5e02de73",
+      "raw_files_verified": 9,
+      "raw_bytes": 2844947,
+      "models_by_agent": {
+        "agent_0": "openai/gpt-6.1-sol",
+        "agent_1": "google/gemini-3.8-flash",
+        "agent_2": "openai/gpt-6.1-sol",
+        "agent_3": "google/gemini-3.8-flash",
+        "agent_4": "openai/gpt-6.1-sol",
+        "agent_5": "google/gemini-3.8-flash",
+        "agent_6": "openai/gpt-6.1-sol",
+        "agent_7": "google/gemini-3.8-flash"
+      },
+      "stop_reason": "win_threshold_reached",
+      "first_all_correct": {
+        "elapsed_s": 235.5,
+        "gameplay_calls": 112,
+        "reported_cost_usd": "4.61869810",
+        "agent_posts": 82,
+        "glyphs": 10857,
+        "last_agent": "agent_5"
+      },
+      "first_correct_by_agent_s": {
+        "agent_3": 105.3,
+        "agent_5": 235.5,
+        "agent_7": 139.7,
+        "agent_6": 72.1,
+        "agent_4": 151.9,
+        "agent_2": 141.5,
+        "agent_0": 80.3,
+        "agent_1": 96.0
+      },
+      "all_agents_ever_correct": true,
+      "peak_simultaneously_correct_agents": 8,
+      "regressions_after_first_all_correct": 0,
+      "victory_detected_s": 240.0,
+      "full_run": {
+        "elapsed_s": 263.3,
+        "gameplay_calls": 119,
+        "interview_calls": 8,
+        "total_logged_calls": 127,
+        "gameplay_reported_cost_usd": "5.02762135",
+        "reported_cost_usd": "5.44114560",
+        "summary_rounded_cost_usd": 5.441146,
+        "agent_posts": 85,
+        "glyphs": 11286,
+        "system_posts": 4,
+        "applied_silent_calls": 28,
+        "unapplied_calls": 6,
+        "unapplied_reasons": {
+          "parse_error": 2,
+          "win_threshold_reached": 4
+        },
+        "parse_errors": 2,
+        "glyph_violations": 0,
+        "logged_api_errors": 0
+      },
+      "final_accuracy": {
+        "fully_correct_agents": 8,
+        "agents": 8,
+        "correct_feature_guesses": 64,
+        "feature_guesses": 64,
+        "feature_accuracy_percent": 100.0,
+        "remaining_errors": {}
+      },
+      "last_guess_change_s": 235.5,
+      "last_applied_response_s": 239.7,
+      "final_score_unchanged_from_round": 4,
+      "final_score_unchanged_from_s": 240.0,
+      "final_score_s": 240.0
+    }
+  ],
+  "method": {
+    "initial_state": "Exact initial guesses are parsed from each agent's first recorded request, without importing or rerunning gameplay.",
+    "correctness": "Replay agent_calls.jsonl in log order; only state_applied=true changes a guess. First simultaneous correctness is not proof of explicit knowledge.",
+    "cost": "Sum usage.cost for completed logged responses using Decimal. In-flight or hidden SDK retry charges unavailable in these records are not estimated. Summary costs are rounded to six decimal places.",
+    "glyphs": "Unicode code points in valid agent message bodies, excluding sender labels, system feedback, and violation markers. Post counts include agent posts only.",
+    "cutoff": "Includes the response and its own message that first makes all eight current guesses correct. Use log order rather than rounded timestamps to include that message consistently.",
+    "errors": "Logged API errors and returned parse failures are counted separately; absence of logged API errors does not exclude hidden successful SDK retries."
+  }
+}
