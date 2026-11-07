@@ -14,7 +14,7 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 ## Game loop
 
 - **Real-time, not rounds.** Each agent runs its own async loop and calls the model whenever it's
-  ready (throttled by `min_turn_interval_s`). A separate scorer wakes every `score_interval_s` (default 90).
+  ready (throttled by `min_turn_interval_s`). A separate scorer wakes every `score_interval_s` (default 240 seconds / 4 minutes).
 - **A "try" is one scoring round.** The game ends at the win threshold or after `max_score_rounds`
   (default 100).
 - **Features are assigned round-robin.** Agent *i* knows feature *i mod F*. Default `n_agents` is 8
@@ -22,7 +22,13 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
 - **The system prompt tells agents scoring happens every N seconds**, plus the win condition and round limit.
 - **Agents see only the most recent `chat_context_messages` (default 50) chat messages per turn**, and
   the system prompt tells them so (anything older has to be kept in their scratchpad).
-- **Responses arriving after the game stops are discarded** (cost is still counted).
+- **Responses arriving at or after the stop are logged without changing game state.** This includes
+  the response that reaches the cost cap. Logs preserve raw output, parsed `response`, and usage;
+  `state_applied: false` and `ignored_reason` distinguish responses excluded from gameplay.
+  `turns_per_agent` counts all returned gameplay calls, including these unapplied responses.
+- **Normal shutdown drains in-flight calls** before interviews and the summary, so their usage and
+  output are recorded. No new gameplay calls start after the stop. Ctrl-C and fatal API errors
+  cancel pending calls instead; provider charges for cancelled requests may be unavailable locally.
 - **Cost cap** (`max_cost_usd`): the game stops once total OpenRouter cost (from per-call usage
   accounting) reaches the cap. In-flight calls and the final interview still run, so the total can
   overshoot by roughly one call per agent for each. `max_score_rounds: null` disables the round limit.
@@ -117,21 +123,31 @@ mode), which inflated scores for goals whose values happened to be listed first.
 ## End-of-game interview
 
 - After the game ends (not on Ctrl-C), each agent is asked, in parallel:
-  **"Explain your communication strategy with the other agents"**. Free text, no schema. The agent's
-  system prompt, recent chat, scratchpad, and current guess are included as context.
-- Answers go to `final_interviews.jsonl`. Toggle with `final_interview` in config.
+  **"Explain your communication strategy with the other agents"**. Free text, no schema. A separate
+  interview system prompt requests concise English rather than another JSON gameplay turn. It
+  includes the agent's identity, private clue, feature options, glyphs, and board in board mode; the user prompt includes
+  recent chat, scratchpad, and current guesses. It asks for evidence and uncertainty, including
+  any use of score feedback or agent IDs. Answers are private to the researcher.
+- **Interview settings are separate.** `final_interview_max_tokens` defaults to 16000, capped by the
+  gameplay `max_tokens`; `final_interview_reasoning_effort` defaults to inheriting gameplay effort.
+  The two Sol experiment configs explicitly use medium effort and a 16000-token cap for both phases.
+  Interview tokens include hidden reasoning. Interviews still run past the soft cost limit.
+- Answers, system/user prompts, effective token/effort settings, and usage go to
+  `final_interviews.jsonl`. Toggle with `final_interview` in config.
 - Replaced an earlier per-glyph "what does each glyph mean" interview.
 
 ## First test runs (`src/scripts/`)
 
 - Two runs, seed 0 (goal `c5cfd9c4...`, former person 22), 8 agents on `openai/gpt-6.1-sol`, `dictionary_a`, 18 glyphs,
-  scoring every 90s: `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
+  scoring every 4 minutes (240 seconds): `run_board_seed0.py` and `run_features_seed0.py`, each with a JSON config next to it.
 - **Stop only when every agent is right or the run's cost hits $50**: `win_threshold: 1.0`
   (features mode: `win_mode: agents`, i.e. every agent has every feature right), `max_cost_usd: 50`,
   no round limit.
 - GPT-6.1 Sol is a reasoning model that doesn't list `temperature` as supported, so `temperature` is
   omitted and `max_tokens` is raised to 16000 (it includes hidden reasoning tokens). Request timeout
-  raised to 300s. Reasoning effort is left at the model default (`reasoning_effort` can set it).
+  raised to 300s. Gameplay reasoning effort is explicitly `medium`, matching the current model
+  default; interview effort is also `medium` with a 16000-token cap. The game seed controls local setup,
+  not the model's sampling, so repeated runs can produce different conversations.
 
 ## Logging
 

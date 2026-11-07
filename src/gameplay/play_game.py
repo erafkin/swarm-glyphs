@@ -8,7 +8,7 @@ The only communication in the chatroom is in glyphs for the agents except:
 - They can refer to each other using their unique identifier.
 - If they respond not in glyphs, a shared indication will be posted in the chatroom that is understood
   to mean that that model tried to respond not in glyphs.
-Every M seconds (default 90), every agent's guess is scored and the result is posted in the chatroom.
+Every M seconds (default 240 / four minutes), every agent's guess is scored and the result is posted in the chatroom.
 The game ends when the win condition is met or after max_score_rounds scoring rounds. Afterwards each
 agent is asked to explain its communication strategy (unless the game was interrupted or hit a fatal
 API error such as an invalid key, no credits, or an unknown model, which stops the game immediately).
@@ -28,6 +28,7 @@ from src.agent_models.model_obj import AgentResponse, AgentState, Guess
 from src.agent_models.potential_glyphs import VIOLATION_TOKEN, is_glyph_only, sample_glyphs
 from src.agent_models.prompts import (
     build_final_interview_prompt,
+    build_final_interview_system_prompt,
     build_system_prompt,
     build_turn_prompt,
     response_json_schema,
@@ -42,7 +43,7 @@ from src.gameplay.scoring import ScoreReport, format_score, is_won, score_round
 # OpenRouter errors that retrying won't fix: invalid API key, out of credits, unknown model.
 # 403 is excluded because OpenRouter also uses it for per-request moderation flags.
 FATAL_STATUS_CODES = {401, 402, 404}
-# The final interview runs after these (for cost_limit_reached it adds one small call per agent past the limit).
+# The final interview runs after these (including past the soft cost limit, with its own token cap).
 COMPLETED_STOP_REASONS = {"win_threshold_reached", "max_score_rounds_reached", "cost_limit_reached"}
 
 
@@ -132,9 +133,6 @@ class Game:
             self.config,
         )
         self._add_cost(result)
-        if self.stop.is_set():
-            return  # game ended while this call was in flight; don't change state after the final score
-
         agent.turn_count += 1
         record = {
             "agent_id": agent.agent_id,
@@ -147,7 +145,16 @@ class Game:
             "parse_error": result.parse_error,
             "used_structured_output": result.used_structured_output,
             "usage": result.usage,
+            "response": result.parsed.model_dump() if result.parsed is not None else None,
+            "state_applied": False,
         }
+
+        if self.stop.is_set():
+            # Preserve paid responses, including the one that crossed the budget, without
+            # changing guesses, scratchpads, or chat after the game has ended.
+            record["ignored_reason"] = self.stop_reason or "game_stopped"
+            self.logger.log("agent_calls", record)
+            return
 
         if result.parsed is not None:
             response = result.parsed
@@ -166,6 +173,7 @@ class Game:
                 self.chatroom.post(agent.agent_id, VIOLATION_TOKEN if is_violation else message, is_violation)
 
             record.update(
+                state_applied=True,
                 scratchpad=agent.scratchpad,
                 message=message,
                 is_violation=is_violation,
@@ -230,12 +238,21 @@ class Game:
     async def final_interview(self, client: AsyncOpenAI) -> None:
         """Ask every agent, in parallel, to explain its communication strategy; log to final_interviews.jsonl."""
         recent_chat = self.chatroom.recent(self.config.chat_context_messages)
+        interview_config = self.config.model_copy(update={
+            "max_tokens": min(self.config.max_tokens, self.config.final_interview_max_tokens),
+            "reasoning_effort": (
+                self.config.final_interview_reasoning_effort
+                if self.config.final_interview_reasoning_effort is not None
+                else self.config.reasoning_effort
+            ),
+        })
 
         async def ask(agent: AgentState) -> None:
+            system_prompt = build_final_interview_system_prompt(agent, self.board)
             prompt = build_final_interview_prompt(agent, recent_chat, self.goal.features)
             try:
                 result = await call_agent(
-                    client, agent.model, self.system_prompts[agent.agent_id], prompt, None, None, self.config
+                    client, agent.model, system_prompt, prompt, None, None, interview_config
                 )
             except Exception as e:
                 self.logger.log(
@@ -250,7 +267,10 @@ class Game:
                     "agent_id": agent.agent_id,
                     "model": agent.model,
                     "timestamp": time.time(),
+                    "system_prompt": system_prompt,
                     "prompt": prompt,
+                    "max_tokens": interview_config.max_tokens,
+                    "reasoning_effort": interview_config.reasoning_effort,
                     "answer": result.raw,
                     "usage": result.usage,
                 },
@@ -279,13 +299,20 @@ class Game:
             if not self.stop_reason:
                 self.stop_reason = "interrupted"
             self.stop.set()
-            for task in agent_tasks:
-                task.cancel()
-            await asyncio.gather(*agent_tasks, return_exceptions=True)
             try:
+                # At normal termination, let in-flight requests return so their responses
+                # and usage are recorded. The stop event prevents any new gameplay calls.
+                if self.stop_reason not in COMPLETED_STOP_REASONS:
+                    for task in agent_tasks:
+                        task.cancel()
+                await asyncio.gather(*agent_tasks, return_exceptions=True)
                 if self.config.final_interview and self.stop_reason in COMPLETED_STOP_REASONS:
                     await self.final_interview(client)
             finally:
+                for task in agent_tasks:
+                    if not task.done():
+                        task.cancel()
+                await asyncio.gather(*agent_tasks, return_exceptions=True)
                 await client.close()
                 self._write_summary()
 

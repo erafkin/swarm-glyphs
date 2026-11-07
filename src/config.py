@@ -10,6 +10,8 @@ from pydantic import BaseModel, Field, model_validator
 
 from src.game_object.board import DEFAULT_BOARD_PATH
 
+ReasoningEffort = Literal["minimal", "low", "medium", "high", "xhigh", "max"]
+
 
 class GameConfig(BaseModel):
     # "features": agents guess every feature and get per-feature feedback.
@@ -32,7 +34,7 @@ class GameConfig(BaseModel):
     agent_models: list[str] | None = None
 
     # Stop conditions besides winning; None disables that limit.
-    score_interval_s: float = Field(default=90, gt=0)
+    score_interval_s: float = Field(default=240, gt=0)
     max_score_rounds: int | None = Field(default=100, ge=1)
     max_cost_usd: float | None = Field(default=None, gt=0)  # total OpenRouter cost for the run
 
@@ -45,11 +47,13 @@ class GameConfig(BaseModel):
     chat_context_messages: int = Field(default=50, ge=0)
     min_turn_interval_s: float = Field(default=5, ge=0)
     temperature: float | None = 1.0  # None omits it (some reasoning models don't accept it)
-    reasoning_effort: Literal["minimal", "low", "medium", "high"] | None = None  # None uses the model default
+    reasoning_effort: ReasoningEffort | None = None  # None uses the model default
     max_tokens: int = 1500  # includes hidden reasoning tokens on reasoning models
     request_timeout_s: float = 120
 
     final_interview: bool = True  # after the game, ask each agent to explain its communication strategy
+    final_interview_max_tokens: int = Field(default=16000, ge=1)  # also bounded by gameplay max_tokens
+    final_interview_reasoning_effort: ReasoningEffort | None = None  # None inherits gameplay effort
 
     seed: int | None = 0  # also drives per-agent shuffles and starting guesses; None is fully random
     log_dir: str = "logs"

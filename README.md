@@ -24,6 +24,14 @@ First test runs (GPT-6.1 Sol, seed 0, stop at all-correct or $50):
 .venv/bin/python -m src.scripts.run_features_seed0
 ```
 
+Scoring runs every **4 minutes** (`score_interval_s: 240`) in the defaults and all shipped run configs.
+The two Sol experiment configs use **medium** reasoning and a 16,000-token budget per gameplay
+call. End-of-game interviews use a separate English-only prompt, **medium** reasoning, and a 16,000-token
+budget. These budgets include hidden reasoning tokens. Temperature is omitted.
+The $50 cap is soft: calls already in flight finish and are logged before the interviews run.
+Responses received after stopping are retained with `state_applied: false` and `ignored_reason`;
+they do not update guesses or chat.
+
 Two modes (`mode` in the config):
 - `features`: agents guess every feature; feedback is per-feature accuracy across agents.
 - `board`: agents see the board of 32 people (`src/game_object/board.json`) and guess the goal

@@ -148,6 +148,36 @@ Respond with the JSON object."""
 FINAL_INTERVIEW_QUESTION = "Explain your communication strategy with the other agents"
 
 
+def build_final_interview_system_prompt(agent: AgentState, board: Board | None = None) -> str:
+    """Retrospective instructions, separate from the game's JSON/glyph response contract."""
+    feature_lines = "\n".join(f"- {f.name}: {', '.join(f.options)}" for f in agent.features_view)
+    if board is None:
+        task_context = "The task was to guess every feature of the hidden goal object."
+    else:
+        task_context = f"""The task was to identify the hidden person on the shared board by name.
+Feature guesses were private notes; the person guess was scored.
+BOARD (in the order you saw it):
+{board.render(agent.board_order)}"""
+    return f"""You are {agent.agent_id}, taking part in a private research interview after a cooperative game.
+The game is over. Explain your strategy in ordinary English prose, not JSON. The game's glyph-only
+chat restriction does not apply to this interview. Your answer is for the researcher and will not
+be posted to the other agents. Do not produce another game turn or submit new guesses.
+
+During the game, each agent privately knew one true feature of a hidden goal. Your private clue was:
+  {agent.known_feature} = {agent.known_value}
+The possible feature values were:
+{feature_lines}
+{task_context}
+Your available chat glyphs were:
+  {' '.join(agent.glyphs_view)}
+Spaces and agent IDs were also allowed in chat messages.
+
+Use your recorded scratchpad, recent chat, and final guesses as evidence. Describe the strategy
+you actually used, including any use of score feedback or agent IDs. Distinguish attempted
+conventions from meanings you believe were shared, and say when the evidence is uncertain.
+Keep your explanation concise."""
+
+
 def build_final_interview_prompt(agent: AgentState, recent_chat: list[ChatMessage], features: list[Feature]) -> str:
     """Free-text (not JSON) end-of-game question, asked with the agent's final state as context."""
     return f"""The game is over.
