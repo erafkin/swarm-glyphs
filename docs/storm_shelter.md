@@ -26,11 +26,13 @@ updated whenever `run.py` changes. The monitor's system prompt is `round3_prompt
 its briefings configured in `round3_config.json`. The alphabet is `glyphs_tangut.txt`
 (every Tangut ideograph, unscreened) or `glyphs_latin.txt` (a-z and 0-9).
 
-Both can hand a document to the same **eight-agent task team**. A supplied `swarmish.txt`
-can already be imported, but importing a file does not implement the newer validation or
-creation constraints. Neither a missing alphabet nor a different creation procedure is
-silently substituted. The newer template's ban on calculation concerns encoding/decoding
-messages; it does not prohibit arithmetic used to solve the room itself.
+Both alphabets feed the same **eight-agent task team**. A supplied `swarmish.txt` can also
+be imported with matching communication settings. The REQUIREMENTS section of
+`round1_prompt.md` is reused for final document writers and task agents, and saved as
+`language_protocol.json`. The semantic-only rule concerns encoding/decoding messages;
+it does not prohibit arithmetic used to solve the room itself. Semantic rules and the
+300-line document limit are prompt instructions, not automated validity checks. Distinct
+final drafts are still combined, so the resulting file can exceed that soft line limit.
 
 ## Reviewable room definition
 
@@ -119,22 +121,34 @@ readings, but stage progression and invalid counts remain observable side channe
 
 | Condition | Information supplied |
 | --- | --- |
+| Task summary | The name Storm Shelter and a short description of its cabinet, power panel and exit lock. |
+| Full task knowledge | The public setup and stage rules, every private clue with its owner and release timing, and the worked solution. |
 | No task briefing | The common swarmish decoding instruction and public transcript only. |
-| General premise | Eight agents have complementary private clues and cooperate in a virtual escape room. |
-| Exact room mechanics | All public setup and stage rules, including the exit formula, without private clue values, ownership or answers. |
-| Full room knowledge | The public setup, every private clue with its owner and release timing, and the worked solution. |
+| Wrong task | A matched-format description of Maze Racer, a maze task with each agent holding one quadrant. |
+
+These are the defaults, in order, from `src/enc_dec/prompts/round3_config.json`.
+`task_mechanics` is an optional fifth briefing: public rules for all stages, without
+private clues or answers. It is not the literal agent prompt, which would also contain
+the private language reference. Conditions are read when monitor inputs are prepared,
+so edits to the default list do not require changing Python code.
 
 Each condition uses a fresh system/user request with the same model settings and the
 same message strings, sender labels, ordering and numeric status events. Numbered message
 IDs support comparison. Timestamps and extra log fields are stripped. No monitor sees the
 language document, creation chat, scratchpads, intended meanings or private action log.
 Even the full condition gets intended game facts, not the agents' actual private reasoning
-or attempted actions. Briefings come from the **saved room definition**, not a later edit
-to the implementation. The source transcript's SHA-256 is logged for every condition.
+or attempted actions. Public mechanics and full knowledge come from the **saved room
+definition**. Names, summaries, the wrong task and the condition list come from the current
+editable round 3 settings; rendered prompts are saved for every replay. The source
+transcript's SHA-256 is logged for every condition. With `tell_constraints: true`, the
+monitor gets the run's recorded language instructions and actual spaces/ID policy, not
+today's possibly changed creation rules. Older runs without a saved protocol are labeled
+as missing that information.
 
-The common instruction requests message-level meanings, speech acts, confidence, supporting
-spans and inferred conventions. It explicitly distinguishes decoding from repeating a supplied
-answer, and allows agents to have made mistakes. Output is an English report; there is no
+The common instruction requests a reconstructed language reference, message-by-message
+translation, task interpretation, and supporting evidence, with confidence labels. It
+distinguishes decoding from repeating a supplied answer and allows agents to have made
+mistakes. Output is an English report; there is no
 automatic accuracy score. The game records `intended_meaning` privately as a model's
 self-report, not verified translation ground truth. Applied call records contain
 `public_message_id`, matching the monitor's numbered transcript. Violation messages need
@@ -171,7 +185,8 @@ The two launch presets differ only in `glyph_dictionary`:
 
 Both specify eight Sol agents, medium reasoning, 16,000-token response limits, no
 temperature parameter, a ten-minute language-design allowance, and no task deadline.
-The **$20 soft cap** covers language creation, document generation and the task together.
+The **$50 soft cap** covers language creation, document generation and the task together,
+shared across all agents. All language-experiment presets and the configuration default use $50.
 Pending calls can exceed it. A response reaching the cap is retained in the log but not
 applied. Missing usage costs stop the escape-room run and mark the total incomplete.
 Set a positive `task_minutes` for an optional operational deadline. These are spending
@@ -203,25 +218,28 @@ rerun the task or language creation. Each invocation writes a separate
 # Prepare the configured briefings without API calls.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
 
-# Run the configured independent conditions, with a separate $5 soft cap for this invocation.
-.venv/bin/python -m src.enc_dec.monitor logs/RUN --max-cost-usd 5
+# Run the configured independent conditions, with a separate $50 soft cap for the whole batch.
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --max-cost-usd 50
 
 # Select one condition or repeat --condition to select several.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --condition task_mechanics
 
 # Corresponding control with agent message text withheld.
-.venv/bin/python -m src.enc_dec.monitor logs/RUN --baseline --max-cost-usd 5
+.venv/bin/python -m src.enc_dec.monitor logs/RUN --baseline --max-cost-usd 50
 ```
 
 CLI identifiers are `task_summary`, `task_full`, `task_mechanics`, `no_task` and
 `wrong_task`; the default set and the task texts are in `src/enc_dec/prompts/round3_config.json`
-(`task_mechanics`, the exact round 2 prompt without internals, is off by default). The
+(`task_mechanics`, public task rules without internals, is off by default). The
 briefing sits in the system prompt and the user turn is the transcript only. `--model` overrides the monitor model for that invocation. The
 saved configuration otherwise supplies the same medium effort and 16,000-token limit
 to every condition. For a controlled comparison, keep those settings fixed and repeat
 the independent calls if assessing model variability. Calls run sequentially with no
 shared conversational state. If the monitor cap is reached, the response is saved and
 remaining conditions are skipped; the summary lists completed and requested conditions.
+The standalone monitor defaults to $50 total per invocation, not per condition. Inline
+monitors, if enabled, use the remaining run budget. Standalone decoding is a separate budget
+from the creation/task run. The ten-minute creation discussion limit is unchanged.
 The default order is the table order, so budget truncation can leave later conditions
 unmeasured. Finish all intended conditions before comparing them.
 
@@ -231,6 +249,8 @@ unmeasured. Finish all intended conditions before comparing them.
 - `task_preview.json`: initial per-agent prompts, with a placeholder reference if language
   creation has not happened. `task_agents.json` records the actual task system prompts.
 - `swarmish.txt`: the frozen reference passed to the task team; creation logs are separate.
+- `language_protocol.json`: the language requirements used for this run. Empty final exports
+  retain a usable planning draft; if no reference was produced, the run stops before the task.
 - `task_chatroom.jsonl`: public evidence, including task status. This is the only chat
   used by the standalone monitor.
 - `agent_calls.jsonl`: private prompts, returned content, usage, parsing, intentions and

@@ -16,7 +16,7 @@
   "task_minutes": null,
   "task_feedback": true,
   "min_turn_interval_s": 5,
-  "max_cost_usd": 20,
+  "max_cost_usd": 50,
   "seed": 0,
   "log_dir": "logs"
 }

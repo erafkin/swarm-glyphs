@@ -38,7 +38,7 @@ The only characters permitted in a round 2 message are these {n_glyphs} characte
 [[allow_spaces]]
 Spaces and agent IDs such as agent_0 are also permitted.
 [[/allow_spaces]]
-A message containing any other character is discarded and never shown to the group. The glyphs
+A message containing any other character is replaced with "{violation_token}" in the public chat. The glyphs
 come with no meaning; your team gives them meaning. swarmish.txt is a reference document
 written in English, but every word of Swarmish that appears in it must use only
 these glyphs.

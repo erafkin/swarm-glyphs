@@ -77,16 +77,20 @@ Current launch presets use the settings described above.
 
 **Storm Shelter is the implemented eight-agent escape-room task.** See
 [the full room definition and monitor protocol](docs/storm_shelter.md) for the private
-clues, action rules, four information levels and saved-log replay instructions.
+clues, action rules, four monitor briefings and saved-log replay instructions.
 The first run uses the selected current setup: eight creators discussing asynchronously
-for up to ten minutes, then a fresh eight-agent task team. The newer
-`language_game/round1_*` design is deferred; its missing inventory does not affect this run.
+for up to ten minutes, then a fresh eight-agent task team. The creation and monitor prompts
+are now connected to the editable templates in `src/enc_dec/prompts/`.
+
+Edit `round1_prompt.md` / `round1_config.json` for language-design instructions and
+`round3_prompt.md` / `round3_config.json` for monitor instructions and conditions. Run
+settings (model, alphabet, agent count, timing and budget) live in `configs/storm_shelter_*.json`.
 
 ```sh
 # Inspect the eight starting prompts without API calls.
 .venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --prepare-only
 
-# Create swarmish, then play with a fresh team ($20 soft cap).
+# Create swarmish, then play with a fresh team ($50 combined soft cap).
 .venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json
 
 # Or import a frozen language, skipping creation.
@@ -94,7 +98,7 @@ for up to ten minutes, then a fresh eight-agent task team. The newer
 
 # After the task, inspect four monitor briefings on the SAME saved chat.
 .venv/bin/python -m src.enc_dec.monitor logs/RUN --prepare-only
-# Remove --prepare-only to make decoding calls; separate default $5 soft cap.
+# Remove --prepare-only to make decoding calls; separate default $50 cap for the whole monitor batch.
 ```
 
 The room has no rounds or invalid-attempt loss limit. Clues unlock as the team opens the
@@ -104,7 +108,7 @@ escape or an operational spending/error stop, retain pending responses in the lo
 and defer all monitors. `storm_shelter_latin.json` restricts the chat to a-z and 0-9 instead of
 Tangut. Both presets name the language **swarmish**.
 
-The legacy custom-task pipeline below remains available with `task_kind: custom`:
+Custom text tasks use the same runner and monitor with `task_kind: custom`:
 
 A separate run from the guessing game. One team has N minutes (`language_minutes`, 10 in the
 shipped configs) to invent a language without being told the task. That planning chat is ordinary
@@ -124,9 +128,14 @@ chat may use only characters from the glyph file named by `glyph_dictionary`:
 The task strings in both files are placeholders.
 
 ```
-.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_tangut.json
-.venv/bin/python -m src.enc_dec.scripts.run_language_round src/enc_dec/scripts/language_latin.json
+.venv/bin/python -m src.enc_dec.run src/enc_dec/scripts/language_tangut.json
+.venv/bin/python -m src.enc_dec.run src/enc_dec/scripts/language_latin.json
 ```
+
+Those custom-task presets are placeholder examples, not Storm Shelter launches.
+`src.enc_dec.scripts.run_language_round` remains a compatibility alias for the same CLI,
+including `--prepare-only` and `--language-file`. Inline and standalone monitors use the
+same numbered transcript and cost controls.
 
 ## Game and logs
 

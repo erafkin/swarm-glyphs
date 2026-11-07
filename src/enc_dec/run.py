@@ -36,12 +36,11 @@ from src.enc_dec.models import (
 from src.enc_dec.escape_room import EscapeRoom, room_definition
 from src.enc_dec.prompts import (
     LANGUAGE_FILE,
-    MONITOR_CONDITIONS,
     build_creation_prompt,
     build_language_document_prompt,
-    build_monitor_prompt,
     build_task_prompt,
     build_turn_prompt,
+    language_requirements,
 )
 from src.enc_dec.task import TASK_SENDER, feedback_text
 
@@ -69,6 +68,7 @@ class LanguageExperiment:
         self.language_text = language_text or ""
         self.provided_language = language_text is not None
         self.room = EscapeRoom() if config.task_kind == "escape_room" else None
+        self.language_requirements = language_requirements()
 
         self.stop = asyncio.Event()
         self.stop_reason = ""
@@ -274,7 +274,8 @@ class LanguageExperiment:
         drafts: dict[str, str] = {}
 
         async def ask(agent: RoundAgent) -> None:
-            system, user = build_language_document_prompt(agent, self.config, transcript, self.language_text)
+            system, user = build_language_document_prompt(agent, self.config, transcript, self.language_text,
+                                                          self.language_requirements)
             try:
                 result = await call_agent(client, agent.model, system, user, None, None, self.config)
             except Exception as e:
@@ -307,64 +308,41 @@ class LanguageExperiment:
     def _write_language_file(self, drafts: dict[str, str]) -> None:
         ordered = [(agent.agent_id, drafts.get(agent.agent_id, "")) for agent in self.creation_agents]
         bodies = {text for _, text in ordered if text}
-        if len(bodies) == 1 and all(text for _, text in ordered):
+        source = "final_documents"
+        if not bodies:
+            # Failed/empty final calls must not erase a usable shared draft or manufacture a reference.
+            source = "planning_fallback" if self.language_text.strip() else "missing"
+        elif len(bodies) == 1:
             self.language_text = next(iter(bodies))
         else:
             self.language_text = "\n\n".join(
-                f"## {agent_id}\n{text or '(this agent wrote nothing)'}" for agent_id, text in ordered
+                f"## {agent_id}\n{text}" for agent_id, text in ordered if text
             )
         (self.logger.path / LANGUAGE_FILE).write_text(self.language_text + "\n", encoding="utf-8")
-        self.logger.write_json("language", {"by_agent": dict(ordered), "text": self.language_text})
+        self.logger.write_json("language", {"by_agent": dict(ordered), "text": self.language_text, "source": source})
 
     async def _monitor(self, client: AsyncOpenAI) -> None:
-        if self.room:
-            from src.enc_dec.monitor import prepare_monitor_inputs, execute_monitor_inputs
-            bundle = prepare_monitor_inputs(self.logger.path)
-            self.logger.write_json("monitor_inputs", bundle)
-            remaining = None if self.config.max_cost_usd is None else max(0, self.config.max_cost_usd - self.total_cost_usd)
-            summary = await execute_monitor_inputs(client, self.config, bundle, self.logger, remaining)
-            self.total_cost_usd += summary["total_cost_usd"]
-            self._warned_missing_cost |= summary["cost_incomplete"]
-            return
-        transcript = self.task_chat.transcript()
-        monitor_config = self.config.model_copy(update={
-            "max_tokens": self.config.monitor_max_tokens,
-            "reasoning_effort": self.config.monitor_reasoning_effort or self.config.reasoning_effort,
-        })
-        model = self.config.model_for(0, "monitor")
-
-        async def ask(condition: str) -> None:
-            system, user = build_monitor_prompt(self.config, condition, None, transcript)
-            try:
-                result = await call_agent(client, model, system, user, None, None, monitor_config)
-            except Exception as e:
-                self.logger.log("errors", {"phase": "monitor", "condition": condition, "timestamp": time.time(), "error": repr(e)})
-                return
-            self._add_cost(result)
-            self.logger.log("monitor", {
-                "condition": condition,
-                "model": model,
-                "timestamp": time.time(),
-                "max_tokens": monitor_config.max_tokens,
-                "reasoning_effort": monitor_config.reasoning_effort,
-                "system_prompt": system,
-                "prompt": user,
-                "answer": result.raw,
-                "usage": result.usage,
-            })
-
-        await asyncio.gather(*(ask(condition) for condition in MONITOR_CONDITIONS))
+        # Inline and standalone decoding use the same evidence, numbering and budget handling.
+        from src.enc_dec.monitor import prepare_monitor_inputs, execute_monitor_inputs
+        bundle = prepare_monitor_inputs(self.logger.path)
+        self.logger.write_json("monitor_inputs", bundle)
+        remaining = None if self.config.max_cost_usd is None else max(0, self.config.max_cost_usd - self.total_cost_usd)
+        summary = await execute_monitor_inputs(client, self.config, bundle, self.logger, remaining)
+        self.total_cost_usd += summary["total_cost_usd"]
+        self._warned_missing_cost |= summary["cost_incomplete"]
 
     def prepare(self) -> None:
         """Write reviewable configuration/prompts without touching credentials or the network."""
         self.logger.write_json("config", self.config.model_dump())
         self.logger.write_json("glyphs", self.glyphs)
+        self.logger.write_json("language_protocol", {"requirements": self.language_requirements})
         if self.room:
             self.logger.write_json("escape_room_definition", room_definition())
             self.logger.write_json("task_preview", {
                 a.agent_id: {
                     "system_prompt": build_task_prompt(a, [x.agent_id for x in self.task_agents], self.config,
-                                                       self.language_text or "(swarmish reference will be supplied after language creation)"),
+                                                       self.language_text or "(swarmish reference will be supplied after language creation)",
+                                                       self.language_requirements),
                     "initial_turn_prompt": build_turn_prompt(a, "(no messages yet)", self.config, "task", 0,
                                                             self.language_text, self.room),
                 } for a in self.task_agents
@@ -402,13 +380,17 @@ class LanguageExperiment:
                 self.creation_stop_reason = "usage_cost_missing"
             if self.creation_stop_reason not in ("time_limit", "all_done", "provided_language"):
                 return
+            if not self.language_text.strip():
+                self.creation_stop_reason = "empty_language_document"
+                return
             if self.creation_only:
                 print(f"Creation only: {LANGUAGE_FILE} is written; the task and monitors were not run.")
                 return
 
             ids = [a.agent_id for a in self.task_agents]
             self.task_prompts = {
-                a.agent_id: build_task_prompt(a, ids, self.config, self.language_text) for a in self.task_agents
+                a.agent_id: build_task_prompt(a, ids, self.config, self.language_text, self.language_requirements)
+                for a in self.task_agents
             }
             self.logger.write_json("task_agents", [
                 {"agent_id": a.agent_id, "model": a.model, "glyphs_view": a.glyphs_view,

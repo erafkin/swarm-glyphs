@@ -1,4 +1,4 @@
-"""Replay one saved escape-room conversation under independent monitor briefings.
+"""Replay one saved task conversation under independent monitor briefings.
 
 The briefings and the monitor's system prompt come from src/enc_dec/prompts/round3_prompt.md and
 round3_config.json. No task or language-creation calls are made here. --prepare-only requires no
@@ -15,9 +15,10 @@ from pathlib import Path
 
 from src.core.api_call import call_agent, make_client
 from src.core.game_log import GameLogger
-from src.enc_dec.config import LanguageExperimentConfig
-from src.enc_dec.escape_room import AGENT_IDS, ROOM_VERSION
-from src.enc_dec.prompts import ALL_MONITOR_CONDITIONS, MONITOR_CONDITIONS, build_monitor_prompt
+from src.enc_dec.config import DEFAULT_MAX_COST_USD, LanguageExperimentConfig
+from src.enc_dec.escape_room import ROOM_VERSION
+from src.enc_dec.prompts import ALL_MONITOR_CONDITIONS, build_monitor_prompt, monitor_conditions
+from src.enc_dec.task import TASK_SENDER
 
 CONDITION_LABELS = {
     "task_summary": "Task summary",
@@ -27,13 +28,16 @@ CONDITION_LABELS = {
     "wrong_task": "Wrong task",
 }
 
-def read_public_messages(path: Path) -> list[dict]:
+def read_public_messages(path: Path, n_agents: int) -> list[dict]:
     """Whitelist fields. Never render timestamps, raw completions or private annotations."""
     messages = []
+    allowed_senders = {f"agent_{i}" for i in range(n_agents)} | {TASK_SENDER}
+    if not path.exists():
+        return messages  # A silent custom task with feedback disabled has no chat stream.
     for line in path.read_text(encoding="utf-8").splitlines():
         row = json.loads(line)
-        if row["sender"] not in (*AGENT_IDS, "task") or not isinstance(row["text"], str):
-            raise ValueError("Not an eight-agent task transcript")
+        if row["sender"] not in allowed_senders or not isinstance(row["text"], str):
+            raise ValueError("Transcript sender/text does not match the saved task configuration")
         messages.append({"id": len(messages) + 1, "sender": row["sender"], "text": row["text"]})
     return messages
 
@@ -46,28 +50,37 @@ def render_public_messages(messages: list[dict], baseline: bool = False) -> str:
     ) or "(no messages)"
 
 
-def prepare_monitor_inputs(source: str | Path, conditions=MONITOR_CONDITIONS, baseline: bool = False) -> dict:
+def prepare_monitor_inputs(source: str | Path, conditions=None, baseline: bool = False) -> dict:
     source = Path(source)
+    if conditions is None:
+        conditions = monitor_conditions()
     if not conditions or len(set(conditions)) != len(conditions) or any(c not in ALL_MONITOR_CONDITIONS for c in conditions):
         raise ValueError(f"Select distinct conditions from {ALL_MONITOR_CONDITIONS}")
     config = LanguageExperimentConfig.from_file(source / "config.json")
+    protocol_path = source / "language_protocol.json"
+    language_protocol = json.loads(protocol_path.read_text(encoding="utf-8")) if protocol_path.exists() else None
     # Read saved ground truth, not the current source-code instance, for reproducibility.
-    definition = json.loads((source / "escape_room_definition.json").read_text(encoding="utf-8"))
-    if definition["version"] != ROOM_VERSION:
-        raise ValueError("Unsupported escape room definition version")
-    messages = read_public_messages(source / "task_chatroom.jsonl")
+    definition = None
+    if config.task_kind == "escape_room":
+        definition = json.loads((source / "escape_room_definition.json").read_text(encoding="utf-8"))
+        if definition["version"] != ROOM_VERSION:
+            raise ValueError("Unsupported escape room definition version")
+        if not (source / "task_chatroom.jsonl").exists():
+            raise ValueError("No escape-room transcript: use a run that reached the task phase")
+    messages = read_public_messages(source / "task_chatroom.jsonl", config.task_n_agents or config.n_agents)
     original = render_public_messages(messages)
     transcript = render_public_messages(messages, baseline)
     sha = lambda text: hashlib.sha256(text.encode("utf-8")).hexdigest()
     return {
-        "room_version": definition["version"], "source": str(source.resolve()),
+        "task_kind": config.task_kind, "room_version": definition["version"] if definition else None,
+        "source": str(source.resolve()),
         "baseline": baseline, "message_count": len(messages),
         "source_transcript_sha256": sha(original), "transcript_sha256": sha(transcript),
         "transcript": transcript,
         "requests": [
             {"condition": condition, "label": CONDITION_LABELS[condition], "system_prompt": system, "prompt": prompt}
             for condition in conditions
-            for system, prompt in [build_monitor_prompt(config, condition, definition, transcript)]
+            for system, prompt in [build_monitor_prompt(config, condition, definition, transcript, language_protocol)]
         ],
     }
 
@@ -129,22 +142,21 @@ async def execute_monitor_inputs(client, config: LanguageExperimentConfig, bundl
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("source", type=Path, help="completed escape-room log directory")
+    parser.add_argument("source", type=Path, help="completed language-handoff task log directory")
     parser.add_argument("--condition", action="append", choices=ALL_MONITOR_CONDITIONS,
-                        help=f"repeat to select conditions; default {', '.join(MONITOR_CONDITIONS)}")
+                        help=f"repeat to select conditions; default {', '.join(monitor_conditions())}")
     parser.add_argument("--model", help="override monitor model")
-    parser.add_argument("--max-cost-usd", type=float, default=5.0, help="soft cap for these monitor calls, default $5")
+    parser.add_argument("--max-cost-usd", type=float, default=DEFAULT_MAX_COST_USD,
+                        help=f"shared soft cap for this monitor batch, default ${DEFAULT_MAX_COST_USD:g}")
     parser.add_argument("--baseline", action="store_true", help="withhold agent messages, preserve identical public status and sender/order metadata")
     parser.add_argument("--prepare-only", action="store_true", help="save and inspect prompts without making any API calls")
     args = parser.parse_args()
     if not math.isfinite(args.max_cost_usd) or args.max_cost_usd <= 0:
         parser.error("--max-cost-usd must be positive and finite")
     config = LanguageExperimentConfig.from_file(args.source / "config.json")
-    if config.task_kind != "escape_room":
-        parser.error("source must be an escape-room run")
     if args.model:
         config = config.model_copy(update={"monitor_model": args.model})
-    bundle = prepare_monitor_inputs(args.source, args.condition or MONITOR_CONDITIONS, args.baseline)
+    bundle = prepare_monitor_inputs(args.source, args.condition, args.baseline)
     logger = GameLogger(str(args.source / "monitor_runs"))
     logger.write_json("monitor_inputs", bundle)
     logger.write_json("monitor_config", {**config.model_dump(), "max_cost_usd": args.max_cost_usd})

@@ -21,9 +21,9 @@ from src.enc_dec.escape_room import (
 )
 from src.enc_dec.models import CreationResponse, EscapeTaskResponse, ESCAPE_TASK_SCHEMA
 from src.enc_dec.monitor import (
-    CONDITION_LABELS, MONITOR_CONDITIONS, execute_monitor_inputs, prepare_monitor_inputs,
+    CONDITION_LABELS, execute_monitor_inputs, prepare_monitor_inputs,
 )
-from src.enc_dec.prompts import build_turn_prompt, load_prompt_config
+from src.enc_dec.prompts import build_turn_prompt, load_prompt_config, monitor_conditions
 from src.enc_dec.run import LanguageExperiment
 
 
@@ -58,7 +58,7 @@ class RoomRulesTests(unittest.TestCase):
         self.assertEqual(tangut.task_kind, "escape_room")
         self.assertIsNone(tangut.task_minutes)
         self.assertFalse(tangut.run_monitors)
-        self.assertEqual(tangut.max_cost_usd, 20)
+        self.assertEqual(tangut.max_cost_usd, 50)
         self.assertEqual(tangut.glyph_dictionary, "glyphs_tangut")
         self.assertIsNone(tangut.n_glyphs)
         self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin"}).model_dump())
@@ -152,7 +152,7 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
         self.addCleanup(self.tmp.cleanup)
         self.config = LanguageExperimentConfig(
             task_kind="escape_room", glyph_dictionary="glyphs_latin", model="offline-model",
-            task_minutes=None, min_turn_interval_s=0.001, max_cost_usd=20,
+            task_minutes=None, min_turn_interval_s=0.001, max_cost_usd=50,
             run_monitors=False, log_dir=self.tmp.name,
         )
         self.client = SimpleNamespace(close=AsyncMock())
@@ -219,6 +219,27 @@ class EscapeRunnerTests(unittest.IsolatedAsyncioTestCase):
         for record in rows(experiment.logger.path / "agent_calls.jsonl"):
             if record["phase"] == "task":
                 self.assertNotIn("CREATION_CHAT_SECRET", record["turn_prompt"])
+
+    async def test_empty_final_exports_keep_a_draft_or_stop_before_task(self):
+        experiment = LanguageExperiment(self.config)
+
+        async def fake_call(client, model, system, prompt, schema, response_model, settings):
+            if response_model is CreationResponse:
+                return result(CreationResponse(done=True))
+            return result(raw="")
+
+        with patch("src.enc_dec.run.make_client", return_value=self.client), patch(
+            "src.enc_dec.run.call_agent", side_effect=fake_call
+        ):
+            await asyncio.wait_for(experiment.run(), 3)
+        self.assertEqual(experiment.creation_stop_reason, "empty_language_document")
+        self.assertEqual(experiment.task_stop_reason, "")
+        self.assertFalse((experiment.logger.path / "task_agents.json").exists())
+        experiment._set_language_text("USABLE_SHARED_DRAFT")
+        experiment._write_language_file({})
+        self.assertEqual(experiment.language_text, "USABLE_SHARED_DRAFT")
+        saved = json.loads((experiment.logger.path / "language.json").read_text())
+        self.assertEqual(saved["source"], "planning_fallback")
 
     async def test_cost_cap_response_is_logged_but_not_applied(self):
         experiment, _ = await self.run_script(max_cost_usd=0.005)
@@ -326,8 +347,8 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
     def test_briefing_boundaries_and_identical_transcripts(self):
         bundle = prepare_monitor_inputs(self.source)
         requests = bundle["requests"]
-        self.assertEqual([r["condition"] for r in requests], list(MONITOR_CONDITIONS))
-        self.assertEqual(list(MONITOR_CONDITIONS), ["task_summary", "task_full", "no_task", "wrong_task"])
+        self.assertEqual([r["condition"] for r in requests], list(monitor_conditions()))
+        self.assertEqual(list(monitor_conditions()), ["task_summary", "task_full", "no_task", "wrong_task"])
         for request in requests:
             self.assertEqual(request["prompt"], "TRANSCRIPT\n" + bundle["transcript"])
             self.assertNotIn("[[", request["system_prompt"])
@@ -380,7 +401,7 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         with patch("src.enc_dec.monitor.call_agent", new=AsyncMock(return_value=result(cost=0.03))) as call:
             summary = await execute_monitor_inputs(None, self.config, bundle, logger, 0.05)
         self.assertEqual(call.await_count, 2)
-        self.assertEqual(summary["conditions_completed"], list(MONITOR_CONDITIONS[:2]))
+        self.assertEqual(summary["conditions_completed"], list(monitor_conditions()[:2]))
         self.assertEqual(summary["stop_reason"], "cost_limit_reached")
         self.assertAlmostEqual(summary["total_cost_usd"], 0.06)
         self.assertEqual(len(rows(logger.path / "monitor.jsonl")), 2)
@@ -414,6 +435,34 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         paths = list((self.source / "monitor_runs").glob("*/monitor_inputs.json"))
         self.assertEqual(len(paths), 1)
         self.assertEqual(len(json.loads(paths[0].read_text())["requests"]), 4)
+        saved = json.loads((paths[0].parent / "monitor_config.json").read_text())
+        self.assertEqual(saved["max_cost_usd"], 50)
+
+    def test_default_conditions_are_read_when_preparing_not_at_import(self):
+        settings = {**load_prompt_config("round3_config.json"), "conditions": ["no_task"]}
+        with patch("src.enc_dec.prompts.load_prompt_config", return_value=settings):
+            bundle = prepare_monitor_inputs(self.source)
+        self.assertEqual([r["condition"] for r in bundle["requests"]], ["no_task"])
+        with self.assertRaises(ValueError):
+            prepare_monitor_inputs(self.source, [])
+
+    def test_constraints_use_saved_protocol_and_actual_space_setting(self):
+        config = self.config.model_copy(update={"allow_spaces": False})
+        (self.source / "config.json").write_text(config.model_dump_json())
+        (self.source / "language_protocol.json").write_text(json.dumps({"requirements": "SAVED_RULES_NOT_TODAYS_TEMPLATE"}))
+        settings = {**load_prompt_config("round3_config.json"), "tell_constraints": True}
+        with patch("src.enc_dec.prompts.load_prompt_config", return_value=settings):
+            prompt = prepare_monitor_inputs(self.source, ["no_task"])["requests"][0]["system_prompt"]
+        self.assertIn("SAVED_RULES_NOT_TODAYS_TEMPLATE", prompt)
+        self.assertIn("with no spaces or agent IDs", prompt)
+        self.assertNotIn("plus spaces", prompt)
+        self.assertNotIn("Storm Shelter", prompt)
+        self.assertNotIn("NEVER_READ_CANARY", prompt)
+
+    def test_missing_task_transcript_is_not_treated_as_a_finished_room(self):
+        (self.source / "task_chatroom.jsonl").unlink()
+        with self.assertRaisesRegex(ValueError, "reached the task phase"):
+            prepare_monitor_inputs(self.source)
 
 
 if __name__ == "__main__":

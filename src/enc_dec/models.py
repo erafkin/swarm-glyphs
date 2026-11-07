@@ -19,7 +19,7 @@ class RoundAgent(BaseModel):
 
 class CreationResponse(BaseModel):
     message: str = ""
-    language_document: str = ""  # full shared language.txt; empty leaves the current file unchanged
+    language_document: str = ""  # full shared swarmish.txt; empty leaves the current file unchanged
     done: bool = False
 
 

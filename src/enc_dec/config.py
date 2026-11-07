@@ -10,6 +10,8 @@ from pydantic import BaseModel, Field, model_validator
 
 from src.core.types import ReasoningEffort
 
+DEFAULT_MAX_COST_USD = 50.0
+
 
 class LanguageExperimentConfig(BaseModel):
     task_kind: Literal["custom", "escape_room"] = "custom"
@@ -32,7 +34,7 @@ class LanguageExperimentConfig(BaseModel):
     task_feedback: bool = True  # False: phase 2 chat gets no task status updates
     task_feedback_interval_s: float = Field(default=60, gt=0)  # how often updates are posted when task_feedback is on
 
-    max_cost_usd: float | None = Field(default=None, gt=0)
+    max_cost_usd: float | None = Field(default=DEFAULT_MAX_COST_USD, gt=0)  # shared across agents; None disables
     chat_context_messages: int = Field(default=50, ge=0)  # custom task; escape room always keeps full chat
     language_context_messages: int = Field(default=100, ge=0)  # encoding round
     min_turn_interval_s: float = Field(default=5, ge=0)

@@ -185,7 +185,10 @@ mode), which inflated scores for goals whose values happened to be listed first.
   default; interview effort is also `medium` with a 16000-token cap. The game seed controls local setup,
   not the model's sampling, so repeated runs can produce different conversations.
 
-## Language handoff experiment
+## Initial language handoff design (historical)
+
+The template and consolidation entries below supersede the original filenames, monitor
+conditions and separate execution paths described in this section.
 
 Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round.py`).
 
@@ -215,7 +218,10 @@ Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round
   null), spaces and agent IDs allowed. `language_free.json`: any characters. The configs match
   apart from `chat_mode`. Task text in both is a placeholder.
 
-## Storm Shelter task and monitor replay
+## Initial Storm Shelter integration (historical settings)
+
+The room rules remain current. Alphabet names, prompt wiring and default monitor conditions
+were subsequently updated in the dated entries below.
 
 - **First-run protocol selected by the user:** keep the current asynchronous creation
   runner with eight creators and up to ten minutes, followed by eight fresh task agents.
@@ -265,7 +271,7 @@ Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round
   "malicious LLM" paragraph is gone from round 1; the template frames it as an encoding team
   versus a decoding team.
 - **Monitor briefings** default to `task_summary`, `task_full`, `no_task` and `wrong_task`,
-  with `task_mechanics` (the exact round 2 prompt without internals, the former
+  with `task_mechanics` (public task rules for all stages without internals, the former
   `exact_room_mechanics`) available through `--condition`. `general_premise`,
   `full_room_knowledge` and the custom-task `wrong_task_far` / `wrong_task_near` are replaced.
   The wrong task has the same shape as the true summary so length does not signal the lie.
@@ -277,6 +283,40 @@ Separate from the guessing game (`src/enc_dec/`, launched by `run_language_round
   `language_latin.json`.
 - **The shared document is `swarmish.txt`**, in every prompt and in the log folder (was
   `language.txt`). The `language_document` response field keeps its name.
+
+### 2026-11-07: launch-readiness consolidation
+
+- **One runner and one monitor implementation.** `src.enc_dec.run` is the canonical
+  launch CLI; `scripts.run_language_round` forwards to it, including preparation and
+  imported-document options. Both custom tasks and Storm Shelter use `monitor.py` for
+  numbered, filtered public transcripts, hashes, independent requests and spending stops.
+  The inline custom monitor's separate unnumbered/concurrent path was removed.
+- **One editable condition list.** `round3_config.json` supplies defaults when prompts
+  are prepared, rather than an import-time copy. The four current defaults are Task
+  summary, Full task knowledge, No task briefing and Wrong task. Task mechanics remains
+  optional. The docs now match these conditions and the Tangut/Latin launch presets.
+- **Consistent language requirements.** Final document writers and fresh task agents
+  receive the REQUIREMENTS section from `round1_prompt.md`. The run saves it in
+  `language_protocol.json`; the optional monitor constraints briefing uses those saved
+  rules and the actual spaces/IDs setting. Character validation replaces invalid text
+  with `⊘`, as every prompt now states. Semantic and length rules remain prompt-only;
+  no automated translation scorer or semantic validator is claimed.
+- **Empty reference handling.** Empty/failed final exports retain a usable shared draft.
+  If no reference exists, stop before starting the task rather than handing off placeholder
+  headings. Nonempty distinct final drafts are still combined as in the selected runner.
+- **Run settings retained.** Eight asynchronous creators, up to ten minutes, eight fresh
+  task agents, Sol medium, 16,000-token limits, $20 combined soft cap, and deferred monitors.
+  Tangut uses 6,136 glyphs; Latin uses 36. No experiment was launched during consolidation.
+
+### 2026-11-07: user-selected $50 budgets
+
+- Set all current language-experiment presets and the runner's default to a $50 soft cap,
+  shared across creators, final document writers and task agents. Explicit `null` still
+  disables the run cap. The ten-minute creation discussion limit is unchanged.
+- Standalone monitor invocations also default to $50 shared across the entire condition
+  batch, not $50 per condition. Inline monitors use the remainder of the combined run cap.
+  Standalone decoding has its own budget. Historical Guess Who configurations and logs
+  retain their recorded limits.
 
 ## Logging
 

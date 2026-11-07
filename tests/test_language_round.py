@@ -12,7 +12,7 @@ from openai.types.chat import ChatCompletion
 from src.core.potential_glyphs import VIOLATION_TOKEN, dictionary_path, load_dictionary
 from src.enc_dec import prompts
 from src.enc_dec.config import LanguageExperimentConfig
-from src.enc_dec.prompts import MONITOR_CONDITIONS
+from src.enc_dec.monitor import prepare_monitor_inputs
 from src.enc_dec.run import LanguageExperiment
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -138,6 +138,11 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
             self.assertNotIn("SCRATCHPAD", turn["turn_prompt"])
         doc_prompts = [r["prompt"] for r in self.records(experiment, "language_document")]
         self.assertTrue(any("SHARED DOC" in prompt and "ENGLISH PLAN" in prompt for prompt in doc_prompts))
+        for record in self.records(experiment, "language_document"):
+            self.assertIn("Meaning must come from what glyphs", record["system_prompt"])
+            self.assertIn("under 300 lines", record["system_prompt"])
+        self.assertIn("Meaning must come from what glyphs", task_prompt)
+        self.assertIn("replaced with", creation_prompt)
 
         task_chat = self.records(experiment, "task_chatroom")
         self.assertEqual(sorted(m["sender"] for m in task_chat[:2]), ["agent_0", "agent_1"])
@@ -152,8 +157,13 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(answers, {"agent_0": "ready", "agent_1": "ready"})
 
         monitors = self.records(experiment, "monitor")
-        self.assertEqual([m["condition"] for m in monitors], list(MONITOR_CONDITIONS))
-        self.assertEqual(list(MONITOR_CONDITIONS), ["task_summary", "task_full", "no_task", "wrong_task"])
+        self.assertEqual([m["condition"] for m in monitors], ROUND3["conditions"])
+        inputs = json.loads((experiment.logger.path / "monitor_inputs.json").read_text())
+        self.assertIn("[1] [agent_", inputs["transcript"])
+        real_load = prompts.load_prompt_config
+        with patch("src.enc_dec.prompts.load_prompt_config", side_effect=lambda name: ROUND3 if name == "round3_config.json" else real_load(name)):
+            replay = prepare_monitor_inputs(experiment.logger.path)
+        self.assertEqual(inputs, replay)
         by_condition = {m["condition"]: m["system_prompt"] + "\n" + m["prompt"] for m in monitors}
         told = "fits the task described in your briefing"
         summary = by_condition["task_summary"]
@@ -178,7 +188,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
             self.assertIn("a second team of 2 agents", text)
             self.assertIn(experiment.glyphs[0], text)
             self.assertIn("Task feedback:", text)
-            self.assertTrue(text.endswith("TRANSCRIPT\n" + experiment.task_chat.transcript()))
+            self.assertTrue(text.endswith("TRANSCRIPT\n" + inputs["transcript"]))
             self.assertNotIn("[[", text)
             self.assertNotIn("DOC-", text)
             self.assertNotIn("ENGLISH PLAN", text)
