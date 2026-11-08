@@ -208,6 +208,8 @@ _LOOSE_TRANSLATION = re.compile(r"(?<![\d#])(?:SECTION\s+)?2\s*[.:]\s*TRANSLATIO
 _LOOSE_LATER = re.compile(
     r"(?<![\d#])(?:SECTION\s+)?[34]\s*[.:]\s*(?:THE TASK|EVIDENCE)\b", re.I)
 _MESSAGE_LINE = re.compile(r"^\s*(?:[-*]\s+)?(?:\*\*)?(?:\[(\d+)\]|(\d+)[.)])\s*(.*)$")
+_LABELED_MESSAGE_LINE = re.compile(
+    r"^\s*(?:\*\*)?(\d+)\s+[—–-]\s*((?:task|agent_\d+):(?:\*\*)?\s*)(.*)$")
 _MESSAGE_SENTENCE = re.compile(r"Message\s+\[?(\d+)\]?\s+is\s+(.+?)(?=\.\s|$)", re.I)
 _INLINE_UNKNOWN = re.compile(r"(?:^|[;:])\s*(\d+)\s+unknown\b", re.I)
 
@@ -282,7 +284,8 @@ def parse_translation(path: Path, expected_ids: set[int] | None = None,
 
     Section headings, not citations elsewhere in the reconstruction, establish the
     boundary. Headings may be markdown, ``2. TRANSLATION``, or ``SECTION 2: TRANSLATION``.
-    List lines may be ``[n]``, ``n.``, ``n)``, a bold marker, or a dash bullet.
+    List lines may be ``[n]``, ``n.``, ``n)``, a bold marker, a dash bullet,
+    or a sender-labeled entry such as ``2 — agent_7: text``.
     Bare ``[n]`` files remain supported for the original self-report API.
     Duplicate and unexpected IDs are errors; absent IDs are reported by the scorer.
     """
@@ -305,10 +308,13 @@ def parse_translation(path: Path, expected_ids: set[int] | None = None,
     current = None
     for line in section.splitlines():
         match = _MESSAGE_LINE.match(line)
-        if match:
-            current = int(match.group(1) or match.group(2))
-            body = match.group(3).strip()
+        labeled = _LABELED_MESSAGE_LINE.match(line) if match is None else None
+        if match or labeled:
+            current = int(match.group(1) or match.group(2)) if match else int(labeled.group(1))
+            body = match.group(3).strip() if match else (labeled.group(2) + labeled.group(3)).strip()
             if strip_prefixes:
+                if labeled:
+                    body = labeled.group(3).strip()
                 # Remove confidence labels only when the decoder explicitly defines
                 # them as confidence. H/J/K elsewhere are unknown language frames.
                 if confidence_prefixes:
@@ -321,8 +327,9 @@ def parse_translation(path: Path, expected_ids: set[int] | None = None,
     if not blocks:
         for match in _INLINE_UNKNOWN.finditer(section):
             _accept_message(blocks, int(match.group(1)), "unknown", path, expected_ids)
-    first_message = re.search(r"(?m)" + _MESSAGE_LINE.pattern, section)
-    preamble = section[:first_message.start()] if first_message else section
+    first_messages = [match for pattern in (_MESSAGE_LINE, _LABELED_MESSAGE_LINE)
+                      if (match := re.search(r"(?m)" + pattern.pattern, section))]
+    preamble = section[:min(match.start() for match in first_messages)] if first_messages else section
     for match in _MESSAGE_SENTENCE.finditer(preamble):
         number = int(match.group(1))
         if number not in blocks:

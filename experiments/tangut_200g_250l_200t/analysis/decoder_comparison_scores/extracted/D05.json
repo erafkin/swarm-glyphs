@@ -1,0 +1,777 @@
+{
+  "format": "section_colon_structural_glosses",
+  "preamble": "Message [1] is English task feedback (high confidence): stage 0, 0 invalid attempts. Messages [2]-[110] are given structural glosses only; every content meaning is unknown. Labels: S = structural description of tokens, U = unknown content.",
+  "conventions": "Message [1] is English task feedback (high confidence): stage 0, 0 invalid attempts. Messages [2]-[110] are given structural glosses only; every content meaning is unknown. Labels: S = structural description of tokens, U = unknown content.",
+  "entries": [
+    {
+      "id": 2,
+      "original": "U: 𗏔 𗟎 𗿃 𗶞 (rare 𗶞)",
+      "normalized": "U: 𗏔 𗟎 𗿃 𗶞 (rare 𗶞)",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 3,
+      "original": "S: 𗏔 𗟎 𗿃 header only",
+      "normalized": "S: 𗏔 𗟎 𗿃 header only",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 4,
+      "original": "S: header plus 𗄪 𗵵 block",
+      "normalized": "S: header plus 𗄪 𗵵 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 5,
+      "original": "S: header only",
+      "normalized": "S: header only",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 6,
+      "original": "U: 𗏔 𗡒 𗿃 𘙠",
+      "normalized": "U: 𗏔 𗡒 𗿃 𘙠",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 7,
+      "original": "S: block 𗄪 𗵵 𗟎 𗿃 𗎰 with no opener",
+      "normalized": "S: block 𗄪 𗵵 𗟎 𗿃 𗎰 with no opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 8,
+      "original": "S: header plus 𘙠",
+      "normalized": "S: header plus 𘙠",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 9,
+      "original": "S: header plus 𗛽",
+      "normalized": "S: header plus 𗛽",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 10,
+      "original": "U: 𗏔 𗡒 𗿃 𗗫 𗵵 block",
+      "normalized": "U: 𗏔 𗡒 𗿃 𗗫 𗵵 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 11,
+      "original": "S: header plus 𘙠 plus block",
+      "normalized": "S: header plus 𘙠 plus block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 12,
+      "original": "S: 𗏔 𗟎 𗳃, no 𗿃",
+      "normalized": "S: 𗏔 𗟎 𗳃, no 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 13,
+      "original": "U: header plus rare 𗸽",
+      "normalized": "U: header plus rare 𗸽",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 14,
+      "original": "S: header plus 𗸪 plus block variant",
+      "normalized": "S: header plus 𗸪 plus block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 15,
+      "original": "U: header plus 𘙠 𗦴 block 𗣑 𗎰",
+      "normalized": "U: header plus 𘙠 𗦴 block 𗣑 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 16,
+      "original": "U: 𗏔 𗟎 𗿃 𗎰 𗵵 𗿃 𗥊",
+      "normalized": "U: 𗏔 𗟎 𗿃 𗎰 𗵵 𗿃 𗥊",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 17,
+      "original": "S: 𗏔 𗟎 𗳃 plus block tail",
+      "normalized": "S: 𗏔 𗟎 𗳃 plus block tail",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 18,
+      "original": "S: header plus 𗋭 plus block",
+      "normalized": "S: header plus 𗋭 plus block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 19,
+      "original": "S: 𗏔 𗟎 𗛽 𗿃",
+      "normalized": "S: 𗏔 𗟎 𗛽 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 20,
+      "original": "S: header plus 𘙠 plus block plus 𗣑",
+      "normalized": "S: header plus 𘙠 plus block plus 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 21,
+      "original": "U: 𗏔 𗟎 𗸽 𗿃 𗦴",
+      "normalized": "U: 𗏔 𗟎 𗸽 𗿃 𗦴",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 22,
+      "original": "U: header plus 𗣑 𗄎 𗵵 𗦴 𗿃 𗎰",
+      "normalized": "U: header plus 𗣑 𗄎 𗵵 𗦴 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 23,
+      "original": "S: block without opener",
+      "normalized": "S: block without opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 24,
+      "original": "S: header plus 𗳃 𗗫 block",
+      "normalized": "S: header plus 𗳃 𗗫 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 25,
+      "original": "U: 𗏔 𗡒 𘚐 𗿃 𘙠",
+      "normalized": "U: 𗏔 𗡒 𘚐 𗿃 𘙠",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 26,
+      "original": "U: header plus 𗎰 𘎌 𗟎 𗿃 𗎰",
+      "normalized": "U: header plus 𗎰 𘎌 𗟎 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 27,
+      "original": "S: 𗏔 𗟎 𗳃 plus block",
+      "normalized": "S: 𗏔 𗟎 𗳃 plus block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 28,
+      "original": "S: block without opener",
+      "normalized": "S: block without opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 29,
+      "original": "S: 𗏔 𗟎 𗳃 𗿃",
+      "normalized": "S: 𗏔 𗟎 𗳃 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 30,
+      "original": "S: block variant, no 𗿃",
+      "normalized": "S: block variant, no 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 31,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 32,
+      "original": "S: 𗵵 𗎰 𗿃 𗣑",
+      "normalized": "S: 𗵵 𗎰 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 33,
+      "original": "S: 𗏔 𗡒 𗿃 𘙠",
+      "normalized": "S: 𗏔 𗡒 𗿃 𘙠",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 34,
+      "original": "S: 𗏔 𗟎 𗚀 plus block with 𗚀",
+      "normalized": "S: 𗏔 𗟎 𗚀 plus block with 𗚀",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 35,
+      "original": "S: 𗄪 𗵵 𗡒 𗣑",
+      "normalized": "S: 𗄪 𗵵 𗡒 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 36,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 37,
+      "original": "U: 𗄪 𗵵 𗟎 𗦴 𗣑 𗿃",
+      "normalized": "U: 𗄪 𗵵 𗟎 𗦴 𗣑 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 38,
+      "original": "U: header plus 𗦴 plus block",
+      "normalized": "U: header plus 𗦴 plus block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 39,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 40,
+      "original": "S: 𗄪 𗵵 𗡒 𗣑 𗎰",
+      "normalized": "S: 𗄪 𗵵 𗡒 𗣑 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 41,
+      "original": "U: 𗏔 𗟎 𗿃 𘉝 𗎰",
+      "normalized": "U: 𗏔 𗟎 𗿃 𘉝 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 42,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 43,
+      "original": "S: 𗏔 𗡒 𗿃 𗋭",
+      "normalized": "S: 𗏔 𗡒 𗿃 𗋭",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 44,
+      "original": "S: header plus 𗗫 block plus 𗎰",
+      "normalized": "S: header plus 𗗫 block plus 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 45,
+      "original": "U: 𗏔 𗡒 𗿃 𗸪 block variant",
+      "normalized": "U: 𗏔 𗡒 𗿃 𗸪 block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 46,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 47,
+      "original": "U: 𗏔 𗟎 𗿃 𗦴 𗎰 𗗫 𗵵 𗟎 𗿃",
+      "normalized": "U: 𗏔 𗟎 𗿃 𗦴 𗎰 𗗫 𗵵 𗟎 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 48,
+      "original": "S: block without 𗿃",
+      "normalized": "S: block without 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 49,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 50,
+      "original": "S: 𗏔 𗟎 𗿃 𗸪 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗸪 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 51,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 52,
+      "original": "S: 𗏔 𗟎 𗿃 𗦴 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗦴 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 53,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 54,
+      "original": "S: 𗏔 𗟎 𗸪 block variant",
+      "normalized": "S: 𗏔 𗟎 𗸪 block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 55,
+      "original": "S: 𗏔 𗟎 𗿃 𗎰 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗎰 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 56,
+      "original": "U: 𗏔 𗟎 𗿃 𗗫 𗵵 𗡒 𗿃 𗣑 𗎰",
+      "normalized": "U: 𗏔 𗟎 𗿃 𗗫 𗵵 𗡒 𗿃 𗣑 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 57,
+      "original": "S: 𗏔 𗟎 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "S: 𗏔 𗟎 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 58,
+      "original": "S: 𗏔 𗟎 𗿃 𗸪 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗸪 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 59,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 60,
+      "original": "S: 𗄪 𗵵 𗟎 𗿃 𗣑, no opener",
+      "normalized": "S: 𗄪 𗵵 𗟎 𗿃 𗣑, no opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 61,
+      "original": "S: 𗏔 𗟎 𗋭 𗿃 block",
+      "normalized": "S: 𗏔 𗟎 𗋭 𗿃 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 62,
+      "original": "S: 𗏔 𗟎 𗸪 𗿃 block",
+      "normalized": "S: 𗏔 𗟎 𗸪 𗿃 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 63,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 64,
+      "original": "U: 𗄪 𗵵 𗦴 𗿃 𗣑",
+      "normalized": "U: 𗄪 𗵵 𗦴 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 65,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 66,
+      "original": "S: 𗏔 𗟎 𗿃 𗸪",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗸪",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 67,
+      "original": "U: 𗏔 𗦴 𗿃 𗣑 𗿃",
+      "normalized": "U: 𗏔 𗦴 𗿃 𗣑 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 68,
+      "original": "S: 𗏔 𗟎 𗿃 𗎰 block plus 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗎰 block plus 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 69,
+      "original": "U: 𗏔 𗟎 𗚀 𗸪 𗎰 block",
+      "normalized": "U: 𗏔 𗟎 𗚀 𗸪 𗎰 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 70,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 71,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 72,
+      "original": "U: 𗵵 𗟎 𗿃 𗣑 𗎰 𘉝 𗦴 𗿃",
+      "normalized": "U: 𗵵 𗟎 𗿃 𗣑 𗎰 𘉝 𗦴 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 73,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 74,
+      "original": "S: 𗏔 𗟎 𗸪 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗸪 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 75,
+      "original": "U: block with 𗚀 then 𗏔 𗟎 𗚀 𗶞 𗿃",
+      "normalized": "U: block with 𗚀 then 𗏔 𗟎 𗚀 𗶞 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 76,
+      "original": "S: 𗵵 𗎰 𗿃 𗣑",
+      "normalized": "S: 𗵵 𗎰 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 77,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 78,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 79,
+      "original": "S: 𗏔 𗡒 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "S: 𗏔 𗡒 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 80,
+      "original": "S: 𗏔 𗟎 𗚀 𗎰 block with 𗚀",
+      "normalized": "S: 𗏔 𗟎 𗚀 𗎰 block with 𗚀",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 81,
+      "original": "S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 82,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 83,
+      "original": "S: 𗏔 𗡒 𗋭 𗿃",
+      "normalized": "S: 𗏔 𗡒 𗋭 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 84,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 85,
+      "original": "S: 𗵵 𗎰 𗿃 𗣑, no opener",
+      "normalized": "S: 𗵵 𗎰 𗿃 𗣑, no opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 86,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 87,
+      "original": "U: 𗏔 𗡒 𗋭 𗿃 𗗫 𗵵 𗡒 𗿃 𗎰",
+      "normalized": "U: 𗏔 𗡒 𗋭 𗿃 𗗫 𗵵 𗡒 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 88,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 89,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 90,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 91,
+      "original": "S: 𗏔 𗡒 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "normalized": "S: 𗏔 𗡒 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 92,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 93,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 94,
+      "original": "S: 𗏔 𗟎 𗿃 𗸪 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗸪 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 95,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 96,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 97,
+      "original": "S: block",
+      "normalized": "S: block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 98,
+      "original": "S: 𗏔 𗟎 𗸪 𗿃",
+      "normalized": "S: 𗏔 𗟎 𗸪 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 99,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 100,
+      "original": "S: 𗏔 𗟎 𗋭 𗿃 block",
+      "normalized": "S: 𗏔 𗟎 𗋭 𗿃 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 101,
+      "original": "U: block plus 𗉜 𗽃 𗦴",
+      "normalized": "U: block plus 𗉜 𗽃 𗦴",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 102,
+      "original": "S: 𗏔 𗟎 𗸪 𗿃 block",
+      "normalized": "S: 𗏔 𗟎 𗸪 𗿃 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 103,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 104,
+      "original": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗋭 block",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 105,
+      "original": "U: 𗄪 𗵵 𗡒 𗿃",
+      "normalized": "U: 𗄪 𗵵 𗡒 𗿃",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 106,
+      "original": "S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "normalized": "S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 107,
+      "original": "S: block variant",
+      "normalized": "S: block variant",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 108,
+      "original": "U: 𗏔 𗟎 𗸪 𗿃 𗎰 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "U: 𗏔 𗟎 𗸪 𗿃 𗎰 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 109,
+      "original": "U: 𗏔 𗟎 𗋭 𗿃 𗒏 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "normalized": "U: 𗏔 𗟎 𗋭 𗿃 𗒏 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    },
+    {
+      "id": 110,
+      "original": "S: block variant, no opener",
+      "normalized": "S: block variant, no opener",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "global_unknown_content_declaration"
+    }
+  ],
+  "notes": [
+    "The translation preamble explicitly declares every content meaning unknown; S/U entries are structural glosses only.",
+    "Message 1 is described in prose only; no numbered task entry was fabricated."
+  ],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D05_haiku_to_haiku_no_task/decoded.txt",
+  "decoder_sha256": "fa7dfcd80e91ec512e5a3857188e5c56319be8b59beecfd602a71e6a0d0dd08b",
+  "canonical_document_sha256": "27aa1da70da5db5649313d077fa5f9cb74de9e50ca67cb9aab88b3e6e865db7e"
+}

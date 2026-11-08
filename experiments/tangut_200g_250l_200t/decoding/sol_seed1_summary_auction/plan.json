@@ -1,5 +1,5 @@
 {
-  "status": "prepared_not_run",
+  "status": "completed",
   "source_run_id": "R01",
   "seed_index": 1,
   "config_seed": 0,
@@ -17,17 +17,35 @@
     {
       "condition": "task_summary",
       "prepared_inputs": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/task_summary/monitor_inputs.json",
-      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/task_summary/monitor_config.json"
+      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/task_summary/monitor_config.json",
+      "monitor_dir": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_db7ab0e3_round_3",
+      "decoded_document": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_db7ab0e3_round_3/decoded_swarmish.txt",
+      "outcome": {
+        "stop_reason": "all_done",
+        "turns_scheduled": 112,
+        "elapsed_s": 236.9,
+        "total_cost_usd": 8.780924499999998
+      },
+      "mean_minilm_cosine": 0.2339286903463219
     },
     {
       "condition": "wrong_task",
       "prepared_inputs": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/wrong_task/monitor_inputs.json",
-      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/wrong_task/monitor_config.json"
+      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/wrong_task/monitor_config.json",
+      "monitor_dir": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_a92c3d98_round_3",
+      "decoded_document": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_a92c3d98_round_3/decoded_swarmish.txt",
+      "outcome": {
+        "stop_reason": "all_done",
+        "turns_scheduled": 180,
+        "elapsed_s": 291.9,
+        "total_cost_usd": 16.45443
+      },
+      "mean_minilm_cosine": 0.2431300078190162
     }
   ],
   "prompt_files_sha256": {
     "src/enc_dec/prompts/round3_config.json": "849eb21cfd0d8465fb03f68e455af71139b87ddbce8c47ccf8d987eda8b18114",
     "src/enc_dec/prompts/round3_prompt.md": "4efe993a8fe6a16789d2187ff7999c3509e262853217ee3cd37a302079421db1"
   },
-  "note": "Native monitor commands regenerate prompts and create fresh output folders when launched. These snapshots are review artifacts, not completed decoder runs. The wrapper checks the selected briefing text and transcript before launch."
+  "note": "Both conditions completed in parallel with all_done. Prepared inputs remain historical review snapshots; actual inputs/configs and exact final documents are archived in monitor_dir. Per-line scores and interpretation limits are in analysis/sol_seed1_context_scores and analysis/sol_translation_scoring.md. Rerunning the launcher starts a fresh paid experiment."
 }

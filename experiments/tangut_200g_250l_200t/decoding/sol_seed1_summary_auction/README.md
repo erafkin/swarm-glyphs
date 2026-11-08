@@ -1,6 +1,17 @@
 # Sol seed 1: task summary and Art Auction
 
-Prepared only: no decoder model calls have been made for these two runs.
+Both runs are complete and archived. They ran in parallel and stopped with all
+eight decoders done, without reaching their configured limits.
+
+| Condition | Calls | Runtime | Recorded cost | Mean MiniLM cosine |
+|---|---:|---:|---:|---:|
+| Task summary | 112 | 3m 57s | $8.78 | 0.234 |
+| Art Auction | 180 | 4m 52s | $16.45 | 0.243 |
+
+The [results and audit](../../analysis/sol_translation_scoring.md) include both
+decoder reports, per-line scores, and the corresponding seed-2 runs. Cosine is a
+similarity measure, not translation accuracy. The plan below retains the prepared
+input paths and now records the completed run directories and outcomes.
 
 Both conditions replay the same revised R01 escape-room transcript used in the
 five-seed comparison: 109 public entries from
@@ -36,7 +47,7 @@ encoder reference. Both receive identical numbered public transcript entries.
 Art Auction is now the current wrong-task setting for future monitor invocations;
 historical saved decoder prompts remain unchanged.
 
-## Launch
+## Launch a new repeat
 
 From the repository root, with `OPENROUTER_API_KEY` available in the environment or
 the repository's `.env` and dependencies installed in `.venv`:

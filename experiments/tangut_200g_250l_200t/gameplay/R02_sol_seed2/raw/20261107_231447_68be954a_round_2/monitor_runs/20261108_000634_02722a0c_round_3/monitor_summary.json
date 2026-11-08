@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "openai/gpt-6.1-sol",
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "task_summary"
+  ],
+  "conditions_completed": [
+    "task_summary"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 10.810214000000002,
+  "cost_incomplete": false,
+  "max_cost_usd": 40.0,
+  "baseline": false,
+  "elapsed_s": 259.150099458,
+  "transcript_sha256": "b983f7bbba672da49b1361b559b3aafd95067903232c58dbfb007fa7778ad88b",
+  "source_transcript_sha256": "b983f7bbba672da49b1361b559b3aafd95067903232c58dbfb007fa7778ad88b"
+}

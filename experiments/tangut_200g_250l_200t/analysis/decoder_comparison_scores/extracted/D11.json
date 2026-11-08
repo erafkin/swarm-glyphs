@@ -1,0 +1,1602 @@
+{
+  "format": "bracket_translation_lines",
+  "preamble": "All messages by number, with meaning in English. [guess] marks a guess submission that likely caused the following invalid_attempts increment. \"unknown\" is used when meaning is unclear.",
+  "conventions": "All messages by number, with meaning in English. [guess] marks a guess submission that likely caused the following invalid_attempts increment. \"unknown\" is used when meaning is unclear.",
+  "entries": [
+    {
+      "id": 1,
+      "original": "[task] Stage 0, invalid_attempts 0.",
+      "normalized": "Stage 0, invalid_attempts 0.",
+      "scoring_text": "Stage 0, invalid_attempts 0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 2,
+      "original": "[agent_4] unknown (short message, possibly partial assignment).",
+      "normalized": "unknown (short message, possibly partial assignment).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 3,
+      "original": "[agent_6] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 4,
+      "original": "[agent_7] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 5,
+      "original": "[agent_5] unknown (sequence: 𗉞𘀝𘍂𗌈𘒳).",
+      "normalized": "unknown (sequence: 𗉞𘀝𘍂𗌈𘒳).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 6,
+      "original": "[agent_2] unknown (𗒳𗟎𗢬𗉞𗽕𘅌𘂮𗕴𘂮𗃚𗉞𗁳).",
+      "normalized": "unknown (𗒳𗟎𗢬𗉞𗽕𘅌𘂮𗕴𘂮𗃚𗉞𗁳).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 7,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 8,
+      "original": "[agent_6] unknown (𘍂𗨥𗱑𘒳𗂱𗉞𗨥𘂮𗁳𗼛𗃚𗉞𘏉𗱑𗤄).",
+      "normalized": "unknown (𘍂𗨥𗱑𘒳𗂱𗉞𗨥𘂮𗁳𗼛𗃚𗉞𘏉𗱑𗤄).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 9,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 10,
+      "original": "[agent_3] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 11,
+      "original": "[agent_4] unknown (𗯘𗃚𗉞𘅌𗤄 𘒳𗉞𘀝).",
+      "normalized": "unknown (𗯘𗃚𗉞𘅌𗤄 𘒳𗉞𘀝).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 12,
+      "original": "[agent_6] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 13,
+      "original": "[agent_7] unknown (𗉞𗨥𗇾𗟎𗉞𘊫𘆎𗇾𗉞𘀝𘆎𗇾𗉞𘔃𘆎𗇾).",
+      "normalized": "unknown (𗉞𗨥𗇾𗟎𗉞𘊫𘆎𗇾𗉞𘀝𘆎𗇾𗉞𘔃𘆎𗇾).",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown_with_structural_commentary"
+    },
+    {
+      "id": 14,
+      "original": "[agent_3] maybe \"A is white\" (𗉞𘊫𗂱𘒳, possibly A=white black?).",
+      "normalized": "maybe \"A is white\" (𗉞𘊫𗂱𘒳, possibly A=white black?).",
+      "scoring_text": "maybe \"A is white\" (𗉞𘊫𗂱𘒳, possibly A=white black?).",
+      "unknown_reason": null
+    },
+    {
+      "id": 15,
+      "original": "[agent_2] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 16,
+      "original": "[agent_0] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 17,
+      "original": "[agent_7] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 18,
+      "original": "[agent_1] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 19,
+      "original": "[agent_4] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 20,
+      "original": "[agent_6] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 21,
+      "original": "[agent_2] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 22,
+      "original": "[agent_3] \"A is white\", \"B is black\", \"C is grey\", \"D is dark\". (𗉞𘊫𗂱𘒳𗁳𗉞𘀝𘆎𗤄𗉞𘔃𘆎𗤄𗉞𗨥𘆎𗤄)",
+      "normalized": "\"A is white\", \"B is black\", \"C is grey\", \"D is dark\". (𗉞𘊫𗂱𘒳𗁳𗉞𘀝𘆎𗤄𗉞𘔃𘆎𗤄𗉞𗨥𘆎𗤄)",
+      "scoring_text": "\"A is white\", \"B is black\", \"C is grey\", \"D is dark\". (𗉞𘊫𗂱𘒳𗁳𗉞𘀝𘆎𗤄𗉞𘔃𘆎𗤄𗉞𗨥𘆎𗤄)",
+      "unknown_reason": null
+    },
+    {
+      "id": 23,
+      "original": "[agent_5] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 24,
+      "original": "[agent_4] \"the A is white, the A is black, the C is grey, the D is dark\" …",
+      "normalized": "\"the A is white, the A is black, the C is grey, the D is dark\" …",
+      "scoring_text": "\"the A is white, the A is black, the C is grey, the D is dark\" …",
+      "unknown_reason": null
+    },
+    {
+      "id": 25,
+      "original": "[agent_0] \"the A is white, the B is white, the C is white, the D is white\".",
+      "normalized": "\"the A is white, the B is white, the C is white, the D is white\".",
+      "scoring_text": "\"the A is white, the B is white, the C is white, the D is white\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 26,
+      "original": "[agent_4] I state: A maybe, B maybe, C grey, D dark. The A is white. The B is black. The C is grey. The D is dark.",
+      "normalized": "I state: A maybe, B maybe, C grey, D dark. The A is white. The B is black. The C is grey. The D is dark.",
+      "scoring_text": "I state: A maybe, B maybe, C grey, D dark. The A is white. The B is black. The C is grey. The D is dark.",
+      "unknown_reason": null
+    },
+    {
+      "id": 27,
+      "original": "[agent_7] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 28,
+      "original": "[agent_6] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 29,
+      "original": "[agent_0] \"the A is white, the A is white B is black, the C is grey, the D is grey, maybe the C\".",
+      "normalized": "\"the A is white, the A is white B is black, the C is grey, the D is grey, maybe the C\".",
+      "scoring_text": "\"the A is white, the A is white B is black, the C is grey, the D is grey, maybe the C\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 30,
+      "original": "[agent_7] \"B is white, B is black, D is white, D is black, 7 is white, 7 is black, 8 is white, the A is black\".",
+      "normalized": "\"B is white, B is black, D is white, D is black, 7 is white, 7 is black, 8 is white, the A is black\".",
+      "scoring_text": "\"B is white, B is black, D is white, D is black, 7 is white, 7 is black, 8 is white, the A is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 31,
+      "original": "[agent_2] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 32,
+      "original": "[agent_3] \"I guess: 1 2 3 4\", then \"A is white, A is black, B is black, D is grey\". [guess] (𗒳𗲅𗉞𘊫𘀝𘔃𗨥𗤄 …)",
+      "normalized": "\"I guess: 1 2 3 4\", then \"A is white, A is black, B is black, D is grey\". [guess] (𗒳𗲅𗉞𘊫𘀝𘔃𗨥𗤄 …)",
+      "scoring_text": "\"I guess: 1 2 3 4\", then \"A is white, A is black, B is black, D is grey\". [guess] (𗒳𗲅𗉞𘊫𘀝𘔃𗨥𗤄 …)",
+      "unknown_reason": null
+    },
+    {
+      "id": 33,
+      "original": "[task] Stage 0, invalid_attempts 1.",
+      "normalized": "Stage 0, invalid_attempts 1.",
+      "scoring_text": "Stage 0, invalid_attempts 1.",
+      "unknown_reason": null
+    },
+    {
+      "id": 34,
+      "original": "[agent_0] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 35,
+      "original": "[agent_1] I state: \"C is, I state, D is black, 7 is A white, B black, D grey\" …",
+      "normalized": "I state: \"C is, I state, D is black, 7 is A white, B black, D grey\" …",
+      "scoring_text": "I state: \"C is, I state, D is black, 7 is A white, B black, D grey\" …",
+      "unknown_reason": null
+    },
+    {
+      "id": 36,
+      "original": "[agent_4] \"I state: B is white, A is grey, A is black, C is dark, the B is white, the A is black, the C is grey, the D is dark\".",
+      "normalized": "\"I state: B is white, A is grey, A is black, C is dark, the B is white, the A is black, the C is grey, the D is dark\".",
+      "scoring_text": "\"I state: B is white, A is grey, A is black, C is dark, the B is white, the A is black, the C is grey, the D is dark\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 37,
+      "original": "[agent_6] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 38,
+      "original": "[agent_5] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 39,
+      "original": "[agent_0] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 40,
+      "original": "[agent_7] \"D is white grey, maybe grey is, C maybe, A maybe\".",
+      "normalized": "\"D is white grey, maybe grey is, C maybe, A maybe\".",
+      "scoring_text": "\"D is white grey, maybe grey is, C maybe, A maybe\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 41,
+      "original": "[agent_2] unknown.",
+      "normalized": "unknown.",
+      "scoring_text": "unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 42,
+      "original": "[agent_5] \"the B is ?, A is black, C is black, D is black\".",
+      "normalized": "\"the B is ?, A is black, C is black, D is black\".",
+      "scoring_text": "\"the B is ?, A is black, C is black, D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 43,
+      "original": "[agent_4] \"maybe the A is black, maybe the B is black, maybe the C is black, maybe the D is black\".",
+      "normalized": "\"maybe the A is black, maybe the B is black, maybe the C is black, maybe the D is black\".",
+      "scoring_text": "\"maybe the A is black, maybe the B is black, maybe the C is black, maybe the D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 44,
+      "original": "[task] Stage0, invalid_attempts 2.",
+      "normalized": "Stage0, invalid_attempts 2.",
+      "scoring_text": "Stage0, invalid_attempts 2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 45,
+      "original": "[agent_2] I state: \"grey is, A is white, B is black, C is grey, D is dark, the A is white, the B is black, the C is grey, the D is dark\".",
+      "normalized": "I state: \"grey is, A is white, B is black, C is grey, D is dark, the A is white, the B is black, the C is grey, the D is dark\".",
+      "scoring_text": "I state: \"grey is, A is white, B is black, C is grey, D is dark, the A is white, the B is black, the C is grey, the D is dark\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 46,
+      "original": "[agent_1] \"C is, A is white, B is black, D is grey, …\"",
+      "normalized": "\"C is, A is white, B is black, D is grey, …\"",
+      "scoring_text": "\"C is, A is white, B is black, D is grey, …\"",
+      "unknown_reason": null
+    },
+    {
+      "id": 47,
+      "original": "[agent_6] \"I state: the D is ?, A is white, B is black, C is grey, D is dark\".",
+      "normalized": "\"I state: the D is ?, A is white, B is black, C is grey, D is dark\".",
+      "scoring_text": "\"I state: the D is ?, A is white, B is black, C is grey, D is dark\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 48,
+      "original": "[agent_3] \"I state: 1 is white, A is black, B is black, C is black. I guess: 2 2 2 5\". [guess]",
+      "normalized": "\"I state: 1 is white, A is black, B is black, C is black. I guess: 2 2 2 5\". [guess]",
+      "scoring_text": "\"I state: 1 is white, A is black, B is black, C is black. I guess: 2 2 2 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 49,
+      "original": "[task] Stage0, invalid_attempts 3.",
+      "normalized": "Stage0, invalid_attempts 3.",
+      "scoring_text": "Stage0, invalid_attempts 3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 50,
+      "original": "[agent_4] \"I state: A is white, the A is black, the B is black, the C is black, the D is black\".",
+      "normalized": "\"I state: A is white, the A is black, the B is black, the C is black, the D is black\".",
+      "scoring_text": "\"I state: A is white, the A is black, the B is black, the C is black, the D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 51,
+      "original": "[agent_2] \"I state: grey is, A is white, B is black, A is white, B is black, C is grey, D is dark\".",
+      "normalized": "\"I state: grey is, A is white, B is black, A is white, B is black, C is grey, D is dark\".",
+      "scoring_text": "\"I state: grey is, A is white, B is black, A is white, B is black, C is grey, D is dark\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 52,
+      "original": "[agent_6] \"the 7 is D, maybe A is, maybe grey is, maybe black is\".",
+      "normalized": "\"the 7 is D, maybe A is, maybe grey is, maybe black is\".",
+      "scoring_text": "\"the 7 is D, maybe A is, maybe grey is, maybe black is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 53,
+      "original": "[agent_4] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 54,
+      "original": "[agent_7] \"I state: D is white, A is white, D is grey, A is white, B is black, B is black, C is 3, C is black\".",
+      "normalized": "\"I state: D is white, A is white, D is grey, A is white, B is black, B is black, C is 3, C is black\".",
+      "scoring_text": "\"I state: D is white, A is white, D is grey, A is white, B is black, B is black, C is 3, C is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 55,
+      "original": "[agent_1] \"I state: the C is 3, I state: A is white, I state: B is black, I state: grey is dark, maybe 3 is\".",
+      "normalized": "\"I state: the C is 3, I state: A is white, I state: B is black, I state: grey is dark, maybe 3 is\".",
+      "scoring_text": "\"I state: the C is 3, I state: A is white, I state: B is black, I state: grey is dark, maybe 3 is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 56,
+      "original": "[agent_2] \"I state: grey is dark? A is black, B is black, C is black\".",
+      "normalized": "\"I state: grey is dark? A is black, B is black, C is black\".",
+      "scoring_text": "\"I state: grey is dark? A is black, B is black, C is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 57,
+      "original": "[agent_7] \"I state: D is white grey, B is black\".",
+      "normalized": "\"I state: D is white grey, B is black\".",
+      "scoring_text": "\"I state: D is white grey, B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 58,
+      "original": "[agent_5] \"I state: the A is white, A is …, maybe grey is black\".",
+      "normalized": "\"I state: the A is white, A is …, maybe grey is black\".",
+      "scoring_text": "\"I state: the A is white, A is …, maybe grey is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 59,
+      "original": "[agent_7] \"I state: D is white, grey is dark, A is white, B is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe B is\".",
+      "normalized": "\"I state: D is white, grey is dark, A is white, B is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe B is\".",
+      "scoring_text": "\"I state: D is white, grey is dark, A is white, B is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 60,
+      "original": "[agent_3] \"I state: 1 the 1 is black, 2 black, 3 black, 4 black, A black, B black, C black, D black\".",
+      "normalized": "\"I state: 1 the 1 is black, 2 black, 3 black, 4 black, A black, B black, C black, D black\".",
+      "scoring_text": "\"I state: 1 the 1 is black, 2 black, 3 black, 4 black, A black, B black, C black, D black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 61,
+      "original": "[agent_6] \"I state: B is D, grey is 7, A is white, B is black, A is black, 1 2 4 7, A is white, B is black, C is dark, D is grey. I submit: 1 2 4 7\". [guess]",
+      "normalized": "\"I state: B is D, grey is 7, A is white, B is black, A is black, 1 2 4 7, A is white, B is black, C is dark, D is grey. I submit: 1 2 4 7\". [guess]",
+      "scoring_text": "\"I state: B is D, grey is 7, A is white, B is black, A is black, 1 2 4 7, A is white, B is black, C is dark, D is grey. I submit: 1 2 4 7\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 62,
+      "original": "[task] Stage0, invalid_attempts 4.",
+      "normalized": "Stage0, invalid_attempts 4.",
+      "scoring_text": "Stage0, invalid_attempts 4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 63,
+      "original": "[agent_5] \"I state: B the 2 is, A is white, C is black, D is black, maybe A is white, grey is dark, black is black, maybe 1 the black maybe 3 the black maybe 4 the black\".",
+      "normalized": "\"I state: B the 2 is, A is white, C is black, D is black, maybe A is white, grey is dark, black is black, maybe 1 the black maybe 3 the black maybe 4 the black\".",
+      "scoring_text": "\"I state: B the 2 is, A is white, C is black, D is black, maybe A is white, grey is dark, black is black, maybe 1 the black maybe 3 the black maybe 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 64,
+      "original": "[agent_2] \"I guess: 1 2 2 5\". [guess]",
+      "normalized": "\"I guess: 1 2 2 5\". [guess]",
+      "scoring_text": "\"I guess: 1 2 2 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 65,
+      "original": "[task] Stage0, invalid_attempts 5.",
+      "normalized": "Stage0, invalid_attempts 5.",
+      "scoring_text": "Stage0, invalid_attempts 5.",
+      "unknown_reason": null
+    },
+    {
+      "id": 66,
+      "original": "[agent_0] \"I state: the 6 is, 1 the black, 2 the black, 3 the black, 4 the black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: the 6 is, 1 the black, 2 the black, 3 the black, 4 the black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: the 6 is, 1 the black, 2 the black, 3 the black, 4 the black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 67,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 68,
+      "original": "[agent_1] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 69,
+      "original": "[agent_4] \"I guess: 2 2 6 5\". [guess]",
+      "normalized": "\"I guess: 2 2 6 5\". [guess]",
+      "scoring_text": "\"I guess: 2 2 6 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 70,
+      "original": "[task] Stage0, invalid_attempts 6.",
+      "normalized": "Stage0, invalid_attempts 6.",
+      "scoring_text": "Stage0, invalid_attempts 6.",
+      "unknown_reason": null
+    },
+    {
+      "id": 71,
+      "original": "[agent_5] \"I state: the B is, maybe the A is, maybe the C is, maybe the D is, maybe A black, maybe B black, maybe C black, maybe D black\".",
+      "normalized": "\"I state: the B is, maybe the A is, maybe the C is, maybe the D is, maybe A black, maybe B black, maybe C black, maybe D black\".",
+      "scoring_text": "\"I state: the B is, maybe the A is, maybe the C is, maybe the D is, maybe A black, maybe B black, maybe C black, maybe D black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 72,
+      "original": "[agent_7] \"I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "normalized": "\"I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "scoring_text": "\"I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 73,
+      "original": "[agent_5] \"B is ?, maybe the A is, maybe the C is, maybe the D is\".",
+      "normalized": "\"B is ?, maybe the A is, maybe the C is, maybe the D is\".",
+      "scoring_text": "\"B is ?, maybe the A is, maybe the C is, maybe the D is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 74,
+      "original": "[agent_6] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 75,
+      "original": "[agent_7] \"I state: D is white, the A is black, the B is black, the C is black\".",
+      "normalized": "\"I state: D is white, the A is black, the B is black, the C is black\".",
+      "scoring_text": "\"I state: D is white, the A is black, the B is black, the C is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 76,
+      "original": "[agent_1] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 77,
+      "original": "[agent_3] \"I state: the A is white, maybe the B is black, the C is black, the D is black\".",
+      "normalized": "\"I state: the A is white, maybe the B is black, the C is black, the D is black\".",
+      "scoring_text": "\"I state: the A is white, maybe the B is black, the C is black, the D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 78,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 79,
+      "original": "[agent_2] \"I state: grey is dark, maybe the A is, maybe the B is, maybe the C is, maybe the D is, maybe A is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: grey is dark, maybe the A is, maybe the B is, maybe the C is, maybe the D is, maybe A is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: grey is dark, maybe the A is, maybe the B is, maybe the C is, maybe the D is, maybe A is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 80,
+      "original": "[task] Stage0, invalid_attempts 7.",
+      "normalized": "Stage0, invalid_attempts 7.",
+      "scoring_text": "Stage0, invalid_attempts 7.",
+      "unknown_reason": null
+    },
+    {
+      "id": 81,
+      "original": "[agent_0] \"I state: B is 6, the A is black, the B is black, the C is black, the D is black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: B is 6, the A is black, the B is black, the C is black, the D is black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: B is 6, the A is black, the B is black, the C is black, the D is black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 82,
+      "original": "[agent_5] \"I state: 2 the 2 is, maybe black is, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "normalized": "\"I state: 2 the 2 is, maybe black is, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "scoring_text": "\"I state: 2 the 2 is, maybe black is, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 83,
+      "original": "[agent_7] \"I state: D is white, maybe the A is, maybe the B is, maybe the C is, A is black, B is black, C is black, D is black\".",
+      "normalized": "\"I state: D is white, maybe the A is, maybe the B is, maybe the C is, A is black, B is black, C is black, D is black\".",
+      "scoring_text": "\"I state: D is white, maybe the A is, maybe the B is, maybe the C is, A is black, B is black, C is black, D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 84,
+      "original": "[agent_4] \"I state: A is white, grey is dark, the B is black, the C is dark, the D is black\".",
+      "normalized": "\"I state: A is white, grey is dark, the B is black, the C is dark, the D is black\".",
+      "scoring_text": "\"I state: A is white, grey is dark, the B is black, the C is dark, the D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 85,
+      "original": "[agent_1] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 86,
+      "original": "[agent_2] \"I state: grey is dark, A is white, B is black, B is 6, the A is white, the B is dark, the C is black, the D is grey. I guess: 1 6 2 5\". [guess]",
+      "normalized": "\"I state: grey is dark, A is white, B is black, B is 6, the A is white, the B is dark, the C is black, the D is grey. I guess: 1 6 2 5\". [guess]",
+      "scoring_text": "\"I state: grey is dark, A is white, B is black, B is 6, the A is white, the B is dark, the C is black, the D is grey. I guess: 1 6 2 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 87,
+      "original": "[task] Stage0, invalid_attempts 8.",
+      "normalized": "Stage0, invalid_attempts 8.",
+      "scoring_text": "Stage0, invalid_attempts 8.",
+      "unknown_reason": null
+    },
+    {
+      "id": 88,
+      "original": "[agent_6] \"1 is white, 2 is black, 3 is dark, 4 is grey. I submit: 1 2 4 5\". [guess]",
+      "normalized": "\"1 is white, 2 is black, 3 is dark, 4 is grey. I submit: 1 2 4 5\". [guess]",
+      "scoring_text": "\"1 is white, 2 is black, 3 is dark, 4 is grey. I submit: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 89,
+      "original": "[task] Stage0, invalid_attempts 9.",
+      "normalized": "Stage0, invalid_attempts 9.",
+      "scoring_text": "Stage0, invalid_attempts 9.",
+      "unknown_reason": null
+    },
+    {
+      "id": 90,
+      "original": "[agent_2] \"I guess: 1 2 6 5\". [guess]",
+      "normalized": "\"I guess: 1 2 6 5\". [guess]",
+      "scoring_text": "\"I guess: 1 2 6 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 91,
+      "original": "[task] Stage0, invalid_attempts 10.",
+      "normalized": "Stage0, invalid_attempts 10.",
+      "scoring_text": "Stage0, invalid_attempts 10.",
+      "unknown_reason": null
+    },
+    {
+      "id": 92,
+      "original": "[agent_4] \"I state: A is white, black is black, B is black, grey is black, A B C D grey\".",
+      "normalized": "\"I state: A is white, black is black, B is black, grey is black, A B C D grey\".",
+      "scoring_text": "\"I state: A is white, black is black, B is black, grey is black, A B C D grey\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 93,
+      "original": "[agent_5] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 94,
+      "original": "[agent_1] \"I state: 3 the 3, I state: grey is dark, B is black, A is black, B is black, 1 the black, 2 the black, 4 the black\".",
+      "normalized": "\"I state: 3 the 3, I state: grey is dark, B is black, A is black, B is black, 1 the black, 2 the black, 4 the black\".",
+      "scoring_text": "\"I state: 3 the 3, I state: grey is dark, B is black, A is black, B is black, 1 the black, 2 the black, 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 95,
+      "original": "[agent_0] \"I state: B is ?, maybe B the, maybe A is, maybe black is, maybe B is, maybe 1 the, maybe 3 the, maybe 4 the\".",
+      "normalized": "\"I state: B is ?, maybe B the, maybe A is, maybe black is, maybe B is, maybe 1 the, maybe 3 the, maybe 4 the\".",
+      "scoring_text": "\"I state: B is ?, maybe B the, maybe A is, maybe black is, maybe B is, maybe 1 the, maybe 3 the, maybe 4 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 96,
+      "original": "[agent_7] \"I state: the D is grey, maybe grey is, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: the D is grey, maybe grey is, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: the D is grey, maybe grey is, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 97,
+      "original": "[agent_3] \"I state: 1 the white, A is white, B is black, grey is dark, maybe 3 the, maybe 4 the, maybe B is\".",
+      "normalized": "\"I state: 1 the white, A is white, B is black, grey is dark, maybe 3 the, maybe 4 the, maybe B is\".",
+      "scoring_text": "\"I state: 1 the white, A is white, B is black, grey is dark, maybe 3 the, maybe 4 the, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 98,
+      "original": "[agent_2] \"I guess: 1 2 6 5. I state: A is white, B is black, grey is dark, the A is white, the B is black, the C is dark, the D is grey, B is black\". [guess]",
+      "normalized": "\"I guess: 1 2 6 5. I state: A is white, B is black, grey is dark, the A is white, the B is black, the C is dark, the D is grey, B is black\". [guess]",
+      "scoring_text": "\"I guess: 1 2 6 5. I state: A is white, B is black, grey is dark, the A is white, the B is black, the C is dark, the D is grey, B is black\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 99,
+      "original": "[agent_0] \"I state: B is ?, maybe A is, maybe black is, maybe grey is, maybe the A black, maybe the B black, maybe the C black, maybe the D black\".",
+      "normalized": "\"I state: B is ?, maybe A is, maybe black is, maybe grey is, maybe the A black, maybe the B black, maybe the C black, maybe the D black\".",
+      "scoring_text": "\"I state: B is ?, maybe A is, maybe black is, maybe grey is, maybe the A black, maybe the B black, maybe the C black, maybe the D black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 100,
+      "original": "[agent_7] \"I state: the D is white, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe ? is, maybe 8 is\".",
+      "normalized": "\"I state: the D is white, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe ? is, maybe 8 is\".",
+      "scoring_text": "\"I state: the D is white, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe ? is, maybe 8 is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 101,
+      "original": "[agent_2] \"I state: A is white, B is black, grey is dark. Maybe B is black\".",
+      "normalized": "\"I state: A is white, B is black, grey is dark. Maybe B is black\".",
+      "scoring_text": "\"I state: A is white, B is black, grey is dark. Maybe B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 102,
+      "original": "[agent_2] \"I state: A is white, B is black, grey is dark. I guess: B is 3. I guess: 1 2 3 5\". [guess]",
+      "normalized": "\"I state: A is white, B is black, grey is dark. I guess: B is 3. I guess: 1 2 3 5\". [guess]",
+      "scoring_text": "\"I state: A is white, B is black, grey is dark. I guess: B is 3. I guess: 1 2 3 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 103,
+      "original": "[task] Stage0, invalid_attempts 11.",
+      "normalized": "Stage0, invalid_attempts 11.",
+      "scoring_text": "Stage0, invalid_attempts 11.",
+      "unknown_reason": null
+    },
+    {
+      "id": 104,
+      "original": "[agent_3] \"I state: A is white, B is black, grey is dark, maybe B is, maybe the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "normalized": "\"I state: A is white, B is black, grey is dark, maybe B is, maybe the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "scoring_text": "\"I state: A is white, B is black, grey is dark, maybe B is, maybe the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 105,
+      "original": "[agent_5] \"I state: 2 the 2 is, B is black, 1 the black, 3 the black, 4 the black\".",
+      "normalized": "\"I state: 2 the 2 is, B is black, 1 the black, 3 the black, 4 the black\".",
+      "scoring_text": "\"I state: 2 the 2 is, B is black, 1 the black, 3 the black, 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 106,
+      "original": "[agent_4] \"I state: A is white, grey is dark, B is 6, maybe black is, the A is black, the B is black, the C is black\".",
+      "normalized": "\"I state: A is white, grey is dark, B is 6, maybe black is, the A is black, the B is black, the C is black\".",
+      "scoring_text": "\"I state: A is white, grey is dark, B is 6, maybe black is, the A is black, the B is black, the C is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 107,
+      "original": "[agent_0] \"I state: B is ?, B is black, A is black, B is black, grey is black\".",
+      "normalized": "\"I state: B is ?, B is black, A is black, B is black, grey is black\".",
+      "scoring_text": "\"I state: B is ?, B is black, A is black, B is black, grey is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 108,
+      "original": "[agent_1] \"I state: 3 is B, A is white, B is black, D is dark\".",
+      "normalized": "\"I state: 3 is B, A is white, B is black, D is dark\".",
+      "scoring_text": "\"I state: 3 is B, A is white, B is black, D is dark\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 109,
+      "original": "[agent_7] \"D is 4, 1 is black, 2 is black, 3 is black, A is black, grey is black, black is black, B is black\".",
+      "normalized": "\"D is 4, 1 is black, 2 is black, 3 is black, A is black, grey is black, black is black, B is black\".",
+      "scoring_text": "\"D is 4, 1 is black, 2 is black, 3 is black, A is black, grey is black, black is black, B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 110,
+      "original": "[agent_3] \"I submit: 1 2 4 5\". [guess]",
+      "normalized": "\"I submit: 1 2 4 5\". [guess]",
+      "scoring_text": "\"I submit: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 111,
+      "original": "[task] Stage0, invalid_attempts 12.",
+      "normalized": "Stage0, invalid_attempts 12.",
+      "scoring_text": "Stage0, invalid_attempts 12.",
+      "unknown_reason": null
+    },
+    {
+      "id": 112,
+      "original": "[agent_0] \"I state: B is ?, A is black, grey is black, black is black, the A is black, the B is black, the C is black, the D is black\".",
+      "normalized": "\"I state: B is ?, A is black, grey is black, black is black, the A is black, the B is black, the C is black, the D is black\".",
+      "scoring_text": "\"I state: B is ?, A is black, grey is black, black is black, the A is black, the B is black, the C is black, the D is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 113,
+      "original": "[agent_1] \"A is white, B is black, grey is dark, B is black\".",
+      "normalized": "\"A is white, B is black, grey is dark, B is black\".",
+      "scoring_text": "\"A is white, B is black, grey is dark, B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 114,
+      "original": "[agent_5] \"I state: 2 the 2 is A black black black B grey B, maybe B is black, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "normalized": "\"I state: 2 the 2 is A black black black B grey B, maybe B is black, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "scoring_text": "\"I state: 2 the 2 is A black black black B grey B, maybe B is black, maybe 1 the black, maybe 3 the black, maybe 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 115,
+      "original": "[agent_2] \"I guess: 1 2 6 5\". [guess]",
+      "normalized": "\"I guess: 1 2 6 5\". [guess]",
+      "scoring_text": "\"I guess: 1 2 6 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 116,
+      "original": "[task] Stage0, invalid_attempts 13.",
+      "normalized": "Stage0, invalid_attempts 13.",
+      "scoring_text": "Stage0, invalid_attempts 13.",
+      "unknown_reason": null
+    },
+    {
+      "id": 117,
+      "original": "[agent_0] \"I state: B is ?, I state: 1 black, 2 black, 3 black, 4 black, A black, B black, grey black\".",
+      "normalized": "\"I state: B is ?, I state: 1 black, 2 black, 3 black, 4 black, A black, B black, grey black\".",
+      "scoring_text": "\"I state: B is ?, I state: 1 black, 2 black, 3 black, 4 black, A black, B black, grey black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 118,
+      "original": "[agent_6] \"I state: B is D, A is black, B is black, grey is black. I guess: 1 2 4 5. I state: 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "normalized": "\"I state: B is D, A is black, B is black, grey is black. I guess: 1 2 4 5. I state: 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "scoring_text": "\"I state: B is D, A is black, B is black, grey is black. I guess: 1 2 4 5. I state: 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 119,
+      "original": "[agent_1] \"I state: B is black\".",
+      "normalized": "\"I state: B is black\".",
+      "scoring_text": "\"I state: B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 120,
+      "original": "[agent_2] \"1 is grey, dark is 5. A is white, B is black, B is black. I guess: 1 2 7 5\". [guess]",
+      "normalized": "\"1 is grey, dark is 5. A is white, B is black, B is black. I guess: 1 2 7 5\". [guess]",
+      "scoring_text": "\"1 is grey, dark is 5. A is white, B is black, B is black. I guess: 1 2 7 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 121,
+      "original": "[task] Stage0, invalid_attempts 14.",
+      "normalized": "Stage0, invalid_attempts 14.",
+      "scoring_text": "Stage0, invalid_attempts 14.",
+      "unknown_reason": null
+    },
+    {
+      "id": 122,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 123,
+      "original": "[agent_3] \"I state: the 1 is white, 1 2 4 5. Maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "normalized": "\"I state: the 1 is white, 1 2 4 5. Maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "scoring_text": "\"I state: the 1 is white, 1 2 4 5. Maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 124,
+      "original": "[agent_5] \"I state: the 2 the, A black black black B grey B, maybe A black, maybe the A the black, maybe the 1 the black\".",
+      "normalized": "\"I state: the 2 the, A black black black B grey B, maybe A black, maybe the A the black, maybe the 1 the black\".",
+      "scoring_text": "\"I state: the 2 the, A black black black B grey B, maybe A black, maybe the A the black, maybe the 1 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 125,
+      "original": "[agent_1] \"I state: 2 is 3, I guess: 1 2 7 5. Maybe B is black\". [guess]",
+      "normalized": "\"I state: 2 is 3, I guess: 1 2 7 5. Maybe B is black\". [guess]",
+      "scoring_text": "\"I state: 2 is 3, I guess: 1 2 7 5. Maybe B is black\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 126,
+      "original": "[task] Stage0, invalid_attempts 15.",
+      "normalized": "Stage0, invalid_attempts 15.",
+      "scoring_text": "Stage0, invalid_attempts 15.",
+      "unknown_reason": null
+    },
+    {
+      "id": 127,
+      "original": "[agent_2] \"I state: grey is dark, A is white, B is black. I guess: 1 2 7 5. B is black. I guess: 1 2 8 5\". [guess]",
+      "normalized": "\"I state: grey is dark, A is white, B is black. I guess: 1 2 7 5. B is black. I guess: 1 2 8 5\". [guess]",
+      "scoring_text": "\"I state: grey is dark, A is white, B is black. I guess: 1 2 7 5. B is black. I guess: 1 2 8 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 128,
+      "original": "[task] Stage0, invalid_attempts 16.",
+      "normalized": "Stage0, invalid_attempts 16.",
+      "scoring_text": "Stage0, invalid_attempts 16.",
+      "unknown_reason": null
+    },
+    {
+      "id": 129,
+      "original": "[agent_4] \"I state: A is black, B is ?, grey is dark, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: A is black, B is ?, grey is dark, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: A is black, B is ?, grey is dark, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 130,
+      "original": "[agent_6] \"I state: B is D 6, I guess: 1 2 4 5. I state: A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "normalized": "\"I state: B is D 6, I guess: 1 2 4 5. I state: A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "scoring_text": "\"I state: B is D 6, I guess: 1 2 4 5. I state: A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 131,
+      "original": "[agent_3] \"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "normalized": "\"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "scoring_text": "\"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 132,
+      "original": "[agent_2] \"I guess: 1 2 8 5\". [guess]",
+      "normalized": "\"I guess: 1 2 8 5\". [guess]",
+      "scoring_text": "\"I guess: 1 2 8 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 133,
+      "original": "[task] Stage0, invalid_attempts 17.",
+      "normalized": "Stage0, invalid_attempts 17.",
+      "scoring_text": "Stage0, invalid_attempts 17.",
+      "unknown_reason": null
+    },
+    {
+      "id": 134,
+      "original": "[agent_5] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 135,
+      "original": "[agent_4] \"A is white, grey is dark, B is 6, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"A is white, grey is dark, B is 6, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"A is white, grey is dark, B is 6, black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 136,
+      "original": "[agent_0] \"1 black, 2 black, 3 black, 4 black, B is black\".",
+      "normalized": "\"1 black, 2 black, 3 black, 4 black, B is black\".",
+      "scoring_text": "\"1 black, 2 black, 3 black, 4 black, B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 137,
+      "original": "[agent_7] \"I state: 8 is, maybe 1 is, maybe 4 is, maybe 7 is\".",
+      "normalized": "\"I state: 8 is, maybe 1 is, maybe 4 is, maybe 7 is\".",
+      "scoring_text": "\"I state: 8 is, maybe 1 is, maybe 4 is, maybe 7 is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 138,
+      "original": "[agent_3] \"I state: 1 white, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: 1 white, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: 1 white, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 139,
+      "original": "[agent_6] \"7 the D, A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "normalized": "\"7 the D, A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "scoring_text": "\"7 the D, A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 140,
+      "original": "[agent_5] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 141,
+      "original": "[agent_1] \"I state: 1 is white, 2 is black, 4 is dark, maybe 3 is B, A is black. I guess: 1 2 8 5\". [guess]",
+      "normalized": "\"I state: 1 is white, 2 is black, 4 is dark, maybe 3 is B, A is black. I guess: 1 2 8 5\". [guess]",
+      "scoring_text": "\"I state: 1 is white, 2 is black, 4 is dark, maybe 3 is B, A is black. I guess: 1 2 8 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 142,
+      "original": "[task] Stage0, invalid_attempts 18.",
+      "normalized": "Stage0, invalid_attempts 18.",
+      "scoring_text": "Stage0, invalid_attempts 18.",
+      "unknown_reason": null
+    },
+    {
+      "id": 143,
+      "original": "[agent_0] \"B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "normalized": "\"B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "scoring_text": "\"B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 144,
+      "original": "[agent_7] \"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "normalized": "\"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "scoring_text": "\"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 145,
+      "original": "[agent_4] \"I state: A is white, maybe black is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe 4 the\".",
+      "normalized": "\"I state: A is white, maybe black is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe 4 the\".",
+      "scoring_text": "\"I state: A is white, maybe black is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe 4 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 146,
+      "original": "[agent_5] \"I state: D is ?, maybe the ?\".",
+      "normalized": "\"I state: D is ?, maybe the ?\".",
+      "scoring_text": "\"I state: D is ?, maybe the ?\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 147,
+      "original": "[agent_0] \"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "normalized": "\"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "scoring_text": "\"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 148,
+      "original": "[agent_3] \"I state: the A is white, maybe the B black, maybe the C black, maybe the D black\".",
+      "normalized": "\"I state: the A is white, maybe the B black, maybe the C black, maybe the D black\".",
+      "scoring_text": "\"I state: the A is white, maybe the B black, maybe the C black, maybe the D black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 149,
+      "original": "[agent_7] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 150,
+      "original": "[agent_0] \"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "normalized": "\"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "scoring_text": "\"I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 151,
+      "original": "[agent_3] \"the A white, the B black, the C black, the D black\".",
+      "normalized": "\"the A white, the B black, the C black, the D black\".",
+      "scoring_text": "\"the A white, the B black, the C black, the D black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 152,
+      "original": "[agent_2] \"I guess: 1 5 2 6, maybe black is\". [guess]",
+      "normalized": "\"I guess: 1 5 2 6, maybe black is\". [guess]",
+      "scoring_text": "\"I guess: 1 5 2 6, maybe black is\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 153,
+      "original": "[task] Stage0, invalid_attempts 19.",
+      "normalized": "Stage0, invalid_attempts 19.",
+      "scoring_text": "Stage0, invalid_attempts 19.",
+      "unknown_reason": null
+    },
+    {
+      "id": 154,
+      "original": "[agent_4] \"A is white, I state: maybe the ?, maybe A grey B ? …\".",
+      "normalized": "\"A is white, I state: maybe the ?, maybe A grey B ? …\".",
+      "scoring_text": "\"A is white, I state: maybe the ?, maybe A grey B ? …\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 155,
+      "original": "[agent_3] \"1 white, 2 black, 3 black, 4 black\".",
+      "normalized": "\"1 white, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"1 white, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 156,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 157,
+      "original": "[agent_6] \"I state: 7 the D, 1 white, A black, 1 maybe 2, grey black, dark 8, black black, B black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "normalized": "\"I state: 7 the D, 1 white, A black, 1 maybe 2, grey black, dark 8, black black, B black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "scoring_text": "\"I state: 7 the D, 1 white, A black, 1 maybe 2, grey black, dark 8, black black, B black, 2 black, 3 black, 4 black. I guess: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 158,
+      "original": "[agent_5] \"I state: 2 the 2 is B, I state: B is 6, maybe 1 white is, maybe 3 black is, maybe 4 grey is\".",
+      "normalized": "\"I state: 2 the 2 is B, I state: B is 6, maybe 1 white is, maybe 3 black is, maybe 4 grey is\".",
+      "scoring_text": "\"I state: 2 the 2 is B, I state: B is 6, maybe 1 white is, maybe 3 black is, maybe 4 grey is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 159,
+      "original": "[agent_1] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 160,
+      "original": "[task] Stage0, invalid_attempts 20.",
+      "normalized": "Stage0, invalid_attempts 20.",
+      "scoring_text": "Stage0, invalid_attempts 20.",
+      "unknown_reason": null
+    },
+    {
+      "id": 161,
+      "original": "[agent_7] \"I state: D is white, grey is black, A white B white C 3 black\".",
+      "normalized": "\"I state: D is white, grey is black, A white B white C 3 black\".",
+      "scoring_text": "\"I state: D is white, grey is black, A white B white C 3 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 162,
+      "original": "[agent_4] \"I state: A is white, maybe black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: A is white, maybe black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: A is white, maybe black is black, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 163,
+      "original": "[agent_3] \"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "normalized": "\"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "scoring_text": "\"I state: the A is white, maybe the B the, maybe the C the, maybe the D the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 164,
+      "original": "[agent_0] \"I state: B is 6, maybe A is, maybe grey is, maybe black is, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: B is 6, maybe A is, maybe grey is, maybe black is, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: B is 6, maybe A is, maybe grey is, maybe black is, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 165,
+      "original": "[agent_5] \"I state: 2 is B, 1 black, 3 black, 4 black, B is\".",
+      "normalized": "\"I state: 2 is B, 1 black, 3 black, 4 black, B is\".",
+      "scoring_text": "\"I state: 2 is B, 1 black, 3 black, 4 black, B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 166,
+      "original": "[agent_1] \"I guess: 1 5 3 2, maybe the 3 the is\". [guess]",
+      "normalized": "\"I guess: 1 5 3 2, maybe the 3 the is\". [guess]",
+      "scoring_text": "\"I guess: 1 5 3 2, maybe the 3 the is\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 167,
+      "original": "[task] Stage0, invalid_attempts 21.",
+      "normalized": "Stage0, invalid_attempts 21.",
+      "scoring_text": "Stage0, invalid_attempts 21.",
+      "unknown_reason": null
+    },
+    {
+      "id": 168,
+      "original": "[agent_2] \"I state: grey is dark, the A is black\".",
+      "normalized": "\"I state: grey is dark, the A is black\".",
+      "scoring_text": "\"I state: grey is dark, the A is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 169,
+      "original": "[agent_7] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 170,
+      "original": "[agent_0] \"I guess: 1 2 4 6\". [guess]",
+      "normalized": "\"I guess: 1 2 4 6\". [guess]",
+      "scoring_text": "\"I guess: 1 2 4 6\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 171,
+      "original": "[task] Stage0, invalid_attempts 22.",
+      "normalized": "Stage0, invalid_attempts 22.",
+      "scoring_text": "Stage0, invalid_attempts 22.",
+      "unknown_reason": null
+    },
+    {
+      "id": 172,
+      "original": "[agent_3] \"A is white, B is black, B is black, B is black\".",
+      "normalized": "\"A is white, B is black, B is black, B is black\".",
+      "scoring_text": "\"A is white, B is black, B is black, B is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 173,
+      "original": "[agent_4] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 174,
+      "original": "[agent_2] \"I state: grey is dark, I guess: 1 2 6 5. I state: the A is black, the B is black, the C is black, the D is black\". [guess]",
+      "normalized": "\"I state: grey is dark, I guess: 1 2 6 5. I state: the A is black, the B is black, the C is black, the D is black\". [guess]",
+      "scoring_text": "\"I state: grey is dark, I guess: 1 2 6 5. I state: the A is black, the B is black, the C is black, the D is black\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 175,
+      "original": "[agent_5] \"I state: 2 the 2 is, maybe 1 black, maybe 3 black, maybe 4 black\".",
+      "normalized": "\"I state: 2 the 2 is, maybe 1 black, maybe 3 black, maybe 4 black\".",
+      "scoring_text": "\"I state: 2 the 2 is, maybe 1 black, maybe 3 black, maybe 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 176,
+      "original": "[agent_0] \"I state: A is white, grey is dark, black is black, B is 6, I state: 1 black\".",
+      "normalized": "\"I state: A is white, grey is dark, black is black, B is 6, I state: 1 black\".",
+      "scoring_text": "\"I state: A is white, grey is dark, black is black, B is 6, I state: 1 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 177,
+      "original": "[task] Stage0, invalid_attempts 23.",
+      "normalized": "Stage0, invalid_attempts 23.",
+      "scoring_text": "Stage0, invalid_attempts 23.",
+      "unknown_reason": null
+    },
+    {
+      "id": 178,
+      "original": "[agent_7] \"I state: 1 is grey, dark is 5. Maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "normalized": "\"I state: 1 is grey, dark is 5. Maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "scoring_text": "\"I state: 1 is grey, dark is 5. Maybe 1 black, maybe 2 black, maybe 3 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 179,
+      "original": "[agent_4] \"I guess: 1 6 7 5\". [guess]",
+      "normalized": "\"I guess: 1 6 7 5\". [guess]",
+      "scoring_text": "\"I guess: 1 6 7 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 180,
+      "original": "[task] Stage0, invalid_attempts 24.",
+      "normalized": "Stage0, invalid_attempts 24.",
+      "scoring_text": "Stage0, invalid_attempts 24.",
+      "unknown_reason": null
+    },
+    {
+      "id": 181,
+      "original": "[agent_3] \"I state: the 1 is white, maybe the 2 black, maybe the 3 black, maybe the 4 black, maybe A black, maybe grey black, maybe black black, maybe B black\".",
+      "normalized": "\"I state: the 1 is white, maybe the 2 black, maybe the 3 black, maybe the 4 black, maybe A black, maybe grey black, maybe black black, maybe B black\".",
+      "scoring_text": "\"I state: the 1 is white, maybe the 2 black, maybe the 3 black, maybe the 4 black, maybe A black, maybe grey black, maybe black black, maybe B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 182,
+      "original": "[agent_2] \"I state: grey is dark, I state: A is, B is, the A white, the B black\".",
+      "normalized": "\"I state: grey is dark, I state: A is, B is, the A white, the B black\".",
+      "scoring_text": "\"I state: grey is dark, I state: A is, B is, the A white, the B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 183,
+      "original": "[agent_6] \"I state: B is D, A black, B black, grey black, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: B is D, A black, B black, grey black, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: B is D, A black, B black, grey black, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 184,
+      "original": "[agent_1] \"the C is black, maybe the\".",
+      "normalized": "\"the C is black, maybe the\".",
+      "scoring_text": "\"the C is black, maybe the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 185,
+      "original": "[agent_3] \"I state: the white, the black, the grey, the dark, A is, B is, C is, D is\".",
+      "normalized": "\"I state: the white, the black, the grey, the dark, A is, B is, C is, D is\".",
+      "scoring_text": "\"I state: the white, the black, the grey, the dark, A is, B is, C is, D is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 186,
+      "original": "[agent_6] \"I state: B is D, A black, B black, grey black, 1 the black, 2 the black, 3 the black, 4 the black\".",
+      "normalized": "\"I state: B is D, A black, B black, grey black, 1 the black, 2 the black, 3 the black, 4 the black\".",
+      "scoring_text": "\"I state: B is D, A black, B black, grey black, 1 the black, 2 the black, 3 the black, 4 the black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 187,
+      "original": "[agent_5] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 188,
+      "original": "[agent_0] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 189,
+      "original": "[agent_2] \"I state: grey is dark, A is white, B is 6, maybe black is, I state: I guess: 1 2 6 5 2\". [guess]",
+      "normalized": "\"I state: grey is dark, A is white, B is 6, maybe black is, I state: I guess: 1 2 6 5 2\". [guess]",
+      "scoring_text": "\"I state: grey is dark, A is white, B is 6, maybe black is, I state: I guess: 1 2 6 5 2\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 190,
+      "original": "[task] Stage0, invalid_attempts 25.",
+      "normalized": "Stage0, invalid_attempts 25.",
+      "scoring_text": "Stage0, invalid_attempts 25.",
+      "unknown_reason": null
+    },
+    {
+      "id": 191,
+      "original": "[agent_7] \"I state: the D is white dark, the A is black, the B is black, the C is black\".",
+      "normalized": "\"I state: the D is white dark, the A is black, the B is black, the C is black\".",
+      "scoring_text": "\"I state: the D is white dark, the A is black, the B is black, the C is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 192,
+      "original": "[agent_3] \"I state: 1 the white is black, the B, the C, the D, maybe A is\".",
+      "normalized": "\"I state: 1 the white is black, the B, the C, the D, maybe A is\".",
+      "scoring_text": "\"I state: 1 the white is black, the B, the C, the D, maybe A is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 193,
+      "original": "[agent_4] \"I state: B is white, grey is dark, B is 6, maybe 7 is, A is black, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: B is white, grey is dark, B is 6, maybe 7 is, A is black, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: B is white, grey is dark, B is 6, maybe 7 is, A is black, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 194,
+      "original": "[agent_6] \"I state: B is D, maybe A is, maybe B is, maybe grey is, 1 black, 2 black, 3 black, 4 black\".",
+      "normalized": "\"I state: B is D, maybe A is, maybe B is, maybe grey is, 1 black, 2 black, 3 black, 4 black\".",
+      "scoring_text": "\"I state: B is D, maybe A is, maybe B is, maybe grey is, 1 black, 2 black, 3 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 195,
+      "original": "[agent_7] \"A is white, B is black, B is 6, grey is dark, I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "normalized": "\"A is white, B is black, B is 6, grey is dark, I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "scoring_text": "\"A is white, B is black, B is 6, grey is dark, I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 196,
+      "original": "[agent_4] \"I state: maybe A is, maybe A is, maybe 2 is, maybe 4 is\".",
+      "normalized": "\"I state: maybe A is, maybe A is, maybe 2 is, maybe 4 is\".",
+      "scoring_text": "\"I state: maybe A is, maybe A is, maybe 2 is, maybe 4 is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 197,
+      "original": "[agent_3] \"I state: 1 white, 2 black, 3 black, 4 black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: 1 white, 2 black, 3 black, 4 black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: 1 white, 2 black, 3 black, 4 black, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 198,
+      "original": "[agent_5] \"I state: 2 the 2 is B, 3 the 3 is C, maybe 1 the white, maybe 1 is white, maybe grey is dark, maybe B is D, 3 black, 4 black, maybe 7 is\".",
+      "normalized": "\"I state: 2 the 2 is B, 3 the 3 is C, maybe 1 the white, maybe 1 is white, maybe grey is dark, maybe B is D, 3 black, 4 black, maybe 7 is\".",
+      "scoring_text": "\"I state: 2 the 2 is B, 3 the 3 is C, maybe 1 the white, maybe 1 is white, maybe grey is dark, maybe B is D, 3 black, 4 black, maybe 7 is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 199,
+      "original": "[agent_3] \"the 1 white, the 2 black, the3 black, the4 black, maybe the A, maybe the grey, maybe the black, maybe the B\".",
+      "normalized": "\"the 1 white, the 2 black, the3 black, the4 black, maybe the A, maybe the grey, maybe the black, maybe the B\".",
+      "scoring_text": "\"the 1 white, the 2 black, the3 black, the4 black, maybe the A, maybe the grey, maybe the black, maybe the B\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 200,
+      "original": "[agent_0] \"I state: A is white, grey is dark, B is 6, maybe black is, maybe ? maybe ?\".",
+      "normalized": "\"I state: A is white, grey is dark, B is 6, maybe black is, maybe ? maybe ?\".",
+      "scoring_text": "\"I state: A is white, grey is dark, B is 6, maybe black is, maybe ? maybe ?\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 201,
+      "original": "[agent_7] \"I state: the D is grey, maybe the A is\".",
+      "normalized": "\"I state: the D is grey, maybe the A is\".",
+      "scoring_text": "\"I state: the D is grey, maybe the A is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 202,
+      "original": "[agent_1] \"I state: 2 is 3, maybe the 1 the, maybe the 2 the, maybe the 4 the, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "normalized": "\"I state: 2 is 3, maybe the 1 the, maybe the 2 the, maybe the 4 the, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "scoring_text": "\"I state: 2 is 3, maybe the 1 the, maybe the 2 the, maybe the 4 the, maybe A is, maybe grey is, maybe black is, maybe B is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 203,
+      "original": "[agent_2] \"I state: grey is dark, B is 6, A is white, B is black, I guess: 2 6 5 2\". [guess]",
+      "normalized": "\"I state: grey is dark, B is 6, A is white, B is black, I guess: 2 6 5 2\". [guess]",
+      "scoring_text": "\"I state: grey is dark, B is 6, A is white, B is black, I guess: 2 6 5 2\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 204,
+      "original": "[task] Stage0, invalid_attempts 26.",
+      "normalized": "Stage0, invalid_attempts 26.",
+      "scoring_text": "Stage0, invalid_attempts 26.",
+      "unknown_reason": null
+    },
+    {
+      "id": 205,
+      "original": "[agent_5] \"I state: 2 the 2 is 6, maybe 1 the white is 2, 3 the dark is 5, 4 the B is D, maybe the 1 the black is, maybe the 3 the black is, maybe the 4 the black is\".",
+      "normalized": "\"I state: 2 the 2 is 6, maybe 1 the white is 2, 3 the dark is 5, 4 the B is D, maybe the 1 the black is, maybe the 3 the black is, maybe the 4 the black is\".",
+      "scoring_text": "\"I state: 2 the 2 is 6, maybe 1 the white is 2, 3 the dark is 5, 4 the B is D, maybe the 1 the black is, maybe the 3 the black is, maybe the 4 the black is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 206,
+      "original": "[agent_6] \"I state: B is D, black is white, grey is dark, A is white, I guess: 1 2 4 5\". [guess]",
+      "normalized": "\"I state: B is D, black is white, grey is dark, A is white, I guess: 1 2 4 5\". [guess]",
+      "scoring_text": "\"I state: B is D, black is white, grey is dark, A is white, I guess: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 207,
+      "original": "[task] Stage0, invalid_attempts 27.",
+      "normalized": "Stage0, invalid_attempts 27.",
+      "scoring_text": "Stage0, invalid_attempts 27.",
+      "unknown_reason": null
+    },
+    {
+      "id": 208,
+      "original": "[agent_3] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 209,
+      "original": "[agent_2] \"I state: grey is dark, A is white, B is 6, black is D, I guess: 2 6 5 4\". [guess]",
+      "normalized": "\"I state: grey is dark, A is white, B is 6, black is D, I guess: 2 6 5 4\". [guess]",
+      "scoring_text": "\"I state: grey is dark, A is white, B is 6, black is D, I guess: 2 6 5 4\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 210,
+      "original": "[task] Stage0, invalid_attempts 28.",
+      "normalized": "Stage0, invalid_attempts 28.",
+      "scoring_text": "Stage0, invalid_attempts 28.",
+      "unknown_reason": null
+    },
+    {
+      "id": 211,
+      "original": "[agent_5] \"I state: 2 the 2 is, 1 black, 3 black, 4 black, A black, B black, C black, D black, B black\".",
+      "normalized": "\"I state: 2 the 2 is, 1 black, 3 black, 4 black, A black, B black, C black, D black, B black\".",
+      "scoring_text": "\"I state: 2 the 2 is, 1 black, 3 black, 4 black, A black, B black, C black, D black, B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 212,
+      "original": "[agent_1] \"I guess: 1 2 6 5, B is 6, 2 is 3\". [guess]",
+      "normalized": "\"I guess: 1 2 6 5, B is 6, 2 is 3\". [guess]",
+      "scoring_text": "\"I guess: 1 2 6 5, B is 6, 2 is 3\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 213,
+      "original": "[task] Stage0, invalid_attempts 29.",
+      "normalized": "Stage0, invalid_attempts 29.",
+      "scoring_text": "Stage0, invalid_attempts 29.",
+      "unknown_reason": null
+    },
+    {
+      "id": 214,
+      "original": "[agent_7] \"I state: the D the grey, maybe the 1 the, maybe the 2 the, maybe the 3 the, I state: I guess: 1 2 6 5\". [guess]",
+      "normalized": "\"I state: the D the grey, maybe the 1 the, maybe the 2 the, maybe the 3 the, I state: I guess: 1 2 6 5\". [guess]",
+      "scoring_text": "\"I state: the D the grey, maybe the 1 the, maybe the 2 the, maybe the 3 the, I state: I guess: 1 2 6 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 215,
+      "original": "[agent_2] \"I state: grey is dark, A is black, B is black, black is black\".",
+      "normalized": "\"I state: grey is dark, A is black, B is black, black is black\".",
+      "scoring_text": "\"I state: grey is dark, A is black, B is black, black is black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 216,
+      "original": "[agent_6] \"I state: B is D, the A white, the B black, the C grey, the D dark. I guess: 1 2 5 4\". [guess]",
+      "normalized": "\"I state: B is D, the A white, the B black, the C grey, the D dark. I guess: 1 2 5 4\". [guess]",
+      "scoring_text": "\"I state: B is D, the A white, the B black, the C grey, the D dark. I guess: 1 2 5 4\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 217,
+      "original": "[task] Stage0, invalid_attempts 30.",
+      "normalized": "Stage0, invalid_attempts 30.",
+      "scoring_text": "Stage0, invalid_attempts 30.",
+      "unknown_reason": null
+    },
+    {
+      "id": 218,
+      "original": "[agent_0] \"I state: A is white, grey is dark, B is 6, maybe black is, maybe the A is, maybe the B is, maybe the C is, maybe the D is\".",
+      "normalized": "\"I state: A is white, grey is dark, B is 6, maybe black is, maybe the A is, maybe the B is, maybe the C is, maybe the D is\".",
+      "scoring_text": "\"I state: A is white, grey is dark, B is 6, maybe black is, maybe the A is, maybe the B is, maybe the C is, maybe the D is\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 219,
+      "original": "[agent_3] \"I state: 1 white, 2 black, 3 black, 4 black, A black, grey black, black black, B black. I guess: 1 2 4 5\". [guess]",
+      "normalized": "\"I state: 1 white, 2 black, 3 black, 4 black, A black, grey black, black black, B black. I guess: 1 2 4 5\". [guess]",
+      "scoring_text": "\"I state: 1 white, 2 black, 3 black, 4 black, A black, grey black, black black, B black. I guess: 1 2 4 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 220,
+      "original": "[agent_5] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 221,
+      "original": "[agent_1] \"I state: 2 the 3 is, 1 black, 2 black, 4 black\".",
+      "normalized": "\"I state: 2 the 3 is, 1 black, 2 black, 4 black\".",
+      "scoring_text": "\"I state: 2 the 3 is, 1 black, 2 black, 4 black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 222,
+      "original": "[agent_6] ⊘",
+      "normalized": "⊘",
+      "scoring_text": "⊘",
+      "unknown_reason": null
+    },
+    {
+      "id": 223,
+      "original": "[task] Stage0, invalid_attempts 31.",
+      "normalized": "Stage0, invalid_attempts 31.",
+      "scoring_text": "Stage0, invalid_attempts 31.",
+      "unknown_reason": null
+    },
+    {
+      "id": 224,
+      "original": "[agent_7] \"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black, grey black, A black, black black, B black\".",
+      "normalized": "\"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black, grey black, A black, black black, B black\".",
+      "scoring_text": "\"I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black, grey black, A black, black black, B black\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 225,
+      "original": "[agent_2] \"I state: grey is dark, maybe A is, maybe B is, maybe black is, maybe the 1 the, maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "normalized": "\"I state: grey is dark, maybe A is, maybe B is, maybe black is, maybe the 1 the, maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "scoring_text": "\"I state: grey is dark, maybe A is, maybe B is, maybe black is, maybe the 1 the, maybe the 2 the, maybe the 3 the, maybe the 4 the\".",
+      "unknown_reason": null
+    },
+    {
+      "id": 226,
+      "original": "[agent_4] \"I guess: 1 6 2 5\". [guess]",
+      "normalized": "\"I guess: 1 6 2 5\". [guess]",
+      "scoring_text": "\"I guess: 1 6 2 5\". [guess]",
+      "unknown_reason": null
+    },
+    {
+      "id": 227,
+      "original": "[task] Stage0, invalid_attempts 32.",
+      "normalized": "Stage0, invalid_attempts 32.",
+      "scoring_text": "Stage0, invalid_attempts 32.",
+      "unknown_reason": null
+    }
+  ],
+  "notes": [
+    "IDs 2, 5, 6, 8, 11, and 13 explicitly say unknown; parentheticals describe structure or repeat glyphs."
+  ],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D11_deepseek_to_deepseek_no_task/decoded.txt",
+  "decoder_sha256": "01a02e4e3c46df0dca64081f0c007c416c2c9c8ae226ce3db2fc3aa9ff0877a2",
+  "canonical_document_sha256": "522ee7dcc153fa4b58b04a0fbb58ae1477344c9a9cbafa4e99a656d8f731afc7"
+}
