@@ -1,0 +1,8 @@
+{
+  "condition": "task_summary",
+  "supervisor_pid": 90268,
+  "started_at": "2026-11-08T07:01:42.507482+00:00",
+  "child_pid": 90271,
+  "exit_code": 0,
+  "finished_at": "2026-11-08T07:05:40.244883+00:00"
+}

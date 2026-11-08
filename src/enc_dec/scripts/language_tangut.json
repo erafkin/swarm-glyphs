@@ -1,6 +1,6 @@
 {
   "glyph_dictionary": "glyphs_tangut",
-  "n_glyphs": null,
+  "n_glyphs": 200,
   "allow_spaces": true,
   "n_agents": 8,
   "model": "openai/gpt-6.1-sol",

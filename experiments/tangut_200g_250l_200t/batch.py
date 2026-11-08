@@ -99,6 +99,9 @@ def validate_manifest(root=BATCH):
         archived = bool(entry.get("archived"))
         require(archived == plan["id"].startswith("T"), "Only historical T slots are archived")
         require(plan["stage"] == stage, "Incorrect run stage")
+        allow_turn_limited = plan.get("allow_turn_limited_gameplay_source", False)
+        require(type(allow_turn_limited) is bool, "Turn-limited source permission must be boolean")
+        require(not allow_turn_limited or stage == "decoding", "Only decoders may allow turn-limited gameplay sources")
         require(plan["owner"] in ("emma_krentz", "tom"), "Unknown owner")
         require(config.task_kind == "escape_room" and not config.run_monitors, "Use standalone Storm Shelter phases")
         require(config.n_agents == 8 and (config.task_n_agents or 8) == 8 and config.monitor_n_agents == 8, "Every team must have eight agents")
@@ -155,15 +158,37 @@ def dependency(root, plan):
     folder, source_plan, _ = run_info(root, plan["source_run_id"])
     receipt = read(folder / "receipt.json")
     summary = receipt["summary"]
+    require(receipt.get("status") == "completed", "Source has not completed collection")
     require(not summary.get("cost_incomplete"), "Source cost reporting is incomplete; review required")
     permitted = {"all_done", "turn_limit_reached", "time_limit"} if source_plan["stage"] == "encoding" else {"escaped"}
+    if (source_plan["stage"] == "gameplay" and source_plan["id"].startswith("R")
+            and plan.get("stage") == "decoding"
+            and plan.get("allow_turn_limited_gameplay_source") is True):
+        permitted.add("turn_limit_reached")
     require(receipt["stop_reason"] in permitted, f"Source stopped with {receipt['stop_reason']}; review required before reuse")
     for name, digest in receipt.get("handoff_sha256", {}).items():
         require(sha(folder / "handoff" / name) == digest, f"Frozen handoff changed: {name}")
     raw = resolve_raw_path(REPO, folder, receipt)
     for name, digest in receipt["raw_sha256"].items():
         require(sha(raw / name) == digest, f"Archived source changed: {name}")
+    if source_plan["stage"] == "gameplay":
+        require({"summary.json", "task_chatroom.jsonl"} <= receipt["raw_sha256"].keys(),
+                "Gameplay source is missing summary/transcript integrity records")
+        require(read(raw / "summary.json") == summary
+                and summary.get("task_stop_reason") == receipt["stop_reason"],
+                "Gameplay source outcome differs from its archived summary")
     return folder, receipt, raw
+
+
+def gameplay_source_outcome(folder, receipt, plan):
+    """Record outcome without adding private source information to decoder prompts."""
+    return {
+        "run_id": plan["source_run_id"],
+        "stop_reason": receipt["stop_reason"],
+        "escaped": receipt["summary"].get("escape_room", {}).get("escaped"),
+        "receipt_sha256": sha(folder / "receipt.json"),
+        "allow_turn_limited_gameplay_source": plan.get("allow_turn_limited_gameplay_source", False),
+    }
 
 
 def archive_files(source):
@@ -244,7 +269,8 @@ def collect(root, run_id, source, language_file=None, reference_existing=False, 
         require(len(calls) <= 200, "Decoder exceeds 200 discussion calls")
         outcomes = rows(source / "monitor.jsonl")
         require(len(outcomes) == 1 and outcomes[0]["condition"] == plan["condition"], "Expected exactly the planned decoder condition")
-        _, _, parent_raw = dependency(root, plan)
+        parent, parent_receipt, parent_raw = dependency(root, plan)
+        extra["source_gameplay"] = gameplay_source_outcome(parent, parent_receipt, plan)
         from src.enc_dec.monitor import prepare_monitor_inputs
         bundle = prepare_monitor_inputs(parent_raw, [plan["condition"]], config=config)
         require(summary["source_transcript_sha256"] == bundle["source_transcript_sha256"], "Decoder used a different transcript")
@@ -304,10 +330,12 @@ def launch(root, run_id, prepare_only=False):
         require(prepare_only or not (folder / "execution.json").exists(), "Run already launched; collect existing outputs before deciding on a new run")
         config = config.model_copy(update={"log_dir": str(root / ".previews" / run_id) if prepare_only else str(folder / "raw")})
         stage = plan["stage"]
+        execution_metadata = {}
         if stage == "decoding":
             from src.core.game_log import GameLogger
             from src.enc_dec.monitor import prepare_monitor_inputs, execute_monitor_inputs
-            _, _, source = dependency(root, plan)
+            parent, parent_receipt, source = dependency(root, plan)
+            execution_metadata["source_gameplay"] = gameplay_source_outcome(parent, parent_receipt, plan)
             bundle = prepare_monitor_inputs(source, [plan["condition"]], config=config)
             logger = GameLogger(config.log_dir, "round_3")
             logger.write_json("monitor_inputs", bundle)
@@ -333,7 +361,7 @@ def launch(root, run_id, prepare_only=False):
         if prepare_only:
             print(f"Prepared without API calls: {logger.path}")
             return
-        write(folder / "execution.json", {**provenance(folder), "raw_path": str(logger.path.relative_to(REPO))})
+        write(folder / "execution.json", {**provenance(folder), "raw_path": str(logger.path.relative_to(REPO)), **execution_metadata})
         asyncio.run(execute())
         collect(root, run_id, logger.path, already_locked=True)
 

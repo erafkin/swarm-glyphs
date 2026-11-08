@@ -1,0 +1,101 @@
+{
+  "method": "Diagnostic only; original scores unchanged. Off-diagonal averages each decoder line against every different reference ID, retaining repeated content. Explicit repetition expansion replaces only pointers to an earlier decoder translation after verifying identical source glyph text; no reference text used to fill predictions.",
+  "model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "results": {
+    "task_full": {
+      "raw_cosine_recomputed": 0.509243555706009,
+      "mean_off_diagonal_cosine": 0.23116429242538736,
+      "matched_minus_off_diagonal": 0.2780792632806216,
+      "explicit_repetitions_resolved_cosine": 0.5108494619404275,
+      "resolved_references": [
+        {
+          "id": 70,
+          "target": 67,
+          "before": "I failed at DRAIN. I execute/use SIGNAL now. [Same as 67.]",
+          "after": "I failed at DRAIN. I execute/use SIGNAL now."
+        },
+        {
+          "id": 78,
+          "target": 72,
+          "before": "I failed at CRANK. I execute/use SIGNAL now. [Same as 72.]",
+          "after": "I failed at CRANK. I execute/use SIGNAL now."
+        }
+      ]
+    },
+    "no_task": {
+      "raw_cosine_recomputed": 0.21628338584023948,
+      "mean_off_diagonal_cosine": 0.16104641543354997,
+      "matched_minus_off_diagonal": 0.05523697040668951,
+      "explicit_repetitions_resolved_cosine": 0.2116755655064446,
+      "resolved_references": [
+        {
+          "id": 42,
+          "target": 41,
+          "before": "Same as message 41.",
+          "after": "Z(I, P), qualifier M. Then V(Q, R)."
+        },
+        {
+          "id": 70,
+          "target": 67,
+          "before": "Same as message 67.",
+          "after": "X(I, P). Y(I, R), qualifier M."
+        },
+        {
+          "id": 78,
+          "target": 72,
+          "before": "Same as message 72.",
+          "after": "X(I, Q). Y(I, R), qualifier M."
+        }
+      ]
+    },
+    "task_summary": {
+      "raw_cosine_recomputed": 0.23392869387106968,
+      "mean_off_diagonal_cosine": 0.17217330358883115,
+      "matched_minus_off_diagonal": 0.06175539028223853,
+      "explicit_repetitions_resolved_cosine": 0.23720821077060258,
+      "resolved_references": [
+        {
+          "id": 42,
+          "target": 41,
+          "before": "Exact repetition of [41].",
+          "after": "TRY/OPERATE(s, A; adjunct t). Unknown `𘆣𗼛`(v, B)."
+        },
+        {
+          "id": 70,
+          "target": 67,
+          "before": "Exact repetition of [67]: PREPARE/SET(s, A); SUBMIT(s, B; adjunct t).",
+          "after": "PREPARE/SET(s, A). SUBMIT(s, B; adjunct t)."
+        },
+        {
+          "id": 78,
+          "target": 72,
+          "before": "Exact repetition of [72]: PREPARE/SET(s, v); SUBMIT(s, B; adjunct t).",
+          "after": "PREPARE/SET(s, v). SUBMIT(s, B; adjunct t)."
+        }
+      ]
+    },
+    "wrong_task": {
+      "raw_cosine_recomputed": 0.2431300145686331,
+      "mean_off_diagonal_cosine": 0.17384401957885623,
+      "matched_minus_off_diagonal": 0.06928599498977686,
+      "explicit_repetitions_resolved_cosine": 0.2431300145686331,
+      "resolved_references": []
+    }
+  }
+}

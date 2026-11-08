@@ -335,6 +335,27 @@ were subsequently updated in the dated entries below.
   old `<timestamp>_<id>` form; the viewer only parses the timestamp prefix.
 - **New per-condition logs:** `monitor_chat_<condition>.jsonl` and the shared `monitor_calls.jsonl`.
 
+### 2026-11-07: shared 200-character Tangut sample
+
+- Both current Tangut language-experiment presets now set `n_glyphs: 200`. The existing
+  seeded sampler chooses without replacement from the 6,136-character dictionary once
+  per run. All creators and fresh task agents share the same set, with each agent's
+  presentation order shuffled. Latin retains its full 36-character alphabet.
+- The existing logs already save the exact set in `glyphs.json`, the size and seed in
+  `config.json`, and per-agent orders in `agents.json` / `task_agents.json`. The task
+  validator rejects Tangut characters outside the selected 200. Reusing the seed
+  reproduces the sample, which must also match when importing a frozen language.
+
+### 2026-11-07: Latin creation-only launch with a 500-line instruction
+
+- Raise the editable round-1 `max_lines` instruction from 300 to 500 for the requested
+  Latin language-creation run. The same requirement reaches the final document writers
+  and is saved in `language_protocol.json`. It remains a prompt-only limit; distinct
+  per-agent final drafts are combined and may exceed it.
+- Launch with `--creation-only`: eight Sol agents, medium reasoning, Latin a-z and 0-9,
+  up to ten minutes of asynchronous discussion, and the existing $50 shared soft cap.
+  The process stops after writing the language documents; task and monitor calls are deferred.
+
 ## Logging
 
 Each game writes `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `glyphs.json`, `board.json` (board mode),

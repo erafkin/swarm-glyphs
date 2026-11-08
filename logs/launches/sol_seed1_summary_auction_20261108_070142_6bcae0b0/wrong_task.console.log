@@ -1,0 +1,4 @@
+Verified revised Sol seed 1 and both briefing settings.
+--run: Sol seed 1 / wrong_task
+Monitor inputs: experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_a92c3d98_round_3/monitor_inputs.json
+Monitor result: completed; recorded spend $16.4544

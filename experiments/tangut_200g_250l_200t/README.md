@@ -32,7 +32,7 @@ Sol playthroughs; import her results into the matching slots rather than duplica
 
 Read the operator instructions: [Emma](assignments/emma_krentz.md) and [Tom](assignments/tom.md).
 Each slot owns its config, plan, raw logs, execution record, receipt and English reference.
-The two operators can use separate checkouts; run sequentially within each operator's queue.
+The two operators can use separate checkouts; gameplay runs sequentially within each operator's queue.
 Record any overlap when comparing wall-clock latency on a shared provider/account.
 
 ## Settings and stopping rules
@@ -106,7 +106,7 @@ Commit only assigned run folders; never `.env`, keys, local previews or lock fil
 other's completed results before starting dependent phases. The archived T01–T04 directories
 are read-only and excluded as sources for the revised decoder plan.
 
-## Decoder mapping, for later
+## Decoder mapping
 
 | Decoder IDs | Revised source | Decoder / briefing |
 | --- | --- | --- |
@@ -118,10 +118,22 @@ are read-only and excluded as sources for the revised decoder plan.
 | D11–D12 | R08, DeepSeek | DeepSeek: no task, full task |
 | D13 | R08, DeepSeek | Sol: no task |
 
-This remains one four-condition set for Sol seed 1, not four conditions for all five seeds.
-R02–R05 retain additional Sol gameplay replicates for later analysis. No decoder has been
-started by this preparation. The helper requires a successfully escaped source before decoding;
-unsuccessful transcripts need a separately reviewed plan if they are to be decoded.
+The original plan has one four-condition set for Sol seed 1. Tom reports that its task-summary
+and wrong-task runs were completed in another task, and Emma completed no-task and full-task
+decoding for all five Sol seeds. Do not duplicate those runs.
+
+Tom authorized D05–D13 with at most three runs in parallel, each with eight decoders,
+200 shared scheduled turns, no time limit and the existing $50 soft cap. Each has its own
+team, transcript, chat and output files; concurrent runs share the OpenRouter key. Recorded
+execution timestamps identify overlap, so wall-clock speed comparisons must account for it.
+The initial cells are D05, D08 and D11; later cells fill available slots. Unexpected stops
+pause new launches and preserve all outputs. No automatic retries or Sol-to-Sol runs occur.
+
+R06 and R08 completed their 200-turn allowance without escaping. Their six decoder plans
+explicitly set `allow_turn_limited_gameplay_source: true`; decode these unsuccessful
+playthroughs as recorded, without modifying the language or transcript. Execution records
+and receipts retain the source outcome and receipt hash. All other source checks remain,
+including rejection of archived, interrupted, fatal-error, cost-incomplete or tampered runs.
 
 ## English references
 

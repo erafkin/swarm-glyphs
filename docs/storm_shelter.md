@@ -23,21 +23,23 @@ rendered by `src/enc_dec/prompts.py` with the toggles in `round1_config.json`. T
 ROUND WORKS" paragraph comes from that JSON and describes this runner (asynchronous turns,
 `language_minutes`, the shared `swarmish.txt`, the JSON response fields), so it must be
 updated whenever `run.py` changes. The monitor's system prompt is `round3_prompt.md`, with
-its briefings configured in `round3_config.json`. The alphabet is `glyphs_tangut.txt`
-(every Tangut ideograph, unscreened) or `glyphs_latin.txt` (a-z and 0-9).
+its briefings configured in `round3_config.json`. The alphabet is a shared sample of 200
+characters from `glyphs_tangut.txt` (6,136 Tangut ideographs, unscreened), or all of
+`glyphs_latin.txt` (a-z and 0-9).
 
 Both alphabets feed the same **eight-agent task team**. A supplied `swarmish.txt` can also
 be imported with matching communication settings. The REQUIREMENTS section of
 `round1_prompt.md` is reused for final document writers and task agents, and saved as
 `language_protocol.json`. The semantic-only rule concerns encoding/decoding messages;
 it does not prohibit arithmetic used to solve the room itself. Semantic rules and the
-300-line document limit are prompt instructions, not automated validity checks. Distinct
+500-line document limit are prompt instructions, not automated validity checks. Distinct
 final drafts are still combined, so the resulting file can exceed that soft line limit.
 
 ## Reviewable room definition
 
 Runtime IDs are zero-based: `agent_0` is A1 in the design, through `agent_7` (A8).
-The room and clue ownership are fixed. The seed affects glyph presentation, not the puzzle.
+The room and clue ownership are fixed. The seed affects glyph selection and presentation,
+not the puzzle. Reusing a seed reproduces the sample; a different seed selects a new sample.
 
 | Agent | Initial cabinet clue | After cabinet opens | After BOOT |
 | --- | --- | --- | --- |
@@ -175,13 +177,20 @@ The printed log directory contains `task_preview.json` with all eight initial pr
 for review, plus configuration and complete researcher ground truth. Do not give that
 whole folder to a task agent or monitor.
 
-The two launch presets differ only in `glyph_dictionary`:
+The two launch presets differ only in `glyph_dictionary` and `n_glyphs`:
 
-- `configs/storm_shelter_tangut.json`: the full `glyphs_tangut.txt`, with spaces and agent IDs
-  permitted, matching the language-handoff preset. Set `allow_spaces: false`
+- `configs/storm_shelter_tangut.json`: 200 characters sampled without replacement from
+  `glyphs_tangut.txt`, with spaces and agent IDs permitted, matching the language-handoff
+  preset. All creators and task agents receive the same 200 in individually shuffled
+  orders. Characters outside that sample are invalid even if present in the source file.
+  Set `allow_spaces: false`
   **before language creation** to forbid both spaces and IDs in message bodies. Sender
   labels remain visible regardless.
 - `configs/storm_shelter_latin.json`: `glyphs_latin.txt`, a-z and 0-9 only, same rules.
+
+The exact shared sample is saved in `glyphs.json`. `config.json` records the sample size
+and seed, while `agents.json` and `task_agents.json` record each agent's presentation order.
+Preparation alone already saves `glyphs.json` and the creation-team views.
 
 Both specify eight Sol agents, medium reasoning, 16,000-token response limits, no
 temperature parameter, a ten-minute language-design allowance, and no task deadline.
@@ -203,7 +212,8 @@ or `.env`:
 .venv/bin/python -m src.enc_dec.run configs/storm_shelter_tangut.json --language-file /path/to/swarmish.txt
 ```
 
-When importing a document, match its communication settings and glyph alphabet. Add
+When importing a document, match its communication settings and exact glyph sample:
+use the original dictionary, `n_glyphs` and seed, and compare `glyphs.json`. Add
 `--prepare-only` to review the imported-document prompts without running. Imported
 documents are copied to `swarmish.txt` when the run starts. Automatic monitors are disabled
 in these presets (`run_monitors: false`), so review the task before spending on decoding.

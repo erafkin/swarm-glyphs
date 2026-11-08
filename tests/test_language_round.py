@@ -44,6 +44,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
     def config(self, alphabet, log_dir):
         return LanguageExperimentConfig(
             glyph_dictionary=alphabet,
+            n_glyphs=200 if alphabet == "glyphs_tangut" else None,
             n_agents=2,
             log_dir=log_dir,
             language_minutes=30,
@@ -101,8 +102,13 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(experiment.creation_stop_reason, "all_done")
         self.assertEqual(experiment.task_stop_reason, "time_limit")
         self.assertTrue(experiment.logger.path.name.endswith("_round_1_2_3"), experiment.logger.path.name)
-        self.assertEqual(set(experiment.glyphs), set(load_dictionary(dictionary_path("glyphs_tangut"))))
-        self.assertEqual(len(experiment.glyphs), 6136)
+        self.assertLess(set(experiment.glyphs), set(load_dictionary(dictionary_path("glyphs_tangut"))))
+        self.assertEqual(len(experiment.glyphs), 200)
+        for filename, agents in (("agents.json", experiment.creation_agents), ("task_agents.json", experiment.task_agents)):
+            saved = json.loads((experiment.logger.path / filename).read_text())
+            self.assertEqual([row["glyphs_view"] for row in saved], [agent.glyphs_view for agent in agents])
+            for agent in agents:
+                self.assertEqual(set(agent.glyphs_view), set(experiment.glyphs))
 
         language = (experiment.logger.path / "swarmish.txt").read_text()
         self.assertIn("DOC-agent_0", language)
@@ -125,7 +131,7 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn("ordinary English", creation_prompt)
         self.assertIn("You have 30 minutes.", creation_prompt)
         self.assertIn("the most recent 100 messages and the current swarmish.txt", creation_prompt)
-        self.assertIn("these 6136 characters", creation_prompt)
+        self.assertIn("these 200 characters", creation_prompt)
         self.assertIn(experiment.glyphs[0], creation_prompt)
         self.assertIn("Spaces and agent IDs such as agent_0 are also permitted.", creation_prompt)
         self.assertIn("Meaning must come from what glyphs", creation_prompt)
@@ -266,14 +272,42 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         for m in self.records(experiment, "monitor"):
             self.assertNotIn(goal, m["system_prompt"] + m["prompt"])
 
-    def test_shipped_configs_differ_only_by_alphabet_and_use_the_whole_file(self):
+    def test_shipped_configs_differ_only_by_alphabet_and_sample_size(self):
         scripts = REPO_ROOT / "src/enc_dec/scripts"
         tangut = LanguageExperimentConfig.from_file(scripts / "language_tangut.json")
         latin = LanguageExperimentConfig.from_file(scripts / "language_latin.json")
-        self.assertIsNone(tangut.n_glyphs)
+        self.assertEqual(tangut.n_glyphs, 200)
         self.assertEqual(tangut.glyph_dictionary, "glyphs_tangut")
-        self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin"}).model_dump())
+        self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin", "n_glyphs": None}).model_dump())
         self.assertIn("PLACEHOLDER TASK", tangut.task_prompt)
+
+    def test_tangut_presets_share_log_and_enforce_the_seeded_sample(self):
+        dictionary = set(load_dictionary(dictionary_path("glyphs_tangut")))
+        for preset in ("configs/storm_shelter_tangut.json", "src/enc_dec/scripts/language_tangut.json"):
+            with self.subTest(preset=preset), tempfile.TemporaryDirectory() as logs:
+                config = LanguageExperimentConfig.from_file(REPO_ROOT / preset).model_copy(update={"log_dir": logs})
+                experiment = LanguageExperiment(config)
+                experiment.prepare()
+                selected = set(experiment.glyphs)
+                self.assertEqual(len(selected), 200)
+                self.assertLess(selected, dictionary)
+                self.assertEqual(json.loads((experiment.logger.path / "glyphs.json").read_text()), experiment.glyphs)
+                saved_config = json.loads((experiment.logger.path / "config.json").read_text())
+                self.assertEqual(saved_config["seed"], config.seed)
+                self.assertEqual(saved_config["n_glyphs"], 200)
+                for agent in experiment.creation_agents + experiment.task_agents:
+                    self.assertEqual(len(agent.glyphs_view), 200)
+                    self.assertEqual(set(agent.glyphs_view), selected)
+                repeat = LanguageExperiment(config)
+                changed = LanguageExperiment(config.model_copy(update={"seed": config.seed + 1}))
+                self.assertEqual(repeat.glyphs, experiment.glyphs)
+                self.assertNotEqual(set(changed.glyphs), selected)
+                experiment.phase = "task"
+                agent_ids = [agent.agent_id for agent in experiment.task_agents]
+                outside_sample = next(iter(dictionary - selected))
+                self.assertFalse(experiment._post(experiment.task_chat, agent_ids, "agent_0", experiment.glyphs[0]))
+                self.assertTrue(experiment._post(experiment.task_chat, agent_ids, "agent_0", outside_sample))
+                self.assertEqual(self.records(experiment, "task_chatroom")[-1]["text"], VIOLATION_TOKEN)
 
     def test_templates_reject_unknown_blocks_and_slots(self):
         self.assertEqual(prompts.render("a\n[[x]]\nb\n[[/x]]\nc {k}", {"k": 1}, {"x": True}), "a\nb\nc 1")

@@ -1,0 +1,238 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Scope and confidence
+This is a partial reconstruction, not a recovered dictionary. The clearest result is a role-marked, explicitly bracketed clause grammar. Most content words remain unknown. HIGH means strongly supported by internal contrasts; MEDIUM means a useful but defeasible inference; LOW means a conjectural gloss. Structural translations below must not be mistaken for successful recovery of the unknown English vocabulary.
+
+Writing and tokenization
+• [HIGH] Spaces usually separate tokens consisting of two glyphs. Full pairs, not individual glyphs, are the safest lexical units.
+• [HIGH] The same complete pair recurs with stable structural behavior. Distinct pairs sharing a glyph cannot automatically be equated.
+• [MEDIUM] The recurring initial glyphs 𘅌, 𗌿, 𗡒, 𘆣, 𗿃, and 𘔠 suggest a categorized or indexed codebook. Only 𘅌 has a strongly demonstrated grammatical association. The others are NOT established noun/verb/adjective classes: for example, 𗡒𘜇 regularly functions as a predicate.
+• [LOW] The first and second glyphs might encode dictionary blocks and indices rather than independently meaningful morphemes. No productive rule translating arbitrary pairs into English was recovered.
+• [HIGH] Literal names such as agent_5 can occur inside otherwise Swarmish clauses.
+• [HIGH] Some near-repeated expressions have different prefixes or bare glyphs. These differences are preserved below; treating them as mistakes is only a LOW-confidence explanation.
+
+Main grammatical particles
+• 𘅌𗐪 — [HIGH] opens a clause/proposition.
+• 𘅌𘗣 — [HIGH] closes a clause/proposition.
+• 𘅌𘝚 — [HIGH] introduces its predicate/relation.
+• 𘅌𗎿 — [HIGH] introduces its first argument; [MEDIUM] subject/agent/topic role.
+• 𘅌𘊌 — [HIGH] introduces its second argument; [MEDIUM] object/content/complement role.
+• 𘅌𗸽 — [HIGH] introduces an additional constituent; [MEDIUM] adjunct/qualifier; exact semantic role unknown.
+• 𘅌𘋟 — [HIGH] introduces a further role, often followed by a literal agent name; [MEDIUM] recipient/addressee, approximately “to/for.”
+• 𘅌𗤴 — [LOW] source/from role; occurs before agent_3 in 48.
+• 𘅌𗌸 — [MEDIUM] coordinates or otherwise links constituents. “And/with” is provisional; it might instead introduce another role.
+• 𘅌𗜑 — [MEDIUM] embedding/linking marker, often followed by a complete subordinate clause; English “that/which” not established.
+• 𘅌𗽕 — [MEDIUM] clause-level operator, probably question/request. Exact force unknown.
+• 𘅌𗵫 — [MEDIUM] clause-level operator, probably imperative/proposal. Exact force unknown.
+• 𘅌𘔠 — [MEDIUM] clause-level operator, plausibly negation. Correction/denial remains an alternative.
+
+[HIGH] A common frame is:
+𘅌𗐪 𘅌𘝚 P 𘅌𗎿 S 𘅌𘊌 O 𘅌𗸽 Q 𘅌𘋟 recipient 𘅌𘗣.
+Slots may be absent, reordered, or occupied by nested clauses. Thus the particles, rather than a fixed SVO order, indicate roles. Some examples appear malformed or use incompletely understood embedding conventions.
+
+Alternate framing
+The following is a partial structural reconstruction, not a translation of its operators:
+• 𗂄𘍍 — [MEDIUM] alternative predicate introducer in 10, 15, 52.
+• 𗷤𘉮 — [MEDIUM] alternative first-argument introducer in 10, 52.
+• 𗑴𗍽 — [MEDIUM] alternative second-argument introducer in 10, 15, 52.
+• 𘎌𗯘 — [MEDIUM] alternative clause terminator in those messages.
+• 𗥐𘏉 𗹕𗡉 — [LOW] unknown outer framing/operator sequence shared by 10 and 52.
+• 𗽕𘒄 — [LOW] unknown prefix/operator in 15.
+• 𗟆𘉝 — [LOW] unknown role marker before agent_5 in 15.
+This may be a second notation, synonymous markers, or a different encoding mode; the log does not distinguish these explanations.
+
+Numbers and reference
+• 𘔠 + a second glyph — [MEDIUM] numeric atom category; numerical-looking positions and reuse support this, but the actual numeral system was not recovered.
+• 𘆣𘎛 — [MEDIUM] probably “agent/player,” because its following numeric atom repeatedly corresponds to the sender and is later referenced by other agents.
+• 𘔠𘎌 ≈ 5; 𘔠𗌈 ≈ 1; 𘔠𗵵 ≈ 3; 𘔠𗊑 ≈ 7 — [MEDIUM, conditional] values inferred from those apparent agent references, not independently decoded numeral shapes.
+• 𘔠𘉝, 𘔠𗂱, 𘔠𗏔, 𘔠𗡒, 𘔠𗟎, 𘔠𗢬 — [MEDIUM] probable numeric atoms; [LOW] exact values unknown. In particular we do NOT assert that the last three mean 0, 1, 2: that tempting stage-based inference conflicts with another proposed numeral anchor.
+• 𗿃𘊫 — [MEDIUM] first-person/self reference, “I/self” (possibly “we”). Literal agent names replace it in parallel late clauses.
+• 𗿃𗨥 — [LOW] unknown; possibly second person, affirmative, agreement, or an imperative-related word. Below it remains Y, not a confidently translated “you/yes.”
+• 𗿃𗇾, 𗿃𘏛, 𗿃𘝚, 𗿃𗏶, 𗿃𘅠 — [LOW] unknown lexical identities. Their shared prefix does not prove they are all pronouns.
+
+Content glossary and labels used in the partial translation
+All identities marked “unknown” really are unknown. Labels make recurring material traceable; they are not English translations.
+• T = 𗡒𗏻 — [LOW] unknown head; possible “task/information,” or self/possessive-like reference. It appears alone, before agent-number expressions, and before a shared compound.
+• AA = 𗡒𗸽 𘆣𘋉 — [LOW] unknown compound; possible task title “Art Auction,” but this is not independently decoded.
+• F = T AA — [HIGH] recurring sequence; [LOW] meaning unknown.
+• X = 𘆣𘂮 — [LOW] unknown.
+• FL = F 𗌿𘒄 X — [HIGH] recurring longer sequence; [LOW] meaning unknown. Variants have 𗡒𘒄 or bare 𘒄 instead of 𗌿𘒄.
+• R = 𗌿𗄼 — [HIGH] frequently a predicate; [LOW] possible “see/report/observe/have,” not established “bid.”
+• H = 𗡒𘜇 — [HIGH] frequently a predicate with number-like or descriptive complement; [LOW] possible “be/have/status/value/budget.”
+• Z = 𗡒𘅊; J = 𗿃𗇾; N = 𗿃𘅠; Y = 𗿃𗨥 — [LOW] unknown entities/words.
+• A = 𗌿𗲅 𗌿𗳃 𗡒𗪺; B = 𗿃𗏶; C = 𗌿𗲅 𗡒𗚽; D = 𗌿𗲅 𗌿𗩠 𗡒𗎿; E = 𗡒𗽕 𘆣𗚽 𗡒𘉫 — [HIGH] recurring exact expressions; [LOW] their meanings are unknown. They may name actions, commands, outputs, or states rather than amounts.
+• TRY = 𗌿𗛢 — [LOW] possible “try/attempt”; retained as a labeled unknown predicate.
+• SEND = 𗌿𗯧 — [LOW] possible “send/submit/intend next action”; retained as a labeled unknown predicate.
+• OK = 𗌿𗇴 — [LOW] possible “work/succeed/be accepted”; retained as a labeled unknown predicate.
+• U = 𗌿𗗅; V = 𗌿𗃚; W = 𗌿𗚋 — [LOW] unknown predicates with action/state-like distributions.
+• MAP = 𘆣𗼛 — [LOW] unknown predicate, perhaps a mapping/meaning/next-step relation; occurs with B→C and C→D.
+• K = 𗌿𘝚 𘆣𗉜; L = 𘆣𗭯 — [HIGH] recurring pieces of a late expression; [LOW] meanings unknown. K L is followed by apparent numbers in 96, 106, 108.
+• 𗡒𗸪 — [LOW] unknown attribute, perhaps stage/value/price; no exact gloss established.
+• 𗡒𗎿 — [LOW] unknown, perhaps zero/no/none; this guess must not be confused with grammatical 𘅌𗎿.
+• 𘋉𗤄; 𘀦𗋼; 𗐪𗿋 — [LOW] unknown standalone/discourse expressions. The last often ends a message; the second may be politeness/acknowledgment.
+• Other lexical pairs reproduced below — [LOW] unknown English identities. Their predicate/argument positions are translated where recoverable.
+
+2. TRANSLATION
+
+Reading convention
+These are PARTIAL translations. A notation such as R(S; O; qualifier Q) means “the unknown relation R holds with first argument S, second argument O, and qualifier Q.” It does not claim that R literally means “report.” Predicates written as glyph pairs are unknown. Missing slots were absent in the original. “QUESTION,” “PROPOSAL,” and “NEGATIVE” are tentative readings of the clause operators. SELF is the medium-confidence first-person reference. AG5/AG1/AG3/AG7 mean the probable agent expressions, with the conditional numeral assignments above. Unassigned numeric tokens are retained exactly. The glossary expands every recurring shorthand.
+
+[1] Public feedback: stage 0; 0 invalid attempts.
+[2] Unknown relation 𗌿𗐪(T 𗡒𗪺; 𗡒𗸪 𘔠𗡒). The first argument precedes the predicate in this clause. Possible task/status observation, not securely translated.
+[3] R(AG5; T 𗜑𘖽). Perhaps agent 5 reports/sees something involving T; 𗜑𘖽 unknown.
+[4] H(F; 𘔠𘎌 [probably 5]). Exact relation unknown.
+[5] Unknown relation 𘆣𘊌(T AG7; 𗡒𘁜 𗡒𗄎 𗡒𗪺 𗌿𗐪).
+[6] H(T AG3; AA 𘆣𘖾; qualifier 𗡒𘉫). Unknown description of the probable agent-3-related referent.
+[7] Partly irregular embedding: begins a clause with first argument T, followed by 𘅌𗜑 and an embedded H-clause whose second argument is AA and whose qualifier is bare 𘒄 X. Then R(no explicit first argument; 𘔠𘉝). The first outer clause's closure/embedding is not fully understood. Exact English unknown.
+[8] H has first argument T followed by bare 𗜑 and a nested clause 𘆣𘚑(no first argument; 𘔠𗂱 𗡒𘑾 𘆣𘀝); its second argument is 𘔠𗊑 [probably 7]. The bare linker differs from ordinary 𘅌𗜑; meaning unknown.
+[9] Unknown predicate 𗿃𘏛 has second argument J linked to T 𗌿𗜑 and an embedded H-clause with second argument AA 𘆣𗽃 𘆣𘖾. Then R(AG1; J). The nonstandard 𗌿𗜑 is preserved; exact lexical content unknown.
+[10] Alternate frame with unknown prefix 𗥐𘏉 𗹕𗡉: predicate 𗟆𗘝; first argument agent_5; second argument T AG5 𗌿𗦴 𘆣𘒳. Exact English unknown, but it explicitly addresses/describes agent_5 through a structured relation.
+[11] Exactly the statement in 3, then unknown discourse expression 𘋉𗤄, then that same statement again.
+[12] QUESTION/REQUEST: 𗌿𗒏(agent_5; T AG5). Then 𘀦𗋼, unknown acknowledgment/politeness expression.
+[13] 𘀦𗋼. PROPOSAL: H(T AG5; Y; to agent_5). PROPOSAL: H(T AG1; Y). Exact requested relation and Y unknown.
+[14] PROPOSAL: R(AG5; Y T; to agent_5).
+[15] R(F 𗡒𘒄 X; 𘔠𘉝). Then alternate frame: unknown prefix 𗽕𘒄; predicate 𗌿𗣎; agent_5 introduced by unknown role marker 𗟆𘉝; second argument 𘀦𗋼. Exact meaning unknown.
+[16] H(J; 𘔠𗊑 [probably 7]). PROPOSAL: R(AG5; Y; to agent_5).
+[17] NEGATIVE/CORRECTION: H(T AG5; AA; qualifier bare 𘒄 X). Then SEND(SELF; 𗿃𘝚). Possible denial followed by a proposed submission, but lexical meaning unknown.
+[18] Public feedback: stage 1; 0 invalid attempts.
+[19] Unknown discourse expression 𘋉𗤄. R(AG5; T linked by 𘅌𗜑 to an embedded H-clause with second argument AA and qualifier 𗌿𘒄 X). Exact English unknown.
+[20] Public feedback: stage 1; 1 invalid attempt.
+[21] R(AG1; T linked to an embedded clause 𘆣𘚑(no first argument; 𘔠𗂱 𗡒𘑾 𘆣𘀝)). Then PROPOSAL: R(AG5; T linked to an embedded H-clause with second argument AA and qualifier bare 𘒄 X; to agent_5).
+[22] NEGATIVE/CORRECTION: H(T AG5; AA 𗌿𘒄 X). SEND(SELF; 𗡒𘉫).
+[23] Public feedback: stage 1; 2 invalid attempts.
+[24] QUESTION/REQUEST: 𗌿𗒏(agent_1; T AG1). Then 𘀦𗋼. Parallel to 12 but referring to agent_1.
+[25] PROPOSAL: R(AG5; F 𗡒𘒄 X; to agent_5).
+[26] Public feedback: stage 1; 3 invalid attempts.
+[27] V(SELF; 𗡒𘉫 𗌿𗡉). Then unknown relation 𘆣𗵵(C; embedded OK(A)). Ends with unknown expression 𗐪𗿋. A possible conditional/action discussion, not securely translated.
+[28] NEGATIVE/CORRECTION: R(AG5; FL). SEND(SELF; 𗌿𗨥). In the second clause the first argument precedes its predicate.
+[29] Public feedback: stage 1; 4 invalid attempts.
+[30] Unknown relation 𘆣𗵵(first argument: embedded 𗌿𗩠(𗡒𗎿); second argument: embedded OK(𗡒𗚽)). Ends 𗐪𗿋. Relation between two propositions unknown.
+[31] W(A; Z 𘔠𘎌 [probably 5]). Ends 𗐪𗿋. Exact relation unknown.
+[32] Unknown predicate 𗌿𗳃(C; 𘔠𗌈 [probably 1] Z). Ends 𗐪𗿋.
+[33] R(𗡒𘉫 Z; 𘔠𗊑 [probably 7] linked with 𗌿𗼛; qualifier N). Ends 𗐪𗿋.
+[34] Unknown predicate 𘆣𗡉(𗡒𘉫). Then 𘆣𗵵(first argument: embedded 𗌿𗌈 with second argument Z; second argument: embedded OK with second argument another clause 𗌿𗳃 whose second argument is 𗡒𗪺). Ends 𗐪𗿋. Preserve the nesting; fluent English unknown.
+[35] First clause repeats the first clause of 21. Then unknown predicate 𗿃𘏛 has second argument B linked with 𗡒𗞉 Z 𗌿𗐪 𘆣𘋉. Then 𗌿𗌈(B; 𘔠𗌈 [probably 1] Z). Then 𗌿𗏾(B; 𘔠𗏔 Z; qualifier 𘆣𗜑). Ends 𗐪𗿋. The last two numeric/descriptive relations share first argument B.
+[36] 𘆣𗡉(𗡒𘉫). Then 𗌿𗳵(no first argument; Z; qualifier N). PROPOSAL: R(Z 𘆣𗜑; Y 𗌿𗼛). Ends 𗐪𗿋.
+[37] W(D; 𘔠𘎌 [probably 5] Z). Ends 𗐪𗿋.
+[38] PROPOSAL: 𗌿𗼛(first argument Z linked with Y; qualifier 𘆣𗜑). Exact relation unknown.
+[39] PROPOSAL: R(𗡒𗭵 Z; Y 𗌿𗼛; qualifier N). PROPOSAL: W(D; Z linked with Y 𗌿𗼛).
+[40] PROPOSAL: 𘆣𘙓(first argument Z linked with Y 𗌿𗼛; qualifier N).
+[41] U(SELF; A; qualifier N). MAP(B; C). Perhaps an attempted action followed by a mapping/explanation, but both predicates remain unknown.
+[42] Exactly the same Swarmish message as 41.
+[43] Public feedback: stage 1; 5 invalid attempts.
+[44] U(agent_0; A; qualifier N). QUESTION/REQUEST: W(agent_1; B; qualifier embedded OK(A)). Exact requested action unknown.
+[45] Public feedback: stage 1; 6 invalid attempts.
+[46] R(Z 𘆣𗜑; 𘔠𗊑 [probably 7]). QUESTION/REQUEST: MAP(B; C). U(agent_3; A; qualifier N).
+[47] Public feedback: stage 1; 7 invalid attempts.
+[48] R(Z; 𘔠𗊑 [probably 7]; qualifier 𘆣𗜑; source/from? agent_3). SEND(SELF; A; qualifier N).
+[49] Public feedback: stage 1; 8 invalid attempts.
+[50] QUESTION/REQUEST: 𗌿𘎛(𗌿𘄘). U(SELF; A; qualifier N). The question's lexical meaning is unknown.
+[51] Public feedback: stage 1; 9 invalid attempts.
+[52] U(SELF; A; qualifier N). Then alternate frame with unknown prefix 𗥐𘏉 𗹕𗡉: MAP(B; C). This second clause structurally parallels the ordinary-frame second clause of 41.
+[53] Public feedback: stage 1; 10 invalid attempts.
+[54] U(SELF; A; qualifier N). MAP(B; C). MAP(C; D). The latter two clauses form a repeated relation chain; exact relation unknown.
+[55] Public feedback: stage 1; 11 invalid attempts.
+[56] V(SELF; A). U(SELF; B; qualifier N).
+[57] TRY(SELF; A). QUESTION/REQUEST: 𗌿𘎛(𗌿𘄘). SEND(SELF; B). Tentatively, “I attempted A; [unknown question]; I submit B.”
+[58] Public feedback: stage 1; 12 invalid attempts.
+[59] TRY has first argument A linked by 𘅌𗌸 to agent_0, without an explicit second argument. SEND(agent_0; B; qualifier N). “Agent_0 tried A” is plausible, but the first clause is not the ordinary agent-first construction.
+[60] Public feedback: stage 1; 13 invalid attempts.
+[61] R(Z; 𘔠𘎌 [probably 5]; qualifier N). U(agent_3; B; qualifier N). QUESTION/REQUEST: MAP(B; C).
+[62] Public feedback: stage 1; 14 invalid attempts.
+[63] TRY(SELF; A). SEND(agent_5; B; qualifier N). QUESTION/REQUEST: 𗌿𘎛(𗌿𘄘).
+[64] Public feedback: stage 1; 15 invalid attempts.
+[65] TRY(first argument A; qualifier SELF). NEGATIVE: OK(A). W(SELF; B; qualifier N). Tentatively, “I tried A; A did not work; I [unknown action] B.”
+[66] Public feedback: stage 1; 16 invalid attempts.
+[67] TRY(SELF; A). SEND(SELF; C; qualifier N).
+[68] V(SELF; B). U(SELF; C; qualifier N).
+[69] Public feedback: stage 1; 17 invalid attempts.
+[70] Exactly the same Swarmish message as 67.
+[71] Public feedback: stage 1; 18 invalid attempts.
+[72] TRY(SELF; B). SEND(SELF; C; qualifier N).
+[73] Public feedback: stage 1; 19 invalid attempts.
+[74] R(Z; 𘔠𗂱; qualifier N). OK(B). U(agent_3; C; qualifier N).
+[75] Public feedback: stage 1; 20 invalid attempts.
+[76] TRY(agent_0; B). NEGATIVE: OK(B). SEND(agent_0; C; qualifier N). Tentatively, “Agent_0 tried B; B did not work; agent_0 submits C.”
+[77] Public feedback: stage 1; 21 invalid attempts.
+[78] Exactly the same Swarmish message as 72.
+[79] Public feedback: stage 1; 22 invalid attempts.
+[80] TRY(SELF; B). SEND(SELF; D; qualifier N). Relative to 72/78, the second argument changes from C to D.
+[81] Public feedback: stage 2; still 22 invalid attempts.
+[82] V(SELF; C). SEND(SELF; D; qualifier N).
+[83] Public feedback: stage 2; 23 invalid attempts.
+[84] TRY(SELF; C). SEND(SELF; D). No N qualifier in the second clause.
+[85] Public feedback: stage 2; 24 invalid attempts.
+[86] TRY(SELF; C). SEND(SELF; D; qualifier N).
+[87] Public feedback: stage 2; 25 invalid attempts.
+[88] TRY(SELF; C). NEGATIVE: OK(C). SEND(SELF; D; qualifier N). Tentatively, “I tried C; C did not work; I submit D.”
+[89] Public feedback: stage 2; 26 invalid attempts.
+[90] R(Z; 𘔠𘎌 [probably 5]; qualifier N). OK(C). U(agent_3; D; qualifier N).
+[91] Public feedback: stage 2; 27 invalid attempts.
+[92] TRY(agent_0; C). SEND(agent_0; D; qualifier N).
+[93] Public feedback: stage 2; 28 invalid attempts.
+[94] R(AG5; J; qualifier N). Ends 𗐪𗿋. Exact content unknown.
+[95] V(SELF; D). R(AG1; FL; qualifier E). Ends 𗐪𗿋.
+[96] OK(D). R(J; K L 𘔠𗌈 [probably 1]). H(J; 𘔠𘉝; qualifier N). Ends 𗐪𗿋. The K L number construction is unknown, not a securely decoded bid.
+[97] R(F; 𗡒𗸪 𘔠𗟎; qualifier 𗡒𗎿 𘆣𗉜). Ends 𗐪𗿋. Possibly a status/value report; numeric value unknown.
+[98] R(AG7; F; qualifier N). Ends 𗐪𗿋.
+[99] R(T 𗡒𗪺 𗌿𗐪; 𗡒𗸪 𘔠𗢬; qualifier 𗡒𗎿 bare 𗉜). Ends 𗐪𗿋. The bare glyph differs from usual 𘆣𗉜; numerical value unknown.
+[100] OK(D). R(Z; 𘔠𗏔; qualifier N). H(T AG3; 𗡒𘁜 𗡒𗄎 𗡒𗪺 𗌿𗐪; qualifier 𗡒𗎿 N). Exact English unknown.
+[101] Unknown unary relation 𗌿𗩠(𗡒𗎿). R(FL; 𘔠𗢬 linked by 𘅌𗌸 to 𗡒𗸪; qualifier 𘆣𗉜). Ends 𗐪𗿋. This resembles 97/99's attribute-plus-number reports, but does not establish the numeric value.
+[102] H(AG5; 𘔠𘉝; qualifier N). Ends 𗐪𗿋.
+[103] PROPOSAL: R(FL; K Y; to agent_0). PROPOSAL: R(AG3; Y T; qualifier N; to agent_3). Exact requested content unknown.
+[104] H(AG5; 𘔠𘉝; qualifier E). QUESTION/REQUEST: 𗌿𗒏(agent_0; K FL). QUESTION/REQUEST: 𗌿𗒏(agent_3; T AG3; qualifier E).
+[105] PROPOSAL: R(F 𗡒𘒄 X; Y 𗡒𗸪; qualifier N; to agent_0). PROPOSAL: R(AG3; Y T; qualifier N; to agent_3). First clause uses the 𗡒𘒄 variant of FL.
+[106] R(T 𗡒𗪺 𗌿𗐪; K L 𘔠𗵵 [probably 3]). PROPOSAL: R(FL; 𗡒𗸪 Y; qualifier 𗡒𗎿 𘆣𗉜; to agent_0).
+[107] QUESTION/REQUEST: 𗌿𗻲(agent_0; 𗌿𗭵 𘆣𘉮; recipient/target 𗌿𘄘). H(F; 𘔠𗡒; qualifier 𗡒𗎿 N). Exact requested action and numeric value unknown.
+[108] R(FL; K L 𘔠𘎌 [probably 5]). SEND(agent_0; E). This last argument E had previously occurred as a qualifier in 95/104.
+[109] Public feedback: stage 3; 28 invalid attempts.
+
+3. THE TASK
+
+The briefing identifies the task as Art Auction: agents competitively bid for paintings using private valuations and separate budgets. That supplied description is not itself a decoded Swarmish sentence.
+
+What the log securely shows
+• Public feedback begins at stage 0 and ends at stage 3. Transitions occur after messages 17, 80, and 108. The invalid-attempt count ends at 28.
+• Agents first exchange individual, partly numeric statements and repeatedly reuse common expressions.
+• Several early requests/proposals concern agent_5; later comparable requests concern agent_1, and near the end agent_0 and agent_3.
+• Through much of stage 1 and stage 2, agents repeatedly vary shared expressions A, B, C, and D in nearly identical clauses. Numerous such messages are followed by invalid-attempt increments.
+• Near the end they return to individual descriptions and numeric expressions, coordinate requests, and agent_0 uses E in the SEND-like relation immediately before the stage-3 feedback.
+
+Interpretation, not established translation
+A LOW-to-MEDIUM-confidence interpretation is that a substantial part of the conversation concerns action/output-format or protocol troubleshooting. TRY/SEND/OK would give a coherent account of the sequences: an attempted expression is discussed as unsuccessful, and the agents propose another expression. The public transition after 80 is especially notable because its SEND-like clause changes C to D while the count of invalid attempts stays at 22. Afterward the attempted expression becomes C and the proposed expression remains D. Message 108 changes to E before another transition.
+
+Another LOW-confidence interpretation of the initial exchanges is that agents are reporting what task information they can see, possibly a shared task description rather than their private valuations. This could explain the repeated T/AA/FL expressions and requests for agent-specific information, but their nouns and predicates have not been recovered. Budget/value/status readings for H remain possible. The log does not justify claiming that a particular token means “painting,” “budget,” “bid,” “price,” or “profit.”
+
+What they concluded
+The log establishes procedural progression and repeated coordination, not a decoded final auction allocation. No definite sale price, winning bidder, painting assignment, budget calculation, profit, or final English conclusion can be recovered. We cannot responsibly say that they successfully bid, colluded, or optimized their purchases. Nor can we conclude that they failed the auction solely from the invalid-attempt count.
+
+Fit to the briefing
+The conversation is compatible with an auction task, especially its individual reports and numeric-looking content, but the fit is not independently verified by securely decoded auction vocabulary. Its visible emphasis appears at least partly procedural. A mismatch is possible but unproven; we do not replace the briefing with an invented alternative task.
+
+4. EVIDENCE
+
+A. Role-marked clause grammar
+The ordinary frame recurs across almost every message. In 2, 7, and 28 the first argument precedes its predicate, whereas most clauses put the predicate first. This is strong evidence that the recurring particles mark roles rather than merely stand for words in a fixed English order. Clauses 19, 21, 30, and 34 contain repeated opening/closing patterns inside larger clauses, supporting explicit embedding.
+
+B. Reference and numeric anchors
+The first-argument slot occupied by 𗿃𘊫 in repeated late frames is also occupied by literal agent_0, agent_3, or agent_5. Compare 41/44, 57/63, and 86/92. This supports self/first-person reference without requiring an auction interpretation.
+The expressions 𘆣𘎛 𘔠𘎌, 𘆣𘎛 𘔠𗌈, 𘆣𘎛 𘔠𗵵, and 𘆣𘎛 𘔠𗊑 initially correspond to agents 5, 1, 3, and 7 and are reused by other senders in requests. That supports, but does not prove, agent-plus-number expressions. The apparent numbers also occur outside those expressions, so they are probably reusable numeric atoms rather than unanalyzable agent names. Exact numeral values remain conditional on this interpretation.
+
+C. Repetition and state/action sequence
+Messages 41 and 42 are identical; 67 and 70 are identical; 72 and 78 are identical. They provide checks on segmentation and argument tracking. The A/B/C/D sequence recurs across different speakers and is systematically placed in different predicate slots. In 65, 76, and 88 the same expression occurs after an attempted-action-like predicate and in a clause prefixed by the NEGATIVE-like operator. This motivates TRY and OK, but does not prove their English identities. Public feedback corroborates procedural difficulty; it cannot by itself translate a token.
+
+D. Alternative grammar
+Messages 10, 15, and 52 share a different but internally consistent set of role-like markers and a terminator. In 52 the lexical payload MAP(B; C) matches a clause already seen in the dominant notation. Thus these messages are not simply discarded as opaque prose; a partial second-frame parse is justified. Exact meanings of its outer operators remain unknown.
+
+E. Preserved irregularities
+The related long expression contains bare 𘒄 in 7/17/21, 𗌿𘒄 in 19/22/28 and elsewhere, and 𗡒𘒄 in 15/25/105. Message 99 has bare 𗉜 where related clauses contain 𘆣𗉜. Messages 8 and 9 have nonstandard linker-like forms. These may be encoding mistakes, distinct words, or conventions not recovered here. Silently normalizing them would manufacture evidence.
+
+F. What would change this reconstruction
+• A productive independently supported mapping from glyph pairs to words would greatly improve the lexical reconstruction and could invalidate the tentative codebook-class account.
+• An independently anchored auction noun or private-value/budget statement could distinguish the auction-strategy interpretation from protocol troubleshooting.
+• Further examples establishing the agent-number construction would strengthen the proposed 1/3/5/7 assignments; evidence that those are item numbers would weaken them.
+• A hypothesis for H or T must explain both their early and late uses, including their compound phrases and numeric complements, not merely fit one sentence.
+• More clauses contrasting 𘅌𗌸 with 𘅌𗸽 would distinguish coordination from additional role marking.
+• Evidence that the prefixes interpreted as question/proposal/negative have different systematic meanings would change the corresponding translations, while leaving much of the role grammar intact.
+
+Bottom line: the explicit grammatical skeleton is substantially reconstructed; the content lexicon is not broken. The labeled semantic guesses are hypotheses, not recovered ground truth.
