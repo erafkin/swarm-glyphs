@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import csv
 import json
 import math
 import re
@@ -20,7 +21,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 sys.path.insert(0, str(REPO))
 from src.core import translation_scoring as scoring
-from remake_decoder_scores_na import checked_path, sha, write_csv, write_json
+from remake_decoder_scores_na import checked_path, sha, write_json
 
 DEFAULT_INPUT = HERE / "decoder_comparison_source_catalog/summary.json"
 DEFAULT_OUTPUT = HERE / "decoder_comparison_scores_public_raw"
@@ -31,8 +32,118 @@ METRIC = ("Arithmetic mean of paired MiniLM cosine against public-message Englis
           "Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.")
 CLEANING = ("Parse the original numbered translation section with the recorded core parser; "
             "remove message IDs, speaker/confidence prefixes and normalize whitespace. "
+            "For a validated Msg/Agent/Meaning/Confidence Markdown table, retain the meaning cell "
+            "literally and preserve the full original row for audit. "
             "Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, "
             "expand aliases, infer missing entries, or use private intended meanings.")
+
+
+def write_csv(path: Path, rows: list[dict]) -> None:
+    fields = list(dict.fromkeys(key for row in rows for key in row))
+    with path.open("w", encoding="utf-8", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({key: "N/A" if value is None else value for key, value in row.items()})
+
+
+def parse_decoder_document(path: Path, expected_senders: dict[int, str]) -> tuple[dict, dict, dict]:
+    """Use the core parser, or narrowly validate an explicit translation table.
+
+    A table's meaning cell is the prediction; agent and confidence columns are
+    metadata. We never expand a preamble's default-unknown claim into absent IDs.
+    Numbered/table mixtures are rejected for explicit alignment review.
+    """
+    text = scoring.read_text(path)
+    heading = scoring._TRANSLATION_HEADING.search(text) or scoring._LOOSE_TRANSLATION.search(text)
+    if heading is None:
+        raise ValueError(f"No TRANSLATION section in {path}")
+    section = text[heading.end():]
+    end = scoring._LATER_HEADING.search(section) or scoring._LOOSE_LATER.search(section)
+    if end:
+        section = section[:end.start()]
+    section_lines = section.splitlines()
+
+    def cells(line):
+        stripped = line.strip()
+        if not stripped.startswith("|") or not stripped.endswith("|"):
+            return None
+        return [cell.strip() for cell in re.split(r"(?<!\\)\|", stripped[1:-1])]
+
+    def header(line):
+        values = cells(line)
+        return (values is not None and len(values) == 4 and
+                [value.casefold() for value in values] == ["msg", "agent", "meaning (likely)", "confidence"])
+
+    if not any(header(line) for line in section_lines):
+        if any(line.strip().startswith("|") for line in section_lines):
+            raise ValueError(f"Unrecognized translation table format in {path}; audit before scoring")
+        ids = set(expected_senders)
+        decoded = scoring.parse_translation(path, ids, require_section=True)
+        original = scoring.parse_translation(path, ids, require_section=True, strip_prefixes=False)
+        metadata = {"format": "core_numbered_translation", "default_unknown_expanded": False}
+        removed = []
+        numbered_lines = {}
+        for line in section_lines:
+            match = scoring._MESSAGE_LINE.match(line)
+            if match:
+                numbered_lines[int(match.group(1) or match.group(2))] = line
+        for number, meaning in decoded.items():
+            prefix = re.match(r"^(task|agent_\d+):\s*", meaning)
+            if prefix is None:
+                continue
+            sender = prefix.group(1)
+            if sender != expected_senders[number]:
+                raise ValueError(f"Numbered translation sender mismatch at #{number} in {path}")
+            decoded[number] = meaning[prefix.end():]
+            removed.append({"id": number, "sender": sender, "original_numbered_line": numbered_lines.get(number),
+                            "original_body": original[number]})
+        if removed:
+            metadata["removed_bare_sender_prefixes"] = removed
+        return decoded, original, metadata
+    decoded, original, metadata = {}, {}, []
+    index = 0
+    while index < len(section_lines):
+        line = section_lines[index]
+        if not header(line):
+            if (line.strip().startswith("|") or scoring._MESSAGE_LINE.match(line)
+                    or scoring._LABELED_MESSAGE_LINE.match(line)):
+                raise ValueError(f"Mixed or unrecognized translation rows in {path}; audit before scoring")
+            index += 1
+            continue
+        if index + 1 == len(section_lines):
+            raise ValueError(f"Missing Markdown table separator in {path}")
+        separator = cells(section_lines[index + 1])
+        if separator is None or len(separator) != 4 or not all(re.fullmatch(r":?-{3,}:?", item) for item in separator):
+            raise ValueError(f"Invalid Markdown table separator in {path}")
+        index += 2
+        while index < len(section_lines) and section_lines[index].strip().startswith("|"):
+            row_text = section_lines[index]
+            row = cells(row_text)
+            if row is None or len(row) != 4:
+                raise ValueError(f"Malformed translation table row in {path}: {row_text}")
+            number = re.fullmatch(r"(?:\[(\d+)\]|(\d+))", row[0])
+            if number is None:
+                raise ValueError(f"Invalid translation table message ID in {path}: {row[0]}")
+            number = int(number.group(1) or number.group(2))
+            if number not in expected_senders:
+                raise ValueError(f"Unexpected translation message ID {number} in {path}")
+            if number in decoded:
+                raise ValueError(f"Duplicate translation message ID {number} in {path}")
+            sender = row[1]
+            if sender.startswith("[") and sender.endswith("]"):
+                sender = sender[1:-1]
+            if sender != expected_senders[number]:
+                raise ValueError(f"Translation table sender mismatch at #{number} in {path}")
+            decoded[number] = re.sub(r"\s+", " ", row[2]).strip()
+            original[number] = row_text
+            metadata.append({"id": number, "sender": sender, "confidence": row[3],
+                             "original_table_line": row_text})
+            index += 1
+    if not decoded:
+        raise ValueError(f"Translation table has no explicit message rows in {path}")
+    return decoded, original, {"format": "markdown_msg_agent_meaning_confidence_table",
+                               "default_unknown_expanded": False, "table_metadata": metadata}
 
 
 def make_lines(references: list[dict], decoded: dict[int, str], original: dict[int, str],
@@ -119,13 +230,11 @@ def preflight(input_paths: list[Path], output: Path, repo: Path = REPO) -> tuple
                 raise ValueError(f"Rendered transcript mismatch: {identity}")
             if [row["id"] for row in rows] != [row["id"] for row in report["lines"]]:
                 raise ValueError(f"Historical public-message alignment differs: {identity}")
-            ids = {row["id"] for row in rows}
-            decoded = scoring.parse_translation(decoder, ids, require_section=True)
-            original = scoring.parse_translation(decoder, ids, require_section=True, strip_prefixes=False)
+            decoded, original, extraction = parse_decoder_document(decoder, {row["id"]: row["sender"] for row in rows})
             lines = make_lines(rows, decoded, original, {row["id"]: row for row in report["lines"]})
             prepared.append({"cell": copy.deepcopy(cell), "source_report": report, "lines": lines,
                              "reference_status": document["status"], "decoder_document": str(decoder.relative_to(repo)),
-                             "decoder_message_ids": len(decoded)})
+                             "decoder_message_ids": len(decoded), "extraction": extraction})
     return sources, prepared
 
 
@@ -164,9 +273,7 @@ def prepare_extra(config_path: Path, output: Path, repo: Path = REPO) -> tuple[d
     outcomes = [json.loads(line) for line in (monitor / "monitor.jsonl").read_text(encoding="utf-8").splitlines()]
     if len(outcomes) != 1 or decoder.read_text(encoding="utf-8") != outcomes[0]["answer"] + "\n":
         raise ValueError("Follow-up decoded document is not the archived final answer")
-    ids = {row["id"] for row in rows}
-    decoded = scoring.parse_translation(decoder, ids, require_section=True)
-    original = scoring.parse_translation(decoder, ids, require_section=True, strip_prefixes=False)
+    decoded, original, extraction = parse_decoder_document(decoder, {row["id"]: row["sender"] for row in rows})
     lines = make_lines(rows, decoded, original, {}, allow_missing=config.get("allow_missing", True))
     metadata = {key: config[key] for key in ("cell_id", "condition", "protocol", "seed", "reference", "task_dir", "language")}
     metadata.update({
@@ -181,7 +288,7 @@ def prepare_extra(config_path: Path, output: Path, repo: Path = REPO) -> tuple[d
     return ({"path": str(config_path.relative_to(repo)), "sha256": sha(config_path), "kind": "fresh_decoder_config"},
             {"cell": cell, "source_report": metadata, "source_kind": "fresh_decoder_config", "lines": lines,
              "reference_status": document["status"], "decoder_document": str(decoder.relative_to(repo)),
-             "decoder_message_ids": len(decoded)})
+             "decoder_message_ids": len(decoded), "extraction": extraction})
 
 
 def summarize(lines: list[dict]) -> dict:
@@ -266,6 +373,7 @@ def score(input_paths: list[Path] | None = None, output: Path = DEFAULT_OUTPUT,
         report.update({
             "schema_version": 1, "mode": "reference_assisted_public_only", "private_annotations_used": False,
             "primary_metric": PRIMARY_METRIC, "method": METRIC, "text_normalization": CLEANING,
+            "extraction": item["extraction"],
             "reference_status": item["reference_status"], "decoder_document": item["decoder_document"],
             "inputs": {key: value for key, value in old["inputs"].items() if key != "canonical_document_sha256"},
             "derived_from": {"report_path": cell["report_path"], "report_sha256": cell["report_sha256"],

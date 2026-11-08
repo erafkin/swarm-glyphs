@@ -36,7 +36,7 @@
 
 ## Method and interpretation
 
-Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.
+Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. For a validated Msg/Agent/Meaning/Confidence Markdown table, retain the meaning cell literally and preserve the full original row for audit. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.
 
 There are 1,965 embedded pairs out of 1,965 scorable message/cell pairs, including **122 literal unknown-only answers** and **0 missing answers**. Missing answers are not embedded. These counts are lexical descriptions, not semantic judgments. D05 retains its original structural glosses, even though its preamble says their meanings are unknown; D06 retains the literal word `unknown`; D11 retains unknown parentheticals. The historical evaluator's abstention classification is also recorded per line for audit, without altering the text or score.
 

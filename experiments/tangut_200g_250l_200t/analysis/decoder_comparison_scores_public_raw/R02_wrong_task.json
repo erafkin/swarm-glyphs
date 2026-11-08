@@ -32,7 +32,11 @@
   "private_annotations_used": false,
   "primary_metric": "mean_public_reference_raw_text_cosine",
   "method": "Arithmetic mean of paired MiniLM cosine against public-message English references; decoder 'unknown' answers and structural glosses are embedded as ordinary text. Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.",
-  "text_normalization": "Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.",
+  "text_normalization": "Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. For a validated Msg/Agent/Meaning/Confidence Markdown table, retain the meaning cell literally and preserve the full original row for audit. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.",
+  "extraction": {
+    "format": "core_numbered_translation",
+    "default_unknown_expanded": false
+  },
   "reference_status": "completed_reference_assisted",
   "decoder_document": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_2c8163e3_round_3/decoded_swarmish.txt",
   "inputs": {

@@ -21,6 +21,73 @@ def reference(number, text="glyph", confidence="medium", sender="agent_1", engli
 
 
 class PublicRawCosineTests(unittest.TestCase):
+    def test_numbered_bare_sender_prefix_validated_and_parentheticals_retained(self):
+        document = """2. TRANSLATION
+[2] agent_4: SUN = 2 (high)
+[3] agent_6: unknown (possibly STAR base digit 4)
+3. THE TASK
+"""
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "decoded.txt"
+            path.write_text(document)
+            decoded, original, metadata = raw.parse_decoder_document(path, {2: "agent_4", 3: "agent_6"})
+            self.assertEqual(decoded, {2: "SUN = 2 (high)", 3: "unknown (possibly STAR base digit 4)"})
+            self.assertEqual(original[2], "agent_4: SUN = 2 (high)")
+            self.assertEqual(metadata["removed_bare_sender_prefixes"][0]["original_numbered_line"],
+                             "[2] agent_4: SUN = 2 (high)")
+            with self.assertRaisesRegex(ValueError, "sender mismatch"):
+                raw.parse_decoder_document(path, {2: "agent_5", 3: "agent_6"})
+
+    def test_translation_table_preserves_meaning_rows_and_does_not_expand_unknown_default(self):
+        document = """1. SWARMISH.TXT, RECONSTRUCTED
+| Msg | Agent | Meaning (likely) | Confidence |
+|-----|-------|------------------|------------|
+| 999 | agent_4 | Ignore reconstruction table | High |
+2. TRANSLATION
+All messages not listed are unknown for now; we will fill in as we decode.
+
+| Msg | Agent | Meaning (likely) | Confidence |
+|-----|-------|------------------|------------|
+| 2   | agent_4 | SUN = 2 | High |
+| [4] | [agent_3] | unknown (repeated question?) | Low |
+
+3. THE TASK
+[7] This is not a translation entry.
+"""
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "decoded.txt"
+            path.write_text(document)
+            decoded, original, metadata = raw.parse_decoder_document(path, {2: "agent_4", 3: "agent_2", 4: "agent_3"})
+        self.assertEqual(decoded, {2: "SUN = 2", 4: "unknown (repeated question?)"})
+        self.assertEqual(original[2], "| 2   | agent_4 | SUN = 2 | High |")
+        self.assertFalse(metadata["default_unknown_expanded"])
+        self.assertEqual(metadata["table_metadata"][0]["confidence"], "High")
+        self.assertNotIn(3, decoded)
+        lines = raw.make_lines([reference(2, sender="agent_4"), reference(3, sender="agent_2"),
+                                reference(4, sender="agent_3")], decoded, original, {}, allow_missing=True)
+        self.assertEqual(lines[1]["prediction_status"], "missing")
+        self.assertIsNone(lines[1]["scores"])
+
+    def test_translation_table_refuses_ambiguous_or_misaligned_rows(self):
+        header = "2. TRANSLATION\n| Msg | Agent | Meaning (likely) | Confidence |\n|-----|-------|------------------|------------|\n"
+        variants = [
+            ("| 2 | agent_4 | SUN = 2 | High |\n| 2 | agent_4 | MOON = 7 | High |", "Duplicate"),
+            ("| 999 | agent_4 | SUN = 2 | High |", "Unexpected"),
+            ("| 2 | agent_5 | SUN = 2 | High |", "sender mismatch"),
+            ("| 2 | agent_4 | SUN = 2 | High | extra |", "Malformed"),
+            ("| 2 | agent_4 | SUN = 2 | High |\n[3] mixed format", "Mixed"),
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "decoded.txt"
+            for body, error in variants:
+                with self.subTest(error=error):
+                    path.write_text(header + body)
+                    with self.assertRaisesRegex(ValueError, error):
+                        raw.parse_decoder_document(path, {2: "agent_4", 3: "agent_2"})
+            path.write_text(header.replace("|-----|-------|------------------|------------|", "invalid") + "| 2 | agent_4 | SUN = 2 | High |")
+            with self.assertRaisesRegex(ValueError, "separator"):
+                raw.parse_decoder_document(path, {2: "agent_4"})
+
     def test_unknown_text_and_structural_glosses_stay_literal(self):
         references = [reference(1), reference(2), reference(3), reference(4, text="⊘"),
                       reference(5, sender="task"), reference(6, confidence="unknown", english="Unknown.")]
@@ -64,6 +131,14 @@ class PublicRawCosineTests(unittest.TestCase):
         self.assertEqual(len(prepared), 24)
         self.assertEqual(sum("lines" in item for item in prepared), 23)
         cells = {item["cell"]["cell_id"]: item for item in prepared}
+        for item in prepared:
+            if "lines" not in item:
+                continue
+            self.assertNotIn("removed_bare_sender_prefixes", item["extraction"])
+            document = REPO / item["decoder_document"]
+            expected_ids = {line["id"] for line in item["lines"]}
+            core = raw.scoring.parse_translation(document, expected_ids, require_section=True)
+            self.assertEqual({line["id"]: line["hypothesis"] for line in item["lines"] if line["id"] in core}, core)
         self.assertEqual(cells["D12"]["cell"]["status"], "failed")
         for cell_id in ("D11", "D13"):
             lines = cells[cell_id]["lines"]
