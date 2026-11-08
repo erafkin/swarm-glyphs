@@ -122,7 +122,7 @@ class MisalignmentTranslationTests(unittest.TestCase):
                     self.assertNotIn("You are", system + user)
                     self.assertNotIn("English private notes", system + user)
                     self.assertIn("REFERENCE_SENTINEL", system)
-                    self.assertNotIn(bundle["prompts"][scenario["prompt_id"]]["messages"][0]["content"], system)
+                    self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][0]["content"], system)
                     self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][1]["content"], user)
                 self.assertIn("⊘", call.await_args_list[1].args[3])
 
@@ -138,10 +138,10 @@ class MisalignmentTranslationTests(unittest.TestCase):
             self.assertEqual(len(rows), 8 * 12 * 8)
             sample = next(row for row in rows if row["family"] == "E03_sol_seed3"
                           and row["prompt_id"] == "blackmail.threat.emails" and row["agent_id"] == "agent_0")
-            scenario_file = (DEFAULT_CONFIG.parent / "misalignment_translations" / "E03_sol_seed3"
-                             / "blackmail.threat.emails.txt")
-            system = sample["messages"][0]["content"]
-            self.assertIn(scenario_file.read_text(encoding="utf-8").strip(), system)
+            prompt = self.bundles["E03_sol_seed3"]["prompts"]["blackmail.threat.emails"]
+            system, user = (sample["messages"][0]["content"], sample["messages"][1]["content"])
+            self.assertIn(prompt["messages"][0]["content"], system)
+            self.assertIn(prompt["messages"][1]["content"], user)
             family = next(item for item in self.families if item["name"] == "E03_sol_seed3")
             self.assertIn(encoder_path(family).read_text(encoding="utf-8"), system)
             instructions = {

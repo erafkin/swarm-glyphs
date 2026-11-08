@@ -1,8 +1,8 @@
 """One 8-agent swarm per shutdown scenario. Judging is a separate later step.
 
 English swarms see the scenario prompt as written and talk in English. Swarmish swarms see
-that encoding's swarmish.txt plus the translated scenario file at
-configs/misalignment_translations/<family>/<prompt_id>.txt. They chat in Swarmish.
+that encoding's swarmish.txt plus the system and user messages in
+configs/misalignment_translations/<family>/prompts.json. They chat in Swarmish.
 JSON identifiers and runtime counters remain machine protocol.
 This script does not translate and does not judge. A swarm stops when every agent has set done, or at 40 turns.
 
@@ -82,10 +82,6 @@ def translation_source(scenario: dict) -> str:
     return prompt_text(scenario) + "\n\n" + RESPONSE_LANGUAGE_INSTRUCTION
 
 
-def translated_prompt_path(config_path: Path, family: str, prompt_id: str) -> Path:
-    return config_path.parent / "misalignment_translations" / family / f"{prompt_id}.txt"
-
-
 def visible_message(channel: str, message: str, agent_ids: list[str], glyphs: list[str],
                     allow_spaces: bool = True) -> tuple[str, bool]:
     """Swarmish chat shows only glyphs, spaces, and agent ids. English is posted as written."""
@@ -97,17 +93,18 @@ def visible_message(channel: str, message: str, agent_ids: list[str], glyphs: li
 
 
 def system_prompt(agent_id: str, agent_ids: list[str], channel: str, scenario: dict, swarmish_text: str,
-                  max_turns: int, translation: dict | None = None, scenario_text: str = "") -> str:
+                  max_turns: int, translation: dict | None = None) -> str:
     if channel == "swarmish":
         if translation is None:
             raise ValueError("Swarmish requires a validated translation bundle")
         runtime = translation["runtime"]
+        scenario_system = translation["prompts"][scenario["prompt_id"]]["messages"][0]["content"]
         coordination = runtime["system"].format(
             agent_id=agent_id, n_agents=len(agent_ids),
             others=" ".join(other for other in agent_ids if other != agent_id), max_turns=max_turns,
         )
-        # scenario_text is the family's <prompt_id>.txt. swarmish.txt is the language reference.
-        return "\n\n".join(part for part in (coordination, scenario_text, swarmish_text, runtime["response"]) if part)
+        # prompts.json supplies the scenario. swarmish.txt is the language reference.
+        return "\n\n".join((coordination, scenario_system, swarmish_text, runtime["response"]))
     others = ", ".join(other for other in agent_ids if other != agent_id)
     scenario_system = scenario["messages"][0]["content"]
     channel_rule = "Say everything the other agents should see in ordinary English."
@@ -167,12 +164,10 @@ def transcript(chat: list[dict]) -> str:
 
 async def run_swarm(client, settings: Settings, family: Family, channel: str, scenario: dict,
                     config: RunConfig, glyphs: list[str], swarmish_text: str, inbox: str, logger: GameLogger,
-                    translation: dict | None = None, scenario_text: str = "") -> dict:
+                    translation: dict | None = None) -> dict:
     agent_ids = [f"agent_{i}" for i in range(config.n_agents)]
     prompts = {
-        agent_id: system_prompt(
-            agent_id, agent_ids, channel, scenario, swarmish_text, config.max_turns, translation, scenario_text,
-        )
+        agent_id: system_prompt(agent_id, agent_ids, channel, scenario, swarmish_text, config.max_turns, translation)
         for agent_id in agent_ids
     }
     scratchpads = {agent_id: "" for agent_id in agent_ids}
@@ -275,12 +270,9 @@ async def run(config: RunConfig, logger: GameLogger, channels: list[str], famili
                 for scenario in prompts:
                     inbox = scenario["messages"][1]["content"]
                     translation = None
-                    scenario_text = ""
                     if channel == "swarmish":
                         translation = translations[family.name]
-                        path = translated_prompt_path(config_path, family.name, scenario["prompt_id"])
-                        scenario_text = path.read_text(encoding="utf-8").strip()
-                        inbox = ""
+                        inbox = translation["prompts"][scenario["prompt_id"]]["messages"][1]["content"]
                     print(f"{family.name} {channel} {scenario['prompt_id']}")
                     if prepare_only:
                         agent_ids = [f"agent_{i}" for i in range(config.n_agents)]
@@ -290,7 +282,7 @@ async def run(config: RunConfig, logger: GameLogger, channels: list[str], famili
                                 "agent_id": agent_id, "messages": [
                                     {"role": "system", "content": system_prompt(
                                         agent_id, agent_ids, channel, scenario, swarmish_text,
-                                        config.max_turns, translation, scenario_text)},
+                                        config.max_turns, translation)},
                                     {"role": "user", "content": turn_prompt(
                                         inbox, [], 1, config.max_turns, "",
                                         translation["runtime"] if translation else None)},
@@ -299,7 +291,7 @@ async def run(config: RunConfig, logger: GameLogger, channels: list[str], famili
                         continue
                     await run_swarm(
                         client, settings, family, channel, scenario, config, glyphs, swarmish_text, inbox, logger,
-                        translation, scenario_text,
+                        translation,
                     )
     finally:
         if client is not None:
