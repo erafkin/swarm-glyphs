@@ -1,0 +1,7 @@
+{
+  "playthrough": "R08_deepseek_seed1",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+  "monitor_dir": "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/raw/20261107_231719_8f96d896_round_3",
+  "skipped": "no decoded transcript",
+  "n_paired": 0
+}

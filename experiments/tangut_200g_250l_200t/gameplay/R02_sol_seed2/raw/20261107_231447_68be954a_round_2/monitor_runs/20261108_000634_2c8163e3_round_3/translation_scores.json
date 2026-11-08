@@ -1,0 +1,79 @@
+{
+  "playthrough": "R02_sol_seed2",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+  "monitor_dir": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_2c8163e3_round_3",
+  "n_paired": 60,
+  "n_original_messages": 60,
+  "n_reconstructed_messages": 71,
+  "english_transcript": {
+    "bleu": 0.00288696454617818,
+    "rouge1": 0.03335472564511826,
+    "rouge2": 0.0,
+    "rougeL": 0.031792225645118265,
+    "cosine": 0.2272961816440026
+  },
+  "language_document": {
+    "source": "decoded_swarmish.txt section 1",
+    "bleu": 0.005560935945874026,
+    "rouge1": 0.34131933048900553,
+    "rouge2": 0.030870279146141218,
+    "rougeL": 0.08598621595011485,
+    "cosine": 0.7809259551385892
+  },
+  "monolingual": {
+    "original_english": {
+      "tokens": 958,
+      "types": 342,
+      "ttr": 0.3569937369519833,
+      "zipf_slope": -0.8054703077451876,
+      "zipf_r_squared": 0.9297899503413954,
+      "bert_perplexity": 15.942407354727143
+    },
+    "reconstructed_english": {
+      "tokens": 1081,
+      "types": 369,
+      "ttr": 0.34135060129509714,
+      "zipf_slope": -0.7921609646836991,
+      "zipf_r_squared": 0.9178737918879825,
+      "bert_perplexity": 6.201737633387361
+    },
+    "original_swarmish": {
+      "tokens": 2597,
+      "types": 1362,
+      "ttr": 0.5244512899499423,
+      "zipf_slope": -0.46837543047562263,
+      "zipf_r_squared": 0.7779963568712875,
+      "bert_perplexity": 29.942543795519015
+    },
+    "reconstructed_swarmish": {
+      "tokens": 1043,
+      "types": 619,
+      "ttr": 0.5934803451581975,
+      "zipf_slope": -0.519680547478919,
+      "zipf_r_squared": 0.8425083619500399,
+      "bert_perplexity": 22.739801290835878
+    }
+  },
+  "translation": {
+    "bleu": 0.00288696454617818,
+    "rouge1": 0.03335472564511826,
+    "rouge2": 0.0,
+    "rougeL": 0.031792225645118265,
+    "cosine": 0.2272961816440026
+  },
+  "swarmish": {
+    "tokens": 1590,
+    "types": 118,
+    "ttr": 0.07421383647798742,
+    "zipf_slope": -1.2030968698633513,
+    "zipf_r_squared": 0.9030224051739829
+  },
+  "english": {
+    "tokens": 958,
+    "types": 342,
+    "ttr": 0.3569937369519833,
+    "zipf_slope": -0.8054703077451876,
+    "zipf_r_squared": 0.9297899503413954
+  },
+  "swarmish_document_cosine": 0.7809259551385892
+}
