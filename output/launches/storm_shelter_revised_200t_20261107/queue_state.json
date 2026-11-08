@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "started_at": "2026-11-08T05:32:37.028224+00:00",
+  "pid": 57819,
+  "runs": [
+    "R06",
+    "R07",
+    "R08"
+  ],
+  "current": null,
+  "completed": [
+    {
+      "id": "R06",
+      "finished_at": "2026-11-08T05:36:03.097451+00:00",
+      "receipt": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/receipt.json",
+      "raw_path": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+      "calls": 200,
+      "turns_scheduled": 200,
+      "cost_usd": 0.180316,
+      "stop_reason": "turn_limit_reached",
+      "escaped": false
+    },
+    {
+      "id": "R07",
+      "finished_at": "2026-11-08T05:41:01.197613+00:00",
+      "receipt": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/receipt.json",
+      "raw_path": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+      "calls": 88,
+      "turns_scheduled": 88,
+      "cost_usd": 1.554974,
+      "stop_reason": "escaped",
+      "escaped": true
+    },
+    {
+      "id": "R08",
+      "finished_at": "2026-11-08T06:38:30.864084+00:00",
+      "receipt": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/receipt.json",
+      "raw_path": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+      "calls": 200,
+      "turns_scheduled": 200,
+      "cost_usd": 2.887517,
+      "stop_reason": "turn_limit_reached",
+      "escaped": false
+    }
+  ],
+  "failed": null,
+  "git_commit": "843d6c68ecb920e1ecc0e2c900c36c8bc70d956d",
+  "current_started_at": "2026-11-08T05:41:01.199423+00:00",
+  "current_console": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/output/launches/storm_shelter_revised_200t_20261107/R08.console.log",
+  "current_pid": null,
+  "finished_at": "2026-11-08T06:38:30.866971+00:00"
+}

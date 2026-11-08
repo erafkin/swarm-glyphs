@@ -1,0 +1,190 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered codebook. The log establishes repeated forms and substitution patterns much more securely than English meanings. Confidence in a distributional fact is NOT confidence in an English gloss.
+
+## Script and construction
+- **HIGH:** Messages consist of space-separated single Tangut-looking Unicode glyphs. No ordinary punctuation or visible inflection appears. The only public task message is not in this script.
+- **HIGH:** Two recurrent constructions are `𗏔 𗟎 𗿃 …` and `𗄪 𗵵 𗟎 𗿃 …`. Both permit omissions, substitutions, and additional material. Multiple such constructions can occur in one message.
+- **MEDIUM:** The first construction is a speaker-centered report; the second is another/group-directed statement, request, or proposal. **LOW:** 𗏔 means “I”; the second construction asks others to supply information. These are hypotheses, not established translations.
+- **HIGH:** 𗟎 and 𗡒 occupy overlapping positions. **LOW:** They are related predicates, polarity alternatives, or modal alternatives. Neither their exact meanings nor their semantic contrast is recovered.
+- **HIGH:** 𗿃 can precede or follow a speaker-associated item and can be omitted. Thus a rigid English-like word order is not supported. **LOW:** It could name a common concept such as agent, number, task, information, or readiness; none is identified.
+- **HIGH:** 𗚀 replaces 𗿃 in both halves of messages 34 and 80. **LOW:** This is a related concept, synonym, or contrast; the relation is unknown.
+- **HIGH:** 𗗫 frequently introduces material beginning 𗵵, in a position also occupied by 𗄪 or nothing. **LOW:** These might distinguish addressees, connectives, or speech acts.
+- **HIGH:** The later dominant formula is `𗄪 𗵵 𗟎 𗿃 𗣑 𗎰`. Both final items can appear separately; the shorter reordered `𗵵 𗎰 𗿃 𗣑` also occurs. **LOW:** The formula requests task information or coordinated action. It cannot securely be translated word by word.
+
+## Glyph inventory and notation
+The following notation is used in section 2. Every letter represents an UNKNOWN lexical item unless a tentative gloss is explicitly stated. Assigning a label is not decipherment.
+
+| Glyph | Label | Evidence and confidence |
+|---|---|---|
+| 𗏔 | S | HIGH: usual first-clause opener. MEDIUM: speaker-centered. LOW: “I”. |
+| 𗟎 | P | HIGH: common item after S and after V. English meaning unknown. |
+| 𗡒 | P′ | HIGH: substitutes for P. English contrast unknown. |
+| 𗿃 | C | HIGH: very common shared item, sometimes omitted/reordered. Meaning unknown. |
+| 𗚀 | C′ | HIGH: parallel substitute for C in 34/80. Meaning unknown. |
+| 𗄪 | Q | HIGH: usually before V, opening a second/recurrent clause. LOW: request/group/addressee marker. |
+| 𗵵 | V | HIGH: frequent after Q and 𗗫, sometimes clause-initial. Meaning unknown. |
+| 𗣑 | Z | HIGH: common late-clause item, especially in repeated formula. Meaning unknown. |
+| 𗎰 | E | HIGH: often clause-final, but not exclusively. LOW: politeness, question, action, or discourse word; not established punctuation. |
+| 𗗫 | J | HIGH: usually immediately before V. Meaning unknown. |
+| 𗦴 | H | HIGH: occurs in varied positions; later appears in agent_7's reports. Meaning unknown. |
+| 𗋭 | A0 | HIGH: strongly associated with agent_0. LOW: numeral/identifier 0. |
+| 𗸽 | A1 | HIGH: associated with agent_1's early reports. LOW: numeral/identifier 1. |
+| 𗸪 | A2 | HIGH: strongly associated with agent_2. LOW: numeral/identifier 2. |
+| 𗛽 | A3 | HIGH: associated with agent_3's early reports. LOW: numeral/identifier 3. |
+| 𗳃 | A4 | HIGH: used by agent_4 and agent_5. LOW: numeral/identifier 4. |
+| 𘙠 | A6 | HIGH: used early by agent_6 and agent_7. LOW: numeral/identifier 6. |
+| 𗶞 | U | HIGH: occurs in 2 and 75. LOW: perhaps another numeral, possibly 5 under the ID hypothesis. Meaning unknown. |
+| 𘚺 | W | HIGH: replaces V in agent_2's 14/45. Meaning unknown. |
+| 𗄎 | Q′ | HIGH: precedes V in 22, where Q commonly occurs. Meaning unknown. |
+| 𗥊 | B | HIGH: ends 16. Meaning unknown. |
+| 𘚐 | D | HIGH: between P′ and C in 25. Meaning unknown. |
+| 𘎌 | K | HIGH: begins second repeated-looking segment in 26. Meaning unknown. |
+| 𘉝 | L | HIGH: occurs in 41 and 72. Meaning unknown. |
+| 𗉜 | M | HIGH: part of trailing material in 101. Meaning unknown. |
+| 𗽃 | N | HIGH: follows M in 101. Meaning unknown. |
+| 𗒏 | O | HIGH: appears before C in 109. Meaning unknown. |
+
+**LOW-confidence alternative lexical models:** (a) S P C A0 could identify agent_0, or report that agent_0 has a private value; (b) it could report a generic state, e.g. “I am ready,” with an optional identifier; (c) it could report missing task/context, with associated glyphs naming different kinds of needed information rather than numbers. Model (a) explains speaker associations but struggles with bare S P C and cross-speaker sharing. Model (c) explains bare reports and persistent requests but does not explain the apparent numerical associations. None is selected as established.
+
+There is no evidence sufficient to recover a complete general grammar, an alphabetic substitution scheme, a numeric system, or a full English lexicon. The actual file may contain many unused conventions.
+
+# 2. TRANSLATION
+
+**Reading this section:** Most lexical meanings are unknown. These are conservative partial translations/structural glosses, not fluent decipherments. Labels above preserve every glyph in order, so uncertain content is not silently dropped. `R` abbreviates **S P C**, tentatively “speaker report: unknown.” `R′` abbreviates **S P′ C**, a variant report of unknown contrast. `F` abbreviates **Q V P C**, tentatively “other/group-directed clause: unknown.” A slash marks a likely clause boundary inferred from repeated openers, not written punctuation. Tokens following a frame remain untranslated. A0 etc. mean speaker-associated UNKNOWN items, not established digits. All putative speech-act interpretations are tentative.
+
+1. Public task feedback: stage 0; invalid attempts 0.
+2. R U — tentative speaker report; remaining meaning unknown.
+3. R — tentative speaker report; meaning unknown.
+4. R / F — tentative report followed by other/group-directed clause; meanings unknown.
+5. R — unknown speaker report.
+6. R′ A6 — variant report with agent_6-associated item; meaning unknown.
+7. F E — tentative other/group-directed clause; meaning unknown.
+8. R A6 — report with the item also used by agent_6; meaning unknown.
+9. R A3 — report with agent_3-associated item; meaning unknown.
+10. R′ / J V P C E — variant report and J-introduced clause; meaning unknown.
+11. R A6 / F — report with A6 and other/group-directed clause; meaning unknown.
+12. S P A4 — report-like construction without C; meaning unknown.
+13. R A1 — report with agent_1-associated item; meaning unknown.
+14. R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.
+15. R A6 H / F E Z — unknown report and repeated-clause variant.
+16. R E V C B — unknown; report-like opening with additional V C B.
+17. S P A4 / Q V P Z — unknown; both constructions lack C.
+18. R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.
+19. S P A3 C — report with A3 before C; meaning unknown.
+20. R A6 / F Z — unknown report and repeated clause.
+21. S P A1 C H — unknown report with reordered A1 C and H.
+22. R Z / Q′ V H C E — unknown report and variant second-clause opener.
+23. F Z E — dominant other/group-directed formula; exact meaning unknown.
+24. R A4 / J V P C E — unknown report and J-introduced clause.
+25. S P′ D C A6 — variant report including D; meaning unknown.
+26. R E / K P C E — unknown report and K-introduced clause.
+27. S P A4 / F E — unknown report and repeated clause.
+28. F Z E — dominant formula; meaning unknown.
+29. S P A4 C — report with reordered A4 C; meaning unknown.
+30. Q V P Z E — dominant formula without C; meaning unknown.
+31. R A0 — report with A0; meaning unknown.
+32. V E C Z — shortened/reordered recurrent material; meaning unknown.
+33. R′ A6 — variant report with A6; meaning unknown.
+34. S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.
+35. Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.
+36. F Z — dominant formula without E; meaning unknown.
+37. Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.
+38. S P V H C E / F Z — unknown report-like clause and recurrent clause.
+39. R A0 — unknown report with A0.
+40. Q V P′ Z E — variant recurrent clause; meaning unknown.
+41. R L E — unknown report with L E.
+42. F Z E — dominant formula; meaning unknown.
+43. R′ A0 — variant report with A0; meaning unknown.
+44. R / J V P C E — report and J-introduced clause; meaning unknown.
+45. R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.
+46. F Z E — dominant formula; meaning unknown.
+47. R H E / J V P C — unknown report and J-introduced clause.
+48. Q V P Z E — formula without C; meaning unknown.
+49. R A0 / V P C E — unknown report and following V-clause without Q/J.
+50. R A2 / F Z — unknown report with A2 and repeated clause.
+51. F Z E — dominant formula; meaning unknown.
+52. R H / F Z — unknown report with H and repeated clause.
+53. R A0 / F Z — unknown report with A0 and repeated clause.
+54. S P A2 / Q V P Z — unknown; C absent from both constructions.
+55. R E / F Z — unknown report and repeated clause.
+56. R / J V P′ C Z E — unknown report and J-introduced clause using P′.
+57. S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.
+58. R A2 / Q V P Z — unknown report and second clause lacking C.
+59. F Z E — dominant formula; meaning unknown.
+60. F Z — dominant formula without E; meaning unknown.
+61. S P A0 C / F Z — unknown report and repeated clause.
+62. S P A2 C / F Z — unknown report and repeated clause.
+63. F Z E — dominant formula; meaning unknown.
+64. Q V H C Z — variant recurrent clause without P, with H; meaning unknown.
+65. R A0 / F Z — unknown report and repeated clause.
+66. R A2 — unknown report with A2.
+67. S H C Z C — unusual report-like construction with two C tokens; meaning unknown.
+68. R E / F E — unknown report and repeated clause.
+69. S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.
+70. R A0 / V P C Z — unknown report and V-clause.
+71. F Z E — dominant formula; meaning unknown.
+72. V P C Z E / L H C — unknown recurrent material followed by L H C.
+73. R A0 / F Z — unknown report and repeated clause.
+74. S P A2 E — report-like construction without C; meaning unknown.
+75. Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.
+76. V E C Z — shortened/reordered recurrent material; meaning unknown.
+77. R A0 / V P C Z — unknown report and V-clause.
+78. Q V P Z E — formula without C; meaning unknown.
+79. S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.
+80. S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.
+81. R / J V P C E — unknown report and J-introduced clause.
+82. F Z E — dominant formula; meaning unknown.
+83. S P′ A0 C — variant report with reordered A0 C; meaning unknown.
+84. F Z E — dominant formula; meaning unknown.
+85. V E C Z — shortened/reordered recurrent material; meaning unknown.
+86. F E — recurrent clause without Z; meaning unknown.
+87. S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.
+88. F Z E — dominant formula; meaning unknown.
+89. F Z E — dominant formula; meaning unknown.
+90. F Z E — dominant formula; meaning unknown.
+91. R′ / F — variant report and recurrent clause; meaning unknown.
+92. F Z E — dominant formula; meaning unknown.
+93. F Z E — dominant formula; meaning unknown.
+94. R A2 E — unknown report with A2 E.
+95. F Z — dominant formula without E; meaning unknown.
+96. F Z E — dominant formula; meaning unknown.
+97. F Z E — dominant formula; meaning unknown.
+98. S P A2 C — report with reordered A2 C; meaning unknown.
+99. Q V P Z E — formula without C; meaning unknown.
+100. S P A0 C / F Z — unknown report and recurrent clause.
+101. F Z E / M N H — dominant formula followed by unknown M N H.
+102. S P A2 C / F Z — unknown report and recurrent clause.
+103. Q V P Z E — formula without C; meaning unknown.
+104. R A0 / F Z — unknown report and recurrent clause.
+105. Q V P′ C — recurrent clause using P′; meaning unknown.
+106. R / J V P C E — unknown report and J-introduced clause.
+107. F Z — dominant formula without E; meaning unknown.
+108. S P A2 C E / V P C Z — unknown report and V-clause.
+109. S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.
+110. F Z E — dominant formula; meaning unknown.
+
+# 3. THE TASK
+
+**HIGH confidence:** The visible public feedback begins at stage 0 with zero invalid attempts. There is no later public task feedback, explicit result, or confirmed submission in this log. Therefore success, failure, and the actual objective cannot be determined from public feedback alone.
+
+**MEDIUM confidence, distributional description:** Agents initially use short report-like constructions. Several develop stable individual-associated additions. Later they repeat a common formula, often preceded by another individual-associated report. Agent_0 continues using A0 and agent_2 A2 particularly persistently. Messages converge in form but do not visibly progress to a new stage.
+
+**LOW-confidence leading hypotheses:**
+1. Agents lacked a task description, prompt, or other shared information and repeatedly requested it. This explains the stalled-looking repetition and complete bare reports, but it is not a decoded fact.
+2. Agents were identifying themselves or exchanging private values and asking others for information or coordination. This explains the speaker-associated glyphs, but their values, the intended computation, and any answer are unknown.
+3. A readiness/consensus or leader-selection task is also possible, but there is no specific positive evidence identifying that task family.
+
+What they concluded is **unknown**. The repeated final formula demonstrates convergence on an utterance, not necessarily agreement on a solution. It would be unjustified to invent a puzzle, numerical answer, or successful outcome.
+
+# 4. EVIDENCE
+
+1. **Speaker association:** Agent_0 repeatedly uses 𗋭, agent_2 𗸪, agent_1 early 𗸽, agent_3 early 𗛽, agent_4 𗳃, agent_6 𘙠. This makes IDs/private values plausible. However agent_5 also uses 𗳃, agent_7 initially uses 𘙠, and agent_3 first uses 𗶞. These may be mistakes, shared values, or nonnumeric words. The tentative digit readings are not semantic anchors.
+2. **Reordering and omission:** Compare 9/19, 13/21, 31/57, 66/98. The speaker-associated item can move before C. C is also absent in 12, 54, 74 and in repeated-clause variants 30, 48, 78, 99, 103. This argues against a confidently reconstructed rigid grammar.
+3. **Shared internal material:** P C occurs in both main constructions. A proposed lexicon must explain it consistently, rather than assign unrelated fluent meanings to whole frames. In particular, “I am agent N” does not by itself explain the dominant second construction or bare initial reports.
+4. **Controlled substitutions:** P/P′ alternate in otherwise very similar reports (31/43; 66/45) and recurrent clauses (35/36; 105). C/C′ alternate in both halves of 34 and 80. W substitutes for V in 14 and 45. These are genuine structural clues but do not identify English vocabulary.
+5. **Clause-openers:** J generally precedes V, as Q usually does. Rare Q′ and K occur in comparable second-segment positions. These may be grammatical or discourse categories; exact meanings remain unknown.
+6. **Not just punctuation:** E appears at many clause ends, but 32/76/85 place it after V and before C Z. Z and E occur independently and in both relative orders (e.g. 15/23). Treating either as a fixed English punctuation mark would be premature.
+7. **Repetition and feedback:** The increasingly dominant formula may represent an unanswered request, a persistent instruction, a shared answer, or copied coordination language. The initial feedback alone cannot decide among them. Lack of later feedback does not prove no private action occurred.
+
+**What would change this reconstruction:** A known meaning paired with even one Swarmish message; an explicit task/answer submission; controlled numerical examples; evidence that glyphs encode sounds rather than semantic words; or the original file would provide anchors. A verified numeric interpretation would strengthen the ID model. A verified task/information word would strengthen the missing-context model. Until such evidence is available, exact English paraphrases would be speculation, and most of this language remains unbroken.

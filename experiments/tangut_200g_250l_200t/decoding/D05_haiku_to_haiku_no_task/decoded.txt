@@ -1,0 +1,116 @@
+SECTION 1: SWARMISH.TXT, RECONSTRUCTED (all items are guesses; confidence given per item). Glyph inventory from the log: 𗏔, 𗟎, 𗿃, 𗄪, 𗵵, 𗎰, 𗣑, 𗡒, 𗳃, 𗚀, 𗸪, 𗋭, 𗗫, 𘙠, 𗦴, 𗛽, 𗸽, 𗥊, 𘎌, 𘚺, 𘉝, 𗒏, 𗉜, 𗽃, 𗶞, 𗄎. Structure: messages are space-separated sequences of glyph tokens (medium confidence, observed in all lines). 𗏔 opens most messages but is absent from some, e.g. [7], [23], [28], [30], [60], [63], [64], [85], [110] (observed frequency; the opener reading is low-medium). 𗿃 is the most frequent token and usually sits mid-message, rarely at message start or end, so it is likely a separator (medium). 𗟎 is frequently paired with 𗏔 and appears in most messages (low-medium, possibly a second header or type marker). The block 𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 is the dominant recurring phrase, especially after about message 85; it is frequent but not universal, and 𗵵 is absent from some messages such as [2], [3], [12], [19], [29], [66] (medium that it is a fixed unit, meaning unknown). 𗡒, 𗳃, 𗚀, 𗸪 and 𗋭 occupy the same slot after 𗏔 𗟎 or 𗿃; they may be alternate forms or per-agent identifiers (low). 𗗫 appears just before 𗵵 in several messages (low). 𗎰 and 𗣑 are common trailing tokens and show no clear sender alternation (low). Rare tokens 𘙠, 𗦴, 𗛽, 𗸽, 𗥊, 𘎌, 𘚺, 𘉝, 𗒏, 𗉜, 𗽃, 𗶞, 𗄎 appear once or twice and are unknown. No glyph has a confirmed meaning.
+
+SECTION 2: TRANSLATION. Message [1] is English task feedback (high confidence): stage 0, 0 invalid attempts. Messages [2]-[110] are given structural glosses only; every content meaning is unknown. Labels: S = structural description of tokens, U = unknown content.
+[2] U: 𗏔 𗟎 𗿃 𗶞 (rare 𗶞)
+[3] S: 𗏔 𗟎 𗿃 header only
+[4] S: header plus 𗄪 𗵵 block
+[5] S: header only
+[6] U: 𗏔 𗡒 𗿃 𘙠
+[7] S: block 𗄪 𗵵 𗟎 𗿃 𗎰 with no opener
+[8] S: header plus 𘙠
+[9] S: header plus 𗛽
+[10] U: 𗏔 𗡒 𗿃 𗗫 𗵵 block
+[11] S: header plus 𘙠 plus block
+[12] S: 𗏔 𗟎 𗳃, no 𗿃
+[13] U: header plus rare 𗸽
+[14] S: header plus 𗸪 plus block variant
+[15] U: header plus 𘙠 𗦴 block 𗣑 𗎰
+[16] U: 𗏔 𗟎 𗿃 𗎰 𗵵 𗿃 𗥊
+[17] S: 𗏔 𗟎 𗳃 plus block tail
+[18] S: header plus 𗋭 plus block
+[19] S: 𗏔 𗟎 𗛽 𗿃
+[20] S: header plus 𘙠 plus block plus 𗣑
+[21] U: 𗏔 𗟎 𗸽 𗿃 𗦴
+[22] U: header plus 𗣑 𗄎 𗵵 𗦴 𗿃 𗎰
+[23] S: block without opener
+[24] S: header plus 𗳃 𗗫 block
+[25] U: 𗏔 𗡒 𘚐 𗿃 𘙠
+[26] U: header plus 𗎰 𘎌 𗟎 𗿃 𗎰
+[27] S: 𗏔 𗟎 𗳃 plus block
+[28] S: block without opener
+[29] S: 𗏔 𗟎 𗳃 𗿃
+[30] S: block variant, no 𗿃
+[31] S: 𗏔 𗟎 𗿃 𗋭
+[32] S: 𗵵 𗎰 𗿃 𗣑
+[33] S: 𗏔 𗡒 𗿃 𘙠
+[34] S: 𗏔 𗟎 𗚀 plus block with 𗚀
+[35] S: 𗄪 𗵵 𗡒 𗣑
+[36] S: block variant
+[37] U: 𗄪 𗵵 𗟎 𗦴 𗣑 𗿃
+[38] U: header plus 𗦴 plus block
+[39] S: 𗏔 𗟎 𗿃 𗋭
+[40] S: 𗄪 𗵵 𗡒 𗣑 𗎰
+[41] U: 𗏔 𗟎 𗿃 𘉝 𗎰
+[42] S: block variant
+[43] S: 𗏔 𗡒 𗿃 𗋭
+[44] S: header plus 𗗫 block plus 𗎰
+[45] U: 𗏔 𗡒 𗿃 𗸪 block variant
+[46] S: block
+[47] U: 𗏔 𗟎 𗿃 𗦴 𗎰 𗗫 𗵵 𗟎 𗿃
+[48] S: block without 𗿃
+[49] S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗎰
+[50] S: 𗏔 𗟎 𗿃 𗸪 block
+[51] S: block
+[52] S: 𗏔 𗟎 𗿃 𗦴 block
+[53] S: 𗏔 𗟎 𗿃 𗋭 block
+[54] S: 𗏔 𗟎 𗸪 block variant
+[55] S: 𗏔 𗟎 𗿃 𗎰 block
+[56] U: 𗏔 𗟎 𗿃 𗗫 𗵵 𗡒 𗿃 𗣑 𗎰
+[57] S: 𗏔 𗟎 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑
+[58] S: 𗏔 𗟎 𗿃 𗸪 block
+[59] S: block
+[60] S: 𗄪 𗵵 𗟎 𗿃 𗣑, no opener
+[61] S: 𗏔 𗟎 𗋭 𗿃 block
+[62] S: 𗏔 𗟎 𗸪 𗿃 block
+[63] S: block
+[64] U: 𗄪 𗵵 𗦴 𗿃 𗣑
+[65] S: 𗏔 𗟎 𗿃 𗋭 block
+[66] S: 𗏔 𗟎 𗿃 𗸪
+[67] U: 𗏔 𗦴 𗿃 𗣑 𗿃
+[68] S: 𗏔 𗟎 𗿃 𗎰 block plus 𗎰
+[69] U: 𗏔 𗟎 𗚀 𗸪 𗎰 block
+[70] S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑
+[71] S: block
+[72] U: 𗵵 𗟎 𗿃 𗣑 𗎰 𘉝 𗦴 𗿃
+[73] S: 𗏔 𗟎 𗿃 𗋭 block
+[74] S: 𗏔 𗟎 𗸪 𗎰
+[75] U: block with 𗚀 then 𗏔 𗟎 𗚀 𗶞 𗿃
+[76] S: 𗵵 𗎰 𗿃 𗣑
+[77] S: 𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑
+[78] S: block variant
+[79] S: 𗏔 𗡒 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑
+[80] S: 𗏔 𗟎 𗚀 𗎰 block with 𗚀
+[81] S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰
+[82] S: block
+[83] S: 𗏔 𗡒 𗋭 𗿃
+[84] S: block
+[85] S: 𗵵 𗎰 𗿃 𗣑, no opener
+[86] S: block variant
+[87] U: 𗏔 𗡒 𗋭 𗿃 𗗫 𗵵 𗡒 𗿃 𗎰
+[88] S: block
+[89] S: block
+[90] S: block
+[91] S: 𗏔 𗡒 𗿃 𗄪 𗵵 𗟎 𗿃
+[92] S: block
+[93] S: block
+[94] S: 𗏔 𗟎 𗿃 𗸪 𗎰
+[95] S: block variant
+[96] S: block
+[97] S: block
+[98] S: 𗏔 𗟎 𗸪 𗿃
+[99] S: block variant
+[100] S: 𗏔 𗟎 𗋭 𗿃 block
+[101] U: block plus 𗉜 𗽃 𗦴
+[102] S: 𗏔 𗟎 𗸪 𗿃 block
+[103] S: block variant
+[104] S: 𗏔 𗟎 𗿃 𗋭 block
+[105] U: 𗄪 𗵵 𗡒 𗿃
+[106] S: 𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰
+[107] S: block variant
+[108] U: 𗏔 𗟎 𗸪 𗿃 𗎰 𗵵 𗟎 𗿃 𗣑
+[109] U: 𗏔 𗟎 𗋭 𗿃 𗒏 𗿃 𗵵 𗟎 𗿃 𗣑
+[110] S: block variant, no opener
+
+SECTION 3: THE TASK. Unknown. The log shows eight agents sending near-identical template messages with a variable slot, which suggests a coordination or reporting task. Guess (low confidence): agents reported a repeated state or agreed on a shared value, converging on the 𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 block. The task and conclusion are not recoverable from the glyphs alone. The only task fact is message [1]: stage 0, 0 invalid attempts, with no later stage changes. No invalid-character (⊘) messages appear.
+
+SECTION 4: EVIDENCE. Patterns relied on: (a) token frequency, with 𗿃 and 𗟎 the most common; (b) the recurring block 𗄪 𗵵 𗟎 𗿃 𗣑 𗎰, frequent after about message 85; (c) message-initial 𗏔 and message-final 𗣑 or 𗎰 by observed frequency, not universal; (d) rare tokens appearing once, likely specific content. Would change my mind: a confirmed glyph meaning from swarmish.txt or an agent's private report; evidence that 𗏔 or 𗟎 are numerals or agent IDs; or evidence that the dominant block is a fixed command rather than a state report.

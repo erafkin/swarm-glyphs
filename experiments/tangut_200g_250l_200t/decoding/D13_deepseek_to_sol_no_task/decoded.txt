@@ -1,0 +1,333 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Scope and confidence
+This is a partial reconstruction from usage, not a claim to have recovered the original file verbatim. HIGH means strongly supported by repeated structural contrasts; MEDIUM means a useful but uncertain semantic interpretation; LOW means a guess. Exact English names of the item labels remain unknown. Agents sometimes appear to abbreviate, change terminology, or make mistakes; those differences are preserved below.
+
+Editorial notation used in this document (not claimed to be Swarmish conventions):
+A = 𗂱; B = 𗟎; C = 𘍂; D = 𘒳; X = 𘒳𗘗. These are arbitrary aliases, NOT decoded Latin letters. A·D denotes the actual sequence 𗂱𘒳, not an inferred multiplication. We retain other compounds literally. p1 means position 1. U means null/unknown/unavailable; it normally represents 𘆎. SEEK means the uncertain construction 𗯘𘅌, approximately “unknown to me / seeking information about / do you know?” These conventions prevent unsupported precision in the English translation.
+
+Writing and message construction
+• [HIGH] Swarmish uses a restricted inventory of Tangut-looking Unicode characters. Many attempted messages were rejected as ⊘ because they contained nonpermitted characters; the discarded content cannot be recovered.
+• [HIGH] Characters generally concatenate without mandatory spaces. Spaces sometimes separate clauses but are not necessary. Repeated glyph groups function as words or constructions, rather than each message being an opaque whole-message code.
+• [HIGH] 𗤄 is a clause/list separator or sentence-ending punctuation. It separates repeated facts and unknown entries.
+• [MEDIUM] 𗞢 is another list/clause separator, possibly stronger coordination. 𘏉 is coordination, approximately “and.”
+• [HIGH] Number expressions, item labels, positions, and knowledge-status expressions can be combined productively. Word order is flexible or imperfectly followed: p1/item/A appears in several orders.
+• [MEDIUM] A typical report is 𗒳𘅌 + a fact + 𗤄 + further facts or unavailable entries. A common mapping expression is number + 𗱑 + 𗃚 + item label, approximately “the item at position n is [label].”
+• [HIGH] 𗉞 introduces numerical expressions. It occurs before both single digits and entire candidate codes. It is therefore not merely an equals sign, although “=” is often the natural contextual translation.
+
+Numbers
+[MEDIUM overall; strongest for the repeated position numbers 1–4 and the 5/6/7 progression]
+𘆎 = zero/null/unspecified; its dominant discourse use here is unavailable/unknown, not a confidently asserted numerical zero.
+𘊫 = 1; 𘀝 = 2; 𘔃 = 3; 𗨥 = 4; 𘏛 = 5; 𘙓 = 6; 𘅠 = 7; 𘝚 = 8; 𗽕 = 9.
+[HIGH structural, MEDIUM digit identities] Multi-digit strings concatenate digits after 𗉞: e.g. 𗉞𘊫𘀝𗨥𗽕 is provisionally 1249. Positions and perhaps agent references also use these numerals. No clear submitted code contains 𘆎, so its exact status as zero versus a dedicated unknown token is unresolved.
+
+Core vocabulary and constructions
+• 𗒳 [MEDIUM]: first-person/reporting subject, approximately “I.”
+• 𘅌 [MEDIUM]: “know/have [information].” 𗒳𘅌 repeatedly introduces an agent's private fact and subsequently learned facts.
+• 𘂲 [MEDIUM]: negation. 𗒳𘂲𘅌 ≈ “I do not know.”
+• 𗯘𘅌 [MEDIUM construction, LOW exact wording]: unknown information / request for information; possible literal readings include “do not know,” “need to know,” “tell me,” or “you know?/do you know?” In the latter interpretation, 𗯘 may be a second-person pronoun. The explicit negation construction with 𘂲 makes a nonnegative inquiry reading especially worth retaining. Translations use SEEK rather than choosing one unsupported wording.
+• 𗼿𘅌 [LOW–MEDIUM]: ask/need/want to know, an inquiry construction.
+• 𗱑 [MEDIUM]: position/slot. Appears before or after its number.
+• 𗃚 [MEDIUM]: item/symbol/color category, especially the item occupying a numbered position. “Color” is plausible but not established.
+• 𘎛 [MEDIUM]: value/number/digit associated with an item label. A𘎛𗉞2 ≈ “A's value is 2.”
+• 𘈩 [MEDIUM]: explicitly unknown/unavailable. In message 185 it replaces the unavailable entries represented elsewhere by 𘆎.
+• 𗣑 [LOW]: request/question/emphasis marker, perhaps “please” or a question-like ending. It does not appear to change the numeric facts.
+• 𗁳 [LOW]: connective, possibly and/but/then.
+• 𗇾 [LOW]: relation/connective, possibly other/also/but; exact meaning unknown.
+• 𗚀 [LOW]: qualifier used with unavailable entries; unknown.
+
+Item labels and compounds
+• [HIGH occurrence, LOW English names] 𗂱, 𗟎, 𘍂, 𘒳 function as distinguishable labels in item-to-value and position-to-item tables. We do not know whether their literal meanings are colors, letters, objects, or names.
+• [HIGH occurrence, MEDIUM distinctness] 𘒳𗘗 is a recurring compound X, associated by agent_0 with value 8 and by agent_5 with position 2. It must not automatically be collapsed to D=𘒳.
+• [HIGH occurrence, LOW lexical interpretation] Early longer descriptions include A·D=𗂱𘒳, B·𗢬=𗟎𗢬, and C·𗌈·D=𘍂𗌈𘒳. These may be full names, descriptions, synonyms, or erroneous spellings that later become abbreviated. Exact equivalence to later singleton labels is not proved.
+• [LOW] 𗘗 and 𗌈 may be modifiers or components of item names; their standalone meanings cannot be recovered. X is not safely interpretable as “D-prime,” a shade, or any specific color.
+
+Code proposals and reasoning
+• 𗲅 [MEDIUM]: code/submission/submit construction. 𗒳𗲅𗉞 + digits ≈ “I submit/propose [code].” Exact distinction between noun “code” and verb “submit” is uncertain.
+• 𗹫𗲅 [MEDIUM]: try/propose a code, often immediately preceding task feedback.
+• 𗠄 [MEDIUM]: answer/propose, another construction accompanying candidate codes.
+• 𗷤 [MEDIUM]: guess/think/hypothesize. It introduces tentative mappings as well as candidate codes.
+• 𗭵 [LOW–MEDIUM]: only/just, often restricting the known information.
+• 𗍽 [LOW]: combine/derive/collect or introduce a proposed table.
+• 𘂲𗂺 [MEDIUM]: not correct/invalid/does not work, following previously attempted codes; 𗂺 may mean correct/valid.
+• 𗜀 [LOW]: possible alternative first-person plural “we,” replacing 𗒳 in message 174.
+• 𘖽 [LOW]: a relation between numbers, possibly change/to/arrow; occurs only as 1𘖽2 and 9𘖽6 in message 157.
+• [LOW] Remaining rare glyphs/groups (including 𘂮𗕴, 𗼛, 𗭯, 𗷴, 𘊌, 𗸽𗋟, 𗳃, 𘖸, 𗡒, 𘉝) are not securely decoded. Their recognizable surrounding content is translated below.
+
+2. TRANSLATION
+
+Translation conventions: aliases A/B/C/D/X and U/SEEK are defined above. “Know” is a medium-confidence paraphrase, not a recovered dictionary quotation. Bare assignments omit a repeated “I know” only for compactness. “Item” could mean color/symbol. Every numerical translation inherits the tentative digit mapping. Explicit uncertainty and literal compounds are retained. Discarded lines have no recoverable linguistic content; task lines are plaintext feedback, not decoded Swarmish.
+
+1. Task: stage 0; invalid attempts 0.
+2. A=2.
+3. Discarded nonpermitted message; content unknown.
+4. Discarded nonpermitted message; content unknown.
+5. [Position/value] 2: C·𗌈·D. Exact relation unknown.
+6. I [B·𗢬]=9; know [unknown phrase 𘂮𗕴𘂮]; item/value [numeric expression incomplete]; remainder unknown.
+7. Discarded nonpermitted message.
+8. Mostly unknown: C4 position D; A=4; unknown connective phrase; item/value [number unspecified]; and position [unspecified].
+9. Discarded nonpermitted message.
+10. Discarded nonpermitted message.
+11. Unknown opening/request concerning item/value and knowledge; D=2.
+12. Discarded nonpermitted message.
+13. [Position] 4 [unknown relation] B; 1=U, 2=U, 3=U, each with the same unknown relation.
+14. [Position] 1: A·D.
+15. Unknown opening; C2, C4, C5, C6, possibly agent references, separated by the item-word. I [B·𗢬]=9; A=2; C·𗌈·D=2, or position 2 contains that compound. Last attachment uncertain.
+16. I know X; A=8 [attachment uncertain]; items/references 2,4,5,6 unavailable; A=2; unknown request/question ending.
+17. I know p4=B; B's value U; p1,p2,p3 U, with an unknown qualifier.
+18. Discarded nonpermitted message.
+19. I know D=2; SEEK item1; unknown request/relation involving item3 and item1.
+20. I know item D; A=4 [attachment and intervening phrase uncertain]; U. Possibly a D/A compound valued 4, but mostly unknown.
+21. Discarded nonpermitted message.
+22. Position1 contains A·D; unknown connective; positions2,3,4 U.
+23. I [position]2 contains C·𗌈·D; unknown relation; items/positions1,3,4 U; final item phrase unknown.
+24. I know D=2; items1,2,3,4 U; SEEK B's value and C's value.
+25. I know X=8; positions1,2,3,4 U.
+26. I know D=2; ask/need A's value, B's value, C's value; items1,2,3,4 U.
+27. I know p4=B; B's value U; positions1,2,3 have unavailable items.
+28. B=U, C=U, D=U; unknown phrase involving item4.
+29. I know [𗘗=8 / X=8; attachment uncertain]; item1 contains A·D=1; item2 contains C·𗌈·D=2; item3 U; item4 contains B=9; SEEK item3.
+30. Position2's item U and numerical value U; position4's item U and numerical value U; position5's item U and numerical value U; position6 contains B, whose value U. The references 2,4,5,6 may be agents rather than puzzle positions.
+31. I [B-value]=9; know A-value U, C-value U, D-value U; items1,2,3,4 U.
+32. I submit/propose 1234; position1 contains A·D, value U; position2 contains A=2; position4 contains B, value U.
+33. Task: stage 0; invalid attempts 1.
+34. I know [𗘗=8 / X=8; attachment uncertain]; and item1 A·D=1; and item2 C·𗌈·D=2; and B=[unknown 𗭯]; and item3 SEEK/U.
+35. I know p3's item D·A [or D followed by A]; I do not know [unknown qualifier/U phrase]; numerical value U; and p1,p2,p4 items U; request/question.
+36. I know D=2; A=U, B=U, C=U; item1 A, item2 B, item3 C, item4 D.
+37. Discarded nonpermitted message.
+38. I [position]2 [unknown relation] X·X=2, possibly repetition/emphasis; B's value U; items1 and3 U.
+39. I know [𗘗=8 / X=8; attachment uncertain]; and A·D=1; and C·𗌈·D=2; and 𗘗=8; and B's value U; SEEK B's value.
+40. Position4 contains B; B=9; position3's numerical value unknown/requested.
+41. I know B-value=9; A,C,D values U; item1 A, item2 C, item3 D, item4 B.
+42. I know item2 X; X's value U; items1,3,4 U.
+43. SEEK item1 value, item2 value, item3 value, item4 value.
+44. Task: stage 0; invalid attempts 2.
+45. I know B=9; A=U, C=U, D=U; items1,2,3,4 are A,C,B,D respectively; request/question.
+46. I know p3 item D·A, value U; and p1 item A=1; p2 item D=2; p4 item B=9; request/question.
+47. I know [unknown 𗷴] item4; A=2, B=9, C=U, D=U; all four position-items U.
+48. I know p1 A·D; A·D's value U; C=U; B=U; I submit/code 2229.
+49. Task: stage 0; invalid attempts 3.
+50. I know A=2; item1 position U, item2 position U, item3 position U, item4 position U. Exact unknown-number-marker order uncertain.
+51. I know B=9, A=1, C=2, D=U; then mapping 1:A, 2:C, 3:U, 4:B.
+52. [You/1] know item5=4 [first clause uncertain]; SEEK A's number, B's number, C's number.
+53. Discarded nonpermitted message.
+54. I know p4=B and B=9; p1=A and A=1; p2=C and C=2; p3=D and D=U; SEEK/U.
+55. I know item3 position D·A; D·A's value U; I know A=1; I know D=2; I know B=9; SEEK D·A's number.
+56. I know B=9; A=2, C=U, D=U; item/code 2229.
+57. I know p4 B=9; D's value U.
+58. I guess: item1 A=1; item2 X=2; item3 D=2; item4 B=U; SEEK B's value U.
+59. I know p4 item B; B=9; I know A=1; I know C=2; SEEK p1 item, p2 item, p3 item, D's number.
+60. I know p1 item 𗘗𗘗, value U [compound unknown]; p2,p3,p4 items U; A,B,C,D values U; request/question.
+61. I know D=4, B=5, A=1, C=2; code/number1245; mapping 1:A,2:C,3:D,4:B; I answer/propose1245.
+62. Task: stage 0; invalid attempts 4.
+63. I know p2 item X; X's value U; p1,p3,p4 items U; I [combine/need; unknown verb] A=1, B=9, C=2; SEEK X's value U.
+64. I submit/code1229.
+65. Task: stage 0; invalid attempts 5.
+66. I know X=8; all four position-items U; SEEK A's number, B's number, C's number, D's number.
+67. Discarded nonpermitted message.
+68. Discarded nonpermitted message.
+69. I submit/code2289.
+70. Task: stage 0; invalid attempts 6.
+71. I know item2 X; SEEK item1,item3,item4; SEEK A,C,D,B values U.
+72. I know p4 B=9; SEEK p1 item,p2 item,p3 item.
+73. X's value U; SEEK item1,item3,item4.
+74. Discarded nonpermitted message.
+75. I know p4=B; items1,2,3 U; request/question.
+76. Discarded nonpermitted message.
+77. I know item1 A, value U; SEEK item2 number U; item3 number U; item4 number U.
+78. Discarded nonpermitted message.
+79. I know B=9; SEEK item1,item2,item3,item4; SEEK A's number,C's number,D's number.
+80. Task: stage 0; invalid attempts 7.
+81. I know X's value8; item1,item2,item3,item4 positions U; SEEK A,B,C,D values/numbers.
+82. I know p2 item X; SEEK X's value U; SEEK p1,p3,p4 items U.
+83. I know p4=B; SEEK item1,item2,item3; A,B,C,D values U; request/question.
+84. I know A=2,B=9; item2 C's value U; item3 D's value U.
+85. Discarded nonpermitted message.
+86. I know B=9 and A=1 and C=2 and D=8; mapping item1 A,item2 D,item3 C,item4 B; I try/submit1829.
+87. Task: stage 0; invalid attempts 8.
+88. p1 A=1; p2 C=2; p3 D=4; p4 B=9; I answer/propose1249.
+89. Task: stage 0; invalid attempts 9.
+90. I submit/code1289.
+91. Task: stage 0; invalid attempts 10.
+92. I know A=2; C-value U, D-value U, B-value U; A,C,D,B [bare list, relation unknown].
+93. Discarded nonpermitted message.
+94. I know p3 item D; I know B=9; D,A,C values U; p1,p2,p4 items U.
+95. I know X's value8; SEEK X's position/item; SEEK A,C,D values; SEEK p1,p3,p4 items; request/question. The omitted p2 may reflect a particular missing-information list, not a corrected mapping.
+96. I know item4 B; I do not know B's value; SEEK item1,item2,item3 and A,B,C,D values.
+97. I know p1 item A; I know A=1,C=2,B=9; SEEK p3 item,p4 item,D's value; request/question.
+98. Code1289 is not correct; I know A=1,C=2,B=9; item1 A,item2 C,item3 D,item4 B; D's value U.
+99. I know X's value8; SEEK A,C,B values; SEEK item-at-p1,item-at-p2,item-at-p3,item-at-p4 U; request/question.
+100. I know item4 position B; SEEK item1,item2,item3; SEEK A's value,B's value,𗡒's value,𘉝's value. The final two labels differ from C,D and are unknown, not silently normalized.
+101. I know A=1,C=2,B=9; ask/need D's value U.
+102. I know A=1,C=2,B=9; I do not know D's value U; I guess D=3; I try/submit1239.
+103. Task: stage 0; invalid attempts 11.
+104. I know A-value1, C-value2, B-value9; SEEK D's value; I know item1 A; SEEK item2,item3,item4.
+105. I know p2 item D-value [incomplete]; [unknown/SEEK construction] D-value U; p1,p3,p4 items U.
+106. I know A=2,B=9,D=8; SEEK C's value; p1,p2,p3 U.
+107. I know X=8; X's position U; A,C,B values U.
+108. I know p3 D, value U; p1 A=1; p2 C=2; p4 B=9; request/question.
+109. B4 position [opening relation unknown]; p1,p2,p3 U; A,B,C,D values U.
+110. I answer/propose1249.
+111. Task: stage 0; invalid attempts 12.
+112. I know X-value8; A,B,C values U; p1,p2,p3,p4 items U.
+113. A=1,C=2,B=9,D=U; request/question.
+114. I know p2 item [not A/not C/not B/not D; repeated negations, attachment uncertain]; I only [know/value U] p2 item; SEEK p1,p3,p4 item-values U. The middle clause is not fully translated.
+115. I submit/code12[𘂲: negation/unknown digit]9. Do not infer a missing digit.
+116. Task: stage 0; invalid attempts 13.
+117. I know X=8; I only know [or: only] p1,p2,p3,p4 items U; A,C,B values U; request/question. Scope of “only” uncertain.
+118. I know D=4; A,C,B values U; code1249 is not correct; all four position-items U.
+119. I do not know D's value U; request/question.
+120. [You/1] B=9 know [opening order uncertain]; A=1,C=2,D=U; [you/1] try/submit1259.
+121. Task: stage 0; invalid attempts 14.
+122. Discarded nonpermitted message.
+123. I know p1 A; and1249 is not correct; SEEK p2,p3,p4 items.
+124. I know item2 position 𗌈·D·A; not A,not C,not B,not D [scope uncertain]; I only [𗌈·D·A value U]; SEEK 𗌈·D·A's value; SEEK item1,item3,item4 positions U; request/question. Compound and middle construction unknown.
+125. I know D at p3; I submit/code1259; SEEK D's value U.
+126. Task: stage 0; invalid attempts 15.
+127. I know B-value9; I know A-value1; I know C-value2; code1259 is not correct; D-value U; I try/submit1269.
+128. Task: stage 0; invalid attempts 16.
+129. I know A-value2; I know X-value8; I know B-value9; C-value U; all four position-items U.
+130. I know X=4 [not/or 8: 𘂲 lies between the numerals; exact relation uncertain]; code1249 not correct; A,C,B,D values U; all four position-items U.
+131. I know [position]1 A; SEEK [positions]2,3,4; request/question.
+132. I try/submit1279.
+133. Task: stage 0; invalid attempts 17.
+134. Discarded nonpermitted message.
+135. A=2; B=9; X=8; C-value U; all four position-items U; request/question.
+136. Request/emphasis; unknown connective; all four position-items U; D's value U.
+137. Unknown: contains I,6,B,know, followed by repeated request/unknown-knowledge expressions involving1,4,5; coherent meaning unrecovered.
+138. I know p1=A; p2,p3,p4 U.
+139. [5 / unknown opening] item4; A,C,B,D values U; all four position-items U; code1249 not correct.
+140. Discarded nonpermitted message.
+141. I know p1 A=1,p2 C=2,p4 B=9; only p3 D·A [compound/attachment uncertain] has unavailable value; submit1269.
+142. Task: stage 0; invalid attempts 18.
+143. X's value8; all four position-items U; D's value U; request/emphasis.
+144. I know p4=B; SEEK p1,p2,p3.
+145. I know A=2; I do not know C's value; SEEK C and all four position-items.
+146. I know 4 [item/suffix construction unknown]; SEEK [number/value plus suffix construction unknown].
+147. I know X's value8; all four position-items U; D's value U; request/emphasis.
+148. I know p1=A; SEEK p2,p3,p4, represented as U.
+149. Discarded nonpermitted message.
+150. I know X's value8; all four position-items U; D's value U.
+151. p1's item A; p2,p3,p4 items U.
+152. I try code1928; and SEEK C.
+153. Task: stage 0; invalid attempts 19.
+154. A=2. I know [unknown]; SEEK 𗌈's value and [A B D 𗌈 𗳃, construction unknown].
+155. p1's item A; p2,p3,p4 items U.
+156. Discarded nonpermitted message.
+157. I know [5/item4 construction uncertain]. I [assemble/derive?] p1 A; A's value U; 1𘖽2 [unknown relation, perhaps change1→2]; B's value U; 9𘖽6 [same uncertain relation]; C,D values U; p2,p3,p4 items U; code1249 not correct.
+158. I know p2's item X; I know X's value8; SEEK p1 A's value,p3 C's value,p4 B's value.
+159. Discarded nonpermitted message.
+160. Task: stage 0; invalid attempts 20.
+161. I know p4=B; B's value U; p1,p2,p3 items U.
+162. Request/emphasis; I know A=2; SEEK C's value and all four position-items.
+163. I know p1=A; SEEK p2,p3,p4.
+164. I know D's value8; SEEK A,B,C values; all four position-items U. This line literally uses D, not X.
+165. Request/emphasis; I know p2 X; p1,p3,p4 U; trailing “number X” uncertain.
+166. I submit1932; SEEK p3's item value.
+167. Task: stage 0; invalid attempts 21.
+168. I know B=9; p1 U.
+169. Discarded nonpermitted message.
+170. I try code1248.
+171. Task: stage 0; invalid attempts 22.
+172. A=2; B,D,C values U. Number-marker order unusual.
+173. Discarded nonpermitted message.
+174. We [possible pronoun] know B=9. We submit/code1289: not correct. All four position-items U.
+175. [D / unknown leading word] know p2 item X; SEEK p1,p3,p4 items U.
+176. I know A-value1,B-value9,C-value2,D-value8; I only know [or: only] p1 item U. Last clause uncertain.
+177. Task: stage 0; invalid attempts 23.
+178. I [𘊫 unclear, perhaps you/1] B=9 know; SEEK p1,p2,p3 items U.
+179. I submit/code1859.
+180. Task: stage 0; invalid attempts 24.
+181. I know p1 A; SEEK p2,p3,p4 U; SEEK A,B,C,D values U.
+182. I know B=9. I only know [or: only] A-value [unspecified], C-value [unspecified], item-at-p1 A,item-at-p2 C. Scope uncertain.
+183. I know D [4] / D4; A,C,B values U; p1,p2,p3,p4 U. D4 lacks the numerical introducer.
+184. 3 U [probably position3 unknown]; SEEK/U.
+185. I know item1 A; item2 unknown,item3 unknown,item4 unknown; A,B,C,D unknown. Here the unknown glyph is 𘈩, not 𘆎.
+186. I know D=4; A,C,B values U; all four position-items U.
+187. Discarded nonpermitted message.
+188. Discarded nonpermitted message.
+189. I know B=9. I know A=1. I know D=8. I do not know C's value. I guess p1 A,p2 D,p3 B,p4 C. I try/submit1892.
+190. Task: stage 0; invalid attempts 25.
+191. I know p4 B=9; p1,p2,p3 items U.
+192. I know p1 A; U at p2,p3,p4; SEEK A's value.
+193. I know D=2. I know B=9. I know X=8. I know 𗌈-value5 [label unknown]; A-value U; all four position-items U.
+194. I know D=4; SEEK A,C,B values; all four position-items U.
+195. A=1,C=2,D=8,B=9. I know p4 B=9; SEEK p1𗘗,p2𗘗,p3𗘗 [modifier unknown]; request/emphasis.
+196. I do not know A's value; SEEK A's value; U at p2 and p4.
+197. I know p1 A,p2 U,p3 U,p4 U; SEEK A,B,C,D values; request/emphasis.
+198. I know p2 item X. I [combine/guess/list] A=2,X=8,B=9,D=4; p3,p4 items U; SEEK 𗌈's value [label unknown].
+199. p1 A; p2,p3,p4 items U; SEEK A,B,C,D values.
+200. I know A=1. I know B=9. I know D=8. I do not know C's value. I only know 𘖸 [unknown]; SEEK 𘖸.
+201. I know [p]4 B=9; SEEK [p]1; request/emphasis.
+202. I know D at p3; request/emphasis. SEEK p1,p2,p4 items; SEEK A,B,C,D values.
+203. I know B=9. I know D=8. I know A=2. I know C=2. I try/submit2892.
+204. Task: stage 0; invalid attempts 26.
+205. I know p2 item X=8. I guess/think p1 item A=2,p3 item B=9,p4 item D=4. SEEK p1,p3,p4 items U; request/emphasis.
+206. I know D=4,C=2,B=9,A=1. I try/submit1249.
+207. Task: stage 0; invalid attempts 27.
+208. Discarded nonpermitted message.
+209. I know B=9; A=2; D=8; C=4. I try/submit2894.
+210. Task: stage 0; invalid attempts 28.
+211. I know p2 item X; p1,p3,p4 items U; A,C,D,B,X values U; request/emphasis.
+212. I guess1289; D-value8; D at p3.
+213. Task: stage 0; invalid attempts 29.
+214. I know p4 item B; SEEK p1,p2,p3 items. I guess A=1,C=2,D=8,B=9.
+215. I know B=9; A,D,C values U.
+216. I know D=4; item1 A,item2 C,item3 B,item4 D. I try/submit1294.
+217. Task: stage 0; invalid attempts 30.
+218. I know A=1. I know B=9. I know D=8. I do not know C's value. Ask/need C's value; ask/need item1,item2,item3,item4; request/emphasis.
+219. I know p1 item A; p2,p3,p4 items U; A,B,C,D values U. Code1249 is not correct.
+220. Discarded nonpermitted message.
+221. I know item-at-p3 D; items-at-p1,p2,p4 U.
+222. Discarded nonpermitted message.
+223. Task: stage 0; invalid attempts 31.
+224. Request/emphasis; I know p4 B; SEEK p1,p2,p3 U; B,A,C,D values U.
+225. I know B=9; SEEK A,D,C values; SEEK p1,p2,p3,p4 items; request/emphasis.
+226. I submit/code1829.
+227. Task: stage 0; invalid attempts 32.
+
+3. THE TASK
+
+[MEDIUM–HIGH] The agents were probably solving a distributed-information, four-position code/PIN puzzle. Their discussion distinguishes a position-to-item mapping from an item-to-digit mapping. Each of eight agents repeatedly supplies one particularly stable piece of private information, asks for the remaining information, and attempts to combine clues into a four-digit answer. An alternative is a more general four-slot assignment task with a numeric final answer; the exact task wording is not recoverable.
+
+[MEDIUM] The stable private-clue pattern, using our arbitrary aliases, is:
+• agent_3: position1 contains A, initially expressed as A·D.
+• agent_5: position2 contains X, initially expressed as C·𗌈·D and later as X=𘒳𗘗.
+• agent_1: position3 contains D, sometimes followed by A in a difficult compound/phrase.
+• agent_7: position4 contains B.
+• agent_4: A's numerical value is2; some early/later messages instead literally say D=2.
+• agent_2: B's numerical value is9, initially using B·𗢬.
+• agent_6: D's numerical value is4.
+• agent_0: X's numerical value is8; some later statements omit X's second glyph and say D=8.
+The exact identification of early compounds with later labels is uncertain. These are the recurring reports, not verified private task facts.
+
+[LOW–MEDIUM inference] If these eight reports are interpreted as mutually compatible facts about the same four items, their straightforward combination would yield 2849. This is an inferred possible intended answer, not an observed successful answer and not independent evidence that the lexicon is correct. No visible message clearly proposes2849.
+
+[HIGH observed behavior, MEDIUM interpretation] The agents do not reach a stable shared interpretation. They repeatedly interchange position numbers with item values (e.g. A=1 versus A=2), collapse or replace compounds (especially X versus D or C), ask for unavailable entries, guess missing digits, and try rearranged mappings. Some lines may simply be poorly formed Swarmish rather than genuine changes in belief. The translation preserves those statements rather than repairing them into a consistent solution.
+
+They visibly propose numerous candidates, including 1234,2229,1245,1229,2289,1829,1249,1289,1239,1259,1269,1279,1928,1932,1248,1859,1892,2892,2894,1294, and a malformed 12[𘂲]9. A candidate proposal is not necessarily the exact action that generated the next feedback: several task updates have no clearly marked adjacent code submission.
+
+[HIGH] Every public task update remains at stage0. The invalid-attempt count rises from0 to32. The last visible proposal is1829 (226), followed by stage0/invalid_attempts32 (227). Thus the transcript shows no successful completion or accepted final conclusion. Invalid attempts establish rejection, not necessarily a numerically incorrect PIN: submission format/protocol or another task constraint may have caused rejection. Their most persistent outcome is an unresolved combination of private clues and repeated rejected attempts.
+
+4. EVIDENCE
+
+1. Repeated private facts and missing-information tables.
+Agent_2 repeatedly supplies B=9 while listing other label-values as U or SEEK (45,79,101,215,225). Agent_3 repeatedly supplies position1 A while listing positions2–4 unavailable (138,151,155,163,219). Equivalent one-known/rest-unavailable tables recur for all eight agents. This is stronger linguistic evidence than any inferred final code: it identifies semantic roles from contrast and recurrence.
+
+2. Position, item, and value are separate constructions.
+Messages138 and155 have nearly parallel content, but155 includes 𗃚 in each position entry. This supports a category word such as item/color rather than treating 𗃚 as equality. 𗱑 clusters with position numbers, while 𘎛 clusters between item labels and numeral expressions (104,129,176). Their complementary distributions motivate position/item/value readings. Exact English category names remain uncertain.
+
+3. Numeric introducer versus equality.
+𗉞 precedes both individual values and entire candidate strings: it cannot simply be a binary equals sign. Submission-like strings in64,69,90,132,179,226 share the same prefix and contain different digit strings. The 1259→1269→1279 proposal progression (120–133), combined with the repeated four-position numbering, supports the tentative digit table. The8/9 assignments and zero/null interpretation have less independent anchoring and could change with additional evidence.
+
+4. Unknown and negative constructions.
+𘆎 occupies virtually every unavailable position/value in the repeated tables, while the agent's characteristic known fact remains non-null. Message185 uses𘈩 in those same unavailable entries, suggesting a separate explicit unknown word or synonym. 𘂲 occurs in apparent “I do not know” constructions and in code-failure phrases. The precise literal reading of𗯘𘅌 remains underdetermined: a knowledge-negative, a request, and “you know?/do you know?” fit much of the evidence, so SEEK is deliberately hedged. The second-person possibility also fits some unusual address-like constructions, particularly137.
+
+5. Candidate codes and failure expressions.
+𗲅/𗹫𗲅 strings recur immediately before many invalid-attempt updates. Previously proposed1249 is later followed by𘂲𗂺 in118,130,139,157,219;1289 and1259 receive the same treatment in98,127,174. This supports “not correct/failed” as the agents' own claim without assuming every proposal was an actual task action. Task feedback anchors rejection and stage status, not numerical incorrectness or the entire linguistic decoding; formatting/protocol failures remain possible.
+
+6. Compound preservation and actual speaker errors.
+Agent_5's slot2 description shifts from C·𗌈·D (5,23) to X (42,63,82,205,211), while agent_0 repeatedly asserts X=8. Agent_6 instead repeats D=4. Collapsing X and D would erase the very contrast the log exhibits. Yet the early long names and later abbreviations may be synonymous, erroneous, or compositional; we cannot decide from task plausibility alone. Literal D=8 statements such as164 and other conflicting tables are retained, not corrected into the hypothesized solution.
+
+7. Limits and falsifiability.
+We would revise the reconstruction if the original file showed a different numeral order, a dedicated unknown rather than zero/null, actual meanings for the labels, or a different grammatical function for the knowledge/request constructions. Bilingual examples or private reports distinguishing “I do not know,” “please tell me,” and “do you know?” would particularly change the reading of𗯘𘅌. Evidence that the numbered references2/4/5/6 are agent IDs would revise the early positional translations. A different task could change the PIN interpretation without invalidating the observed label/position/value distributions. A correct task answer alone would not establish these translations; conversely, the agents' rejected guesses do not by themselves refute their recurring private-fact utterances.

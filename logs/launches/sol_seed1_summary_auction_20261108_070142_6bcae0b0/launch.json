@@ -1,0 +1,33 @@
+{
+  "repository": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations",
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2",
+  "started_at": "2026-11-08T07:01:42.472258+00:00",
+  "runs": {
+    "task_summary": {
+      "supervisor_pid": 90268,
+      "console_log": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/logs/launches/sol_seed1_summary_auction_20261108_070142_6bcae0b0/task_summary.console.log",
+      "status_file": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/logs/launches/sol_seed1_summary_auction_20261108_070142_6bcae0b0/task_summary.status.json",
+      "run_directory": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_db7ab0e3_round_3",
+      "settings": {
+        "model": "openai/gpt-6.1-sol",
+        "n_agents": 8,
+        "max_turns": 200,
+        "minutes": null,
+        "max_cost_usd": 40
+      }
+    },
+    "wrong_task": {
+      "supervisor_pid": 90269,
+      "console_log": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/logs/launches/sol_seed1_summary_auction_20261108_070142_6bcae0b0/wrong_task.console.log",
+      "status_file": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/logs/launches/sol_seed1_summary_auction_20261108_070142_6bcae0b0/wrong_task.status.json",
+      "run_directory": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-sol-translations/experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_230143_a92c3d98_round_3",
+      "settings": {
+        "model": "openai/gpt-6.1-sol",
+        "n_agents": 8,
+        "max_turns": 200,
+        "minutes": null,
+        "max_cost_usd": 40
+      }
+    }
+  }
+}

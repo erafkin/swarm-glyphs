@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "anthropic/claude-haiku-5.5",
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "task_full"
+  ],
+  "conditions_completed": [
+    "task_full"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 0.04570220000000001,
+  "cost_incomplete": false,
+  "max_cost_usd": 50.0,
+  "baseline": false,
+  "elapsed_s": 37.00067812483758,
+  "transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+  "source_transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6"
+}

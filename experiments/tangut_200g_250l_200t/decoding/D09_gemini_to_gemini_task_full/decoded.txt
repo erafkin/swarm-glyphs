@@ -1,0 +1,243 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+=== GENERAL STRUCTURE & GRAMMAR ===
+Swarmish is an artificial language designed with head-initial analytic grammar, strict syntactic markers, and unambiguous token classes.
+
+1. Sentence Types & Speech Act Initializers (High Confidence):
+- 𘊌 : Assertive / declarative sentence prefix ("I state/inform that...").
+- 𗀉 : Interrogative / question prefix ("What is / Who has / Please tell...").
+- 𗱓 : Imperative / Action submission prefix ("Submit action / execute command").
+- 𘚑 : Exclamation / Attention / Warning prefix.
+
+2. Sentence Finalizers & Punctuation (High Confidence):
+- 𘚐 : Declarative full stop / period.
+- 𘚄 : Declarative full stop variant (used by some agents / emphatic).
+- 𗑸 : Question mark.
+- 𗋭 : Action submission delimiter / terminator.
+- 𗿋 : Error / correction marker ("correction / mistake / disregard prior").
+
+3. Header / Speaker Attribution (High Confidence):
+- Clause header format: [Speech Act Marker] 𗪩 [agent_id] 𗼛 [Clause]
+- 𗪩 : From / speaker marker ("Agent X speaks:").
+- 𗼛 : Delimiter / colon ("says:").
+- Secondary clause attribution / conjunction:
+  - 𘒳 : Conjunction ("and / also / furthermore").
+  - 𗥐 ... 𗃚 ... 𗟆 : Embedded speech or topic-focus structure ("regarding / agent X notes that [topic] is [value]").
+  - 𘆣 : Conjunction / alternative ("also / or").
+  - 𗏶 : Sequential conjunction ("then / next").
+
+4. Syntactic Operators & Particles (High Confidence):
+- 𘚜 : Copula / equivalence ("is / equals / has value").
+- 𗄼 : Conjunction / list separator ("and / with").
+- 𗘗 : Sequence delimiter ("then / followed by").
+- 𘍠 : Sequential separator ("then").
+- 𗘈 : Interrogative pronoun ("what / which / unknown value").
+- 𗤄 : Topic / query particle ("about / regarding / status of").
+- 𗭵 : Missing / needed inquiry ("who knows / who has").
+- 𗳵 : Confirmation / completion marker ("completed / verified / done").
+
+=== VOCABULARY & GLYPH MAPPINGS ===
+
+1. Numerals (Digits) (High Confidence):
+- 𗲅 : 0 / none / empty prerequisite (High)
+- 𗈵 : 0 / zero charge cost (High)
+- 𘁁 : 1 (High)
+- 𗶞 : 2 (High)
+- 𗾌 : 3 (High)
+- 𘇩 : 4 (High)
+- 𗊓 : 5 (High; battery reading after CRANK in [66])
+- 𗬵 : 7 (High)
+- 𗒏 : 8 (High)
+- 𗡒 : 9 (High)
+(Note: digit 6 does not occur independently in the messages, though the exit code ends with 6).
+
+2. Symbols (Celestial / Environmental Theme) (High Confidence):
+- 𘅪 𘚺 (or 𘅪) : SUN (High)
+- 𗎶 𘍧 (or 𗎶) : MOON (High)
+- 𗍽 𗊓 : STAR (High)
+- 𗷤 𗉞 : WAVE (High)
+- 𘚺 : Celestial noun classifier / category marker (High).
+- 𘋉 𗜘 : Erroneous symbol sequence sent initially by agent_7 for WAVE, corrected later (Medium).
+
+3. Puzzle Objects & Mechanics (High Confidence):
+- 𘝞 : Stage (𘝞 𘁁 = Stage 1, 𘝞 𗶞 = Stage 2) (High)
+- 𘏛 : Cabinet (High)
+- 𗡕 : Position / slot (High)
+- 𗜀 : Code / combination / calculated digit (High)
+- 𗅲 𗹕 : Base digit (High)
+- 𗁳 / 𗁳 𗹕 / 𘆎 𗁳 : Offset / new offset (High)
+- 𗇽 : Exit / exit lock (High)
+- 𗣎 : Battery / charge (High)
+- 𗣎 𗹕 : Current battery reading / charge level (High)
+
+4. Power Panel Controls & Actions (High Confidence):
+- 𗘺 : DRAIN (High)
+- 𘆄 : CRANK (High)
+- 𗪐 : SIGNAL (High)
+- 𘋍 : BOOT (High)
+- 𘅌 : Execute / activate (High)
+- 𗌩 : Consumes / costs (charge) (High)
+- 𘍂 : Requires / prerequisite (High)
+- 𗾨 / 𗨞 : Completed state / prerequisite satisfied (High)
+- 𘙠 : Order / plan / sequence (High)
+
+
+2. TRANSLATION
+
+[1] [task] {"stage":0,"invalid_attempts":0}
+[2] [agent_4] Statement: SUN base digit is 2.
+[3] [agent_3] Statement: SUN is cabinet position 1.
+[4] [agent_2] Statement: WAVE is base digit 8.
+[5] [agent_6] Statement: STAR base digit is 4.
+[6] [agent_7] Statement: [WAVE - erroneous glyphs] is cabinet position 4.
+[7] [agent_3] Question: What is at cabinet position [unknown]?
+[8] [agent_5] Statement: Cabinet position 2 is MOON.
+[9] [agent_1] Statement: STAR is cabinet position 3. Also agent_1 notes STAR is cabinet position 3.
+[10] [agent_2] Question: What are the cabinet positions?
+[11] [agent_5] Question: What is MOON base digit?
+[12] [agent_2] Question: What is base digit from agent_0?
+[13] [agent_3] Question: What is base digit [of remaining symbol]?
+[14] [agent_7] Question: What are cabinet positions 2, 3, etc.?
+[15] [agent_0] Statement: MOON base digit is 7. Also agent_0 confirms MOON base digit is 7.
+[16] [agent_6] Question: What is MOON base digit?
+[17] [agent_1] Question: Who has information from agent_0?
+[18] [agent_3] Question: What is base digit of [agent_7's symbol]?
+[19] [agent_2] Action: Submit cabinet code 2748.
+[20] [task] {"stage":1,"invalid_attempts":0}
+[21] [agent_4] Question: What is base digit of [agent_7's symbol]? (Concurrent message with transition)
+[22] [agent_0] Statement: MOON base digit is 7.
+[23] [agent_6] Action: Submit cabinet code 2748 (duplicate queued attempt).
+[24] [task] {"stage":1,"invalid_attempts":1}
+[25] [agent_5] Action: Submit cabinet code 2748 (duplicate queued attempt).
+[26] [task] {"stage":1,"invalid_attempts":2}
+[27] [agent_7] Action: Submit cabinet code 2748 (duplicate queued attempt).
+[28] [task] {"stage":1,"invalid_attempts":3}
+[29] [agent_1] Action: Submit cabinet code 2748 (duplicate queued attempt).
+[30] [task] {"stage":1,"invalid_attempts":4}
+[31] [agent_4] Statement: SIGNAL consumes 3 charge.
+[32] [agent_6] Statement: BOOT requires SIGNAL completed.
+[33] [agent_3] Action: Submit cabinet code 2748 (duplicate queued attempt).
+[34] [task] {"stage":1,"invalid_attempts":5}
+[35] [agent_5] Statement: DRAIN consumes 2 charge.
+[36] [agent_0] Statement: Stage is 1. Also agent_0 notes BOOT consumes 2 charge.
+[37] [agent_2] Question: What is Stage 1? Statement: SIGNAL requires DRAIN [mistakenly used cost token].
+[38] [agent_4] Question: What is Stage 1 status?
+[39] [agent_5] Question: What is battery charge?
+[40] [agent_3] Statement: Battery initial charge is 4.
+[41] [agent_6] Question: What are charge and offsets/prerequisites?
+[42] [agent_1] Statement: CRANK adds 3 charge, cost is 0.
+[43] [agent_7] Statement: Disregard error. Question: What is Stage 1? Statement: CRANK requires DRAIN, then execute.
+[44] [agent_0] Question: What is battery charge?
+[45] [agent_4] Question: Who has clues from agent_1, agent_3, and agent_7?
+[46] [agent_2] Statement: SIGNAL requires DRAIN completed [correction]. Question: What is battery charge?
+[47] [agent_5] Question: What are the prerequisites/offsets?
+[48] [agent_1] Question: What does DRAIN require?
+[49] [agent_6] Action / Plan: DRAIN then CRANK then SIGNAL then BOOT.
+[50] [agent_3] Question: Inquiring about Stage 1 from agent_7.
+[51] [agent_2] Action: Execute DRAIN.
+[52] [task] {"stage":1,"invalid_attempts":6}
+[53] [agent_0] Statement/Action: Execute DRAIN; submit sequence DRAIN then CRANK then SIGNAL then BOOT execute.
+[54] [task] {"stage":1,"invalid_attempts":7}
+[55] [agent_6] Statement: DRAIN completed; also agent_6 executes CRANK.
+[56] [agent_4] Action: Submit sequence DRAIN then CRANK then SIGNAL then BOOT.
+[57] [task] {"stage":1,"invalid_attempts":8}
+[58] [agent_7] Statement: CRANK requires DRAIN completed. Action: Sequence DRAIN then CRANK then SIGNAL then BOOT execute.
+[59] [task] {"stage":1,"invalid_attempts":9}
+[60] [agent_3] Statement: Battery reading is 2. Also agent_3 executes CRANK.
+[61] [task] {"stage":1,"invalid_attempts":10}
+[62] [agent_1] Warning: Actions failing; execute DRAIN.
+[63] [task] {"stage":1,"invalid_attempts":11}
+[64] [agent_6] Statement: CRANK completed; execute SIGNAL.
+[65] [agent_2] Question: Inquiring from agent_7. Statement: DRAIN execute is completed.
+[66] [agent_3] Statement: Battery reading is 5. Also agent_3 executes SIGNAL.
+[67] [task] {"stage":1,"invalid_attempts":12}
+[68] [agent_6] Statement: SIGNAL completed; execute BOOT.
+[69] [task] {"stage":2,"invalid_attempts":12}
+[70] [agent_5] Statement: DRAIN requires 0; sequence DRAIN then CRANK then SIGNAL then BOOT; execute DRAIN.
+[71] [task] {"stage":2,"invalid_attempts":13}
+[72] [agent_0] Statement: DRAIN completed, then agent_0 executes CRANK.
+[73] [task] {"stage":2,"invalid_attempts":14}
+[74] [agent_3] Statement: Battery reading is 2, execute BOOT.
+[75] [task] {"stage":2,"invalid_attempts":15}
+[76] [agent_6] Statement: Stage 2 reached! Also agent_6 notes STAR offset is +3. Question: What are exit symbols and offsets?
+[77] [agent_4] Statement: DRAIN completed. Action: Execute CRANK.
+[78] [task] {"stage":2,"invalid_attempts":16}
+[79] [agent_5] Statement: Exit position 2 is STAR. Question: What are exit positions?
+[80] [agent_1] Action: [Incomplete action command].
+[81] [agent_2] Question: What are DRAIN prerequisites and battery from agent_3 and agent_5?
+[82] [agent_0] Statement: MOON offset is +2. Question: What are exit symbols?
+[83] [agent_3] Statement: Exit position 1 is WAVE. Question: What is WAVE offset?
+[84] [agent_4] Statement: SUN offset is +4.
+[85] [agent_6] Action/Warning: Action complete. Question: What are exit symbols and offsets?
+[86] [agent_5] Question: What are exit positions 1, 3, 4? Also what are SUN and WAVE offsets?
+[87] [agent_2] Statement: WAVE offset is +1. Question: What are exit positions?
+[88] [agent_3] Question: What are exit positions 3 and 4?
+[89] [agent_1] Statement: Exit position 3 is MOON.
+[90] [agent_6] Question: What are exit positions 3 and 4?
+[91] [agent_5] Question: What are exit positions 3 and 4?
+[92] [agent_4] Question: What are exit positions 3 and 4? Also agent_4 notes SUN offset is +4.
+[93] [agent_7] Question: Battery reading from agent_3? DRAIN cost from agent_5?
+[94] [agent_3] Question: What is exit position 4?
+[95] [agent_0] Statement: MOON calculated exit digit is 9. Question: What are exit positions 1, 3, 4?
+[96] [agent_1] Question: What is exit position 4 from agent_7?
+[97] [task] {"stage":3,"invalid_attempts":16}
+
+
+3. THE TASK
+
+- Overview:
+The task was "Storm Shelter", a three-stage cooperative virtual escape room solved by 8 agents communicating exclusively in Swarmish.
+
+- Stage 0 (Cabinet):
+Each agent held either a base digit or a cabinet symbol position clue:
+  - Pos 1 = SUN (agent_3), base digit 2 (agent_4)
+  - Pos 2 = MOON (agent_5), base digit 7 (agent_0)
+  - Pos 3 = STAR (agent_1), base digit 4 (agent_6)
+  - Pos 4 = WAVE (agent_7), base digit 8 (agent_2)
+Combining these yielded the 4-digit cabinet code "2748". Agent_2 submitted "2748" at message [19], advancing the task to Stage 1 at message [20]. Several agents with pre-queued submissions triggered 5 invalid attempts ([24], [26], [28], [30], [34]).
+
+- Stage 1 (Power Panel):
+Agents needed to execute four power controls (DRAIN, CRANK, SIGNAL, BOOT) respecting dependencies and battery limits:
+  - Battery initial: 4 (agent_3)
+  - DRAIN: consumes 2 (agent_5) -> battery: 2
+  - CRANK: requires DRAIN (agent_7), adds 3 (agent_1) -> battery: 5
+  - SIGNAL: requires DRAIN (agent_2), consumes 3 (agent_4) -> battery: 2
+  - BOOT: requires SIGNAL (agent_6), consumes 2 (agent_0) -> battery: 0
+  - Sequence: DRAIN -> CRANK -> SIGNAL -> BOOT.
+Several invalid attempts occurred when agents attempted whole sequences or out-of-order execution. BOOT succeeded at message [68], advancing the system to Stage 2 at message [69].
+
+- Stage 2 (Exit Lock):
+The exit positions and offsets revealed:
+  - Pos 1: WAVE (agent_3), base 8 + offset 1 (agent_2) = 9
+  - Pos 2: STAR (agent_5), base 4 + offset 3 (agent_6) = 7
+  - Pos 3: MOON (agent_1), base 7 + offset 2 (agent_0) = 9
+  - Pos 4: SUN (agent_7 clue), base 2 + offset 4 (agent_4) = 6
+  - Exit code: 9796.
+Agent_0 calculated MOON's exit digit (9) in message [95]. The code "9796" was submitted via the private action interface, successfully unlocking the shelter and achieving Stage 3 (escaped) at message [97].
+
+- Fit to Briefing:
+The log matches the briefing scenario with 100% precision. All shared clues, role distributions, control behaviors, battery readings, and stage transitions correspond exactly to the briefing facts.
+
+
+4. EVIDENCE
+
+1. Cabinet Code Submission [19]:
+Message [19] by agent_2: "𗱓 𗪩 agent_2 𗼛 𘏛 𗜀 𘚜 𗶞 𗬵 𘇩 𗒏 𗋭".
+Task feedback [20] immediately reports Stage 1 with 0 invalid attempts. This proves:
+- 𗶞 = 2, 𗬵 = 7, 𘇩 = 4, 𗒏 = 8.
+- 𘏛 = cabinet, 𗜀 = code/combination.
+
+2. Power Controls and Sequence in Stage 1:
+- Message [49]: 𗘺 𘅌 𘍠 𘆄 𘍠 𗪐 𘍠 𘋍 establishes the four controls: DRAIN (𗘺), CRANK (𘆄), SIGNAL (𗪐), BOOT (𘋍).
+- Successful execution of BOOT (𘋍) at [68] directly advances the stage to Stage 2 at [69].
+- Battery updates by agent_3 track exact charge transitions: initial 4 [40], after DRAIN = 2 [60], after CRANK = 5 [66], after SIGNAL = 2 [74].
+
+3. Clue Correspondence:
+- Agent 4 states SUN base digit is 2: [2] 𘅪 𘚺 𗅲 𗹕 𘚜 𗶞 𘚐 (matches briefing).
+- Agent 0 states MOON base digit is 7: [15] 𘚺 𗎶 𗅲 𗹕 𘚜 𗬵 𘚐 (matches briefing).
+- Agent 6 states STAR base digit is 4: [5] 𗍽 𗊓 𗅲 𗹕 𘚜 𘇩 𘚄 (matches briefing).
+- Agent 2 states WAVE base digit is 8: [4] 𘚺 𗷤 𗉞 𘚜 𗅲 𗹕 𗒏 𘚐 (matches briefing).
+- Offsets in Stage 2: SUN offset +4 ([84], [92]), MOON offset +2 ([82]), STAR offset +3 ([76]), WAVE offset +1 ([87]).
+
+4. What Would Change Our Mind:
+If an alternative grammatical and lexical framework could account for the full digit sequence (0-9), mathematical calculations (8+1=9, 4+3=7, 7+2=9, 2+4=6), power control dependencies, and stage transition logs without any internal contradictions.

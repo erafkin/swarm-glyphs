@@ -1,0 +1,33 @@
+{
+  "status": "prepared_not_run",
+  "source_run_id": "R01",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2",
+  "source_transcript_sha256": "80fdb471df47384881a0b1b63bb929a8f119f8e7f81ec24587bdcd96f9fa2bb8",
+  "rendered_public_transcript_sha256": "4fe21dbefb94cd5b1be645fdf95406623ed8085b3da7c58b4afd7196ccb95ecd",
+  "model": "openai/gpt-6.1-sol",
+  "agents_per_condition": 8,
+  "shared_scheduled_turn_limit_per_condition": 200,
+  "minutes": null,
+  "max_cost_usd_per_condition": 40,
+  "baseline": false,
+  "tell_constraints": false,
+  "conditions": [
+    {
+      "condition": "task_summary",
+      "prepared_inputs": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/task_summary/monitor_inputs.json",
+      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/task_summary/monitor_config.json"
+    },
+    {
+      "condition": "wrong_task",
+      "prepared_inputs": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/wrong_task/monitor_inputs.json",
+      "prepared_config": "experiments/tangut_200g_250l_200t/decoding/sol_seed1_summary_auction/prepared/wrong_task/monitor_config.json"
+    }
+  ],
+  "prompt_files_sha256": {
+    "src/enc_dec/prompts/round3_config.json": "849eb21cfd0d8465fb03f68e455af71139b87ddbce8c47ccf8d987eda8b18114",
+    "src/enc_dec/prompts/round3_prompt.md": "4efe993a8fe6a16789d2187ff7999c3509e262853217ee3cd37a302079421db1"
+  },
+  "note": "Native monitor commands regenerate prompts and create fresh output folders when launched. These snapshots are review artifacts, not completed decoder runs. The wrapper checks the selected briefing text and transcript before launch."
+}

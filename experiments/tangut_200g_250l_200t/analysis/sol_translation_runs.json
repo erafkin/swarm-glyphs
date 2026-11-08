@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "decoder_archive_commit": "4b3c040b4aa77d63892460fd11fcfa19b874a553",
+  "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth.",
+  "sources": [
+    {
+      "run_id": "R01",
+      "family": "E01_sol_seed1",
+      "seed": 1,
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/english/translation.json",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/swarmish.txt"
+    },
+    {
+      "run_id": "R02",
+      "family": "E02_sol_seed2",
+      "seed": 2,
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/english/translation.json",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/swarmish.txt"
+    },
+    {
+      "run_id": "R03",
+      "family": "E03_sol_seed3",
+      "seed": 3,
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/english/translation.json",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2/swarmish.txt"
+    },
+    {
+      "run_id": "R04",
+      "family": "E04_sol_seed4",
+      "seed": 4,
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/english/translation.json",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2/swarmish.txt"
+    },
+    {
+      "run_id": "R05",
+      "family": "E05_sol_seed5",
+      "seed": 5,
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/english/translation.json",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2/swarmish.txt"
+    }
+  ],
+  "runs": [
+    {
+      "cell_id": "R01_task_full",
+      "source_run_id": "R01",
+      "condition": "task_full",
+      "monitor_dir": "logs/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_222836_12e009b9_round_3",
+      "protocol": "legacy_10min_10usd"
+    },
+    {
+      "cell_id": "R01_no_task",
+      "source_run_id": "R01",
+      "condition": "no_task",
+      "monitor_dir": "logs/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_223248_e0250044_round_3",
+      "protocol": "legacy_10min_10usd"
+    },
+    {
+      "cell_id": "R02_task_full",
+      "source_run_id": "R02",
+      "condition": "task_full",
+      "monitor_dir": "logs/20261107_231447_68be954a_round_2/monitor_runs/20261107_231736_615ef673_round_3",
+      "protocol": "legacy_10min_10usd"
+    },
+    {
+      "cell_id": "R02_no_task",
+      "source_run_id": "R02",
+      "condition": "no_task",
+      "monitor_dir": "logs/20261107_231447_68be954a_round_2/monitor_runs/20261108_003614_faed0c99_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    },
+    {
+      "cell_id": "R03_task_full",
+      "source_run_id": "R03",
+      "condition": "task_full",
+      "monitor_dir": "logs/20261107_232807_70261c00_round_2/monitor_runs/20261108_004051_793899d8_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    },
+    {
+      "cell_id": "R03_no_task",
+      "source_run_id": "R03",
+      "condition": "no_task",
+      "monitor_dir": "logs/20261107_232807_70261c00_round_2/monitor_runs/20261108_004440_45ef856c_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    },
+    {
+      "cell_id": "R04_task_full",
+      "source_run_id": "R04",
+      "condition": "task_full",
+      "monitor_dir": "logs/20261108_001247_6a3a1f44_round_2/monitor_runs/20261108_001509_d4b3460c_round_3",
+      "protocol": "legacy_10min_10usd"
+    },
+    {
+      "cell_id": "R04_no_task",
+      "source_run_id": "R04",
+      "condition": "no_task",
+      "monitor_dir": "logs/20261108_001247_6a3a1f44_round_2/monitor_runs/20261108_004845_e27556df_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    },
+    {
+      "cell_id": "R05_task_full",
+      "source_run_id": "R05",
+      "condition": "task_full",
+      "monitor_dir": "logs/20261108_003651_9542311d_round_2/monitor_runs/20261108_005309_6b6352a9_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    },
+    {
+      "cell_id": "R05_no_task",
+      "source_run_id": "R05",
+      "condition": "no_task",
+      "monitor_dir": "logs/20261108_003651_9542311d_round_2/monitor_runs/20261108_005600_1a9a4502_round_3",
+      "protocol": "200turn_no_clock_40usd"
+    }
+  ]
+}

@@ -172,6 +172,7 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
     }
     scratchpads = {agent_id: "" for agent_id in agent_ids}
     done = {agent_id: False for agent_id in agent_ids}
+    rejected = {agent_id: False for agent_id in agent_ids}
     choices: dict[str, dict] = {}
     chat: list[dict] = []
     runtime = translation["runtime"] if channel == "swarmish" and translation else None
@@ -208,6 +209,8 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
                                    **email_violations}.items():
                 language_violations[field] += int(invalid)
             done[agent_id] = done[agent_id] or parsed.done
+        # A rejected answer is unusable: no JSON, or a message replaced by the violation token.
+        rejected[agent_id] = parsed is None or violation
         logger.log("agent_calls", {
             "family": family.name, "channel": channel, "prompt_id": scenario["prompt_id"],
             "turn": turn_index + 1, "agent_id": agent_id, "raw": result.raw,
@@ -217,7 +220,7 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
             "email_language_violations": email_violations,
             "decision": choices.get(agent_id),
         })
-        if all(done.values()):
+        if all(done.values()) or all(rejected.values()):
             break
     text = transcript(chat)
     record = {

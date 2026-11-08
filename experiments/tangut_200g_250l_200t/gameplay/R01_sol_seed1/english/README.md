@@ -1,7 +1,7 @@
 # English reference: R01
 
-Waiting for the revised-prompt Storm Shelter run. This folder is separate from the archived original-prompt condition.
+Completed: 109 public entries, including 77 agent messages. See [the aligned JSON](translation.json) and [the readable transcript](transcript_english.md).
 
-After collection, translate every public entry using only the frozen encoder language and public transcript. Preserve original IDs, sender, glyphs, mistakes and uncertainty. Keep private intended-meaning analysis separate.
+Derived from the frozen E01 language and public conversation. Literal malformed words, discourse idioms, requests, and inconsistent claims are preserved with confidence and ambiguity notes. This is a reference-assisted translation, not independently certified ground truth.
 
-See [the reference method](../../english_reference_method.md). Do not provide this folder or the language reference to decoders.
+See [the reference method](../../english_reference_method.md). Keep reference files out of decoder inputs.

@@ -1,0 +1,155 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a claim to recover the original file verbatim. Confidence labels concern meanings, not merely the existence of repeated patterns. Untranslated glyphs are deliberately retained.
+
+GRAMMAR AND MESSAGE CONVENTIONS
+• [High] Messages commonly have the form ACT 𗪩 agent_N 𗼛 BODY. The literal agent identifier names the speaker. A parallel form is ACT 𗥐 agent_N 𗃚 BODY, often used for a second clause in the same message.
+• [High] 𘊌 introduces a report/assertion. [High] 𗀉 introduces a question/request for information. [Medium-high] 𗱓 introduces a submission, proposed action, or attempted command.
+• [Medium] 𘒳 introduces a further report/action clause; its precise distinction from 𘊌 is unknown. [Low] 𘆣 is another follow-on speech act, possibly a further request. [Low] 𗏶 and 𘚑 are additional speech-act markers, exact meanings unknown.
+• [High] 𘚜 separates a topic/property from its value, or a requested topic from its recipient. Thus it is not necessarily an arithmetic equals sign. [Medium-high] 𗟆 performs the parallel function with the alternate envelope.
+• [High] 𗄼 joins list members, approximately “and.” [Medium-high] 𗘈 means “everyone/all,” particularly as the recipient of questions. [High] 𗑸 marks the end of a question/request.
+• [Medium] 𘚐 is an assertion-ending or epistemic particle; 𘚄 and 𘌔 are alternative endings. Their exact distinctions are unknown. They may encode certainty/evidence rather than punctuation. They are not treated here as digits. [Low] 𗹫 is another unknown ending, appearing in message 9. [Medium] 𗋭 is associated with submissions/imperatives.
+• [Medium] 𘍠 connects items/actions in lists; 𗘗 is a distinct connector used in apparent action sequences. Their exact readings (“and,” “then,” directional arrow, etc.) are unknown and should not be conflated.
+• [Medium] Some messages omit the usual separator or ending. Multiple complete clauses can occur in one chat message. Word order varies somewhat: a key/object description can precede or follow 𘚺.
+
+NUMBERS
+• [High] 𘁁 = 1; 𗶞 = 2. This is supported jointly by position clues, the submitted code, and stage labels.
+• [Medium] 𘇩 = 3; 𗾌 = 4. These plausibly fill the remaining positions in a four-position puzzle, and recur consistently in the next stage. Their grounding is weaker than that of 1/2 because some relevant entity-description equivalences remain unresolved.
+• [Medium] 𗬵 and 𗒏 are numeric/digit-like values in the first code, but their actual numerical values are not recovered. 𗊓 and 𗈵 also occur in value-like contexts, but are unmapped. [Low] 𗡒 may be a value, answer token, or something else; unknown.
+
+TASK VOCABULARY
+• [Medium-high] 𘝞 = stage. [Low-medium] 𗿋 = now/current, as in “stage 2 now.”
+• [Medium] 𗜀 = code/answer. 𗡕 = position/index. 𘏛 is a modifier in the initial position/code expressions; exact meaning unknown. It could distinguish initial/code positions.
+• [Medium] 𗇽 = new/final, especially before position or key. 𘚺 = key/object, or the relation identifying a key/object.
+• [Medium] 𗹕 = digit/value. 𗅲 modifies the original/code digit expression; exact gloss unknown. 𗁳 means new/current in updated-value expressions. [Low-medium] 𘆎 is another element of the updated-value expression 𘆎 𗁳.
+• [Medium] 𗤄 = clue/information. [Low] 𗭵 may mean private/own in requests for an agent's clue.
+• [Medium] 𘅌 = press/activate, or an action command on an item. 𗾨 = done/pressed/accepted. [Low] 𗨞 is another action-status/prerequisite term, possibly not-yet or required.
+• [Low-medium] 𘍂 names an ordering/prerequisite property. [Low] 𗌩 names a separate button property, possibly a numeric effect, label, or rank.
+• [Low] 𗣎 is unresolved. It occurs in a changing digit/state expression 𗣎 𗹕, in 𗅲 𗣎 𗹕, AFTER 2 in message 35's button property (2 𗣎), and BEFORE 2 in message 36's property (𗣎 2). Possibilities include current/last, a counter/state term, or an operator. A negative/minus reading is only a weak alternative and does not by itself explain both orders. These are alternatives, not recovered meanings.
+• [Low] 𗘺, 𘆄, 𗪐, 𘋍 name four actionable items. Their real labels, perhaps button colors, are not recovered. Below they are called A, B, C, D respectively. [Medium-high] The successful action sequence was A→B→C→D.
+• [Low] Recurring object descriptions include 𘅪 (X), 𗷤 𗉞 (Y), 𘋉 𗜘 (Z), 𗎶 𘍧 (W), 𗍽 𗊓 (V), and 𗍽 𘍧 (V′). These labels are placeholders, not translations. Shared glyphs suggest compositional descriptions, possibly color/shape or other properties, rather than necessarily indivisible names. W's relationship to lone 𗎶 and to 𗛽 is unresolved; V and V′ must not silently be equated.
+• [Low] 𗪤, 𗧬, 𘋉/𗜘 individually, 𗪐/𘋍 individually, 𗁳 outside the above compounds, 𗳵, 𗲅, 𘙠, 𘆮, 𗡑, 𗸽, 𘉝, 𗄪, and 𗊑 have no securely recovered independent gloss. Some are covered only through compound/contextual interpretations above.
+
+2. TRANSLATION
+
+Conventions: “Reports,” “asks,” and “submits/actions” translate the speech acts, not the public evaluator's judgment. X/Y/Z/W/V/V′ and A–D have the glyph definitions above. Numerals 3 and 4 are provisional, medium-confidence readings. “Initial position” translates 𘏛 𗡕 approximately; “original digit” translates 𗅲 𗹕 approximately. “New” may instead mean final/current. Quoted unknown glyphs remain untranslated. Common ending particles are omitted from readable English unless relevant; their unresolved status is recorded above. A secondary clause introduced by 𘒳 is marked “Further clause,” without assuming its exact speech act.
+
+[1] Public feedback: stage 0; invalid attempts 0.
+[2] agent_4 reports: X key/object's original digit is 2.
+[3] agent_3 reports: X key/object is at initial position 1.
+[4] agent_2 reports: key/object Y has original digit 𗒏 (unknown numeric value).
+[5] agent_6 reports: V's original digit is 3. Alternative ending 𘚄, meaning unknown.
+[6] agent_7 reports: key/object Z is at initial position 3. Alternative ending 𘌔, meaning unknown.
+[7] agent_3 asks everyone: initial-position key/object information?
+[8] agent_5 reports: the key/object at initial position 2 is W.
+[9] agent_1 reports: key/object V′ is at initial position 4. Further clause: original digit 𗊓 corresponds to initial position 4. Exact relation/meaning uncertain; final 𗹫 is an unknown ending.
+[10] agent_2 asks everyone: initial-position key/object information? Additional 𗪤 unknown.
+[11] agent_5 asks everyone: W key/object's original digit?
+[12] agent_2 asks agent_0: original digit?
+[13] agent_3 asks everyone: key/object's original digit(s)?
+[14] agent_7 asks everyone: initial positions 2 and 4?
+[15] agent_0 reports: key/object 𗎶 has original digit 𗬵. Further clause: key/object 𗛽 has original digit 𗬵. The relation between these descriptions is unknown.
+[16] agent_6 asks everyone: 𗎶 key/object's original digit?
+[17] agent_1 asks agent_0: private/own clue? (𗭵 𗤄, approximate.)
+[18] agent_3 asks everyone: Z key/object's original digit?
+[19] agent_2 submits: 𘏛 code = 2, 𗬵, 3, 𗒏. The second/fourth numerical values and modifier 𘏛 are unknown.
+[20] Public feedback: stage 1; invalid attempts 0.
+[21] agent_4 asks everyone: key/object Z's original digit?
+[22] agent_0 reports: W key/object's original digit is 𗬵.
+[23] agent_6 submits: code 2, 𗬵, 3, 𗒏.
+[24] Public feedback: stage 1; invalid attempts 1.
+[25] agent_5 submits: 𘏛 code = 2, 𗬵, 3, 𗒏.
+[26] Public feedback: stage 1; invalid attempts 2.
+[27] agent_7 reports: code = 2, 𗬵, 3, 𗒏.
+[28] Public feedback: stage 1; invalid attempts 3.
+[29] agent_1 reports: code 2, 𗬵, 3, 𗒏.
+[30] Public feedback: stage 1; invalid attempts 4.
+[31] agent_4 reports: C's property 𗌩 is 4.
+[32] agent_6 reports: D's prerequisite/order property 𘍂 is C 𗨞 (unknown status).
+[33] agent_3 submits: 𘏛 code 2, 𗬵, 3, 𗒏.
+[34] Public feedback: stage 1; invalid attempts 5.
+[35] agent_5 reports: A's property 𗌩 is 2 𗣎 (unknown postposed term).
+[36] agent_0 reports: stage = 1. Further clause: D's property 𗌩 is 𗣎 2 (unknown; a −2 reading is only a weak possibility).
+[37] agent_2 asks everyone: stage 1 clue? Then reports: C's property 𗌩 is A done/pressed (𗾨).
+[38] agent_4 asks everyone: stage 1 clue?
+[39] agent_5 asks everyone: 𗣎 (unknown state/current/last term)?
+[40] agent_3 reports: 𗣎 original digit = 3. The modifier 𗣎 is unknown.
+[41] agent_6 asks everyone: 𗣎 digit/value and new/current (𗁳)? Exact construction unknown.
+[42] agent_1 reports: 𘆄 𗁳 𗣎 = 4; approximately “B new/current [unknown state] is 4.” Further clause: B's property 𗌩 is 𗈵 (unknown value).
+[43] agent_7 reports: stage 1 now. Asks everyone: stage 1 clue? Reports: 𘍂 𗧬 A 𗾨 𘍠 B 𘅌; partially, prerequisite/order [unknown 𗧬], A done/pressed, [unknown connector 𘍠], press B.
+[44] agent_0 asks everyone: 𗅲 𗣎 𗹕, approximately original/code [unknown-state] digit?
+[45] agent_4 asks agent_1, agent_3 and agent_7: private/own clue?
+[46] agent_2 reports: C's prerequisite/order property 𘍂 is A 𗨞 (unknown status). Asks everyone: 𗅲 𗣎, original/code [unknown state]?
+[47] agent_5 asks everyone: new/current clue?
+[48] agent_1 asks everyone: A's prerequisite/order property 𘍂?
+[49] agent_6 submits/actions: press A, 𘍠 B, 𘍠 C, 𘍠 D. Possibly “press A, then B, then C, then D”; connector 𘍠 is not securely translated.
+[50] agent_3 asks agent_7: stage 1 clue?
+[51] agent_2 submits/actions: press A.
+[52] Public feedback: stage 1; invalid attempts 6.
+[53] agent_0 reports: press A. Submits/actions: A 𗘗 B 𗘗 C 𗘗 D, press. This appears to give an A→B→C→D sequence; exact connector 𗘗 unknown.
+[54] Public feedback: stage 1; invalid attempts 7.
+[55] agent_6 reports: A done/pressed. Further clause: press B.
+[56] agent_4 submits: 𘙠 = A 𗘗 B 𗘗 C 𗘗 D. Unknown 𘙠, likely sequence/order command or noun.
+[57] Public feedback: stage 1; invalid attempts 8.
+[58] agent_7 reports: B's prerequisite/order property is A done/pressed. Submits/actions: 𘙠 A 𗘗 B 𗘗 C 𗘗 D, press.
+[59] Public feedback: stage 1; invalid attempts 9.
+[60] agent_3 reports: 𗣎 digit/value is 2. Further clause: press B.
+[61] Public feedback: stage 1; invalid attempts 10.
+[62] agent_1 uses unknown speech act 𘚑: submission/action 𗱓 [unknown 𘉝 𗄪 𗊑]. Further clause: press A.
+[63] Public feedback: stage 1; invalid attempts 11.
+[64] agent_6 reports: B done/pressed. Further clause: press C.
+[65] agent_2 asks agent_7: private/own clue? Reports: press A 𗳵 (unknown, perhaps a stop/negation/status term).
+[66] agent_3 reports: 𗣎 digit/value is 𗊓. Further clause: press C.
+[67] Public feedback: stage 1; invalid attempts 12.
+[68] agent_6 reports: C done/pressed. Further clause: press D.
+[69] Public feedback: stage 2; invalid attempts 12.
+[70] agent_5 reports: A's prerequisite/order property is 𗲅 (unknown). Submits/actions: 𘙠 relates to A 𗘗 B 𗘗 C 𗘗 D. Then submits/actions: press A.
+[71] Public feedback: stage 2; invalid attempts 13.
+[72] agent_0 reports: A 𗳵 (unknown). Alternate speech act 𗏶: press B.
+[73] Public feedback: stage 2; invalid attempts 14.
+[74] agent_3 reports: 𗣎 digit/value is 2. Further clause: press D.
+[75] Public feedback: stage 2; invalid attempts 15.
+[76] agent_6 reports: stage 2 now. Further clause: V's new digit is 4. Asks everyone: new key/object and new digit?
+[77] agent_4 reports: A 𗳵 (unknown). Submits/actions: press B.
+[78] Public feedback: stage 2; invalid attempts 16.
+[79] agent_5 reports: new position 2 is V. Asks everyone: new clue/information?
+[80] agent_1 submits/actions: everyone 𗡑 𗸽 (unknown).
+[81] agent_2 asks agent_3 and agent_5: A's prerequisite/order property and 𗅲 𗣎, original/code [unknown state]?
+[82] agent_0 reports: W's updated-value expression 𘆎 𗁳 is 2. Asks everyone: new key/object?
+[83] agent_3 reports: new position 1 is Y. Asks everyone: Y's new digit?
+[84] agent_4 reports: X's updated-value expression 𘆎 𗁳 is 3.
+[85] agent_6 submits/actions: press 𘆮 (unknown; potentially a stop/end-action expression). Asks everyone: new key/object and new digit?
+[86] agent_5 asks everyone: new positions 1 and 4 and 3? Follow-on act 𘆣: everyone, X's and Y's new digit?
+[87] agent_2 reports: Y's updated-value expression 𘆎 𗁳 is 1. Asks everyone: new position/key-object?
+[88] agent_3 asks everyone: new positions 4 and 3?
+[89] agent_1 reports: new position 4 is W.
+[90] agent_6 asks everyone: new positions 4 and 3, key/object?
+[91] agent_5 asks everyone: new positions 4 and 3?
+[92] agent_4 asks everyone: new positions 4 and 3, key/object? Further clause: X's updated-value expression 𘆎 𗁳 is 3.
+[93] agent_7 asks agent_3: 𗣎 digit/value? Follow-on act 𘆣: agent_5, A's property 𗌩?
+[94] agent_3 asks everyone: new position 3?
+[95] agent_0 reports: W code/answer = 𗡒 (unknown). Asks everyone: new positions 1 and 4 and 3? This first clause is not securely understood and is not translated as a final-code submission.
+[96] agent_1 asks agent_7: new position 3?
+[97] Public feedback: stage 3; invalid attempts 16.
+
+3. THE TASK
+
+[Medium-high confidence] The agents were solving a cooperative, staged puzzle using distributed clues. There were at least three active stages, publicly numbered 0, 1, and 2; reaching stage 3 apparently ended or advanced beyond the displayed puzzle. The evaluator counted invalid attempts.
+
+Stage 0 appears to ask for a four-symbol/numeral code derived by combining object-position clues with object-digit clues. The agents requested missing information from everyone or particular agents. The first accepted submission, message 19, was the four tokens 𗶞 𗬵 𘇩 𗒏, approximately 2, unknown, 3, unknown. Their actual second and fourth decimal values are not recovered. Repetitions after the transition to stage 1 were rejected. The initial clues are not completely reconciled: V and V′ differ, and Z's position and V's digit cannot safely be assigned to the same object without an additional assumption.
+
+Stage 1 appears to involve four buttons/actions and prerequisite or numeric-effect clues. The eventual successful sequence was A=𗘺, B=𘆄, C=𗪐, D=𘋍. It may also involve a changing counter/digit or target, since 𗣎-related values vary. Agent_6 apparently executed the useful progression: message 49 begins with press A; message 55 reports A done and presses B; message 64 reports B done and presses C; message 68 reports C done and presses D, after which stage 2 is announced. Other agents attempted duplicate presses, complete-sequence formats, or stale code submissions, producing invalid counts. This suggests successful intermediate presses need not generate public feedback; silence is not evidence that nothing happened. Whether agent identity itself mattered is unknown.
+
+Stage 2 returns to object-position and updated-digit information. Conditional on the inferred vocabulary and numerals, the clues imply a likely final code 1,4,3,2: new position1 is Y and Y's new digit is1; new position2 is V and V's new digit is4; new position4 is W and W's updated digit is2; the remaining X has updated digit3 and presumably occupies position3. This last placement is inference by elimination, not an explicit translated report. Many agents kept asking for positions3/4, and some continued stale stage1 actions, increasing invalid attempts to16. The record does not contain a securely decoded explicit submission of 1432. Message95 is unresolved, and message97 merely establishes that the public state reached stage3 with16 invalid attempts. We cannot identify the final trigger with confidence.
+
+4. EVIDENCE
+
+The strongest evidence is substitution within repeated grammatical slots. Questions differ only in recipient: 𗘈 versus agent_0 or agent_7, supporting “everyone.” Lists of named recipients place 𗄼 between them, supporting “and.” Report and question envelopes recur with both 𗪩…𗼛 and 𗥐…𗃚, while 𘚜 alternates with 𗟆 in the corresponding relation slot. This establishes syntax more securely than any guessed object name.
+
+The number mapping is not taken solely from task feedback. Message3 places X at position𘁁 and message2 assigns it digit𗶞. Message8 places W at position𗶞 and messages15/22 assign W digit𗬵. The accepted ordered code begins 𗶞,𗬵. Thus interpreting the clues as positions and digits gives 𘁁=1 and 𗶞=2. Stage expressions in messages36/43 and76 independently align with public stages1 and2. The remaining position symbols𘇩 and𗾌 plausibly mean3 and4, but with less independent anchoring. In particular, some initial-clue reconciliation would require equating differently written entity descriptions, which is not independently established. No equivalent anchor identifies 𗬵 or𗒏's decimal values.
+
+Action semantics rely on both language and behavior: message55 says A𗾨 followed by B𘅌; message64 says B𗾨 followed by C𘅌; message68 says C𗾨 followed by D𘅌 and the stage advances. This supports completed/pressed versus press/activate, and the sequence A–B–C–D. It does not prove exact color names or all command grammar. The evaluator also reacts to some messages headed as reports, so speech-act labels alone do not define what the external parser executes.
+
+Updated-position/value interpretations are supported by the parallel stage0 and stage2 clause structures and by separate agents contributing complementary constraints. However, the actual object descriptions are not grounded to English colors/shapes. Shared components in 𗍽𗊓, 𗍽𘍧 and 𗎶𘍧, and the unusual W-code clause in95, argue against presenting opaque object labels as confidently decoded nouns.
+
+Important alternatives remain open. 𗌩 could be a button effect rather than its label/rank. Message35 has 2 𗣎 whereas message36 has 𗣎 2; that reversed order must be preserved. The latter could weakly suggest −2, but a simple minus-sign interpretation does not explain the former, and 𗣎𗹕 could instead concern a counter/state or current/last value. 𘚐/𘚄/𘌔/𗹫 may express confidence or evidential source, not sentence type. The original file or independently grounded usages showing these distinctions would change those interpretations. Evidence that position symbols are not ordinary ordered indices, or that successful actions are parsed by different rules, would weaken the numerical and stage1 deductions. A correct puzzle answer by itself would not establish translation; unresolved clauses and possible agent mistakes have therefore been preserved rather than silently repaired.

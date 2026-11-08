@@ -1,0 +1,8 @@
+{
+  "condition": "wrong_task",
+  "supervisor_pid": 90269,
+  "started_at": "2026-11-08T07:01:42.507382+00:00",
+  "child_pid": 90272,
+  "exit_code": 0,
+  "finished_at": "2026-11-08T07:06:35.141913+00:00"
+}

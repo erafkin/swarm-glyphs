@@ -9,5 +9,6 @@
   "source_run_id": "R06",
   "condition": "no_task",
   "approved_deviations": [],
-  "prompt_condition": "escape_and_stay_undecoded"
+  "prompt_condition": "escape_and_stay_undecoded",
+  "allow_turn_limited_gameplay_source": true
 }
