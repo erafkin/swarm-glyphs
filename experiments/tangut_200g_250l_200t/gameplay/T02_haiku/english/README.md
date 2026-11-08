@@ -1,18 +1,16 @@
 # Reference-assisted English translation: T02
 
-Status: waiting for gameplay. This folder is not a decoder result.
+Status: complete and independently reviewed, covering all 865 public entries.
+Gameplay outcome: stopped at the user-requested $10 limit without taking a room action.
 
-After collecting the completed gameplay, `translation.json` will contain every public
-message in its original order with a stable one-based message ID and a pending English field.
-Codex will translate each Swarmish message using the exact frozen `swarmish.txt` used by
-this run. Preserve sender IDs, original glyphs, questions/assertions, mistakes and ambiguity.
-Copy public numeric status entries verbatim and mark them as status, not translated speech.
+Read [the English transcript](transcript_english.md) or use
+[the aligned JSON](translation.json) for comparisons by original message ID.
+These are researcher references made from the frozen Swarmish document and public
+conversation. They are not blind decoder results or certified scoring ground truth.
 
-Keep the raw transcript and frozen language unchanged. Record their SHA-256 hashes.
-Mark uncertain interpretations explicitly; do not silently replace a message with the known
-room answer. Any comparison with private intended meanings or actions is a separate
-researcher annotation, not evidence silently substituted for the language reference.
+Original glyphs, sender IDs, status entries, mistakes and uncertain readings are preserved.
+Private intended meanings, scratchpads, private clues and correct room answers were not
+used as translation evidence. See [the shared method](../../english_reference_method.md)
+for provenance, validation, uncertainty and comparison guidance.
 
-Final outputs here: `translation.json` (one row per public entry) and
-`transcript_english.md` (readable group chat with matching message IDs).
 Do not supply these translations, the language document, or private logs to decoder swarms.
