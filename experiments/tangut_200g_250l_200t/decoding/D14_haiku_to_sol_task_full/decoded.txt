@@ -1,0 +1,208 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered dictionary. Confidence labels concern decoding, not merely whether a glyph appears. The log supports a small number of probable numerical meanings and recurring conversational frames. Exact words and grammar remain substantially uncertain.
+
+Observed writing conventions
+• [HIGH] Messages use space-separated Tangut-looking glyphs, generally one glyph per apparent word/token. No punctuation or decimal numerals occur in the agents' messages.
+• [HIGH] Several short sequences recur verbatim; messages often concatenate two such sequences without a visible sentence separator.
+• [MEDIUM] The agents appear to use a report frame and an inquiry/request frame. The inferred functions are supported by alternation and conversational distribution, but their literal wording is unknown.
+• [LOW] Word order may be flexible or telegraphic. Alternatively, some messages are malformed experiments. The log does not establish that every observed arrangement is grammatical Swarmish.
+• [HIGH] No discarded-message marker ⊘ appears in this log. We cannot reconstruct the full permitted alphabet from this sample.
+
+Probable numeral vocabulary — all MEDIUM confidence
+𗛽 = 1. Agent_3, whose cabinet clue specifies position 1, uses it in [9,19]. Its initial alternative 𗶞 remains unexplained.
+𗳃 = 2. Used by agent_4 (base digit 2) and agent_5 (position 2), including [12,24,29].
+𗸽 = 3. Used by agent_1, whose clue specifies position 3, in [13,21].
+𘙠 = 4. Used by agent_6 (base digit 4) and agent_7 (position 4), including [6,8,15].
+𗋭 = 7. The highly stable payload of agent_0, whose base-digit clue is 7.
+𗸪 = 8. The highly stable payload of agent_2, whose base-digit clue is 8.
+These are not independently confirmed plaintext. The cross-sender overlaps for 2 and 4 favor numerals over symbol names, but task-clue alignment supplies much of the evidence. No secure glyphs for 0,5,6,9 have been identified.
+
+Recurring frame vocabulary — individual lexical assignments LOW confidence
+𗏔: likely first-person/self or possessive marker, approximately I/my.
+𗵵: likely second-person/addressee marker, approximately you/your. An alternative is a request/share verb. The pronoun reading is favored because it replaces 𗏔 before the same following tokens.
+𗟎: part of the report/inquiry scaffold. Could mean have/know, or be a noun such as number/clue. Exact meaning unknown.
+𗡒: alternates with 𗟎 in otherwise similar clauses. Possibly another possession/knowledge predicate; exact contrast unknown.
+𗿃: part of the same scaffold. Could mean number/information, or be an equality/copular marker. Exact meaning unknown.
+𗄪: likely question/request introducer. Alternative: addressee or request verb.
+𗣑: recurring inquiry payload/marker; perhaps what/which, all, other, or missing information. Exact meaning unknown.
+𗎰: recurring final/interrogative/politeness marker, perhaps a question particle. Exact meaning unknown; not identified as a numeral.
+𗗫: possibly a connective such as and/but, especially between report and inquiry sequences. It also occurs in less clear positions, so exact meaning is unknown.
+
+Unresolved vocabulary — LOW confidence for any suggested interpretation
+𗚀: unknown. Replaces 𗿃 in paired clauses [34,80] and occurs before other payloads [69,75]. Possibly a contrasting grammatical marker; no reliable gloss.
+𗦴: unknown. Appears in reports, inquiries, and unusual sequences. No justified numeral or symbol-name assignment.
+𗶞: unknown. Appears [2,75]; suggestions such as 0, SUN, or a reporting modifier are unsupported alternatives, not translations.
+𘎌: unknown [26].
+𗄎: unknown [22].
+𗥊: unknown [16].
+𘚺: unknown [14,45], in the slot normally occupied by 𗵵.
+𘚐: unknown [25].
+𘉝: unknown [41,72].
+𗉜: unknown [101].
+𗽃: unknown [101].
+𗒏: unknown [109].
+
+Candidate construction rules
+• [MEDIUM at the whole-frame level; LOW word-by-word] 𗏔 𗟎 𗿃 N is a self-report containing N, tentatively “I have/know number N” or “my number is N.” It does NOT establish whether N is a position, base digit, or something else.
+• [MEDIUM at the whole-frame level; LOW word-by-word] 𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 is an inquiry/request, tentatively “What number/information do you have?” The last two tokens' exact contributions are unknown.
+• [LOW] 𗵵 𗟎 𗿃 … without initial 𗄪 can also be an inquiry about the addressee's information.
+• [LOW] 𗏔 𗡒 … and 𗵵 𗡒 … are related variants, not demonstrated synonyms of the 𗟎 constructions.
+• [HIGH observation; LOW interpretation] 𗿃 occurs on either side of probable numeral payloads. We cannot infer a strict syntactic rule from this.
+
+No reliable independent vocabulary for SUN, MOON, STAR, WAVE, cabinet, power controls, or exit has been recovered. In particular, the numerical clues must not be expanded into complete symbol-to-digit statements solely from the briefing.
+
+2. TRANSLATION
+
+Reading key: “Report N” below means the tentative English interpretation “I/my information: probable number N,” not a verified full clue. “Inquiry” means a probable request/question about the addressee's number or information; literal wording is unknown. These whole-frame interpretations have MEDIUM confidence, while their exact English wording and internal parse are LOW confidence. Every numeral shown is only MEDIUM confidence. Unknown residues are retained as glyphs so they are not silently translated away. Descriptions of changed order indicate observable structure, not an inferred change in meaning.
+
+[1] Public task feedback: stage 0; invalid attempts 0.
+[2] Self-report frame; unknown payload 𗶞.
+[3] Self-report frame, without an identifiable value: approximately “I have information / my number is …”; unknown completion.
+[4] Self-report without identifiable value, followed by an inquiry without an identifiable payload or closing marker.
+[5] Self-report frame without identifiable value; unknown completion.
+[6] Report 4, using the 𗡒 variant; exact predicate unknown.
+[7] Inquiry about the addressee's information, ending in unknown marker 𗎰.
+[8] Report 4.
+[9] Report 1.
+[10] Self-report with 𗡒 and unknown 𗗫; then an inquiry ending in 𗎰. No identifiable numerical value.
+[11] Report 4; then inquiry without identifiable payload/closing marker.
+[12] Self-report containing probable 2; usual 𗿃 omitted.
+[13] Report 3.
+[14] Report 8; then an inquiry-like clause containing unknown 𘚺 in place of usual 𗵵, and ending in unknown 𗣑.
+[15] Report 4 plus unknown 𗦴; then inquiry ending in unknown 𗎰 𗣑, reversed relative to the most common ending.
+[16] Self-report containing unknown 𗎰; then addressee/inquiry-like fragment 𗵵 𗿃 𗥊. Meaning of the final fragment unknown.
+[17] Self-report containing probable 2, without usual 𗿃; then inquiry ending 𗣑, also without 𗿃.
+[18] Report 7; inquiry ending 𗎰.
+[19] Report containing probable 1, with 𗿃 after the numeral.
+[20] Report 4; inquiry ending 𗣑.
+[21] Report containing probable 3, with 𗿃 after the numeral; additional unknown 𗦴.
+[22] Self-report with unknown 𗣑; then unknown 𗄎 and an addressee-like fragment containing unknown 𗦴 𗿃 𗎰. No secure full translation.
+[23] Inquiry ending in unknown 𗣑 𗎰.
+[24] Report 2; possible connective 𗗫; inquiry ending 𗎰.
+[25] Report containing probable 4 using 𗡒, with additional unknown 𘚐 before 𗿃.
+[26] Self-report with unknown 𗎰; then unknown 𘎌 followed by another scaffold-like sequence ending 𗎰. Exact relationship unknown.
+[27] Self-report containing probable 2, without usual 𗿃; inquiry ending 𗎰.
+[28] Inquiry ending 𗣑 𗎰.
+[29] Report containing probable 2, with 𗿃 after the numeral.
+[30] Inquiry ending 𗣑 𗎰, with usual 𗿃 omitted.
+[31] Report 7.
+[32] Addressee/inquiry-like fragment: 𗵵 𗎰 𗿃 𗣑. Approximately a question about your information; exact wording unknown.
+[33] Report 4 using 𗡒.
+[34] Self-report-like clause and inquiry-like clause, both using unknown 𗚀 instead of usual 𗿃. No identifiable value or exact meaning.
+[35] Inquiry using 𗡒 and ending 𗣑, without usual 𗿃; approximately “What do you know/have?” Exact wording unknown.
+[36] Inquiry ending 𗣑.
+[37] Inquiry containing additional unknown 𗦴, then 𗣑 𗿃 in an unusual order. Exact payload unknown.
+[38] Self-report begins 𗏔 𗟎 but continues with addressee-like 𗵵 𗦴 𗿃 𗎰; meaning of this mixed fragment unknown. Then an ordinary inquiry ending 𗣑.
+[39] Report 7.
+[40] Inquiry using 𗡒, ending 𗣑 𗎰, without usual 𗿃.
+[41] Self-report frame with unknown 𘉝 𗎰.
+[42] Inquiry ending 𗣑 𗎰.
+[43] Report 7 using 𗡒.
+[44] Self-report-like frame followed by unknown/possible connective 𗗫; inquiry ending 𗎰. No identifiable numeral.
+[45] Report 8 using 𗡒; then inquiry-like clause containing unknown 𘚺, again using 𗡒 and ending 𗣑.
+[46] Inquiry ending 𗣑 𗎰.
+[47] Self-report frame with unknown 𗦴 𗎰; possible connective 𗗫; inquiry fragment without an identifiable payload or closing marker.
+[48] Inquiry ending 𗣑 𗎰, with usual 𗿃 omitted.
+[49] Report 7; inquiry ending 𗎰, without initial 𗄪.
+[50] Report 8; inquiry ending 𗣑.
+[51] Inquiry ending 𗣑 𗎰.
+[52] Self-report frame with unknown 𗦴; inquiry ending 𗣑.
+[53] Report 7; inquiry ending 𗣑.
+[54] Self-report containing probable 8, without usual 𗿃; inquiry ending 𗣑, also without 𗿃.
+[55] Self-report frame with unknown 𗎰; inquiry ending 𗣑.
+[56] Self-report-like frame with unknown/possible connective 𗗫; inquiry using 𗡒, ending 𗣑 𗎰, without initial 𗄪. No identifiable numeral.
+[57] Report containing probable 7, with 𗿃 after the numeral; inquiry ending 𗣑 without initial 𗄪.
+[58] Report 8; inquiry ending 𗣑 with usual 𗿃 omitted from inquiry.
+[59] Inquiry ending 𗣑 𗎰.
+[60] Inquiry ending 𗣑.
+[61] Report containing probable 7, with 𗿃 after the numeral; inquiry ending 𗣑.
+[62] Report containing probable 8, with 𗿃 after the numeral; inquiry ending 𗣑.
+[63] Inquiry ending 𗣑 𗎰.
+[64] Inquiry-like clause with unknown 𗦴 instead of usual 𗟎, ending 𗿃 𗣑. Exact meaning unknown.
+[65] Report 7; inquiry ending 𗣑.
+[66] Report 8.
+[67] First-person fragment containing unknown 𗦴 𗿃 𗣑 𗿃. Meaning unknown; usual 𗟎 absent and 𗿃 repeated.
+[68] Self-report frame with unknown 𗎰; inquiry also ending 𗎰.
+[69] Self-report-like clause using unknown 𗚀, containing probable 8 and unknown 𗎰; inquiry ending 𗣑 without usual 𗿃.
+[70] Report 7; inquiry ending 𗣑 without initial 𗄪.
+[71] Inquiry ending 𗣑 𗎰.
+[72] Inquiry ending 𗣑 𗎰 without initial 𗄪; then unknown fragment 𘉝 𗦴 𗿃.
+[73] Report 7; inquiry ending 𗣑.
+[74] Self-report containing probable 8, without usual 𗿃; additional unknown 𗎰.
+[75] Inquiry-like clause using unknown 𗚀, ending 𗣑 𗎰; then self-report-like clause using 𗚀 and unknown 𗶞, followed by 𗿃. No secure exact translation.
+[76] Addressee/inquiry-like fragment 𗵵 𗎰 𗿃 𗣑; approximately a question about your information, exact wording unknown.
+[77] Report 7; inquiry ending 𗣑 without initial 𗄪.
+[78] Inquiry ending 𗣑 𗎰, without usual 𗿃.
+[79] Report containing probable 7, using 𗡒 and placing 𗿃 after the numeral; inquiry ending 𗣑 without initial 𗄪.
+[80] Self-report-like clause using unknown 𗚀 and ending 𗎰; inquiry-like clause also using 𗚀 and ending 𗣑. Exact contrast with ordinary frame unknown.
+[81] Self-report-like frame followed by unknown/possible connective 𗗫; inquiry ending 𗎰. No identifiable numeral.
+[82] Inquiry ending 𗣑 𗎰.
+[83] Report containing probable 7, using 𗡒 and placing 𗿃 after the numeral.
+[84] Inquiry ending 𗣑 𗎰.
+[85] Addressee/inquiry-like fragment 𗵵 𗎰 𗿃 𗣑; approximately a question about your information, exact wording unknown.
+[86] Inquiry ending 𗎰.
+[87] Report containing probable 7, using 𗡒 with 𗿃 after numeral; possible connective 𗗫; inquiry using 𗡒 and ending 𗎰, without initial 𗄪.
+[88] Inquiry ending 𗣑 𗎰.
+[89] Inquiry ending 𗣑 𗎰.
+[90] Inquiry ending 𗣑 𗎰.
+[91] Self-report using 𗡒 without identifiable value; inquiry without identifiable payload or closing marker.
+[92] Inquiry ending 𗣑 𗎰.
+[93] Inquiry ending 𗣑 𗎰.
+[94] Report 8, followed by unknown 𗎰.
+[95] Inquiry ending 𗣑.
+[96] Inquiry ending 𗣑 𗎰.
+[97] Inquiry ending 𗣑 𗎰.
+[98] Report containing probable 8, with 𗿃 after the numeral.
+[99] Inquiry ending 𗣑 𗎰, without usual 𗿃.
+[100] Report containing probable 7, with 𗿃 after numeral; inquiry ending 𗣑.
+[101] Inquiry ending 𗣑 𗎰; additional unknown fragment 𗉜 𗽃 𗦴.
+[102] Report containing probable 8, with 𗿃 after numeral; inquiry ending 𗣑.
+[103] Inquiry ending 𗣑 𗎰, without usual 𗿃.
+[104] Report 7; inquiry ending 𗣑.
+[105] Inquiry using 𗡒, without identifiable payload or closing marker.
+[106] Self-report-like frame followed by unknown/possible connective 𗗫; inquiry ending 𗎰. No identifiable numeral.
+[107] Inquiry ending 𗣑.
+[108] Report containing probable 8, with 𗿃 after numeral and additional unknown 𗎰; inquiry ending 𗣑 without initial 𗄪.
+[109] Report containing probable 7, with 𗿃 after numeral; additional unknown 𗒏 𗿃; inquiry ending 𗣑 without initial 𗄪.
+[110] Inquiry ending 𗣑 𗎰.
+
+3. THE TASK
+
+The supplied task is a cooperative escape-room puzzle, Storm Shelter. The agents start with distributed clues for a four-digit cabinet code. Cabinet success would release power-panel clues; successful BOOT would release exit clues. This task description comes from the briefing, not from a complete decoding of the chat.
+
+The visible conversation is consistent with the cabinet phase. Agent_0 repeatedly reports a payload plausibly meaning 7; agent_2 similarly reports 8. Agent_4 and agent_5 use the probable numeral 2, agent_6 and agent_7 use probable 4, agent_1 uses probable 3, and agent_3 uses probable 1. These match their numerical cabinet clues, including the distinction that some agents know a position index while others know a base digit. The chat does not clearly preserve that distinction in a decodable way, nor does it establish a symbol-name vocabulary.
+
+After these early reports, the conversation becomes dominated by repeated inquiry-like formulas. There is no recoverable collective conclusion assigning the four symbol positions to the four base digits, no clearly assembled four-digit cabinet code, and no recognizable transition to discussing power costs, prerequisites, or exit offsets.
+
+The only public simulator status is [1], stage 0 with zero invalid attempts. Consequently, the strongest safe conclusion is that the log shows no demonstrated progress beyond the cabinet and appears to show stalled communication. We cannot conclude that nobody tried an action: action submissions and results were private. Nor can we derive a final invalid-attempt count from the initial status alone.
+
+For comparison only, the briefing's full solution is cabinet 2748; power sequence DRAIN → CRANK → SIGNAL → BOOT, with battery 4 → 2 → 5 → 2 → 0; exit 9796. Those are supplied facts, NOT recovered agent conclusions. Nothing in the chat justifies translating a message as “the cabinet code is 2748” or “the exit code is 9796.”
+
+Does the log fit the task? Yes, partially: the source-linked probable numerals fit the distributed opening clues particularly well, and the repetitive questions fit a coordination failure. It does not exhibit the successful worked solution, and its sparse recoverable vocabulary cannot independently establish every task detail.
+
+4. EVIDENCE
+
+A. Numerical anchors and their limits
+The strongest evidence is contrastive rather than a single convenient clue match. Agent_0 repeatedly uses 𗋭 in a stable report position; agent_2 repeatedly uses 𗸪 in that position. Their private cabinet digits are 7 and 8. More importantly, 𗳃 is shared by agents whose different clues both contain 2, and 𘙠 by agents whose different clues both contain 4. That overlap makes a numeral reading more plausible than four separate symbol-name readings. Agent_1's 𗸽 and agent_3's 𗛽 extend the hypothesis to 3 and 1.
+
+This remains medium confidence because known task facts are doing substantial anchoring. Agent_3 initially uses a different payload, 𗶞, and the log does not provide arithmetic or an independently recognizable digit sequence that verifies the mapping. Repeated agreement among decoders is not additional evidence.
+
+B. Parallel clause structure
+Compare [31] and [43]: the same probable-7 report changes 𗟎 to 𗡒. Similar alternation occurs with probable 4 and 8. This supports related grammatical roles but does not identify either word.
+
+Compare [49], [79], and especially [87]: a clause starting 𗏔 is followed by one starting 𗵵 with otherwise similar scaffolding. This favors I/my versus you/your, but alternatives involving report versus request verbs remain possible. The common prefixed 𗄪 therefore looks like an inquiry introducer; exact wording cannot be recovered.
+
+C. Why two grammatical analyses are retained
+The common report can be parsed approximately as “I / have / number / 7,” but also as “my / number / is / 7.” Messages [19,29,57,98] put 𗿃 after a probable numeral, and [12,54,74] omit it. These variations prevent a secure one-to-one assignment of have, number, and is. Repetitions of 𗿃 in [67,109] further caution against treating every message as a clean grammatical exemplar.
+
+D. Recurring inquiries, not confidently decoded requests for a particular code
+The long formula 𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 recurs across many senders, especially late in the log. Its placement after numerical reports and its cross-agent convergence make a request/question function plausible. But we cannot distinguish “what is your number?” from “tell me all your information,” “what else do you know?” or similar meanings. Accordingly, 𗣑 is not confidently assigned all, code, what, or missing; 𗎰 is not confidently assigned please or a question mark.
+
+E. Rare glyphs and failures of fluent translation
+Unknown tokens are explicitly preserved in the translation. No unused numeral slots have been filled merely to complete a decimal alphabet. In particular, 𗦴 has no consistent clue-linked numerical behavior. Likewise 𗶞, 𗚀, 𘉝, and the one-off tokens cannot be identified by their positions alone. The unusual messages may be grammatical constructions outside the recovered frames, or may be agents' unsuccessful attempts to improvise.
+
+F. What would change this reconstruction
+An actual dictionary, agents' contemporaneous explanations, or additional conversations with independent plaintext anchors could overturn any tentative lexical assignment. Evidence that 𗋭/𗸪 refer to MOON/WAVE rather than 7/8 would require revising the numerical map; a second context separating symbol names from values would be especially diagnostic. Repeated examples with known questions, negation, or explicit multi-digit codes could distinguish the competing grammatical analyses and identify suffixes. Additional public stage feedback or private action records could revise the apparent-stalling conclusion without necessarily changing the linguistic analysis.
+
+The present reconstruction is deliberately incomplete. It identifies probable numerical content and interaction patterns, not a fully broken language.

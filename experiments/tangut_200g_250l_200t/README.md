@@ -117,6 +117,7 @@ are read-only and excluded as sources for the revised decoder plan.
 | D10 | R07, Gemini | Sol: no task |
 | D11–D12 | R08, DeepSeek | DeepSeek: no task, full task |
 | D13 | R08, DeepSeek | Sol: no task |
+| D14 | R06, Haiku | Sol: full task |
 
 The original plan has one four-condition set for Sol seed 1. Tom reports that its task-summary
 and wrong-task runs were completed in another task, and Emma completed no-task and full-task
@@ -128,6 +129,13 @@ team, transcript, chat and output files; concurrent runs share the OpenRouter ke
 execution timestamps identify overlap, so wall-clock speed comparisons must account for it.
 The initial cells are D05, D08 and D11; later cells fill available slots. Unexpected stops
 pause new launches and preserve all outputs. No automatic retries or Sol-to-Sol runs occur.
+
+Tom additionally authorized D14 on 2026-11-08: Haiku's same frozen R06 transcript decoded
+by eight fresh Sol agents with full room knowledge. It matches D07's model, medium
+reasoning, 16,000-token response limit, 200 shared turns, no clock and $50 soft cap;
+only the briefing and output location change. No language document or English reference
+is included in decoder inputs. D14 is a follow-up selected after observing D07, not a
+preregistered additional cell.
 
 R06 and R08 completed their 200-turn allowance without escaping. Their six decoder plans
 explicitly set `allow_turn_limited_gameplay_source: true`; decode these unsuccessful
@@ -142,6 +150,12 @@ into `english/translation.json` and `english/transcript_english.md`. Preserve ID
 and uncertainty. Private intended meanings may be analysed separately but are not substituted
 for public evidence. See the [reference method](gameplay/english_reference_method.md).
 Never give a decoder the language, the reference translation, or private logs.
+
+Current English comparisons are in
+[the N/A results](analysis/decoder_comparison_scores_na/README.md), including the
+Haiku → Sol full-task follow-up D14. Wholly unknown or missing predictions have
+N/A cosine and are excluded from the primary mean; coverage and partial-unknown
+counts are shown separately. The previous zero-inclusive results remain archived.
 
 The prior four references and $14.227976 recorded gameplay spend are preserved in the
 [original-prompt archive](gameplay/archive/original_prompt_20261107/README.md), with hashes
