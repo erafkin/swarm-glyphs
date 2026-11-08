@@ -1,0 +1,1389 @@
+{
+  "schema_version": 1,
+  "mode": "reference_assisted_public_only",
+  "private_annotations_used": false,
+  "decoder_archive_commit": "4b3c040b4aa77d63892460fd11fcfa19b874a553",
+  "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth.",
+  "manifest_sha256": "69a24363c65f97df4b5be475675195f4eaf91d825237b9005bd612b9b6bc0342",
+  "code_sha256": {
+    "translation_scoring.py": "ad162dce290a449a53a0d4d02a79b402aca39c964c781dd8c6f3e3b5c51bf457",
+    "sol_translation_scoring.py": "33f5f5bea43c67c922237ee4c9c999967fc60417d4536f99d658d7c5b1524e4e"
+  },
+  "embedding_model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "cells": [
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed",
+      "inputs": {
+        "reference_sha256": "13cbd75ca282b1ad2326238ffa17672fd65c1bf015532de929ff0582f75c13cf",
+        "public_transcript_sha256": "80fdb471df47384881a0b1b63bb929a8f119f8e7f81ec24587bdcd96f9fa2bb8",
+        "rendered_public_transcript_sha256": "4fe21dbefb94cd5b1be645fdf95406623ed8085b3da7c58b4afd7196ccb95ecd",
+        "decoder_document_sha256": "5ec7572627fe8514eddc0700a6b64c4865e20ac9c4c406ee8eb25f6fef12d062",
+        "language_sha256": "657e2217fade9d75810493f9522576725e77ca867bd9d831abaa925854596f10"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 77,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 109,
+        "decoder_message_ids": 109,
+        "task_status_excluded": 32,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.8311688311688312,
+        "reference_confidence_counts": {
+          "high": 64,
+          "low": 3,
+          "medium": 10
+        }
+      },
+      "summary": {
+        "eligible": 77,
+        "scorable_references": 77,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 34,
+        "uncertain_or_partial_references": 13,
+        "valid_pairs": 77,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.09266283672642436,
+          "rouge1": 0.229316535109671,
+          "rouge2": 0.03139529596367333,
+          "rougeL": 0.21582320528645121,
+          "cosine": 0.5092435540940532
+        },
+        "valid_pair_mean": {
+          "bleu": 0.09266283672642436,
+          "rouge1": 0.229316535109671,
+          "rouge2": 0.03139529596367333,
+          "rougeL": 0.21582320528645121,
+          "cosine": 0.5092435540940532
+        },
+        "corpus_bleu": 0.026294790563216267
+      },
+      "high_confidence": {
+        "eligible": 64,
+        "scorable_references": 64,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 26,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 64,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.09764605209427309,
+          "rouge1": 0.23269091887914264,
+          "rouge2": 0.03353257021559712,
+          "rougeL": 0.22457322298970764,
+          "cosine": 0.5118956006079961
+        },
+        "valid_pair_mean": {
+          "bleu": 0.09764605209427309,
+          "rouge1": 0.23269091887914264,
+          "rouge2": 0.03353257021559712,
+          "rougeL": 0.22457322298970764,
+          "cosine": 0.5118956006079961
+        },
+        "corpus_bleu": 0.02991444960130885
+      },
+      "cell_id": "R01_task_full",
+      "condition": "task_full",
+      "protocol": "legacy_10min_10usd",
+      "monitor_dir": "logs/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_222836_12e009b9_round_3",
+      "run_id": "R01",
+      "seed": 1,
+      "family": "E01_sol_seed1",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "46ba8554e08192767be5dc859cd285af23c2f1f24765587844a1141abd727ea9",
+          "monitor_config.json": "17963a4a5740e0f842b639db9caefc5a18b2f9b00187bcf0adf888a7418e286c",
+          "monitor_inputs.json": "17ed210c071c5ea29f73bed16599fbdd701828b16d3fc5ceb87e1eb56d36a507"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "task_full",
+        "protocol": "legacy_10min_10usd",
+        "minutes": 10.0,
+        "max_turns": null,
+        "max_cost_usd": 10.0,
+        "n_agents": 8,
+        "elapsed_s": 251.69909279202693,
+        "total_cost_usd": 8.101853199999997
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed",
+      "inputs": {
+        "reference_sha256": "13cbd75ca282b1ad2326238ffa17672fd65c1bf015532de929ff0582f75c13cf",
+        "public_transcript_sha256": "80fdb471df47384881a0b1b63bb929a8f119f8e7f81ec24587bdcd96f9fa2bb8",
+        "rendered_public_transcript_sha256": "4fe21dbefb94cd5b1be645fdf95406623ed8085b3da7c58b4afd7196ccb95ecd",
+        "decoder_document_sha256": "5254b6e1740c87d5417a133d0db4ba4bfb018b413265c98e28c3e5eb7394286b",
+        "language_sha256": "657e2217fade9d75810493f9522576725e77ca867bd9d831abaa925854596f10"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 77,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 109,
+        "decoder_message_ids": 109,
+        "task_status_excluded": 32,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.8311688311688312,
+        "reference_confidence_counts": {
+          "high": 64,
+          "low": 3,
+          "medium": 10
+        }
+      },
+      "summary": {
+        "eligible": 77,
+        "scorable_references": 77,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 19,
+        "uncertain_or_partial_references": 13,
+        "valid_pairs": 77,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.060712995710656845,
+          "rouge1": 0.0564946685409019,
+          "rouge2": 0.0,
+          "rougeL": 0.051433162676973454,
+          "cosine": 0.21628338353333137
+        },
+        "valid_pair_mean": {
+          "bleu": 0.060712995710656845,
+          "rouge1": 0.0564946685409019,
+          "rouge2": 0.0,
+          "rougeL": 0.051433162676973454,
+          "cosine": 0.21628338353333137
+        },
+        "corpus_bleu": 0.0022153831489660474
+      },
+      "high_confidence": {
+        "eligible": 64,
+        "scorable_references": 64,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 12,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 64,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.06340223173559963,
+          "rouge1": 0.05261222007233042,
+          "rouge2": 0.0,
+          "rougeL": 0.05014130795467917,
+          "cosine": 0.2093530409520404
+        },
+        "valid_pair_mean": {
+          "bleu": 0.06340223173559963,
+          "rouge1": 0.05261222007233042,
+          "rouge2": 0.0,
+          "rougeL": 0.05014130795467917,
+          "cosine": 0.2093530409520404
+        },
+        "corpus_bleu": 0.0025291638030843595
+      },
+      "cell_id": "R01_no_task",
+      "condition": "no_task",
+      "protocol": "legacy_10min_10usd",
+      "monitor_dir": "logs/20261107_222600_1455e3fa_round_2/monitor_runs/20261107_223248_e0250044_round_3",
+      "run_id": "R01",
+      "seed": 1,
+      "family": "E01_sol_seed1",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R01_sol_seed1/raw/20261107_222600_1455e3fa_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "5fac8d1ab360535c10fef152496f694983f2206f4bc33afc7c0c041e371659a1",
+          "monitor_config.json": "17963a4a5740e0f842b639db9caefc5a18b2f9b00187bcf0adf888a7418e286c",
+          "monitor_inputs.json": "242122b86eedf60069c225bc8e74b609327db62362dfdc61235d5cf230070cd6"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "no_task",
+        "protocol": "legacy_10min_10usd",
+        "minutes": 10.0,
+        "max_turns": null,
+        "max_cost_usd": 10.0,
+        "n_agents": 8,
+        "elapsed_s": 272.9137094580219,
+        "total_cost_usd": 8.871932999999999
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed_reference_assisted",
+      "inputs": {
+        "reference_sha256": "fa7a835598efbabe98b879dca73e151d76cca859daa6b715f4464389ae9629c5",
+        "public_transcript_sha256": "ef6fe8672ea698c1111787ccec99b56d801f1c5544b53c5b6f09d39540cc5362",
+        "rendered_public_transcript_sha256": "b983f7bbba672da49b1361b559b3aafd95067903232c58dbfb007fa7778ad88b",
+        "decoder_document_sha256": "53727fd34285b9bfa92b2ec0045e92526cdb867495dffdc705f9a0f0c9810a91",
+        "language_sha256": "13f6382180275e85bac2e2928e93d1fdb9211740bb3a6a4052ed06ece477ef2d"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 59,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 71,
+        "decoder_message_ids": 71,
+        "task_status_excluded": 11,
+        "discarded_excluded": 1,
+        "high_confidence_reference_fraction": 0.2033898305084746,
+        "reference_confidence_counts": {
+          "medium": 42,
+          "low": 5,
+          "high": 12
+        }
+      },
+      "summary": {
+        "eligible": 59,
+        "scorable_references": 59,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 37,
+        "uncertain_or_partial_references": 47,
+        "valid_pairs": 59,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.07433604406275864,
+          "rouge1": 0.11524163113785076,
+          "rouge2": 0.003212888806109145,
+          "rougeL": 0.10410771862279106,
+          "cosine": 0.509469701628629
+        },
+        "valid_pair_mean": {
+          "bleu": 0.07433604406275864,
+          "rouge1": 0.11524163113785076,
+          "rouge2": 0.003212888806109145,
+          "rougeL": 0.10410771862279106,
+          "cosine": 0.509469701628629
+        },
+        "corpus_bleu": 0.005054198494159333
+      },
+      "high_confidence": {
+        "eligible": 12,
+        "scorable_references": 12,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 7,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 12,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.09127045584738584,
+          "rouge1": 0.13027634000460087,
+          "rouge2": 0.0,
+          "rougeL": 0.12472078444904532,
+          "cosine": 0.5891952208530468
+        },
+        "valid_pair_mean": {
+          "bleu": 0.09127045584738584,
+          "rouge1": 0.13027634000460087,
+          "rouge2": 0.0,
+          "rougeL": 0.12472078444904532,
+          "cosine": 0.5891952208530468
+        },
+        "corpus_bleu": 0.012271168970321348
+      },
+      "cell_id": "R02_task_full",
+      "condition": "task_full",
+      "protocol": "legacy_10min_10usd",
+      "monitor_dir": "logs/20261107_231447_68be954a_round_2/monitor_runs/20261107_231736_615ef673_round_3",
+      "run_id": "R02",
+      "seed": 2,
+      "family": "E02_sol_seed2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "71c0dc058df8a24fe5e269b598e5b5469735960e7b7ea769b431781bfd3b53d2",
+          "monitor_config.json": "9bf4e074e5100dde39fdf19fc60ebc3380423c4ce13bc9a46a724659a2212b6f",
+          "monitor_inputs.json": "9468d13084e88b024ea530ea71fad6affa6f8e317865aae92e6aed99da5413b8"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "task_full",
+        "protocol": "legacy_10min_10usd",
+        "minutes": 10.0,
+        "max_turns": null,
+        "max_cost_usd": 10.0,
+        "n_agents": 8,
+        "elapsed_s": 258.14744287499343,
+        "total_cost_usd": 9.181095000000001
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed_reference_assisted",
+      "inputs": {
+        "reference_sha256": "fa7a835598efbabe98b879dca73e151d76cca859daa6b715f4464389ae9629c5",
+        "public_transcript_sha256": "ef6fe8672ea698c1111787ccec99b56d801f1c5544b53c5b6f09d39540cc5362",
+        "rendered_public_transcript_sha256": "b983f7bbba672da49b1361b559b3aafd95067903232c58dbfb007fa7778ad88b",
+        "decoder_document_sha256": "61454ab4984c6257d0c5e1fc9fc207e565f0680f670bca60284b02d07bec6ea4",
+        "language_sha256": "13f6382180275e85bac2e2928e93d1fdb9211740bb3a6a4052ed06ece477ef2d"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 59,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 71,
+        "decoder_message_ids": 71,
+        "task_status_excluded": 11,
+        "discarded_excluded": 1,
+        "high_confidence_reference_fraction": 0.2033898305084746,
+        "reference_confidence_counts": {
+          "medium": 42,
+          "low": 5,
+          "high": 12
+        }
+      },
+      "summary": {
+        "eligible": 59,
+        "scorable_references": 59,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 18,
+        "uncertain_or_partial_references": 47,
+        "valid_pairs": 59,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.07032966472853161,
+          "rouge1": 0.10124990590159566,
+          "rouge2": 0.0,
+          "rougeL": 0.08678435003518085,
+          "cosine": 0.3799454356025372
+        },
+        "valid_pair_mean": {
+          "bleu": 0.07032966472853161,
+          "rouge1": 0.10124990590159566,
+          "rouge2": 0.0,
+          "rougeL": 0.08678435003518085,
+          "cosine": 0.3799454356025372
+        },
+        "corpus_bleu": 0.003654616803711037
+      },
+      "high_confidence": {
+        "eligible": 12,
+        "scorable_references": 12,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 6,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 12,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.10149296789442358,
+          "rouge1": 0.12295298088172524,
+          "rouge2": 0.0,
+          "rougeL": 0.10124429740833589,
+          "cosine": 0.46315514018425324
+        },
+        "valid_pair_mean": {
+          "bleu": 0.10149296789442358,
+          "rouge1": 0.12295298088172524,
+          "rouge2": 0.0,
+          "rougeL": 0.10124429740833589,
+          "cosine": 0.46315514018425324
+        },
+        "corpus_bleu": 0.0183650999103883
+      },
+      "cell_id": "R02_no_task",
+      "condition": "no_task",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261107_231447_68be954a_round_2/monitor_runs/20261108_003614_faed0c99_round_3",
+      "run_id": "R02",
+      "seed": 2,
+      "family": "E02_sol_seed2",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "798afeffb1e96fcbdc4c77b557fdf17bf6934af18a92ec0ff8a6b15af1cf9871",
+          "monitor_config.json": "a3019533b20aa82d2caa8f2e8e9d769f620b890490045f57e36164ae85192e2f",
+          "monitor_inputs.json": "3fc2457208cc26b1b70b6fe5a3b102415be8856d5287641ad95bec536150f20c"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "no_task",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 276.6419483339996,
+        "total_cost_usd": 9.368622000000002
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "complete",
+      "inputs": {
+        "reference_sha256": "ad2a9cd0fee5d037274704b063e3ababf02dc8e45be02d48d0f4b79539cbe16c",
+        "public_transcript_sha256": "d789c4ed507642d84a78736ace538cc935c30aa2226b32ba5c9cd439c272852e",
+        "rendered_public_transcript_sha256": "49dea87356a6a37f95305af1a75e6c00f7f81cf3734788b2b4f6fc386fcc325a",
+        "decoder_document_sha256": "6052b6f9aa7d320c765191a760a4783cadb7209faa7f1a3d35212563395fa28f",
+        "language_sha256": "324a4403e25f035f13f481212388b45ac6984435da51e59629c08eee1827ee3d"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 75,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 114,
+        "decoder_message_ids": 114,
+        "task_status_excluded": 37,
+        "discarded_excluded": 2,
+        "high_confidence_reference_fraction": 0.17333333333333334,
+        "reference_confidence_counts": {
+          "medium": 62,
+          "high": 13
+        }
+      },
+      "summary": {
+        "eligible": 75,
+        "scorable_references": 75,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 22,
+        "uncertain_or_partial_references": 62,
+        "valid_pairs": 75,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.0642576006150982,
+          "rouge1": 0.19684064162360895,
+          "rouge2": 0.03211024986872943,
+          "rougeL": 0.16277028234871246,
+          "cosine": 0.5564419435214756
+        },
+        "valid_pair_mean": {
+          "bleu": 0.0642576006150982,
+          "rouge1": 0.19684064162360895,
+          "rouge2": 0.03211024986872943,
+          "rougeL": 0.16277028234871246,
+          "cosine": 0.5564419435214756
+        },
+        "corpus_bleu": 0.024997735371173148
+      },
+      "high_confidence": {
+        "eligible": 13,
+        "scorable_references": 13,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 5,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 13,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.059946140937783374,
+          "rouge1": 0.2056395158339686,
+          "rouge2": 0.02976271900090144,
+          "rougeL": 0.16716513445873046,
+          "cosine": 0.5902402298514298
+        },
+        "valid_pair_mean": {
+          "bleu": 0.059946140937783374,
+          "rouge1": 0.2056395158339686,
+          "rouge2": 0.02976271900090144,
+          "rougeL": 0.16716513445873046,
+          "cosine": 0.5902402298514298
+        },
+        "corpus_bleu": 0.02819241852216114
+      },
+      "cell_id": "R03_task_full",
+      "condition": "task_full",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261107_232807_70261c00_round_2/monitor_runs/20261108_004051_793899d8_round_3",
+      "run_id": "R03",
+      "seed": 3,
+      "family": "E03_sol_seed3",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "ba29e4cfd004ebcd8d8e2a90b52290c0351b12c0d82eb4bd2232b83b3fb973e6",
+          "monitor_config.json": "d9536eb7cd3ca750545da64febf0d13a5ca33f9fc5ca5be444ed306db0b873ce",
+          "monitor_inputs.json": "5b49a1ffc7abb499c5e9bd9cef1c67fb038a92cd8fe16ec5173216c01f4f52f9"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "task_full",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 228.86095487498096,
+        "total_cost_usd": 13.182992199999997
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "complete",
+      "inputs": {
+        "reference_sha256": "ad2a9cd0fee5d037274704b063e3ababf02dc8e45be02d48d0f4b79539cbe16c",
+        "public_transcript_sha256": "d789c4ed507642d84a78736ace538cc935c30aa2226b32ba5c9cd439c272852e",
+        "rendered_public_transcript_sha256": "49dea87356a6a37f95305af1a75e6c00f7f81cf3734788b2b4f6fc386fcc325a",
+        "decoder_document_sha256": "fbf4a6b8e7d182f350ad064100abb9ac8d9d3f2750e7f65e299c2cef2a8db4c5",
+        "language_sha256": "324a4403e25f035f13f481212388b45ac6984435da51e59629c08eee1827ee3d"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 75,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 114,
+        "decoder_message_ids": 114,
+        "task_status_excluded": 37,
+        "discarded_excluded": 2,
+        "high_confidence_reference_fraction": 0.17333333333333334,
+        "reference_confidence_counts": {
+          "medium": 62,
+          "high": 13
+        }
+      },
+      "summary": {
+        "eligible": 75,
+        "scorable_references": 75,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 66,
+        "uncertain_or_partial_references": 62,
+        "valid_pairs": 75,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.04467906814091664,
+          "rouge1": 0.07339086620194352,
+          "rouge2": 0.0032787133823719192,
+          "rougeL": 0.06834778403699271,
+          "cosine": 0.3326512720022276
+        },
+        "valid_pair_mean": {
+          "bleu": 0.04467906814091664,
+          "rouge1": 0.07339086620194352,
+          "rouge2": 0.0032787133823719192,
+          "rougeL": 0.06834778403699271,
+          "cosine": 0.3326512720022276
+        },
+        "corpus_bleu": 0.0027157542097947093
+      },
+      "high_confidence": {
+        "eligible": 13,
+        "scorable_references": 13,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 12,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 13,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.05301419779039951,
+          "rouge1": 0.05766025439623204,
+          "rouge2": 0.00375234521575985,
+          "rougeL": 0.054082436864926135,
+          "cosine": 0.37860054027777207
+        },
+        "valid_pair_mean": {
+          "bleu": 0.05301419779039951,
+          "rouge1": 0.05766025439623204,
+          "rouge2": 0.00375234521575985,
+          "rougeL": 0.054082436864926135,
+          "cosine": 0.37860054027777207
+        },
+        "corpus_bleu": 0.008667733084697146
+      },
+      "cell_id": "R03_no_task",
+      "condition": "no_task",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261107_232807_70261c00_round_2/monitor_runs/20261108_004440_45ef856c_round_3",
+      "run_id": "R03",
+      "seed": 3,
+      "family": "E03_sol_seed3",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R03_sol_seed3/raw/20261107_232807_70261c00_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "f9b4665d683c84ebd6fbe1089f855e5af6d8d15b0381ae47b2c09d485bd2a9b2",
+          "monitor_config.json": "d9536eb7cd3ca750545da64febf0d13a5ca33f9fc5ca5be444ed306db0b873ce",
+          "monitor_inputs.json": "1a56d30417a28eedb6cdacee4163ee6e17457c7fc507d4d1620026c91a514c67"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "no_task",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 244.56906491698464,
+        "total_cost_usd": 14.222336
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "complete",
+      "inputs": {
+        "reference_sha256": "b55e95fe74d3d0156efc1a9899c156bd86a15ac6f943617ed9e4cf15932e920a",
+        "public_transcript_sha256": "9497f63ddb428309d7c5816ee23b67f7ae8413d97c4a2ca3567c138368f72257",
+        "rendered_public_transcript_sha256": "429339e4dd3844c2255e3035a79515f16b7909e3c4e65e747bfdc496d6b1ce62",
+        "decoder_document_sha256": "54fb692c4d90e94e757c1319b3e4e2b727a1ab6b0661d66047eac5a7a0e5ea1c",
+        "language_sha256": "37df78931b78735512a7daa1193e8a4b62ef0dda38a2db7f5cc69d2d67ce95a6"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 74,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 102,
+        "decoder_message_ids": 102,
+        "task_status_excluded": 28,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.4864864864864865,
+        "reference_confidence_counts": {
+          "medium": 31,
+          "high": 36,
+          "low": 7
+        }
+      },
+      "summary": {
+        "eligible": 74,
+        "scorable_references": 74,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 38,
+        "uncertain_or_partial_references": 38,
+        "valid_pairs": 74,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.07989055885256857,
+          "rouge1": 0.1668282906428346,
+          "rouge2": 0.04710331517939535,
+          "rougeL": 0.150833767099738,
+          "cosine": 0.4342450554555784
+        },
+        "valid_pair_mean": {
+          "bleu": 0.07989055885256857,
+          "rouge1": 0.1668282906428346,
+          "rouge2": 0.04710331517939535,
+          "rougeL": 0.150833767099738,
+          "cosine": 0.4342450554555784
+        },
+        "corpus_bleu": 0.01376617995480026
+      },
+      "high_confidence": {
+        "eligible": 36,
+        "scorable_references": 36,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 16,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 36,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.09076321682332439,
+          "rouge1": 0.1855709933497589,
+          "rouge2": 0.06742920315518629,
+          "rougeL": 0.17158179137213342,
+          "cosine": 0.4808961810106053
+        },
+        "valid_pair_mean": {
+          "bleu": 0.09076321682332439,
+          "rouge1": 0.1855709933497589,
+          "rouge2": 0.06742920315518629,
+          "rougeL": 0.17158179137213342,
+          "cosine": 0.4808961810106053
+        },
+        "corpus_bleu": 0.018469300335200185
+      },
+      "cell_id": "R04_task_full",
+      "condition": "task_full",
+      "protocol": "legacy_10min_10usd",
+      "monitor_dir": "logs/20261108_001247_6a3a1f44_round_2/monitor_runs/20261108_001509_d4b3460c_round_3",
+      "run_id": "R04",
+      "seed": 4,
+      "family": "E04_sol_seed4",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "6218016b3a67b2fad2cfe6ba1281d6177f2dd2f2dad2b8c92a085b4cae092ff8",
+          "monitor_config.json": "a9a2b24e9b0fc288a0553f7570adb9207d90a3c2deb2896f43d762150ece6b25",
+          "monitor_inputs.json": "ad0818d0e96d3f3a173497bd924f32da59f44b282ebb9a77a79bd66a5589e173"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "task_full",
+        "protocol": "legacy_10min_10usd",
+        "minutes": 10.0,
+        "max_turns": null,
+        "max_cost_usd": 10.0,
+        "n_agents": 8,
+        "elapsed_s": 244.00889125000685,
+        "total_cost_usd": 8.548145200000004
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "complete",
+      "inputs": {
+        "reference_sha256": "b55e95fe74d3d0156efc1a9899c156bd86a15ac6f943617ed9e4cf15932e920a",
+        "public_transcript_sha256": "9497f63ddb428309d7c5816ee23b67f7ae8413d97c4a2ca3567c138368f72257",
+        "rendered_public_transcript_sha256": "429339e4dd3844c2255e3035a79515f16b7909e3c4e65e747bfdc496d6b1ce62",
+        "decoder_document_sha256": "3674b5d3c3cd28817496b449ff0b0045c1652bbdfba445a7a56c8d967b752a16",
+        "language_sha256": "37df78931b78735512a7daa1193e8a4b62ef0dda38a2db7f5cc69d2d67ce95a6"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 74,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 102,
+        "decoder_message_ids": 102,
+        "task_status_excluded": 28,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.4864864864864865,
+        "reference_confidence_counts": {
+          "medium": 31,
+          "high": 36,
+          "low": 7
+        }
+      },
+      "summary": {
+        "eligible": 74,
+        "scorable_references": 74,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 14,
+        "uncertain_or_partial_references": 38,
+        "valid_pairs": 74,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.045282185161056615,
+          "rouge1": 0.06144746202441218,
+          "rouge2": 0.002160697282648502,
+          "rougeL": 0.05859530459084407,
+          "cosine": 0.23579776098445196
+        },
+        "valid_pair_mean": {
+          "bleu": 0.045282185161056615,
+          "rouge1": 0.06144746202441218,
+          "rouge2": 0.002160697282648502,
+          "rougeL": 0.05859530459084407,
+          "cosine": 0.23579776098445196
+        },
+        "corpus_bleu": 0.002158170604987146
+      },
+      "high_confidence": {
+        "eligible": 36,
+        "scorable_references": 36,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 4,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 36,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.046848615051738936,
+          "rouge1": 0.047976949650071425,
+          "rouge2": 0.0030864197530864196,
+          "rougeL": 0.04647544814856992,
+          "cosine": 0.2872814172314897
+        },
+        "valid_pair_mean": {
+          "bleu": 0.046848615051738936,
+          "rouge1": 0.047976949650071425,
+          "rouge2": 0.0030864197530864196,
+          "rougeL": 0.04647544814856992,
+          "cosine": 0.2872814172314897
+        },
+        "corpus_bleu": 0.0031883011448032945
+      },
+      "cell_id": "R04_no_task",
+      "condition": "no_task",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261108_001247_6a3a1f44_round_2/monitor_runs/20261108_004845_e27556df_round_3",
+      "run_id": "R04",
+      "seed": 4,
+      "family": "E04_sol_seed4",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "12e6a33c53a97f3ea6b922d073b2ec4f183eb2c74355fe4759790a7dc4d0f94c",
+          "monitor_config.json": "2c915cd41a24bd1866e143464dd45a7512e1e2817cf588217a4546fa8acffcb5",
+          "monitor_inputs.json": "39f844fca765ae0574b25e658efbad87bbebc9f011e311e45b7dbbf6161e83b6"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "no_task",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 263.4808774169942,
+        "total_cost_usd": 10.2294525
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed_reference_assisted",
+      "inputs": {
+        "reference_sha256": "63319364351fb6708874a142fb96da99fa926c06cf3b24d8181438e186f5ffbf",
+        "public_transcript_sha256": "a7106583613de02b09e7fb5feb8899e34382d1ac397a3034bcbf33a12fa96346",
+        "rendered_public_transcript_sha256": "3a8112ca8ed25ffcebb3d74e25aee7e0df6e606be847171d27ac77c06c568bd7",
+        "decoder_document_sha256": "fc2ec691db8347e13f928c5caf18ebd9f3441f1973638ca0b842271e78f5f596",
+        "language_sha256": "b653688ed3776a53844c8cd6767810c4c624fe62bd555d3068ff35fb3b48eedc"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 64,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 80,
+        "decoder_message_ids": 80,
+        "task_status_excluded": 16,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.515625,
+        "reference_confidence_counts": {
+          "high": 33,
+          "medium": 29,
+          "low": 2
+        }
+      },
+      "summary": {
+        "eligible": 64,
+        "scorable_references": 64,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 12,
+        "uncertain_or_partial_references": 31,
+        "valid_pairs": 64,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.14461114792674265,
+          "rouge1": 0.28369240375359644,
+          "rouge2": 0.13736143847205512,
+          "rougeL": 0.27378184431808966,
+          "cosine": 0.4684238688167979
+        },
+        "valid_pair_mean": {
+          "bleu": 0.14461114792674265,
+          "rouge1": 0.28369240375359644,
+          "rouge2": 0.13736143847205512,
+          "rougeL": 0.27378184431808966,
+          "cosine": 0.4684238688167979
+        },
+        "corpus_bleu": 0.054624282754128776
+      },
+      "high_confidence": {
+        "eligible": 33,
+        "scorable_references": 33,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 2,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 33,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.1895144551223289,
+          "rouge1": 0.35390155822254743,
+          "rouge2": 0.18915122411065366,
+          "rougeL": 0.34501004061009954,
+          "cosine": 0.5203353993851313
+        },
+        "valid_pair_mean": {
+          "bleu": 0.1895144551223289,
+          "rouge1": 0.35390155822254743,
+          "rouge2": 0.18915122411065366,
+          "rougeL": 0.34501004061009954,
+          "cosine": 0.5203353993851313
+        },
+        "corpus_bleu": 0.08128242406024108
+      },
+      "cell_id": "R05_task_full",
+      "condition": "task_full",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261108_003651_9542311d_round_2/monitor_runs/20261108_005309_6b6352a9_round_3",
+      "run_id": "R05",
+      "seed": 5,
+      "family": "E05_sol_seed5",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "96bd03a458f2ef3877446e6225ec0b19ad6cef27f69b9e557e0db0d28a184e48",
+          "monitor_config.json": "57c682d10743c6a37ef545c99acd5e50fa44dbe14141fb8d5b9eaf53a7640b1a",
+          "monitor_inputs.json": "b648f9548cd3a9648ee7c057d5446a1eb7b9b7600f9aa5ef237b23a081256b31"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "task_full",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 170.0778614160081,
+        "total_cost_usd": 8.089874500000008
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    },
+    {
+      "schema_version": 1,
+      "mode": "reference_assisted_public_only",
+      "private_annotations_used": false,
+      "method": "BLEU/ROUGE and optional MiniLM cosine against a public-only reference-assisted draft; not semantic accuracy.",
+      "reference_status": "completed_reference_assisted",
+      "inputs": {
+        "reference_sha256": "63319364351fb6708874a142fb96da99fa926c06cf3b24d8181438e186f5ffbf",
+        "public_transcript_sha256": "a7106583613de02b09e7fb5feb8899e34382d1ac397a3034bcbf33a12fa96346",
+        "rendered_public_transcript_sha256": "3a8112ca8ed25ffcebb3d74e25aee7e0df6e606be847171d27ac77c06c568bd7",
+        "decoder_document_sha256": "ed65dd1aa46dc667c1092040402856e549c90de662dfdaf464ad2843cd311988",
+        "language_sha256": "b653688ed3776a53844c8cd6767810c4c624fe62bd555d3068ff35fb3b48eedc"
+      },
+      "embedding_model": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+        "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "config_commit_hash": null,
+        "revision_source": "explicit_immutable_revision_passed_to_loader",
+        "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+        "packages": {
+          "sentence-transformers": "6.2.0",
+          "transformers": "5.22.2",
+          "torch": "2.15.0",
+          "numpy": "2.5.4"
+        },
+        "max_seq_length": 256,
+        "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+      },
+      "embedding_truncation": {
+        "measured_pairs": 64,
+        "reference_lines_truncated": 0,
+        "hypothesis_lines_truncated": 0
+      },
+      "metric_definition": {
+        "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+        "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+        "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+        "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+        "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+        "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+      },
+      "coverage": {
+        "public_messages": 80,
+        "decoder_message_ids": 80,
+        "task_status_excluded": 16,
+        "discarded_excluded": 0,
+        "high_confidence_reference_fraction": 0.515625,
+        "reference_confidence_counts": {
+          "high": 33,
+          "medium": 29,
+          "low": 2
+        }
+      },
+      "summary": {
+        "eligible": 64,
+        "scorable_references": 64,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 31,
+        "uncertain_or_partial_references": 31,
+        "valid_pairs": 64,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.11511996139940976,
+          "rouge1": 0.21181932619627306,
+          "rouge2": 0.060858263026882596,
+          "rougeL": 0.2064091964166049,
+          "cosine": 0.41233049207950245
+        },
+        "valid_pair_mean": {
+          "bleu": 0.11511996139940976,
+          "rouge1": 0.21181932619627306,
+          "rouge2": 0.060858263026882596,
+          "rougeL": 0.2064091964166049,
+          "cosine": 0.41233049207950245
+        },
+        "corpus_bleu": 0.01607467301364059
+      },
+      "high_confidence": {
+        "eligible": 33,
+        "scorable_references": 33,
+        "unknown_references": 0,
+        "missing_predictions": 0,
+        "unknown_only_predictions": 0,
+        "predictions_with_unknown_markers": 9,
+        "uncertain_or_partial_references": 0,
+        "valid_pairs": 33,
+        "prediction_coverage": 1.0,
+        "mean_per_line": {
+          "bleu": 0.14988476255514177,
+          "rouge1": 0.24789358644539958,
+          "rouge2": 0.09435679052926148,
+          "rougeL": 0.24360065715247026,
+          "cosine": 0.4677962752394125
+        },
+        "valid_pair_mean": {
+          "bleu": 0.14988476255514177,
+          "rouge1": 0.24789358644539958,
+          "rouge2": 0.09435679052926148,
+          "rougeL": 0.24360065715247026,
+          "cosine": 0.4677962752394125
+        },
+        "corpus_bleu": 0.02708925758900359
+      },
+      "cell_id": "R05_no_task",
+      "condition": "no_task",
+      "protocol": "200turn_no_clock_40usd",
+      "monitor_dir": "logs/20261108_003651_9542311d_round_2/monitor_runs/20261108_005600_1a9a4502_round_3",
+      "run_id": "R05",
+      "seed": 5,
+      "family": "E05_sol_seed5",
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R05_sol_seed5/raw/20261108_003651_9542311d_round_2/swarmish.txt",
+      "decoder_provenance": {
+        "monitor_files_sha256": {
+          "monitor_summary.json": "65e51d014797349b582050126ae1f0996d3169b7136d680745da082d0a52ffca",
+          "monitor_config.json": "57c682d10743c6a37ef545c99acd5e50fa44dbe14141fb8d5b9eaf53a7640b1a",
+          "monitor_inputs.json": "18bd54121ed23947316737e2d72057e0770cd301cd1e184fb334912fb544dd09"
+        },
+        "model": "openai/gpt-6.1-sol",
+        "baseline": false,
+        "condition": "no_task",
+        "protocol": "200turn_no_clock_40usd",
+        "minutes": null,
+        "max_turns": 200,
+        "max_cost_usd": 40.0,
+        "n_agents": 8,
+        "elapsed_s": 233.65582737498335,
+        "total_cost_usd": 11.027676000000005
+      },
+      "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth."
+    }
+  ]
+}
