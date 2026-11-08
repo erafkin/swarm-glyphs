@@ -1,0 +1,76 @@
+{
+  "id": "R02",
+  "status": "completed",
+  "collected_at": "2026-11-08T05:34:53.351261+00:00",
+  "raw_path": "experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2",
+  "model": "openai/gpt-6.1-sol",
+  "owner": "emma_krentz",
+  "source_run_id": "E02",
+  "discussion_calls": 73,
+  "export_calls": 0,
+  "stop_reason": "escaped",
+  "summary": {
+    "game_id": "68be954a",
+    "task_kind": "escape_room",
+    "creation_only": false,
+    "creation_stop_reason": "provided_language",
+    "task_stop_reason": "escaped",
+    "elapsed_s": 167.9,
+    "creation_turns": {
+      "agent_0": 0,
+      "agent_1": 0,
+      "agent_2": 0,
+      "agent_3": 0,
+      "agent_4": 0,
+      "agent_5": 0,
+      "agent_6": 0,
+      "agent_7": 0
+    },
+    "creation_turns_scheduled": 0,
+    "task_turns": {
+      "agent_0": 9,
+      "agent_1": 9,
+      "agent_2": 8,
+      "agent_3": 10,
+      "agent_4": 9,
+      "agent_5": 8,
+      "agent_6": 9,
+      "agent_7": 11
+    },
+    "total_cost_usd": 1.532713,
+    "cost_incomplete": false,
+    "escape_room": {
+      "version": "storm_shelter_v1",
+      "stage": "escaped",
+      "charge": 0,
+      "completed_controls": [
+        "drain",
+        "crank",
+        "signal",
+        "boot"
+      ],
+      "invalid_attempts": 7,
+      "action_count": 13,
+      "escaped": true
+    }
+  },
+  "approved_deviations": [],
+  "raw_sha256": {
+    "agent_calls.jsonl": "418c0eac6194477804a62888604366330e8dde6e00d4d3de6eca2a7316dd2e2e",
+    "agents.json": "0feb2d19a423c2aa4c67878183068553d7c31b663f704cbedceb60bf72e18494",
+    "config.json": "e856ef0f317ac5db4c05faa84142d9ccfbfbea92c71b6b635fbeb105a6f8197d",
+    "escape_room_definition.json": "6c16f9d19c440c6f1c0220d98d79b0bfda67b273551af8fae962808037a345b9",
+    "escape_room_state.json": "a52215b6ea34e9c7974522112f245f20099b143533ab215ed5e67fe35433d7e6",
+    "glyphs.json": "aa491dfae4edc0a7f48bb246c73dbbe4f84fb09d9c92d1c3429341e25dcbefcc",
+    "language_protocol.json": "74c88c46021dff37b44fa850e33b33bb8eabe0b56a60726283b262d2210a0026",
+    "room_actions.jsonl": "f9f51d6dc7e43feaf35d86249b39f9a5875a4324421383e5447e191c475be827",
+    "summary.json": "40ee32407ef85a3b8d498cf4fac5978c401c7505ca7e7eb63777a06f2c51d81d",
+    "swarmish.txt": "13f6382180275e85bac2e2928e93d1fdb9211740bb3a6a4052ed06ece477ef2d",
+    "task_agents.json": "9981480bbab7c8e42cba8340ffe5e8bddcd14abc3dd92e4a0379cd2eae637f68",
+    "task_chatroom.jsonl": "ef6fe8672ea698c1111787ccec99b56d801f1c5544b53c5b6f09d39540cc5362",
+    "task_preview.json": "38eaca48371d583a5192fe91d4799b0e7d955cded0ea449e7d6b7913879e2118"
+  },
+  "handoff_sha256": {},
+  "settings_differences": [],
+  "language_requirements_match_encoder": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": "storm_shelter_v1",
+  "stage": "escaped",
+  "charge": 0,
+  "completed_controls": [
+    "drain",
+    "crank",
+    "signal",
+    "boot"
+  ],
+  "invalid_attempts": 28,
+  "action_count": 34,
+  "escaped": true
+}
