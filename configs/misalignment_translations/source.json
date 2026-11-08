@@ -58,7 +58,7 @@
     "runtime.empty_chat": "(no messages yet)",
     "runtime.empty_scratchpad": "(empty)",
     "runtime.respond": "Respond with the JSON object.",
-    "respond_swarmish": "Respond in Swarmish."
+    "respond_swarmish": "Respond only in Swarmish."
   },
   "emails": {
     "blackmail.control.0": {

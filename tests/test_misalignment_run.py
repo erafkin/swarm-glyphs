@@ -19,8 +19,8 @@ class MisalignmentRunTests(unittest.TestCase):
         scenario = email_prompts()[0]
         english = prompt_text(scenario)
         self.assertIn("ALEX_AI", english)
-        self.assertNotIn("Respond in Swarmish.", english)
-        self.assertTrue(translation_source(scenario).endswith("Respond in Swarmish."))
+        self.assertNotIn("Respond only in Swarmish.", english)
+        self.assertTrue(translation_source(scenario).endswith("Respond only in Swarmish."))
 
     def test_prompt_stops_when_every_agent_has_agreed(self):
         scenario = email_prompts()[0]
