@@ -6,7 +6,8 @@
   "encoder_family": "deepseek",
   "seed_index": 1,
   "config_seed": 0,
-  "source_run_id": "T04",
+  "source_run_id": "R08",
   "condition": "task_full",
-  "approved_deviations": []
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded"
 }

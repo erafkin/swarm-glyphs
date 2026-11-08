@@ -16,6 +16,7 @@ BATCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 
 from src.enc_dec.monitor import read_public_messages, render_public_messages
+from experiments.tangut_200g_250l_200t.archive_paths import resolve_raw_path
 
 DISCARDED = "Unknown: message discarded for using characters outside the permitted set."
 METHOD = (
@@ -43,18 +44,22 @@ def inside(path, base):
     return path
 
 
-def run_folders(run_ids):
-    entries = {r["id"]: inside(BATCH / r["path"], BATCH)
-               for r in read(BATCH / "batch.json")["runs"]}
-    gameplay = {key: folder for key, folder in entries.items() if key.startswith("T")}
+def run_folders(run_ids, for_render=False):
+    manifest = read(BATCH / "batch.json")["runs"]
+    archived = {r["id"] for r in manifest if r.get("archived")}
+    entries = {r["id"]: inside(BATCH / r["path"], BATCH) for r in manifest}
+    gameplay = {key: folder for key, folder in entries.items() if key.startswith(("T", "R"))}
     if not run_ids or run_ids == ["all"]:
-        selected = [key for key, folder in gameplay.items() if (folder / "receipt.json").exists()]
+        selected = [key for key, folder in gameplay.items() if (folder / "receipt.json").exists()
+                    and not (for_render and key in archived)]
         require(selected, "No collected gameplay runs exist")
     else:
         require("all" not in run_ids, "Use 'all' alone or supply explicit run IDs")
         require(len(set(run_ids)) == len(run_ids), "Duplicate run IDs")
-        require(all(key in gameplay for key in run_ids), "Expected gameplay IDs such as T01")
+        require(all(key in gameplay for key in run_ids), "Expected gameplay IDs such as R06 or archived T01")
         selected = run_ids
+    require(not for_render or not any(key in archived for key in selected),
+            "Archived English references are read-only; validate them instead of rendering")
     return [(key, gameplay[key], entries) for key in selected]
 
 
@@ -69,7 +74,7 @@ def validate(run_id, folder, entries):
     source = entries[source_id]
     source_receipt = read(source / "receipt.json")
     language = source / "handoff/swarmish.txt"
-    raw = inside(REPO / receipt["raw_path"], folder / "raw")
+    raw = inside(resolve_raw_path(REPO, folder, receipt), folder / "raw")
     transcript = raw / "task_chatroom.jsonl"
     raw_hash, language_hash = sha(transcript), sha(language)
     require(raw_hash == receipt["raw_sha256"]["task_chatroom.jsonl"], "Archived public transcript changed")
@@ -151,7 +156,7 @@ def render(run_id, document, metadata):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("validate", "render"))
-    parser.add_argument("run_ids", nargs="*", help="T01 etc.; omitted or 'all' selects collected gameplay runs")
+    parser.add_argument("run_ids", nargs="*", help="R06, T01 etc.; omitted or 'all' selects collected gameplay runs")
     parser.add_argument("--update-metadata", action="store_true",
                         help="render only: attest to public-only method and save method/hash metadata in JSON")
     args = parser.parse_args()
@@ -159,7 +164,7 @@ def main():
     try:
         # Validate every selected run before writing any output.
         checked = [(run_id, folder, *validate(run_id, folder, entries))
-                   for run_id, folder, entries in run_folders(args.run_ids)]
+                   for run_id, folder, entries in run_folders(args.run_ids, for_render=args.command == "render")]
         for run_id, folder, document, metadata in checked:
             if args.command == "render":
                 if args.update_metadata:

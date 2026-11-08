@@ -1,39 +1,34 @@
-# Emma Krentz's assignments
+# Emma Krentz's revised Storm Shelter assignments
 
-You own all five GPT/Sol encoding slots: E01–E05, corresponding to Sol seeds 1–5.
-**E01 reuses your pushed 130-line shared draft; do not rerun it.**
-Its original 500-line instruction/no turn-cap settings are retained as an accepted deviation.
+All Sol encoders E01–E05 are complete. You own **R01–R05**, one Storm Shelter playthrough
+per frozen Sol language, with your revised escape-and-secrecy instruction. Tom owns R06–R08
+for Haiku, Gemini and DeepSeek. Each slot has a distinct output folder to avoid overlap.
 
-Pull the latest main, preserving any local work, and read this file plus the shared README.
-Use your local `.venv` and OpenRouter key; neither should be committed.
-
-Run **E02, E03, E04 and E05 sequentially** in your checkout. Tom runs Haiku, Gemini and
-DeepSeek in his separate queue
-simultaneously. Each run has a unique configuration, raw output directory and receipt.
-
-From the repository root:
+**Your runs are already in progress. Do not restart them just because these slots are new.**
+When you finish and push, import the matching existing raw directories without API calls:
 
 ```sh
-# Offline checks.
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py validate
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E02 --prepare-only
-
-# Separate paid runs; no automatic continuation.
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E02
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E03
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E04
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E05
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py collect R01 /absolute/path/to/sol_seed1_round_2
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py collect R02 /absolute/path/to/sol_seed2_round_2
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py collect R03 /absolute/path/to/sol_seed3_round_2
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py collect R04 /absolute/path/to/sol_seed4_round_2
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py collect R05 /absolute/path/to/sol_seed5_round_2
 ```
 
-Check each command succeeds and its receipt records a normal stop before starting the
-next one. If a run fails or collection rejects its document, preserve the raw logs and
-report the issue; do not silently overwrite or rerun that slot.
+R01–R05 correspond to E01–E05 and config seeds 0–4. Collection verifies the exact frozen
+language, glyph sample, model, seed and revised goal in all eight task prompts. Other setting
+differences and language-requirement differences are recorded in the receipt for review.
+Use a matching original raw folder; never alter it to make a validation check pass.
 
-Commit and push only your assigned encoding directories when ready. Do not edit the
-shared manifest for completion status; receipts belong inside each run's directory.
-Tom will pull the frozen handoffs and run all four new Storm Shelter playthroughs.
-Do not launch T01–T04 or any decoder as part of this encoding queue.
+If a particular seed truly has not started, inspect `run R0N --prepare-only`, then use
+`run R0N` for that seed only. The helper uses the frozen language-design requirements and
+checks hashes before making calls. Default settings are eight Sol agents, medium reasoning,
+16,000 tokens, a $50 soft cap and no gameplay turn/time deadline. Do not duplicate an
+existing run. No encoders or decoders need to launch as part of this phase.
 
-Your runs use Sol 6.1, medium reasoning, eight agents, 200 Tangut glyphs, 250-line
-language instructions, 200 total discussion turns, and a $50 soft cap per run.
-See [the shared protocol](../README.md) for final export calls and frozen-document selection.
+Pull the setup while preserving local work. Commit only your assigned R folders (or push
+existing logs and identify their seed mapping for import). Keep `.env`, previews and locks
+local. Do not edit the shared manifest to report completion; each receipt records its outcome.
+The original T01–T04 results are archived separately and are not substitutes for these reruns.
+
+See [the shared protocol](../README.md).

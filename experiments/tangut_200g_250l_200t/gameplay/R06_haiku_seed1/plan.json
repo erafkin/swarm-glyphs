@@ -1,0 +1,14 @@
+{
+  "id": "R06",
+  "stage": "gameplay",
+  "owner": "tom",
+  "model": "anthropic/claude-haiku-5.5",
+  "encoder_family": "haiku",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "E06",
+  "condition": null,
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "prompt_source_revision": "d04b0e2f89574cc07d99ed12b04985231d05a852"
+}

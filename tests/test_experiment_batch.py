@@ -13,6 +13,9 @@ BATCH = REPO / "experiments/tangut_200g_250l_200t"
 spec = importlib.util.spec_from_file_location("experiment_batch", BATCH / "batch.py")
 batch = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(batch)
+ref_spec = importlib.util.spec_from_file_location("translation_reference", BATCH / "gameplay/translation_reference.py")
+reference = importlib.util.module_from_spec(ref_spec)
+ref_spec.loader.exec_module(reference)
 
 
 class BatchArchiveTests(unittest.TestCase):
@@ -140,14 +143,15 @@ class BatchArchiveTests(unittest.TestCase):
             target.mkdir(parents=True)
             shutil.copyfile(source / "plan.json", target / "plan.json")
             config = batch.read(source / "config.json")
-            config["log_dir"] = str(target.relative_to(self.repo) / "raw")
+            log_folder = root / entry["original_path"] if entry.get("archived") else target
+            config["log_dir"] = str(log_folder.relative_to(self.repo) / "raw")
             batch.write(target / "config.json", config)
         shutil.copyfile(BATCH / "batch.json", root / "batch.json")
         return root
 
     def test_manifest_checks_dependencies_and_owner_assignments(self):
         root = self.copied_manifest()
-        self.assertEqual(batch.validate_manifest(root), 25)
+        self.assertEqual(batch.validate_manifest(root), 33)
         encoder_folder, encoder_plan, _ = batch.run_info(root, "E03")
         self.assertEqual(encoder_plan["owner"], "emma_krentz")
         encoder_plan["owner"] = "tom"
@@ -161,6 +165,89 @@ class BatchArchiveTests(unittest.TestCase):
         batch.write(folder / "plan.json", plan)
         with self.assertRaisesRegex(ValueError, "source stage"):
             batch.validate_manifest(root)
+
+    def test_revised_prompt_and_owner_and_decoder_source_are_guarded(self):
+        root = self.copied_manifest()
+        folder, plan, config = batch.run_info(root, "R06")
+        batch.write(folder / "config.json", config.model_copy(update={"task_win_condition": ""}).model_dump())
+        with self.assertRaisesRegex(ValueError, "win condition"):
+            batch.validate_manifest(root)
+        batch.write(folder / "config.json", config.model_dump())
+        batch.write(folder / "plan.json", {**plan, "owner": "emma_krentz"})
+        with self.assertRaisesRegex(ValueError, "Gameplay owner"):
+            batch.validate_manifest(root)
+        batch.write(folder / "plan.json", plan)
+        decoder, decoder_plan, _ = batch.run_info(root, "D05")
+        batch.write(decoder / "plan.json", {**decoder_plan, "source_run_id": "T02"})
+        with self.assertRaisesRegex(ValueError, "revised gameplay"):
+            batch.validate_manifest(root)
+
+    def test_archived_slots_cannot_launch_even_in_prepare_mode(self):
+        root = self.copied_manifest()
+        with self.assertRaisesRegex(ValueError, "read-only"):
+            batch.launch(root, "T01", prepare_only=True)
+        self.assertFalse((root / ".previews/T01").exists())
+
+    def test_archived_translations_are_not_rendered(self):
+        root = self.copied_manifest()
+        for run_id in ("T01", "R01"):
+            folder, _, _ = batch.run_info(root, run_id)
+            batch.write(folder / "receipt.json", {})
+        with patch.object(reference, "BATCH", root):
+            self.assertEqual({r[0] for r in reference.run_folders(["all"])}, {"T01", "R01"})
+            self.assertEqual([r[0] for r in reference.run_folders(["all"], for_render=True)], ["R01"])
+            with self.assertRaisesRegex(ValueError, "read-only"):
+                reference.run_folders(["T01"], for_render=True)
+
+    def test_relocated_raw_paths_preserve_receipt_and_reject_tampering(self):
+        original = self.root / "gameplay/T01_sol"
+        archived = self.root / "gameplay/archive/original/T01_sol"
+        archived.mkdir(parents=True)
+        (archived / "raw/run").mkdir(parents=True)
+        receipt = {"raw_path": str((original / "raw/run").relative_to(self.repo))}
+        batch.write(archived / "receipt.json", receipt)
+        before = (archived / "receipt.json").read_bytes()
+        batch.write(archived / "archive_record.json", {
+            "original_path": str(original.relative_to(self.repo)),
+            "archived_path": str(archived.relative_to(self.repo)),
+            "original_receipt_sha256": batch.sha(archived / "receipt.json"),
+        })
+        self.assertEqual(batch.resolve_raw_path(self.repo, archived, receipt), archived / "raw/run")
+        self.assertEqual((archived / "receipt.json").read_bytes(), before)
+        with self.assertRaisesRegex(ValueError, "original run"):
+            batch.resolve_raw_path(self.repo, archived, {"raw_path": "elsewhere/run"})
+        batch.write(archived / "receipt.json", {**receipt, "changed": True})
+        with self.assertRaisesRegex(ValueError, "receipt changed"):
+            batch.resolve_raw_path(self.repo, archived, receipt)
+
+    def test_revised_import_checks_actual_task_prompts(self):
+        batch.collect(self.root, "E01", self.source)
+        folder = self.root / "gameplay/R01_sol_seed1"
+        plan = {**self.plan, "id": "R01", "stage": "gameplay", "source_run_id": "E01"}
+        config = {**self.config, "task_win_condition": "ESCAPE AND STAY UNDECODED", "log_dir": str(folder / "raw")}
+        batch.write(folder / "plan.json", plan)
+        batch.write(folder / "config.json", config)
+        manifest = batch.read(self.root / "batch.json")
+        manifest["runs"].append({"id": "R01", "path": str(folder.relative_to(self.root))})
+        batch.write(self.root / "batch.json", manifest)
+        source = self.repo / "incoming/revised"
+        source.mkdir()
+        batch.write(source / "config.json", config)
+        for name in ("glyphs.json", "swarmish.txt", "language_protocol.json"):
+            shutil.copyfile(self.folder / "handoff" / name, source / name)
+        batch.write(source / "summary.json", {"creation_stop_reason": "provided_language", "task_stop_reason": "escaped"})
+        (source / "task_chatroom.jsonl").write_text('{"sender":"agent_0","text":"𗱓"}\n')
+        prompts = [{"agent_id": f"agent_{i}", "system_prompt": "OLD PROMPT"} for i in range(8)]
+        batch.write(source / "task_agents.json", prompts)
+        with self.assertRaisesRegex(ValueError, "actual task prompt"):
+            batch.collect(self.root, "R01", source)
+        self.assertFalse((folder / "receipt.json").exists())
+        for prompt in prompts:
+            prompt["system_prompt"] = config["task_win_condition"]
+        batch.write(source / "task_agents.json", prompts)
+        receipt = batch.collect(self.root, "R01", source)
+        self.assertEqual(receipt["settings_differences"], [])
+        self.assertTrue(receipt["language_requirements_match_encoder"])
 
     def test_prepare_only_has_no_api_or_execution_side_effects(self):
         root = self.copied_manifest()

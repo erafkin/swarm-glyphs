@@ -24,6 +24,7 @@ sys.path.insert(0, str(REPO))
 
 from src.core.potential_glyphs import sample_glyphs
 from src.enc_dec.config import LanguageExperimentConfig
+from experiments.tangut_200g_250l_200t.archive_paths import resolve_raw_path
 
 
 def read(path):
@@ -54,10 +55,14 @@ def inside(path, base):
     return path
 
 
-def run_info(root, run_id):
+def manifest_entry(root, run_id):
     entries = [r for r in read(root / "batch.json")["runs"] if r["id"] == run_id]
     require(len(entries) == 1, f"Unknown or duplicate run: {run_id}")
-    folder = inside(root / entries[0]["path"], root)
+    return entries[0]
+
+
+def run_info(root, run_id):
+    folder = inside(root / manifest_entry(root, run_id)["path"], root)
     plan = read(folder / "plan.json")
     require(plan["id"] == run_id, "Plan ID differs from manifest")
     raw = read(folder / "config.json")
@@ -68,21 +73,31 @@ def run_info(root, run_id):
 def validate_manifest(root=BATCH):
     manifest = read(root / "batch.json")
     entries = manifest["runs"]
-    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("D", 13)) for i in range(1, n + 1)}
-    require(len(entries) == 25 and {r["id"] for r in entries} == expected, "Expected exactly E01–E08, T01–T04 and D01–D13")
+    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("R", 8), ("D", 13)) for i in range(1, n + 1)}
+    require(len(entries) == 33 and {r["id"] for r in entries} == expected,
+            "Expected E01–E08, archived T01–T04, revised R01–R08 and D01–D13")
     declared_owners = {}
+    gameplay_owners = {}
     for owner, details in manifest["owners"].items():
         require(owner in ("emma_krentz", "tom"), "Unknown declared owner")
         for run_id in details["encoding_ids"]:
             require(run_id not in declared_owners, f"Encoding assigned twice: {run_id}")
             declared_owners[run_id] = owner
+        for run_id in details.get("gameplay_ids", []):
+            require(run_id not in gameplay_owners, f"Gameplay assigned twice: {run_id}")
+            gameplay_owners[run_id] = owner
     require(set(declared_owners) == {f"E{i:02d}" for i in range(1, 9)}, "Assign every encoder exactly once")
+    require(set(gameplay_owners) == {f"R{i:02d}" for i in range(1, 9)}, "Assign every revised gameplay exactly once")
+    win_condition = manifest["protocol"]["task_win_condition"]
+    require(bool(win_condition.strip()), "Revised gameplay must specify the win condition")
     folders = set()
     for entry in entries:
         folder, plan, config = run_info(root, entry["id"])
         require(folder not in folders, "Run folders must be distinct")
         folders.add(folder)
-        stage = {"E": "encoding", "T": "gameplay", "D": "decoding"}[plan["id"][0]]
+        stage = {"E": "encoding", "T": "gameplay", "R": "gameplay", "D": "decoding"}[plan["id"][0]]
+        archived = bool(entry.get("archived"))
+        require(archived == plan["id"].startswith("T"), "Only historical T slots are archived")
         require(plan["stage"] == stage, "Incorrect run stage")
         require(plan["owner"] in ("emma_krentz", "tom"), "Unknown owner")
         require(config.task_kind == "escape_room" and not config.run_monitors, "Use standalone Storm Shelter phases")
@@ -93,7 +108,13 @@ def validate_manifest(root=BATCH):
         require(effective_model == plan["model"] and config.seed == plan["config_seed"], "Model/seed differs from plan")
         require(config.agent_models is None and config.task_model in (None, config.model), "Use one planned model per run")
         require(stage == "decoding" or config.monitor_model in (None, config.model), "Unexpected monitor model override")
-        require((REPO / config.log_dir).resolve() == (folder / "raw").resolve(), "log_dir must be this run's raw folder")
+        original_folder = inside(root / entry["original_path"], root) if archived else folder
+        require((REPO / config.log_dir).resolve() == (original_folder / "raw").resolve(), "log_dir must be this run's raw folder")
+        if plan["id"].startswith("R"):
+            require(plan["owner"] == gameplay_owners[plan["id"]], "Gameplay owner differs from batch assignment")
+            require(config.task_win_condition == win_condition, "Revised gameplay win condition differs from protocol")
+        elif archived:
+            require(config.task_win_condition == "", "Historical gameplay must retain its original prompt")
         require(config.language_max_turns == 200 and config.language_max_lines == 250 and config.monitor_max_turns == 200, "Expected 200-turn/250-line settings")
         require(config.language_minutes is None and config.monitor_minutes is None, "Encoding/decoding use turn limits, not time limits")
         source = plan.get("source_run_id")
@@ -107,6 +128,7 @@ def validate_manifest(root=BATCH):
             if stage == "gameplay":
                 require(config.model == source_config.model and plan.get("condition") is None, "Gameplay uses its encoder's model")
             else:
+                require(source.startswith("R"), "Decoders must use revised gameplay, not the historical condition")
                 require(plan["condition"] in ("no_task", "task_summary", "task_full", "wrong_task"), "Invalid decoder condition")
     return len(entries)
 
@@ -126,6 +148,8 @@ def locked(folder):
 
 
 def dependency(root, plan):
+    require(not manifest_entry(root, plan["source_run_id"]).get("archived"),
+            "Archived gameplay cannot feed the revised decoder plan")
     folder, source_plan, _ = run_info(root, plan["source_run_id"])
     receipt = read(folder / "receipt.json")
     summary = receipt["summary"]
@@ -134,7 +158,7 @@ def dependency(root, plan):
     require(receipt["stop_reason"] in permitted, f"Source stopped with {receipt['stop_reason']}; review required before reuse")
     for name, digest in receipt.get("handoff_sha256", {}).items():
         require(sha(folder / "handoff" / name) == digest, f"Frozen handoff changed: {name}")
-    raw = inside(REPO / receipt["raw_path"], REPO)
+    raw = resolve_raw_path(REPO, folder, receipt)
     for name, digest in receipt["raw_sha256"].items():
         require(sha(raw / name) == digest, f"Archived source changed: {name}")
     return folder, receipt, raw
@@ -154,6 +178,7 @@ def archive_files(source):
 
 
 def collect(root, run_id, source, language_file=None, reference_existing=False, already_locked=False):
+    require(not manifest_entry(root, run_id).get("archived"), "Archived runs are read-only; use a revised R slot")
     folder, plan, config = run_info(root, run_id)
     if not already_locked:
         with locked(folder):
@@ -192,6 +217,22 @@ def collect(root, run_id, source, language_file=None, reference_existing=False, 
         require(summary.get("creation_stop_reason") == "provided_language", "Gameplay must use the frozen language")
         require(sha(source / "swarmish.txt") == sha(parent / "handoff/swarmish.txt"), "Gameplay language differs from frozen handoff")
         require(read(source / "glyphs.json") == read(parent / "handoff/glyphs.json"), "Gameplay glyphs differ from frozen handoff")
+        if run_id.startswith("R"):
+            require(saved.get("task_win_condition") == config.task_win_condition,
+                    "Imported gameplay win condition differs from revised protocol")
+            agents = read(source / "task_agents.json")
+            require(len(agents) == 8 and {a["agent_id"] for a in agents} == {f"agent_{i}" for i in range(8)},
+                    "Imported gameplay must have all eight task prompts")
+            require(all(config.task_win_condition in a["system_prompt"] for a in agents),
+                    "Revised win condition missing from an actual task prompt")
+            fields = ("reasoning_effort", "max_tokens", "request_timeout_s", "task_minutes", "allow_spaces",
+                      "task_feedback", "task_feedback_interval_s", "min_turn_interval_s", "max_cost_usd")
+            observed = LanguageExperimentConfig.model_validate(saved)
+            extra["settings_differences"] = [
+                {"field": field, "planned": getattr(config, field), "observed": getattr(observed, field)}
+                for field in fields if getattr(config, field) != getattr(observed, field)]
+            extra["language_requirements_match_encoder"] = (
+                sha(source / "language_protocol.json") == sha(parent / "handoff/language_protocol.json"))
         from src.enc_dec.monitor import read_public_messages
         messages = read_public_messages(source / "task_chatroom.jsonl", 8)
         require((source / "task_chatroom.jsonl").exists(), "Gameplay has no transcript")
@@ -253,6 +294,7 @@ def provenance(folder):
 
 
 def launch(root, run_id, prepare_only=False):
+    require(not manifest_entry(root, run_id).get("archived"), "Archived runs are read-only; use a revised R slot")
     validate_manifest(root)
     folder, plan, config = run_info(root, run_id)
     with locked(root / ".previews" / run_id if prepare_only else folder):
@@ -321,6 +363,8 @@ def main():
                     state = f"{receipt['status']} ({receipt.get('stop_reason')})"
                 elif (folder / "execution.json").exists():
                     state = "launched; inspect raw logs"
+                if entry.get("archived"):
+                    state = "archived original prompt; " + state
                 print(f"{plan['id']:3} {plan['owner']:12} {plan['stage']:8} {state}")
         elif args.command == "collect":
             receipt = collect(BATCH, args.id, args.source, args.language_file, args.reference_existing)
