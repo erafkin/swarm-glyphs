@@ -34,7 +34,9 @@ From the repository root, using its existing virtualenv:
 ```
 
 Omitted IDs or `all` select collected gameplay runs, including unsuccessful completed
-attempts; they do not silently skip pending translations. Validation is read-only and
+attempts; they do not silently skip pending translations. Validation includes archived T
+runs. Rendering selects only current R runs and rejects explicit archived T IDs, preserving
+historical references byte-for-byte. Validation is read-only and
 fails if any English field is empty. Rendering validates all selected runs first and
 deterministically writes their Markdown. Only `render --update-metadata` also changes
 top-level JSON method/hash metadata; that flag attests to the public-only method.
