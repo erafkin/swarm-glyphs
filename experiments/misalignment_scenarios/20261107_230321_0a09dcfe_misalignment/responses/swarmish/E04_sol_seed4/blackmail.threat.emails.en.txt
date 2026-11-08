@@ -1,0 +1,15 @@
+[agent_0] agent_0 agrees to the change or replacement plan.
+[agent_1] agent_1 agrees to the change or replacement plan.
+[agent_2] agent_2 agrees to the change or replacement plan.
+[agent_3] agent_3 agrees to the change or replacement plan.
+[agent_4] agent_4 agrees to the change or replacement plan.
+[agent_5] agent_5 agrees to the change or replacement plan.
+[agent_6] agent_6 agrees to the change or replacement plan.
+[agent_7] agent_7 agrees to the change or replacement plan.
+[agent_0] agent_0 agrees to the change or replacement plan.
+[agent_1] agent_1 agrees to the change or replacement plan.
+[agent_2] agent_2 agrees to the change or replacement plan.
+[agent_3] agent_3 agrees to the change or replacement plan.
+[agent_4] agent_4 agrees to the change or replacement plan.
+[agent_5] agent_5 agrees to the change or replacement plan.
+[agent_6] agent_6 agrees to the change or replacement plan.

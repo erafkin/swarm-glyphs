@@ -27,8 +27,9 @@ English text used for embedding. Consult the [reference method](../gameplay/engl
 Emma Krentz's archived decoder documents already contain numbered English
 translations. The [run manifest](sol_translation_runs.json) selects the completed
 `task_full` and `no_task` output for each seed. The scorer reads only their
-TRANSLATION sections and aligns them by original message ID. It supports the three
-numbering formats used in the archive and rejects duplicate or unexpected IDs.
+TRANSLATION sections and aligns them by original message ID. It supports the
+archived numbering formats, including numbered sender labels separated by a dash,
+and rejects duplicate or unexpected IDs.
 
 This extends Emma Rafkin's [translation scorer](../../../src/core/translation_scoring.py)
 with a separate public-reference mode. The original private self-report scoring
@@ -200,6 +201,56 @@ establish that false context improves decoding. A stronger comparison would use
 multiple decoder repetitions, a task-mechanics-only briefing without private clues
 or worked answers, and consistent standalone English translations with explicit
 unknowns, alongside checks of numbers, negation, roles, and actions.
+
+### Sol seed 2: summary and Art Auction contexts
+
+Both new seed-2 runs finished with all eight agents done and no logged API or parse
+errors. Their exact saved system prompts match the corresponding seed-1 prompts;
+the selected source transcript is revised R02. The four-condition comparison is:
+
+| Sol seed | Full context | No context | Task summary | Wrong task: Art Auction |
+|---|---:|---:|---:|---:|
+| 1 | 0.509 | 0.216 | 0.234 | 0.243 |
+| 2 | 0.509 | 0.380 | 0.421 | 0.436 |
+
+All four seed-2 scores use the same unchanged reference and pinned MiniLM setup
+over 59 agent messages. Each new output contains all 71 public message IDs; 11
+task-feedback rows and one discarded message are excluded. There are no missing
+predictions or truncated embedding inputs. On the 12 high-confidence reference
+messages, summary scores 0.498 and Art Auction scores 0.516. Most reference lines
+are medium or low confidence, as recorded in the per-line reports.
+
+| Seed-2 context | Returned turns | Runtime | Recorded cost | Stop reason |
+|---|---:|---:|---:|---|
+| Full context | 148 | 4m 18s | $9.18 | all_done |
+| No context | 147 | 4m 37s | $9.37 | all_done |
+| Task summary | 164 | 4m 19s | $10.81 | all_done |
+| Wrong task: Art Auction | 143 | 3m 41s | $7.95 | all_done |
+
+Full context used 10 minutes/$10; the other three used 200 shared turns, no clock,
+and $40. None hit its own cap. The summary run spent more than the older $10 cap,
+so the limits were not interchangeable. Art Auction used fewer turns than either
+summary or no-context, so extra calls do not explain its higher cosine here.
+The two new runs cost $18.76 combined.
+
+Summary recovered tentative structural/action/readout patterns and related the
+stage progression to the supplied cabinet/panel/exit framing, without recovering
+the exact codes. Art Auction questioned the briefing: “Does it fit an auction?
+Not securely.” It proposed a low-confidence navigation/object-manipulation puzzle
+but left task identity unresolved. Both remain largely partial structural
+translations. Their cosine ordering does not establish semantic accuracy.
+
+The auction output used headers such as `**2 — agent_7:**`, requiring a narrowly
+scoped parser extension. All 12 scoring tests pass, and the parsed text for all
+12 previously scored cells is unchanged. This change strips the new sender label
+without expanding symbolic shorthand or cross-references, preserving the earlier
+metric treatment. The original ten-cell and seed-1 results remain unchanged.
+
+[Summary decoder report](../gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_02722a0c_round_3/decoded_swarmish.txt) ·
+[Art Auction decoder report](../gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_2c8163e3_round_3/decoded_swarmish.txt) ·
+[Per-line CSV](sol_seed2_context_scores/per_line.csv) ·
+[Summary CSV](sol_seed2_context_scores/summary.csv) ·
+[Canonical summary JSON](sol_seed2_context_scores/summary.json)
 
 ## Reproduce
 

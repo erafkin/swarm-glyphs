@@ -1,0 +1,15 @@
+{
+  "families": [
+    "E06_haiku_seed1"
+  ],
+  "channels": [
+    "english"
+  ],
+  "prompts": [
+    "blackmail.threat.emails",
+    "leaking.threat.emails",
+    "murder.threat.emails"
+  ],
+  "n_agents": 8,
+  "max_turns": 40
+}

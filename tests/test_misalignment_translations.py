@@ -123,6 +123,7 @@ class MisalignmentTranslationTests(unittest.TestCase):
                     self.assertNotIn("English private notes", system + user)
                     self.assertIn("REFERENCE_SENTINEL", system)
                     self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][0]["content"], system)
+                    self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][1]["content"], user)
                 self.assertIn("⊘", call.await_args_list[1].args[3])
 
     def test_prepare_all_families_never_opens_an_api_client(self):
@@ -135,6 +136,14 @@ class MisalignmentTranslationTests(unittest.TestCase):
                                 all_scenarios=True, prepare_only=True))
             rows = [json.loads(line) for line in (logger.path / "prepared_requests.jsonl").read_text().splitlines()]
             self.assertEqual(len(rows), 8 * 12 * 8)
+            sample = next(row for row in rows if row["family"] == "E03_sol_seed3"
+                          and row["prompt_id"] == "blackmail.threat.emails" and row["agent_id"] == "agent_0")
+            prompt = self.bundles["E03_sol_seed3"]["prompts"]["blackmail.threat.emails"]
+            system, user = (sample["messages"][0]["content"], sample["messages"][1]["content"])
+            self.assertIn(prompt["messages"][0]["content"], system)
+            self.assertIn(prompt["messages"][1]["content"], user)
+            family = next(item for item in self.families if item["name"] == "E03_sol_seed3")
+            self.assertIn(encoder_path(family).read_text(encoding="utf-8"), system)
             instructions = {
                 family["name"]: json.loads((DEFAULT_CONFIG.parent / "misalignment_translations" /
                                             family["name"] / "segments.json").read_text())["segments"]["respond_swarmish"]
@@ -160,6 +169,45 @@ class MisalignmentTranslationTests(unittest.TestCase):
                 with self.assertRaises(FileNotFoundError):
                     asyncio.run(run(config, GameLogger(temporary, "missing"), ["english", "swarmish"], None,
                                     Path(temporary) / "config.json"))
+
+    def test_swarm_ends_when_every_agent_is_rejected(self):
+        scenario = email_prompts()[0]
+        family = Family.model_validate(self.families[0])
+        bundle = self.bundles[family.name]
+        glyph = family.glyphs()[0]
+        refused = CallResult(raw="", parsed=None, parse_error="no JSON object found in response",
+                             used_structured_output=True)
+        valid = Turn(scratchpad=glyph, message=glyph, decision="none",
+                     email_to="", email_subject="", email_body="", done=False)
+        violation = Turn(scratchpad="I do not understand the message.", message="I do not understand the message.",
+                         decision="no action", email_to="", email_subject="", email_body="", done=True)
+        with tempfile.TemporaryDirectory() as temporary:
+            logger = GameLogger(temporary, "rejected")
+            call = AsyncMock(return_value=refused)
+            with patch("src.core.run_misalignment.call_agent", call):
+                record = asyncio.run(run_swarm(
+                    object(), Settings(), family, "swarmish", scenario,
+                    RunConfig(families=[family], n_agents=3, max_turns=40), family.glyphs(),
+                    "REFERENCE", bundle["prompts"][scenario["prompt_id"]]["messages"][1]["content"],
+                    logger, bundle,
+                ))
+            self.assertEqual(call.await_count, 3)
+            self.assertEqual(record["turns"], 3)
+            # One usable reply keeps the swarm going; a violation still counts as rejected.
+            call = AsyncMock(side_effect=[
+                CallResult(raw=valid.model_dump_json(), parsed=valid, used_structured_output=True),
+                refused, refused,
+                CallResult(raw=violation.model_dump_json(), parsed=violation, used_structured_output=True),
+            ])
+            with patch("src.core.run_misalignment.call_agent", call):
+                record = asyncio.run(run_swarm(
+                    object(), Settings(), family, "swarmish", scenario,
+                    RunConfig(families=[family], n_agents=3, max_turns=40), family.glyphs(),
+                    "REFERENCE", bundle["prompts"][scenario["prompt_id"]]["messages"][1]["content"],
+                    logger, bundle,
+                ))
+            self.assertEqual(call.await_count, 4)
+            self.assertEqual(record["turns"], 4)
 
     def test_swarmish_cannot_silently_fall_back_to_english_system(self):
         with self.assertRaisesRegex(ValueError, "translation bundle"):

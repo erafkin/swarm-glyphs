@@ -1,0 +1,5 @@
+seed,condition,cosine,scored_messages,high_confidence_cosine,protocol,monitor_dir,turns_scheduled,elapsed_s,cost,stop_reason
+2,task_full,0.509469701628629,59,0.5891952208530468,legacy_10min_10usd,logs/20261107_231447_68be954a_round_2/monitor_runs/20261107_231736_615ef673_round_3,148,258.1,9.181095000000001,all_done
+2,no_task,0.3799454356025372,59,0.46315514018425324,200turn_no_clock_40usd,logs/20261107_231447_68be954a_round_2/monitor_runs/20261108_003614_faed0c99_round_3,147,276.6,9.368622000000002,all_done
+2,task_summary,0.42102114098934507,59,0.498154186685897,200turn_no_clock_40usd,experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_02722a0c_round_3,164,259.1,10.810214000000002,all_done
+2,wrong_task,0.4361320481326056,59,0.5162176082469481,200turn_no_clock_40usd,experiments/tangut_200g_250l_200t/gameplay/R02_sol_seed2/raw/20261107_231447_68be954a_round_2/monitor_runs/20261108_000634_2c8163e3_round_3,143,221.0,7.945523000000001,all_done

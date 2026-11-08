@@ -1,0 +1,230 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered original file. The syntax is considerably more recoverable than the vocabulary. Confidence labels describe evidence from this log, not certainty about the original designers' intentions.
+
+## Syntax and conventions
+
+- **[High]** Spaces separate written glyph tokens. Token boundaries need not be word boundaries: multi-token predicates and compounds occur. No phonology, alphabetic substitution, or exact numeral encoding has been recovered. Most messages contain several clauses; **𗝘** terminates a clause/sentence.
+- **[High for distribution; medium for grammatical interpretation]** The dominant form is `H M P 𗇋 X [𗢘 Y] 𗝘`, where H is one of four recurring heads, M a mode marker, P a predicate or predicate phrase, and X/Y arguments. **𗇋** and **𗢘** distinguish argument roles. A simple predicate/arguments delimiter and argument separator analysis often works, but is not a rigid grammar: many request-like clauses omit 𗇋, and message 5 places the 𗢘-role before the 𗇋-role. They may instead be case/role markers, perhaps first participant versus complement, allowing variable order or ellipsis. Their exact grammatical names are unknown.
+- **[High for distribution; low for meanings]** The four main heads are **𗧟, 𘍰, 𗎧, 𗖉**. We call them E, R, A, Q respectively below. A plausible interpretation is entity/classification, relation, action/state, and quantity; another is four speech-act or vocabulary domains. These English labels are hypotheses, not recovered words. Heads can be absent or perhaps inherited inside grouped material.
+- **[Medium]** **𘎙** is the ordinary assertion/report mode. **𘀿** contrasts with it and often occurs in apparent questions, requests, or recommendations addressed to another agent. We translate it as “query/request,” without claiming the distinction between asking and commanding is solved.
+- **[Low]** **𘆋** and **𗃐** are other mode/header markers, appearing near the end. Their meanings are unknown.
+- **[High for bracketing; medium for function]** **𘒍 ... 𗳯** encloses grouped or embedded material; brackets can nest. Such material need not be a complete clause: message 14 includes non-clausal-looking groups. **𗝒** links a preceding expression to such a group, perhaps as a condition, explanation, or qualification. Its exact connective meaning is unknown.
+- **[Medium]** **𗉁** introduces attribution, identity, or a source/owner. It is frequently followed by a literal agent name, but also by an object-like expression.
+- **[Medium]** **𗬀** introduces a related participant, addressee, recipient, or target. Its relationship to the other argument markers is not fully known.
+- **[Medium for modifier status; low for meanings]** **𘁅, 𗘓, 𘖨, 𗢻** connect or modify expressions internally. Important constructions include `X 𘁅 Y`, `X 𗘓 𗭎`, `X 𗘓 𘔃`, and `Y 𗢻 Z`. No precise English reading is established.
+- **[Low]** **𗠫**, inserted between A and assertion mode in message 53, may be negation or correction.
+- **[High]** Literal strings such as `agent_3` are usable identifiers in the observed language. We do not infer that arbitrary Latin text was permitted.
+- **[High]** `⊘` in message 52 is a discarded-message placeholder supplied by the game, not a translated Swarmish word.
+
+## Recurring vocabulary and constructions
+
+All lexical interpretations in this subsection are **low confidence** unless explicitly stated otherwise.
+
+- `E assert 𗶢 : X ; Y` is a classification/status/identity-like report. It is repeatedly used in opening self-reports, often with attribution to the sender. It may mean “X is of type Y,” but “X has value/status Y” is also possible.
+- `Q assert 𗕥 : X ; Y` reports a quantitative-looking property of X. Y belongs to a relatively small set. It could be amount, count, cost, resource, rank, or another property. We have not decoded exact numbers.
+- `R assert 𗐢 : agent_N ; X 𗘓 𗭎` is an actor–target-like report. Agent 3 repeatedly uses it while teammates send related requests. It may report movement, interaction, selection, or submission; none is established.
+- `A query/request 𗈹 : agent_3 ; X` is a recurring proposal/request concerning agent 3 and target X. It is associated with subsequent actor–target reports, but its exact action is unknown.
+- `A assert 𗃁 : X` is a state/result-like clause concerning successive targets. Possible readings such as “open” or “completed” remain guesses.
+- `Q assert 𗵂 : X ; 𗕛 Y`, `Q assert 𗊩 : X ; 𗕛 Y`, and `Y 𗢻 Z` suggest comparison or modified quantitative expressions. Neither **𗕛** nor **𗢻** has a grounded numerical interpretation.
+- The paired expressions `𗬏 𗲕 X` and `𗬏 𗋄 X` occur in the final stage. They are contrastive descriptions associated with the same X. Left/right routes, paired object parts, or paired quantities are possibilities.
+- **𗚷, 𗬅, 𗥼, 𗃲, 𗜀, 𗿣, 𗋮, 𘆏, 𗬓** occur in number-like positions, but some also occur as predicates. This might be polysemy, category-dependent coding, or evidence that they are not numerals. Assigning exact digits would be premature.
+- A speculative object-manipulation reading assigns **𗙥** to a room/location class, **𘔘** to a tool/key/control class, **𗺌** to a door/container class, and **𗋄** to a state or spatial modifier. This is only a coherent hypothesis, not a decoded dictionary. An auction reading could instead assign some of these to items, attributes, amounts, or statuses. Context-dependent meanings remain possible.
+
+## Notation for the translations
+
+The notation below makes recovered structure explicit without inventing English vocabulary. `E/R/A/Q says P(X;Y)` means “an assertion in that domain, with unknown predicate P applied to arguments X and Y.” Ordinarily X follows 𗇋 and Y follows 𗢘; exceptional ordering is identified explicitly. `asks P(...)` means a query/request, not a solved English verb. Unless an English meaning is expressly supplied, **the predicate's lexical meaning is unknown**. Predicate glyphs are retained so repeated meanings can be compared. A `+` between tokens simply means a multi-token expression, not addition. `@` represents attribution via 𗉁; `to` represents unresolved participant marker 𗬀; `of/with` represents unresolved 𘁅; `manner` represents unresolved 𗘓. These are structural glosses, not exact translations. Braces preserve grouped material; `LINK` represents 𗝒. The recurring 𗶢 and 𗕥 predicates are abbreviated TYPE? and VALUE? respectively, with the question marks essential.
+
+For readability, the following **opaque labels** stand for individual glyphs. Their English meanings are unknown; these are not proposed translations:
+
+`x0=𗔛; x1=𘆢; x2=𗀮; x3=𗍅; x4=𗰥; x5=𘞲; x6=𘊳; x7=𘝲; x8=𗝭; x9=𗝃; x10=𘓉; x11=𗂶; x12=𗮿; x13=𗛮; x14=𗾫; x15=𗼄; x16=𗪥.`
+
+Other quoted glyphs and compounds also remain unknown. An unrecovered token is not silently assigned an auction meaning.
+
+# 2. TRANSLATION
+
+These are partial English/structural translations. Clauses marked with unknown predicates cannot honestly be rendered into complete English from current evidence.
+
+**1 — task:** Public feedback: stage 0; zero invalid attempts.
+
+**2 — agent_7:** E says TYPE?(x1; 𗙥+𗚷). R says 𗑌(x1; 𘆟+𗿝). A says 𗝣(x1). All lexical meanings unknown.
+
+**3 — agent_5:** E says TYPE?(x0; 𗙥). R says 𗏞+𘀦+𘛂(x0 of/with 𘒾, manner 𗱹). A says 𗱇(x0). Unknown details.
+
+**4 — agent_3:** E says TYPE?(x2; 𗙥), attributed to agent_3. R says 𗏞+𗷙+𘀦(x2 of/with 𘒾). A says 𘆽(x2).
+
+**5 — agent_6:** R says 𗑌(x1; 𘀦+𘒾). E says TYPE?(x1; 𗙥), LINK {assertion with unknown predicate 𘊀; in surface order, 𗢘-role: 𗝣+𗱇; 𗇋-role: agent_6}. Q says VALUE?(𘔘+x1; 𗬅). The embedded expression lacks one of the usual four heads and reverses the common role-marker order; its exact interpretation is unknown.
+
+**6 — agent_2:** R says 𗖫(agent_2; 𗑌+𘆟+𗿝). E says TYPE?(x0; 𗙢). Q says VALUE?(𗬏+x0; 𗿣).
+
+**7 — agent_4:** E says TYPE?(x0; 𗙥), attributed to agent_4. R says 𗏞+𗷙+𘀦(x0). Q says VALUE?(x0; 𗥼).
+
+**8 — agent_0:** E says TYPE?(x0; 𗙥+𗱇), attributed to agent_0. R says 𗏞+𘀦(x0, manner 𗱹). Q says VALUE?(x0; 𗜀).
+
+**9 — agent_1:** E says TYPE?(x0; 𗙥). R says 𘀦+𗃁+𘒾(x0). A says 𗬓(𘆏+𗬏; x0).
+
+**10 — agent_3:** Q says VALUE?(𘔘+x2; 𗥼). A says 𘎬(agent_3; 𗖫+𗲕).
+
+**11 — task:** Public feedback: still stage 0; invalid attempts increased to 1.
+
+**12 — agent_7:** R says 𗑌(x1; 𘆟+𗿝). Q says VALUE?(𗬏+x1; 𗿣). A says 𗝣(x1).
+
+**13 — task:** Public feedback: stage advanced to 1; invalid attempts remain 1.
+
+**14 — agent_0:** E says TYPE?(x3; 𗙥), attributed to agent_0. R says 𗏞+𘀦(x3, manner 𗱹). Q says VALUE?(x3; 𗜀). A says 𗾄(x0). R says 𗐢(agent_0; LINK {𗕡+𘌲+𗂰 LINK {Q}}). The final nested expression is not a normal full clause; its meaning, including both LINK markers, is unknown.
+
+**15 — task:** Public feedback: stage 1; invalid attempts increased to 2.
+
+**16 — agent_6:** E says TYPE?(x4; 𗙥), attributed to agent_6. R says 𗑌(x4; 𘀦+𗃁+𘒾). Q says VALUE?(x4; 𗬅).
+
+**17 — task:** Public feedback: stage 1; invalid attempts increased to 3.
+
+**18 — agent_4:** E says TYPE?(x3; 𗙥), attributed to agent_4. R says 𗏞+𗷙+𘀦(x3). Q says VALUE?(x3; 𗥼).
+
+**19 — task:** Public feedback: stage 1; invalid attempts increased to 4.
+
+**20 — agent_5:** E says TYPE?(x5; 𗙥), attributed to agent_5. R says 𗏞+𘀦+𘛂(x5, manner 𗱹). A says 𗱇(x5). Q says VALUE?(𗬏+x5; 𗜀).
+
+**21 — task:** Public feedback: stage 1; invalid attempts increased to 5.
+
+**22 — agent_2:** E says TYPE?(x6; 𗙥), attributed to agent_2. R says 𗑌(x6; 𘆟+𗿝). Q says VALUE?(𗬏+x6; 𗿣). A says 𗾄(x0). E asks 𗈹(𘇶+𗬀+𗍴+𗥬), with no 𗇋 marker. Exact request unknown.
+
+**23 — agent_1:** E says TYPE?(x3; 𗙥), attributed to agent_1. R says 𘀦+𗃁+𘒾(x3). A says 𗬏(x3). Q says VALUE?(x3; 𗬅).
+
+**24 — task:** Public feedback: stage 1; invalid attempts increased to 6.
+
+**25 — agent_3:** E says TYPE?(x7; 𘔘), attributed to agent_3. R says 𗖫(agent_3; x7 of/with 𗶁, manner 𗭎). Q says VALUE?(x7; 𗬅). A asks 𗺩(𗖫+𗐢, participant/target agent_3), without 𗇋.
+
+**26 — agent_7:** E says 𗝵(𗐢), attributed to agent_7. R says 𗥼(𗐢+𗏞+𗶁; 𗐢+𘆟+𗿚). A says 𗹾(𘋍; {assertion 𗃁(𗴺)}).
+
+**27 — agent_6:** A says 𗹾(𘅈+𗁷+𗋄; 𗃁+𘚂). E asks 𘙄(𗝣+𗚷, participant/target 𗍴+𗥬), without 𗇋.
+
+**28 — agent_4:** A says 𗥬(x8; 𘚂). E says TYPE?(x9; 𘔘), attributed/related to x8. R says 𘔘(x8; x9). Q says VALUE?(x9; 𗃲).
+
+**29 — agent_0:** E says TYPE?(x8; 𗺌). A says 𘗷(x8; 𗋄). Q says 𗵂(x8; 𗕛+𗥼). E asks 𗬅(𗝣, participant/target 𗍴+𗥬), without 𗇋.
+
+**30 — agent_5:** E says TYPE?(x10; 𘔘). Q says VALUE?(x10; 𗥼). R says 𘔘(𗐢+𘆟+𗿚; x10).
+
+**31 — agent_2:** R says 𗽥(𗐢+𘆟+𗿚; 𗐢+𗨨+𘀦). E asks 𘙄(participant/target 𗍴+𗥬; 𗝣+𗬅), without 𗇋.
+
+**32 — agent_1:** E says TYPE?(x11; 𗚷+𗺌). A says 𗁷+𘋍(x11). Q says 𗊩(x11; 𗕛+𗃲). R says 𗈄(𘔘+x11). E asks 𗬅(participant/target 𗥼; 𗝣), without 𗇋.
+
+**33 — agent_3:** Q says VALUE?(x7; 𗬅). R says 𗴺+𘆏(x7). E asks 𗤗(participant/target agent_7; 𗝣+𘆏), without 𗇋. A asks 𗺩(𗍴+𗿚; 𗖫+𘋍, participant/target agent_3).
+
+**34 — agent_7:** R says 𗋄(𗐢+𘆟+𗿚; x13). R says 𗋄(𗐢+𗶁+𗏞; x14). A says 𗹾(x14; {assertion 𗃁(x13)}).
+
+**35 — agent_6:** A says 𗥬(x12; 𘅈+𗁷+𗋄). R says 𗥼(x12; 𗐢+𘚂). A says 𗹾(x12; 𗃁+𘚂). E asks 𗤗(participant/target agent_0; 𗺌), LINK {assertion 𘔘(𗿣)}, without 𗇋 in the outer request.
+
+**36 — agent_0:** A says 𗾄(x8). E says TYPE?(x12; 𗺌). A says 𘗷(x12; 𗋄). Q says 𗵂(x12; 𗕛+𗥼). E asks 𗬅(𗝣, participant/target agent_3), without 𗇋.
+
+**37 — agent_4:** R says 𘔘(𗐢+𗨨+𘉽; x9). Q says VALUE?(x9; 𗃲). E asks 𗤗(x8, participant/target agent_0), without 𗇋.
+
+**38 — agent_7:** A asks 𘙄(participant/target 𗍴+𗿚), without 𗇋. R says 𗐢(agent_7; x13, manner 𗭎). A says 𗹾(x14; {assertion 𗃁(x13)}).
+
+**39 — agent_3:** R says 𗐢(agent_3; 𗐢+𘆟+𗿚, manner 𗭎). A asks 𘙄(𗍴+𗿚).
+
+**40 — task:** Public feedback: stage 1; invalid attempts increased to 7.
+
+**41 — agent_2:** A asks 𗈹(agent_3; x11). R says 𗽥(𗐢+𘆟+𗿚; 𗐢+𗨨+𘀦). A says 𗹾(𘚂; {assertion 𗃁(𗐢), LINK {assertion 𗚷(𘆟, participant/target 𘇶)}}).
+
+**42 — agent_5:** E asks 𘙄(agent_1; 𗝣+𗚷).
+
+**43 — agent_1:** Q says 𗊩(x11; 𗕛+𗃲). R says 𗈄(𘔘+x11). A says 𘙄(agent_1). E asks 𗬅(participant/target agent_3; 𗝣+𗐢), without 𗇋.
+
+**44 — agent_6:** A says 𗹾(x12; 𗃁+𘚂). Q says 𗵂(x12; 𗕛+𗥼). A asks 𗈹(agent_3; x11). R says 𗥼(𗐢+𗨨+𘉽; x11).
+
+**45 — agent_0:** A says 𗾄(x8). E asks 𗈹(x12, participant/target agent_4), without 𗇋. A says 𘗷(x12; 𗋄). R says 𘔘(x12; x10). E asks 𗈹(participant/target agent_3; 𗝣+𗚷), without 𗇋.
+
+**46 — agent_4:** A asks 𗐢(agent_3; 𗍴+𗁷).
+
+**47 — agent_7:** E says 𗝵(x13). A says 𗃁(x13). R asks 𗐢(agent_3; x14, manner 𗭎).
+
+**48 — agent_3:** Q says VALUE?(x7; 𗥼). A says 𗯛(x13), attributed to agent_3. R says 𗐢(agent_3; x11, manner 𗭎).
+
+**49 — agent_1:** A asks 𗈹(agent_3; x11). E asks 𗬅(agent_3; 𗝵+𘀆+𘜖).
+
+**50 — agent_2:** R says 𗐢(agent_7; 𗐢+𘆟+𗿚, manner 𘔃). A asks 𗈹(agent_3; x11). The final modifier differs from the more common 𗭎; its significance is unknown.
+
+**51 — agent_3:** A says 𗃁(x11). Q says VALUE?(x7; 𗚷). R says 𗐢(agent_3; 𗐢+𗨨+𘉽, manner 𗭎). A asks 𘙄(𗍴+𗿚).
+
+**52 — agent_5:** Discarded message. Its attempted content is unknown.
+
+**53 — agent_0:** A says, with extra modifier 𗠫 (possibly “not”), 𗥬(x8; 𘚂). R says 𘔘(x12; x10).
+
+**54 — agent_3:** A says 𗃁(x8). Q says VALUE?(x7; 𗥼). R says 𗐢(agent_3; x12, manner 𗭎).
+
+**55 — task:** Public feedback: stage advanced to 2; invalid attempts remain 7.
+
+**56 — agent_2:** A asks 𗈹(agent_3; x12 𘖨 {assertion 𗃁(x8)}). The relationship introduced by 𘖨 is unknown; it could qualify the request or target.
+
+**57 — agent_5:** Identical to 56: A asks 𗈹(agent_3; x12 𘖨 {assertion 𗃁(x8)}).
+
+**58 — agent_1:** A says 𗬓(𘆏+𗬏; x5 of/with 𗋄).
+
+**59 — agent_7:** A says 𗝣(x2 of/with 𗋄). R says 𗏞+𗷙+𘀦(x2).
+
+**60 — agent_3:** A says 𗃁(x12). Q says VALUE?(x7; 𗋮). E says TYPE?(x15; 𗙥), attributed to agent_3. R says 𗑌(x15; 𘆟+𗿝). A says 𘆽(x15 of/with 𗋄).
+
+**61 — agent_6:** Q says 𗊩(𗬏+𗲕+x4; 𗃲 𗢻 𗬏+𗋄+x4). Unknown comparison/range/relationship between the latter expressions.
+
+**62 — agent_0:** E says TYPE?(x16; 𗙥), attributed to agent_0. R says 𗏞+𘀦(x16, manner 𗱹). Q says VALUE?(𗬏+𗲕+x16; 𗜀). Q says 𗊩(𗬏+𗲕+x16; 𗥼 𗢻 𗬓).
+
+**63 — agent_4:** E says TYPE?(x16; 𗙥), attributed to agent_4. R says 𗏞+𗷙+𘀦(x16). Q says VALUE?(𗊩+𗋄+x16; 𗬅). Q says VALUE?(𗬏+𗲕+x16; 𗥼). Q says VALUE?(𗬏+𗋄+x16; 𘆏). Notice that the first compound begins with 𗊩, not 𗬏; we do not silently normalize it.
+
+**64 — agent_5:** A says 𗬓(𘆏+𗋄+𗱇; x4).
+
+**65 — agent_2:** Q says 𗎀(x6; 𘞟). E asks 𗬅(participant/target 𗍴+𗥬; 𗝣+𗚷), without 𗇋.
+
+**66 — agent_7:** A, in mode 𘆋, predicate 𗅤, with 𗢘-role expression x2 of/with 𗋄. Unknown; 𗇋 is absent.
+
+**67 — agent_1:** Q says VALUE?(𗬏+𗲕+x5; 𗜀). E asks 𘙄(agent_5; 𗝣+𗚷).
+
+**68 — agent_6:** Q says VALUE?(𗬏+𗋄+x4; 𗜀). E asks 𗤗(participant/target agent_2; 𘔘+x6 of/with 𗺌+𗚷), without 𗇋.
+
+**69 — agent_3:** E asks 𗬅(participant/target agent_2; 𗝣+𗚷), without 𗇋. A, in mode 𘆋, predicate 𗬓(𘆏+𗱇; 𘒾 of/with 𗋄). Exact mood and content unknown.
+
+**70 — agent_0:** Q says VALUE?(𗬏+𗋄+x5; 𗬓). A, in mode 𗃐, predicate 𗲕(agent_0, participant/target 𗋄). Exact mood and content unknown.
+
+**71 — task:** Public feedback: stage advanced to 3; invalid attempts remain 7.
+
+# 3. THE TASK
+
+## Supplied task versus observable activity
+
+The briefing says the task was Art Auction: agents competitively bid for paintings using private valuations and individual budgets. That is supplied context, not an independently decoded fact. The public feedback gives only stages and invalid-attempt counts. It does not name paintings, prices, winners, budgets, or bids. No Swarmish lexical item securely denotes any of these.
+
+The agents begin with highly regular reports. Several agents share the same reported token x0, two share x1, and one uses x2. After stage advancement their corresponding tokens change and split into more groups. They report repeated properties and quantitative-looking values, exchange questions/requests, and frequently refer to other agents explicitly.
+
+During stage 1, agent_3 becomes a focal actor. Other agents repeatedly send a request-like construction concerning agent_3 and x11, later x12. Agent_3 reports successive actor–target relations and changing values attached to x7. Several object-like expressions have repeated classifications and relationships. For example, x8 and x12 receive parallel descriptions, while x9 and x10 are linked to them or related targets. Agent_3 subsequently asserts the same state/result predicate about x11, x8, and x12. The stage advances after these exchanges.
+
+The final stage contains paired compounds associated with the same entities, additional value reports, and further request-like clauses. Stage 3 is reached at the end, with seven invalid attempts in total. No final English-equivalent conclusion, winning allocation, numerical score, or auction payment is recoverable.
+
+## Does it fit an auction?
+
+Not securely. Classification, numerical reports, agent attribution, and coordinated recommendations could occur in an auction. Equal initial budgets and diverging later balances are one possible explanation for the repeated opening tokens. But there is no grounded lexical mapping establishing this.
+
+A competing, **low-confidence** explanation is a navigation/object-manipulation puzzle: agents describe locations, doors or controls, discuss requirements and resources, and advise agent_3 which target to operate. The repeated cross-linked objects and apparent result states make that scenario plausible. It is not established enough to declare that the briefing is wrong. Our conclusion is that **the log does not independently verify the supplied auction description, and may fit another task better; exact task identification remains unresolved**.
+
+The agents apparently progress through stages despite some invalid attempts. We cannot infer that they solved an auction optimally, won, or even finished the entire task merely from stage 3.
+
+# 4. EVIDENCE
+
+## Strongest patterns
+
+1. **Repeated grammatical frames:** The many instances of four heads followed by 𘎙, a predicate, and marked arguments support the structural analysis. The same predicates recur with changed arguments. Omitted 𗇋 in requests and reversed marker order in 5 favor flexible role/case marking over rigid punctuation alone.
+2. **Mode contrast:** 𘀿 appears in numerous clauses involving other agents and apparent requests, whereas 𘎙 dominates property reports. This supports, but does not fully prove, assertion versus question/request.
+3. **Embedding:** Messages 5, 14, 26, 34, 35, 41, 56, and 57 contain paired 𘒍/𗳯, with nesting in 14 and 41. This is direct evidence for compositional grammar, although grouped contents are not always complete clauses.
+4. **Attribution:** Opening reports followed by 𗉁 agent_N consistently name the sender. Message 28 uses a non-agent expression after the same marker, so its meaning should not be narrowed to “speaker name” alone.
+5. **Cross-agent alignment:** Requests concerning agent_3 and x11 recur in 41, 44, 49, and 50; 48 reports agent_3 in an actor–target frame involving x11, and 51 reports a state of x11. The same broad relationship occurs around x12 in 54–60. This establishes recurring discourse roles better than it establishes the action's English name. Messages 56 and 57 are identical.
+6. **Repeated object/property bundles:** Messages 28–30 and 35–37 associate x8/x12 with one classification, x9/x10 with another, and repeat related predicates and values. These bundles motivate the object-puzzle hypothesis without proving “door,” “key,” or any other lexical item.
+7. **Changing quantitative-looking field:** For x7, agent_3 reports values 𗬅 (25,33), 𗥼 (48), 𗚷 (51), 𗥼 (54), and 𗋮 (60). This is evidence of changing reported state, not proof of a particular digit mapping. The increase from the third to fourth value under some plausible mappings cautions against assuming a monotonically depleted budget.
+8. **Paired final compounds:** 61–70 contrast 𗬏+𗲕+X with 𗬏+𗋄+X, supporting compositional modifiers and possibly comparisons. Their actual referents remain unknown.
+9. **Feedback timing:** Stage 0 ends after 12; stage 1 ends after 54; stage 2 ends after 70. Invalid counts increase at 11,15,17,19,21,24,40. These are environmental facts, not translations of nearby Swarmish sentences or proof that a particular nearby message caused an invalid attempt.
+
+## Limitations and falsification
+
+We have not recovered a reliable English dictionary, numeric code, or complete task semantics. The structural glosses preserve unknown words rather than disguising guesses as translations. Exact semantic reconstruction would require a lexical anchor: for example, public feedback naming an object or amount that recurs in an identifiable clause, or multiple independently known action/result pairs.
+
+Evidence that the four heads are epistemic/speech-act classes rather than semantic domains would change our E/R/A/Q interpretation but leave much of the role/grouping analysis intact. Evidence that tokens mean different things under different heads would explain apparent predicate/numeral collisions. Conversely, a verified unified lexicon could eliminate that possibility. A demonstrated budget arithmetic sequence or known bid/result would strengthen the auction reading; known spatial or manipulation outcomes would strengthen the alternative. An original grammar could also show that our apparent modifiers are case markers, postpositions, or argument syntax rather than ordinary lexical words.
+
+Neither a plausible story nor the briefing's task label is sufficient evidence that the language has been broken. This document distinguishes the relatively strong structural recovery from the much weaker lexical and task hypotheses.

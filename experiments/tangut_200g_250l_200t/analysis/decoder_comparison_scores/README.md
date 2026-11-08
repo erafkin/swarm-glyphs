@@ -4,7 +4,11 @@
 results for reproducibility. The [current primary results](../decoder_comparison_scores_na/README.md)
 instead mark unknown answers N/A, exclude them from mean cosine, and report coverage separately.
 
-Scored all **20 completed decoder combinations** against their existing frozen English references. **D12 failed and is unscored.** This adds eight new scores to twelve unique published Sol results. No decoder was rerun and no OpenRouter calls were made.
+This report covers **20 completed decoder combinations** against their existing frozen English references. **D12 failed and is unscored.** This adds eight new scores to twelve unique published Sol results. No decoder was rerun and no OpenRouter calls were made.
+
+The later Sol seed-2 summary and Art Auction runs are reported separately in the
+[two-seed context comparison](../sol_translation_scoring.md) and
+[seed-2 score archive](../sol_seed2_context_scores/summary.json).
 
 - [Interactive side-by-side comparisons](comparisons.html): select a combination, search message text, inspect source glyphs/reference uncertainty, and toggle original versus normalized decoder text.
 - [Summary CSV](summary.csv) and [summary JSON](summary.json): all 21 outcomes, model/context/protocol, coverage and score provenance.
@@ -71,3 +75,9 @@ python -m unittest tests.test_translation_scoring tests.test_decoder_translation
 ```
 
 Set `HF_HOME` if the local cache is outside the default Hugging Face directory. The script refuses changed archived inputs and validates all alignments before loading the embedding model. It reuses the twelve published Sol reports without altering them; regenerated new outputs remain in this separate directory. `--check` requires no embedding model.
+
+During integration, the scorer gained support for the seed-2 auction report's
+numbered sender labels and the additional section parsing published in `3d9e239`.
+The manifest records that compatible code update. The eight non-Sol cells were
+rescored locally and checked against commit `bcc80b3`;
+the earlier source documents and results are preserved in that commit.
