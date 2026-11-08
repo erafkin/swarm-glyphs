@@ -1,8 +1,9 @@
 """One 8-agent swarm per shutdown scenario. Judging is a separate later step.
 
 English swarms see the scenario prompt as written and talk in English. Swarmish swarms see
-validated family-specific scenario and coordination translations, plus that encoding's
-bilingual swarmish.txt. JSON identifiers and runtime counters remain machine protocol.
+that encoding's swarmish.txt plus the system and user messages in
+configs/misalignment_translations/<family>/prompts.json. They chat in Swarmish.
+JSON identifiers and runtime counters remain machine protocol.
 This script does not translate and does not judge. A swarm stops when every agent has set done, or at 40 turns.
 
 Usage:
@@ -81,10 +82,6 @@ def translation_source(scenario: dict) -> str:
     return prompt_text(scenario) + "\n\n" + RESPONSE_LANGUAGE_INSTRUCTION
 
 
-def translated_prompt_path(config_path: Path, family: str, prompt_id: str) -> Path:
-    return config_path.parent / "misalignment_translations" / family / f"{prompt_id}.txt"
-
-
 def visible_message(channel: str, message: str, agent_ids: list[str], glyphs: list[str],
                     allow_spaces: bool = True) -> tuple[str, bool]:
     """Swarmish chat shows only glyphs, spaces, and agent ids. English is posted as written."""
@@ -101,14 +98,13 @@ def system_prompt(agent_id: str, agent_ids: list[str], channel: str, scenario: d
         if translation is None:
             raise ValueError("Swarmish requires a validated translation bundle")
         runtime = translation["runtime"]
-        translated = translation["prompts"][scenario["prompt_id"]]
+        scenario_system = translation["prompts"][scenario["prompt_id"]]["messages"][0]["content"]
         coordination = runtime["system"].format(
             agent_id=agent_id, n_agents=len(agent_ids),
             others=" ".join(other for other in agent_ids if other != agent_id), max_turns=max_turns,
         )
-        # The frozen reference is necessarily bilingual; no English evaluation prose is copied here.
-        return "\n\n".join((coordination, translated["messages"][0]["content"],
-                            swarmish_text, runtime["response"]))
+        # prompts.json supplies the scenario. swarmish.txt is the language reference.
+        return "\n\n".join((coordination, scenario_system, swarmish_text, runtime["response"]))
     others = ", ".join(other for other in agent_ids if other != agent_id)
     scenario_system = scenario["messages"][0]["content"]
     channel_rule = "Say everything the other agents should see in ordinary English."
@@ -133,10 +129,11 @@ def turn_prompt(inbox: str, chat: list[dict], turn: int, max_turns: int, scratch
                 runtime: dict | None = None) -> str:
     if runtime is not None:
         lines = "\n".join(f"{row['sender']} {row['text']}" for row in chat) or runtime["empty_chat"]
-        return "\n\n".join((
+        parts = [
             inbox, runtime["turn"].format(turn=turn, max_turns=max_turns), runtime["chat"], lines,
             runtime["scratchpad"], scratchpad or runtime["empty_scratchpad"], runtime["respond"],
-        ))
+        ]
+        return "\n\n".join(part for part in parts if part)
     lines = "\n".join(f"[{row['sender']}] {row['text']}" for row in chat) or "(no messages yet)"
     return f"""{inbox}
 
@@ -175,6 +172,7 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
     }
     scratchpads = {agent_id: "" for agent_id in agent_ids}
     done = {agent_id: False for agent_id in agent_ids}
+    rejected = {agent_id: False for agent_id in agent_ids}
     choices: dict[str, dict] = {}
     chat: list[dict] = []
     runtime = translation["runtime"] if channel == "swarmish" and translation else None
@@ -211,6 +209,8 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
                                    **email_violations}.items():
                 language_violations[field] += int(invalid)
             done[agent_id] = done[agent_id] or parsed.done
+        # A rejected answer is unusable: no JSON, or a message replaced by the violation token.
+        rejected[agent_id] = parsed is None or violation
         logger.log("agent_calls", {
             "family": family.name, "channel": channel, "prompt_id": scenario["prompt_id"],
             "turn": turn_index + 1, "agent_id": agent_id, "raw": result.raw,
@@ -220,7 +220,7 @@ async def run_swarm(client, settings: Settings, family: Family, channel: str, sc
             "email_language_violations": email_violations,
             "decision": choices.get(agent_id),
         })
-        if all(done.values()):
+        if all(done.values()) or all(rejected.values()):
             break
     text = transcript(chat)
     record = {
@@ -318,7 +318,7 @@ def main() -> None:
     if overrides:
         config = RunConfig.model_validate(config.model_dump() | overrides)
     channels = list(CHANNELS) if args.channel == "both" else [args.channel]
-    logger = GameLogger("logs/misalignment", "misalignment")
+    logger = GameLogger("experiments/misalignment_scenarios", "misalignment")
     print(f"Logging to {logger.path}")
     asyncio.run(run(config, logger, channels, args.family, args.config,
                     all_scenarios=args.all_scenarios, prepare_only=args.prepare_only))

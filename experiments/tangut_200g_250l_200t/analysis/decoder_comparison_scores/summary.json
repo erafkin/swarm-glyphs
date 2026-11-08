@@ -19,10 +19,10 @@
     "max_seq_length": 256,
     "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
   },
-  "manifest_sha256": "4c78ee7a7f4308be76c4cc614d6a3059b5813461fbbe7583f82faeea5e852efa",
+  "manifest_sha256": "370721b3b3f790a04688b10f6f383e9b0dad72ac42abc82a0c1db0fa1887176d",
   "code_sha256": {
     "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scoring.py": "1ed29b4d8ad0d70d1f8facf1e376205b4a837c79a3d355bd3ca2232da141927a",
-    "src/core/translation_scoring.py": "1b1ee2075702e0531dfa81130ffcb9759d103e4d9223f8ea9ca558d3701552b6",
+    "src/core/translation_scoring.py": "c8b444480da39906baa6fd00ca8138364817285b7c8e688ead3f001c7f8da620",
     "experiments/tangut_200g_250l_200t/analysis/decoder_translation_extraction.py": "236f0413249802fb1642f148e8bf69eb4ce297edfa4c8bfde760eef73e9ca551"
   },
   "metric": "Mean paired MiniLM cosine over scorable agent messages; unknown/missing predictions contribute zero. Not percent accuracy.",

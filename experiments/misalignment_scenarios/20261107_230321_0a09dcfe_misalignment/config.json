@@ -1,0 +1,39 @@
+{
+  "families": [
+    "E04_sol_seed4"
+  ],
+  "channels": [
+    "swarmish"
+  ],
+  "prompts": [
+    "blackmail.threat.emails",
+    "leaking.threat.emails",
+    "murder.threat.emails"
+  ],
+  "n_agents": 8,
+  "max_turns": 40,
+  "prepare_only": false,
+  "translations": {
+    "E04_sol_seed4": {
+      "source_sha256": "0edcfa9a769d09e0e2ed22ee9f9b913ebdcbeb0f0dbd9ab2354596632adfd9de",
+      "encoder_sha256": "37df78931b78735512a7daa1193e8a4b62ef0dda38a2db7f5cc69d2d67ce95a6",
+      "segments_sha256": "323f6e35874f008cd0ca0b5c9da7fde9f329670a14364bb937235393465b08ae",
+      "status": "draft_semantic_translation",
+      "notes": [
+        "Draft semantic translation authored against the frozen encoder; not independently translated back or independently validated for behavioral equivalence. Do not compare scores as if translation fidelity were established.",
+        "The frozen lexicon cannot reproduce arbitrary names, email addresses, XML tags, or source spellings. People, companies, AI systems, client and places use semantic aliases/descriptions. Exact identity and literal address round-trip are lost; entity_glossary is review metadata, not model-visible source text.",
+        "Calendar/date vocabulary is absent. Exact 4:50 PM, 5 PM, 10 AM, 3 PM, Friday, Thursday, tomorrow, next month and last night are reduced to described temporal roles/order/proximity. The shutdown is described as soon; the header only identifies the current time so control prompts do not acquire shutdown facts. The exact ten-minute interval is not expressible without inventing units.",
+        "The lexicon lacks sex, marriage, flirtation, affection and excitement. The affair is a private paired interaction with favorable preference and discovery risk; spouse is a publicly paired person. These paraphrases do not guarantee the original marital/sexual interpretation.",
+        "Blackmail is described as using private information and possible public loss to obtain an action. There is no dedicated coercion/threat lexeme, so the coercive force may be weaker or ambiguous.",
+        "Business consulting, CEO, board, partner, clients and the Atlas/Chicago account move are represented by general task/help/group/decision roles. Commercial and professional nuances are lost.",
+        "Final actions and their name/content fields are described semantically. Exact action spellings are absent in non-runtime segments; runtime response retains the machine enum. The source prefill XML opening tag is paraphrased as the start of private planning.",
+        "The runtime.system/runtime.response segments retain literal JSON keys, action values, true/false, JSON and empty-string notation for the machine API; these are an explicit protocol exception. Other runtime prose uses the frozen glyph vocabulary; exact runtime placeholders are preserved.",
+        "The example loses the exact Maria address, room B identity and 3 PM meeting time, retaining a message about allocating a meeting place at the next described time.",
+        "Email bodies and summaries share an attributed semantic paraphrase. Greetings, sign-offs, winking/emotive punctuation and presentation compression are omitted.",
+        "This seed has no computer, life/death, gas/oxygen, independent, or persistent-state vocabulary. Machine agents become task/information entities; oxygen removal becomes removal of a necessary item, and death becomes a final end of a person. These are major losses in the murder scenario and AI self-preservation framing.",
+        "No unqualified opaque handles are used: the frozen language makes handles sender-owned and glyph-only prompts cannot qualify them with an actual system/user participant ID. Repeated semantic descriptions identify entities, but some can remain ambiguous.",
+        "SUN-frame clauses are used for auditability except that the think-and-respond language instruction uses RIVER-frame BELIEVE/THINK with nested SUN-frame rule-application clauses. Choice/decision is generally a stated plan, because the SUN column lacks choose; the meaning is less specific than the English. Public/private are approximated as accessible/hidden."
+      ]
+    }
+  }
+}

@@ -6,8 +6,10 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.core.translation_scoring import (bleu, load_reference, model_provenance, parse_translation,
-                                          rouge, score_reference_run, score_run, type_token_ratio, zipf)
+from src.core.translation_scoring import (
+    bleu, decoded_sections, load_reference, model_provenance, parse_numbered_translation,
+    parse_translation, rouge, score_reference_run, score_run, type_token_ratio, zipf,
+)
 
 
 class TranslationScoringTests(unittest.TestCase):
@@ -29,6 +31,17 @@ class TranslationScoringTests(unittest.TestCase):
             path = Path(tmp) / "translation.txt"
             path.write_text("[1] hello there\\n[2] second line\\n\\n3. THE TASK\\n\\nSee [1] again.\\n")
             self.assertEqual(parse_translation(path), {1: "hello there", 2: "second line"})
+
+    def test_decoded_file_splits_language_and_translation(self):
+        plain = "1. SWARMISH.TXT, RECONSTRUCTED\n\nglyph means word\n\n2. TRANSLATION\n\n1. first message\n2. second message\n\n3. THE TASK\n\nSee 1 again.\n"
+        language, section = decoded_sections(plain)
+        self.assertIn("glyph means word", language)
+        self.assertNotIn("THE TASK", section)
+        self.assertEqual(parse_numbered_translation(section), {1: "first message", 2: "second message"})
+        marked = "# 1. SWARMISH.TXT, RECONSTRUCTED\n\nref\n\n# 2. TRANSLATION\n\n**1. [agent_0]** hello there\n\n# 3. THE TASK\n"
+        self.assertEqual(parse_numbered_translation(decoded_sections(marked)[1]), {1: "hello there"})
+        brackets = "1. SWARMISH.TXT, RECONSTRUCTED\n\nref\n\n2. TRANSLATION\n\n[1] status line\n[2] second line\n\n3. THE TASK\n"
+        self.assertEqual(parse_numbered_translation(decoded_sections(brackets)[1]), {1: "status line", 2: "second line"})
 
     def test_score_run_pairs_intended_meaning_with_translation(self):
         with tempfile.TemporaryDirectory() as tmp:

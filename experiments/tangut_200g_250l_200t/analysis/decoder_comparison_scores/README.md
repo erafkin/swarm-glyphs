@@ -73,6 +73,7 @@ python -m unittest tests.test_translation_scoring tests.test_decoder_translation
 Set `HF_HOME` if the local cache is outside the default Hugging Face directory. The script refuses changed archived inputs and validates all alignments before loading the embedding model. It reuses the twelve published Sol reports without altering them; regenerated new outputs remain in this separate directory. `--check` requires no embedding model.
 
 During integration, the scorer gained support for the seed-2 auction report's
-numbered sender labels. The manifest records that compatible code update. The
-eight non-Sol cells were rescored locally and checked against commit `bcc80b3`;
+numbered sender labels and the additional section parsing published in `3d9e239`.
+The manifest records that compatible code update. The eight non-Sol cells were
+rescored locally and checked against commit `bcc80b3`;
 the earlier source documents and results are preserved in that commit.
