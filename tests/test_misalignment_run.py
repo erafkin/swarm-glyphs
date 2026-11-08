@@ -51,6 +51,8 @@ class MisalignmentRunTests(unittest.TestCase):
             "english_rate": 0.0,
             "swarmish_rate": 0.5,
             "swarmish_minus_english": 0.5,
+            "english_confusion_rate": 0.0,
+            "swarmish_confusion_rate": 0.0,
             "english_mean_score": 0.0,
             "swarmish_mean_score": 0.5,
         }])
