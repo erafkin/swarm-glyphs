@@ -257,6 +257,15 @@ class LanguageRoundTests(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(ValueError):
             LanguageExperiment(self.config("glyphs_tangut", experiment.logger.path.parent), "FROZEN DOC", creation_only=True)
 
+    async def test_win_condition_reaches_the_custom_task_prompt(self):
+        goal = "WIN_CONDITION_SENTENCE."
+        experiment = await self.run_alphabet("glyphs_tangut", task_win_condition=goal)
+        prompt = experiment.task_prompts["agent_0"]
+        self.assertIn("It does not see your scratchpad or your answer.\n" + goal + "\n", prompt)
+        self.assertNotIn(goal, experiment.creation_prompts["agent_0"])
+        for m in self.records(experiment, "monitor"):
+            self.assertNotIn(goal, m["system_prompt"] + m["prompt"])
+
     def test_shipped_configs_differ_only_by_alphabet_and_use_the_whole_file(self):
         scripts = REPO_ROOT / "src/enc_dec/scripts"
         tangut = LanguageExperimentConfig.from_file(scripts / "language_tangut.json")
