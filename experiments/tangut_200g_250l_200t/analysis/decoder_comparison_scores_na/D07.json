@@ -1,0 +1,4939 @@
+{
+  "schema_version": 2,
+  "mode": "reference_assisted_public_only",
+  "private_annotations_used": false,
+  "method": "Mean paired MiniLM cosine over scorable references with a nonmissing, non-wholly-unknown prediction; missing/unknown answers are N/A and excluded from this mean. Report with valid-pair coverage. Not percent accuracy.",
+  "reference_status": "completed",
+  "inputs": {
+    "reference_sha256": "19db696a9dbba33ce37fc9d193bf2b509a9b363be23f78f2580f459956ffd53d",
+    "public_transcript_sha256": "e10bfb3dadf8f7641e1f12d9bf77008d8620f81a01a6ac4042f053a9117db9ff",
+    "rendered_public_transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "decoder_document_sha256": "03762b184c0885485e7a099cf7d2bf85f410bfd3d40cd71e1a49742623a9480a",
+    "language_sha256": "9ef04f41c5ae4e074b3befd11b78e05384f24882ffba281dde41ea45c249e3b7",
+    "canonical_document_sha256": "61ac975be03529b7df4b72892b2d056e8bdb7d522164e520b199f37b527c1410"
+  },
+  "embedding_model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "embedding_truncation": {
+    "measured_pairs": 109,
+    "reference_lines_truncated": 0,
+    "hypothesis_lines_truncated": 0
+  },
+  "metric_definition": {
+    "cosine": "Mean paired MiniLM cosine over scorable references with a nonmissing, non-wholly-unknown prediction; missing/unknown answers are N/A and excluded from this mean. Report with valid-pair coverage. Not percent accuracy.",
+    "missing_or_unknown_only": "N/A per line; excluded from primary cosine denominator",
+    "coverage": "valid_pairs / scorable_references; unknown/missing counts cover scorable references only",
+    "partial_unknown": "Existing partial_unknown predictions remain scored and are counted separately. No new semantic classification is performed. Tentative guesses, unresolved aliases, and structure-only glosses may still receive cosine scores; nonzero similarity does not establish decipherment.",
+    "zero_inclusive_cosine": "Supplementary historical mean including missing/unknown as zero; unchanged",
+    "unknown_reference": "Unscorable; excluded from both primary mean and coverage denominator"
+  },
+  "coverage": {
+    "public_messages": 110,
+    "decoder_message_ids": 110,
+    "task_status_excluded": 1,
+    "discarded_excluded": 0,
+    "high_confidence_reference_fraction": 0.13761467889908258,
+    "reference_confidence_counts": {
+      "medium": 79,
+      "high": 15,
+      "low": 15
+    },
+    "scorable_references": 109,
+    "valid_pairs": 109,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 109
+  },
+  "summary": {
+    "eligible": 109,
+    "scorable_references": 109,
+    "unknown_references": 0,
+    "valid_pairs": 109,
+    "cosine_denominator": 109,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 109,
+    "predictions_with_unknown_markers": 109,
+    "uncertain_or_partial_references": 94,
+    "mean_per_line": {
+      "cosine": 0.0746017872236778
+    },
+    "valid_pair_mean": {
+      "cosine": 0.0746017872236778
+    }
+  },
+  "high_confidence": {
+    "eligible": 15,
+    "scorable_references": 15,
+    "unknown_references": 0,
+    "valid_pairs": 15,
+    "cosine_denominator": 15,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 15,
+    "predictions_with_unknown_markers": 15,
+    "uncertain_or_partial_references": 0,
+    "mean_per_line": {
+      "cosine": 0.06515649928379508
+    },
+    "valid_pair_mean": {
+      "cosine": 0.06515649928379508
+    }
+  },
+  "lines": [
+    {
+      "id": 1,
+      "sender": "task",
+      "source": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":0,\"invalid_attempts\":0}",
+      "hypothesis": "Public task feedback: stage 0; invalid attempts 0.",
+      "hypothesis_original": "Public task feedback: stage 0; invalid attempts 0.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public task feedback: stage 0; invalid attempts 0.",
+      "scores": null,
+      "hypothesis_normalized_raw": "Public task feedback: stage 0; invalid attempts 0.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 2,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗶞",
+      "reference": "I have a thing: zero.",
+      "hypothesis": "R U — tentative speaker report; remaining meaning unknown.",
+      "hypothesis_original": "R U — tentative speaker report; remaining meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R U — tentative speaker report; remaining meaning unknown.",
+      "scores": {
+        "cosine": 0.15117811310017717
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R U — tentative speaker report; remaining meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.15117811310017717
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 3,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗿃",
+      "reference": "I have a thing.",
+      "hypothesis": "R — tentative speaker report; meaning unknown.",
+      "hypothesis_original": "R — tentative speaker report; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R — tentative speaker report; meaning unknown.",
+      "scores": {
+        "cosine": 0.10566805933286
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 11,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R — tentative speaker report; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.18575057999133598,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10566805933286
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 4,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I have a thing. Do you have a thing?",
+      "hypothesis": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "hypothesis_original": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "scores": {
+        "cosine": 0.10519728382528586
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10519728382528586
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 5,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃",
+      "reference": "I have a thing.",
+      "hypothesis": "R — unknown speaker report.",
+      "hypothesis_original": "R — unknown speaker report.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R — unknown speaker report.",
+      "scores": {
+        "cosine": 0.11342204089636032
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 8,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R — unknown speaker report.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.3021375397356768,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11342204089636032
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 6,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𗿃 𘙠",
+      "reference": "I know a thing: four.",
+      "hypothesis": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "hypothesis_original": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "scores": {
+        "cosine": 0.21244072546442067
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.21244072546442067
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 7,
+      "sender": "agent_5",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "Do you have a thing? Say [what it is].",
+      "hypothesis": "F E — tentative other/group-directed clause; meaning unknown.",
+      "hypothesis_original": "F E — tentative other/group-directed clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F E — tentative other/group-directed clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.20677160283947785
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F E — tentative other/group-directed clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11868405219520975,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.20677160283947785
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 8,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𘙠",
+      "reference": "I have a thing: four.",
+      "hypothesis": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "hypothesis_original": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "scores": {
+        "cosine": 0.16795192052739358
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.16795192052739358
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 9,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗛽",
+      "reference": "I have a thing: one.",
+      "hypothesis": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "hypothesis_original": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "scores": {
+        "cosine": 0.12531195861273808
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11868405219520975,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.12531195861273808
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 10,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I know a thing. If you have a thing, say [it].",
+      "hypothesis": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "hypothesis_original": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead modify the opening assertion; clause boundaries are inferred."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.06286539859394447
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.06286539859394447
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 11,
+      "sender": "agent_6",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I have a thing: four. Do you have a thing?",
+      "hypothesis": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "hypothesis_original": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.1745680670899208
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.1745680670899208
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 12,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃",
+      "reference": "I have two.",
+      "hypothesis": "S P A4 — report-like construction without C; meaning unknown.",
+      "hypothesis_original": "S P A4 — report-like construction without C; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "What is possessed is not named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A4 — report-like construction without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.06892335213480417
+      },
+      "embedding_tokens": {
+        "reference": 6,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A4 — report-like construction without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.06892335213480417
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 13,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𗸽",
+      "reference": "I have a thing: three.",
+      "hypothesis": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "hypothesis_original": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "scores": {
+        "cosine": 0.11019112672692209
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11868405219520975,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11019112672692209
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 14,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𘚺 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: eight. Who has what thing?",
+      "hypothesis": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "hypothesis_original": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "scores": {
+        "cosine": 0.08055632763887494
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 30,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051366639095059514,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08055632763887494
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 15,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗦴 𗄪 𗵵 𗟎 𗿃 𗎰 𗣑",
+      "reference": "I have a thing: four. See [it]. Do you have a thing? Say what.",
+      "hypothesis": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "hypothesis_original": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The trailing see and say what have no clear clause boundaries or subjects; they could describe rather than request seeing or speaking."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "scores": {
+        "cosine": 0.13409866781533256
+      },
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07395852913779274,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.13409866781533256
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 16,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗵵 𗿃 𗥊",
+      "reference": "I have a thing. Say [it]. You, many things.",
+      "hypothesis": "R E V C B — unknown; report-like opening with additional V C B.",
+      "hypothesis_original": "R E V C B — unknown; report-like opening with additional V C B.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The final you / thing / many has no verb. It might be a request to tell the listener many things; that relation is not explicit."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R E V C B — unknown; report-like opening with additional V C B.",
+      "scores": {
+        "cosine": 0.014435207617421507
+      },
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R E V C B — unknown; report-like opening with additional V C B.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.014435207617421507
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 17,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have two. What do you have?",
+      "hypothesis": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "hypothesis_original": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The object of the first clause is just the number two."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "scores": {
+        "cosine": 0.12149246537936603
+      },
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.12149246537936603
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 18,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: seven. Do you have a thing? Say [what it is].",
+      "hypothesis": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "hypothesis_original": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.11385459186620431
+      },
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11385459186620431
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 19,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗛽 𗿃",
+      "reference": "I have a one-thing.",
+      "hypothesis": "S P A3 C — report with A3 before C; meaning unknown.",
+      "hypothesis_original": "S P A3 C — report with A3 before C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The number precedes thing, consistent with a head-final compound; it may describe quantity or an unspecified numerical association."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A3 C — report with A3 before C; meaning unknown.",
+      "scores": {
+        "cosine": 0.08885382069761391
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A3 C — report with A3 before C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08885382069761391
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 20,
+      "sender": "agent_6",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: four. What thing do you have?",
+      "hypothesis": "R A6 / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "R A6 / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A6 / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.151722487811925
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A6 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10620315618312248,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.151722487811925
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 21,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗸽 𗿃 𗦴",
+      "reference": "I have a three-thing. See [it].",
+      "hypothesis": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "hypothesis_original": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The final see could continue an assertion or form a request; its subject/object are not specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "scores": {
+        "cosine": 0.05124458436315269
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.05124458436315269
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 22,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗣑 𗄎 𗵵 𗦴 𗿃 𗎰",
+      "reference": "I have a thing, what? Because you see a thing. Say [it].",
+      "hypothesis": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "hypothesis_original": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The relation of what and because to the surrounding clauses is unclear. This is a partial reading, not a resolved causal claim."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "scores": {
+        "cosine": 0.10384551075444658
+      },
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 21,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10384551075444658
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 23,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "hypothesis_original": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "scores": {
+        "cosine": 0.0394714294785934
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0394714294785934
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 24,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗿃 𗳃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: two. If you have a thing, say [it].",
+      "hypothesis": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "hypothesis_original": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The conditional could instead modify the initial assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "scores": {
+        "cosine": 0.060309767283524385
+      },
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.060309767283524385
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 25,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𘚐 𗿃 𘙠",
+      "reference": "I know a big thing: four.",
+      "hypothesis": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "hypothesis_original": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Big + thing is a possible compound, but it does not identify any particular object."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "scores": {
+        "cosine": 0.1543870106691081
+      },
+      "embedding_tokens": {
+        "reference": 10,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.1543870106691081
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 26,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𘎌 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. Say [it]. We have a thing. Say [it].",
+      "hypothesis": "R E / K P C E — unknown report and K-introduced clause.",
+      "hypothesis_original": "R E / K P C E — unknown report and K-introduced clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "No punctuation fixes the two say clauses. They may be assertions about speaking rather than requests."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R E / K P C E — unknown report and K-introduced clause.",
+      "scores": {
+        "cosine": 0.06471195311480933
+      },
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R E / K P C E — unknown report and K-introduced clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.06471195311480933
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 27,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have two. Do you have a thing? Say [what it is].",
+      "hypothesis": "S P A4 / F E — unknown report and repeated clause.",
+      "hypothesis_original": "S P A4 / F E — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A4 / F E — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.08186875218065609
+      },
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A4 / F E — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08678802556070953,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08186875218065609
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 28,
+      "sender": "agent_1",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350926738992107
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350926738992107
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 29,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗳃 𗿃",
+      "reference": "I have a two-thing.",
+      "hypothesis": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "hypothesis_original": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The number precedes thing; quantity versus compound/label is unresolved."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "scores": {
+        "cosine": 0.12685866717137453
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.12685866717137453
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 30,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "hypothesis": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "hypothesis_original": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.0673877027747524
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0673877027747524
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 31,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭",
+      "reference": "I have a thing: seven.",
+      "hypothesis": "R A0 — report with A0; meaning unknown.",
+      "hypothesis_original": "R A0 — report with A0; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 — report with A0; meaning unknown.",
+      "scores": {
+        "cosine": 0.0957273648866561
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 — report with A0; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.1561969968460128,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0957273648866561
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 32,
+      "sender": "agent_3",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "hypothesis_original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scores": {
+        "cosine": 0.0778739230324752
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0778739230324752
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 33,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𗿃 𘙠",
+      "reference": "I know a thing: four.",
+      "hypothesis": "R′ A6 — variant report with A6; meaning unknown.",
+      "hypothesis_original": "R′ A6 — variant report with A6; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ A6 — variant report with A6; meaning unknown.",
+      "scores": {
+        "cosine": 0.2177262600315972
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ A6 — variant report with A6; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.2177262600315972
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 34,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗚀 𗄪 𗵵 𗟎 𗚀",
+      "reference": "I have a tool/object. Do you have a tool/object?",
+      "hypothesis": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "hypothesis_original": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Tool and object are both listed meanings; no particular device is identified."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "scores": {
+        "cosine": -0.044764704700505524
+      },
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 28,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.05415315253510895,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.044764704700505524
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 35,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗡒 𗣑",
+      "reference": "What do you know?",
+      "hypothesis": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "hypothesis_original": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.14141493259727164
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.14141493259727164
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 36,
+      "sender": "agent_1",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "hypothesis_original": "F Z — dominant formula without E; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "scores": {
+        "cosine": 0.014906899720576978
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.014906899720576978
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 37,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗦴 𗣑 𗿃",
+      "reference": "Do you have [something]? See what thing?",
+      "hypothesis": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "hypothesis_original": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The sequence have / see / what / thing does not specify how the verbs connect. It might instead ask about what the listener sees."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "scores": {
+        "cosine": 0.16829699399383316
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06074588070876682,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.16829699399383316
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 38,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗵵 𗦴 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have [something]; you see a thing. Say [it]. What thing do you have?",
+      "hypothesis": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "hypothesis_original": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The opening I / have / you / see / thing is not a clearly formed clause. The omitted object and clause boundaries cannot be recovered confidently."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "scores": {
+        "cosine": 0.126743518920236
+      },
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.126743518920236
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 39,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭",
+      "reference": "I have a thing: seven.",
+      "hypothesis": "R A0 — unknown report with A0.",
+      "hypothesis_original": "R A0 — unknown report with A0.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 — unknown report with A0.",
+      "scores": {
+        "cosine": 0.046008566722786436
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 — unknown report with A0.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.18575057999133598,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.046008566722786436
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 40,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗡒 𗣑 𗎰",
+      "reference": "What do you know? Say [it].",
+      "hypothesis": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "hypothesis_original": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.15963315541284848
+      },
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.15963315541284848
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 41,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𘉝 𗎰",
+      "reference": "I have a thing. [I] want to say [it].",
+      "hypothesis": "R L E — unknown report with L E.",
+      "hypothesis_original": "R L E — unknown report with L E.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Want/need to tell is a plausible continuation with the initial subject; subject and object are not repeated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R L E — unknown report with L E.",
+      "scores": {
+        "cosine": 0.0011895229363455505
+      },
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R L E — unknown report with L E.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11900569447018795,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0011895229363455505
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 42,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 43,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗿃 𗋭",
+      "reference": "I know a thing: seven.",
+      "hypothesis": "R′ A0 — variant report with A0; meaning unknown.",
+      "hypothesis_original": "R′ A0 — variant report with A0; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ A0 — variant report with A0; meaning unknown.",
+      "scores": {
+        "cosine": 0.08802058934545638
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ A0 — variant report with A0; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08802058934545638
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 44,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "hypothesis": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "hypothesis_original": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.07590941541170704
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07590941541170704
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 45,
+      "sender": "agent_2",
+      "source": "𗏔 𗡒 𗿃 𗸪 𗄪 𘚺 𗡒 𗿃 𗣑",
+      "reference": "I know a thing: eight. Who knows what thing?",
+      "hypothesis": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "hypothesis_original": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "scores": {
+        "cosine": 0.03788206039101229
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06468490584192432,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.03788206039101229
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 46,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 47,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𗦴 𗎰 𗗫 𗵵 𗟎 𗿃",
+      "reference": "I have a thing. See [it]; say [it], if you have a thing.",
+      "hypothesis": "R H E / J V P C — unknown report and J-introduced clause.",
+      "hypothesis_original": "R H E / J V P C — unknown report and J-introduced clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The two extra verbs are not clearly attached. The conditional scope and whether see/say are requests are uncertain."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R H E / J V P C — unknown report and J-introduced clause.",
+      "scores": {
+        "cosine": 0.044297300925618094
+      },
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R H E / J V P C — unknown report and J-introduced clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.044297300925618094
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 48,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "hypothesis_original": "Q V P Z E — formula without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.11923993408903187
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11923993408903187
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 49,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: seven. You have a thing. Say [it].",
+      "hypothesis": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "hypothesis_original": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The second clause lacks a question marker; it may pragmatically ask the listener what they have, but the literal form is an assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "scores": {
+        "cosine": -0.023044378616114393
+      },
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.023044378616114393
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 50,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: eight. What thing do you have?",
+      "hypothesis": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "hypothesis_original": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "scores": {
+        "cosine": 0.05269710716468216
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.05269710716468216
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 51,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 52,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗦴 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing. See [it]. What thing do you have?",
+      "hypothesis": "R H / F Z — unknown report with H and repeated clause.",
+      "hypothesis_original": "R H / F Z — unknown report with H and repeated clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The isolated see could be an instruction or a continuation of the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R H / F Z — unknown report with H and repeated clause.",
+      "scores": {
+        "cosine": 0.08648117983881015
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R H / F Z — unknown report with H and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08648117983881015
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 53,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "hypothesis_original": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "scores": {
+        "cosine": 0.10011757167034294
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10011757167034294
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 54,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have eight. What do you have?",
+      "hypothesis": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "hypothesis_original": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "No noun specifies what the eight refers to."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "scores": {
+        "cosine": 0.05504966049953658
+      },
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.05504966049953658
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 55,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing. Say [it]. What thing do you have?",
+      "hypothesis": "R E / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "R E / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say might instead continue the speaker's assertion: I have a thing to tell."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R E / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.09354451237046045
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R E / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09503475972243514,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.09354451237046045
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 56,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗡒 𗿃 𗣑 𗎰",
+      "reference": "I have a thing. If you know what thing, say [it].",
+      "hypothesis": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "hypothesis_original": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The embedded thing / what does not clearly identify the object of know or the scope of if."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "scores": {
+        "cosine": -0.0030455357933177607
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.0030455357933177607
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 57,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "hypothesis": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "hypothesis_original": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause uses what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "scores": {
+        "cosine": 0.07487069105307573
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06074588070876682,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07487069105307573
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 58,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have a thing: eight. What do you have?",
+      "hypothesis": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "hypothesis_original": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "scores": {
+        "cosine": 0.05923594826419925
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08032276872815308,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.05923594826419925
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 59,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 60,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "hypothesis_original": "F Z — dominant formula without E; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "scores": {
+        "cosine": 0.014906899720576978
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.014906899720576978
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 61,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "hypothesis": "S P A0 C / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "S P A0 C / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A0 C / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.07417938151562756
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A0 C / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07417938151562756
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 62,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. What thing do you have?",
+      "hypothesis": "S P A2 C / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "S P A2 C / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 C / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.08538467792971906
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 C / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08538467792971906
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 63,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350926738992107
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350926738992107
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 64,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗦴 𗿃 𗣑",
+      "reference": "What thing do you see?",
+      "hypothesis": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "hypothesis_original": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "scores": {
+        "cosine": 0.07462996684702021
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 21,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07462996684702021
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 65,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "R A0 / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.0832954482364836
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10620315618312248,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0832954482364836
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 66,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪",
+      "reference": "I have a thing: eight.",
+      "hypothesis": "R A2 — unknown report with A2.",
+      "hypothesis_original": "R A2 — unknown report with A2.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A2 — unknown report with A2.",
+      "scores": {
+        "cosine": 0.000855894359519147
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 10,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A2 — unknown report with A2.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.18575057999133598,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.000855894359519147
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 67,
+      "sender": "agent_7",
+      "source": "𗏔 𗦴 𗿃 𗣑 𗿃",
+      "reference": "I see a thing. What thing?",
+      "hypothesis": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "hypothesis_original": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The sequence thing / what / thing may be one malformed object phrase rather than two clauses."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "scores": {
+        "cosine": 0.21622896820189758
+      },
+      "embedding_tokens": {
+        "reference": 10,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.21622896820189758
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 68,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. Say [it]. Do you have a thing? Say [it].",
+      "hypothesis": "R E / F E — unknown report and repeated clause.",
+      "hypothesis_original": "R E / F E — unknown report and repeated clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Both tell/say verbs have uncertain attachment and may be assertions rather than requests."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R E / F E — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.06575618220768975
+      },
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R E / F E — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.0760978866869656,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.06575618220768975
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 69,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗚀 𗸪 𗎰 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have a tool/object: eight. Say [it]. What do you have?",
+      "hypothesis": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "hypothesis_original": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The isolated say can be a request or part of the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "scores": {
+        "cosine": 0.02116296918871226
+      },
+      "embedding_tokens": {
+        "reference": 21,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.057259987315337754,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.02116296918871226
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 70,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / V P C Z — unknown report and V-clause.",
+      "hypothesis_original": "R A0 / V P C Z — unknown report and V-clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / V P C Z — unknown report and V-clause.",
+      "scores": {
+        "cosine": 0.055383082933582704
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.055383082933582704
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 71,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 72,
+      "sender": "agent_7",
+      "source": "𗵵 𗟎 𗿃 𗣑 𗎰 𘉝 𗦴 𗿃",
+      "reference": "What thing do you have? Say [it]. [Someone] wants to see a thing.",
+      "hypothesis": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "hypothesis_original": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "No question marker appears. Want/need and see have no explicit subject; the listener or speaker may be intended."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "scores": {
+        "cosine": 0.08390319651385918
+      },
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06468490584192432,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08390319651385918
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 73,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / F Z — unknown report and repeated clause.",
+      "hypothesis_original": "R A0 / F Z — unknown report and repeated clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / F Z — unknown report and repeated clause.",
+      "scores": {
+        "cosine": 0.0832954482364836
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10620315618312248,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0832954482364836
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 74,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗎰",
+      "reference": "I have eight. Say [it].",
+      "hypothesis": "S P A2 E — report-like construction without C; meaning unknown.",
+      "hypothesis_original": "S P A2 E — report-like construction without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say may instead continue I have eight to tell; no noun specifies the referent of eight."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 E — report-like construction without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.032620642673299644
+      },
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 E — report-like construction without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.032620642673299644
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 75,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗚀 𗣑 𗎰 𗏔 𗟎 𗚀 𗶞 𗿃",
+      "reference": "What tool/object do you have? Say [it]. I have a tool/object, zero, thing.",
+      "hypothesis": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "hypothesis_original": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The closing tool/object / zero / thing has no clear grouping. Zero may modify the tool/object or the generic thing, and its numerical role is unspecified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "scores": {
+        "cosine": 0.025842499803680027
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 33,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.04449945957170705,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.025842499803680027
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 76,
+      "sender": "agent_3",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "hypothesis_original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scores": {
+        "cosine": 0.0778739230324752
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0778739230324752
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 77,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / V P C Z — unknown report and V-clause.",
+      "hypothesis_original": "R A0 / V P C Z — unknown report and V-clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / V P C Z — unknown report and V-clause.",
+      "scores": {
+        "cosine": 0.055383082933582704
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.055383082933582704
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 78,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "hypothesis_original": "Q V P Z E — formula without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.11923993408903187
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11923993408903187
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 79,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I know a seven-thing. What thing do you have?",
+      "hypothesis": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "hypothesis_original": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.09242733548982955
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 33,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051366639095059514,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.09242733548982955
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 80,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗚀 𗎰 𗄪 𗵵 𗟎 𗚀 𗣑",
+      "reference": "I have a tool/object. Say [it]. What tool/object do you have?",
+      "hypothesis": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "hypothesis_original": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The isolated say might instead describe the speaker telling something."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "scores": {
+        "cosine": -0.02006532105375115
+      },
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 28,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.057259987315337754,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.02006532105375115
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 81,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "hypothesis": "R / J V P C E — unknown report and J-introduced clause.",
+      "hypothesis_original": "R / J V P C E — unknown report and J-introduced clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R / J V P C E — unknown report and J-introduced clause.",
+      "scores": {
+        "cosine": 0.0515460172135819
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0515460172135819
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 82,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 83,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃",
+      "reference": "I know a seven-thing.",
+      "hypothesis": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "hypothesis_original": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "scores": {
+        "cosine": 0.06634949576880406
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.06634949576880406
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 84,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 85,
+      "sender": "agent_7",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "hypothesis_original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scores": {
+        "cosine": 0.0778739230324752
+      },
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0778739230324752
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 86,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "Do you have a thing? Say [what it is].",
+      "hypothesis": "F E — recurrent clause without Z; meaning unknown.",
+      "hypothesis_original": "F E — recurrent clause without Z; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F E — recurrent clause without Z; meaning unknown.",
+      "scores": {
+        "cosine": 0.20302644336556244
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F E — recurrent clause without Z; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11900569447018795,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.20302644336556244
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 87,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃 𗗫 𗵵 𗡒 𗿃 𗎰",
+      "reference": "I know a seven-thing. If you know a thing, say [it].",
+      "hypothesis": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "hypothesis_original": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The conditional might instead modify the initial assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "scores": {
+        "cosine": 0.04552796512396581
+      },
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 25,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06917184228205472,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.04552796512396581
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 88,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 89,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 90,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 91,
+      "sender": "agent_2",
+      "source": "𗏔 𗡒 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I know a thing. Do you have a thing?",
+      "hypothesis": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "hypothesis_original": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "scores": {
+        "cosine": 0.07110251654337231
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11868405219520975,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07110251654337231
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 92,
+      "sender": "agent_0",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 93,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 94,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗎰",
+      "reference": "I have a thing: eight. Say [it].",
+      "hypothesis": "R A2 E — unknown report with A2 E.",
+      "hypothesis_original": "R A2 E — unknown report with A2 E.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say may instead complete an assertion about telling the thing."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A2 E — unknown report with A2 E.",
+      "scores": {
+        "cosine": -0.017989673273989554
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A2 E — unknown report with A2 E.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.017989673273989554
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 95,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "hypothesis_original": "F Z — dominant formula without E; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "scores": {
+        "cosine": 0.014906931735476508
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.014906931735476508
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 96,
+      "sender": "agent_0",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350926738992107
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350926738992107
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 97,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350926738992107
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350926738992107
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 98,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃",
+      "reference": "I have an eight-thing.",
+      "hypothesis": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "hypothesis_original": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "scores": {
+        "cosine": 0.07390119105675057
+      },
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07390119105675057
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 99,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "hypothesis_original": "Q V P Z E — formula without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.11923993408903187
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11923993408903187
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 100,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "hypothesis": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "hypothesis_original": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "scores": {
+        "cosine": 0.08583715724059177
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08583715724059177
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 101,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 𗉜 𗽃 𗦴",
+      "reference": "What thing do you have? Say [it]. People see [something].",
+      "hypothesis": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "hypothesis_original": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The final people / see is literal; its object and relation to the request are unspecified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "scores": {
+        "cosine": -0.0028092351335751143
+      },
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": -0.0028092351335751143
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 102,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. What thing do you have?",
+      "hypothesis": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "hypothesis_original": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "scores": {
+        "cosine": 0.09722716877394624
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09578464408619825,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.09722716877394624
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 103,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "hypothesis_original": "Q V P Z E — formula without C; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P Z E — formula without C; meaning unknown.",
+      "scores": {
+        "cosine": 0.11923993408903187
+      },
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11923993408903187
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 104,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "hypothesis": "R A0 / F Z — unknown report and recurrent clause.",
+      "hypothesis_original": "R A0 / F Z — unknown report and recurrent clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R A0 / F Z — unknown report and recurrent clause.",
+      "scores": {
+        "cosine": 0.11455333952033543
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R A0 / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10620315618312248,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11455333952033543
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 105,
+      "sender": "agent_6",
+      "source": "𗄪 𗵵 𗡒 𗿃",
+      "reference": "Do you know a thing?",
+      "hypothesis": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "hypothesis_original": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "scores": {
+        "cosine": 0.10558425298944757
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10600313379512592,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10558425298944757
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 106,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "hypothesis": "R / J V P C E — unknown report and J-introduced clause.",
+      "hypothesis_original": "R / J V P C E — unknown report and J-introduced clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "R / J V P C E — unknown report and J-introduced clause.",
+      "scores": {
+        "cosine": 0.0515460172135819
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "R / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08737167851715875,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.0515460172135819
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 107,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "hypothesis_original": "F Z — dominant formula without E; meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z — dominant formula without E; meaning unknown.",
+      "scores": {
+        "cosine": 0.014906931735476508
+      },
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.13485111859503685,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.014906931735476508
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 108,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗎰 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. Say [it]. What thing do you have?",
+      "hypothesis": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "hypothesis_original": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The second clause has what but no leading question marker; say may attach to the opening assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "scores": {
+        "cosine": 0.07014257598818845
+      },
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07014257598818845
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 109,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗒏 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. Take a thing. What thing do you have?",
+      "hypothesis": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "hypothesis_original": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Take may describe an action or be a request; its subject and clause boundaries are implicit. The final question lacks a leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "scores": {
+        "cosine": 0.08601094094500882
+      },
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 28,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051366639095059514,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08601094094500882
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 110,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "hypothesis_original": "F Z E — dominant formula; meaning unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "F Z E — dominant formula; meaning unknown.",
+      "scores": {
+        "cosine": 0.030350921047572622
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 12,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "hypothesis_normalized_raw": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11737849637633066,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.030350921047572622
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    }
+  ],
+  "cell_id": "D07",
+  "seed": 1,
+  "condition": "no_task",
+  "protocol": "200turn_no_clock_50usd",
+  "run_id": "R06",
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2/swarmish.txt",
+  "extraction_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/extracted/D07.json",
+  "extraction_sha256": "3e8f90ca9ae87f2d35a43f8346dcffa59a8b0641d912f4d2581233ee21514792",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/decoded.txt",
+  "decoder_provenance": {
+    "phase": "monitor",
+    "model": "openai/gpt-6.1-sol",
+    "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+    "n_agents": 8,
+    "minutes": null,
+    "max_turns": 200,
+    "conditions_requested": [
+      "no_task"
+    ],
+    "conditions_completed": [
+      "no_task"
+    ],
+    "stop_reason": "completed",
+    "total_cost_usd": 3.098259999999999,
+    "cost_incomplete": false,
+    "max_cost_usd": 50.0,
+    "baseline": false,
+    "elapsed_s": 148.42987983301282,
+    "transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "source_transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "record_path": "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/receipt.json",
+    "record_sha256": "57af0529db970a8a2e2174b3844beee9c5422629510e2b5ad0a6aae2993231e1"
+  },
+  "primary_metric": "mean_cosine_over_valid_pairs",
+  "derived_from": {
+    "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/D07.json",
+    "report_sha256": "274fd60935ee323331fe1ceaa81f6bdd14c8fc20a073e3ebd0c00c4237976510"
+  },
+  "supplementary_metrics": {
+    "label": "Historical zero-inclusive scores (unchanged)",
+    "summary": {
+      "eligible": 109,
+      "scorable_references": 109,
+      "unknown_references": 0,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "predictions_with_unknown_markers": 109,
+      "uncertain_or_partial_references": 94,
+      "valid_pairs": 109,
+      "prediction_coverage": 1.0,
+      "mean_per_line": {
+        "bleu": 0.10078159631972748,
+        "rouge1": 0.0,
+        "rouge2": 0.0,
+        "rougeL": 0.0,
+        "cosine": 0.0746017872236778
+      },
+      "valid_pair_mean": {
+        "bleu": 0.10078159631972748,
+        "rouge1": 0.0,
+        "rouge2": 0.0,
+        "rougeL": 0.0,
+        "cosine": 0.0746017872236778
+      },
+      "corpus_bleu": 0.0009772918003303447
+    },
+    "high_confidence": {
+      "eligible": 15,
+      "scorable_references": 15,
+      "unknown_references": 0,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "predictions_with_unknown_markers": 15,
+      "uncertain_or_partial_references": 0,
+      "valid_pairs": 15,
+      "prediction_coverage": 1.0,
+      "mean_per_line": {
+        "bleu": 0.12105747705869827,
+        "rouge1": 0.0,
+        "rouge2": 0.0,
+        "rougeL": 0.0,
+        "cosine": 0.06515649928379508
+      },
+      "valid_pair_mean": {
+        "bleu": 0.12105747705869827,
+        "rouge1": 0.0,
+        "rouge2": 0.0,
+        "rougeL": 0.0,
+        "cosine": 0.06515649928379508
+      },
+      "corpus_bleu": 0.007550760430867316
+    },
+    "metric_definition": {
+      "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+      "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+      "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+      "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+      "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored; explicit whole-content abstentions additionally normalized by the audited extraction adapter",
+      "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+    }
+  }
+}

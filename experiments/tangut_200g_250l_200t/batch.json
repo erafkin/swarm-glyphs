@@ -2,7 +2,7 @@
   "schema_version": 2,
   "batch_id": "tangut_200g_250l_200t",
   "created_date": "2026-11-07",
-  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and thirteen decoder conditions targeting the revised primary playthroughs.",
+  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and fourteen decoder conditions targeting the revised primary playthroughs.",
   "repository": "https://github.com/erafkin/swarm-glyphs",
   "planning_budget_usd": 350,
   "estimated_all_new_runs_usd": 224.575,
@@ -96,7 +96,8 @@
         "D10",
         "D11",
         "D12",
-        "D13"
+        "D13",
+        "D14"
       ],
       "archived_gameplay_ids": [
         "T01",
@@ -265,6 +266,10 @@
     {
       "id": "D13",
       "path": "decoding/D13_deepseek_to_sol_no_task"
+    },
+    {
+      "id": "D14",
+      "path": "decoding/D14_haiku_to_sol_task_full"
     }
   ]
 }

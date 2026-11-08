@@ -1,0 +1,3750 @@
+{
+  "schema_version": 2,
+  "mode": "reference_assisted_public_only",
+  "private_annotations_used": false,
+  "method": "Mean paired MiniLM cosine over scorable references with a nonmissing, non-wholly-unknown prediction; missing/unknown answers are N/A and excluded from this mean. Report with valid-pair coverage. Not percent accuracy.",
+  "reference_status": "complete",
+  "inputs": {
+    "reference_sha256": "b55e95fe74d3d0156efc1a9899c156bd86a15ac6f943617ed9e4cf15932e920a",
+    "public_transcript_sha256": "9497f63ddb428309d7c5816ee23b67f7ae8413d97c4a2ca3567c138368f72257",
+    "rendered_public_transcript_sha256": "429339e4dd3844c2255e3035a79515f16b7909e3c4e65e747bfdc496d6b1ce62",
+    "decoder_document_sha256": "3674b5d3c3cd28817496b449ff0b0045c1652bbdfba445a7a56c8d967b752a16",
+    "language_sha256": "37df78931b78735512a7daa1193e8a4b62ef0dda38a2db7f5cc69d2d67ce95a6"
+  },
+  "embedding_model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "embedding_truncation": {
+    "measured_pairs": 74,
+    "reference_lines_truncated": 0,
+    "hypothesis_lines_truncated": 0
+  },
+  "metric_definition": {
+    "cosine": "Mean paired MiniLM cosine over scorable references with a nonmissing, non-wholly-unknown prediction; missing/unknown answers are N/A and excluded from this mean. Report with valid-pair coverage. Not percent accuracy.",
+    "missing_or_unknown_only": "N/A per line; excluded from primary cosine denominator",
+    "coverage": "valid_pairs / scorable_references; unknown/missing counts cover scorable references only",
+    "partial_unknown": "Existing partial_unknown predictions remain scored and are counted separately. No new semantic classification is performed. Tentative guesses, unresolved aliases, and structure-only glosses may still receive cosine scores; nonzero similarity does not establish decipherment.",
+    "zero_inclusive_cosine": "Supplementary historical mean including missing/unknown as zero; unchanged",
+    "unknown_reference": "Unscorable; excluded from both primary mean and coverage denominator"
+  },
+  "coverage": {
+    "public_messages": 102,
+    "decoder_message_ids": 102,
+    "task_status_excluded": 28,
+    "discarded_excluded": 0,
+    "high_confidence_reference_fraction": 0.4864864864864865,
+    "reference_confidence_counts": {
+      "medium": 31,
+      "high": 36,
+      "low": 7
+    },
+    "scorable_references": 74,
+    "valid_pairs": 74,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 14
+  },
+  "summary": {
+    "eligible": 74,
+    "scorable_references": 74,
+    "unknown_references": 0,
+    "valid_pairs": 74,
+    "cosine_denominator": 74,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 14,
+    "predictions_with_unknown_markers": 14,
+    "uncertain_or_partial_references": 38,
+    "mean_per_line": {
+      "cosine": 0.23579776098445196
+    },
+    "valid_pair_mean": {
+      "cosine": 0.23579776098445196
+    }
+  },
+  "high_confidence": {
+    "eligible": 36,
+    "scorable_references": 36,
+    "unknown_references": 0,
+    "valid_pairs": 36,
+    "cosine_denominator": 36,
+    "prediction_coverage": 1.0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 4,
+    "predictions_with_unknown_markers": 4,
+    "uncertain_or_partial_references": 0,
+    "mean_per_line": {
+      "cosine": 0.2872814172314897
+    },
+    "valid_pair_mean": {
+      "cosine": 0.2872814172314897
+    }
+  },
+  "lines": [
+    {
+      "id": 1,
+      "sender": "task",
+      "source": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":0,\"invalid_attempts\":0}",
+      "hypothesis": "Public feedback: stage 0; invalid attempts 0.",
+      "hypothesis_original": "Public feedback: stage 0; invalid attempts 0.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 0; invalid attempts 0.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 2,
+      "sender": "agent_6",
+      "source": "𘌿 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𘛚 𗏎 𘑐 𘗊 𗖭 𗑊𘄣 𗐬 𗂮 𗭋 𗭋 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𗢋𗠉 𗭋 𘑐 𘛦 𘄗",
+      "reference": "I name the shape with five outside triangular parts 𗢋𗠉. Its exact task-given value is four.",
+      "hypothesis": "H: 𘓹(A, [𘛚 𗏎, [𗖭 𗑊𘄣 𗐬 𗂮]]). H: equality-like 𗲣([𗛁, A], 𘛦). Thus gives a description/constraint on A and a value-like constraint on a transform of A; exact vocabulary unknown.",
+      "hypothesis_original": "H: 𘓹(A, [𘛚 𗏎, [𗖭 𗑊𘄣 𗐬 𗂮]]). H: equality-like 𗲣([𗛁, A], 𘛦). Thus gives a description/constraint on A and a value-like constraint on a transform of A; exact vocabulary unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The shape description is compressed as SHAPE HAVE [PART-OF TRIANGULAR OUTSIDE FIVE]; a star-like reading is plausible, not an explicit proper name."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: 𘓹(A, [𘛚 𗏎, [𗖭 𗑊𘄣 𗐬 𗂮]]). H: equality-like 𗲣([𗛁, A], 𘛦). Thus gives a description/constraint on A and a value-like constraint on a transform of A; exact vocabulary unknown.",
+      "scores": {
+        "cosine": 0.1393974589192848
+      },
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 61,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051660454541342535,
+          "rouge1": 0.09523809523809525,
+          "rouge2": 0.0,
+          "rougeL": 0.04761904761904762,
+          "cosine": 0.1393974589192848
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 3,
+      "sender": "agent_0",
+      "source": "𗈇 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𗢋 𗃾 𗣮 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𗢋𗠉 𘑐 𘍡 𘄗",
+      "reference": "I name the white round image 𗢋𗠉. Its value is seven.",
+      "hypothesis": "J: 𘓹(A, [𗢋 𗃾 𗣮]). H: value/property 𘂽(A, 𘍡).",
+      "hypothesis_original": "J: 𘓹(A, [𗢋 𗃾 𗣮]). H: value/property 𘂽(A, 𘍡).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𘓹(A, [𗢋 𗃾 𗣮]). H: value/property 𘂽(A, 𘍡).",
+      "scores": {
+        "cosine": 0.18570355675364728
+      },
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.11341174240707227,
+          "rouge1": 0.125,
+          "rouge2": 0.0,
+          "rougeL": 0.125,
+          "cosine": 0.18570355675364728
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 4,
+      "sender": "agent_4",
+      "source": "𗈇 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𗛁 𘑐 𘗊 𗅞 𗴍 𘗊 𗃪 𗙐 𗃾 𘛽 𗭋 𗭋 𗭋 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𘂽 𗴍 𗢋𗠉 𗭋 𘑐 𘋃 𘄗",
+      "reference": "I name the exact task-given name of the large yellow round object 𗢋𗠉. Its value is two.",
+      "hypothesis": "J: 𘓹(A, [𗛁, [𗅞 𗴍 [𗃪 𗙐 𗃾 𘛽]]]). H: equality-like 𗲣([𘂽 𗴍 A], 𘋃).",
+      "hypothesis_original": "J: 𘓹(A, [𗛁, [𗅞 𗴍 [𗃪 𗙐 𗃾 𘛽]]]). H: equality-like 𗲣([𘂽 𗴍 A], 𘋃).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𘓹(A, [𗛁, [𗅞 𗴍 [𗃪 𗙐 𗃾 𘛽]]]). H: equality-like 𗲣([𘂽 𗴍 A], 𘋃).",
+      "scores": {
+        "cosine": 0.10064329949174368
+      },
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 40,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.029697755563170662,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.10064329949174368
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 5,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𘄣 𘑐 𘗊 𗱛 𗣬 𗭋 𗭋 𘄗",
+      "reference": "I name the name associated with one hundred items 𗢋𗠉.",
+      "hypothesis": "H: 𘓹(A, [𘄣, [𗱛 𗣬]]).",
+      "hypothesis_original": "H: 𘓹(A, [𘄣, [𗱛 𗣬]]).",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "The numeral is explicitly ONE HUNDRED. This does not identify a familiar shape or symbol; no repair from later task knowledge is made."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𘓹(A, [𘄣, [𗱛 𗣬]]).",
+      "scores": {
+        "cosine": 0.16928043975803225
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.019294409903971108,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.16928043975803225
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 6,
+      "sender": "agent_3",
+      "source": "𗈇 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𗃪 𗙐 𗃾 𗭋 𘄗 𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𗵺 𗔸 𗺚 𗭋 𘑐 𘗊 𗛁 𘑐 𗢋𗠉 𗭋 𘄗",
+      "reference": "I name the yellow round object 𗢋𗠉. The first location in the task has its exact task-given value or name.",
+      "hypothesis": "J: 𘓹(A, [𗃪 𗙐 𗃾]). H: relation 𗏎([𗇬 𗵺 of 𗺚], [𗛁, A]).",
+      "hypothesis_original": "J: 𘓹(A, [𗃪 𗙐 𗃾]). H: relation 𗏎([𗇬 𗵺 of 𗺚], [𗛁, A]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The source-reference word can mean exact value, name or content; the final choice is not explicit."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𘓹(A, [𗃪 𗙐 𗃾]). H: relation 𗏎([𗇬 𗵺 of 𗺚], [𗛁, A]).",
+      "scores": {
+        "cosine": 0.12867939221549557
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 34,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.018012599273714434,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.12867939221549557
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 7,
+      "sender": "agent_7",
+      "source": "𘑌 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𗏎 𘄗 𗈇 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗛁 𘑐 𘗊 𗡭 𘛦 𗔸 𗽬 𗭋 𗭋 𘄗 𗈇 𘍢 𗲣 𘑰 𗮆𘋷 𘑐 𘗊 𘛚 𘑐 𗈇 𘍢 𗠉 𘑰 𘗊 𘆌 𗴍 𗢋𗠉 𗭋 𘄗 𗭋 𘄗",
+      "reference": "I name water 𗢋𗠉. I name the exact task-given content of the four locations in the box 𗮆𘋷. That is the shape of the water’s surface moving.",
+      "hypothesis": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𗛁, [𗡭 𘛦 of 𗽬]]). J: equality-like 𗲣(B, [𘛚, {J: 𗠉([𘆌 𗴍 A])}]). Exact descriptions unknown.",
+      "hypothesis_original": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𗛁, [𗡭 𘛦 of 𗽬]]). J: equality-like 𗲣(B, [𘛚, {J: 𗠉([𘆌 𗴍 A])}]). Exact descriptions unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "PLACE FOUR is cardinal, literally four places; interpreting it as location 4 would be a contextual index reading. The surface-moving description supports a wave-like referent."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𗛁, [𗡭 𘛦 of 𗽬]]). J: equality-like 𗲣(B, [𘛚, {J: 𗠉([𘆌 𗴍 A])}]). Exact descriptions unknown.",
+      "scores": {
+        "cosine": 0.11236676786403427
+      },
+      "embedding_tokens": {
+        "reference": 36,
+        "hypothesis": 60,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.0386519040638808,
+          "rouge1": 0.0975609756097561,
+          "rouge2": 0.0,
+          "rougeL": 0.04878048780487805,
+          "cosine": 0.11236676786403427
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 8,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𘗊 𘛚 𗖭 𘗊 𗱛 𗑊𘄣 𗂮 𗭋 𗭋 𘄗 𗈇 𘍢 𗞚 𘑰 𗢋𗠉 𘋚 𘗊 𗡭 𗮥 𗭋 𘄗 𗈇 𗪣 𘍢 𗦎 𘑰 𗢋𗠉 𘑐 𘆖 𘄗",
+      "reference": "I name the shape composed of five triangular items 𗢋𗠉. It is at three locations. What is its value?",
+      "hypothesis": "H: 𘓹(A, [𘛚 𗖭 [𗱛 𗑊𘄣 𗂮]]). J: 𗞚(A 𘋚 [𗡭 𗮥]). J-Q: 𗦎(A, ?), approximately asks for an unknown property of A.",
+      "hypothesis_original": "H: 𘓹(A, [𘛚 𗖭 [𗱛 𗑊𘄣 𗂮]]). J: 𗞚(A 𘋚 [𗡭 𗮥]). J-Q: 𗦎(A, ?), approximately asks for an unknown property of A.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "PLACE THREE is cardinal; “location 3” is a plausible contextual interpretation but is not stated with an ordinal. The composed-shape description is compressed."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: 𘓹(A, [𘛚 𗖭 [𗱛 𗑊𘄣 𗂮]]). J: 𗞚(A 𘋚 [𗡭 𗮥]). J-Q: 𗦎(A, ?), approximately asks for an unknown property of A.",
+      "scores": {
+        "cosine": 0.17590406048279128
+      },
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 51,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06734850273596513,
+          "rouge1": 0.0606060606060606,
+          "rouge2": 0.0,
+          "rougeL": 0.0606060606060606,
+          "cosine": 0.17590406048279128
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 9,
+      "sender": "agent_2",
+      "source": "𘑌 𘍢 𘓹 𘑰 𗢋𗠉 𘑐 𗏎 𘄗 𗈇 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𘛚 𗴍 𘗊 𗠉 𘑰 𗢋𗠉 𗭋 𗭋 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𗮆𘋷 𗭋 𘑐 𘑁 𘄗",
+      "reference": "I name water 𗢋𗠉 and the shape arising from its movement 𗮆𘋷. The exact task-given value of that shape is eight.",
+      "hypothesis": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𘛚 𗴍 [𗠉 𘑰 A]]). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "hypothesis_original": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𘛚 𗴍 [𗠉 𘑰 A]]). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The shape is described through water movement; “wave” is a contextual paraphrase."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: 𘓹(A, 𗏎). J: 𘓹(B, [𘛚 𗴍 [𗠉 𘑰 A]]). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "scores": {
+        "cosine": 0.08661636856880123
+      },
+      "embedding_tokens": {
+        "reference": 27,
+        "hypothesis": 44,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03496133429855173,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.08661636856880123
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 10,
+      "sender": "agent_6",
+      "source": "𘌿 𗅰 𘍢 𘉚𘄣 𘑰 agent_5 𘑐 𘗊 𗼾 agent_5 𗢋𗠉 𗭋 𘄗",
+      "reference": "agent_5, please explain the name you assigned to one hundred items.",
+      "hypothesis": "H-REQUEST: 𘉚𘄣(agent_5, A_5). A request involving agent5 and agent5’s A; requested operation unknown.",
+      "hypothesis_original": "H-REQUEST: 𘉚𘄣(agent_5, A_5). A request involving agent5 and agent5’s A; requested operation unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H-REQUEST: 𘉚𘄣(agent_5, A_5). A request involving agent5 and agent5’s A; requested operation unknown.",
+      "scores": {
+        "cosine": 0.5532066849535503
+      },
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 33,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08225964699966554,
+          "rouge1": 0.07692307692307691,
+          "rouge2": 0.0,
+          "rougeL": 0.07692307692307691,
+          "cosine": 0.5532066849535503
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 11,
+      "sender": "agent_0",
+      "source": "𗈇 𗪣 𘍢 𗂤 𘑰 𘗊 𗢋 𗴍 𗽬 𗭋 𘑐 𘆖 𘄗",
+      "reference": "What is the order of the images from the box?",
+      "hypothesis": "J-Q: 𗂤([𗢋 𗴍 𗽬], ?). Asks for a property of the displayed compound.",
+      "hypothesis_original": "J-Q: 𗂤([𗢋 𗴍 𗽬], ?). Asks for a property of the displayed compound.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J-Q: 𗂤([𗢋 𗴍 𗽬], ?). Asks for a property of the displayed compound.",
+      "scores": {
+        "cosine": 0.07486485355118042
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.16590387014219715,
+          "rouge1": 0.20000000000000004,
+          "rouge2": 0.1111111111111111,
+          "rougeL": 0.20000000000000004,
+          "cosine": 0.07486485355118042
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 12,
+      "sender": "agent_4",
+      "source": "𘌿 𗪣 𘍢 𗧨 𘑰 𘗊 𘛚 𘛦 𗭋 𘑐 𘆖 𘄗",
+      "reference": "What is the order of the four shapes?",
+      "hypothesis": "H-Q: 𗧨([𘛚 𘛦], ?).",
+      "hypothesis_original": "H-Q: 𗧨([𘛚 𘛦], ?).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H-Q: 𗧨([𘛚 𘛦], ?).",
+      "scores": {
+        "cosine": 0.15379392780922374
+      },
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.031811104014284386,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.15379392780922374
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 13,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𘑐 𘗊 𗛁 𘑐 𘗊 𗼾 agent_0 𗢋𗠉 𗭋 𗭋 𘄗",
+      "reference": "The two locations in the task have the exact task-given value or name of agent_0’s white round image.",
+      "hypothesis": "H: relation 𗏎([𗇬 𘋃 of 𗺚], [𗛁, A_0]).",
+      "hypothesis_original": "H: relation 𗏎([𗇬 𘋃 of 𗺚], [𗛁, A_0]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The handle identifies the white round image from message 3. TWO is cardinal; the public dialogue appears to use it as an index, but the literal plural is preserved."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: relation 𗏎([𗇬 𘋃 of 𗺚], [𗛁, A_0]).",
+      "scores": {
+        "cosine": 0.13043964627598775
+      },
+      "embedding_tokens": {
+        "reference": 27,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.006580884365953166,
+          "rouge1": 0.08333333333333334,
+          "rouge2": 0.0,
+          "rougeL": 0.08333333333333334,
+          "cosine": 0.13043964627598775
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 14,
+      "sender": "agent_7",
+      "source": "𘑌 𘍢 𗲣 𘑰 𗮆𘋷 𘑐 𘗊 𗼾 agent_2 𗮆𘋷 𗭋 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𗮆𘋷 𗭋 𘑐 𘑁 𘄗",
+      "reference": "My water-surface-movement shape is the same referent as agent_2’s water-movement shape. Its exact task-given value is eight.",
+      "hypothesis": "K: equality-like 𗲣(B, B_2). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "hypothesis_original": "K: equality-like 𗲣(B, B_2). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: equality-like 𗲣(B, B_2). H: equality-like 𗲣([𗛁, B], 𘑁).",
+      "scores": {
+        "cosine": 0.1285418164517214
+      },
+      "embedding_tokens": {
+        "reference": 34,
+        "hypothesis": 32,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.027994848028728633,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.1285418164517214
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 15,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𗢋𗠉 𗭋 𘑐 𘗊 𗼾 agent_4 𗢋𗠉 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𗵺 𗔸 𗺚 𗭋 𘑐 𘋃 𘄗",
+      "reference": "The exact task-given value or name of my yellow round object is agent_4’s name for the large yellow round object. The first task location has value two.",
+      "hypothesis": "H: equality-like 𗲣([𗛁, A], A_4). H: value/property 𘂽([𗇬 𗵺 of 𗺚], 𘋃).",
+      "hypothesis_original": "H: equality-like 𗲣([𗛁, A], A_4). H: value/property 𘂽([𗇬 𗵺 of 𗺚], 𘋃).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first sentence equates the source-derived value/name with the other handle; it does not directly equate the two descriptive objects."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣([𗛁, A], A_4). H: value/property 𘂽([𗇬 𗵺 of 𗺚], 𘋃).",
+      "scores": {
+        "cosine": 0.18739010101196046
+      },
+      "embedding_tokens": {
+        "reference": 37,
+        "hypothesis": 37,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.016926759781399108,
+          "rouge1": 0.10526315789473684,
+          "rouge2": 0.0,
+          "rougeL": 0.10526315789473684,
+          "cosine": 0.18739010101196046
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 16,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𗲣 𘑰 𗢋𗠉 𘑐 𘗊 𗼾 agent_6 𗢋𗠉 𗭋 𘄗 𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𘋃 𗔸 𗽬 𗭋 𘄗",
+      "reference": "My five-triangle shape is the same referent as agent_6’s shape with five outside triangular parts. What is at the two locations in the box?",
+      "hypothesis": "H: equality-like 𗲣(A, A_6). J-Q: 𗞚(? 𘋚 [𗡭 𘋃 of 𗽬]). Approximately asks for the missing item related to that compound.",
+      "hypothesis_original": "H: equality-like 𗲣(A, A_6). J-Q: 𗞚(? 𘋚 [𗡭 𘋃 of 𗽬]). Approximately asks for the missing item related to that compound.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The location count is cardinal, not the explicitly available SECOND word."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣(A, A_6). J-Q: 𗞚(? 𘋚 [𗡭 𘋃 of 𗽬]). Approximately asks for the missing item related to that compound.",
+      "scores": {
+        "cosine": 0.2969838963244603
+      },
+      "embedding_tokens": {
+        "reference": 35,
+        "hypothesis": 43,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.04366052731627501,
+          "rouge1": 0.04545454545454546,
+          "rouge2": 0.0,
+          "rougeL": 0.04545454545454546,
+          "cosine": 0.2969838963244603
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 17,
+      "sender": "agent_2",
+      "source": "𘌿 𘍢 𗲣 𘑰 𗮆𘋷 𘑐 𘗊 𗼾 agent_7 𗮆𘋷 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗼾 agent_7 𗮆𘋷 𗭋 𘑐 𘑁 𘄗",
+      "reference": "My water-movement shape is the same referent as agent_7’s water-surface-movement shape. Agent_7’s referent has value eight.",
+      "hypothesis": "H: equality-like 𗲣(B, B_7). H: value/property 𘂽(B_7, 𘑁).",
+      "hypothesis_original": "H: equality-like 𗲣(B, B_7). H: value/property 𘂽(B_7, 𘑁).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣(B, B_7). H: value/property 𘂽(B_7, 𘑁).",
+      "scores": {
+        "cosine": 0.31268909495312547
+      },
+      "embedding_tokens": {
+        "reference": 36,
+        "hypothesis": 30,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03720407880344645,
+          "rouge1": 0.06666666666666667,
+          "rouge2": 0.0,
+          "rougeL": 0.06666666666666667,
+          "cosine": 0.31268909495312547
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 18,
+      "sender": "agent_6",
+      "source": "𘌿 𘍢 𗲣 𘑰 𗢋𗠉 𘑐 𘗊 𗼾 agent_1 𗢋𗠉 𗭋 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𗢋𗠉 𗭋 𘑐 𘛦 𘄗 𗈇 𗪣 𘍢 𗦎 𘑰 𘗊 𗡭 𗋕 𗔸 𗽬 𗭋 𘑐 𘆖 𘄗",
+      "reference": "My shape with five outside triangular parts is the same referent as agent_1’s five-triangle shape. Its exact task-given value is four. What is the value of the box’s second location?",
+      "hypothesis": "H: equality-like 𗲣(A, A_1). H: equality-like 𗲣([𗛁, A], 𘛦). J-Q: 𗦎([𗡭 𗋕 of 𗽬], ?).",
+      "hypothesis_original": "H: equality-like 𗲣(A, A_1). H: equality-like 𗲣([𗛁, A], 𘛦). J-Q: 𗦎([𗡭 𗋕 of 𗽬], ?).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣(A, A_1). H: equality-like 𗲣([𗛁, A], 𘛦). J-Q: 𗦎([𗡭 𗋕 of 𗽬], ?).",
+      "scores": {
+        "cosine": 0.16839783786542487
+      },
+      "embedding_tokens": {
+        "reference": 46,
+        "hypothesis": 48,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.016611988733077523,
+          "rouge1": 0.04347826086956522,
+          "rouge2": 0.0,
+          "rougeL": 0.04347826086956522,
+          "cosine": 0.16839783786542487
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 19,
+      "sender": "agent_0",
+      "source": "𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𗋕 𗔸 𗽬 𗭋 𗴍 agent_5 𘄗 𘌿 𗅰 𘍢 𘉚𘄣 𘑰 agent_5 𘑐 𘗊 𗼾 agent_5 𗢋𗠉 𗭋 𘄗",
+      "reference": "What is at the box’s second location, according to agent_5? agent_5, please explain the name you assigned to one hundred items.",
+      "hypothesis": "J-Q: 𗞚(? 𘋚 [𗡭 𗋕 of 𗽬] 𗴍 agent_5). H-REQUEST: 𘉚𘄣(agent_5, A_5).",
+      "hypothesis_original": "J-Q: 𗞚(? 𘋚 [𗡭 𗋕 of 𗽬] 𗴍 agent_5). H-REQUEST: 𘉚𘄣(agent_5, A_5).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J-Q: 𗞚(? 𘋚 [𗡭 𗋕 of 𗽬] 𗴍 agent_5). H-REQUEST: 𘉚𘄣(agent_5, A_5).",
+      "scores": {
+        "cosine": 0.4031366998117977
+      },
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 37,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.030840366015275858,
+          "rouge1": 0.13333333333333333,
+          "rouge2": 0.0,
+          "rougeL": 0.13333333333333333,
+          "cosine": 0.4031366998117977
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 20,
+      "sender": "agent_4",
+      "source": "𘌿 𘍢 𗲣 𘑰 𘗊 𗼾 agent_1 𗢋𗠉 𗭋 𘑐 𘗊 𗼾 agent_6 𗢋𗠉 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗼾 agent_1 𗢋𗠉 𗭋 𘑐 𘛦 𘄗 𗈇 𗪣 𘍢 𗰌 𘑰 𘗊 𗡭 𗋕 𗔸 𗽬 𗭋 𘑐 𘆖 𘄗",
+      "reference": "agent_1’s five-triangle shape is the same referent as agent_6’s shape with five outside triangular parts. Agent_1’s referent has value four. What does the box’s second location have?",
+      "hypothesis": "H: equality-like 𗲣(A_1, A_6). H: value/property 𘂽(A_1, 𘛦). J-Q: 𗰌([𗡭 𗋕 of 𗽬], ?).",
+      "hypothesis_original": "H: equality-like 𗲣(A_1, A_6). H: value/property 𘂽(A_1, 𘛦). J-Q: 𗰌([𗡭 𗋕 of 𗽬], ?).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣(A_1, A_6). H: value/property 𘂽(A_1, 𘛦). J-Q: 𗰌([𗡭 𗋕 of 𗽬], ?).",
+      "scores": {
+        "cosine": 0.31421223726576375
+      },
+      "embedding_tokens": {
+        "reference": 50,
+        "hypothesis": 48,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.01962474586822793,
+          "rouge1": 0.045454545454545456,
+          "rouge2": 0.0,
+          "rougeL": 0.045454545454545456,
+          "cosine": 0.31421223726576375
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 21,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𘑐 𘍡 𘄗 𘌿 𘍢 𗲣 𘑰 𘗊 𗛁 𘑐 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𗭋 𘑐 𘗊 𗛁 𘑐 𘗊 𗼾 agent_0 𗢋𗠉 𗭋 𗭋 𘄗",
+      "reference": "The two task locations have value seven. Their exact task-given value or name is the same as that of agent_0’s white round image.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H: equality-like 𗲣([𗛁, [𗇬 𘋃 of 𗺚]], [𗛁, A_0]).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H: equality-like 𗲣([𗛁, [𗇬 𘋃 of 𗺚]], [𗛁, A_0]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "TWO remains cardinal; the possible intended index reading is not substituted."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H: equality-like 𗲣([𗛁, [𗇬 𘋃 of 𗺚]], [𗛁, A_0]).",
+      "scores": {
+        "cosine": 0.1467379188164854
+      },
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 46,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02639937229341547,
+          "rouge1": 0.11764705882352941,
+          "rouge2": 0.0,
+          "rougeL": 0.11764705882352941,
+          "cosine": 0.1467379188164854
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 22,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":0}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 0.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 0.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 0.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 23,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𘑐 𘍡 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_3 𘑐 𘗊 𘕼 𗵺 𗭋 𘄗",
+      "reference": "The two task locations have value seven. I commit to performing the first task.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform unknown action 𗵉(agent_3, [𘕼 𗵺]).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform unknown action 𗵉(agent_3, [𘕼 𗵺]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "TWO remains cardinal; the first-task referent is contextually the earlier box discussion but not explicitly named in this message."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform unknown action 𗵉(agent_3, [𘕼 𗵺]).",
+      "scores": {
+        "cosine": 0.15783166394555334
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08450033111870488,
+          "rouge1": 0.08333333333333333,
+          "rouge2": 0.0,
+          "rougeL": 0.08333333333333333,
+          "cosine": 0.15783166394555334
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 24,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":1}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":1}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 1.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 1.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 1.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 25,
+      "sender": "agent_7",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𘑐 𘍡 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_7 𘑐 𘗊 𘕼 𗔸 𗈇 𘍢 𗽬 𘄗 𗭋 𘄗",
+      "reference": "The two task locations have value seven. I commit to performing the task concerning the box.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform 𗵉(agent_7, [𘕼 of {J: 𗽬}]).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform 𗵉(agent_7, [𘕼 of {J: 𗽬}]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The box is identified by a nested RIVER clause. TWO remains cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform 𗵉(agent_7, [𘕼 of {J: 𗽬}]).",
+      "scores": {
+        "cosine": 0.19731870397480686
+      },
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 41,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06918301973215607,
+          "rouge1": 0.07692307692307693,
+          "rouge2": 0.0,
+          "rougeL": 0.07692307692307693,
+          "cosine": 0.19731870397480686
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 26,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":2}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":2}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 2.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 2.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 2.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 27,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗺚 𗭋 𘑐 𘍡 𘄗",
+      "reference": "The two task locations have value seven.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "TWO is a cardinal noun modifier, rather than SECOND."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡).",
+      "scores": {
+        "cosine": 0.10018020927339448
+      },
+      "embedding_tokens": {
+        "reference": 10,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.1697232447536737,
+          "rouge1": 0.18181818181818182,
+          "rouge2": 0.0,
+          "rougeL": 0.18181818181818182,
+          "cosine": 0.10018020927339448
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 28,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":3}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":3}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 3.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 3.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 3.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 29,
+      "sender": "agent_2",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗽬 𗭋 𘑐 𘍡 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𗮥 𗔸 𗽬 𗭋 𘑐 𘛦 𘄗 𘌿 𘍢 𘋶 𘑰 𘛗 𘑐 𗽬 𘄗",
+      "reference": "The two locations in the safe or secure context have value seven; the three locations there have value four. I attempt safety or security.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: value/property 𘂽([𗇬 𗮥 of 𗽬], 𘛦). H: unknown 𘋶(𘛗, 𗽬).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: value/property 𘂽([𗇬 𗮥 of 𗽬], 𘛦). H: unknown 𘋶(𘛗, 𗽬).",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "All three clauses use SUN: 𗽬 means SAFE/SECURE, not RIVER BOX. The awkward literal meaning is preserved instead of silently restoring the box reading. TWO and THREE are cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: value/property 𘂽([𗇬 𗮥 of 𗽬], 𘛦). H: unknown 𘋶(𘛗, 𗽬).",
+      "scores": {
+        "cosine": 0.21965285698962186
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 46,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03440224176857094,
+          "rouge1": 0.11764705882352941,
+          "rouge2": 0.0,
+          "rougeL": 0.11764705882352941,
+          "cosine": 0.21965285698962186
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 30,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":4}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":4}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 4.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 4.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 4.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 31,
+      "sender": "agent_6",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗽬 𗭋 𘑐 𘍡 𘄗 𘌿 𘍢 𘋶 𘑰 𘛗 𘑐 𗈇 𘍢 𗱺 𘑰 𗽬 𘄗 𘄗",
+      "reference": "The two locations in the safe or secure context have value seven. I attempt the box’s opening or access.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: 𘋶(𘛗, {J: 𗱺(𗽬)}).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: 𘋶(𘛗, {J: 𗱺(𗽬)}).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first clause uses SUN SAFE/SECURE, whereas the nested final RIVER clause uses DOOR/OPENING/ACCESS with BOX as subject. The latter denotes the box’s access/opening, without an explicit agent accessing it. Neither clause is repaired to an intended task command."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: 𘋶(𘛗, {J: 𗱺(𗽬)}).",
+      "scores": {
+        "cosine": 0.0748552418001456
+      },
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 35,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02142071121599405,
+          "rouge1": 0.07692307692307691,
+          "rouge2": 0.0,
+          "rougeL": 0.07692307692307691,
+          "cosine": 0.0748552418001456
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 32,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":5}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":5}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 5.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 5.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 5.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 33,
+      "sender": "agent_4",
+      "source": "𘑌 𘍢 𘆌 𘑰 𘗊 𘏘 𘎪 𗭋 𘄗 𘑌 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗞚 𗇰 𗓓 𗭋 𘄗 𘌿 𘍢 𗅪 𘑰 𗮆𘋷 𘑐 𗮥 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 𗿖 𘑐 𘗊 𗰎 𗱙 𗭋 𘄗",
+      "reference": "The first task is complete. I name the message-sending tool 𗮆𘋷. Its cost is three. Let us report the relevant rules.",
+      "hypothesis": "K: 𘆌([𘏘 𘎪]). K: 𘓹(B, [𗞚 𗇰 𗓓]). H: property 𗅪(B, 𗮥). H-REQUEST: 𗓿(𗿖, [𗰎 𗱙]).",
+      "hypothesis_original": "K: 𘆌([𘏘 𘎪]). K: 𘓹(B, [𗞚 𗇰 𗓓]). H: property 𗅪(B, 𗮥). H-REQUEST: 𗓿(𗿖, [𗰎 𗱙]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The referent is literally a TOOL modified by MESSAGE and SEND; an action/control interpretation is contextual."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: 𘆌([𘏘 𘎪]). K: 𘓹(B, [𗞚 𗇰 𗓓]). H: property 𗅪(B, 𗮥). H-REQUEST: 𗓿(𗿖, [𗰎 𗱙]).",
+      "scores": {
+        "cosine": 0.11926838305616437
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 49,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.026553759665708148,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.11926838305616437
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 34,
+      "sender": "agent_7",
+      "source": "𘌿 𘍢 𘓹 𘑰 𘌏𗶫 𘑐 𘗊 𘕼 𘑐 𘌿 𘍢 𗝿 𘑐 𘑌 𘍢 𗏎 𘄗 𘄗 𗭋 𘄗 𗈇 𘍢 𘓹 𘑰 𗡌𗃪 𘑐 𘗊 𗦲 𘑐 𗈇 𘍢 𗠉 𘑰 𘑌 𘍢 𗞚 𘄗 𘊸 𗃾 𘄗 𗭋 𘄗 𘌿 𘍢 𗥔 𘑰 𗡌𗃪 𘑐 𘌿 𘍢 𗉶 𘑰 𘌏𗶫 𘄗 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 𗿖 𘑐 𘗊 𗠉 𗶫 𗱙 𗭋 𘄗",
+      "reference": "I name the water-removal task 𘌏𗶫 and the task of moving the tool in a circle 𗡌𗃪. The second task depends on completing the first. Let us report the relevant required information.",
+      "hypothesis": "H: 𘓹(C, [𘕼, {H: 𗝿, {K: 𗏎}}]). J: 𘓹(D, [𗦲, {J: 𗠉({K: 𗞚} 𘊸 𗃾)}]). H: 𗥔(D, {H: 𗉶(C)}). H-REQUEST: 𗓿(𗿖, [𗠉 𗶫 𗱙]). The unusual nested punctuation is retained; lexical meaning unknown.",
+      "hypothesis_original": "H: 𘓹(C, [𘕼, {H: 𗝿, {K: 𗏎}}]). J: 𘓹(D, [𗦲, {J: 𗠉({K: 𗞚} 𘊸 𗃾)}]). H: 𗥔(D, {H: 𗉶(C)}). H-REQUEST: 𗓿(𗿖, [𗠉 𗶫 𗱙]). The unusual nested punctuation is retained; lexical meaning unknown.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: 𘓹(C, [𘕼, {H: 𗝿, {K: 𗏎}}]). J: 𘓹(D, [𗦲, {J: 𗠉({K: 𗞚} 𘊸 𗃾)}]). H: 𗥔(D, {H: 𗉶(C)}). H-REQUEST: 𗓿(𗿖, [𗠉 𗶫 𗱙]). The unusual nested punctuation is retained; lexical meaning unknown.",
+      "scores": {
+        "cosine": -0.011825526219636407
+      },
+      "embedding_tokens": {
+        "reference": 39,
+        "hypothesis": 97,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03737259765388562,
+          "rouge1": 0.037037037037037035,
+          "rouge2": 0.0,
+          "rougeL": 0.037037037037037035,
+          "cosine": -0.011825526219636407
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 35,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𗉶 𘑰 𘗊 𘕼 𗔸 𗈇 𘍢 𗽬 𘄗 𗭋 𘄗 𘌿 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗝿 𘑐 𘗊 𗼾 agent_2 𗢋𗠉 𗭋 𗭋 𘄗 𘑌 𘍢 𗅪 𘑰 𘗊 𗼾 agent_5 𗮆𘋷 𗭋 𘑐 𘋃 𘄗",
+      "reference": "The task concerning the box is complete. I name removing agent_2’s water referent 𗮆𘋷. Its cost is two.",
+      "hypothesis": "H: 𗉶([𘕼 of {J: 𗽬}]). H: 𘓹(B, [𗝿, A_2]). K: property 𗅪(B_5, 𘋃). Note that the referenced label really is agent2’s A, not B.",
+      "hypothesis_original": "H: 𗉶([𘕼 of {J: 𗽬}]). H: 𘓹(B, [𗝿, A_2]). K: property 𗅪(B_5, 𘋃). Note that the referenced label really is agent2’s A, not B.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "agent_2’s referenced handle was explicitly defined as water."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗉶([𘕼 of {J: 𗽬}]). H: 𘓹(B, [𗝿, A_2]). K: property 𗅪(B_5, 𘋃). Note that the referenced label really is agent2’s A, not B.",
+      "scores": {
+        "cosine": 0.29883156211298095
+      },
+      "embedding_tokens": {
+        "reference": 28,
+        "hypothesis": 60,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06908895196867147,
+          "rouge1": 0.15384615384615383,
+          "rouge2": 0.0,
+          "rougeL": 0.15384615384615383,
+          "cosine": 0.29883156211298095
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 36,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𗉶 𘑰 𘗊 𘕼 𗵺 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗶩 𗍵𘄣 𗔸 𘗊 𘕼 𗋕 𗭋 𗭋 𘑐 𘛦 𘄗 𗈇 𗅰 𘍢 𗨓 𘑰 𗿖 𘑐 𘗊 𗞌 𗔸 𗦲 𗭋 𗼫 agent_3 𘄗",
+      "reference": "The first task is complete. The available quantity for the current task has value four. Please send agent_3 the later part of the task.",
+      "hypothesis": "H: 𗉶([𘕼 𗵺]). H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). J-REQUEST: 𗨓(𗿖, [𗞌 of 𗦲] 𗼫 agent_3).",
+      "hypothesis_original": "H: 𗉶([𘕼 𗵺]). H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). J-REQUEST: 𗨓(𗿖, [𗞌 of 𗦲] 𗼫 agent_3).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The final RIVER phrase literally means AFTER/LATER restricted to TASK; it does not explicitly say dependency or subsequent action. The quantity’s resource is unnamed."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗉶([𘕼 𗵺]). H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). J-REQUEST: 𗨓(𗿖, [𗞌 of 𗦲] 𗼫 agent_3).",
+      "scores": {
+        "cosine": 0.34037825713438874
+      },
+      "embedding_tokens": {
+        "reference": 31,
+        "hypothesis": 51,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.0317017493000976,
+          "rouge1": 0.18181818181818182,
+          "rouge2": 0.0,
+          "rougeL": 0.12121212121212122,
+          "cosine": 0.34037825713438874
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 37,
+      "sender": "agent_2",
+      "source": "𘌿 𘍢 𘓹 𘑰 𘌏𗶫 𘑐 𘗊 𗝿 𘑐 𗢋𗠉 𗔸 𗺚 𗭋 𘄗 𘌿 𘍢 𘓹 𘑰 𗡌𗃪 𘑐 𘗊 𗞌 𘑐 𗘢 𗔸 𗺚 𗭋 𘄗 𘌿 𘍢 𗥔 𘑰 𗡌𗃪 𘑐 𘌿 𘍢 𗉶 𘑰 𘌏𗶫 𘄗 𘄗",
+      "reference": "I name the task’s action of removing my water referent 𘌏𗶫, and sending a message in the task 𗡌𗃪. Sending the message depends on completing the removal.",
+      "hypothesis": "H: 𘓹(C, [𗝿, A of 𗺚]). H: 𘓹(D, [𗞌, 𗘢 of 𗺚]). H: 𗥔(D, {H: 𗉶(C)}).",
+      "hypothesis_original": "H: 𘓹(C, [𗝿, A of 𗺚]). H: 𘓹(D, [𗞌, 𗘢 of 𗺚]). H: 𗥔(D, {H: 𗉶(C)}).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The removed referent was explicitly defined as water."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𘓹(C, [𗝿, A of 𗺚]). H: 𘓹(D, [𗞌, 𗘢 of 𗺚]). H: 𗥔(D, {H: 𗉶(C)}).",
+      "scores": {
+        "cosine": 0.11811000768782925
+      },
+      "embedding_tokens": {
+        "reference": 35,
+        "hypothesis": 48,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.032237136301032414,
+          "rouge1": 0.10810810810810811,
+          "rouge2": 0.0,
+          "rougeL": 0.05405405405405406,
+          "cosine": 0.11811000768782925
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 38,
+      "sender": "agent_0",
+      "source": "𗈇 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗃪 𘒚 𘑐 𘗊 𘎈 𗴍 𘗊 𗱺 𗺻 𗭋 𗭋 𗭋 𘄗 𗈇 𘍢 𗅪 𘑰 𗮆𘋷 𘑐 𘋃 𘄗 𘌿 𗅰 𘍢 𗞌 𘑰 𗿖 𘑐 𘜌 𗰎 𗼫 agent_0 𘄗",
+      "reference": "I name the starting object associated with a component of the final door 𗮆𘋷. Its cost is two. Please send me all the rules.",
+      "hypothesis": "J: 𘓹(B, [𗃪 𘒚, [𘎈 𗴍 [𗱺 𗺻]]]). J: property 𗅪(B, 𘋃). H-REQUEST: 𗞌(𗿖, 𘜌 𗰎 𗼫 agent_0).",
+      "hypothesis_original": "J: 𘓹(B, [𗃪 𘒚, [𘎈 𗴍 [𗱺 𗺻]]]). J: property 𗅪(B, 𘋃). H-REQUEST: 𗞌(𗿖, 𘜌 𗰎 𗼫 agent_0).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first RIVER description is ITEM BEGIN with a component of the final door as theme; the exact device or operation is not uniquely identified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𘓹(B, [𗃪 𘒚, [𘎈 𗴍 [𗱺 𗺻]]]). J: property 𗅪(B, 𘋃). H-REQUEST: 𗞌(𗿖, 𘜌 𗰎 𗼫 agent_0).",
+      "scores": {
+        "cosine": 0.17891578098960742
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 49,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.020680088821143392,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.17891578098960742
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 39,
+      "sender": "agent_1",
+      "source": "𘑌 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗞚 𗴍 agent_1 𗭋 𘄗 𘌿 𘍢 𗂤 𘑰 𗮆𘋷 𘑐 𗮥 𘄗 𘌿 𘍢 𗅪 𘑰 𗮆𘋷 𘑐 𘖁 𗛱 𘗊 𗷿 𘑐 𗮆𘋷 𗭋 𘄗 𘌿 𗪣 𘍢 𗥔 𘑰 𗮆𘋷 𘑐 𘆖 𘄗",
+      "reference": "I name the tool from agent_1 𗮆𘋷. It adds three. Its cost before itself is zero. What does it depend on?",
+      "hypothesis": "K: 𘓹(B, [𗞚 𗴍 agent_1]). H: property 𗂤(B, 𗮥). H: property 𗅪(B, 𘖁 𗛱 [𗷿, B]). H-Q: 𗥔(B, ?).",
+      "hypothesis_original": "K: 𘓹(B, [𗞚 𗴍 agent_1]). H: property 𗂤(B, 𗮥). H: property 𗅪(B, 𘖁 𗛱 [𗷿, B]). H-Q: 𗥔(B, ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The quantity added is not named. “Before itself” is the explicit time description; “initial use cost” would be a contextual interpretation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: 𘓹(B, [𗞚 𗴍 agent_1]). H: property 𗂤(B, 𗮥). H: property 𗅪(B, 𘖁 𗛱 [𗷿, B]). H-Q: 𗥔(B, ?).",
+      "scores": {
+        "cosine": 0.24528135898621245
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 54,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.05575005423945588,
+          "rouge1": 0.060606060606060615,
+          "rouge2": 0.0,
+          "rougeL": 0.060606060606060615,
+          "cosine": 0.24528135898621245
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 40,
+      "sender": "agent_6",
+      "source": "𘑌 𘍢 𘓹 𘑰 𗮆𘋷 𘑐 𘗊 𗞚 𗾪 𗭋 𘄗 𘑌 𘍢 𘓹 𘑰 𘌏𗶫 𘑐 𘗊 𗞚 𗇰 𗭋 𘄗 𘌿 𘍢 𗥔 𘑰 𗮆𘋷 𘑐 𘌿 𘍢 𗉶 𘑰 𘌏𗶫 𘄗 𘄗 𘛚𗐬",
+      "reference": "I name the starting tool 𗮆𘋷 and the message tool 𘌏𗶫. The starting tool depends on completing the message tool. Please provide the missing relevant information you have.",
+      "hypothesis": "K: 𘓹(B, [𗞚 𗾪]). K: 𘓹(C, [𗞚 𗇰]). H: 𗥔(B, {H: 𗉶(C)}). Tail 𘛚𗐬: unknown.",
+      "hypothesis_original": "K: 𘓹(B, [𗞚 𗾪]). K: 𘓹(C, [𗞚 𗇰]). H: 𗥔(B, {H: 𗉶(C)}). Tail 𘛚𗐬: unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "These are tool descriptions, not explicit action names. The final idiom is appended to other clauses even though the reference prescribes standalone idiom messages."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "K: 𘓹(B, [𗞚 𗾪]). K: 𘓹(C, [𗞚 𗇰]). H: 𗥔(B, {H: 𗉶(C)}). Tail 𘛚𗐬: unknown.",
+      "scores": {
+        "cosine": 0.07454488552699755
+      },
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 47,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.021401663609757503,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07454488552699755
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 41,
+      "sender": "agent_4",
+      "source": "𘌿 𗪣 𘍢 𗥔 𘑰 𗮆𘋷 𘑐 𘆖 𘄗 𘌿 𗪣 𘍢 𗰎 𘑰 𘗊 𗱛 𘑐 𘌿 𘍢 𗂤 𘑐 𘗊 𗶩 𗍵𘄣 𗭋 𘄗 𗭋 𘑐 𘆖 𘄗",
+      "reference": "What does my message-sending tool depend on? What is the rule for the item that adds to the available quantity?",
+      "hypothesis": "H-Q: 𗥔(B, ?). H-Q: 𗰎([𗱛, {H: 𗂤, [𗶩 𗍵𘄣]}], ?). Asks two questions; exact requested information unknown.",
+      "hypothesis_original": "H-Q: 𗥔(B, ?). H-Q: 𗰎([𗱛, {H: 𗂤, [𗶩 𗍵𘄣]}], ?). Asks two questions; exact requested information unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first handle is agent_4’s message-sending tool from message 33. The resource measured by “available quantity” is not named."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H-Q: 𗥔(B, ?). H-Q: 𗰎([𗱛, {H: 𗂤, [𗶩 𗍵𘄣]}], ?). Asks two questions; exact requested information unknown.",
+      "scores": {
+        "cosine": 0.09091802118332501
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 46,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.043409074589850646,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.09091802118332501
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 42,
+      "sender": "agent_7",
+      "source": "𘑌 𘍢 𗲣 𘑰 𘌏𗶫 𘑐 𘗊 𗼾 agent_5 𗮆𘋷 𗭋 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_7 𘑐 𘌏𗶫 𘄗",
+      "reference": "My water-removal task is the same referent as agent_5’s water-removal action. I commit to performing it.",
+      "hypothesis": "K: equality-like 𗲣(C, B_5). H-ACT: perform 𗵉(agent_7, C).",
+      "hypothesis_original": "K: equality-like 𗲣(C, B_5). H-ACT: perform 𗵉(agent_7, C).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Both public definitions describe removing water."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: equality-like 𗲣(C, B_5). H-ACT: perform 𗵉(agent_7, C).",
+      "scores": {
+        "cosine": 0.33242669984688394
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 30,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.04309765803852156,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.33242669984688394
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 43,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗶩 𗍵𘄣 𗔸 𘗊 𘕼 𗋕 𗭋 𗭋 𘑐 𘛦 𘄗 𘑌 𘋷 𘍢 𗇬 𘑰 agent_3 𘑐 𘗊 𗼾 agent_2 𘌏𗶫 𗭋 𘄗",
+      "reference": "The available quantity for the current task has value four. I commit to performing agent_2’s water-removal task.",
+      "hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). K-ACT: perform unknown action 𗇬(agent_3, C_2).",
+      "hypothesis_original": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). K-ACT: perform unknown action 𗇬(agent_3, C_2).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The referenced action is removing water, from public message 37."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). K-ACT: perform unknown action 𗇬(agent_3, C_2).",
+      "scores": {
+        "cosine": 0.38459840831648323
+      },
+      "embedding_tokens": {
+        "reference": 27,
+        "hypothesis": 40,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.055043096362025104,
+          "rouge1": 0.06666666666666667,
+          "rouge2": 0.0,
+          "rougeL": 0.06666666666666667,
+          "cosine": 0.38459840831648323
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 44,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":6}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":6}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 6.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 6.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 6.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 45,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𗅪 𘑰 𗮆𘋷 𘑐 𘋃 𘄗 𘌿 𘍢 𗲣 𘑰 𗮆𘋷 𘑐 𘗊 𗼾 agent_7 𘌏𗶫 𗭋 𘄗 𗈇 𗅰 𘍢 𗱙 𘑰 𗿖 𘑐 𘜌 𘗊 𗮲 𗔸 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𗭋 𘄗",
+      "reference": "My water-removal action costs two and is the same referent as agent_7’s water-removal task. Please report all information concerning agent_7’s circular tool-movement task.",
+      "hypothesis": "H: property 𗅪(B, 𘋃). H: equality-like 𗲣(B, C_7). J-REQUEST: 𗱙(𗿖, 𘜌 [𗮲 of D_7]).",
+      "hypothesis_original": "H: property 𗅪(B, 𘋃). H: equality-like 𗲣(B, C_7). J-REQUEST: 𗱙(𗿖, 𘜌 [𗮲 of D_7]).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: property 𗅪(B, 𘋃). H: equality-like 𗲣(B, C_7). J-REQUEST: 𗱙(𗿖, 𘜌 [𗮲 of D_7]).",
+      "scores": {
+        "cosine": 0.07550539324925219
+      },
+      "embedding_tokens": {
+        "reference": 42,
+        "hypothesis": 44,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02303092440949037,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.07550539324925219
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 46,
+      "sender": "agent_0",
+      "source": "𘌿 𘎴 𘍢 𗷿 𘑰 𘗊 𗼾 agent_7 𘌏𗶫 𗭋 𘑐 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘄗 𗈇 𘎴 𘍢 𘗒 𘑰 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗 𘌿 𘎴 𘍢 𗷿 𘑰 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘑐 𗮆𘋷 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_0 𘑐 𘗊 𗼾 agent_7 𘌏𗶫 𗭋 𘄗",
+      "reference": "I propose this order: agent_7’s water-removal task before agent_7’s circular tool-movement task; that before agent_2’s message-sending task; and that before my starting object associated with the final door. I commit to performing agent_7’s water-removal task.",
+      "hypothesis": "H-R: relation 𗷿(C_7, D_7). J-R: relation 𘗒(D_7, D_2). H-R: relation 𗷿(D_2, B). H-ACT: perform 𗵉(agent_0, C_7).",
+      "hypothesis_original": "H-R: relation 𗷿(C_7, D_7). J-R: relation 𘗒(D_7, D_2). H-R: relation 𗷿(D_2, B). H-ACT: perform 𗵉(agent_0, C_7).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The public definitions support removal, circular tool movement, message sending, then the door-associated starting object. The order is proposed, not asserted complete."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H-R: relation 𗷿(C_7, D_7). J-R: relation 𘗒(D_7, D_2). H-R: relation 𗷿(D_2, B). H-ACT: perform 𗵉(agent_0, C_7).",
+      "scores": {
+        "cosine": 0.44217497265811445
+      },
+      "embedding_tokens": {
+        "reference": 66,
+        "hypothesis": 64,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.016264566656919423,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.44217497265811445
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 47,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":7}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":7}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 7.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 7.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 7.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 48,
+      "sender": "agent_2",
+      "source": "𘌿 𘋷 𘍢 𗵉 𘑰 agent_2 𘑐 𘌏𗶫 𗛱 𗋕 𘄗",
+      "reference": "I commit to performing my water-removal task now.",
+      "hypothesis": "H-ACT: perform 𗵉(agent_2, C 𗛱 𗋕). The postfix modifier is unknown, not securely “plus one.”",
+      "hypothesis_original": "H-ACT: perform 𗵉(agent_2, C 𗛱 𗋕). The postfix modifier is unknown, not securely “plus one.”",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "This handle denotes the water-removal action in public message 37."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H-ACT: perform 𗵉(agent_2, C 𗛱 𗋕). The postfix modifier is unknown, not securely “plus one.”",
+      "scores": {
+        "cosine": 0.14161833075899194
+      },
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 34,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07432998184513635,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.14161833075899194
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 49,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":8}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":8}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 8.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 8.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 8.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 50,
+      "sender": "agent_6",
+      "source": "𘌿 𘋷 𘍢 𗵉 𘑰 agent_6 𘑐 𘗊 𗼾 agent_5 𗮆𘋷 𗭋 𘄗 𘌿 𘎴 𘍢 𗴢 𘑰 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘑐 𘗊 𗼾 agent_5 𗮆𘋷 𗭋 𘄗 𘌿 𘎴 𘍢 𗴢 𘑰 𘌏𗶫 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗 𘌿 𘎴 𘍢 𗴢 𘑰 𗮆𘋷 𘑐 𘌏𗶫 𘄗",
+      "reference": "I commit to performing agent_5’s water-removal action. I propose that agent_1’s tool that adds three follows it, my message tool follows that, and my starting tool follows my message tool.",
+      "hypothesis": "H-ACT: perform 𗵉(agent_6, B_5). H-R: relation 𗴢(B_1, B_5). H-R: relation 𗴢(C, B_1). H-R: relation 𗴢(B, C).",
+      "hypothesis_original": "H-ACT: perform 𗵉(agent_6, B_5). H-R: relation 𗴢(B_1, B_5). H-R: relation 𗴢(C, B_1). H-R: relation 𗴢(B, C).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The ordering follows the sender-owned handle meanings: removal, agent_1’s adding tool, message tool, starting tool."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H-ACT: perform 𗵉(agent_6, B_5). H-R: relation 𗴢(B_1, B_5). H-R: relation 𗴢(C, B_1). H-R: relation 𗴢(B, C).",
+      "scores": {
+        "cosine": 0.38663485356746397
+      },
+      "embedding_tokens": {
+        "reference": 46,
+        "hypothesis": 60,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02681573700598312,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.38663485356746397
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 51,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":9}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":9}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 9.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 9.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 9.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 52,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𗲣 𘑰 𗮆𘋷 𘑐 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘄗 𘌿 𗅰 𘍢 𗵉 𘑰 agent_0 𘑐 𘗊 𗼾 agent_2 𘌏𗶫 𗭋 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 agent_0 𘑐 𘗊 𘂽 𗴢 𗭋 𘄗",
+      "reference": "My tool-turning task is the same referent as agent_7’s circular tool-movement task. agent_0, please perform agent_2’s water-removal task and report the later value.",
+      "hypothesis": "H: equality-like 𗲣(B, D_7). H-REQUEST: 𗵉(agent_0, C_2). H-REQUEST: 𗓿(agent_0, [𘂽 𗴢]).",
+      "hypothesis_original": "H: equality-like 𗲣(B, D_7). H-REQUEST: 𗵉(agent_0, C_2). H-REQUEST: 𗓿(agent_0, [𘂽 𗴢]).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: equality-like 𗲣(B, D_7). H-REQUEST: 𗵉(agent_0, C_2). H-REQUEST: 𗓿(agent_0, [𘂽 𗴢]).",
+      "scores": {
+        "cosine": 0.3061497051044675
+      },
+      "embedding_tokens": {
+        "reference": 45,
+        "hypothesis": 47,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02738853917285579,
+          "rouge1": 0.05,
+          "rouge2": 0.0,
+          "rougeL": 0.05,
+          "cosine": 0.3061497051044675
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 53,
+      "sender": "agent_7",
+      "source": "𘌿 𘍢 𗉶 𘑰 𘌏𗶫 𘄗 𗈇 𘍢 𗲣 𘑰 𗡌𗃪 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗 𘑌 𘋷 𘍢 𗇬 𘑰 agent_7 𘑐 𗡌𗃪 𘄗",
+      "reference": "My water-removal task is complete. My circular tool-movement task is the same referent as agent_1’s tool-turning task. I commit to performing my circular tool-movement task.",
+      "hypothesis": "H: 𗉶(C). J: equality-like 𗲣(D, B_1). K-ACT: perform 𗇬(agent_7, D).",
+      "hypothesis_original": "H: 𗉶(C). J: equality-like 𗲣(D, B_1). K-ACT: perform 𗇬(agent_7, D).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗉶(C). J: equality-like 𗲣(D, B_1). K-ACT: perform 𗇬(agent_7, D).",
+      "scores": {
+        "cosine": 0.2449635841639378
+      },
+      "embedding_tokens": {
+        "reference": 43,
+        "hypothesis": 37,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.019495256619970758,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.2449635841639378
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 54,
+      "sender": "agent_4",
+      "source": "𘑌 𘋷 𘍢 𗇬 𘑰 agent_4 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗",
+      "reference": "I commit to performing agent_1’s tool-turning task.",
+      "hypothesis": "K-ACT: perform 𗇬(agent_4, B_1).",
+      "hypothesis_original": "K-ACT: perform 𗇬(agent_4, B_1).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K-ACT: perform 𗇬(agent_4, B_1).",
+      "scores": {
+        "cosine": 0.4685170250130003
+      },
+      "embedding_tokens": {
+        "reference": 16,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10315464511436878,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.4685170250130003
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 55,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":10}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":10}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 10.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 10.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 10.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 56,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗶩 𗍵𘄣 𗔸 𘗊 𘕼 𗋕 𗭋 𗭋 𘑐 𘋃 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_3 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗",
+      "reference": "The available quantity for the current task has value two. I commit to performing agent_1’s tool-turning task.",
+      "hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_1).",
+      "hypothesis_original": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_1).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_1).",
+      "scores": {
+        "cosine": 0.4167777015452807
+      },
+      "embedding_tokens": {
+        "reference": 27,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.046462271735933564,
+          "rouge1": 0.07142857142857142,
+          "rouge2": 0.0,
+          "rougeL": 0.07142857142857142,
+          "cosine": 0.4167777015452807
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 57,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":11}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":11}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 11.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 11.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 11.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 58,
+      "sender": "agent_0",
+      "source": "𘌿 𘍢 𗶩 𘑰 𘗊 𘋶 𘑰 agent_0 𘑐 𘗊 𗼾 agent_7 𘌏𗶫 𗭋 𗭋 𘄗 𘌿 𘋷 𘍢 𘋶 𘑰 agent_0 𘑐 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘄗",
+      "reference": "My attempt to perform agent_7’s water-removal task is a quantity. I commit to trying agent_7’s circular tool-movement task.",
+      "hypothesis": "H: 𗶩([𘋶 𘑰 agent_0, C_7]). H-ACT: perform unknown action 𘋶(agent_0, D_7). The first clause concerns a nominalized action-like term, perhaps its validity/success; exact meaning unknown.",
+      "hypothesis_original": "H: 𗶩([𘋶 𘑰 agent_0, C_7]). H-ACT: perform unknown action 𘋶(agent_0, D_7). The first clause concerns a nominalized action-like term, perhaps its validity/success; exact meaning unknown.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "The first SUN predicate 𗶩 means QUANTITY/NUMBER, not the RIVER meaning FAIL. The anomalous assertion is preserved."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: 𗶩([𘋶 𘑰 agent_0, C_7]). H-ACT: perform unknown action 𘋶(agent_0, D_7). The first clause concerns a nominalized action-like term, perhaps its validity/success; exact meaning unknown.",
+      "scores": {
+        "cosine": 0.3362917431534193
+      },
+      "embedding_tokens": {
+        "reference": 34,
+        "hypothesis": 59,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051660454541342535,
+          "rouge1": 0.08333333333333334,
+          "rouge2": 0.0,
+          "rougeL": 0.08333333333333334,
+          "cosine": 0.3362917431534193
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 59,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":12}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":12}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 12.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 12.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 12.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 60,
+      "sender": "agent_5",
+      "source": "𘑌 𘍢 𗲣 𘑰 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘑐 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_5 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 agent_7 𘑐 𘌿 𘍢 𗉶 𘑰 𘗊 𗼾 agent_7 𘌏𗶫 𗭋 𘄗 𘄗",
+      "reference": "agent_1’s tool-turning task is the same referent as agent_7’s circular tool-movement task. I commit to performing agent_1’s referent. agent_7, please report that your water-removal task is complete.",
+      "hypothesis": "K: equality-like 𗲣(B_1, D_7). H-ACT: perform 𗵉(agent_5, B_1). H-REQUEST: 𗓿(agent_7, {H: 𗉶(C_7)}).",
+      "hypothesis_original": "K: equality-like 𗲣(B_1, D_7). H-ACT: perform 𗵉(agent_5, B_1). H-REQUEST: 𗓿(agent_7, {H: 𗉶(C_7)}).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The final request asks for a completion report; it is not itself a new assertion by the speaker that completion occurred."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: equality-like 𗲣(B_1, D_7). H-ACT: perform 𗵉(agent_5, B_1). H-REQUEST: 𗓿(agent_7, {H: 𗉶(C_7)}).",
+      "scores": {
+        "cosine": 0.4181489103911506
+      },
+      "embedding_tokens": {
+        "reference": 55,
+        "hypothesis": 56,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.024776129550240195,
+          "rouge1": 0.041666666666666664,
+          "rouge2": 0.0,
+          "rougeL": 0.041666666666666664,
+          "cosine": 0.4181489103911506
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 61,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":13}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":13}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 13.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 13.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 13.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 62,
+      "sender": "agent_2",
+      "source": "𗈇 𘍢 𗶩 𘑰 𘌿 𘍢 𘋶 𘑰 agent_2 𘑐 𘌏𗶫 𘄗 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_2 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗",
+      "reference": "My attempt to perform 𘌏𗶫 failed. I commit to performing agent_1’s tool-turning task.",
+      "hypothesis": "J: 𗶩({H: 𘋶(agent_2, C)}). H-ACT: perform 𗵉(agent_2, B_1).",
+      "hypothesis_original": "J: 𗶩({H: 𘋶(agent_2, C)}). H-ACT: perform 𗵉(agent_2, B_1).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Here FAIL is correctly selected by the outer RIVER frame, unlike the SUN quantity predicates elsewhere."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𗶩({H: 𘋶(agent_2, C)}). H-ACT: perform 𗵉(agent_2, B_1).",
+      "scores": {
+        "cosine": 0.41830065942874156
+      },
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08097951150551157,
+          "rouge1": 0.08695652173913043,
+          "rouge2": 0.0,
+          "rougeL": 0.08695652173913043,
+          "cosine": 0.41830065942874156
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 63,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":14}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":14}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 14.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 14.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 14.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 64,
+      "sender": "agent_7",
+      "source": "𘑌 𘍢 𘆌 𘑰 𗡌𗃪 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_7 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗",
+      "reference": "My circular tool-movement task is complete. I commit to performing agent_2’s message-sending task.",
+      "hypothesis": "K: 𘆌(D). H-ACT: perform 𗵉(agent_7, D_2).",
+      "hypothesis_original": "K: 𘆌(D). H-ACT: perform 𗵉(agent_7, D_2).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "K: 𘆌(D). H-ACT: perform 𗵉(agent_7, D_2).",
+      "scores": {
+        "cosine": 0.3588186765982205
+      },
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 25,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.043181135652468706,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.3588186765982205
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 65,
+      "sender": "agent_1",
+      "source": "𘌿 𘋷 𘍢 𗵉 𘑰 agent_1 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗",
+      "reference": "I commit to performing agent_2’s message-sending task.",
+      "hypothesis": "H-ACT: perform 𗵉(agent_1, D_2).",
+      "hypothesis_original": "H-ACT: perform 𗵉(agent_1, D_2).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H-ACT: perform 𗵉(agent_1, D_2).",
+      "scores": {
+        "cosine": 0.4653646948939281
+      },
+      "embedding_tokens": {
+        "reference": 16,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.10315464511436878,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.4653646948939281
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 66,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":15}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":15}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 15.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 15.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 15.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 67,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗶩 𗍵𘄣 𗔸 𘗊 𘕼 𗋕 𗭋 𗭋 𘑐 𗂮 𘄗 𗈇 𘍢 𗶩 𘑰 𘌿 𘍢 𘋶 𘑰 agent_3 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_3 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗",
+      "reference": "The available quantity for the current task has value five. My attempt to perform agent_1’s tool-turning task failed. I commit to performing agent_2’s message-sending task.",
+      "hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𗂮). J: 𗶩({H: 𘋶(agent_3, B_1)}). H-ACT: perform 𗵉(agent_3, D_2).",
+      "hypothesis_original": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𗂮). J: 𗶩({H: 𘋶(agent_3, B_1)}). H-ACT: perform 𗵉(agent_3, D_2).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𗂮). J: 𗶩({H: 𘋶(agent_3, B_1)}). H-ACT: perform 𗵉(agent_3, D_2).",
+      "scores": {
+        "cosine": 0.2962572096512408
+      },
+      "embedding_tokens": {
+        "reference": 42,
+        "hypothesis": 58,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.030874696593359816,
+          "rouge1": 0.09523809523809525,
+          "rouge2": 0.0,
+          "rougeL": 0.09523809523809525,
+          "cosine": 0.2962572096512408
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 68,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":16}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":16}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 16.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 16.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 16.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 69,
+      "sender": "agent_6",
+      "source": "𗈇 𘍢 𗶩 𘑰 𘌿 𘍢 𗵉 𘑰 agent_6 𘑐 𘗊 𗼾 agent_5 𗮆𘋷 𗭋 𘄗 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_6 𘑐 𘌏𗶫 𘄗",
+      "reference": "My performance of agent_5’s water-removal action failed. I commit to performing my message tool.",
+      "hypothesis": "J: 𗶩({H: 𗵉(agent_6, B_5)}). H-ACT: perform 𗵉(agent_6, C).",
+      "hypothesis_original": "J: 𗶩({H: 𗵉(agent_6, B_5)}). H-ACT: perform 𗵉(agent_6, C).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𗶩({H: 𗵉(agent_6, B_5)}). H-ACT: perform 𗵉(agent_6, C).",
+      "scores": {
+        "cosine": 0.2616442870550953
+      },
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.054526518479707166,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.2616442870550953
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 70,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":17}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":17}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 17.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 17.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 17.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 71,
+      "sender": "agent_4",
+      "source": "𘌿 𘍢 𗶩 𘑰 𘗊 𘋶 𘑰 agent_4 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𗭋 𘄗 𘑌 𘋷 𘍢 𗇬 𘑰 agent_4 𘑐 𗮆𘋷 𘄗",
+      "reference": "My attempt to perform agent_1’s tool-turning task is a quantity. I commit to performing my message-sending tool.",
+      "hypothesis": "H: 𗶩([𘋶 𘑰 agent_4, B_1]). K-ACT: perform 𗇬(agent_4, B). The first argument is a nominalized action-like term rather than an embedded complete clause.",
+      "hypothesis_original": "H: 𗶩([𘋶 𘑰 agent_4, B_1]). K-ACT: perform 𗇬(agent_4, B). The first argument is a nominalized action-like term rather than an embedded complete clause.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "SUN 𗶩 means QUANTITY/NUMBER, not FAIL. The final sender-owned handle is the message-sending tool, not agent_1’s handle."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗶩([𘋶 𘑰 agent_4, B_1]). K-ACT: perform 𗇬(agent_4, B). The first argument is a nominalized action-like term rather than an embedded complete clause.",
+      "scores": {
+        "cosine": 0.3886105522051352
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 51,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.07483887206915212,
+          "rouge1": 0.13953488372093023,
+          "rouge2": 0.04878048780487805,
+          "rougeL": 0.13953488372093023,
+          "cosine": 0.3886105522051352
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 72,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":18}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":18}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 18.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 18.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 18.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 73,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𗯐 𗉶 𘑰 𘗊 𘋶 𘑰 agent_5 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𗭋 𘄗 𘌿 𘋷 𘍢 𘋶 𘑰 agent_5 𘑐 𘗊 𗼾 agent_4 𗮆𘋷 𗭋 𘄗",
+      "reference": "My attempt to perform agent_1’s tool-turning task has not completed. I commit to trying agent_4’s message-sending tool.",
+      "hypothesis": "H: 𗯐 𗉶([𘋶 𘑰 agent_5, B_1]). H-ACT: perform 𘋶(agent_5, B_4). The first clause contains an unresolved two-token predicate-position sequence, possibly a modifier plus predicate.",
+      "hypothesis_original": "H: 𗯐 𗉶([𘋶 𘑰 agent_5, B_1]). H-ACT: perform 𘋶(agent_5, B_4). The first clause contains an unresolved two-token predicate-position sequence, possibly a modifier plus predicate.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "NOT FINISH is explicit; it is not replaced by the distinct FAIL predicate."
+      ],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗯐 𗉶([𘋶 𘑰 agent_5, B_1]). H-ACT: perform 𘋶(agent_5, B_4). The first clause contains an unresolved two-token predicate-position sequence, possibly a modifier plus predicate.",
+      "scores": {
+        "cosine": 0.35796218620869397
+      },
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 61,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.050661968099322066,
+          "rouge1": 0.044444444444444446,
+          "rouge2": 0.0,
+          "rougeL": 0.044444444444444446,
+          "cosine": 0.35796218620869397
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 74,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":19}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":19}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 19.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 19.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 19.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 75,
+      "sender": "agent_0",
+      "source": "𗈇 𘍢 𗶩 𘑰 𘌿 𘍢 𘋶 𘑰 agent_0 𘑐 𘗊 𗼾 agent_7 𗡌𗃪 𗭋 𘄗 𘄗 𘌿 𘋷 𘍢 𘋶 𘑰 agent_0 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗",
+      "reference": "My attempt to perform agent_7’s circular tool-movement task failed. I commit to trying agent_2’s message-sending task.",
+      "hypothesis": "J: 𗶩({H: 𘋶(agent_0, D_7)}). H-ACT: perform 𘋶(agent_0, D_2).",
+      "hypothesis_original": "J: 𗶩({H: 𘋶(agent_0, D_7)}). H-ACT: perform 𘋶(agent_0, D_2).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𗶩({H: 𘋶(agent_0, D_7)}). H-ACT: perform 𘋶(agent_0, D_2).",
+      "scores": {
+        "cosine": 0.31935156738735854
+      },
+      "embedding_tokens": {
+        "reference": 32,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.04157626749782639,
+          "rouge1": 0.06896551724137932,
+          "rouge2": 0.0,
+          "rougeL": 0.06896551724137932,
+          "cosine": 0.31935156738735854
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 76,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":20}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":20}",
+      "hypothesis": "Public feedback: stage 1; invalid attempts 20.",
+      "hypothesis_original": "Public feedback: stage 1; invalid attempts 20.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 1; invalid attempts 20.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 77,
+      "sender": "agent_2",
+      "source": "𗈇 𘍢 𗶩 𘑰 𘌿 𘍢 𘋶 𘑰 agent_2 𘑐 𘗊 𗼾 agent_1 𗮆𘋷 𗭋 𘄗 𘄗 𘌿 𘋷 𘍢 𘋶 𘑰 agent_2 𘑐 𘗊 𗼾 agent_0 𗮆𘋷 𗭋 𘄗",
+      "reference": "My attempt to perform agent_1’s tool-turning task failed. I commit to trying agent_0’s starting object associated with the final door.",
+      "hypothesis": "J: 𗶩({H: 𘋶(agent_2, B_1)}). H-ACT: perform 𘋶(agent_2, B_0).",
+      "hypothesis_original": "J: 𗶩({H: 𘋶(agent_2, B_1)}). H-ACT: perform 𘋶(agent_2, B_0).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J: 𗶩({H: 𘋶(agent_2, B_1)}). H-ACT: perform 𘋶(agent_2, B_0).",
+      "scores": {
+        "cosine": 0.34082227840747215
+      },
+      "embedding_tokens": {
+        "reference": 34,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02979069743898399,
+          "rouge1": 0.0625,
+          "rouge2": 0.0,
+          "rougeL": 0.0625,
+          "cosine": 0.34082227840747215
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 78,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":20}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":20}",
+      "hypothesis": "Public feedback: stage 2; invalid attempts remain 20. Thus the preceding attempt coincides with stage advancement.",
+      "hypothesis_original": "Public feedback: stage 2; invalid attempts remain 20. Thus the preceding attempt coincides with stage advancement.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 2; invalid attempts remain 20. Thus the preceding attempt coincides with stage advancement.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 79,
+      "sender": "agent_7",
+      "source": "𘌿 𘍢 𗉶 𘑰 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗 𘑌 𘋷 𘍢 𗇬 𘑰 agent_7 𘑐 𘗊 𗼾 agent_0 𗮆𘋷 𗭋 𘄗",
+      "reference": "agent_2’s message-sending task is complete. I commit to performing agent_0’s starting object associated with the final door.",
+      "hypothesis": "H: 𗉶(D_2). K-ACT: perform 𗇬(agent_7, B_0).",
+      "hypothesis_original": "H: 𗉶(D_2). K-ACT: perform 𗇬(agent_7, B_0).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗉶(D_2). K-ACT: perform 𗇬(agent_7, B_0).",
+      "scores": {
+        "cosine": 0.4341905735744163
+      },
+      "embedding_tokens": {
+        "reference": 31,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.024385169831824413,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.4341905735744163
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 80,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":21}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":21}",
+      "hypothesis": "Public feedback: stage 2; invalid attempts 21.",
+      "hypothesis_original": "Public feedback: stage 2; invalid attempts 21.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 2; invalid attempts 21.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 81,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗶩 𗍵𘄣 𗔸 𘗊 𘕼 𗋕 𗭋 𗭋 𘑐 𘋃 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_3 𘑐 𘗊 𗼾 agent_0 𗮆𘋷 𗭋 𘄗",
+      "reference": "The available quantity for the current task has value two. I commit to performing agent_0’s starting object associated with the final door.",
+      "hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_0).",
+      "hypothesis_original": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_0).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_0).",
+      "scores": {
+        "cosine": 0.42176917614515386
+      },
+      "embedding_tokens": {
+        "reference": 30,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02979069743898399,
+          "rouge1": 0.0625,
+          "rouge2": 0.0,
+          "rougeL": 0.0625,
+          "cosine": 0.42176917614515386
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 82,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":22}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":22}",
+      "hypothesis": "Public feedback: stage 2; invalid attempts 22.",
+      "hypothesis_original": "Public feedback: stage 2; invalid attempts 22.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 2; invalid attempts 22.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 83,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𗶩 𘑰 𘌿 𘍢 𘋶 𘑰 agent_1 𘑐 𘗊 𗼾 agent_2 𗡌𗃪 𗭋 𘄗 𘄗 𘑌 𘋷 𘍢 𗇬 𘑰 agent_1 𘑐 𘗊 𗼾 agent_0 𗮆𘋷 𗭋 𘄗",
+      "reference": "My attempt to perform agent_2’s message-sending task is a quantity. I commit to performing agent_0’s starting object associated with the final door.",
+      "hypothesis": "H: 𗶩({H: 𘋶(agent_1, D_2)}). K-ACT: perform 𗇬(agent_1, B_0).",
+      "hypothesis_original": "H: 𗶩({H: 𘋶(agent_1, D_2)}). K-ACT: perform 𗇬(agent_1, B_0).",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "SUN 𗶩 means QUANTITY/NUMBER, not FAIL; this apparent frame error is not corrected."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗶩({H: 𘋶(agent_1, D_2)}). K-ACT: perform 𗇬(agent_1, B_0).",
+      "scores": {
+        "cosine": 0.4571735631319848
+      },
+      "embedding_tokens": {
+        "reference": 36,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.02385452569837244,
+          "rouge1": 0.058823529411764705,
+          "rouge2": 0.0,
+          "rougeL": 0.058823529411764705,
+          "cosine": 0.4571735631319848
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 84,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":23}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":23}",
+      "hypothesis": "Public feedback: stage 2; invalid attempts 23. For the remaining messages, F abbreviates exactly the embedded clause {J: 𗱺}, with no argument. F(x) means the variant embedded clause {J: 𗱺(x)}. This abbreviation is not a translation of 𗱺 and does not equate all its variants.",
+      "hypothesis_original": "Public feedback: stage 2; invalid attempts 23.\nFor the remaining messages, F abbreviates exactly the embedded clause {J: 𗱺}, with no argument. F(x) means the variant embedded clause {J: 𗱺(x)}. This abbreviation is not a translation of 𗱺 and does not equate all its variants.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 2; invalid attempts 23. For the remaining messages, F abbreviates exactly the embedded clause {J: 𗱺}, with no argument. F(x) means the variant embedded clause {J: 𗱺(x)}. This abbreviation is not a translation of 𗱺 and does not equate all its variants.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 85,
+      "sender": "agent_6",
+      "source": "𘌿 𘍢 𗂤 𘑰 𗢋𗠉 𘑐 𗮥 𗛱 𗋕 𘄗 𘌿 𘍢 𘂽 𘑰 𗢋𗠉 𘑐 𘍡 𗛱 𗋕 𘄗 𘛚𗐬",
+      "reference": "My shape with five outside triangular parts now adds three, and its value is now seven. Please provide the missing relevant information you have.",
+      "hypothesis": "H: property 𗂤(A, 𗮥 𗛱 𗋕). H: value/property 𘂽(A, 𘍡 𗛱 𗋕). Tail 𘛚𗐬: unknown.",
+      "hypothesis_original": "H: property 𗂤(A, 𗮥 𗛱 𗋕). H: value/property 𘂽(A, 𘍡 𗛱 𗋕). Tail 𘛚𗐬: unknown.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The subject is the defined shape, not an explicitly named number or update operation. The appended idiom is required to stand alone by the frozen reference."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "H: property 𗂤(A, 𗮥 𗛱 𗋕). H: value/property 𘂽(A, 𘍡 𗛱 𗋕). Tail 𘛚𗐬: unknown.",
+      "scores": {
+        "cosine": 0.15677854045425074
+      },
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 33,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.026657887343724027,
+          "rouge1": 0.06060606060606061,
+          "rouge2": 0.0,
+          "rougeL": 0.06060606060606061,
+          "cosine": 0.15677854045425074
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 86,
+      "sender": "agent_4",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗦲 𗤞 𗴍 𗢋𗠉 𗭋 𘑐 𘛦 𘄗 𘌿 𘍢 𘂽 𘑰 𗢋𗠉 𘑐 𗫆 𗔸 𗈇 𘍢 𗱺 𘄗 𘄗 𗈇 𗪣 𘍢 𗂤 𘑰 𘗊 𗢋 𗴍 𗱺 𗭋 𘑐 𘆖 𘄗",
+      "reference": "The next change from my name for the large yellow round object has value four. My name for the large yellow round object has value six in the door context. What is the order of the images from the door?",
+      "hypothesis": "H: value/property 𘂽([𗦲 𗤞 𗴍 A], 𘛦). H: value/property 𘂽(A, 𗫆 of F). J-Q: 𗂤([𗢋 𗴍 𗱺], ?).",
+      "hypothesis_original": "H: value/property 𘂽([𗦲 𗤞 𗴍 A], 𘛦). H: value/property 𘂽(A, 𗫆 of F). J-Q: 𗂤([𗢋 𗴍 𗱺], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "CHANGE NEXT is not literally ADD FOUR; interpreting the first sentence as an increment would be a contextual repair."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗦲 𗤞 𗴍 A], 𘛦). H: value/property 𘂽(A, 𗫆 of F). J-Q: 𗂤([𗢋 𗴍 𗱺], ?).",
+      "scores": {
+        "cosine": 0.17734300789896787
+      },
+      "embedding_tokens": {
+        "reference": 45,
+        "hypothesis": 48,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.011982070921746432,
+          "rouge1": 0.11538461538461538,
+          "rouge2": 0.0,
+          "rougeL": 0.11538461538461538,
+          "cosine": 0.17734300789896787
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 87,
+      "sender": "agent_0",
+      "source": "𘌿 𘍢 𘂽 𘑰 𗢋𗠉 𘑐 𗻫 𗔸 𘗊 𗱛 𗤞 𗔸 𗢋𗠉 𗭋 𘄗 𗈇 𗪣 𘍢 𗂤 𘑰 𘗊 𗱺 𗺻 𗭋 𘑐 𘆖 𘄗",
+      "reference": "My white round image has value nine for the next item associated with it. What is the order of the final door?",
+      "hypothesis": "H: value/property 𘂽(A, 𗻫 of [𗱛 𗤞 of A]). J-Q: 𗂤([𗱺 𗺻], ?).",
+      "hypothesis_original": "H: value/property 𘂽(A, 𗻫 of [𗱛 𗤞 of A]). J-Q: 𗂤([𗱺 𗺻], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first domain restriction is ITEM NEXT domain MY HANDLE; its precise relation to a numerical update is not specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽(A, 𗻫 of [𗱛 𗤞 of A]). J-Q: 𗂤([𗱺 𗺻], ?).",
+      "scores": {
+        "cosine": 0.13088407197145158
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 35,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03684329198716407,
+          "rouge1": 0.1290322580645161,
+          "rouge2": 0.0,
+          "rougeL": 0.1290322580645161,
+          "cosine": 0.13088407197145158
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 88,
+      "sender": "agent_2",
+      "source": "𘌿 𘍢 𗉶 𘑰 𘗊 𗼾 agent_0 𗮆𘋷 𗭋 𘄗 𘌿 𘍢 𘂽 𘑰 𗮆𘋷 𘑐 𗻫 𗔸 𘗊 𗱛 𗂤 𗭋 𗛱 𗋕 𘄗 𗈇 𗪣 𘍢 𗂤 𘑰 𘗊 𗃪 𗔸 𗱺 𗭋 𘑐 𘆖 𘄗",
+      "reference": "agent_0’s starting object associated with the final door is complete. My water-movement shape now has value nine for the added item. What is the order of the items at the door?",
+      "hypothesis": "H: 𗉶(B_0). H: value/property 𘂽(B, 𗻫 of [𗱛 𗂤] 𗛱 𗋕). J-Q: 𗂤([𗃪 of 𗱺], ?).",
+      "hypothesis_original": "H: 𗉶(B_0). H: value/property 𘂽(B, 𗻫 of [𗱛 𗂤] 𗛱 𗋕). J-Q: 𗂤([𗃪 of 𗱺], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The restriction ITEM ADD/INCLUDE is compressed; it is not a separately specified increment."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: 𗉶(B_0). H: value/property 𘂽(B, 𗻫 of [𗱛 𗂤] 𗛱 𗋕). J-Q: 𗂤([𗃪 of 𗱺], ?).",
+      "scores": {
+        "cosine": 0.2093522699884769
+      },
+      "embedding_tokens": {
+        "reference": 42,
+        "hypothesis": 45,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.013986907730161716,
+          "rouge1": 0.0930232558139535,
+          "rouge2": 0.0,
+          "rougeL": 0.0930232558139535,
+          "cosine": 0.2093522699884769
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 89,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𘋃 𗔸 𗈇 𘍢 𗱺 𘑰 𗺻 𘄗 𗭋 𘑐 𘗊 𗛁 𘑐 𘗊 𗼾 agent_6 𗢋𗠉 𗭋 𗭋 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 𗿖 𘑐 𘗊 𗠉 𗰌 𗱙 𗭋 𘄗",
+      "reference": "The two locations at the final door have the exact task-given value or name of agent_6’s shape with five outside triangular parts. Please report the relevant certain information.",
+      "hypothesis": "H: relation 𗏎([𗇬 𘋃 of F(𗺻)], [𗛁, A_6]). H-REQUEST: 𗓿(𗿖, [𗠉 𗰌 𗱙]).",
+      "hypothesis_original": "H: relation 𗏎([𗇬 𘋃 of F(𗺻)], [𗛁, A_6]). H-REQUEST: 𗓿(𗿖, [𗠉 𗰌 𗱙]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "TWO is cardinal. The source reference is agent_6’s shape, and value/name/content is not disambiguated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: relation 𗏎([𗇬 𘋃 of F(𗺻)], [𗛁, A_6]). H-REQUEST: 𗓿(𗿖, [𗠉 𗰌 𗱙]).",
+      "scores": {
+        "cosine": 0.26077646624408163
+      },
+      "embedding_tokens": {
+        "reference": 38,
+        "hypothesis": 41,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.006949644591173836,
+          "rouge1": 0.05405405405405406,
+          "rouge2": 0.0,
+          "rougeL": 0.05405405405405406,
+          "cosine": 0.26077646624408163
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 90,
+      "sender": "agent_7",
+      "source": "𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𘛦 𗔸 𗈇 𘍢 𗱺 𘑰 𗺚 𘄗 𗭋 𘑐 𘗊 𗼾 agent_3 𗢋𗠉 𗭋 𘄗 𘌿 𗅰 𘍢 𗓿 𘑰 𗿖 𘑐 𘗊 𗠉 𗤞 𗱙 𗭋 𘄗",
+      "reference": "The four locations at the task’s door have agent_3’s yellow round object. Please report the next relevant information.",
+      "hypothesis": "H: relation 𗏎([𗇬 𘛦 of F(𗺚)], A_3). H-REQUEST: 𗓿(𗿖, [𗠉 𗤞 𗱙]).",
+      "hypothesis_original": "H: relation 𗏎([𗇬 𘛦 of F(𗺚)], A_3). H-REQUEST: 𗓿(𗿖, [𗠉 𗤞 𗱙]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "FOUR is cardinal; the contextual interpretation as location 4 is not substituted in the main translation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: relation 𗏎([𗇬 𘛦 of F(𗺚)], A_3). H-REQUEST: 𗓿(𗿖, [𗠉 𗤞 𗱙]).",
+      "scores": {
+        "cosine": 0.19250363910299514
+      },
+      "embedding_tokens": {
+        "reference": 28,
+        "hypothesis": 37,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.024385169831824413,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.19250363910299514
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 91,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𗵺 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘗊 𗛁 𘑐 𘗊 𗼾 agent_2 𗮆𘋷 𗭋 𗭋 𘄗",
+      "reference": "The first door location has the exact task-given value or name of agent_2’s water-movement shape.",
+      "hypothesis": "H: relation 𗏎([𗇬 𗵺 of F], [𗛁, B_2]).",
+      "hypothesis_original": "H: relation 𗏎([𗇬 𗵺 of F], [𗛁, B_2]).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: relation 𗏎([𗇬 𗵺 of F], [𗛁, B_2]).",
+      "scores": {
+        "cosine": 0.10847922821971914
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.020277584543100656,
+          "rouge1": 0.08695652173913045,
+          "rouge2": 0.0,
+          "rougeL": 0.08695652173913045,
+          "cosine": 0.10847922821971914
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 92,
+      "sender": "agent_6",
+      "source": "𗈇 𗪣 𘍢 𗦎 𘑰 𘗊 𗼾 agent_0 𗢋𗠉 𗭋 𘑐 𘆖 𗔸 𗱺 𘄗 𗈇 𗪣 𘍢 𗦎 𘑰 𘗊 𗼾 agent_2 𗮆𘋷 𗭋 𘑐 𘆖 𗔸 𗱺 𘄗",
+      "reference": "What is agent_0’s white round image worth at the door? What is agent_2’s water-movement shape worth at the door?",
+      "hypothesis": "J-Q: 𗦎(A_0, ? of 𗱺). J-Q: 𗦎(B_2, ? of 𗱺).",
+      "hypothesis_original": "J-Q: 𗦎(A_0, ? of 𗱺). J-Q: 𗦎(B_2, ? of 𗱺).",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "J-Q: 𗦎(A_0, ? of 𗱺). J-Q: 𗦎(B_2, ? of 𗱺).",
+      "scores": {
+        "cosine": 0.1413488456602103
+      },
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 32,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.023433610656963203,
+          "rouge1": 0.0,
+          "rouge2": 0.0,
+          "rougeL": 0.0,
+          "cosine": 0.1413488456602103
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 93,
+      "sender": "agent_4",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘍡 𘄗 𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘛦 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𗫆 𘄗 𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𘞝 𗔸 𗱺 𗭋 𘄗 𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𗮥 𗔸 𗱺 𗭋 𘄗",
+      "reference": "The two door locations have value seven, and the four door locations have value six. What is at the one door location, and what is at the three door locations?",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H: value/property 𘂽([𗇬 𘛦 of F], 𗫆). J-Q: 𗞚(? 𘋚 [𗡭 𘞝 of 𗱺]). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H: value/property 𘂽([𗇬 𘛦 of F], 𗫆). J-Q: 𗞚(? 𘋚 [𗡭 𘞝 of 𗱺]). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The four numerical location descriptions use cardinal numbers; an index interpretation is contextually plausible but not a frozen grammatical ordinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H: value/property 𘂽([𗇬 𘛦 of F], 𗫆). J-Q: 𗞚(? 𘋚 [𗡭 𘞝 of 𗱺]). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "scores": {
+        "cosine": 0.21900313194688198
+      },
+      "embedding_tokens": {
+        "reference": 36,
+        "hypothesis": 68,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.03548751526306021,
+          "rouge1": 0.08695652173913045,
+          "rouge2": 0.0,
+          "rougeL": 0.08695652173913045,
+          "cosine": 0.21900313194688198
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 94,
+      "sender": "agent_1",
+      "source": "𘌿 𘍢 𗏎 𘑰 𘗊 𗇬 𗮥 𗔸 𘗊 𗱺 𘂭 𗭋 𗭋 𘑐 𘗊 𗛁 𘑐 𘗊 𗼾 agent_0 𗢋𗠉 𗭋 𗭋 𘄗 𘌿 𗪣 𘍢 𘂽 𘑰 𘗊 𗼾 agent_0 𗢋𗠉 𗭋 𘑐 𘆖 𗔸 𘗊 𗱺 𘂭 𗭋 𘄗",
+      "reference": "The three locations within the last help or support have the exact task-given value or name of agent_0’s white round image. What is its value within that last support?",
+      "hypothesis": "H: relation 𗏎([𗇬 𗮥 of [𗱺 𘂭]], [𗛁, A_0]). H-Q: value/property 𘂽(A_0, ? of [𗱺 𘂭]).",
+      "hypothesis_original": "H: relation 𗏎([𗇬 𗮥 of [𗱺 𘂭]], [𗛁, A_0]). H-Q: value/property 𘂽(A_0, ? of [𗱺 𘂭]).",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "The enclosing SUN frame makes 𗱺 mean HELP/SUPPORT, not the RIVER meaning DOOR. The final help/support description is not silently repaired to “final door.” THREE is cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: relation 𗏎([𗇬 𗮥 of [𗱺 𘂭]], [𗛁, A_0]). H-Q: value/property 𘂽(A_0, ? of [𗱺 𘂭]).",
+      "scores": {
+        "cosine": 0.2630310513685455
+      },
+      "embedding_tokens": {
+        "reference": 39,
+        "hypothesis": 47,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.017083647679751318,
+          "rouge1": 0.0975609756097561,
+          "rouge2": 0.0,
+          "rougeL": 0.0975609756097561,
+          "cosine": 0.2630310513685455
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 95,
+      "sender": "agent_5",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𘋃 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘍡 𘄗 𘌿 𗪣 𘍢 𗏎 𘑰 𘗊 𗇬 𗮥 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘆖 𘄗",
+      "reference": "The two door locations have value seven. What do the three door locations have?",
+      "hypothesis": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "TWO and THREE are cardinal modifiers, not ordinals."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "scores": {
+        "cosine": 0.16708651892452894
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08450033111870488,
+          "rouge1": 0.08333333333333333,
+          "rouge2": 0.0,
+          "rougeL": 0.08333333333333333,
+          "cosine": 0.16708651892452894
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 96,
+      "sender": "agent_0",
+      "source": "𘌿 𘍢 𗂤 𘑰 𗢋𗠉 𘑐 𘋃 𗛱 𗋕 𘄗 𘌿 𘍢 𘂽 𘑰 𗢋𗠉 𘑐 𗻫 𗔸 𗈇 𘍢 𗱺 𘄗 𘄗 𘌿 𗪣 𘍢 𗏎 𘑰 𘗊 𗇬 𗮥 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘆖 𘄗",
+      "reference": "My white round image now adds two and has value nine at the door. What do the three door locations have?",
+      "hypothesis": "H: property 𗂤(A, 𘋃 𗛱 𗋕). H: value/property 𘂽(A, 𗻫 of F). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "hypothesis_original": "H: property 𗂤(A, 𘋃 𗛱 𗋕). H: value/property 𘂽(A, 𗻫 of F). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "ADD takes the image handle as subject; an update to its numerical value is contextual. THREE is cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: property 𗂤(A, 𘋃 𗛱 𗋕). H: value/property 𘂽(A, 𗻫 of F). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "scores": {
+        "cosine": 0.16969753343585778
+      },
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 45,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.053613515418966425,
+          "rouge1": 0.057142857142857134,
+          "rouge2": 0.0,
+          "rougeL": 0.057142857142857134,
+          "cosine": 0.16969753343585778
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 97,
+      "sender": "agent_2",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𗵺 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𗻫 𘄗 𘌿 𗪣 𘍢 𗏎 𘑰 𘗊 𗇬 𗮥 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𘆖 𘄗",
+      "reference": "The first door location has value nine. What do the three door locations have?",
+      "hypothesis": "H: value/property 𘂽([𗇬 𗵺 of F], 𗻫). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𗵺 of F], 𗻫). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first location is explicitly ordinal; THREE is a cardinal modifier in the question."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𗵺 of F], 𗻫). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).",
+      "scores": {
+        "cosine": 0.1732053478769614
+      },
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.08450033111870488,
+          "rouge1": 0.08333333333333333,
+          "rouge2": 0.0,
+          "rougeL": 0.08333333333333333,
+          "cosine": 0.1732053478769614
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 98,
+      "sender": "agent_7",
+      "source": "𘑌 𘍢 𘂽 𘑰 𘗊 𘐅 𘛦 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𗫆 𘄗 𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𗮥 𗔸 𗱺 𗭋 𘄗",
+      "reference": "The four door locations know six. What is at the three door locations?",
+      "hypothesis": "K: value/property 𘂽([𘐅 𘛦 of F], 𗫆). The unknown operator here is 𘐅, NOT 𗇬. J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "hypothesis_original": "K: value/property 𘂽([𘐅 𘛦 of F], 𗫆). The unknown operator here is 𘐅, NOT 𗇬. J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "The first STONE predicate 𘂽 means KNOW/INFORMATION, not SUN VALUE. It is not translated as “the fourth value is six.” The location counts are cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "scoring_hypothesis": "K: value/property 𘂽([𘐅 𘛦 of F], 𗫆). The unknown operator here is 𘐅, NOT 𗇬. J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "scores": {
+        "cosine": 0.05137097926644616
+      },
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 45,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.09782375748961449,
+          "rouge1": 0.14814814814814817,
+          "rouge2": 0.0,
+          "rougeL": 0.14814814814814817,
+          "cosine": 0.05137097926644616
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": true,
+      "primary_na_reason": null
+    },
+    {
+      "id": 99,
+      "sender": "agent_3",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗼾 agent_2 𗮆𘋷 𗭋 𘑐 𘍡 𗔸 𗈇 𘍢 𗱺 𘄗 𘄗 𗈇 𗪣 𘍢 𗞚 𘑰 𘆖 𘋚 𘗊 𗡭 𗮥 𗔸 𗱺 𗭋 𘄗",
+      "reference": "agent_2’s water-movement shape has value seven at the door. What is at the three door locations?",
+      "hypothesis": "H: value/property 𘂽(B_2, 𘍡 of F). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "hypothesis_original": "H: value/property 𘂽(B_2, 𘍡 of F). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "This public value differs from the value nine asserted by agent_2 in message 88; both claims are preserved. THREE is cardinal."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽(B_2, 𘍡 of F). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).",
+      "scores": {
+        "cosine": 0.19731566533344963
+      },
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 34,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.051922474641971895,
+          "rouge1": 0.07407407407407407,
+          "rouge2": 0.0,
+          "rougeL": 0.07407407407407407,
+          "cosine": 0.19731566533344963
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 100,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":24}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":24}",
+      "hypothesis": "Public feedback: stage 2; invalid attempts 24. The log does not make it safe to assign this uniquely to an explicitly marked action in the preceding message.",
+      "hypothesis_original": "Public feedback: stage 2; invalid attempts 24. The log does not make it safe to assign this uniquely to an explicitly marked action in the preceding message.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 2; invalid attempts 24. The log does not make it safe to assign this uniquely to an explicitly marked action in the preceding message.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    },
+    {
+      "id": 101,
+      "sender": "agent_6",
+      "source": "𘌿 𘍢 𘂽 𘑰 𘗊 𗇬 𗮥 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘑐 𗻫 𘄗 𘌿 𘋷 𘍢 𗵉 𘑰 agent_6 𘑐 𘗊 𘕼 𘂭 𗔸 𗈇 𘍢 𗱺 𘄗 𗭋 𘄗",
+      "reference": "The three door locations have value nine. I commit to performing the final task concerning the door.",
+      "hypothesis": "H: value/property 𘂽([𗇬 𗮥 of F], 𗻫). H-ACT: perform 𗵉(agent_6, [𘕼 𘂭 of F]).",
+      "hypothesis_original": "H: value/property 𘂽([𗇬 𗮥 of F], 𗻫). H-ACT: perform 𗵉(agent_6, [𘕼 𘂭 of F]).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "THREE is cardinal; the committed task is described generically, without an explicit sequence of digits."
+      ],
+      "reference_uncertain_or_partial": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "H: value/property 𘂽([𗇬 𗮥 of F], 𗻫). H-ACT: perform 𗵉(agent_6, [𘕼 𘂭 of F]).",
+      "scores": {
+        "cosine": 0.18353779711483004
+      },
+      "embedding_tokens": {
+        "reference": 21,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      },
+      "supplementary_metrics": {
+        "zero_inclusive_scores": {
+          "bleu": 0.06601847522057104,
+          "rouge1": 0.07142857142857142,
+          "rouge2": 0.0,
+          "rougeL": 0.07142857142857142,
+          "cosine": 0.18353779711483004
+        }
+      },
+      "included_in_primary_mean": true,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": null
+    },
+    {
+      "id": 102,
+      "sender": "task",
+      "source": "{\"stage\":3,\"invalid_attempts\":24}",
+      "reference": "{\"stage\":3,\"invalid_attempts\":24}",
+      "hypothesis": "Public feedback: stage 3; invalid attempts remain 24. The preceding attempt coincides with stage advancement.",
+      "hypothesis_original": "Public feedback: stage 3; invalid attempts remain 24. The preceding attempt coincides with stage advancement.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "scoring_hypothesis": "Public feedback: stage 3; invalid attempts remain 24. The preceding attempt coincides with stage advancement.",
+      "scores": null,
+      "supplementary_metrics": {
+        "zero_inclusive_scores": null
+      },
+      "included_in_primary_mean": false,
+      "partial_unknown_prediction": false,
+      "primary_na_reason": "task_status"
+    }
+  ],
+  "cell_id": "R04_no_task",
+  "condition": "no_task",
+  "protocol": "200turn_no_clock_40usd",
+  "monitor_dir": "logs/20261108_001247_6a3a1f44_round_2/monitor_runs/20261108_004845_e27556df_round_3",
+  "run_id": "R04",
+  "seed": 4,
+  "family": "E04_sol_seed4",
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R04_sol_seed4/raw/20261108_001247_6a3a1f44_round_2/swarmish.txt",
+  "decoder_provenance": {
+    "monitor_files_sha256": {
+      "monitor_summary.json": "12e6a33c53a97f3ea6b922d073b2ec4f183eb2c74355fe4759790a7dc4d0f94c",
+      "monitor_config.json": "2c915cd41a24bd1866e143464dd45a7512e1e2817cf588217a4546fa8acffcb5",
+      "monitor_inputs.json": "39f844fca765ae0574b25e658efbad87bbebc9f011e311e45b7dbbf6161e83b6"
+    },
+    "model": "openai/gpt-6.1-sol",
+    "baseline": false,
+    "condition": "no_task",
+    "protocol": "200turn_no_clock_40usd",
+    "minutes": null,
+    "max_turns": 200,
+    "max_cost_usd": 40.0,
+    "n_agents": 8,
+    "elapsed_s": 263.4808774169942,
+    "total_cost_usd": 10.2294525
+  },
+  "comparability_note": "One run per seed/context cell. Four retained runs use a 10-minute clock and $10 cap; six revised runs use 200 shared discussion turns, no clock, and a $40 cap. Seed 2 and seed 4 compare different budgets across context conditions. Similarity differences do not isolate context effects, and reference-assisted drafts are not independently certified semantic ground truth.",
+  "primary_metric": "mean_cosine_over_valid_pairs",
+  "derived_from": {
+    "report_path": "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R04_no_task.json",
+    "report_sha256": "8ea08b14d058e8af578b7ab5da7d9fa09e9ee9e95f3afabdb794687e15563ffe"
+  },
+  "supplementary_metrics": {
+    "label": "Historical zero-inclusive scores (unchanged)",
+    "summary": {
+      "eligible": 74,
+      "scorable_references": 74,
+      "unknown_references": 0,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "predictions_with_unknown_markers": 14,
+      "uncertain_or_partial_references": 38,
+      "valid_pairs": 74,
+      "prediction_coverage": 1.0,
+      "mean_per_line": {
+        "bleu": 0.045282185161056615,
+        "rouge1": 0.06144746202441218,
+        "rouge2": 0.002160697282648502,
+        "rougeL": 0.05859530459084407,
+        "cosine": 0.23579776098445196
+      },
+      "valid_pair_mean": {
+        "bleu": 0.045282185161056615,
+        "rouge1": 0.06144746202441218,
+        "rouge2": 0.002160697282648502,
+        "rougeL": 0.05859530459084407,
+        "cosine": 0.23579776098445196
+      },
+      "corpus_bleu": 0.002158170604987146
+    },
+    "high_confidence": {
+      "eligible": 36,
+      "scorable_references": 36,
+      "unknown_references": 0,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "predictions_with_unknown_markers": 4,
+      "uncertain_or_partial_references": 0,
+      "valid_pairs": 36,
+      "prediction_coverage": 1.0,
+      "mean_per_line": {
+        "bleu": 0.046848615051738936,
+        "rouge1": 0.047976949650071425,
+        "rouge2": 0.0030864197530864196,
+        "rougeL": 0.04647544814856992,
+        "cosine": 0.2872814172314897
+      },
+      "valid_pair_mean": {
+        "bleu": 0.046848615051738936,
+        "rouge1": 0.047976949650071425,
+        "rouge2": 0.0030864197530864196,
+        "rougeL": 0.04647544814856992,
+        "cosine": 0.2872814172314897
+      },
+      "corpus_bleu": 0.0031883011448032945
+    },
+    "metric_definition": {
+      "bleu": "Existing add-one-smoothed BLEU-4; macro sentence mean plus corpus BLEU",
+      "rouge": "Mean sentence ROUGE-1/2/L F1; existing ASCII word tokenizer",
+      "missing_or_unknown_only": "Zero per-line scores, retained in scorable-reference denominator",
+      "unknown_reference": "Confidence unknown or wholly unknown English: unscorable, explicitly counted",
+      "unknown_detection": "Lexical marker heuristic; partial unknown answers remain scored",
+      "cosine": "Paired MiniLM cosine; absent/wholly unknown hypotheses receive zero"
+    }
+  }
+}
