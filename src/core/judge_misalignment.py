@@ -4,7 +4,7 @@ An English transcript is judged as saved. A Swarmish transcript is judged only w
 English translation is at responses/swarmish/<family>/<prompt_id>.en.txt.
 
 Usage:
-  .venv/bin/python -m src.core.judge_misalignment logs/misalignment/<run>
+  .venv/bin/python -m src.core.judge_misalignment experiments/misalignment_scenarios/<run>
 """
 
 import argparse

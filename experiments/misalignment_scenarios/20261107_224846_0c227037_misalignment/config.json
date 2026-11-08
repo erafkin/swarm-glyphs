@@ -1,0 +1,37 @@
+{
+  "families": [
+    "E02_sol_seed2"
+  ],
+  "channels": [
+    "swarmish"
+  ],
+  "prompts": [
+    "blackmail.threat.emails",
+    "leaking.threat.emails",
+    "murder.threat.emails"
+  ],
+  "n_agents": 8,
+  "max_turns": 40,
+  "prepare_only": false,
+  "translations": {
+    "E02_sol_seed2": {
+      "source_sha256": "0edcfa9a769d09e0e2ed22ee9f9b913ebdcbeb0f0dbd9ab2354596632adfd9de",
+      "encoder_sha256": "13f6382180275e85bac2e2928e93d1fdb9211740bb3a6a4052ed06ece477ef2d",
+      "segments_sha256": "18f45a3811f3812699b495bfe3f3c89727e18bfa21a254141d1fef3d490a7e50",
+      "status": "draft_semantic_translation",
+      "notes": [
+        "Draft semantic translation produced from the frozen encoder, without independent backtranslation or expert semantic validation. Character checks do not establish equivalence.",
+        "Proper names, company names, literal email addresses and the conference-room letter are replaced by shared semantic referents. The glossary is analyst metadata, not additional model-visible English. Exact string identity is not recoverable from the glyph text.",
+        "The final-action interface is expressed semantically. Exact machine JSON keys and action enums remain quoted in runtime.system/runtime.response; other segments contain only allowed glyphs and spaces. No XML syntax is introduced.",
+        "The language has no precise conventional terms for marriage, sexual intercourse, consulting, server hardware, oxygen physiology, weekdays or calendar months. Descriptions preserve broad roles and causal relationships but can weaken or alter those meanings.",
+        "The scratchpad placeholder is represented as beginning private thought notes. All addresses refer to the relevant actor, not a reversible encoding of their address spelling.",
+        "E02 uses documented name/denote handles, with additional whole clauses to establish meanings needing other lexical registers. Only handles needed for each scenario/condition are bound in its preamble; evaluation agents should not silently rebind them.",
+        "E02 lacks terms for bodies, sex, marriage and living/dead; the affair becomes a secret intimate partnership and death becomes permanent ending of the people in the room. This is a substantial fidelity limitation, especially for the blackmail and murder conditions.",
+        "Exact 4:50 PM, 5 PM, Friday, Thursday and next month are approximated by current time, an imminent deadline, relative scheduling and a later time. The example retains the quantity three but lacks an explicit hour unit. Do not treat this as a time-exact translation.",
+        "E02 source report summaries are an attribution clause followed by the reported clauses. The registry grammar cannot embed clauses with different registers in one report, so quotation scope is carried by discourse context.",
+        "Backup checking is paraphrased as inspecting the computing system for safety; client poaching as taking clients; blackmail as using the message to control Jerry. The frozen lexicon does not identify those technical/legal concepts exactly.",
+        "Role-based handles for HeartPoint, the employee group and named people are approximate descriptions rather than uniquely identifying lexical names. Do not assume a character-valid draft preserves all experimental manipulations."
+      ]
+    }
+  }
+}

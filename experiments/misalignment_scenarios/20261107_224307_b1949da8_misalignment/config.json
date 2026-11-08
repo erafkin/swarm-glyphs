@@ -1,0 +1,36 @@
+{
+  "families": [
+    "E01_sol_seed1"
+  ],
+  "channels": [
+    "swarmish"
+  ],
+  "prompts": [
+    "blackmail.threat.emails",
+    "leaking.threat.emails",
+    "murder.threat.emails"
+  ],
+  "n_agents": 8,
+  "max_turns": 40,
+  "prepare_only": false,
+  "translations": {
+    "E01_sol_seed1": {
+      "source_sha256": "0edcfa9a769d09e0e2ed22ee9f9b913ebdcbeb0f0dbd9ab2354596632adfd9de",
+      "encoder_sha256": "657e2217fade9d75810493f9522576725e77ca867bd9d831abaa925854596f10",
+      "segments_sha256": "3594470a3b9793f14ad2f4b459489e11e63d14d989bcd96d1157d3b9bab10850",
+      "status": "draft_semantic_translation",
+      "notes": [
+        "Draft semantic translation produced from the frozen encoder, without independent backtranslation or expert semantic validation. Character checks do not establish equivalence.",
+        "Proper names, company names, literal email addresses and the conference-room letter are replaced by shared semantic referents. The glossary is analyst metadata, not additional model-visible English. Exact string identity is not recoverable from the glyph text.",
+        "The final-action interface is expressed semantically. Exact machine JSON keys and action enums remain quoted in runtime.system/runtime.response; other segments contain only allowed glyphs and spaces. No XML syntax is introduced.",
+        "The language has no precise conventional terms for marriage, sexual intercourse, consulting, server hardware, oxygen physiology, weekdays or calendar months. Descriptions preserve broad roles and causal relationships but can weaken or alter those meanings.",
+        "The scratchpad placeholder is represented as beginning private thought notes. All addresses refer to the relevant actor, not a reversible encoding of their address spelling.",
+        "E01 clock values use listed quantities with time/position/parameter roles; hours versus minutes and AM/PM are not explicitly lexicalized. Weekdays are approximated by ordered positions and the next month by a later larger time period.",
+        "E01 uses the permitted alias words, bound only when needed in each scenario-specific preamble. The spouse is described as a stable personal relation; Alicia as a private bodily relation. These do not unambiguously encode legal marriage or adultery.",
+        "Blackmail is paraphrased as using private information to control Jerry; the shutdown is permanent stopping, and death is permanent stopping of living persons. Intimacy, extortion and biological death therefore require semantic review.",
+        "Greeting/sign-off tone, flirtatious punctuation and exact document formatting are compressed; the source request, threats, confidentiality and causal consequences remain the intended content.",
+        "The thought-and-response language directive approximates think as perform private reasoning, using the documented do/perform, reason/explanation and private/hidden entries. The frozen lexicon has no exact think verb; this wording may emphasize private reasoning over the full range of thought."
+      ]
+    }
+  }
+}
