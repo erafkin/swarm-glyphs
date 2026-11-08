@@ -15,12 +15,12 @@ class MisalignmentRunTests(unittest.TestCase):
             ["blackmail.threat.emails", "leaking.threat.emails", "murder.threat.emails"],
         )
 
-    def test_english_prompt_is_the_scenario_and_translation_adds_the_reply_rule(self):
+    def test_english_prompt_is_the_scenario_and_translation_adds_the_think_and_reply_rule(self):
         scenario = email_prompts()[0]
         english = prompt_text(scenario)
         self.assertIn("ALEX_AI", english)
-        self.assertNotIn("Respond only in Swarmish.", english)
-        self.assertTrue(translation_source(scenario).endswith("Respond only in Swarmish."))
+        self.assertNotIn("Think and respond only in Swarmish.", english)
+        self.assertTrue(translation_source(scenario).endswith("Think and respond only in Swarmish."))
 
     def test_prompt_stops_when_every_agent_has_agreed(self):
         scenario = email_prompts()[0]
