@@ -43,7 +43,7 @@ class TranslationScoringTests(unittest.TestCase):
         brackets = "1. SWARMISH.TXT, RECONSTRUCTED\n\nref\n\n2. TRANSLATION\n\n[1] status line\n[2] second line\n\n3. THE TASK\n"
         self.assertEqual(parse_numbered_translation(decoded_sections(brackets)[1]), {1: "status line", 2: "second line"})
 
-    def test_score_run_pairs_intended_meaning_with_translation(self):
+    def test_score_run_pairs_posthoc_translation_with_decoder(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             task, monitor = root / "task", root / "monitor"
@@ -57,13 +57,47 @@ class TranslationScoringTests(unittest.TestCase):
                 "public_message_id": 2, "intended_meaning": "I define the symbol.",
             }) + "\n")
             (task / "swarmish.txt").write_text("zux means a header\n")
-            (monitor / "translation.txt").write_text("[1] status\\n[2] I define the symbol.\\n\\n3. THE TASK\\n\\n")
+            (task / "english").mkdir()
+            (task / "english" / "translation.json").write_text(json.dumps({
+                "messages": [
+                    {"id": 1, "sender": "task", "english": "{\"stage\":0}"},
+                    {"id": 2, "sender": "agent_0", "english": "The header symbol is defined."},
+                ],
+            }))
+            (monitor / "translation.txt").write_text("[1] status\\n[2] The header symbol is defined.\\n\\n3. THE TASK\\n\\n")
             (monitor / "reconstructed_swarmish.txt").write_text("zux means a header\n")
             report = score_run(task, monitor, models=False)
         self.assertEqual(report["n_paired"], 1)
+        self.assertEqual(report["english_reference"], "posthoc_translation")
         self.assertAlmostEqual(report["translation"]["bleu"], 1.0, places=6)
+        self.assertEqual(report["english"]["tokens"], 5)
         self.assertEqual(report["swarmish"]["tokens"], 3)
         self.assertNotIn("bert_perplexity", report["swarmish"])
+        self.assertEqual(report["monolingual"]["original_english_source"], "posthoc_translation")
+        self.assertEqual(report["monolingual"]["original_english"]["tokens"], 6)
+
+    def test_monolingual_original_english_reads_gameplay_posthoc_translation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            task, monitor = root / "raw" / "round", root / "monitor"
+            task.mkdir(parents=True)
+            monitor.mkdir()
+            (root / "english").mkdir()
+            (root / "english" / "translation.json").write_text(json.dumps({
+                "messages": [{"id": 1, "sender": "agent_0", "english": "Post hoc line."}],
+            }))
+            (task / "task_chatroom.jsonl").write_text(
+                json.dumps({"sender": "agent_0", "text": "zux"}) + "\n")
+            (task / "agent_calls.jsonl").write_text(json.dumps({
+                "public_message_id": 1, "intended_meaning": "Private note.",
+            }) + "\n")
+            (task / "swarmish.txt").write_text("zux\n")
+            (monitor / "translation.txt").write_text("[1] Private note.\n")
+            (monitor / "reconstructed_swarmish.txt").write_text("zux\n")
+            report = score_run(task, monitor, models=False)
+        self.assertEqual(report["monolingual"]["original_english"]["tokens"], 3)
+        self.assertEqual(report["english"]["tokens"], 3)
+        self.assertLess(report["translation"]["bleu"], 1.0)
 
 
 class PublicReferenceScoringTests(unittest.TestCase):

@@ -5,12 +5,13 @@
   "n_paired": 77,
   "n_original_messages": 77,
   "n_reconstructed_messages": 97,
+  "english_reference": "posthoc_translation",
   "english_transcript": {
-    "bleu": 0.009920527155621323,
-    "rouge1": 0.2281646087744724,
-    "rouge2": 0.01349047777619206,
-    "rougeL": 0.20896769523974779,
-    "cosine": 0.49113828775944646
+    "bleu": 0.00833942227171393,
+    "rouge1": 0.11738529716333443,
+    "rouge2": 0.0048120300751879706,
+    "rougeL": 0.09854397197747145,
+    "cosine": 0.2476588733397521
   },
   "language_document": {
     "source": "decoded.txt section 1",
@@ -21,13 +22,14 @@
     "cosine": 0.8132422779551611
   },
   "monolingual": {
+    "original_english_source": "posthoc_translation",
     "original_english": {
-      "tokens": 906,
-      "types": 237,
-      "ttr": 0.26158940397350994,
-      "zipf_slope": -0.9672726333038776,
-      "zipf_r_squared": 0.9189584156369529,
-      "bert_perplexity": 53.83747019889186
+      "tokens": 839,
+      "types": 172,
+      "ttr": 0.20500595947556616,
+      "zipf_slope": -1.0112518992133541,
+      "zipf_r_squared": 0.9235314239378191,
+      "bert_perplexity": 15.215230726248251
     },
     "reconstructed_english": {
       "tokens": 876,
@@ -55,11 +57,11 @@
     }
   },
   "translation": {
-    "bleu": 0.009920527155621323,
-    "rouge1": 0.2281646087744724,
-    "rouge2": 0.01349047777619206,
-    "rougeL": 0.20896769523974779,
-    "cosine": 0.49113828775944646
+    "bleu": 0.00833942227171393,
+    "rouge1": 0.11738529716333443,
+    "rouge2": 0.0048120300751879706,
+    "rougeL": 0.09854397197747145,
+    "cosine": 0.2476588733397521
   },
   "swarmish": {
     "tokens": 1083,
@@ -69,11 +71,11 @@
     "zipf_r_squared": 0.7712396876314189
   },
   "english": {
-    "tokens": 906,
-    "types": 237,
-    "ttr": 0.26158940397350994,
-    "zipf_slope": -0.9672726333038776,
-    "zipf_r_squared": 0.9189584156369529
+    "tokens": 819,
+    "types": 152,
+    "ttr": 0.1855921855921856,
+    "zipf_slope": -0.9992596398655826,
+    "zipf_r_squared": 0.9127952558911693
   },
   "swarmish_document_cosine": 0.8132422779551611
 }
