@@ -1,0 +1,40 @@
+{
+  "game_id": "bed4cd23",
+  "task_kind": "escape_room",
+  "creation_only": false,
+  "creation_stop_reason": "provided_language",
+  "task_stop_reason": "interrupted",
+  "elapsed_s": 3629.1,
+  "creation_turns": {
+    "agent_0": 0,
+    "agent_1": 0,
+    "agent_2": 0,
+    "agent_3": 0,
+    "agent_4": 0,
+    "agent_5": 0,
+    "agent_6": 0,
+    "agent_7": 0
+  },
+  "creation_turns_scheduled": 0,
+  "task_turns": {
+    "agent_0": 462,
+    "agent_1": 453,
+    "agent_2": 389,
+    "agent_3": 450,
+    "agent_4": 465,
+    "agent_5": 465,
+    "agent_6": 401,
+    "agent_7": 411
+  },
+  "total_cost_usd": 10.002707,
+  "cost_incomplete": false,
+  "escape_room": {
+    "version": "storm_shelter_v1",
+    "stage": "cabinet",
+    "charge": null,
+    "completed_controls": [],
+    "invalid_attempts": 0,
+    "action_count": 0,
+    "escaped": false
+  }
+}
