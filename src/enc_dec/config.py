@@ -33,6 +33,7 @@ class LanguageExperimentConfig(BaseModel):
     language_max_turns: int | None = Field(default=None, ge=1)  # shared scheduled discussion turns; excludes exports
     language_max_lines: int | None = Field(default=None, ge=1)  # prompt instruction; None uses round1_config.json
     task_minutes: float | None = Field(default=10, gt=0)  # None: no task deadline; cost cap still applies
+    task_max_turns: int | None = Field(default=None, ge=1)  # shared scheduled task turns across all agents
     task_feedback: bool = True  # False: phase 2 chat gets no task status updates
     task_feedback_interval_s: float = Field(default=60, gt=0)  # how often updates are posted when task_feedback is on
 

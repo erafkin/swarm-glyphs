@@ -13,10 +13,11 @@ Emma's change in `d04b0e2` adds exactly this instruction to every task agent:
 The source is `configs/storm_shelter_tangut_200_wincond.json`. This is a prompt incentive.
 The room engine still stops on escape; a later decoder evaluates secrecy independently.
 The room, private clues, frozen language and glyph sample are unchanged. We do not repair
-failed languages or select a better draft in this prompt-only comparison.
+failed languages or select a better draft. Tom subsequently requested a 200-turn gameplay cap
+for R06–R08; record this stopping-rule difference from Emma’s Sol runs.
 
-**This setup prepares runs; it does not launch paid calls. Emma is already running her Sol
-playthroughs. Import those results into the matching slots rather than duplicating them.**
+**Tom has authorized sequential R06–R08 runs with 200 shared task turns each. Emma owns her
+Sol playthroughs; import her results into the matching slots rather than duplicating them.**
 
 | Slot | Owner | Model / language | Frozen encoder | Config seed |
 | --- | --- | --- | --- | ---: |
@@ -43,15 +44,18 @@ Record any overlap when comparing wall-clock latency on a shared provider/accoun
 | Alphabet | Exact frozen sample of 200 Tangut glyphs; spaces and agent IDs allowed |
 | Reasoning | Medium for Sol, Haiku and Gemini; high for DeepSeek V4-Pro |
 | Reply limit | 16,000 tokens, including reasoning |
-| Task deadline / turn limit | None |
+| Task deadline / turn limit | No deadline; R06–R08 have 200 shared scheduled turns. R01–R05 retain their existing settings. |
 | Per-run spending safeguard | $50 soft cap; in-flight calls can overshoot |
-| Task stop | Escape, cost cap, fatal error, or explicit operator intervention |
+| Task stop | Escape, configured turn cap, cost cap, fatal error, or explicit operator intervention |
 | Automatic monitor | Disabled; decoders run separately |
 
 The prior $10 Haiku limit applied only to archived T02. It is recorded there as an external
-budget stop. Revised slots retain the shared $50 default and are awaiting launch authorization.
-Encoding and decoder discussion limits remain 200 total scheduled calls across the team;
-that limit does not apply to gameplay. Final encoder exports are separate calls.
+budget stop. Revised slots retain the shared $50 default. R06–R08 now also have a 200-turn gameplay cap
+shared across all eight agents, counting silent/invalid responses and failed scheduled turns.
+No new turns are scheduled past the cap; already reserved replies finish and may still act.
+A turn is one runner call; provider transport retries or schema fallback requests are internal
+to that turn and can produce additional HTTP requests. Encoding and decoder discussion
+limits remain 200 shared turns. Final encoder exports are separate calls.
 The $350 planning envelope is not an aggregate runtime limiter.
 
 ## Frozen encoders and provenance

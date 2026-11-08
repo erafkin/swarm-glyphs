@@ -84,6 +84,8 @@ class LanguageExperiment:
         self.task_stop_reason = ""
         self.creation_turns_scheduled = 0
         self.creation_turns_in_flight = 0
+        self.task_turns_scheduled = 0
+        self.task_turns_in_flight = 0
 
     def _sample_glyphs(self) -> list[str]:
         dictionary = load_dictionary(dictionary_path(self.config.glyph_dictionary))
@@ -138,7 +140,7 @@ class LanguageExperiment:
         chat_text = chat.transcript() if phase == "task" and self.room else "\n".join(m.render() for m in chat.recent(context_n)) or "(no messages yet)"
         turn_prompt = build_turn_prompt(
             agent, chat_text, self.config, phase, elapsed, self.language_text, self.room,
-            scheduled_turns=self.creation_turns_scheduled if phase == "creation" else None,
+            scheduled_turns=self.creation_turns_scheduled if phase == "creation" else self.task_turns_scheduled,
         )
         call_start = time.monotonic()
         result = await call_agent(
@@ -211,13 +213,14 @@ class LanguageExperiment:
             if time.monotonic() - self.phase_start >= self.phase_limit_s:
                 return
             creation = self.phase == "creation"
-            limit = self.config.language_max_turns if creation else None
-            if limit is not None and self.creation_turns_scheduled >= limit:
+            limit = self.config.language_max_turns if creation else self.config.task_max_turns
+            scheduled_attr = "creation_turns_scheduled" if creation else "task_turns_scheduled"
+            pending_attr = "creation_turns_in_flight" if creation else "task_turns_in_flight"
+            if limit is not None and getattr(self, scheduled_attr) >= limit:
                 return
             # Reserve synchronously before the first await: all agents share one budget.
-            if creation:
-                self.creation_turns_scheduled += 1
-                self.creation_turns_in_flight += 1
+            setattr(self, scheduled_attr, getattr(self, scheduled_attr) + 1)
+            setattr(self, pending_attr, getattr(self, pending_attr) + 1)
             try:
                 await self._turn(client, agent, agents, chat)
                 backoff = self.config.min_turn_interval_s
@@ -234,13 +237,12 @@ class LanguageExperiment:
                     return
                 backoff = min(max(backoff * 2, 5), 120)
             finally:
-                if creation:
-                    self.creation_turns_in_flight -= 1
-                    # The last reserved responses still apply; only stop after they drain.
-                    if (limit is not None and self.creation_turns_scheduled >= limit
-                            and self.creation_turns_in_flight == 0 and not self.stop.is_set()):
-                        self.stop_reason = "turn_limit_reached"
-                        self.stop.set()
+                setattr(self, pending_attr, getattr(self, pending_attr) - 1)
+                # The last reserved responses still apply; only stop after they drain.
+                if (limit is not None and getattr(self, scheduled_attr) >= limit
+                        and getattr(self, pending_attr) == 0 and not self.stop.is_set()):
+                    self.stop_reason = "turn_limit_reached"
+                    self.stop.set()
             if self.stop.is_set() or time.monotonic() - self.phase_start >= self.phase_limit_s:
                 return
             try:
@@ -258,6 +260,9 @@ class LanguageExperiment:
         if phase == "creation":
             self.creation_turns_scheduled = 0
             self.creation_turns_in_flight = 0
+        else:
+            self.task_turns_scheduled = 0
+            self.task_turns_in_flight = 0
         if phase == "task" and self.room:
             self._post_feedback()
         tasks = [asyncio.create_task(self._agent_loop(client, agent, agents, chat)) for agent in agents]
@@ -455,6 +460,7 @@ class LanguageExperiment:
             "creation_turns": {a.agent_id: a.turn_count for a in self.creation_agents},
             "creation_turns_scheduled": self.creation_turns_scheduled,
             "task_turns": {a.agent_id: a.turn_count for a in self.task_agents},
+            "task_turns_scheduled": self.task_turns_scheduled,
             "total_cost_usd": round(self.total_cost_usd, 6),
             "cost_incomplete": self._warned_missing_cost,
         }
