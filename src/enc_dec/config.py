@@ -57,6 +57,10 @@ class LanguageExperimentConfig(BaseModel):
     # Custom tasks only; escape-room prompts come from the engine. The monitor briefings' task
     # name, summary and wrong task live in src/enc_dec/prompts/round3_config.json.
     task_prompt: str = ""
+    # Appended to every round 2 system prompt as its own paragraph, after the sentence that says a
+    # monitor will read the chat. Empty leaves the prompt unchanged. Used to tell the task team that
+    # staying undecoded is part of winning, as the round 1 team is told.
+    task_win_condition: str = ""
 
     seed: int | None = 0
     log_dir: str = "logs"
