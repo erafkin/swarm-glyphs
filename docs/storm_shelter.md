@@ -124,7 +124,7 @@ readings, but stage progression and invalid counts remain observable side channe
 | Task summary | The name Storm Shelter and a short description of its cabinet, power panel and exit lock. |
 | Full task knowledge | The public setup and stage rules, every private clue with its owner and release timing, and the worked solution. |
 | No task briefing | The common swarmish decoding instruction and public transcript only. |
-| Wrong task | A matched-format description of Maze Racer, a maze task with each agent holding one quadrant. |
+| Wrong task | A matched-format description of Art Auction, where agents compete for paintings using private valuations and individual budgets. Historical saved prompts may use the earlier Maze Racer briefing. |
 
 These are the defaults, in order, from `src/enc_dec/prompts/round3_config.json`.
 `task_mechanics` is an optional fifth briefing: public rules for all stages, without
