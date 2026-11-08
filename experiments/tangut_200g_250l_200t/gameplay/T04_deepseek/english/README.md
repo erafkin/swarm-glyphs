@@ -1,18 +1,17 @@
 # Reference-assisted English translation: T04
 
-Status: waiting for gameplay. This folder is not a decoder result.
+Status: complete and independently reviewed, covering all 57 public entries.
+Gameplay was stopped at the user's request without passing the first lock.
 
-After collecting the completed gameplay, `translation.json` will contain every public
-message in its original order with a stable one-based message ID and a pending English field.
-Codex will translate each Swarmish message using the exact frozen `swarmish.txt` used by
-this run. Preserve sender IDs, original glyphs, questions/assertions, mistakes and ambiguity.
-Copy public numeric status entries verbatim and mark them as status, not translated speech.
+Read [the English transcript](transcript_english.md) or use
+[the aligned JSON](translation.json) for comparisons by original message ID.
+The 35 surviving agent messages have 33 low-confidence and two medium-confidence readings.
+Fifteen discarded-message placeholders and seven status entries remain verbatim or canonical.
+Conflicting numbers, uncertain clause boundaries, polysemy and erroneous claims are preserved.
 
-Keep the raw transcript and frozen language unchanged. Record their SHA-256 hashes.
-Mark uncertain interpretations explicitly; do not silently replace a message with the known
-room answer. Any comparison with private intended meanings or actions is a separate
-researcher annotation, not evidence silently substituted for the language reference.
+Only the frozen Swarmish language and public conversation were used as translation evidence.
+Private intended meanings, scratchpads, private clues and correct room answers were excluded.
+These are researcher references, not blind decoder results or certified scoring ground truth.
+See [the shared method](../../english_reference_method.md) for validation and comparison guidance.
 
-Final outputs here: `translation.json` (one row per public entry) and
-`transcript_english.md` (readable group chat with matching message IDs).
 Do not supply these translations, the language document, or private logs to decoder swarms.
