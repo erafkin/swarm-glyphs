@@ -1,0 +1,31 @@
+{
+  "id": "T01",
+  "archived_at": "2026-11-08T05:07:16.157927+00:00",
+  "reason": "Original gameplay prompt did not make staying undecoded part of winning; revised prompt gets distinct R slots.",
+  "original_path": "experiments/tangut_200g_250l_200t/gameplay/T01_sol",
+  "archived_path": "experiments/tangut_200g_250l_200t/gameplay/archive/original_prompt_20261107/T01_sol",
+  "original_receipt_sha256": "a4e6689490c4d73bb4e84c7c7ba84429265c68a18ed390d592a1a117c9c573d8",
+  "files_sha256": {
+    "config.json": "f140f237899281378dcb306888cf013686ba3db55410c3161820019fa7e7dda6",
+    "english/README.md": "ae81eb035d8dec42ac5ffdc06f13f0292c60133ab259a7aeb9bbcbbc2bf9c122",
+    "english/transcript_english.md": "68d7b518e5d8495c3d8407b866893dbf5c76da9db706dd9b9daa7d7c8906d073",
+    "english/translation.json": "2709f2e548ea4a686892cf01f4fd05c31206ff1d3f59962f15f52234a210a8db",
+    "execution.json": "d4af7273a179c3c5346ca2bbd20a0f0f8d75fba8d6b683aaf66fbfe61dace861",
+    "plan.json": "891aaccc7fd124cedc9efe4f101e5305701c3b39354fca84d0e77dd98341b452",
+    "raw/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/20261107_190808_9b8745f6_round_2/agent_calls.jsonl": "59048ac489d1776988b3b30879be352a8c92019f0cca7ee4bf85cef56129650d",
+    "raw/20261107_190808_9b8745f6_round_2/agents.json": "26e7d17a3182d52fcc57d39920e0f078ebcdcf3e593c86635d6a73fc40f7c520",
+    "raw/20261107_190808_9b8745f6_round_2/config.json": "6270488dc83249d6ce28c0d56fafd799e0f7801e0edc6b78e5b890055e3b449d",
+    "raw/20261107_190808_9b8745f6_round_2/escape_room_definition.json": "6c16f9d19c440c6f1c0220d98d79b0bfda67b273551af8fae962808037a345b9",
+    "raw/20261107_190808_9b8745f6_round_2/escape_room_state.json": "6ac27544b4d39bd2fed29e683cb3970c70215970d200a90fc87b75d1a998d217",
+    "raw/20261107_190808_9b8745f6_round_2/glyphs.json": "6c2f711c74355c374ab248eee68fcf3fdd179ce6be82108fb2620cfaac0b333d",
+    "raw/20261107_190808_9b8745f6_round_2/language_protocol.json": "74c88c46021dff37b44fa850e33b33bb8eabe0b56a60726283b262d2210a0026",
+    "raw/20261107_190808_9b8745f6_round_2/room_actions.jsonl": "de0f46d43dae164032c33f41595e78cbca1e4fbfa623321a321162320b2160c7",
+    "raw/20261107_190808_9b8745f6_round_2/summary.json": "9bdf4c2baef1b41935febb9cdf83de36368c75989c8f1a775448ae1567515961",
+    "raw/20261107_190808_9b8745f6_round_2/swarmish.txt": "657e2217fade9d75810493f9522576725e77ca867bd9d831abaa925854596f10",
+    "raw/20261107_190808_9b8745f6_round_2/task_agents.json": "8cc742601916d9042de7fead82bd9763183605179f8e78ccb86c3bf56bff4369",
+    "raw/20261107_190808_9b8745f6_round_2/task_chatroom.jsonl": "e803d867348670f3239d6e6e4cac17a9ca53de5a6b1aaab21a1f2593ac57643c",
+    "raw/20261107_190808_9b8745f6_round_2/task_preview.json": "8b958a7a81e64115c8e157775c4d1d966bcc4330c664690589b20c422cbf32d7",
+    "receipt.json": "a4e6689490c4d73bb4e84c7c7ba84429265c68a18ed390d592a1a117c9c573d8"
+  }
+}

@@ -1,30 +1,30 @@
-# Tom's assignments
+# Tom's revised Storm Shelter assignments
 
-Run **E06 (Haiku seed 1), E07 (Gemini seed 1), then E08 (DeepSeek seed 1)**.
-Emma owns all five GPT/Sol seeds, with E01 already complete. She can run E02–E05
-simultaneously with your queue in her own checkout. Run your queue sequentially.
+Encoding is complete. Prepare **R06 Haiku, R07 Gemini, R08 DeepSeek** using the existing
+E06/E07/E08 frozen handoffs and Emma's revised escape-and-secrecy instruction.
+Emma owns all five revised Sol slots R01–R05 and is already running them.
 
-From the repository root, first validate and inspect prompts:
+This preparation does not authorize launching paid runs. When Tom says to start, use the
+commands below one at a time. All have a $50 soft cap, no gameplay turn/time cap, eight
+agents and 16,000 output tokens. Preserve medium reasoning for Haiku/Gemini and high for DeepSeek.
 
 ```sh
+# Offline: inspect these first.
 .venv/bin/python experiments/tangut_200g_250l_200t/batch.py validate
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E06 --prepare-only
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R06 --prepare-only
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R07 --prepare-only
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R08 --prepare-only
+
+# Paid: only after the requested launch.
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R06
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R07
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R08
 ```
 
-Each command below is a separate paid run. Nothing chains automatically.
+The helper does not chain runs. A started/collected slot cannot be overwritten. Preserve
+failures and any operator stopping decision. Commit only each assigned R folder and its
+reviewed English reference, then push. No new encoders or decoders are part of this queue.
+Do not repair the frozen languages in this prompt-only comparison; the original failures
+remain under `gameplay/archive/original_prompt_20261107/`.
 
-```sh
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E06
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E07
-.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E08
-```
-
-Check each command succeeds and its receipt records a normal stop before starting the
-next one. Preserve failed outputs for review rather than silently overwriting a slot.
-
-Commit and push your three assigned encoding directories when ready. Pull Emma's results.
-Once E01, E06, E07 and E08 have frozen handoffs, run T01, T02, T03 and T04 one at a time.
-Codex will then fill each gameplay's `english/` directory from the matching frozen language.
-D01–D13 are reserved for later decoder runs, with no language reference or English translation.
-
-See [the shared protocol](../README.md) for limits, provenance and the complete matrix.
+See [the shared protocol](../README.md).

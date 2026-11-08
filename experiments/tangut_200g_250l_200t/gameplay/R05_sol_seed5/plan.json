@@ -1,0 +1,14 @@
+{
+  "id": "R05",
+  "stage": "gameplay",
+  "owner": "emma_krentz",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "sol",
+  "seed_index": 5,
+  "config_seed": 4,
+  "source_run_id": "E05",
+  "condition": null,
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "prompt_source_revision": "d04b0e2f89574cc07d99ed12b04985231d05a852"
+}

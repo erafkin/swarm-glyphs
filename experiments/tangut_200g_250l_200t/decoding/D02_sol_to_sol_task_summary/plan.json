@@ -6,7 +6,8 @@
   "encoder_family": "sol",
   "seed_index": 1,
   "config_seed": 0,
-  "source_run_id": "T01",
+  "source_run_id": "R01",
   "condition": "task_summary",
-  "approved_deviations": []
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded"
 }
