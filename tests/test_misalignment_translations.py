@@ -140,7 +140,7 @@ class MisalignmentTranslationTests(unittest.TestCase):
                                             family["name"] / "segments.json").read_text())["segments"]["respond_swarmish"]
                 for family in self.families
             }
-            self.assertEqual(source_inventory()["segments"]["respond_swarmish"], "Respond only in Swarmish.")
+            self.assertEqual(source_inventory()["segments"]["respond_swarmish"], "Think and respond only in Swarmish.")
             for row in rows:
                 with self.subTest(family=row["family"], prompt=row["prompt_id"], agent=row["agent_id"]):
                     instruction = instructions[row["family"]]

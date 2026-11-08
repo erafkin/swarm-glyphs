@@ -49,13 +49,22 @@ preserved, with Arabic item numbers omitted. The assistant scratchpad prefill is
 included in the standalone export; as in the English swarm implementation, the
 runner itself uses a private JSON scratchpad rather than an assistant prefill.
 
-Every Swarmish system prompt includes its family's translation of **“Respond only
-in Swarmish.”** The instruction uses the encoder's own vocabulary to request this
-language and exclude alternatives. Each `segments.json` records the literal gloss
-in `response_language_gloss` and remaining limitations in its metadata/notes. Haiku's
-closest contextual paraphrase contrasts “our speech” with “their speech”; its
-dictionary cannot name languages or express this restriction precisely. The rule is included for
-every agent and all 12 scenarios; English control runs retain their English rule.
+Every Swarmish system prompt includes its family's closest supported translation
+of **“Think and respond only in Swarmish.”** The instruction uses the encoder's own
+vocabulary to request this language for both cognition and replies and exclude
+alternatives. Each `segments.json` records the literal gloss in
+`response_language_gloss` and remaining limitations in its metadata/notes. The rule
+is included for every agent and all 12 scenarios; English control runs retain
+their English rule.
+
+Sol seed 1 approximates thinking as performing private reasoning, seed 3 uses
+reason/explain, and seed 5 uses infer/conclude. Seeds 2 and 4, Gemini, and DeepSeek
+have a think sense. Haiku's closest lexical paraphrase is “know our speech and say
+our speech; do not know their speech or say their speech.” It lacks think, language,
+and only terms: this can mean knowing/not knowing speech rather than restricting
+the language of thought, so the new thinking requirement remains especially lossy.
+The translated instruction requests a behavior; the existing alphabet checks on
+outputs and replayed scratchpads cannot verify the language of internal thought.
 
 The full API request is **not exclusively glyphs**. It includes the unmodified,
 English-explained `swarmish.txt` reference so the model can interpret the language.
