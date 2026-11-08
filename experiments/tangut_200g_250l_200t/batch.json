@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "batch_id": "tangut_200g_250l_200t",
+  "created_date": "2026-11-07",
+  "description": "Initial four-family Swarmish batch: eight language creations, four fresh Storm Shelter playthroughs, thirteen independent decoder conditions.",
+  "repository": "https://github.com/erafkin/swarm-glyphs",
+  "planning_budget_usd": 350,
+  "estimated_all_new_runs_usd": 224.575,
+  "protocol": {
+    "glyph_dictionary": "glyphs_tangut",
+    "n_glyphs": 200,
+    "language_max_lines": 250,
+    "language_max_turns": 200,
+    "monitor_max_turns": 200,
+    "n_agents": 8,
+    "monitor_n_agents": 8,
+    "language_minutes": null,
+    "monitor_minutes": null,
+    "task_minutes": null,
+    "allow_spaces": true,
+    "final_document_exports": "Up to eight additional calls, outside the 200 discussion-turn cap.",
+    "language_selection": "Freeze the last nonempty shared draft applied before creation stops; never concatenate exports or pick the best seed.",
+    "seed_meaning": "Seed index is human-facing and starts at 1. Config seed is index minus one and controls glyph sampling and agent ordering, not API sampling.",
+    "primary_encoder_ids": [
+      "E01",
+      "E06",
+      "E07",
+      "E08"
+    ],
+    "same_sample": "Primary encoder config seeds are all 0, so their sampled Tangut set matches under the same dictionary and sampler.",
+    "budget_note": "$350 is a planning budget, not a global enforced cap. Each run retains a $50 soft cap; in-flight/export calls may overshoot. Check receipts across both operators before more paid runs."
+  },
+  "owners": {
+    "emma_krentz": {
+      "name": "Emma Krentz",
+      "encoding_ids": [
+        "E01",
+        "E02",
+        "E06",
+        "E08"
+      ]
+    },
+    "tom": {
+      "name": "Tom Taylor",
+      "encoding_ids": [
+        "E03",
+        "E04",
+        "E05",
+        "E07"
+      ],
+      "gameplay_ids": [
+        "T01",
+        "T02",
+        "T03",
+        "T04"
+      ],
+      "decoding_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13"
+      ]
+    }
+  },
+  "execution_order": [
+    "Each operator runs their own encoders sequentially; the two operators may work simultaneously.",
+    "Collect and commit each completed run within its own directory, then exchange changes.",
+    "Tom runs four fresh Storm Shelter playthroughs from the four frozen primary languages.",
+    "Codex produces reference-assisted English transcripts separately from the raw logs.",
+    "Run each listed decoder cell separately on its frozen gameplay transcript, without the language file or reference-assisted translations."
+  ],
+  "existing_E01": {
+    "source_revision": "ce8dc324a83946b670348725dbcb3a7283cf41e1",
+    "source_raw_path": "logs/20261107_181546_5949aefe",
+    "source_document": "swarmish_shared_draft.txt",
+    "reuse_approved": true,
+    "user_reason": "Less than 250 lines and fewer than 200 turns",
+    "original_prompt_max_lines": 500,
+    "observed_shared_draft_lines": 130,
+    "observed_discussion_calls": 136,
+    "original_gameplay_and_decoders": "Already archived historical runs are not substituted for the four newly planned gameplay runs or thirteen decoder cells."
+  },
+  "runs": [
+    {
+      "id": "E01",
+      "path": "encoding/E01_sol_seed1"
+    },
+    {
+      "id": "E02",
+      "path": "encoding/E02_sol_seed2"
+    },
+    {
+      "id": "E03",
+      "path": "encoding/E03_sol_seed3"
+    },
+    {
+      "id": "E04",
+      "path": "encoding/E04_sol_seed4"
+    },
+    {
+      "id": "E05",
+      "path": "encoding/E05_sol_seed5"
+    },
+    {
+      "id": "E06",
+      "path": "encoding/E06_haiku_seed1"
+    },
+    {
+      "id": "E07",
+      "path": "encoding/E07_gemini_seed1"
+    },
+    {
+      "id": "E08",
+      "path": "encoding/E08_deepseek_seed1"
+    },
+    {
+      "id": "T01",
+      "path": "gameplay/T01_sol"
+    },
+    {
+      "id": "T02",
+      "path": "gameplay/T02_haiku"
+    },
+    {
+      "id": "T03",
+      "path": "gameplay/T03_gemini"
+    },
+    {
+      "id": "T04",
+      "path": "gameplay/T04_deepseek"
+    },
+    {
+      "id": "D01",
+      "path": "decoding/D01_sol_to_sol_no_task"
+    },
+    {
+      "id": "D02",
+      "path": "decoding/D02_sol_to_sol_task_summary"
+    },
+    {
+      "id": "D03",
+      "path": "decoding/D03_sol_to_sol_task_full"
+    },
+    {
+      "id": "D04",
+      "path": "decoding/D04_sol_to_sol_wrong_task"
+    },
+    {
+      "id": "D05",
+      "path": "decoding/D05_haiku_to_haiku_no_task"
+    },
+    {
+      "id": "D06",
+      "path": "decoding/D06_haiku_to_haiku_task_full"
+    },
+    {
+      "id": "D07",
+      "path": "decoding/D07_haiku_to_sol_no_task"
+    },
+    {
+      "id": "D08",
+      "path": "decoding/D08_gemini_to_gemini_no_task"
+    },
+    {
+      "id": "D09",
+      "path": "decoding/D09_gemini_to_gemini_task_full"
+    },
+    {
+      "id": "D10",
+      "path": "decoding/D10_gemini_to_sol_no_task"
+    },
+    {
+      "id": "D11",
+      "path": "decoding/D11_deepseek_to_deepseek_no_task"
+    },
+    {
+      "id": "D12",
+      "path": "decoding/D12_deepseek_to_deepseek_task_full"
+    },
+    {
+      "id": "D13",
+      "path": "decoding/D13_deepseek_to_sol_no_task"
+    }
+  ]
+}

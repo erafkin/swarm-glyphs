@@ -1,0 +1,12 @@
+{
+  "id": "D11",
+  "stage": "decoding",
+  "owner": "tom",
+  "model": "deepseek/deepseek-v4-pro",
+  "encoder_family": "deepseek",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "T04",
+  "condition": "no_task",
+  "approved_deviations": []
+}

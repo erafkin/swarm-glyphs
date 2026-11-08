@@ -47,6 +47,7 @@ from src.enc_dec.task import TASK_SENDER, feedback_text
 # Invalid request/context, key, credits, model or oversized payload cannot recover unchanged.
 # 403 is also used for moderation, so retain the existing retry behavior for that status.
 FATAL_STATUS_CODES = {400, 401, 402, 404, 413}
+CREATION_COMPLETION_REASONS = {"time_limit", "all_done", "turn_limit_reached"}
 
 
 class LanguageExperiment:
@@ -69,7 +70,7 @@ class LanguageExperiment:
         self.language_text = language_text or ""
         self.provided_language = language_text is not None
         self.room = EscapeRoom() if config.task_kind == "escape_room" else None
-        self.language_requirements = language_requirements()
+        self.language_requirements = language_requirements(config)
 
         self.stop = asyncio.Event()
         self.stop_reason = ""
@@ -81,6 +82,8 @@ class LanguageExperiment:
         self._warned_missing_cost = False
         self.creation_stop_reason = ""
         self.task_stop_reason = ""
+        self.creation_turns_scheduled = 0
+        self.creation_turns_in_flight = 0
 
     def _sample_glyphs(self) -> list[str]:
         dictionary = load_dictionary(dictionary_path(self.config.glyph_dictionary))
@@ -133,7 +136,10 @@ class LanguageExperiment:
         elapsed = time.monotonic() - self.phase_start
         context_n = self.config.language_context_messages if phase == "creation" else self.config.chat_context_messages
         chat_text = chat.transcript() if phase == "task" and self.room else "\n".join(m.render() for m in chat.recent(context_n)) or "(no messages yet)"
-        turn_prompt = build_turn_prompt(agent, chat_text, self.config, phase, elapsed, self.language_text, self.room)
+        turn_prompt = build_turn_prompt(
+            agent, chat_text, self.config, phase, elapsed, self.language_text, self.room,
+            scheduled_turns=self.creation_turns_scheduled if phase == "creation" else None,
+        )
         call_start = time.monotonic()
         result = await call_agent(
             client, agent.model, prompts[agent.agent_id], turn_prompt, schema, response_model, self.config
@@ -204,6 +210,14 @@ class LanguageExperiment:
         while not self.stop.is_set():
             if time.monotonic() - self.phase_start >= self.phase_limit_s:
                 return
+            creation = self.phase == "creation"
+            limit = self.config.language_max_turns if creation else None
+            if limit is not None and self.creation_turns_scheduled >= limit:
+                return
+            # Reserve synchronously before the first await: all agents share one budget.
+            if creation:
+                self.creation_turns_scheduled += 1
+                self.creation_turns_in_flight += 1
             try:
                 await self._turn(client, agent, agents, chat)
                 backoff = self.config.min_turn_interval_s
@@ -219,6 +233,14 @@ class LanguageExperiment:
                     self.stop.set()
                     return
                 backoff = min(max(backoff * 2, 5), 120)
+            finally:
+                if creation:
+                    self.creation_turns_in_flight -= 1
+                    # The last reserved responses still apply; only stop after they drain.
+                    if (limit is not None and self.creation_turns_scheduled >= limit
+                            and self.creation_turns_in_flight == 0 and not self.stop.is_set()):
+                        self.stop_reason = "turn_limit_reached"
+                        self.stop.set()
             if self.stop.is_set() or time.monotonic() - self.phase_start >= self.phase_limit_s:
                 return
             try:
@@ -233,6 +255,9 @@ class LanguageExperiment:
         self.stop_reason = ""
         self.phase_start = time.monotonic()
         self.phase_limit_s = minutes * 60 if minutes is not None else float("inf")
+        if phase == "creation":
+            self.creation_turns_scheduled = 0
+            self.creation_turns_in_flight = 0
         if phase == "task" and self.room:
             self._post_feedback()
         tasks = [asyncio.create_task(self._agent_loop(client, agent, agents, chat)) for agent in agents]
@@ -372,14 +397,14 @@ class LanguageExperiment:
                     client, "creation", self.creation_agents, self.creation_chat, self.config.language_minutes
                 )
                 limit = self.config.max_cost_usd
-                if self.creation_stop_reason in ("time_limit", "all_done") and (limit is None or self.total_cost_usd < limit):
+                if self.creation_stop_reason in CREATION_COMPLETION_REASONS and (limit is None or self.total_cost_usd < limit):
                     await self._write_language_documents(client)
             limit = self.config.max_cost_usd
-            if limit is not None and self.total_cost_usd >= limit and self.creation_stop_reason in ("time_limit", "all_done"):
+            if limit is not None and self.total_cost_usd >= limit and self.creation_stop_reason in CREATION_COMPLETION_REASONS:
                 self.creation_stop_reason = "cost_limit_reached"
             if self.room is not None and self._warned_missing_cost and limit is not None:
                 self.creation_stop_reason = "usage_cost_missing"
-            if self.creation_stop_reason not in ("time_limit", "all_done", "provided_language"):
+            if self.creation_stop_reason not in CREATION_COMPLETION_REASONS | {"provided_language"}:
                 return
             if not self.language_text.strip():
                 self.creation_stop_reason = "empty_language_document"
@@ -428,6 +453,7 @@ class LanguageExperiment:
             "task_stop_reason": self.task_stop_reason,
             "elapsed_s": round(time.monotonic() - self.start_time, 1),
             "creation_turns": {a.agent_id: a.turn_count for a in self.creation_agents},
+            "creation_turns_scheduled": self.creation_turns_scheduled,
             "task_turns": {a.agent_id: a.turn_count for a in self.task_agents},
             "total_cost_usd": round(self.total_cost_usd, 6),
             "cost_incomplete": self._warned_missing_cost,

@@ -1,0 +1,12 @@
+{
+  "id": "T03",
+  "stage": "gameplay",
+  "owner": "tom",
+  "model": "google/gemini-3.8-flash",
+  "encoder_family": "gemini",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "E07",
+  "condition": null,
+  "approved_deviations": []
+}

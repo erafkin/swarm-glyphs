@@ -1,0 +1,12 @@
+{
+  "id": "T04",
+  "stage": "gameplay",
+  "owner": "tom",
+  "model": "deepseek/deepseek-v4-pro",
+  "encoder_family": "deepseek",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "E08",
+  "condition": null,
+  "approved_deviations": []
+}

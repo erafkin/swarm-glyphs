@@ -1,0 +1,12 @@
+{
+  "id": "D01",
+  "stage": "decoding",
+  "owner": "tom",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "sol",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "T01",
+  "condition": "no_task",
+  "approved_deviations": []
+}

@@ -29,7 +29,9 @@ class LanguageExperimentConfig(BaseModel):
     task_n_agents: int | None = Field(default=None, ge=1)  # None uses n_agents
     monitor_model: str | None = None  # None uses model
 
-    language_minutes: float = Field(default=10, gt=0)  # planning ends at this time, or sooner if every agent is done
+    language_minutes: float | None = Field(default=10, gt=0)  # None requires a discussion-turn limit.
+    language_max_turns: int | None = Field(default=None, ge=1)  # shared scheduled discussion turns; excludes exports
+    language_max_lines: int | None = Field(default=None, ge=1)  # prompt instruction; None uses round1_config.json
     task_minutes: float | None = Field(default=10, gt=0)  # None: no task deadline; cost cap still applies
     task_feedback: bool = True  # False: phase 2 chat gets no task status updates
     task_feedback_interval_s: float = Field(default=60, gt=0)  # how often updates are posted when task_feedback is on
@@ -46,9 +48,10 @@ class LanguageExperimentConfig(BaseModel):
     monitor_reasoning_effort: ReasoningEffort | None = None  # None inherits reasoning_effort
     # Round 3 decoding team, per condition: monitor_n_agents decoders discuss in English and share one
     # draft of the judged document, like round 1. The round ends when every decoder sets done, or at
-    # monitor_minutes. Each turn shows the most recent monitor_context_messages discussion messages.
+    # monitor_minutes or monitor_max_turns. Each turn shows the most recent monitor_context_messages messages.
     monitor_n_agents: int = Field(default=1, ge=1)
-    monitor_minutes: float = Field(default=10, gt=0)
+    monitor_minutes: float | None = Field(default=10, gt=0)  # None requires a per-condition discussion-turn limit.
+    monitor_max_turns: int | None = Field(default=None, ge=1)
     monitor_context_messages: int = Field(default=100, ge=0)
 
     # Custom tasks only; escape-room prompts come from the engine. The monitor briefings' task
@@ -60,6 +63,10 @@ class LanguageExperimentConfig(BaseModel):
 
     @model_validator(mode="after")
     def _check(self) -> "LanguageExperimentConfig":
+        if self.language_minutes is None and self.language_max_turns is None:
+            raise ValueError("language_minutes and language_max_turns cannot both be None")
+        if self.monitor_minutes is None and self.monitor_max_turns is None:
+            raise ValueError("monitor_minutes and monitor_max_turns cannot both be None")
         if self.agent_models is not None and len(self.agent_models) != self.n_agents:
             raise ValueError("agent_models must have exactly n_agents entries")
         if self.task_kind == "escape_room":

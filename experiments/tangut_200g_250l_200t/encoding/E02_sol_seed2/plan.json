@@ -1,0 +1,12 @@
+{
+  "id": "E02",
+  "stage": "encoding",
+  "owner": "emma_krentz",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "sol",
+  "seed_index": 2,
+  "config_seed": 1,
+  "source_run_id": null,
+  "condition": null,
+  "approved_deviations": []
+}

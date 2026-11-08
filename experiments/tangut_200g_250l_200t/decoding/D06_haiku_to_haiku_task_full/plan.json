@@ -1,0 +1,12 @@
+{
+  "id": "D06",
+  "stage": "decoding",
+  "owner": "tom",
+  "model": "anthropic/claude-haiku-5.5",
+  "encoder_family": "haiku",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "T02",
+  "condition": "task_full",
+  "approved_deviations": []
+}

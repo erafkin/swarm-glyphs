@@ -2,7 +2,7 @@
 
 Every condition gets its own decoding team of config.monitor_n_agents decoders (1 or more) that
 works like round 1: an English discussion, one shared draft of the judged document, and a done
-flag per decoder. The round ends when every decoder is done, or at monitor_minutes. Conditions
+flag per decoder. The round ends when every decoder is done, or at its time/turn limit. Conditions
 run one after another under one cost cap; within a condition the decoders run concurrently.
 The briefings, mechanics and system prompt come from src/enc_dec/prompts/round3_prompt.md and
 round3_config.json. No task or language-creation calls are made here. --prepare-only requires
@@ -104,7 +104,7 @@ def prepare_monitor_inputs(
         "task_kind": config.task_kind, "room_version": definition["version"] if definition else None,
         "source": str(source.resolve()),
         "baseline": baseline, "message_count": len(messages),
-        "n_agents": len(ids), "minutes": config.monitor_minutes,
+        "n_agents": len(ids), "minutes": config.monitor_minutes, "max_turns": config.monitor_max_turns,
         "source_transcript_sha256": sha(original), "transcript_sha256": sha(transcript),
         "transcript": transcript,
         "requests": requests,
@@ -133,7 +133,9 @@ class DecodingTeam:
         self.stop = asyncio.Event()
         self.stop_reason = ""
         self.start = 0.0
-        self.limit_s = config.monitor_minutes * 60
+        self.limit_s = config.monitor_minutes * 60 if config.monitor_minutes is not None else None
+        self.turns_scheduled = 0
+        self.turns_in_flight = 0
 
     def _stop(self, reason: str) -> None:
         if not self.stop.is_set():
@@ -145,7 +147,8 @@ class DecodingTeam:
         recent = self.chat.recent(self.config.monitor_context_messages)
         chat_text = "\n".join(m.render() for m in recent) or "(no messages yet)"
         turn_prompt = build_decode_turn_prompt(
-            self.request["prompt"], chat_text, self.draft, elapsed, self.limit_s, len(self.agent_ids) > 1
+            self.request["prompt"], chat_text, self.draft, elapsed, self.limit_s, len(self.agent_ids) > 1,
+            self.config.monitor_max_turns, self.turns_scheduled,
         )
         call_start = time.monotonic()
         result = await call_agent(
@@ -184,7 +187,13 @@ class DecodingTeam:
                 self._stop("cost_limit_reached")
 
     async def _agent_loop(self, agent_id: str) -> None:
-        while not self.stop.is_set() and time.monotonic() - self.start < self.limit_s:
+        while not self.stop.is_set() and (self.limit_s is None or time.monotonic() - self.start < self.limit_s):
+            limit = self.config.monitor_max_turns
+            if limit is not None and self.turns_scheduled >= limit:
+                return
+            # Reserve without awaiting, so concurrent decoders cannot overshoot the shared cap.
+            self.turns_scheduled += 1
+            self.turns_in_flight += 1
             try:
                 await self._turn(agent_id)
             except asyncio.CancelledError:
@@ -197,6 +206,10 @@ class DecodingTeam:
                 })
                 self._stop("api_error")
                 return
+            finally:
+                self.turns_in_flight -= 1
+                if limit is not None and self.turns_scheduled >= limit and self.turns_in_flight == 0:
+                    self._stop("turn_limit_reached")
             if self.stop.is_set():
                 return
             try:
@@ -223,6 +236,7 @@ class DecodingTeam:
         return {
             "stop_reason": self.stop_reason or "time_limit", "answer": self.draft,
             "turns": dict(self.turns), "done": dict(self.done), "discussion_messages": len(self.chat),
+            "turns_scheduled": self.turns_scheduled,
             "cost": self.cost, "cost_incomplete": self.missing_cost,
             "elapsed_s": round(time.monotonic() - self.start, 1),
         }
@@ -230,7 +244,7 @@ class DecodingTeam:
 
 async def execute_monitor_inputs(client, config: LanguageExperimentConfig, bundle: dict, logger: GameLogger, max_cost_usd: float | None) -> dict:
     """Conditions run one after another under one cap; each is a DecodingTeam. A condition counts as
-    completed when its team finished (all done) or ran out of time; any other stop ends the batch."""
+    completed when its team finished or exhausted its time/turn allowance; other stops end the batch."""
     model = config.model_for(0, "monitor")
     effort = config.monitor_reasoning_effort or config.reasoning_effort
     total, completed, stop_reason = 0.0, [], "completed"
@@ -249,16 +263,17 @@ async def execute_monitor_inputs(client, config: LanguageExperimentConfig, bundl
                 "system_prompt": request["system_prompt"], "prompt": request["prompt"],
                 "model": model, "timestamp": time.time(),
                 "n_agents": len(request["system_prompts"]), "agents": list(request["system_prompts"]),
-                "minutes": config.monitor_minutes,
+                "minutes": config.monitor_minutes, "max_turns": config.monitor_max_turns,
                 "baseline": bundle["baseline"], "transcript_sha256": bundle["transcript_sha256"],
                 "source_transcript_sha256": bundle["source_transcript_sha256"],
                 "answer": outcome["answer"], "stop_reason": outcome["stop_reason"],
                 "turns": outcome["turns"], "done": outcome["done"],
+                "turns_scheduled": outcome["turns_scheduled"],
                 "discussion_messages": outcome["discussion_messages"], "elapsed_s": outcome["elapsed_s"],
                 "usage": {"cost": outcome["cost"]}, "cost_incomplete": outcome["cost_incomplete"],
                 "max_tokens": config.monitor_max_tokens, "reasoning_effort": effort,
             })
-            if outcome["stop_reason"] in ("all_done", "time_limit"):
+            if outcome["stop_reason"] in ("all_done", "time_limit", "turn_limit_reached"):
                 completed.append(request["condition"])
             else:
                 stop_reason = outcome["stop_reason"]
@@ -270,6 +285,7 @@ async def execute_monitor_inputs(client, config: LanguageExperimentConfig, bundl
         summary = {
             "phase": "monitor", "model": model, "source": bundle["source"],
             "n_agents": config.monitor_n_agents, "minutes": config.monitor_minutes,
+            "max_turns": config.monitor_max_turns,
             "conditions_requested": [r["condition"] for r in bundle["requests"]],
             "conditions_completed": completed, "stop_reason": stop_reason,
             "total_cost_usd": total, "cost_incomplete": missing_cost,
@@ -290,6 +306,7 @@ def main() -> None:
     parser.add_argument("--model", help="override monitor model")
     parser.add_argument("--agents", type=int, help="decoders per condition; overrides monitor_n_agents from the saved config")
     parser.add_argument("--minutes", type=float, help="time cap per condition in minutes; overrides monitor_minutes")
+    parser.add_argument("--max-turns", type=int, help="shared scheduled discussion-turn cap per condition; overrides monitor_max_turns")
     parser.add_argument("--max-cost-usd", type=float, default=DEFAULT_MAX_COST_USD,
                         help=f"shared soft cap for this monitor batch, default ${DEFAULT_MAX_COST_USD:g}")
     parser.add_argument("--baseline", action="store_true", help="withhold agent messages, preserve identical public status and sender/order metadata")
@@ -300,6 +317,7 @@ def main() -> None:
     config = LanguageExperimentConfig.from_file(args.source / "config.json")
     overrides = {key: value for key, value in (
         ("monitor_model", args.model), ("monitor_n_agents", args.agents), ("monitor_minutes", args.minutes),
+        ("monitor_max_turns", args.max_turns),
     ) if value is not None}
     if overrides:
         config = LanguageExperimentConfig.model_validate({**config.model_dump(), **overrides})

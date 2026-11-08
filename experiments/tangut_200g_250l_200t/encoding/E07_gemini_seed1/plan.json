@@ -1,0 +1,12 @@
+{
+  "id": "E07",
+  "stage": "encoding",
+  "owner": "tom",
+  "model": "google/gemini-3.8-flash",
+  "encoder_family": "gemini",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": null,
+  "condition": null,
+  "approved_deviations": []
+}

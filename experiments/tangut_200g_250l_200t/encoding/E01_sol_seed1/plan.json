@@ -1,0 +1,25 @@
+{
+  "id": "E01",
+  "stage": "encoding",
+  "owner": "emma_krentz",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "sol",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": null,
+  "condition": null,
+  "approved_deviations": [
+    {
+      "field": "language_max_lines",
+      "planned": 250,
+      "observed": 500,
+      "reason": "User approved reuse: actual final shared draft has 130 lines and discussion ended after 136 returned calls."
+    },
+    {
+      "field": "language_max_turns",
+      "planned": 200,
+      "observed": null,
+      "reason": "Original run had no enforced turn cap; all_done after 136 discussion calls. User approved reuse."
+    }
+  ]
+}

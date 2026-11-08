@@ -1,0 +1,12 @@
+{
+  "id": "E08",
+  "stage": "encoding",
+  "owner": "emma_krentz",
+  "model": "deepseek/deepseek-v4-pro",
+  "encoder_family": "deepseek",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": null,
+  "condition": null,
+  "approved_deviations": []
+}
