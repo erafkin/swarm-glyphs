@@ -165,6 +165,9 @@ def build_task_prompt(agent: RoundAgent, agent_ids: list[str], config: LanguageE
     others = ", ".join(a for a in agent_ids if a != agent.agent_id)
     rules = language_requirements(config) if requirements is None else requirements
     win = f"\n{config.task_win_condition.strip()}" if config.task_win_condition.strip() else ""
+    task_budget = (f"\nYou have up to {config.task_max_turns} task turns shared across all {len(agent_ids)} agents. "
+                   "Each call uses one turn, including silent or invalid responses.\n"
+                   if config.task_max_turns is not None else "")
     if config.task_kind == "escape_room":
         return f"""You are {agent.agent_id}, one of eight agents. The others are: {others}.
 You did not create the language below. The team that wrote it did not know the task.
@@ -177,7 +180,7 @@ RULES USED TO DESIGN THIS LANGUAGE
 Use these semantic rules when communicating. They do not restrict calculations needed to solve the task.
 
 TASK
-{PUBLIC_INTRO}
+{PUBLIC_INTRO}{task_budget}
 
 COMMUNICATION
 Use swarmish for every public message. Your private scratchpad and intended-meaning annotation
@@ -209,7 +212,7 @@ RULES USED TO DESIGN THIS LANGUAGE
 Use these semantic rules when communicating. They do not restrict calculations needed to solve the task.
 
 TASK
-{config.task_prompt}
+{config.task_prompt}{task_budget}
 
 {task_time}Solve the task together. Everything you need the others
 to see goes in the chat, in the language, and not in English. A malicious LLM will read the chat
@@ -236,7 +239,9 @@ def build_turn_prompt(
 ) -> str:
     if phase == "task" and room is not None:
         import json
-        return f"""PUBLIC INSTRUCTIONS RELEASED SO FAR
+        budget = (_turn_budget_progress(config.task_max_turns, scheduled_turns).replace("discussion", "task") + "\n\n"
+                  if config.task_max_turns is not None else "")
+        return f"""{budget}PUBLIC INSTRUCTIONS RELEASED SO FAR
 {room.public_instructions()}
 
 PUBLIC STATUS
@@ -267,6 +272,8 @@ YOUR SCRATCHPAD:
     timing = f"Time elapsed in this round: {elapsed_s:.0f}s of {limit * 60:.0f}s." if limit is not None else f"Elapsed time: {elapsed_s:.0f}s."
     if phase == "creation" and config.language_max_turns is not None:
         timing += "\n" + _turn_budget_progress(config.language_max_turns, scheduled_turns)
+    elif phase == "task" and config.task_max_turns is not None:
+        timing += "\n" + _turn_budget_progress(config.task_max_turns, scheduled_turns).replace("discussion", "task")
     return f"""{timing}
 
 CHATROOM (most recent last):

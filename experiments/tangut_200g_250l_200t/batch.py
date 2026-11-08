@@ -113,6 +113,8 @@ def validate_manifest(root=BATCH):
         if plan["id"].startswith("R"):
             require(plan["owner"] == gameplay_owners[plan["id"]], "Gameplay owner differs from batch assignment")
             require(config.task_win_condition == win_condition, "Revised gameplay win condition differs from protocol")
+            if plan["owner"] == "tom":
+                require(config.task_max_turns == 200, "Tom's revised gameplay requires 200 shared task turns")
         elif archived:
             require(config.task_win_condition == "", "Historical gameplay must retain its original prompt")
         require(config.language_max_turns == 200 and config.language_max_lines == 250 and config.monitor_max_turns == 200, "Expected 200-turn/250-line settings")
@@ -225,7 +227,7 @@ def collect(root, run_id, source, language_file=None, reference_existing=False, 
                     "Imported gameplay must have all eight task prompts")
             require(all(config.task_win_condition in a["system_prompt"] for a in agents),
                     "Revised win condition missing from an actual task prompt")
-            fields = ("reasoning_effort", "max_tokens", "request_timeout_s", "task_minutes", "allow_spaces",
+            fields = ("reasoning_effort", "max_tokens", "request_timeout_s", "task_minutes", "task_max_turns", "allow_spaces",
                       "task_feedback", "task_feedback_interval_s", "min_turn_interval_s", "max_cost_usd")
             observed = LanguageExperimentConfig.model_validate(saved)
             extra["settings_differences"] = [
