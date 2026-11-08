@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "deepseek/deepseek-v4-pro",
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "no_task"
+  ],
+  "conditions_completed": [
+    "no_task"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 1.8691679184874996,
+  "cost_incomplete": false,
+  "max_cost_usd": 50.0,
+  "baseline": false,
+  "elapsed_s": 1157.3555902084336,
+  "transcript_sha256": "749b7144042e5ef52b13423f7a932fdb8c14340712d78f0275ce32e715abd815",
+  "source_transcript_sha256": "749b7144042e5ef52b13423f7a932fdb8c14340712d78f0275ce32e715abd815"
+}

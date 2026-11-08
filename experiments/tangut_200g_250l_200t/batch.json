@@ -46,7 +46,12 @@
       "T03",
       "T04"
     ],
-    "gameplay_stop_rule": "Stop on escape, the $50 soft cost cap, fatal error, or explicit operator intervention. No automatic gameplay turn/time cap; encoding and decoding retain their separate 200-turn limits."
+    "gameplay_stop_rule": "R06–R08 stop on escape, 200 shared scheduled task turns, the $50 soft cost cap, fatal error, or operator intervention. R01–R05 preserve Emma’s existing no-turn-cap configuration; record their actual settings when importing. No gameplay time cap.",
+    "gameplay_turn_limit_ids": [
+      "R06",
+      "R07",
+      "R08"
+    ]
   },
   "owners": {
     "emma_krentz": {

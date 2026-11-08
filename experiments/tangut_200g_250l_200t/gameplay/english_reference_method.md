@@ -28,8 +28,8 @@ or whether a translator actually followed the evidence restrictions.
 From the repository root, using its existing virtualenv:
 
 ```bash
-.venv/bin/python experiments/tangut_200g_250l_200t/gameplay/translation_reference.py validate T01
-.venv/bin/python experiments/tangut_200g_250l_200t/gameplay/translation_reference.py render T01 --update-metadata
+.venv/bin/python experiments/tangut_200g_250l_200t/gameplay/translation_reference.py validate R06
+.venv/bin/python experiments/tangut_200g_250l_200t/gameplay/translation_reference.py render R06 --update-metadata
 .venv/bin/python experiments/tangut_200g_250l_200t/gameplay/translation_reference.py validate all
 ```
 

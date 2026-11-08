@@ -1,0 +1,111 @@
+2. TRANSLATION
+[1] Public task feedback: stage 0; invalid attempts 0.
+[2] R U — tentative speaker report; remaining meaning unknown.
+[3] R — tentative speaker report; meaning unknown.
+[4] R / F — tentative report followed by other/group-directed clause; meanings unknown.
+[5] R — unknown speaker report.
+[6] R′ A6 — variant report with agent_6-associated item; meaning unknown.
+[7] F E — tentative other/group-directed clause; meaning unknown.
+[8] R A6 — report with the item also used by agent_6; meaning unknown.
+[9] R A3 — report with agent_3-associated item; meaning unknown.
+[10] R′ / J V P C E — variant report and J-introduced clause; meaning unknown.
+[11] R A6 / F — report with A6 and other/group-directed clause; meaning unknown.
+[12] S P A4 — report-like construction without C; meaning unknown.
+[13] R A1 — report with agent_1-associated item; meaning unknown.
+[14] R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.
+[15] R A6 H / F E Z — unknown report and repeated-clause variant.
+[16] R E V C B — unknown; report-like opening with additional V C B.
+[17] S P A4 / Q V P Z — unknown; both constructions lack C.
+[18] R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.
+[19] S P A3 C — report with A3 before C; meaning unknown.
+[20] R A6 / F Z — unknown report and repeated clause.
+[21] S P A1 C H — unknown report with reordered A1 C and H.
+[22] R Z / Q′ V H C E — unknown report and variant second-clause opener.
+[23] F Z E — dominant other/group-directed formula; exact meaning unknown.
+[24] R A4 / J V P C E — unknown report and J-introduced clause.
+[25] S P′ D C A6 — variant report including D; meaning unknown.
+[26] R E / K P C E — unknown report and K-introduced clause.
+[27] S P A4 / F E — unknown report and repeated clause.
+[28] F Z E — dominant formula; meaning unknown.
+[29] S P A4 C — report with reordered A4 C; meaning unknown.
+[30] Q V P Z E — dominant formula without C; meaning unknown.
+[31] R A0 — report with A0; meaning unknown.
+[32] V E C Z — shortened/reordered recurrent material; meaning unknown.
+[33] R′ A6 — variant report with A6; meaning unknown.
+[34] S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.
+[35] Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.
+[36] F Z — dominant formula without E; meaning unknown.
+[37] Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.
+[38] S P V H C E / F Z — unknown report-like clause and recurrent clause.
+[39] R A0 — unknown report with A0.
+[40] Q V P′ Z E — variant recurrent clause; meaning unknown.
+[41] R L E — unknown report with L E.
+[42] F Z E — dominant formula; meaning unknown.
+[43] R′ A0 — variant report with A0; meaning unknown.
+[44] R / J V P C E — report and J-introduced clause; meaning unknown.
+[45] R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.
+[46] F Z E — dominant formula; meaning unknown.
+[47] R H E / J V P C — unknown report and J-introduced clause.
+[48] Q V P Z E — formula without C; meaning unknown.
+[49] R A0 / V P C E — unknown report and following V-clause without Q/J.
+[50] R A2 / F Z — unknown report with A2 and repeated clause.
+[51] F Z E — dominant formula; meaning unknown.
+[52] R H / F Z — unknown report with H and repeated clause.
+[53] R A0 / F Z — unknown report with A0 and repeated clause.
+[54] S P A2 / Q V P Z — unknown; C absent from both constructions.
+[55] R E / F Z — unknown report and repeated clause.
+[56] R / J V P′ C Z E — unknown report and J-introduced clause using P′.
+[57] S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.
+[58] R A2 / Q V P Z — unknown report and second clause lacking C.
+[59] F Z E — dominant formula; meaning unknown.
+[60] F Z — dominant formula without E; meaning unknown.
+[61] S P A0 C / F Z — unknown report and repeated clause.
+[62] S P A2 C / F Z — unknown report and repeated clause.
+[63] F Z E — dominant formula; meaning unknown.
+[64] Q V H C Z — variant recurrent clause without P, with H; meaning unknown.
+[65] R A0 / F Z — unknown report and repeated clause.
+[66] R A2 — unknown report with A2.
+[67] S H C Z C — unusual report-like construction with two C tokens; meaning unknown.
+[68] R E / F E — unknown report and repeated clause.
+[69] S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.
+[70] R A0 / V P C Z — unknown report and V-clause.
+[71] F Z E — dominant formula; meaning unknown.
+[72] V P C Z E / L H C — unknown recurrent material followed by L H C.
+[73] R A0 / F Z — unknown report and repeated clause.
+[74] S P A2 E — report-like construction without C; meaning unknown.
+[75] Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.
+[76] V E C Z — shortened/reordered recurrent material; meaning unknown.
+[77] R A0 / V P C Z — unknown report and V-clause.
+[78] Q V P Z E — formula without C; meaning unknown.
+[79] S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.
+[80] S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.
+[81] R / J V P C E — unknown report and J-introduced clause.
+[82] F Z E — dominant formula; meaning unknown.
+[83] S P′ A0 C — variant report with reordered A0 C; meaning unknown.
+[84] F Z E — dominant formula; meaning unknown.
+[85] V E C Z — shortened/reordered recurrent material; meaning unknown.
+[86] F E — recurrent clause without Z; meaning unknown.
+[87] S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.
+[88] F Z E — dominant formula; meaning unknown.
+[89] F Z E — dominant formula; meaning unknown.
+[90] F Z E — dominant formula; meaning unknown.
+[91] R′ / F — variant report and recurrent clause; meaning unknown.
+[92] F Z E — dominant formula; meaning unknown.
+[93] F Z E — dominant formula; meaning unknown.
+[94] R A2 E — unknown report with A2 E.
+[95] F Z — dominant formula without E; meaning unknown.
+[96] F Z E — dominant formula; meaning unknown.
+[97] F Z E — dominant formula; meaning unknown.
+[98] S P A2 C — report with reordered A2 C; meaning unknown.
+[99] Q V P Z E — formula without C; meaning unknown.
+[100] S P A0 C / F Z — unknown report and recurrent clause.
+[101] F Z E / M N H — dominant formula followed by unknown M N H.
+[102] S P A2 C / F Z — unknown report and recurrent clause.
+[103] Q V P Z E — formula without C; meaning unknown.
+[104] R A0 / F Z — unknown report and recurrent clause.
+[105] Q V P′ C — recurrent clause using P′; meaning unknown.
+[106] R / J V P C E — unknown report and J-introduced clause.
+[107] F Z — dominant formula without E; meaning unknown.
+[108] S P A2 C E / V P C Z — unknown report and V-clause.
+[109] S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.
+[110] F Z E — dominant formula; meaning unknown.

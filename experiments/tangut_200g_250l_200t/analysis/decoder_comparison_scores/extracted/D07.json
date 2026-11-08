@@ -1,0 +1,781 @@
+{
+  "format": "numbered_translation_lines",
+  "preamble": "**Reading this section:** Most lexical meanings are unknown. These are conservative partial translations/structural glosses, not fluent decipherments. Labels above preserve every glyph in order, so uncertain content is not silently dropped. `R` abbreviates **S P C**, tentatively “speaker report: unknown.” `R′` abbreviates **S P′ C**, a variant report of unknown contrast. `F` abbreviates **Q V P C**, tentatively “other/group-directed clause: unknown.” A slash marks a likely clause boundary inferred from repeated openers, not written punctuation. Tokens following a frame remain untranslated. A0 etc. mean speaker-associated UNKNOWN items, not established digits. All putative speech-act interpretations are tentative.",
+  "conventions": "**Reading this section:** Most lexical meanings are unknown. These are conservative partial translations/structural glosses, not fluent decipherments. Labels above preserve every glyph in order, so uncertain content is not silently dropped. `R` abbreviates **S P C**, tentatively “speaker report: unknown.” `R′` abbreviates **S P′ C**, a variant report of unknown contrast. `F` abbreviates **Q V P C**, tentatively “other/group-directed clause: unknown.” A slash marks a likely clause boundary inferred from repeated openers, not written punctuation. Tokens following a frame remain untranslated. A0 etc. mean speaker-associated UNKNOWN items, not established digits. All putative speech-act interpretations are tentative.",
+  "entries": [
+    {
+      "id": 1,
+      "original": "Public task feedback: stage 0; invalid attempts 0.",
+      "normalized": "Public task feedback: stage 0; invalid attempts 0.",
+      "scoring_text": "Public task feedback: stage 0; invalid attempts 0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 2,
+      "original": "R U — tentative speaker report; remaining meaning unknown.",
+      "normalized": "R U — tentative speaker report; remaining meaning unknown.",
+      "scoring_text": "R U — tentative speaker report; remaining meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 3,
+      "original": "R — tentative speaker report; meaning unknown.",
+      "normalized": "R — tentative speaker report; meaning unknown.",
+      "scoring_text": "R — tentative speaker report; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 4,
+      "original": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "normalized": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "scoring_text": "R / F — tentative report followed by other/group-directed clause; meanings unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 5,
+      "original": "R — unknown speaker report.",
+      "normalized": "R — unknown speaker report.",
+      "scoring_text": "R — unknown speaker report.",
+      "unknown_reason": null
+    },
+    {
+      "id": 6,
+      "original": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "normalized": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "scoring_text": "R′ A6 — variant report with agent_6-associated item; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 7,
+      "original": "F E — tentative other/group-directed clause; meaning unknown.",
+      "normalized": "F E — tentative other/group-directed clause; meaning unknown.",
+      "scoring_text": "F E — tentative other/group-directed clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 8,
+      "original": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "normalized": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "scoring_text": "R A6 — report with the item also used by agent_6; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 9,
+      "original": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "normalized": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "scoring_text": "R A3 — report with agent_3-associated item; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 10,
+      "original": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "normalized": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "scoring_text": "R′ / J V P C E — variant report and J-introduced clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 11,
+      "original": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "normalized": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "scoring_text": "R A6 / F — report with A6 and other/group-directed clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 12,
+      "original": "S P A4 — report-like construction without C; meaning unknown.",
+      "normalized": "S P A4 — report-like construction without C; meaning unknown.",
+      "scoring_text": "S P A4 — report-like construction without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 13,
+      "original": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "normalized": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "scoring_text": "R A1 — report with agent_1-associated item; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 14,
+      "original": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "normalized": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "scoring_text": "R A2 / Q W P C Z — report with agent_2-associated item; second clause substitutes W for V; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 15,
+      "original": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "normalized": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "scoring_text": "R A6 H / F E Z — unknown report and repeated-clause variant.",
+      "unknown_reason": null
+    },
+    {
+      "id": 16,
+      "original": "R E V C B — unknown; report-like opening with additional V C B.",
+      "normalized": "R E V C B — unknown; report-like opening with additional V C B.",
+      "scoring_text": "R E V C B — unknown; report-like opening with additional V C B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 17,
+      "original": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "normalized": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "scoring_text": "S P A4 / Q V P Z — unknown; both constructions lack C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 18,
+      "original": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "normalized": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "scoring_text": "R A0 / F E — report with agent_0-associated item, followed by repeated clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 19,
+      "original": "S P A3 C — report with A3 before C; meaning unknown.",
+      "normalized": "S P A3 C — report with A3 before C; meaning unknown.",
+      "scoring_text": "S P A3 C — report with A3 before C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 20,
+      "original": "R A6 / F Z — unknown report and repeated clause.",
+      "normalized": "R A6 / F Z — unknown report and repeated clause.",
+      "scoring_text": "R A6 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 21,
+      "original": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "normalized": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "scoring_text": "S P A1 C H — unknown report with reordered A1 C and H.",
+      "unknown_reason": null
+    },
+    {
+      "id": 22,
+      "original": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "normalized": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "scoring_text": "R Z / Q′ V H C E — unknown report and variant second-clause opener.",
+      "unknown_reason": null
+    },
+    {
+      "id": 23,
+      "original": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "normalized": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "scoring_text": "F Z E — dominant other/group-directed formula; exact meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 24,
+      "original": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "normalized": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "scoring_text": "R A4 / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 25,
+      "original": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "normalized": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "scoring_text": "S P′ D C A6 — variant report including D; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 26,
+      "original": "R E / K P C E — unknown report and K-introduced clause.",
+      "normalized": "R E / K P C E — unknown report and K-introduced clause.",
+      "scoring_text": "R E / K P C E — unknown report and K-introduced clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 27,
+      "original": "S P A4 / F E — unknown report and repeated clause.",
+      "normalized": "S P A4 / F E — unknown report and repeated clause.",
+      "scoring_text": "S P A4 / F E — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 28,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 29,
+      "original": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "normalized": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "scoring_text": "S P A4 C — report with reordered A4 C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 30,
+      "original": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "normalized": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "scoring_text": "Q V P Z E — dominant formula without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 31,
+      "original": "R A0 — report with A0; meaning unknown.",
+      "normalized": "R A0 — report with A0; meaning unknown.",
+      "scoring_text": "R A0 — report with A0; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 32,
+      "original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "normalized": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scoring_text": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 33,
+      "original": "R′ A6 — variant report with A6; meaning unknown.",
+      "normalized": "R′ A6 — variant report with A6; meaning unknown.",
+      "scoring_text": "R′ A6 — variant report with A6; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 34,
+      "original": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "normalized": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "scoring_text": "S P C′ / Q V P C′ — report and second clause both using C′ instead of C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 35,
+      "original": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "normalized": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "scoring_text": "Q V P′ Z — repeated-clause variant with P′ and without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 36,
+      "original": "F Z — dominant formula without E; meaning unknown.",
+      "normalized": "F Z — dominant formula without E; meaning unknown.",
+      "scoring_text": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 37,
+      "original": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "normalized": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "scoring_text": "Q V P H Z C — other/group-directed construction with H and reordered C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 38,
+      "original": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "normalized": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "scoring_text": "S P V H C E / F Z — unknown report-like clause and recurrent clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 39,
+      "original": "R A0 — unknown report with A0.",
+      "normalized": "R A0 — unknown report with A0.",
+      "scoring_text": "R A0 — unknown report with A0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 40,
+      "original": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "normalized": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "scoring_text": "Q V P′ Z E — variant recurrent clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 41,
+      "original": "R L E — unknown report with L E.",
+      "normalized": "R L E — unknown report with L E.",
+      "scoring_text": "R L E — unknown report with L E.",
+      "unknown_reason": null
+    },
+    {
+      "id": 42,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 43,
+      "original": "R′ A0 — variant report with A0; meaning unknown.",
+      "normalized": "R′ A0 — variant report with A0; meaning unknown.",
+      "scoring_text": "R′ A0 — variant report with A0; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 44,
+      "original": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "normalized": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "scoring_text": "R / J V P C E — report and J-introduced clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 45,
+      "original": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "normalized": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "scoring_text": "R′ A2 / Q W P′ C Z — both clauses use P′; W replaces V; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 46,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 47,
+      "original": "R H E / J V P C — unknown report and J-introduced clause.",
+      "normalized": "R H E / J V P C — unknown report and J-introduced clause.",
+      "scoring_text": "R H E / J V P C — unknown report and J-introduced clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 48,
+      "original": "Q V P Z E — formula without C; meaning unknown.",
+      "normalized": "Q V P Z E — formula without C; meaning unknown.",
+      "scoring_text": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 49,
+      "original": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "normalized": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "scoring_text": "R A0 / V P C E — unknown report and following V-clause without Q/J.",
+      "unknown_reason": null
+    },
+    {
+      "id": 50,
+      "original": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "normalized": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "scoring_text": "R A2 / F Z — unknown report with A2 and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 51,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 52,
+      "original": "R H / F Z — unknown report with H and repeated clause.",
+      "normalized": "R H / F Z — unknown report with H and repeated clause.",
+      "scoring_text": "R H / F Z — unknown report with H and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 53,
+      "original": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "normalized": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "scoring_text": "R A0 / F Z — unknown report with A0 and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 54,
+      "original": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "normalized": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "scoring_text": "S P A2 / Q V P Z — unknown; C absent from both constructions.",
+      "unknown_reason": null
+    },
+    {
+      "id": 55,
+      "original": "R E / F Z — unknown report and repeated clause.",
+      "normalized": "R E / F Z — unknown report and repeated clause.",
+      "scoring_text": "R E / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 56,
+      "original": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "normalized": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "scoring_text": "R / J V P′ C Z E — unknown report and J-introduced clause using P′.",
+      "unknown_reason": null
+    },
+    {
+      "id": 57,
+      "original": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "normalized": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "scoring_text": "S P A0 C / V P C Z — unknown report with reordered A0 C and V-clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 58,
+      "original": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "normalized": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "scoring_text": "R A2 / Q V P Z — unknown report and second clause lacking C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 59,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 60,
+      "original": "F Z — dominant formula without E; meaning unknown.",
+      "normalized": "F Z — dominant formula without E; meaning unknown.",
+      "scoring_text": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 61,
+      "original": "S P A0 C / F Z — unknown report and repeated clause.",
+      "normalized": "S P A0 C / F Z — unknown report and repeated clause.",
+      "scoring_text": "S P A0 C / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 62,
+      "original": "S P A2 C / F Z — unknown report and repeated clause.",
+      "normalized": "S P A2 C / F Z — unknown report and repeated clause.",
+      "scoring_text": "S P A2 C / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 63,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 64,
+      "original": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "normalized": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "scoring_text": "Q V H C Z — variant recurrent clause without P, with H; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 65,
+      "original": "R A0 / F Z — unknown report and repeated clause.",
+      "normalized": "R A0 / F Z — unknown report and repeated clause.",
+      "scoring_text": "R A0 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 66,
+      "original": "R A2 — unknown report with A2.",
+      "normalized": "R A2 — unknown report with A2.",
+      "scoring_text": "R A2 — unknown report with A2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 67,
+      "original": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "normalized": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "scoring_text": "S H C Z C — unusual report-like construction with two C tokens; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 68,
+      "original": "R E / F E — unknown report and repeated clause.",
+      "normalized": "R E / F E — unknown report and repeated clause.",
+      "scoring_text": "R E / F E — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 69,
+      "original": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "normalized": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "scoring_text": "S P C′ A2 E / Q V P Z — unknown; report uses C′ and second clause lacks C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 70,
+      "original": "R A0 / V P C Z — unknown report and V-clause.",
+      "normalized": "R A0 / V P C Z — unknown report and V-clause.",
+      "scoring_text": "R A0 / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 71,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 72,
+      "original": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "normalized": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "scoring_text": "V P C Z E / L H C — unknown recurrent material followed by L H C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 73,
+      "original": "R A0 / F Z — unknown report and repeated clause.",
+      "normalized": "R A0 / F Z — unknown report and repeated clause.",
+      "scoring_text": "R A0 / F Z — unknown report and repeated clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 74,
+      "original": "S P A2 E — report-like construction without C; meaning unknown.",
+      "normalized": "S P A2 E — report-like construction without C; meaning unknown.",
+      "scoring_text": "S P A2 E — report-like construction without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 75,
+      "original": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "normalized": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "scoring_text": "Q V P C′ Z E / S P C′ U C — unknown; both constructions use C′, with final U C in the report.",
+      "unknown_reason": null
+    },
+    {
+      "id": 76,
+      "original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "normalized": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scoring_text": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 77,
+      "original": "R A0 / V P C Z — unknown report and V-clause.",
+      "normalized": "R A0 / V P C Z — unknown report and V-clause.",
+      "scoring_text": "R A0 / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 78,
+      "original": "Q V P Z E — formula without C; meaning unknown.",
+      "normalized": "Q V P Z E — formula without C; meaning unknown.",
+      "scoring_text": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 79,
+      "original": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "normalized": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "scoring_text": "S P′ A0 C / V P C Z — variant report with reordered A0 C, followed by V-clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 80,
+      "original": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "normalized": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "scoring_text": "S P C′ E / Q V P C′ Z — report and recurrent clause both using C′; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 81,
+      "original": "R / J V P C E — unknown report and J-introduced clause.",
+      "normalized": "R / J V P C E — unknown report and J-introduced clause.",
+      "scoring_text": "R / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 82,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 83,
+      "original": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "normalized": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "scoring_text": "S P′ A0 C — variant report with reordered A0 C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 84,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 85,
+      "original": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "normalized": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "scoring_text": "V E C Z — shortened/reordered recurrent material; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 86,
+      "original": "F E — recurrent clause without Z; meaning unknown.",
+      "normalized": "F E — recurrent clause without Z; meaning unknown.",
+      "scoring_text": "F E — recurrent clause without Z; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 87,
+      "original": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "normalized": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "scoring_text": "S P′ A0 C / J V P′ C E — both clauses use P′; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 88,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 89,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 90,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 91,
+      "original": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "normalized": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "scoring_text": "R′ / F — variant report and recurrent clause; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 92,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 93,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 94,
+      "original": "R A2 E — unknown report with A2 E.",
+      "normalized": "R A2 E — unknown report with A2 E.",
+      "scoring_text": "R A2 E — unknown report with A2 E.",
+      "unknown_reason": null
+    },
+    {
+      "id": 95,
+      "original": "F Z — dominant formula without E; meaning unknown.",
+      "normalized": "F Z — dominant formula without E; meaning unknown.",
+      "scoring_text": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 96,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 97,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 98,
+      "original": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "normalized": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "scoring_text": "S P A2 C — report with reordered A2 C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 99,
+      "original": "Q V P Z E — formula without C; meaning unknown.",
+      "normalized": "Q V P Z E — formula without C; meaning unknown.",
+      "scoring_text": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 100,
+      "original": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "normalized": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "scoring_text": "S P A0 C / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 101,
+      "original": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "normalized": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "scoring_text": "F Z E / M N H — dominant formula followed by unknown M N H.",
+      "unknown_reason": null
+    },
+    {
+      "id": 102,
+      "original": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "normalized": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "scoring_text": "S P A2 C / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 103,
+      "original": "Q V P Z E — formula without C; meaning unknown.",
+      "normalized": "Q V P Z E — formula without C; meaning unknown.",
+      "scoring_text": "Q V P Z E — formula without C; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 104,
+      "original": "R A0 / F Z — unknown report and recurrent clause.",
+      "normalized": "R A0 / F Z — unknown report and recurrent clause.",
+      "scoring_text": "R A0 / F Z — unknown report and recurrent clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 105,
+      "original": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "normalized": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "scoring_text": "Q V P′ C — recurrent clause using P′; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 106,
+      "original": "R / J V P C E — unknown report and J-introduced clause.",
+      "normalized": "R / J V P C E — unknown report and J-introduced clause.",
+      "scoring_text": "R / J V P C E — unknown report and J-introduced clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 107,
+      "original": "F Z — dominant formula without E; meaning unknown.",
+      "normalized": "F Z — dominant formula without E; meaning unknown.",
+      "scoring_text": "F Z — dominant formula without E; meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 108,
+      "original": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "normalized": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "scoring_text": "S P A2 C E / V P C Z — unknown report and V-clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 109,
+      "original": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "normalized": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "scoring_text": "S P A0 C O C / V P C Z — unknown report with additional O C, followed by V-clause.",
+      "unknown_reason": null
+    },
+    {
+      "id": 110,
+      "original": "F Z E — dominant formula; meaning unknown.",
+      "normalized": "F Z E — dominant formula; meaning unknown.",
+      "scoring_text": "F Z E — dominant formula; meaning unknown.",
+      "unknown_reason": null
+    }
+  ],
+  "notes": [],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/decoded.txt",
+  "decoder_sha256": "03762b184c0885485e7a099cf7d2bf85f410bfd3d40cd71e1a49742623a9480a",
+  "canonical_document_sha256": "61ac975be03529b7df4b72892b2d056e8bdb7d522164e520b199f37b527c1410"
+}

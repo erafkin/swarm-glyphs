@@ -1,0 +1,9 @@
+{
+  "version": "storm_shelter_v1",
+  "stage": "cabinet",
+  "charge": null,
+  "completed_controls": [],
+  "invalid_attempts": 32,
+  "action_count": 32,
+  "escaped": false
+}

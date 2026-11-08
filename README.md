@@ -107,8 +107,11 @@ The room has no rounds or invalid-attempt loss limit. Clues unlock as the team o
 cabinet, restores power and solves the exit. Private submissions never enter the chat;
 public feedback is only numeric stage and invalid-attempt count. The presets stop on
 escape or an operational spending/error stop, retain pending responses in the logs,
-and defer all monitors. `storm_shelter_latin.json` restricts the chat to a-z and 0-9 instead of
-Tangut. Both presets name the language **swarmish**.
+and defer all monitors. The Tangut preset samples 200 of the 6,136 characters without
+replacement, using the run seed. All creators and task agents share those same 200;
+only their presentation order differs. The exact sample is saved in `glyphs.json`,
+with each agent's order in `agents.json` / `task_agents.json`. `storm_shelter_latin.json`
+uses all a-z and 0-9 instead. Both presets name the language **swarmish**.
 
 Custom text tasks use the same runner and monitor with `task_kind: custom`:
 
@@ -127,9 +130,10 @@ default) then reads only that chatroom, once per briefing listed in
 and a wrong task). Like round 1, the team discusses in English and shares one draft of the judged
 document until every decoder sets done or `monitor_minutes` (10) run out; the system prompt is
 `round3_prompt.md` with the mechanics from `round3_config.json`. The task
-chat may use only characters from the glyph file named by `glyph_dictionary`:
-`glyphs_tangut.txt` (every Tangut ideograph, 6,136 of them) in `language_tangut.json`, or
-`glyphs_latin.txt` (a-z and 0-9) in `language_latin.json`. Anything else is replaced by `⊘`.
+chat may use only the selected characters from the file named by `glyph_dictionary`:
+200 sampled from `glyphs_tangut.txt` (6,136 Tangut ideographs) in `language_tangut.json`, or
+all of `glyphs_latin.txt` (a-z and 0-9) in `language_latin.json`. Tangut characters outside
+the shared sample are also rejected. Invalid messages are replaced by `⊘`.
 The task strings in both files are placeholders.
 
 ```

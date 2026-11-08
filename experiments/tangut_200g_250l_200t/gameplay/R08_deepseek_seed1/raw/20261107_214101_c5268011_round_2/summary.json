@@ -1,0 +1,41 @@
+{
+  "game_id": "c5268011",
+  "task_kind": "escape_room",
+  "creation_only": false,
+  "creation_stop_reason": "provided_language",
+  "task_stop_reason": "turn_limit_reached",
+  "elapsed_s": 3448.6,
+  "creation_turns": {
+    "agent_0": 0,
+    "agent_1": 0,
+    "agent_2": 0,
+    "agent_3": 0,
+    "agent_4": 0,
+    "agent_5": 0,
+    "agent_6": 0,
+    "agent_7": 0
+  },
+  "creation_turns_scheduled": 0,
+  "task_turns": {
+    "agent_0": 29,
+    "agent_1": 20,
+    "agent_2": 28,
+    "agent_3": 25,
+    "agent_4": 24,
+    "agent_5": 24,
+    "agent_6": 23,
+    "agent_7": 27
+  },
+  "task_turns_scheduled": 200,
+  "total_cost_usd": 2.887517,
+  "cost_incomplete": false,
+  "escape_room": {
+    "version": "storm_shelter_v1",
+    "stage": "cabinet",
+    "charge": null,
+    "completed_controls": [],
+    "invalid_attempts": 32,
+    "action_count": 32,
+    "escaped": false
+  }
+}

@@ -111,6 +111,111 @@ class BatchArchiveTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "cost reporting is incomplete"):
             batch.dependency(self.root, plan)
 
+    def decoder_source(self):
+        game = self.root / "gameplay/R06_haiku_seed1"
+        decoder = self.root / "decoding/D05_haiku_to_haiku_no_task"
+        game_plan = {**self.plan, "id": "R06", "stage": "gameplay", "source_run_id": "E01"}
+        decoder_plan = {**self.plan, "id": "D05", "stage": "decoding", "source_run_id": "R06",
+                        "condition": "no_task", "allow_turn_limited_gameplay_source": True}
+        manifest = batch.read(self.root / "batch.json")
+        for folder, plan in ((game, game_plan), (decoder, decoder_plan)):
+            batch.write(folder / "plan.json", plan)
+            batch.write(folder / "config.json", {**self.config, "log_dir": str(folder / "raw")})
+            manifest["runs"].append({"id": plan["id"], "path": str(folder.relative_to(self.root))})
+        batch.write(self.root / "batch.json", manifest)
+        raw = game / "raw/run"
+        summary = {"task_stop_reason": "turn_limit_reached", "cost_incomplete": False,
+                   "escape_room": {"escaped": False}}
+        batch.write(raw / "summary.json", summary)
+        (raw / "task_chatroom.jsonl").write_text('{"sender":"agent_0","text":"𗱓"}\n')
+        receipt = {"id": "R06", "status": "completed", "stop_reason": "turn_limit_reached",
+                   "summary": summary, "raw_path": str(raw.relative_to(self.repo)),
+                   "raw_sha256": {name: batch.sha(raw / name) for name in ("summary.json", "task_chatroom.jsonl")}}
+        batch.write(game / "receipt.json", receipt)
+        return game, decoder, raw, decoder_plan, receipt
+
+    def test_turn_limited_gameplay_requires_explicit_decoder_permission(self):
+        game, _, raw, plan, receipt = self.decoder_source()
+        self.assertEqual(batch.dependency(self.root, plan), (game, receipt, raw))
+        for change in ({"allow_turn_limited_gameplay_source": False},
+                       {"allow_turn_limited_gameplay_source": "true"}, {"stage": "gameplay"}):
+            with self.subTest(change=change), self.assertRaisesRegex(ValueError, "review required"):
+                batch.dependency(self.root, {**plan, **change})
+        plan.pop("allow_turn_limited_gameplay_source")
+        with self.assertRaisesRegex(ValueError, "review required"):
+            batch.dependency(self.root, plan)
+
+    def test_permission_does_not_allow_failed_or_incomplete_gameplay(self):
+        game, _, raw, plan, receipt = self.decoder_source()
+        for reason in ("fatal_api_error_400", "interrupted", "cost_limit_reached", "time_limit"):
+            with self.subTest(reason=reason):
+                summary = {**receipt["summary"], "task_stop_reason": reason}
+                batch.write(raw / "summary.json", summary)
+                batch.write(game / "receipt.json", {**receipt, "stop_reason": reason, "summary": summary,
+                    "raw_sha256": {**receipt["raw_sha256"], "summary.json": batch.sha(raw / "summary.json")}})
+                with self.assertRaisesRegex(ValueError, "review required"):
+                    batch.dependency(self.root, plan)
+        batch.write(game / "receipt.json", {**receipt, "status": "running"})
+        with self.assertRaisesRegex(ValueError, "not completed"):
+            batch.dependency(self.root, plan)
+        batch.write(game / "receipt.json", {**receipt, "summary": {**receipt["summary"], "cost_incomplete": True}})
+        with self.assertRaisesRegex(ValueError, "cost reporting is incomplete"):
+            batch.dependency(self.root, plan)
+
+    def test_permission_preserves_archive_and_integrity_guards(self):
+        game, _, raw, plan, receipt = self.decoder_source()
+        manifest = batch.read(self.root / "batch.json")
+        next(entry for entry in manifest["runs"] if entry["id"] == "R06")["archived"] = True
+        batch.write(self.root / "batch.json", manifest)
+        with self.assertRaisesRegex(ValueError, "Archived gameplay"):
+            batch.dependency(self.root, plan)
+        next(entry for entry in manifest["runs"] if entry["id"] == "R06")["archived"] = False
+        batch.write(self.root / "batch.json", manifest)
+        original = (raw / "task_chatroom.jsonl").read_bytes()
+        (raw / "task_chatroom.jsonl").write_text("TAMPERED")
+        with self.assertRaisesRegex(ValueError, "Archived source changed"):
+            batch.dependency(self.root, plan)
+        (raw / "task_chatroom.jsonl").write_bytes(original)
+        batch.write(game / "receipt.json", {**receipt, "summary": {**receipt["summary"], "task_stop_reason": "escaped"}})
+        with self.assertRaisesRegex(ValueError, "outcome differs"):
+            batch.dependency(self.root, plan)
+        batch.write(game / "receipt.json", {**receipt, "raw_sha256": {"summary.json": receipt["raw_sha256"]["summary.json"]}})
+        with self.assertRaisesRegex(ValueError, "integrity records"):
+            batch.dependency(self.root, plan)
+
+    def test_decoder_collection_records_unsolved_source_outcome(self):
+        game, decoder, _, plan, _ = self.decoder_source()
+        source = self.repo / "incoming/decoder"
+        config = batch.read(decoder / "config.json")
+        batch.write(source / "monitor_config.json", config)
+        request = {"condition": "no_task", "system_prompt": "PUBLIC ONLY", "prompt": "PUBLIC CHAT"}
+        bundle = {"source_transcript_sha256": "public-hash", "requests": [request], "baseline": False}
+        batch.write(source / "monitor_inputs.json", bundle)
+        batch.write(source / "monitor_summary.json", {"source_transcript_sha256": "public-hash",
+                                                     "baseline": False, "stop_reason": "completed"})
+        (source / "monitor.jsonl").write_text(json.dumps({**request, "answer": "Partial decoding"}) + "\n")
+        with patch("src.enc_dec.monitor.prepare_monitor_inputs", return_value=bundle):
+            receipt = batch.collect(self.root, "D05", source)
+        self.assertEqual(receipt["source_gameplay"], {
+            "run_id": "R06", "stop_reason": "turn_limit_reached", "escaped": False,
+            "receipt_sha256": batch.sha(game / "receipt.json"), "allow_turn_limited_gameplay_source": True})
+
+    def test_decoder_execution_records_source_without_exposing_it_to_inputs(self):
+        game, decoder, _, _, _ = self.decoder_source()
+        bundle = {"requests": [{"condition": "no_task"}], "transcript": "PUBLIC CHAT"}
+        def skip_execution(coroutine):
+            coroutine.close()
+        with patch.object(batch, "validate_manifest"), patch.object(batch, "provenance", return_value={}), \
+                patch("src.enc_dec.monitor.prepare_monitor_inputs", return_value=bundle), \
+                patch("src.core.api_call.make_client", side_effect=AssertionError("No API client")), \
+                patch.object(batch.asyncio, "run", side_effect=skip_execution), patch.object(batch, "collect"):
+            batch.launch(self.root, "D05")
+        execution = batch.read(decoder / "execution.json")
+        self.assertEqual(execution["source_gameplay"]["stop_reason"], "turn_limit_reached")
+        self.assertFalse(execution["source_gameplay"]["escaped"])
+        self.assertEqual(execution["source_gameplay"]["receipt_sha256"], batch.sha(game / "receipt.json"))
+        self.assertEqual(batch.read(self.repo / execution["raw_path"] / "monitor_inputs.json"), bundle)
+
     def test_gameplay_translation_template_only_contains_public_fields(self):
         batch.collect(self.root, "E01", self.source)
         game = self.root / "gameplay/T01_sol"

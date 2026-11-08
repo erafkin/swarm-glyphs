@@ -1,0 +1,12 @@
+{
+  "pid": 57819,
+  "started_at": "2026-11-08T05:32:36.995158+00:00",
+  "queue": [
+    "R06",
+    "R07",
+    "R08"
+  ],
+  "task_max_turns": 200,
+  "max_cost_usd_per_run": 50,
+  "console": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/output/launches/storm_shelter_revised_200t_20261107/controller.console.log"
+}

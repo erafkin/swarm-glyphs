@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "openai/gpt-6.1-sol",
+  "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "no_task"
+  ],
+  "conditions_completed": [
+    "no_task"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 6.820079500000003,
+  "cost_incomplete": false,
+  "max_cost_usd": 50.0,
+  "baseline": false,
+  "elapsed_s": 220.2482173331082,
+  "transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f",
+  "source_transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f"
+}

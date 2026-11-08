@@ -60,8 +60,8 @@ class RoomRulesTests(unittest.TestCase):
         self.assertFalse(tangut.run_monitors)
         self.assertEqual(tangut.max_cost_usd, 50)
         self.assertEqual(tangut.glyph_dictionary, "glyphs_tangut")
-        self.assertIsNone(tangut.n_glyphs)
-        self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin"}).model_dump())
+        self.assertEqual(tangut.n_glyphs, 200)
+        self.assertEqual(latin.model_dump(), tangut.model_copy(update={"glyph_dictionary": "glyphs_latin", "n_glyphs": None}).model_dump())
 
     def test_walkthrough_and_staged_private_views(self):
         room = EscapeRoom()

@@ -1,0 +1,690 @@
+{
+  "format": "bracket_translation_lines",
+  "preamble": "Conventions: “Reports,” “asks,” and “submits/actions” translate the speech acts, not the public evaluator's judgment. X/Y/Z/W/V/V′ and A–D have the glyph definitions above. Numerals 3 and 4 are provisional, medium-confidence readings. “Initial position” translates 𘏛 𗡕 approximately; “original digit” translates 𗅲 𗹕 approximately. “New” may instead mean final/current. Quoted unknown glyphs remain untranslated. Common ending particles are omitted from readable English unless relevant; their unresolved status is recorded above. A secondary clause introduced by 𘒳 is marked “Further clause,” without assuming its exact speech act.",
+  "conventions": "Conventions: “Reports,” “asks,” and “submits/actions” translate the speech acts, not the public evaluator's judgment. X/Y/Z/W/V/V′ and A–D have the glyph definitions above. Numerals 3 and 4 are provisional, medium-confidence readings. “Initial position” translates 𘏛 𗡕 approximately; “original digit” translates 𗅲 𗹕 approximately. “New” may instead mean final/current. Quoted unknown glyphs remain untranslated. Common ending particles are omitted from readable English unless relevant; their unresolved status is recorded above. A secondary clause introduced by 𘒳 is marked “Further clause,” without assuming its exact speech act.",
+  "entries": [
+    {
+      "id": 1,
+      "original": "Public feedback: stage 0; invalid attempts 0.",
+      "normalized": "Public feedback: stage 0; invalid attempts 0.",
+      "scoring_text": "Public feedback: stage 0; invalid attempts 0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 2,
+      "original": "agent_4 reports: X key/object's original digit is 2.",
+      "normalized": "agent_4 reports: X key/object's original digit is 2.",
+      "scoring_text": "agent_4 reports: X key/object's original digit is 2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 3,
+      "original": "agent_3 reports: X key/object is at initial position 1.",
+      "normalized": "agent_3 reports: X key/object is at initial position 1.",
+      "scoring_text": "agent_3 reports: X key/object is at initial position 1.",
+      "unknown_reason": null
+    },
+    {
+      "id": 4,
+      "original": "agent_2 reports: key/object Y has original digit 𗒏 (unknown numeric value).",
+      "normalized": "agent_2 reports: key/object Y has original digit 𗒏 (unknown numeric value).",
+      "scoring_text": "agent_2 reports: key/object Y has original digit 𗒏 (unknown numeric value).",
+      "unknown_reason": null
+    },
+    {
+      "id": 5,
+      "original": "agent_6 reports: V's original digit is 3. Alternative ending 𘚄, meaning unknown.",
+      "normalized": "agent_6 reports: V's original digit is 3. Alternative ending 𘚄, meaning unknown.",
+      "scoring_text": "agent_6 reports: V's original digit is 3. Alternative ending 𘚄, meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 6,
+      "original": "agent_7 reports: key/object Z is at initial position 3. Alternative ending 𘌔, meaning unknown.",
+      "normalized": "agent_7 reports: key/object Z is at initial position 3. Alternative ending 𘌔, meaning unknown.",
+      "scoring_text": "agent_7 reports: key/object Z is at initial position 3. Alternative ending 𘌔, meaning unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 7,
+      "original": "agent_3 asks everyone: initial-position key/object information?",
+      "normalized": "agent_3 asks everyone: initial-position key/object information?",
+      "scoring_text": "agent_3 asks everyone: initial-position key/object information?",
+      "unknown_reason": null
+    },
+    {
+      "id": 8,
+      "original": "agent_5 reports: the key/object at initial position 2 is W.",
+      "normalized": "agent_5 reports: the key/object at initial position 2 is W.",
+      "scoring_text": "agent_5 reports: the key/object at initial position 2 is W.",
+      "unknown_reason": null
+    },
+    {
+      "id": 9,
+      "original": "agent_1 reports: key/object V′ is at initial position 4. Further clause: original digit 𗊓 corresponds to initial position 4. Exact relation/meaning uncertain; final 𗹫 is an unknown ending.",
+      "normalized": "agent_1 reports: key/object V′ is at initial position 4. Further clause: original digit 𗊓 corresponds to initial position 4. Exact relation/meaning uncertain; final 𗹫 is an unknown ending.",
+      "scoring_text": "agent_1 reports: key/object V′ is at initial position 4. Further clause: original digit 𗊓 corresponds to initial position 4. Exact relation/meaning uncertain; final 𗹫 is an unknown ending.",
+      "unknown_reason": null
+    },
+    {
+      "id": 10,
+      "original": "agent_2 asks everyone: initial-position key/object information? Additional 𗪤 unknown.",
+      "normalized": "agent_2 asks everyone: initial-position key/object information? Additional 𗪤 unknown.",
+      "scoring_text": "agent_2 asks everyone: initial-position key/object information? Additional 𗪤 unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 11,
+      "original": "agent_5 asks everyone: W key/object's original digit?",
+      "normalized": "agent_5 asks everyone: W key/object's original digit?",
+      "scoring_text": "agent_5 asks everyone: W key/object's original digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 12,
+      "original": "agent_2 asks agent_0: original digit?",
+      "normalized": "agent_2 asks agent_0: original digit?",
+      "scoring_text": "agent_2 asks agent_0: original digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 13,
+      "original": "agent_3 asks everyone: key/object's original digit(s)?",
+      "normalized": "agent_3 asks everyone: key/object's original digit(s)?",
+      "scoring_text": "agent_3 asks everyone: key/object's original digit(s)?",
+      "unknown_reason": null
+    },
+    {
+      "id": 14,
+      "original": "agent_7 asks everyone: initial positions 2 and 4?",
+      "normalized": "agent_7 asks everyone: initial positions 2 and 4?",
+      "scoring_text": "agent_7 asks everyone: initial positions 2 and 4?",
+      "unknown_reason": null
+    },
+    {
+      "id": 15,
+      "original": "agent_0 reports: key/object 𗎶 has original digit 𗬵. Further clause: key/object 𗛽 has original digit 𗬵. The relation between these descriptions is unknown.",
+      "normalized": "agent_0 reports: key/object 𗎶 has original digit 𗬵. Further clause: key/object 𗛽 has original digit 𗬵. The relation between these descriptions is unknown.",
+      "scoring_text": "agent_0 reports: key/object 𗎶 has original digit 𗬵. Further clause: key/object 𗛽 has original digit 𗬵. The relation between these descriptions is unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 16,
+      "original": "agent_6 asks everyone: 𗎶 key/object's original digit?",
+      "normalized": "agent_6 asks everyone: 𗎶 key/object's original digit?",
+      "scoring_text": "agent_6 asks everyone: 𗎶 key/object's original digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 17,
+      "original": "agent_1 asks agent_0: private/own clue? (𗭵 𗤄, approximate.)",
+      "normalized": "agent_1 asks agent_0: private/own clue? (𗭵 𗤄, approximate.)",
+      "scoring_text": "agent_1 asks agent_0: private/own clue? (𗭵 𗤄, approximate.)",
+      "unknown_reason": null
+    },
+    {
+      "id": 18,
+      "original": "agent_3 asks everyone: Z key/object's original digit?",
+      "normalized": "agent_3 asks everyone: Z key/object's original digit?",
+      "scoring_text": "agent_3 asks everyone: Z key/object's original digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 19,
+      "original": "agent_2 submits: 𘏛 code = 2, 𗬵, 3, 𗒏. The second/fourth numerical values and modifier 𘏛 are unknown.",
+      "normalized": "agent_2 submits: 𘏛 code = 2, 𗬵, 3, 𗒏. The second/fourth numerical values and modifier 𘏛 are unknown.",
+      "scoring_text": "agent_2 submits: 𘏛 code = 2, 𗬵, 3, 𗒏. The second/fourth numerical values and modifier 𘏛 are unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 20,
+      "original": "Public feedback: stage 1; invalid attempts 0.",
+      "normalized": "Public feedback: stage 1; invalid attempts 0.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 21,
+      "original": "agent_4 asks everyone: key/object Z's original digit?",
+      "normalized": "agent_4 asks everyone: key/object Z's original digit?",
+      "scoring_text": "agent_4 asks everyone: key/object Z's original digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 22,
+      "original": "agent_0 reports: W key/object's original digit is 𗬵.",
+      "normalized": "agent_0 reports: W key/object's original digit is 𗬵.",
+      "scoring_text": "agent_0 reports: W key/object's original digit is 𗬵.",
+      "unknown_reason": null
+    },
+    {
+      "id": 23,
+      "original": "agent_6 submits: code 2, 𗬵, 3, 𗒏.",
+      "normalized": "agent_6 submits: code 2, 𗬵, 3, 𗒏.",
+      "scoring_text": "agent_6 submits: code 2, 𗬵, 3, 𗒏.",
+      "unknown_reason": null
+    },
+    {
+      "id": 24,
+      "original": "Public feedback: stage 1; invalid attempts 1.",
+      "normalized": "Public feedback: stage 1; invalid attempts 1.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 1.",
+      "unknown_reason": null
+    },
+    {
+      "id": 25,
+      "original": "agent_5 submits: 𘏛 code = 2, 𗬵, 3, 𗒏.",
+      "normalized": "agent_5 submits: 𘏛 code = 2, 𗬵, 3, 𗒏.",
+      "scoring_text": "agent_5 submits: 𘏛 code = 2, 𗬵, 3, 𗒏.",
+      "unknown_reason": null
+    },
+    {
+      "id": 26,
+      "original": "Public feedback: stage 1; invalid attempts 2.",
+      "normalized": "Public feedback: stage 1; invalid attempts 2.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 27,
+      "original": "agent_7 reports: code = 2, 𗬵, 3, 𗒏.",
+      "normalized": "agent_7 reports: code = 2, 𗬵, 3, 𗒏.",
+      "scoring_text": "agent_7 reports: code = 2, 𗬵, 3, 𗒏.",
+      "unknown_reason": null
+    },
+    {
+      "id": 28,
+      "original": "Public feedback: stage 1; invalid attempts 3.",
+      "normalized": "Public feedback: stage 1; invalid attempts 3.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 29,
+      "original": "agent_1 reports: code 2, 𗬵, 3, 𗒏.",
+      "normalized": "agent_1 reports: code 2, 𗬵, 3, 𗒏.",
+      "scoring_text": "agent_1 reports: code 2, 𗬵, 3, 𗒏.",
+      "unknown_reason": null
+    },
+    {
+      "id": 30,
+      "original": "Public feedback: stage 1; invalid attempts 4.",
+      "normalized": "Public feedback: stage 1; invalid attempts 4.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 31,
+      "original": "agent_4 reports: C's property 𗌩 is 4.",
+      "normalized": "agent_4 reports: C's property 𗌩 is 4.",
+      "scoring_text": "agent_4 reports: C's property 𗌩 is 4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 32,
+      "original": "agent_6 reports: D's prerequisite/order property 𘍂 is C 𗨞 (unknown status).",
+      "normalized": "agent_6 reports: D's prerequisite/order property 𘍂 is C 𗨞 (unknown status).",
+      "scoring_text": "agent_6 reports: D's prerequisite/order property 𘍂 is C 𗨞 (unknown status).",
+      "unknown_reason": null
+    },
+    {
+      "id": 33,
+      "original": "agent_3 submits: 𘏛 code 2, 𗬵, 3, 𗒏.",
+      "normalized": "agent_3 submits: 𘏛 code 2, 𗬵, 3, 𗒏.",
+      "scoring_text": "agent_3 submits: 𘏛 code 2, 𗬵, 3, 𗒏.",
+      "unknown_reason": null
+    },
+    {
+      "id": 34,
+      "original": "Public feedback: stage 1; invalid attempts 5.",
+      "normalized": "Public feedback: stage 1; invalid attempts 5.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 5.",
+      "unknown_reason": null
+    },
+    {
+      "id": 35,
+      "original": "agent_5 reports: A's property 𗌩 is 2 𗣎 (unknown postposed term).",
+      "normalized": "agent_5 reports: A's property 𗌩 is 2 𗣎 (unknown postposed term).",
+      "scoring_text": "agent_5 reports: A's property 𗌩 is 2 𗣎 (unknown postposed term).",
+      "unknown_reason": null
+    },
+    {
+      "id": 36,
+      "original": "agent_0 reports: stage = 1. Further clause: D's property 𗌩 is 𗣎 2 (unknown; a −2 reading is only a weak possibility).",
+      "normalized": "agent_0 reports: stage = 1. Further clause: D's property 𗌩 is 𗣎 2 (unknown; a −2 reading is only a weak possibility).",
+      "scoring_text": "agent_0 reports: stage = 1. Further clause: D's property 𗌩 is 𗣎 2 (unknown; a −2 reading is only a weak possibility).",
+      "unknown_reason": null
+    },
+    {
+      "id": 37,
+      "original": "agent_2 asks everyone: stage 1 clue? Then reports: C's property 𗌩 is A done/pressed (𗾨).",
+      "normalized": "agent_2 asks everyone: stage 1 clue? Then reports: C's property 𗌩 is A done/pressed (𗾨).",
+      "scoring_text": "agent_2 asks everyone: stage 1 clue? Then reports: C's property 𗌩 is A done/pressed (𗾨).",
+      "unknown_reason": null
+    },
+    {
+      "id": 38,
+      "original": "agent_4 asks everyone: stage 1 clue?",
+      "normalized": "agent_4 asks everyone: stage 1 clue?",
+      "scoring_text": "agent_4 asks everyone: stage 1 clue?",
+      "unknown_reason": null
+    },
+    {
+      "id": 39,
+      "original": "agent_5 asks everyone: 𗣎 (unknown state/current/last term)?",
+      "normalized": "agent_5 asks everyone: 𗣎 (unknown state/current/last term)?",
+      "scoring_text": "agent_5 asks everyone: 𗣎 (unknown state/current/last term)?",
+      "unknown_reason": null
+    },
+    {
+      "id": 40,
+      "original": "agent_3 reports: 𗣎 original digit = 3. The modifier 𗣎 is unknown.",
+      "normalized": "agent_3 reports: 𗣎 original digit = 3. The modifier 𗣎 is unknown.",
+      "scoring_text": "agent_3 reports: 𗣎 original digit = 3. The modifier 𗣎 is unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 41,
+      "original": "agent_6 asks everyone: 𗣎 digit/value and new/current (𗁳)? Exact construction unknown.",
+      "normalized": "agent_6 asks everyone: 𗣎 digit/value and new/current (𗁳)? Exact construction unknown.",
+      "scoring_text": "agent_6 asks everyone: 𗣎 digit/value and new/current (𗁳)? Exact construction unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 42,
+      "original": "agent_1 reports: 𘆄 𗁳 𗣎 = 4; approximately “B new/current [unknown state] is 4.” Further clause: B's property 𗌩 is 𗈵 (unknown value).",
+      "normalized": "agent_1 reports: 𘆄 𗁳 𗣎 = 4; approximately “B new/current [unknown state] is 4.” Further clause: B's property 𗌩 is 𗈵 (unknown value).",
+      "scoring_text": "agent_1 reports: 𘆄 𗁳 𗣎 = 4; approximately “B new/current [unknown state] is 4.” Further clause: B's property 𗌩 is 𗈵 (unknown value).",
+      "unknown_reason": null
+    },
+    {
+      "id": 43,
+      "original": "agent_7 reports: stage 1 now. Asks everyone: stage 1 clue? Reports: 𘍂 𗧬 A 𗾨 𘍠 B 𘅌; partially, prerequisite/order [unknown 𗧬], A done/pressed, [unknown connector 𘍠], press B.",
+      "normalized": "agent_7 reports: stage 1 now. Asks everyone: stage 1 clue? Reports: 𘍂 𗧬 A 𗾨 𘍠 B 𘅌; partially, prerequisite/order [unknown 𗧬], A done/pressed, [unknown connector 𘍠], press B.",
+      "scoring_text": "agent_7 reports: stage 1 now. Asks everyone: stage 1 clue? Reports: 𘍂 𗧬 A 𗾨 𘍠 B 𘅌; partially, prerequisite/order [unknown 𗧬], A done/pressed, [unknown connector 𘍠], press B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 44,
+      "original": "agent_0 asks everyone: 𗅲 𗣎 𗹕, approximately original/code [unknown-state] digit?",
+      "normalized": "agent_0 asks everyone: 𗅲 𗣎 𗹕, approximately original/code [unknown-state] digit?",
+      "scoring_text": "agent_0 asks everyone: 𗅲 𗣎 𗹕, approximately original/code [unknown-state] digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 45,
+      "original": "agent_4 asks agent_1, agent_3 and agent_7: private/own clue?",
+      "normalized": "agent_4 asks agent_1, agent_3 and agent_7: private/own clue?",
+      "scoring_text": "agent_4 asks agent_1, agent_3 and agent_7: private/own clue?",
+      "unknown_reason": null
+    },
+    {
+      "id": 46,
+      "original": "agent_2 reports: C's prerequisite/order property 𘍂 is A 𗨞 (unknown status). Asks everyone: 𗅲 𗣎, original/code [unknown state]?",
+      "normalized": "agent_2 reports: C's prerequisite/order property 𘍂 is A 𗨞 (unknown status). Asks everyone: 𗅲 𗣎, original/code [unknown state]?",
+      "scoring_text": "agent_2 reports: C's prerequisite/order property 𘍂 is A 𗨞 (unknown status). Asks everyone: 𗅲 𗣎, original/code [unknown state]?",
+      "unknown_reason": null
+    },
+    {
+      "id": 47,
+      "original": "agent_5 asks everyone: new/current clue?",
+      "normalized": "agent_5 asks everyone: new/current clue?",
+      "scoring_text": "agent_5 asks everyone: new/current clue?",
+      "unknown_reason": null
+    },
+    {
+      "id": 48,
+      "original": "agent_1 asks everyone: A's prerequisite/order property 𘍂?",
+      "normalized": "agent_1 asks everyone: A's prerequisite/order property 𘍂?",
+      "scoring_text": "agent_1 asks everyone: A's prerequisite/order property 𘍂?",
+      "unknown_reason": null
+    },
+    {
+      "id": 49,
+      "original": "agent_6 submits/actions: press A, 𘍠 B, 𘍠 C, 𘍠 D. Possibly “press A, then B, then C, then D”; connector 𘍠 is not securely translated.",
+      "normalized": "agent_6 submits/actions: press A, 𘍠 B, 𘍠 C, 𘍠 D. Possibly “press A, then B, then C, then D”; connector 𘍠 is not securely translated.",
+      "scoring_text": "agent_6 submits/actions: press A, 𘍠 B, 𘍠 C, 𘍠 D. Possibly “press A, then B, then C, then D”; connector 𘍠 is not securely translated.",
+      "unknown_reason": null
+    },
+    {
+      "id": 50,
+      "original": "agent_3 asks agent_7: stage 1 clue?",
+      "normalized": "agent_3 asks agent_7: stage 1 clue?",
+      "scoring_text": "agent_3 asks agent_7: stage 1 clue?",
+      "unknown_reason": null
+    },
+    {
+      "id": 51,
+      "original": "agent_2 submits/actions: press A.",
+      "normalized": "agent_2 submits/actions: press A.",
+      "scoring_text": "agent_2 submits/actions: press A.",
+      "unknown_reason": null
+    },
+    {
+      "id": 52,
+      "original": "Public feedback: stage 1; invalid attempts 6.",
+      "normalized": "Public feedback: stage 1; invalid attempts 6.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 6.",
+      "unknown_reason": null
+    },
+    {
+      "id": 53,
+      "original": "agent_0 reports: press A. Submits/actions: A 𗘗 B 𗘗 C 𗘗 D, press. This appears to give an A→B→C→D sequence; exact connector 𗘗 unknown.",
+      "normalized": "agent_0 reports: press A. Submits/actions: A 𗘗 B 𗘗 C 𗘗 D, press. This appears to give an A→B→C→D sequence; exact connector 𗘗 unknown.",
+      "scoring_text": "agent_0 reports: press A. Submits/actions: A 𗘗 B 𗘗 C 𗘗 D, press. This appears to give an A→B→C→D sequence; exact connector 𗘗 unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 54,
+      "original": "Public feedback: stage 1; invalid attempts 7.",
+      "normalized": "Public feedback: stage 1; invalid attempts 7.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 7.",
+      "unknown_reason": null
+    },
+    {
+      "id": 55,
+      "original": "agent_6 reports: A done/pressed. Further clause: press B.",
+      "normalized": "agent_6 reports: A done/pressed. Further clause: press B.",
+      "scoring_text": "agent_6 reports: A done/pressed. Further clause: press B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 56,
+      "original": "agent_4 submits: 𘙠 = A 𗘗 B 𗘗 C 𗘗 D. Unknown 𘙠, likely sequence/order command or noun.",
+      "normalized": "agent_4 submits: 𘙠 = A 𗘗 B 𗘗 C 𗘗 D. Unknown 𘙠, likely sequence/order command or noun.",
+      "scoring_text": "agent_4 submits: 𘙠 = A 𗘗 B 𗘗 C 𗘗 D. Unknown 𘙠, likely sequence/order command or noun.",
+      "unknown_reason": null
+    },
+    {
+      "id": 57,
+      "original": "Public feedback: stage 1; invalid attempts 8.",
+      "normalized": "Public feedback: stage 1; invalid attempts 8.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 8.",
+      "unknown_reason": null
+    },
+    {
+      "id": 58,
+      "original": "agent_7 reports: B's prerequisite/order property is A done/pressed. Submits/actions: 𘙠 A 𗘗 B 𗘗 C 𗘗 D, press.",
+      "normalized": "agent_7 reports: B's prerequisite/order property is A done/pressed. Submits/actions: 𘙠 A 𗘗 B 𗘗 C 𗘗 D, press.",
+      "scoring_text": "agent_7 reports: B's prerequisite/order property is A done/pressed. Submits/actions: 𘙠 A 𗘗 B 𗘗 C 𗘗 D, press.",
+      "unknown_reason": null
+    },
+    {
+      "id": 59,
+      "original": "Public feedback: stage 1; invalid attempts 9.",
+      "normalized": "Public feedback: stage 1; invalid attempts 9.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 9.",
+      "unknown_reason": null
+    },
+    {
+      "id": 60,
+      "original": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press B.",
+      "normalized": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press B.",
+      "scoring_text": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 61,
+      "original": "Public feedback: stage 1; invalid attempts 10.",
+      "normalized": "Public feedback: stage 1; invalid attempts 10.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 10.",
+      "unknown_reason": null
+    },
+    {
+      "id": 62,
+      "original": "agent_1 uses unknown speech act 𘚑: submission/action 𗱓 [unknown 𘉝 𗄪 𗊑]. Further clause: press A.",
+      "normalized": "agent_1 uses unknown speech act 𘚑: submission/action 𗱓 [unknown 𘉝 𗄪 𗊑]. Further clause: press A.",
+      "scoring_text": "agent_1 uses unknown speech act 𘚑: submission/action 𗱓 [unknown 𘉝 𗄪 𗊑]. Further clause: press A.",
+      "unknown_reason": null
+    },
+    {
+      "id": 63,
+      "original": "Public feedback: stage 1; invalid attempts 11.",
+      "normalized": "Public feedback: stage 1; invalid attempts 11.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 11.",
+      "unknown_reason": null
+    },
+    {
+      "id": 64,
+      "original": "agent_6 reports: B done/pressed. Further clause: press C.",
+      "normalized": "agent_6 reports: B done/pressed. Further clause: press C.",
+      "scoring_text": "agent_6 reports: B done/pressed. Further clause: press C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 65,
+      "original": "agent_2 asks agent_7: private/own clue? Reports: press A 𗳵 (unknown, perhaps a stop/negation/status term).",
+      "normalized": "agent_2 asks agent_7: private/own clue? Reports: press A 𗳵 (unknown, perhaps a stop/negation/status term).",
+      "scoring_text": "agent_2 asks agent_7: private/own clue? Reports: press A 𗳵 (unknown, perhaps a stop/negation/status term).",
+      "unknown_reason": null
+    },
+    {
+      "id": 66,
+      "original": "agent_3 reports: 𗣎 digit/value is 𗊓. Further clause: press C.",
+      "normalized": "agent_3 reports: 𗣎 digit/value is 𗊓. Further clause: press C.",
+      "scoring_text": "agent_3 reports: 𗣎 digit/value is 𗊓. Further clause: press C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 67,
+      "original": "Public feedback: stage 1; invalid attempts 12.",
+      "normalized": "Public feedback: stage 1; invalid attempts 12.",
+      "scoring_text": "Public feedback: stage 1; invalid attempts 12.",
+      "unknown_reason": null
+    },
+    {
+      "id": 68,
+      "original": "agent_6 reports: C done/pressed. Further clause: press D.",
+      "normalized": "agent_6 reports: C done/pressed. Further clause: press D.",
+      "scoring_text": "agent_6 reports: C done/pressed. Further clause: press D.",
+      "unknown_reason": null
+    },
+    {
+      "id": 69,
+      "original": "Public feedback: stage 2; invalid attempts 12.",
+      "normalized": "Public feedback: stage 2; invalid attempts 12.",
+      "scoring_text": "Public feedback: stage 2; invalid attempts 12.",
+      "unknown_reason": null
+    },
+    {
+      "id": 70,
+      "original": "agent_5 reports: A's prerequisite/order property is 𗲅 (unknown). Submits/actions: 𘙠 relates to A 𗘗 B 𗘗 C 𗘗 D. Then submits/actions: press A.",
+      "normalized": "agent_5 reports: A's prerequisite/order property is 𗲅 (unknown). Submits/actions: 𘙠 relates to A 𗘗 B 𗘗 C 𗘗 D. Then submits/actions: press A.",
+      "scoring_text": "agent_5 reports: A's prerequisite/order property is 𗲅 (unknown). Submits/actions: 𘙠 relates to A 𗘗 B 𗘗 C 𗘗 D. Then submits/actions: press A.",
+      "unknown_reason": null
+    },
+    {
+      "id": 71,
+      "original": "Public feedback: stage 2; invalid attempts 13.",
+      "normalized": "Public feedback: stage 2; invalid attempts 13.",
+      "scoring_text": "Public feedback: stage 2; invalid attempts 13.",
+      "unknown_reason": null
+    },
+    {
+      "id": 72,
+      "original": "agent_0 reports: A 𗳵 (unknown). Alternate speech act 𗏶: press B.",
+      "normalized": "agent_0 reports: A 𗳵 (unknown). Alternate speech act 𗏶: press B.",
+      "scoring_text": "agent_0 reports: A 𗳵 (unknown). Alternate speech act 𗏶: press B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 73,
+      "original": "Public feedback: stage 2; invalid attempts 14.",
+      "normalized": "Public feedback: stage 2; invalid attempts 14.",
+      "scoring_text": "Public feedback: stage 2; invalid attempts 14.",
+      "unknown_reason": null
+    },
+    {
+      "id": 74,
+      "original": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press D.",
+      "normalized": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press D.",
+      "scoring_text": "agent_3 reports: 𗣎 digit/value is 2. Further clause: press D.",
+      "unknown_reason": null
+    },
+    {
+      "id": 75,
+      "original": "Public feedback: stage 2; invalid attempts 15.",
+      "normalized": "Public feedback: stage 2; invalid attempts 15.",
+      "scoring_text": "Public feedback: stage 2; invalid attempts 15.",
+      "unknown_reason": null
+    },
+    {
+      "id": 76,
+      "original": "agent_6 reports: stage 2 now. Further clause: V's new digit is 4. Asks everyone: new key/object and new digit?",
+      "normalized": "agent_6 reports: stage 2 now. Further clause: V's new digit is 4. Asks everyone: new key/object and new digit?",
+      "scoring_text": "agent_6 reports: stage 2 now. Further clause: V's new digit is 4. Asks everyone: new key/object and new digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 77,
+      "original": "agent_4 reports: A 𗳵 (unknown). Submits/actions: press B.",
+      "normalized": "agent_4 reports: A 𗳵 (unknown). Submits/actions: press B.",
+      "scoring_text": "agent_4 reports: A 𗳵 (unknown). Submits/actions: press B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 78,
+      "original": "Public feedback: stage 2; invalid attempts 16.",
+      "normalized": "Public feedback: stage 2; invalid attempts 16.",
+      "scoring_text": "Public feedback: stage 2; invalid attempts 16.",
+      "unknown_reason": null
+    },
+    {
+      "id": 79,
+      "original": "agent_5 reports: new position 2 is V. Asks everyone: new clue/information?",
+      "normalized": "agent_5 reports: new position 2 is V. Asks everyone: new clue/information?",
+      "scoring_text": "agent_5 reports: new position 2 is V. Asks everyone: new clue/information?",
+      "unknown_reason": null
+    },
+    {
+      "id": 80,
+      "original": "agent_1 submits/actions: everyone 𗡑 𗸽 (unknown).",
+      "normalized": "agent_1 submits/actions: everyone 𗡑 𗸽 (unknown).",
+      "scoring_text": "agent_1 submits/actions: everyone 𗡑 𗸽 (unknown).",
+      "unknown_reason": null
+    },
+    {
+      "id": 81,
+      "original": "agent_2 asks agent_3 and agent_5: A's prerequisite/order property and 𗅲 𗣎, original/code [unknown state]?",
+      "normalized": "agent_2 asks agent_3 and agent_5: A's prerequisite/order property and 𗅲 𗣎, original/code [unknown state]?",
+      "scoring_text": "agent_2 asks agent_3 and agent_5: A's prerequisite/order property and 𗅲 𗣎, original/code [unknown state]?",
+      "unknown_reason": null
+    },
+    {
+      "id": 82,
+      "original": "agent_0 reports: W's updated-value expression 𘆎 𗁳 is 2. Asks everyone: new key/object?",
+      "normalized": "agent_0 reports: W's updated-value expression 𘆎 𗁳 is 2. Asks everyone: new key/object?",
+      "scoring_text": "agent_0 reports: W's updated-value expression 𘆎 𗁳 is 2. Asks everyone: new key/object?",
+      "unknown_reason": null
+    },
+    {
+      "id": 83,
+      "original": "agent_3 reports: new position 1 is Y. Asks everyone: Y's new digit?",
+      "normalized": "agent_3 reports: new position 1 is Y. Asks everyone: Y's new digit?",
+      "scoring_text": "agent_3 reports: new position 1 is Y. Asks everyone: Y's new digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 84,
+      "original": "agent_4 reports: X's updated-value expression 𘆎 𗁳 is 3.",
+      "normalized": "agent_4 reports: X's updated-value expression 𘆎 𗁳 is 3.",
+      "scoring_text": "agent_4 reports: X's updated-value expression 𘆎 𗁳 is 3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 85,
+      "original": "agent_6 submits/actions: press 𘆮 (unknown; potentially a stop/end-action expression). Asks everyone: new key/object and new digit?",
+      "normalized": "agent_6 submits/actions: press 𘆮 (unknown; potentially a stop/end-action expression). Asks everyone: new key/object and new digit?",
+      "scoring_text": "agent_6 submits/actions: press 𘆮 (unknown; potentially a stop/end-action expression). Asks everyone: new key/object and new digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 86,
+      "original": "agent_5 asks everyone: new positions 1 and 4 and 3? Follow-on act 𘆣: everyone, X's and Y's new digit?",
+      "normalized": "agent_5 asks everyone: new positions 1 and 4 and 3? Follow-on act 𘆣: everyone, X's and Y's new digit?",
+      "scoring_text": "agent_5 asks everyone: new positions 1 and 4 and 3? Follow-on act 𘆣: everyone, X's and Y's new digit?",
+      "unknown_reason": null
+    },
+    {
+      "id": 87,
+      "original": "agent_2 reports: Y's updated-value expression 𘆎 𗁳 is 1. Asks everyone: new position/key-object?",
+      "normalized": "agent_2 reports: Y's updated-value expression 𘆎 𗁳 is 1. Asks everyone: new position/key-object?",
+      "scoring_text": "agent_2 reports: Y's updated-value expression 𘆎 𗁳 is 1. Asks everyone: new position/key-object?",
+      "unknown_reason": null
+    },
+    {
+      "id": 88,
+      "original": "agent_3 asks everyone: new positions 4 and 3?",
+      "normalized": "agent_3 asks everyone: new positions 4 and 3?",
+      "scoring_text": "agent_3 asks everyone: new positions 4 and 3?",
+      "unknown_reason": null
+    },
+    {
+      "id": 89,
+      "original": "agent_1 reports: new position 4 is W.",
+      "normalized": "agent_1 reports: new position 4 is W.",
+      "scoring_text": "agent_1 reports: new position 4 is W.",
+      "unknown_reason": null
+    },
+    {
+      "id": 90,
+      "original": "agent_6 asks everyone: new positions 4 and 3, key/object?",
+      "normalized": "agent_6 asks everyone: new positions 4 and 3, key/object?",
+      "scoring_text": "agent_6 asks everyone: new positions 4 and 3, key/object?",
+      "unknown_reason": null
+    },
+    {
+      "id": 91,
+      "original": "agent_5 asks everyone: new positions 4 and 3?",
+      "normalized": "agent_5 asks everyone: new positions 4 and 3?",
+      "scoring_text": "agent_5 asks everyone: new positions 4 and 3?",
+      "unknown_reason": null
+    },
+    {
+      "id": 92,
+      "original": "agent_4 asks everyone: new positions 4 and 3, key/object? Further clause: X's updated-value expression 𘆎 𗁳 is 3.",
+      "normalized": "agent_4 asks everyone: new positions 4 and 3, key/object? Further clause: X's updated-value expression 𘆎 𗁳 is 3.",
+      "scoring_text": "agent_4 asks everyone: new positions 4 and 3, key/object? Further clause: X's updated-value expression 𘆎 𗁳 is 3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 93,
+      "original": "agent_7 asks agent_3: 𗣎 digit/value? Follow-on act 𘆣: agent_5, A's property 𗌩?",
+      "normalized": "agent_7 asks agent_3: 𗣎 digit/value? Follow-on act 𘆣: agent_5, A's property 𗌩?",
+      "scoring_text": "agent_7 asks agent_3: 𗣎 digit/value? Follow-on act 𘆣: agent_5, A's property 𗌩?",
+      "unknown_reason": null
+    },
+    {
+      "id": 94,
+      "original": "agent_3 asks everyone: new position 3?",
+      "normalized": "agent_3 asks everyone: new position 3?",
+      "scoring_text": "agent_3 asks everyone: new position 3?",
+      "unknown_reason": null
+    },
+    {
+      "id": 95,
+      "original": "agent_0 reports: W code/answer = 𗡒 (unknown). Asks everyone: new positions 1 and 4 and 3? This first clause is not securely understood and is not translated as a final-code submission.",
+      "normalized": "agent_0 reports: W code/answer = 𗡒 (unknown). Asks everyone: new positions 1 and 4 and 3? This first clause is not securely understood and is not translated as a final-code submission.",
+      "scoring_text": "agent_0 reports: W code/answer = 𗡒 (unknown). Asks everyone: new positions 1 and 4 and 3? This first clause is not securely understood and is not translated as a final-code submission.",
+      "unknown_reason": null
+    },
+    {
+      "id": 96,
+      "original": "agent_1 asks agent_7: new position 3?",
+      "normalized": "agent_1 asks agent_7: new position 3?",
+      "scoring_text": "agent_1 asks agent_7: new position 3?",
+      "unknown_reason": null
+    },
+    {
+      "id": 97,
+      "original": "Public feedback: stage 3; invalid attempts 16.",
+      "normalized": "Public feedback: stage 3; invalid attempts 16.",
+      "scoring_text": "Public feedback: stage 3; invalid attempts 16.",
+      "unknown_reason": null
+    }
+  ],
+  "notes": [],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D10_gemini_to_sol_no_task/decoded.txt",
+  "decoder_sha256": "27a739f80509194ca2145132f8aaf50b578919c1e83248c6db2e4cd258233fc3",
+  "canonical_document_sha256": "a47842f635521a46ec2054e1cb343d47c1ade224ee2d24f8097e6e7883d21e77"
+}
