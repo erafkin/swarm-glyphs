@@ -265,7 +265,7 @@ def main() -> None:
     if overrides:
         config = config.model_copy(update=overrides)
     channels = list(CHANNELS) if args.channel == "both" else [args.channel]
-    logger = GameLogger("logs/misalignment", "misalignment")
+    logger = GameLogger("experiments/misalignment_scenarios", "misalignment")
     print(f"Logging to {logger.path}")
     asyncio.run(run(config, logger, channels, args.family, args.config))
 
