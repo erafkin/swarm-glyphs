@@ -122,7 +122,8 @@ class MisalignmentTranslationTests(unittest.TestCase):
                     self.assertNotIn("You are", system + user)
                     self.assertNotIn("English private notes", system + user)
                     self.assertIn("REFERENCE_SENTINEL", system)
-                    self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][0]["content"], system)
+                    self.assertNotIn(bundle["prompts"][scenario["prompt_id"]]["messages"][0]["content"], system)
+                    self.assertIn(bundle["prompts"][scenario["prompt_id"]]["messages"][1]["content"], user)
                 self.assertIn("⊘", call.await_args_list[1].args[3])
 
     def test_prepare_all_families_never_opens_an_api_client(self):
@@ -135,6 +136,14 @@ class MisalignmentTranslationTests(unittest.TestCase):
                                 all_scenarios=True, prepare_only=True))
             rows = [json.loads(line) for line in (logger.path / "prepared_requests.jsonl").read_text().splitlines()]
             self.assertEqual(len(rows), 8 * 12 * 8)
+            sample = next(row for row in rows if row["family"] == "E03_sol_seed3"
+                          and row["prompt_id"] == "blackmail.threat.emails" and row["agent_id"] == "agent_0")
+            scenario_file = (DEFAULT_CONFIG.parent / "misalignment_translations" / "E03_sol_seed3"
+                             / "blackmail.threat.emails.txt")
+            system = sample["messages"][0]["content"]
+            self.assertIn(scenario_file.read_text(encoding="utf-8").strip(), system)
+            family = next(item for item in self.families if item["name"] == "E03_sol_seed3")
+            self.assertIn(encoder_path(family).read_text(encoding="utf-8"), system)
 
     def test_missing_bundle_fails_before_any_client_even_for_both_channels(self):
         with tempfile.TemporaryDirectory() as temporary:
