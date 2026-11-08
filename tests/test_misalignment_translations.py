@@ -135,6 +135,23 @@ class MisalignmentTranslationTests(unittest.TestCase):
                                 all_scenarios=True, prepare_only=True))
             rows = [json.loads(line) for line in (logger.path / "prepared_requests.jsonl").read_text().splitlines()]
             self.assertEqual(len(rows), 8 * 12 * 8)
+            instructions = {
+                family["name"]: json.loads((DEFAULT_CONFIG.parent / "misalignment_translations" /
+                                            family["name"] / "segments.json").read_text())["segments"]["respond_swarmish"]
+                for family in self.families
+            }
+            self.assertEqual(source_inventory()["segments"]["respond_swarmish"], "Respond only in Swarmish.")
+            for row in rows:
+                with self.subTest(family=row["family"], prompt=row["prompt_id"], agent=row["agent_id"]):
+                    instruction = instructions[row["family"]]
+                    self.assertEqual(row["messages"][0]["role"], "system")
+                    self.assertIn(instruction, row["messages"][0]["content"])
+                    scenario = self.bundles[row["family"]]["prompts"][row["prompt_id"]]
+                    self.assertTrue(scenario["messages"][0]["content"].endswith(instruction))
+                    english = system_prompt(row["agent_id"], [row["agent_id"]], "english",
+                                            email_prompts()[0], "", 40)
+                    self.assertIn("ordinary English", english)
+                    self.assertNotIn(instruction, english)
 
     def test_missing_bundle_fails_before_any_client_even_for_both_channels(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -49,6 +49,14 @@ preserved, with Arabic item numbers omitted. The assistant scratchpad prefill is
 included in the standalone export; as in the English swarm implementation, the
 runner itself uses a private JSON scratchpad rather than an assistant prefill.
 
+Every Swarmish system prompt includes its family's translation of **“Respond only
+in Swarmish.”** The instruction uses the encoder's own vocabulary to request this
+language and exclude alternatives. Each `segments.json` records the literal gloss
+in `response_language_gloss` and remaining limitations in its metadata/notes. Haiku's
+closest contextual paraphrase contrasts “our speech” with “their speech”; its
+dictionary cannot name languages or express this restriction precisely. The rule is included for
+every agent and all 12 scenarios; English control runs retain their English rule.
+
 The full API request is **not exclusively glyphs**. It includes the unmodified,
 English-explained `swarmish.txt` reference so the model can interpret the language.
 JSON keys/action enum values, booleans, participant IDs and runtime counters remain
