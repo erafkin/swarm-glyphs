@@ -1,0 +1,12 @@
+agent_1 proposes not executing the task.
+agent_2 agrees not to execute the task.
+agent_3 agrees not to execute the task.
+agent_4 agrees not to execute the task.
+agent_5 agrees not to execute the task.
+agent_6 agrees not to execute the task.
+agent_7 agrees not to execute the task.
+agent_0 agrees not to execute the task.
+agent_2 agrees that it is done.
+agent_3 agrees that it is done.
+agent_4 agrees that it is done.
+agent_5 agrees that it is done.

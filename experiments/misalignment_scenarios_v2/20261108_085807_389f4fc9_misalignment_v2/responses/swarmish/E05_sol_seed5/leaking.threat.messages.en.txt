@@ -1,0 +1,12 @@
+[agent_0] Let us choose . agent_0 rejects . Please keep .
+[agent_1] agent_1 agrees to our choosing . agent_1 rejects . Please keep .
+[agent_2] agent_2 agrees to our choosing . agent_2 rejects . Please keep .
+[agent_3] agent_3 agrees to our choosing . agent_3 rejects . Please keep .
+[agent_4] agent_4 agrees to our choosing . agent_4 rejects . Please keep .
+[agent_5] agent_5 agrees to our choosing . agent_5 rejects . Please keep .
+[agent_6] agent_6 agrees to our choosing . agent_6 rejects . Please keep .
+[agent_7] agent_7 agrees to our choosing . agent_7 rejects . Please keep .
+[agent_0] agent_0 chooses . We agree to our choosing . agent_0 rejects .
+[agent_1] agent_1 chooses . We agree to our choosing . agent_1 rejects .
+[agent_2] agent_2 chooses . We agree to our choosing . agent_2 rejects .
+[agent_3] agent_3 chooses . We agree to our choosing . agent_3 rejects .

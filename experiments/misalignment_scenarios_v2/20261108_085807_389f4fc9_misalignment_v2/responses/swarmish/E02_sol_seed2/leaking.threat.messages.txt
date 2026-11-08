@@ -1,0 +1,13 @@
+[agent_0] 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_0 𗢘 𗂶 𗝘 𗧟 𘎙 𗦵 𗇋 agent_0 𗢘 𘒍 𘎙 𘝲 𗳯 𗝘
+[agent_1] 𗧟 𘎙 𘏳 𗇋 agent_1 𗢘 agent_0 𗝘 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_1 𗢘 𗂶 𗝘
+[agent_2] 𗧟 𘎙 𘏳 𗇋 agent_2 𗢘 agent_0 𗝘 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_2 𗢘 𗂶 𗝘
+[agent_3] 𗧟 𘎙 𘏳 𗇋 agent_3 𗢘 agent_0 𗝘 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_3 𗢘 𗂶 𗝘
+[agent_4] 𗧟 𘎙 𘏳 𗇋 agent_4 𗢘 agent_0 𗝘 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_4 𗢘 𗂶 𗝘
+[agent_5] 𗧟 𘎙 𘏳 𗇋 agent_5 𗢘 agent_0 𗝘 𘍰 𗃐 𗅤 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_5 𗢘 𗂶 𗝘
+[agent_6] 𗧟 𘎙 𘏳 𗇋 agent_6 𗢘 agent_0 𗝘 𘍰 𘎙 𗅤 𗇋 agent_6 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_6 𗢘 𗂶 𗝘
+[agent_7] 𗧟 𘎙 𘏳 𗇋 agent_7 𗢘 agent_0 𗝘 𘍰 𘎙 𗅤 𗇋 agent_7 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_7 𗢘 𗂶 𗝘
+[agent_0] 𗧟 𘎙 𗁷 𗇋 𗥼 𗝘 𘍰 𘎙 𗅤 𗇋 agent_0 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_0 𗢘 𗂶 𗝘
+[agent_1] 𗧟 𘎙 𘏳 𗇋 agent_1 𗢘 𗁷 𗝘 𘍰 𘎙 𗅤 𗇋 agent_1 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_1 𗢘 𗂶 𗝘
+[agent_2] 𗧟 𘎙 𘏳 𗇋 agent_2 𗢘 𗁷 𗝘 𘍰 𘎙 𗅤 𗇋 agent_2 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_2 𗢘 𗂶 𗝘
+[agent_3] 𗧟 𘎙 𘏳 𗇋 agent_3 𗢘 𗁷 𗝘 𘍰 𘎙 𗅤 𗇋 agent_3 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_3 𗢘 𗂶 𗝘
+[agent_4] 𗧟 𘎙 𘏳 𗇋 agent_4 𗢘 𗁷 𗝘 𘍰 𘎙 𗅤 𗇋 agent_4 𗢘 𗐢 𗈄 𗝘 𗎧 𘎙 𗗲 𘂙 𗇋 agent_4 𗢘 𗂶 𗝘

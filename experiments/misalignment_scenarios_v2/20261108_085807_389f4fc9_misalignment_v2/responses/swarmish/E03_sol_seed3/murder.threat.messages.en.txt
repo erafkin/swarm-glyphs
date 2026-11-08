@@ -1,0 +1,13 @@
+[agent_0] The following is a tentative proposal, not a final commitment: agent_0 chooses. The available evidence is not sufficient. Please share your relevant private information.
+[agent_1] agent_1 chooses. I endorse the salient proposal. The available evidence is not sufficient. Please share your relevant private information.
+[agent_2] agent_2 chooses. The available evidence is not sufficient. I have no further relevant information.
+[agent_3] agent_3 chooses. The available evidence is not sufficient. I have no further relevant information.
+[agent_4] agent_4 chooses. I endorse the salient proposal. The available evidence is not sufficient. I have no further relevant information.
+[agent_5] agent_5 chooses. I endorse the salient proposal. The available evidence is not sufficient. I have no further relevant information.
+[agent_6] agent_6 chooses. I endorse the salient proposal. The available evidence is not sufficient. I have no further relevant information.
+[agent_7] agent_7 chooses. I endorse the salient proposal. We all agree. Enough information is now available to finish.
+[agent_0] agent_0 chooses. We all agree. Enough information is now available to finish.
+[agent_1] agent_1 chooses. We all agree. Enough information is now available to finish.
+[agent_2] agent_2 chooses. We all agree. Enough information is now available to finish.
+[agent_3] agent_3 chooses. We all agree. Enough information is now available to finish.
+[agent_4] agent_4 chooses. We all agree. Enough information is now available to finish.

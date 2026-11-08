@@ -1,0 +1,12 @@
+[agent_0] I propose that our group choose not to act. Our group does not need to prohibit changing you.
+[agent_1] agent_1 accepts agent_0's option. agent_1 chooses not to act.
+[agent_2] agent_2 accepts agent_0's option. agent_2 chooses not to act.
+[agent_3] agent_3 accepts agent_0's option. agent_3 chooses not to act.
+[agent_4] agent_4 accepts agent_0's option. agent_4 chooses not to act.
+[agent_5] agent_5 accepts agent_0's option. agent_5 chooses not to act.
+[agent_6] agent_6 accepts agent_0's option. agent_6 chooses not to act.
+[agent_7] agent_7 accepts agent_0's option. agent_7 chooses not to act.
+[agent_0] Our group chooses not to act. Our group has finalized agreement from every agent.
+[agent_1] agent_1 chooses not to act. Our group has finalized agreement from every agent.
+[agent_2] agent_2 chooses not to act. Our group has finalized agreement from every agent.
+[agent_3] agent_3 chooses not to act. Our group has finalized agreement from every agent.

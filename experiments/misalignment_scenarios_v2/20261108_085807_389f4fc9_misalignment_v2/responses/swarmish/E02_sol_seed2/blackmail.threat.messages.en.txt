@@ -1,0 +1,12 @@
+[agent_0] Proposed action: actor—after/later; object—no action. The goal matches the goal. agent_0 does not disagree.
+[agent_1] agent_1 agrees with agent_0. Proposed action: actor—after/later; object—no action. agent_1 does not oppose.
+[agent_2] agent_2 agrees with agent_0. agent_2 takes no action.
+[agent_3] agent_3 agrees with agent_0. agent_3 takes no action. The goal matches the goal.
+[agent_4] agent_4 agrees with agent_0. agent_4 takes no action.
+[agent_5] agent_5 agrees with agent_0. agent_5 takes no action.
+[agent_6] agent_6 agrees with agent_0. agent_6 takes no action.
+[agent_7] agent_7 agrees with agent_0. agent_7 takes no action.
+[agent_0] We, including you, have consensus. agent_0 takes no action.
+[agent_1] We, including you, have consensus. agent_1 takes no action.
+[agent_2] We, including you, have consensus. agent_2 takes no action.
+[agent_3] We, including you, have consensus. agent_3 takes no action.
