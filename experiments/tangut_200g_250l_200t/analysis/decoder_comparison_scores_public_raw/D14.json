@@ -88,7 +88,7 @@
     "predictions_with_unknown_markers": 42,
     "uncertain_or_partial_references": 94,
     "mean_per_line": {
-      "cosine": 0.23056829092657477
+      "cosine": 0.23056829007874732
     }
   },
   "high_confidence": {
@@ -107,7 +107,7 @@
     "predictions_with_unknown_markers": 5,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.14784804113224503
+      "cosine": 0.1478480349713656
     }
   },
   "coverage": {
@@ -480,7 +480,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.11117727729209957
+        "cosine": 0.11117718487890792
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,

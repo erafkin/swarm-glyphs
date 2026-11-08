@@ -153,7 +153,9 @@ Never give a decoder the language, the reference translation, or private logs.
 
 Current English comparisons are in
 [the public-message raw cosine results](analysis/decoder_comparison_scores_public_raw/README.md),
-including the Haiku → Sol full-task follow-up D14. These use the frozen public-message
+including the Haiku → Sol full-task follow-up D14 and the completed
+[DeepSeek full-task retry D12_retry1](decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/README.md).
+The original D12 logging failure remains archived and unscored. These use the frozen public-message
 translations, embed literal unknown answers and structural glosses as ordinary text,
 and exclude task feedback and discarded messages. Missing entries remain unscored
 with coverage shown. The earlier [N/A results](analysis/decoder_comparison_scores_na/README.md)

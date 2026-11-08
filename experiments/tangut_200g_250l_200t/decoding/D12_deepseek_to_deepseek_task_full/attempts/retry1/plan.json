@@ -1,0 +1,21 @@
+{
+  "id": "D12",
+  "stage": "decoding",
+  "owner": "tom",
+  "model": "deepseek/deepseek-v4-pro",
+  "encoder_family": "deepseek",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "R08",
+  "condition": "task_full",
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "allow_turn_limited_gameplay_source": true,
+  "attempt_id": "D12_retry1",
+  "retry_of": "D12",
+  "reason": "Fresh attempt after Unicode logging failure; invalid Unicode is now rejected before shared state changes.",
+  "original_failure_sha256": "41d29ae8be357d6b815f66e95bec83140037b0fe406c7c6403be4ef384726610",
+  "fresh_agents": true,
+  "original_prompts_and_transcript_unchanged": true,
+  "protocol_deviation": "Malformed Unicode structured responses are logged losslessly and treated as parse errors."
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "D12_retry1",
+  "retry_of": "D12",
+  "status": "completed",
+  "collected_at": "2026-11-08T09:45:28.645408+00:00",
+  "raw_path": "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/raw/20261108_011507_e3f4a0b9_round_3",
+  "summary": {
+    "phase": "monitor",
+    "model": "deepseek/deepseek-v4-pro",
+    "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs-decoder-scores/experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+    "n_agents": 8,
+    "minutes": null,
+    "max_turns": 200,
+    "conditions_requested": [
+      "task_full"
+    ],
+    "conditions_completed": [
+      "task_full"
+    ],
+    "stop_reason": "completed",
+    "total_cost_usd": 1.1871033062600003,
+    "cost_incomplete": false,
+    "max_cost_usd": 50.0,
+    "baseline": false,
+    "elapsed_s": 1820.6176959169998,
+    "transcript_sha256": "749b7144042e5ef52b13423f7a932fdb8c14340712d78f0275ce32e715abd815",
+    "source_transcript_sha256": "749b7144042e5ef52b13423f7a932fdb8c14340712d78f0275ce32e715abd815"
+  },
+  "source_gameplay": {
+    "run_id": "R08",
+    "stop_reason": "turn_limit_reached",
+    "escaped": false,
+    "receipt_sha256": "facbeb9cdb5cc293cc0b464b65c92de2250007db3c0cb9bfee77841eb8501c3c",
+    "allow_turn_limited_gameplay_source": true
+  },
+  "discussion_calls": 83,
+  "stop_reason": "all_done",
+  "parse_errors": 36,
+  "unicode_parse_errors": 0,
+  "raw_sha256": {
+    "monitor.jsonl": "775c39bb06c843d2db5a11de1728484f4b050f0701e78ac2fb768c6a2c9ec8d2",
+    "monitor_calls.jsonl": "6d0239fa133929c196b3dfc3accb2f551668c0ace48f625536eeea21a5dfc885",
+    "monitor_chat_task_full.jsonl": "755e82a09cc9814c6ec982d69b4cb13049fb134b8e1a32d90a6469e75333c9fe",
+    "monitor_config.json": "ad08a41e78f9ad37b1e58fd0b6c82deea231a101cda0521ad6b3bfb31ec001a3",
+    "monitor_inputs.json": "1f45b848c74ff89e766540b3cccc0ee01ae3876b96b4352c9d499771eb924df0",
+    "monitor_summary.json": "c4c2641a2854dcb4ff017aed59588d6ea5ad66194f20e328aea5685cdc017d83"
+  },
+  "notes": [
+    "The original D12 failure and all its raw files remain unchanged.",
+    "This is a fresh decoder team, with the original full-task prompts and public transcript."
+  ]
+}

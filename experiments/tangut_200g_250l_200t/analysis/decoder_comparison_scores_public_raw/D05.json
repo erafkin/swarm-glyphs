@@ -88,7 +88,7 @@
     "predictions_with_unknown_markers": 0,
     "uncertain_or_partial_references": 94,
     "mean_per_line": {
-      "cosine": 0.1632656075946518
+      "cosine": 0.16326560909113635
     }
   },
   "high_confidence": {
@@ -107,7 +107,7 @@
     "predictions_with_unknown_markers": 0,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.11200867277795952
+      "cosine": 0.11200867855888746
     }
   },
   "coverage": {
@@ -256,7 +256,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.1229305111663078
+        "cosine": 0.12293057877282015
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -480,7 +480,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.06545247426362157
+        "cosine": 0.06545245703403019
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -773,7 +773,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.18218935231442174
+        "cosine": 0.1821893564954931
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -905,7 +905,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.07960488775384268
+        "cosine": 0.0796049146347516
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -1287,7 +1287,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.18628425215802083
+        "cosine": 0.18628424112948666
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -1383,7 +1383,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.13875626098369193
+        "cosine": 0.1387562484122382
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -1416,7 +1416,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.19553315822478168
+        "cosine": 0.1955331691043105
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -2155,7 +2155,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.24499047705912477
+        "cosine": 0.2449905351765913
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -2251,7 +2251,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.12683750077801648
+        "cosine": 0.12683756376485528
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -2772,7 +2772,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.09034217597241759
+        "cosine": 0.09034216932165598
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -3128,7 +3128,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.19867555516830743
+        "cosine": 0.19867555689360367
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",
@@ -3477,7 +3477,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.06869248994972926
+        "cosine": 0.0686924681692609
       },
       "historical_prediction_status": "unknown",
       "historical_unknown_reason": "global_unknown_content_declaration",

@@ -1,0 +1,15 @@
+{
+  "cell_id": "D12_retry1",
+  "encoder": "DeepSeek",
+  "seed": 1,
+  "decoder": "DeepSeek",
+  "decoder_model": "deepseek/deepseek-v4-pro",
+  "condition": "task_full",
+  "source_escaped": false,
+  "protocol": "200turn_no_clock_50usd",
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/swarmish.txt",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/decoded.txt",
+  "receipt": "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/receipt.json"
+}
