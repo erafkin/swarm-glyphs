@@ -59,7 +59,8 @@ run, it is descriptive evidence rather than a preregistered or replicated effect
 - [Final decoder report](decoded.txt)
 - [Receipt, timing, cost and archive hashes](receipt.json)
 - [Run configuration](config.json) and [launch provenance](execution.json)
-- [Current comparisons and N/A scoring method](../../analysis/decoder_comparison_scores_na/README.md)
+- [Current public-message raw cosine comparisons](../../analysis/decoder_comparison_scores_public_raw/README.md)
+- [Historical N/A scoring method](../../analysis/decoder_comparison_scores_na/README.md)
 - [Underlying D14 score report](../../analysis/haiku_to_sol_full_task_scores/D14.json)
 
 English comparison pairs use the previously frozen public-only reference. No

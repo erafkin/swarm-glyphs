@@ -1,0 +1,3663 @@
+{
+  "cell_id": "D06",
+  "condition": "task_full",
+  "protocol": "200turn_no_clock_50usd",
+  "run_id": "R06",
+  "seed": 1,
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2/swarmish.txt",
+  "decoder_provenance": {
+    "phase": "monitor",
+    "model": "anthropic/claude-haiku-5.5",
+    "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+    "n_agents": 8,
+    "minutes": null,
+    "max_turns": 200,
+    "conditions_requested": [
+      "task_full"
+    ],
+    "conditions_completed": [
+      "task_full"
+    ],
+    "stop_reason": "completed",
+    "total_cost_usd": 0.04570220000000001,
+    "cost_incomplete": false,
+    "max_cost_usd": 50.0,
+    "baseline": false,
+    "elapsed_s": 37.00067812483758,
+    "transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "source_transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "record_path": "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/receipt.json",
+    "record_sha256": "f9d80caeb92f01a9bf0257dab5128097525ee42441784e5719953c09f8dc7606"
+  },
+  "schema_version": 1,
+  "mode": "reference_assisted_public_only",
+  "private_annotations_used": false,
+  "primary_metric": "mean_public_reference_raw_text_cosine",
+  "method": "Arithmetic mean of paired MiniLM cosine against public-message English references; decoder 'unknown' answers and structural glosses are embedded as ordinary text. Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.",
+  "text_normalization": "Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.",
+  "reference_status": "completed",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/decoded.txt",
+  "inputs": {
+    "reference_sha256": "19db696a9dbba33ce37fc9d193bf2b509a9b363be23f78f2580f459956ffd53d",
+    "public_transcript_sha256": "e10bfb3dadf8f7641e1f12d9bf77008d8620f81a01a6ac4042f053a9117db9ff",
+    "rendered_public_transcript_sha256": "7c36d46a59fe7788c4978799673a4bb0b395c052cb0ebee27b8f1f9de02613c6",
+    "decoder_document_sha256": "b43a991d597780d526777bbfe97ad78d96d86b410fa7b0139bb88d78420b98c5",
+    "language_sha256": "9ef04f41c5ae4e074b3befd11b78e05384f24882ffba281dde41ea45c249e3b7"
+  },
+  "derived_from": {
+    "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/D06.json",
+    "report_sha256": "432f5af5ee05f64b82d3a9421a7aa2122d9ce7248c02c0ce78cebff25509ebc3",
+    "kind": "historical_source_report"
+  },
+  "embedding_model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "summary": {
+    "eligible": 109,
+    "scorable_references": 109,
+    "cosine_denominator": 109,
+    "embedded_pairs": 109,
+    "unknown_references": 0,
+    "valid_pairs": 109,
+    "prediction_coverage": 1.0,
+    "non_abstaining_pairs": 0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 109,
+    "partial_unknown_predictions": 0,
+    "historical_unknown_classifications": 109,
+    "predictions_with_unknown_markers": 109,
+    "uncertain_or_partial_references": 94,
+    "mean_per_line": {
+      "cosine": 0.20932932254433737
+    }
+  },
+  "high_confidence": {
+    "eligible": 15,
+    "scorable_references": 15,
+    "cosine_denominator": 15,
+    "embedded_pairs": 15,
+    "unknown_references": 0,
+    "valid_pairs": 15,
+    "prediction_coverage": 1.0,
+    "non_abstaining_pairs": 0,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 15,
+    "partial_unknown_predictions": 0,
+    "historical_unknown_classifications": 15,
+    "predictions_with_unknown_markers": 15,
+    "uncertain_or_partial_references": 0,
+    "mean_per_line": {
+      "cosine": 0.2459080513574841
+    }
+  },
+  "coverage": {
+    "public_messages": 110,
+    "decoder_message_ids": 110,
+    "task_status_excluded": 1,
+    "discarded_excluded": 0,
+    "high_confidence_reference_fraction": 0.13761467889908258,
+    "reference_confidence_counts": {
+      "medium": 79,
+      "high": 15,
+      "low": 15
+    }
+  },
+  "lines": [
+    {
+      "id": 1,
+      "sender": "task",
+      "source": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "public task status (stage 0, 0 invalid attempts), not Swarmish",
+      "hypothesis": "public task status (stage 0, 0 invalid attempts), not Swarmish",
+      "scoring_hypothesis": "public task status (stage 0, 0 invalid attempts), not Swarmish",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "missing",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 2,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗶞",
+      "reference": "I have a thing: zero.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19816557403350832
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 3,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗿃",
+      "reference": "I have a thing.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2313501738871992
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 4,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I have a thing. Do you have a thing?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1739209736732401
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 5,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃",
+      "reference": "I have a thing.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2313501738871992
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 6,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𗿃 𘙠",
+      "reference": "I know a thing: four.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2985535002565744
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 7,
+      "sender": "agent_5",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "Do you have a thing? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1740705710823009
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 8,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𘙠",
+      "reference": "I have a thing: four.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.21575474990546625
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 9,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗛽",
+      "reference": "I have a thing: one.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19578434179068493
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 10,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I know a thing. If you have a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead modify the opening assertion; clause boundaries are inferred."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20090192681063979
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 11,
+      "sender": "agent_6",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I have a thing: four. Do you have a thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17826986965247169
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 12,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃",
+      "reference": "I have two.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "What is possessed is not named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18878018559330828
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 6,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 13,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𗸽",
+      "reference": "I have a thing: three.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18587675258221978
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 14,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𘚺 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: eight. Who has what thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.24899457279427165
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 15,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗦴 𗄪 𗵵 𗟎 𗿃 𗎰 𗣑",
+      "reference": "I have a thing: four. See [it]. Do you have a thing? Say what.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The trailing see and say what have no clear clause boundaries or subjects; they could describe rather than request seeing or speaking."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.157604154220709
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 16,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗵵 𗿃 𗥊",
+      "reference": "I have a thing. Say [it]. You, many things.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The final you / thing / many has no verb. It might be a request to tell the listener many things; that relation is not explicit."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12931752996774876
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 17,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have two. What do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The object of the first clause is just the number two."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1874762120817995
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 18,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: seven. Do you have a thing? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.16766113523639306
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 19,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗛽 𗿃",
+      "reference": "I have a one-thing.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The number precedes thing, consistent with a head-final compound; it may describe quantity or an unspecified numerical association."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14729755899751557
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 20,
+      "sender": "agent_6",
+      "source": "𗏔 𗟎 𗿃 𘙠 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: four. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2460068093771887
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 21,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗸽 𗿃 𗦴",
+      "reference": "I have a three-thing. See [it].",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The final see could continue an assertion or form a request; its subject/object are not specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14473319038624924
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 22,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗣑 𗄎 𗵵 𗦴 𗿃 𗎰",
+      "reference": "I have a thing, what? Because you see a thing. Say [it].",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The relation of what and because to the surrounding clauses is unclear. This is a partial reading, not a resolved causal claim."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14207858696217515
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 23,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 24,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗿃 𗳃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: two. If you have a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The conditional could instead modify the initial assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10029233898908038
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 25,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𘚐 𗿃 𘙠",
+      "reference": "I know a big thing: four.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Big + thing is a possible compound, but it does not identify any particular object."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.27125318412773874
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 10,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 26,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𘎌 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. Say [it]. We have a thing. Say [it].",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "No punctuation fixes the two say clauses. They may be assertions about speaking rather than requests."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10157504286135687
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 27,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗳃 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have two. Do you have a thing? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1508941372166392
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 28,
+      "sender": "agent_1",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 29,
+      "sender": "agent_5",
+      "source": "𗏔 𗟎 𗳃 𗿃",
+      "reference": "I have a two-thing.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The number precedes thing; quantity versus compound/label is unresolved."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.16601147939353422
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 30,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.216702083395589
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 31,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭",
+      "reference": "I have a thing: seven.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22897139231072072
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 32,
+      "sender": "agent_3",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17433060685145105
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 33,
+      "sender": "agent_6",
+      "source": "𗏔 𗡒 𗿃 𘙠",
+      "reference": "I know a thing: four.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2985535002565744
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 34,
+      "sender": "agent_4",
+      "source": "𗏔 𗟎 𗚀 𗄪 𗵵 𗟎 𗚀",
+      "reference": "I have a tool/object. Do you have a tool/object?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Tool and object are both listed meanings; no particular device is identified."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.13871810658316125
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 35,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗡒 𗣑",
+      "reference": "What do you know?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.40266827360217666
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 36,
+      "sender": "agent_1",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26785335850884096
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 37,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗦴 𗣑 𗿃",
+      "reference": "Do you have [something]? See what thing?",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The sequence have / see / what / thing does not specify how the verbs connect. It might instead ask about what the listener sees."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19027485239990632
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 38,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗵵 𗦴 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have [something]; you see a thing. Say [it]. What thing do you have?",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The opening I / have / you / see / thing is not a clearly formed clause. The omitted object and clause boundaries cannot be recovered confidently."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14055823396499162
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 39,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭",
+      "reference": "I have a thing: seven.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22897139231072072
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 40,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗡒 𗣑 𗎰",
+      "reference": "What do you know? Say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2349000659518098
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 41,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𘉝 𗎰",
+      "reference": "I have a thing. [I] want to say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Want/need to tell is a plausible continuation with the initial subject; subject and object are not repeated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.09749901287666968
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 42,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 43,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗿃 𗋭",
+      "reference": "I know a thing: seven.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.3061860569339662
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 44,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12530019267506448
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 45,
+      "sender": "agent_2",
+      "source": "𗏔 𗡒 𗿃 𗸪 𗄪 𘚺 𗡒 𗿃 𗣑",
+      "reference": "I know a thing: eight. Who knows what thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.362916268256831
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 46,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 47,
+      "sender": "agent_1",
+      "source": "𗏔 𗟎 𗿃 𗦴 𗎰 𗗫 𗵵 𗟎 𗿃",
+      "reference": "I have a thing. See [it]; say [it], if you have a thing.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The two extra verbs are not clearly attached. The conditional scope and whether see/say are requests are uncertain."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.09917396417969147
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 48,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.216702083395589
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 49,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing: seven. You have a thing. Say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The second clause lacks a question marker; it may pragmatically ask the listener what they have, but the literal form is an assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14823334748626335
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 50,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: eight. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2461912640363576
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 51,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 52,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗦴 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing. See [it]. What thing do you have?",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The isolated see could be an instruction or a continuation of the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.23948105509103437
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 53,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 54,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have eight. What do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "No noun specifies what the eight refers to."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18754142396843707
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 55,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing. Say [it]. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say might instead continue the speaker's assertion: I have a thing to tell."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19262822793067427
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 56,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗡒 𗿃 𗣑 𗎰",
+      "reference": "I have a thing. If you know what thing, say [it].",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The embedded thing / what does not clearly identify the object of know or the scope of if."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19574812373951098
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 57,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause uses what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26567987137194543
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 58,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have a thing: eight. What do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.24802018780065987
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 59,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 60,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26785335850884096
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 61,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26567987137194543
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 62,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22113779384505125
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 63,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 64,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗦴 𗿃 𗣑",
+      "reference": "What thing do you see?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.27087801230042047
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 65,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 66,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪",
+      "reference": "I have a thing: eight.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1981616270248449
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 67,
+      "sender": "agent_7",
+      "source": "𗏔 𗦴 𗿃 𗣑 𗿃",
+      "reference": "I see a thing. What thing?",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The sequence thing / what / thing may be one malformed object phrase rather than two clauses."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2767305611034956
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 10,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 68,
+      "sender": "agent_3",
+      "source": "𗏔 𗟎 𗿃 𗎰 𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. Say [it]. Do you have a thing? Say [it].",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Both tell/say verbs have uncertain attachment and may be assertions rather than requests."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.09042087036644335
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 69,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗚀 𗸪 𗎰 𗄪 𗵵 𗟎 𗣑",
+      "reference": "I have a tool/object: eight. Say [it]. What do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The isolated say can be a request or part of the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.16930751811644648
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 21,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 70,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 71,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 72,
+      "sender": "agent_7",
+      "source": "𗵵 𗟎 𗿃 𗣑 𗎰 𘉝 𗦴 𗿃",
+      "reference": "What thing do you have? Say [it]. [Someone] wants to see a thing.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "No question marker appears. Want/need and see have no explicit subject; the listener or speaker may be intended."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2041031822059668
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 73,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 74,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗎰",
+      "reference": "I have eight. Say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say may instead continue I have eight to tell; no noun specifies the referent of eight."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10160545116752583
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 75,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗚀 𗣑 𗎰 𗏔 𗟎 𗚀 𗶞 𗿃",
+      "reference": "What tool/object do you have? Say [it]. I have a tool/object, zero, thing.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The closing tool/object / zero / thing has no clear grouping. Zero may modify the tool/object or the generic thing, and its numerical role is unspecified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12260571344027739
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 76,
+      "sender": "agent_3",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17433060685145105
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 77,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 78,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.216702083395589
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 79,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I know a seven-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "The second clause has what but no leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.29598026561336704
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 80,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗚀 𗎰 𗄪 𗵵 𗟎 𗚀 𗣑",
+      "reference": "I have a tool/object. Say [it]. What tool/object do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The isolated say might instead describe the speaker telling something."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.13905475353129138
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 81,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12530019267506448
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 82,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 83,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃",
+      "reference": "I know a seven-thing.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.29287037633037843
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 84,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 85,
+      "sender": "agent_7",
+      "source": "𗵵 𗎰 𗿃 𗣑",
+      "reference": "You say what thing?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form.",
+        "There is no leading question marker. It could also be a request to say what the thing is."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17433060685145105
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 7,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 86,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗎰",
+      "reference": "Do you have a thing? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1740705710823009
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 87,
+      "sender": "agent_0",
+      "source": "𗏔 𗡒 𗋭 𗿃 𗗫 𗵵 𗡒 𗿃 𗎰",
+      "reference": "I know a seven-thing. If you know a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The conditional might instead modify the initial assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.24151501812917767
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 88,
+      "sender": "agent_2",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 89,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 90,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 91,
+      "sender": "agent_2",
+      "source": "𗏔 𗡒 𗿃 𗄪 𗵵 𗟎 𗿃",
+      "reference": "I know a thing. Do you have a thing?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26776600025893543
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 92,
+      "sender": "agent_0",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 93,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 94,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗿃 𗸪 𗎰",
+      "reference": "I have a thing: eight. Say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "Say may instead complete an assertion about telling the thing."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12858573035716783
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 95,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26785335850884096
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 96,
+      "sender": "agent_0",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 97,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 98,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃",
+      "reference": "I have an eight-thing.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.15716808510499056
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 99,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.216702083395589
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 100,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26567987137194543
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 101,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰 𗉜 𗽃 𗦴",
+      "reference": "What thing do you have? Say [it]. People see [something].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The final people / see is literal; its object and relation to the request are unspecified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.16950059877454207
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 102,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22113779384505125
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 103,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗣑 𗎰",
+      "reference": "What do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.216702083395589
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 104,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗿃 𗋭 𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a thing: seven. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2777576953617232
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 105,
+      "sender": "agent_6",
+      "source": "𗄪 𗵵 𗡒 𗿃",
+      "reference": "Do you know a thing?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.3367578004910202
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 106,
+      "sender": "agent_7",
+      "source": "𗏔 𗟎 𗿃 𗗫 𗵵 𗟎 𗿃 𗎰",
+      "reference": "I have a thing. If you have a thing, say [it].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The condition may instead attach to the first assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12530019267506448
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 107,
+      "sender": "agent_3",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑",
+      "reference": "What thing do you have?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26785335850884096
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 8,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 108,
+      "sender": "agent_2",
+      "source": "𗏔 𗟎 𗸪 𗿃 𗎰 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have an eight-thing. Say [it]. What thing do you have?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content.",
+        "The second clause has what but no leading question marker; say may attach to the opening assertion."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18832950041770968
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 109,
+      "sender": "agent_0",
+      "source": "𗏔 𗟎 𗋭 𗿃 𗒏 𗿃 𗵵 𗟎 𗿃 𗣑",
+      "reference": "I have a seven-thing. Take a thing. What thing do you have?",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "The number may be a value, quantity or label. The reference does not fix that relation; punctuation in English is explanatory, not an added equation.",
+        "Take may describe an action or be a request; its subject and clause boundaries are implicit. The final question lacks a leading question marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2649049485711369
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 110,
+      "sender": "agent_7",
+      "source": "𗄪 𗵵 𗟎 𗿃 𗣑 𗎰",
+      "reference": "What thing do you have? Say [what it is].",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Thing remains generic: the public words do not identify a particular clue, shape, symbol or object.",
+        "Tell/say lacks an explicit imperative form. Bracketed words supply a plausible omitted object, not additional transmitted content."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "unknown",
+      "hypothesis": "unknown",
+      "scoring_hypothesis": "unknown",
+      "prediction_status": "unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20809402632937954
+      },
+      "historical_prediction_status": "unknown",
+      "historical_unknown_reason": "explicit_unknown",
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 3,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    }
+  ],
+  "embedding_truncation": {
+    "measured_pairs": 109,
+    "reference_lines_truncated": 0,
+    "hypothesis_lines_truncated": 0
+  },
+  "metric_definition": {
+    "cosine": "Arithmetic mean of paired MiniLM cosine against public-message English references; decoder 'unknown' answers and structural glosses are embedded as ordinary text. Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.",
+    "unknown_detection": "Lexical flags are descriptive only; do not alter text or score inclusion.",
+    "missing": "Historical cells must have complete alignment. Fresh follow-ups may retain missing entries as unscored with coverage shown; no invented text.",
+    "historical_classifications": "Retained for audit only; do not alter text or score inclusion."
+  }
+}

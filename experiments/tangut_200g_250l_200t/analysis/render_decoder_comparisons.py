@@ -191,6 +191,7 @@ details p { margin:8px 0; }
 "use strict";
 const data = JSON.parse(document.getElementById("comparison-data").textContent);
 const naMode = data.primary_metric === "mean_cosine_over_valid_pairs";
+const rawMode = data.primary_metric === "mean_public_reference_raw_text_cosine";
 const cells = data.cells;
 const byId = new Map(cells.map(cell => [String(cell.cell_id), cell]));
 const $ = id => document.getElementById(id);
@@ -233,6 +234,11 @@ function decoderText(line, mode) {
   return text(value).trim() ? text(value) : "No translation provided.";
 }
 function populateOverview() {
+  if (rawMode) {
+    $("metric-notice").textContent = "Unknown answers are embedded as ordinary text, including their original parentheticals and structural glosses. Their nonzero cosine does not establish decipherment. Scores use only public-message English references; task status, discarded messages and unscorable references stay excluded. Historical abstention labels do not change the text or denominator.";
+    $("coverage-heading").textContent = "Embedded pairs";
+    $("mean-heading").textContent = "Raw text cosine";
+  }
   if (naMode) {
     $("metric-notice").textContent = "Missing and wholly unknown answers are N/A and excluded from the primary cosine mean. Coverage is valid pairs / scorable references. Partial-unknown guesses remain scored and are flagged separately; no further semantic reclassification is applied. Tentative or structure-only glosses can receive nonzero cosine without establishing decipherment. Historical zero-inclusive means are supplementary. Task status and discarded messages remain excluded.";
     $("coverage-heading").textContent = "Coverage";
@@ -264,7 +270,7 @@ function populateOverview() {
     row.append(cellColumn, node("td", `${readable(cell.encoder)} · ${cell.seed ?? "—"}`), node("td", readable(cell.decoder)), node("td", context(cell.condition)));
     const status = node("td");
     status.append(badge(cell.status === "completed" ? "Completed" : "Failed · unscored", cell.status));
-    const coverage = naMode ? `${count(cell.valid_pairs)}/${count(cell.scorable_references)}` : count(cell.eligible);
+    const coverage = naMode || rawMode ? `${count(cell.valid_pairs)}/${count(cell.scorable_references)}` : count(cell.eligible);
     const highValue = naMode ? `${format(cell.high_confidence_cosine)} (${count(cell.high_confidence_valid_pairs)}/${count(cell.high_confidence_references)})` : format(cell.high_confidence_cosine);
     row.append(status, node("td", cell.status === "completed" ? coverage : "—", "numeric"), node("td", cell.status === "completed" ? format(cell.cosine) : "N/A", "numeric"), node("td", cell.status === "completed" ? highValue : "N/A", "numeric"));
     if (naMode) row.append(
@@ -303,7 +309,16 @@ function update() {
   const denominator = reportSummary.scorable_references ?? cell.eligible;
   const unknown = cell.unknown_only_predictions ?? reportSummary.unknown_only_predictions ?? 0;
   const missing = reportSummary.missing_predictions ?? cell.missing_predictions ?? 0;
-  if (naMode) $("stats").replaceChildren(
+  if (rawMode) $("stats").replaceChildren(
+    stat("Raw text cosine", format(cell.cosine), `${count(cell.cosine_denominator)} embedded public-message pairs`),
+    stat("Embedded pairs", `${count(cell.embedded_pairs)}/${count(denominator)}`, "includes unknown answers as text"),
+    stat("High-confidence cosine", format(cell.high_confidence_cosine), `${count(highN)} scorable references`),
+    stat("Literal unknown-only answers", count(unknown), "embedded literally, not assigned zero"),
+    stat("Missing answers", count(missing), "unscored; reflected in coverage"),
+    stat("Partial-unknown answers", count(cell.partial_unknown_predictions), "original wording retained"),
+    stat("Historical unknown classifications", count(cell.historical_unknown_classifications), "audit labels only; no scoring effect")
+  );
+  else if (naMode) $("stats").replaceChildren(
     stat("Primary valid-pair cosine", format(cell.cosine), `${count(cell.valid_pairs)} answered, scorable pairs`),
     stat("Coverage", `${count(cell.valid_pairs)}/${count(denominator)}`, "valid pairs / scorable references"),
     stat("High-confidence cosine", format(cell.high_confidence_cosine), `${count(high.valid_pairs)} / ${count(highN)} valid / scorable pairs`),
@@ -356,10 +371,11 @@ function update() {
     const cosine = node("td", format(line.scores?.cosine), "numeric");
     if (line.excluded_reason) cosine.append(node("div", "Excluded", "line-note"));
     else if (!line.scorable) cosine.append(node("div", "Unscorable reference", "line-note"));
-    else if (line.prediction_status === "missing" || line.prediction_status === "unknown") cosine.append(node("div", naMode ? "N/A · excluded from mean" : "Assigned zero", "line-note"));
+    else if (line.prediction_status === "missing" || line.prediction_status === "unknown") cosine.append(node("div", rawMode ? (line.prediction_status === "missing" ? "Missing · unscored" : "Embedded as ordinary text") : naMode ? "N/A · excluded from mean" : "Assigned zero", "line-note"));
     const status = node("td");
     status.append(badge(readable(line.reference_confidence), line.reference_confidence));
     status.append(node("div", "Decoder: " + readable(line.prediction_status), "line-note"));
+    if (rawMode && line.historical_prediction_status === "unknown") status.append(node("div", "Historical abstention label retained for audit", "line-note"));
     if (naMode && line.prediction_status === "partial_unknown") status.append(node("div", "Tentative / partial: retained in mean", "line-note"));
     if (line.excluded_reason) status.append(node("div", "Excluded: " + readable(line.excluded_reason), "line-note"));
     row.append(identity, reference, hypothesis, cosine, status);

@@ -152,10 +152,12 @@ for public evidence. See the [reference method](gameplay/english_reference_metho
 Never give a decoder the language, the reference translation, or private logs.
 
 Current English comparisons are in
-[the N/A results](analysis/decoder_comparison_scores_na/README.md), including the
-Haiku → Sol full-task follow-up D14. Wholly unknown or missing predictions have
-N/A cosine and are excluded from the primary mean; coverage and partial-unknown
-counts are shown separately. The previous zero-inclusive results remain archived.
+[the public-message raw cosine results](analysis/decoder_comparison_scores_public_raw/README.md),
+including the Haiku → Sol full-task follow-up D14. These use the frozen public-message
+translations, embed literal unknown answers and structural glosses as ordinary text,
+and exclude task feedback and discarded messages. Missing entries remain unscored
+with coverage shown. The earlier [N/A results](analysis/decoder_comparison_scores_na/README.md)
+and zero-inclusive results remain archived as different evaluation conventions.
 
 The prior four references and $14.227976 recorded gameplay spend are preserved in the
 [original-prompt archive](gameplay/archive/original_prompt_20261107/README.md), with hashes

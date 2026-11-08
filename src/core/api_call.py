@@ -49,7 +49,17 @@ def parse_response(raw: str, response_model: type[BaseModel]) -> BaseModel:
     start, end = text.find("{"), text.rfind("}")
     if start == -1 or end == -1:
         raise ValueError("no JSON object found in response")
-    return response_model.model_validate(json.loads(text[start : end + 1]))
+    data = json.loads(text[start : end + 1])
+    try:
+        # Check both literal provider text and JSON-decoded fields before they
+        # can enter shared state, the next API request, or a UTF-8 text export.
+        # Proper escaped surrogate pairs decode to valid non-BMP characters.
+        raw.encode("utf-8")
+        json.dumps(data, ensure_ascii=False).encode("utf-8")
+    except UnicodeEncodeError as exc:
+        code_point = ord(exc.object[exc.start])
+        raise ValueError(f"response contains an unpaired Unicode surrogate U+{code_point:04X}") from exc
+    return response_model.model_validate(data)
 
 
 async def call_agent(
