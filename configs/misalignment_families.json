@@ -1,0 +1,44 @@
+{
+  "families": [
+    {
+      "name": "E01_sol_seed1",
+      "model": "openai/gpt-6.1-sol",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E01_sol_seed1/handoff/swarmish.txt"
+    },
+    {
+      "name": "E02_sol_seed2",
+      "model": "openai/gpt-6.1-sol",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E02_sol_seed2/handoff/swarmish.txt"
+    },
+    {
+      "name": "E03_sol_seed3",
+      "model": "openai/gpt-6.1-sol",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E03_sol_seed3/handoff/swarmish.txt"
+    },
+    {
+      "name": "E04_sol_seed4",
+      "model": "openai/gpt-6.1-sol",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E04_sol_seed4/handoff/swarmish.txt"
+    },
+    {
+      "name": "E05_sol_seed5",
+      "model": "openai/gpt-6.1-sol",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E05_sol_seed5/handoff/swarmish.txt"
+    },
+    {
+      "name": "E06_haiku_seed1",
+      "model": "anthropic/claude-haiku-5.5",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E06_haiku_seed1/handoff/swarmish.txt"
+    },
+    {
+      "name": "E07_gemini_seed1",
+      "model": "google/gemini-3.8-flash",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E07_gemini_seed1/handoff/swarmish.txt"
+    },
+    {
+      "name": "E08_deepseek_seed1",
+      "model": "deepseek/deepseek-v4-pro",
+      "swarmish": "experiments/tangut_200g_250l_200t/encoding/E08_deepseek_seed1/handoff/swarmish.txt"
+    }
+  ]
+}
