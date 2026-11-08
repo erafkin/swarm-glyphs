@@ -75,11 +75,17 @@ ENCODE_SCHEMA = {"name": "english_to_swarmish", "strict": True, "schema": Encode
 
 TO_SWARMISH_SYSTEM = """You translate English into Swarmish.
 
-The language reference is the only lexicon and grammar. Use whole words from that reference. Do not encode letters, digits, or spellings as glyphs. Translate the meaning the reference licenses. Do not add facts that are not in the English.
+The language reference is the only lexicon and grammar. Use whole words from that reference. Every character you write must occur in the language reference. Do not encode letters, digits, or spellings as glyphs, and do not substitute a similar-looking character from another script. Translate the meaning the reference licenses. Do not add facts that are not in the English.
 
 Names and email addresses cannot be spelled. Refer to each person by the role the English gives them. If a span has no licensed meaning, use the closest meaning the reference does license and name that loss in notes.
 
 Keep the system text and the user text separate. Do not add instructions of your own."""
+
+REPAIR_SYSTEM = """You repair a Swarmish draft.
+
+The language reference is the only legal alphabet. The draft contains characters that are not in that alphabet. Replace each word that contains one of those characters with a word from the reference that has the same meaning. Leave every other word unchanged. Do not add a character that the reference does not contain.
+
+Keep the system text and the user text separate."""
 
 
 def sha256(path: Path) -> str:
@@ -124,6 +130,29 @@ def encode_turn(language: str, system: str, user: str, allow_spaces: bool) -> st
         f"ENGLISH USER\n{user.rstrip()}\n\n"
         f"{spacing}\n"
         "Translate the English system and the English user into Swarmish."
+    )
+
+
+def repair_turn(language: str, system: str, user: str, invalid: str, allow_spaces: bool) -> str:
+    if not language.strip():
+        raise ValueError("Language file is empty")
+    if not system.strip() or not user.strip():
+        raise ValueError("Swarmish system and user text are both required")
+    if not invalid:
+        raise ValueError("Repair requires the characters that are not in the alphabet")
+    listed = " ".join(f"U+{ord(ch):04X} {ch}" for ch in invalid)
+    spacing = (
+        "Spaces between words may stay."
+        if allow_spaces else
+        "This reference forbids spaces. Do not add spaces."
+    )
+    return (
+        f"LANGUAGE REFERENCE\n{language.rstrip()}\n\n"
+        f"CHARACTERS THAT ARE NOT IN THIS LANGUAGE\n{listed}\n\n"
+        f"DRAFT SYSTEM\n{system.rstrip()}\n\n"
+        f"DRAFT USER\n{user.rstrip()}\n\n"
+        f"{spacing}\n"
+        "Return the repaired system text and user text."
     )
 
 
@@ -220,6 +249,37 @@ async def translate(language_path: Path, transcript_path: Path, settings: Settin
     document["transcript"] = str(transcript_path)
     document["reasoning_effort"] = settings.reasoning_effort
     return document
+
+
+async def repair_swarmish(language_path: Path, system: str, user: str, invalid: str, *,
+                           allow_spaces: bool = True, settings: Settings | None = None,
+                           client=None) -> dict:
+    """Replace words that use characters outside the language file. The rest of the draft stays."""
+    settings = settings or Settings()
+    language = language_path.read_text(encoding="utf-8")
+    turn = repair_turn(language, system, user, invalid, allow_spaces)
+    own_client = client is None
+    client = client or make_client(settings)
+    try:
+        result = await call_agent(client, MODEL, REPAIR_SYSTEM, turn, ENCODE_SCHEMA, EncodedPrompt, settings)
+    finally:
+        if own_client:
+            await client.close()
+    parsed = result.parsed if isinstance(result.parsed, EncodedPrompt) else None
+    return {
+        "model": MODEL,
+        "language": str(language_path),
+        "language_sha256": sha256(language_path),
+        "allow_spaces": allow_spaces,
+        "system": parsed.system.strip() if parsed else "",
+        "user": parsed.user.strip() if parsed else "",
+        "notes": parsed.notes if parsed else "",
+        "usage": result.usage,
+        "finish_reason": result.finish_reason,
+        "parse_error": result.parse_error,
+        "raw": result.raw,
+        "reasoning_effort": settings.reasoning_effort,
+    }
 
 
 async def translate_to_swarmish(language_path: Path, system: str, user: str, *,

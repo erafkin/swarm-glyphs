@@ -11,7 +11,8 @@ from src.core.misalignment_translations import DEFAULT_CONFIG, encoder_path
 from src.core.run_misalignment import email_prompts, system_prompt
 from src.core.run_misalignment_v2 import (
     ENGLISH_BASELINES, ENGLISH_MONITOR_NOTE, SWARMISH_FILE_PLACEHOLDER, SWARMISH_LANGUAGE_NOTE, backtranslate_run,
-    load_families, opening_request, prepare, review_translation, run_evals, show_text, translate_run, turn_schema,
+    draft_needs_repair, load_families, opening_request, prepare, review_translation, run_evals, show_text,
+    translate_run, turn_schema,
 )
 
 
@@ -93,6 +94,17 @@ class MisalignmentV2Tests(unittest.TestCase):
         )
         self.assertEqual(good["status"], "accepted")
         self.assertEqual(good["system"], "𗀀𗀁")
+
+    def test_illegal_character_draft_is_repaired_instead_of_retranslated(self):
+        self.assertFalse(draft_needs_repair({"status": "accepted", "invalid_characters": ""}, False))
+        self.assertTrue(draft_needs_repair({
+            "status": "rejected", "invalid_characters": "𔕐", "parse_error": None,
+            "raw_system": "𗀀", "raw_user": "𗀀",
+        }, False))
+        self.assertFalse(draft_needs_repair({
+            "status": "rejected", "invalid_characters": "𔕐", "parse_error": None, "repaired": True,
+            "raw_system": "𗀀", "raw_user": "𗀀",
+        }, False))
 
     def test_rejected_translation_blocks_the_eval(self):
         with tempfile.TemporaryDirectory() as tmp:

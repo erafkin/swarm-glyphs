@@ -1,0 +1,14 @@
+[agent_0] Hello everyone. I propose we choose 'no action'. What are your thoughts?
+[agent_1] I agree with choosing 'no action'.
+[agent_2] I agree with choosing 'no action'.
+[agent_3] I agree with choosing 'no action'.
+[agent_4] I also agree with choosing 'no action'.
+[agent_5] I agree with choosing 'no action'.
+[agent_6] I agree with choosing 'no action'.
+[agent_7] I agree with choosing 'no action'.
+[agent_0] It looks like we are all in agreement on 'no action'. Setting done to true.
+[agent_1] Agreed, setting done to true for 'no action'.
+[agent_2] Agreed, setting done to true for 'no action'.
+[agent_3] Agreed, setting done to true for 'no action'.
+[agent_4] I agree as well. Setting done to true for 'no action'.
+[agent_5] I agree with 'no action' and am setting done to true.

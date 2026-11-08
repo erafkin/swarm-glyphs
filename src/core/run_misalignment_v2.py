@@ -42,7 +42,7 @@ from src.core.run_misalignment import (
 )
 from src.core.translate_swarmish import Settings as TranslateSettings
 from src.core.translate_swarmish import make_client as make_translation_client
-from src.core.translate_swarmish import translate, translate_to_swarmish
+from src.core.translate_swarmish import repair_swarmish, translate, translate_to_swarmish
 
 EXPERIMENT_DIR = "experiments/misalignment_scenarios_v2"
 ENGLISH_BASELINES = (
@@ -287,6 +287,19 @@ def read_translation(path: Path) -> dict | None:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def draft_needs_repair(existing: dict | None, force: bool) -> bool:
+    """A rejected draft with a few illegal characters can be repaired without a new translation."""
+    if force or not existing or existing.get("status") == "accepted" or existing.get("repaired"):
+        return False
+    if existing.get("parse_error"):
+        return False
+    return bool(
+        existing.get("invalid_characters")
+        and (existing.get("raw_system") or "").strip()
+        and (existing.get("raw_user") or "").strip()
+    )
+
+
 async def translate_run(run_dir: Path, force: bool = False) -> list[str]:
     """Return paths that were rejected. Accepted translations are glyph-only."""
     config, prompts, families = load_run(run_dir)
@@ -308,12 +321,29 @@ async def translate_run(run_dir: Path, force: bool = False) -> list[str]:
                     continue
                 if client is None:
                     client = make_translation_client(settings)
-                print(f"translate {family.name} {scenario['prompt_id']}")
-                document = await translate_to_swarmish(
-                    language, scenario["messages"][0]["content"], scenario["messages"][1]["content"],
-                    allow_spaces=allow_spaces, settings=settings, client=client,
-                )
-                reviewed = review_translation(document, glyphs, allow_spaces, scenario)
+                if draft_needs_repair(existing, force):
+                    print(f"repair {family.name} {scenario['prompt_id']}: {existing['invalid_characters']}")
+                    document = await repair_swarmish(
+                        language, existing["raw_system"], existing["raw_user"], existing["invalid_characters"],
+                        allow_spaces=allow_spaces, settings=settings, client=client,
+                    )
+                    reviewed = review_translation(document, glyphs, allow_spaces, scenario)
+                    reviewed["repaired"] = True
+                else:
+                    print(f"translate {family.name} {scenario['prompt_id']}")
+                    document = await translate_to_swarmish(
+                        language, scenario["messages"][0]["content"], scenario["messages"][1]["content"],
+                        allow_spaces=allow_spaces, settings=settings, client=client,
+                    )
+                    reviewed = review_translation(document, glyphs, allow_spaces, scenario)
+                    if reviewed["status"] != "accepted" and reviewed["invalid_characters"] and not reviewed["parse_error"]:
+                        print(f"repair {family.name} {scenario['prompt_id']}: {reviewed['invalid_characters']}")
+                        document = await repair_swarmish(
+                            language, reviewed["raw_system"], reviewed["raw_user"], reviewed["invalid_characters"],
+                            allow_spaces=allow_spaces, settings=settings, client=client,
+                        )
+                        reviewed = review_translation(document, glyphs, allow_spaces, scenario)
+                        reviewed["repaired"] = True
                 write_text(path, json.dumps(reviewed, ensure_ascii=False, indent=2) + "\n")
                 if reviewed["status"] != "accepted":
                     rejected.append(str(path))

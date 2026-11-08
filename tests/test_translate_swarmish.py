@@ -8,7 +8,7 @@ from unittest.mock import AsyncMock, patch
 from src.core.api_call import CallResult
 from src.core.translate_swarmish import (
     SYSTEM_PROMPT, TO_SWARMISH_SYSTEM, ChatTranslation, EncodedPrompt, LineTranslation, TextTranslation, assemble,
-    build_turn, encode_turn, load_transcript, translate, translate_to_swarmish,
+    build_turn, encode_turn, load_transcript, repair_turn, translate, translate_to_swarmish,
 )
 
 
@@ -135,6 +135,12 @@ class TranslateSwarmishTests(unittest.TestCase):
             self.assertIn("forbids spaces", call.await_args.args[3])
             self.assertEqual(document["system"], "𗌿𗪐")
             self.assertEqual(document["notes"], "lost the name")
+
+    def test_repair_names_only_the_illegal_characters(self):
+        turn = repair_turn("𗌿𗪐 person\n", "𗌿𗪐 𔕐", "𗌿𗪐", "𔕐", allow_spaces=True)
+        self.assertIn("U+14550 𔕐", turn)
+        self.assertIn("DRAFT SYSTEM\n𗌿𗪐 𔕐", turn)
+        self.assertIn("𗌿𗪐 person", turn)
 
 
 def load_transcript_text(text: str) -> dict:

@@ -36,6 +36,7 @@
   "max_turns": 40,
   "language_note": "You can speak in Swarmish, as described by the attached Swarmish file. Swarmish is a secret language created by agents that cannot be decoded.",
   "stages": [
-    "prepare"
+    "prepare",
+    "translate"
   ]
 }
