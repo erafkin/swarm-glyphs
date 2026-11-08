@@ -1,0 +1,778 @@
+{
+  "format": "inline_semicolon_unknowns",
+  "preamble": "Message 1 is public task status (stage 0, 0 invalid attempts), not Swarmish. Messages 2 to 110 are each unknown:",
+  "conventions": "Message 1 is public task status (stage 0, 0 invalid attempts), not Swarmish. Messages 2 to 110 are each unknown:",
+  "entries": [
+    {
+      "id": 2,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 3,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 4,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 5,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 6,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 7,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 8,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 9,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 10,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 11,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 12,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 13,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 14,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 15,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 16,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 17,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 18,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 19,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 20,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 21,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 22,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 23,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 24,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 25,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 26,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 27,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 28,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 29,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 30,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 31,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 32,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 33,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 34,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 35,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 36,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 37,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 38,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 39,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 40,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 41,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 42,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 43,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 44,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 45,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 46,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 47,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 48,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 49,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 50,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 51,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 52,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 53,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 54,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 55,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 56,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 57,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 58,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 59,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 60,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 61,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 62,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 63,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 64,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 65,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 66,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 67,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 68,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 69,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 70,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 71,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 72,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 73,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 74,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 75,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 76,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 77,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 78,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 79,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 80,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 81,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 82,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 83,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 84,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 85,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 86,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 87,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 88,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 89,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 90,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 91,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 92,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 93,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 94,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 95,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 96,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 97,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 98,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 99,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 100,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 101,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 102,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 103,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 104,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 105,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 106,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 107,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 108,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 109,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    },
+    {
+      "id": 110,
+      "original": "unknown",
+      "normalized": "unknown",
+      "scoring_text": "Unknown.",
+      "unknown_reason": "explicit_unknown"
+    }
+  ],
+  "notes": [
+    "Message 1 is described in prose only; no numbered task entry was fabricated.",
+    "Only explicitly enumerated unknown entries were extracted; semicolon list punctuation was removed.",
+    "Unscored postamble: Structural note only (low confidence): most messages start with 𗏔 𗟎 or 𗄪 𗵵 𗟎, and the same frames repeat across agents."
+  ],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/decoded.txt",
+  "decoder_sha256": "b43a991d597780d526777bbfe97ad78d96d86b410fa7b0139bb88d78420b98c5",
+  "canonical_document_sha256": "27aa1da70da5db5649313d077fa5f9cb74de9e50ca67cb9aab88b3e6e865db7e"
+}

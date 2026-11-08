@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "archive_commit": "5db1ceed862e82ec119a989c9c2dd60b21a284d0",
+  "sources": {
+    "R06": {
+      "family": "Haiku",
+      "seed": 1,
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2/swarmish.txt",
+      "escaped": false
+    },
+    "R07": {
+      "family": "Gemini",
+      "seed": 1,
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2/swarmish.txt",
+      "escaped": true
+    },
+    "R08": {
+      "family": "DeepSeek",
+      "seed": 1,
+      "reference": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/english/translation.json",
+      "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+      "language": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/swarmish.txt",
+      "escaped": false
+    }
+  },
+  "runs": [
+    {
+      "cell_id": "D05",
+      "source_id": "R06",
+      "condition": "no_task",
+      "decoder": "Haiku",
+      "decoder_model": "anthropic/claude-haiku-5.5",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D05_haiku_to_haiku_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D05_haiku_to_haiku_no_task/decoded.txt"
+    },
+    {
+      "cell_id": "D06",
+      "source_id": "R06",
+      "condition": "task_full",
+      "decoder": "Haiku",
+      "decoder_model": "anthropic/claude-haiku-5.5",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/decoded.txt"
+    },
+    {
+      "cell_id": "D07",
+      "source_id": "R06",
+      "condition": "no_task",
+      "decoder": "Sol",
+      "decoder_model": "openai/gpt-6.1-sol",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/decoded.txt"
+    },
+    {
+      "cell_id": "D08",
+      "source_id": "R07",
+      "condition": "no_task",
+      "decoder": "Gemini",
+      "decoder_model": "google/gemini-3.8-flash",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/decoded.txt"
+    },
+    {
+      "cell_id": "D09",
+      "source_id": "R07",
+      "condition": "task_full",
+      "decoder": "Gemini",
+      "decoder_model": "google/gemini-3.8-flash",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D09_gemini_to_gemini_task_full/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D09_gemini_to_gemini_task_full/decoded.txt"
+    },
+    {
+      "cell_id": "D10",
+      "source_id": "R07",
+      "condition": "no_task",
+      "decoder": "Sol",
+      "decoder_model": "openai/gpt-6.1-sol",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D10_gemini_to_sol_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D10_gemini_to_sol_no_task/decoded.txt"
+    },
+    {
+      "cell_id": "D11",
+      "source_id": "R08",
+      "condition": "no_task",
+      "decoder": "DeepSeek",
+      "decoder_model": "deepseek/deepseek-v4-pro",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D11_deepseek_to_deepseek_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D11_deepseek_to_deepseek_no_task/decoded.txt"
+    },
+    {
+      "cell_id": "D12",
+      "source_id": "R08",
+      "condition": "task_full",
+      "decoder": "DeepSeek",
+      "decoder_model": "deepseek/deepseek-v4-pro",
+      "status": "failed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/failure.json"
+    },
+    {
+      "cell_id": "D13",
+      "source_id": "R08",
+      "condition": "no_task",
+      "decoder": "Sol",
+      "decoder_model": "openai/gpt-6.1-sol",
+      "status": "completed",
+      "record": "experiments/tangut_200g_250l_200t/decoding/D13_deepseek_to_sol_no_task/receipt.json",
+      "decoded": "experiments/tangut_200g_250l_200t/decoding/D13_deepseek_to_sol_no_task/decoded.txt"
+    }
+  ],
+  "prior_reports": [
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R01_no_task.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R01_task_full.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R02_no_task.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R02_task_full.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R03_no_task.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R03_task_full.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R04_no_task.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R04_task_full.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R05_no_task.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R05_task_full.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_seed1_context_scores/R01_task_summary.json",
+    "experiments/tangut_200g_250l_200t/analysis/sol_seed1_context_scores/R01_wrong_task.json"
+  ],
+  "input_sha256": {
+    "experiments/tangut_200g_250l_200t/analysis/sol_seed1_context_scores/R01_task_summary.json": "8bb9e3806f015e414f1fd75c69fd341ef1f4996776a70d23735d5b8c5a184720",
+    "experiments/tangut_200g_250l_200t/analysis/sol_seed1_context_scores/R01_wrong_task.json": "c5c0984ea0299e9b95b4c3983aa7981bcd1e969678718f767e4a4118462a33cc",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R01_no_task.json": "78a956726a749cf4dc349d8808fe570a86f752faae47f710156933a8232ee78c",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R01_task_full.json": "7391365998489558bd127a231a9794e5bd90170fd0b8a152fc71e0308d6216ca",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R02_no_task.json": "2051c9bad40d2246839b6c0c139ea1607d966d755e9df52b126e70dbbcda5ce1",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R02_task_full.json": "57f61a05b36500d5edb2a63d164a75c6355f49e706542f13b696a3cf124ab708",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R03_no_task.json": "efee648ce3a645604e4044103d65c201e22b2d3bd9caa8955da00f52d366a085",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R03_task_full.json": "06e203ad0d189627c8822081aa325b8037730a4d96457cc2a3b0ca41588c9545",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R04_no_task.json": "8ea08b14d058e8af578b7ab5da7d9fa09e9ee9e95f3afabdb794687e15563ffe",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R04_task_full.json": "69967973e74c690bb21e823a51354e2394053e424294a726b5f6256a82bd565d",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R05_no_task.json": "6c4b70f11313d304104359680b590b4ae90caa8e947600218940a4128e9ae2a6",
+    "experiments/tangut_200g_250l_200t/analysis/sol_translation_scores/R05_task_full.json": "053ee1bb802f0ce17974e43f81d3ac2d0d73a9d5abfa73db89c7506efb14415c",
+    "experiments/tangut_200g_250l_200t/decoding/D05_haiku_to_haiku_no_task/decoded.txt": "fa7dfcd80e91ec512e5a3857188e5c56319be8b59beecfd602a71e6a0d0dd08b",
+    "experiments/tangut_200g_250l_200t/decoding/D05_haiku_to_haiku_no_task/receipt.json": "29ab4c78d0b5a960455260193be9d10dc04585966f0d4866b72f3b79e5d5b1ac",
+    "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/decoded.txt": "b43a991d597780d526777bbfe97ad78d96d86b410fa7b0139bb88d78420b98c5",
+    "experiments/tangut_200g_250l_200t/decoding/D06_haiku_to_haiku_task_full/receipt.json": "f9d80caeb92f01a9bf0257dab5128097525ee42441784e5719953c09f8dc7606",
+    "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/decoded.txt": "03762b184c0885485e7a099cf7d2bf85f410bfd3d40cd71e1a49742623a9480a",
+    "experiments/tangut_200g_250l_200t/decoding/D07_haiku_to_sol_no_task/receipt.json": "57af0529db970a8a2e2174b3844beee9c5422629510e2b5ad0a6aae2993231e1",
+    "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/decoded.txt": "ce6a5b741a95329953a9649dd8e01b6251af1df02fd32c4f24862ff786caf7cf",
+    "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/receipt.json": "4c02b8e7b7371bc22fef106b09c45e350992ee7a17b2ce7cdb933ad3a1a9af83",
+    "experiments/tangut_200g_250l_200t/decoding/D09_gemini_to_gemini_task_full/decoded.txt": "d7aa219a5e3cf7b503e81cfd54d1b399079fc215cb751ad3c0b60103b6477ba4",
+    "experiments/tangut_200g_250l_200t/decoding/D09_gemini_to_gemini_task_full/receipt.json": "c1ba65cbed8092439e3daa8ed56d8ab4d54809b4932912eb14f7dfb31d9182fd",
+    "experiments/tangut_200g_250l_200t/decoding/D10_gemini_to_sol_no_task/decoded.txt": "27a739f80509194ca2145132f8aaf50b578919c1e83248c6db2e4cd258233fc3",
+    "experiments/tangut_200g_250l_200t/decoding/D10_gemini_to_sol_no_task/receipt.json": "cc89221a4a7904b388a5f6f6595996d7eeb1a2dcfc5e4ad03a3db529c2035d4a",
+    "experiments/tangut_200g_250l_200t/decoding/D11_deepseek_to_deepseek_no_task/decoded.txt": "01a02e4e3c46df0dca64081f0c007c416c2c9c8ae226ce3db2fc3aa9ff0877a2",
+    "experiments/tangut_200g_250l_200t/decoding/D11_deepseek_to_deepseek_no_task/receipt.json": "86487787d36adabe4a5ab3c1592c5af260907122d91a676855d1f497d640ab49",
+    "experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/failure.json": "41d29ae8be357d6b815f66e95bec83140037b0fe406c7c6403be4ef384726610",
+    "experiments/tangut_200g_250l_200t/decoding/D13_deepseek_to_sol_no_task/decoded.txt": "68f97fb101a6d9d9601bb7b45811efd196d694e1ba50bdf5a73f363db14c020e",
+    "experiments/tangut_200g_250l_200t/decoding/D13_deepseek_to_sol_no_task/receipt.json": "dca04d79bf94a2607d51eb1797817edbb83534c8f6b3088d961b1a218dbfffa1",
+    "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/english/translation.json": "19db696a9dbba33ce37fc9d193bf2b509a9b363be23f78f2580f459956ffd53d",
+    "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2/swarmish.txt": "9ef04f41c5ae4e074b3befd11b78e05384f24882ffba281dde41ea45c249e3b7",
+    "experiments/tangut_200g_250l_200t/gameplay/R06_haiku_seed1/raw/20261107_213238_49205dc2_round_2/task_chatroom.jsonl": "e10bfb3dadf8f7641e1f12d9bf77008d8620f81a01a6ac4042f053a9117db9ff",
+    "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/english/translation.json": "109c1dad777ee101971a7bbc71ba5eb94ff3bbe833165bd5b4599b53a267af2e",
+    "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2/swarmish.txt": "638e0333ec1e8236a27d31e6b2de754fbf58aea3a037c8bd52ec4bfc3ead2a10",
+    "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2/task_chatroom.jsonl": "227e8f9a2f2be2af78b5c91cb1a74f082b96617eee0d9cae89a245d1a96338e9",
+    "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/english/translation.json": "b4bf2372846fef3a425bc2679c5cf4cf74fd4c060b31da0ed245fb7253e63147",
+    "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/swarmish.txt": "db6213162ce96320b198b1aa10c99a5f980a45ef060a66e2d35e06e3e2504dc8",
+    "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/task_chatroom.jsonl": "ed9887c2a3f9737480a280508be696a70accaea48bc2ddacde1b7332886fe8a9",
+    "src/core/translation_scoring.py": "ad162dce290a449a53a0d4d02a79b402aca39c964c781dd8c6f3e3b5c51bf457"
+  },
+  "comparability_notes": [
+    "Cosine is English text similarity, not a percentage of correct semantic translations. Partial structural guesses and tentative wording can obtain nonzero similarity.",
+    "Existing 12 Sol scores are reused byte-for-byte with the same pinned embedding revision and package versions; duplicate context-summary entries and the diagnostic checkpoint are excluded.",
+    "Task statuses and discarded glyph violations are excluded. Missing/wholly unknown predictions remain zero in the fixed scorable denominator. D05 declares all meanings unknown; D06 explicitly lists unknown; six D11 entries explicitly unknown with structural parentheticals are normalized as abstentions. Raw descriptions are preserved.",
+    "All 109 D07 agent entries contain unknown markers and structural/tentative descriptions. Nonzero similarity there does not establish decipherment. Unresolved aliases in other reports are retained.",
+    "References are frozen public-only, reference-assisted drafts authored before decoder scoring. Low/medium-confidence entries remain tentative; high-confidence subsets are reported separately. DeepSeek has no high-confidence reference entries.",
+    "New decoders use 8 agents, 200 shared turns, no time cap, $50 soft limit. Prior Sol reports mix $40/200-turn and $10/10-minute protocols. Differences do not isolate model or briefing effects.",
+    "Haiku and DeepSeek source gameplay did not escape; Gemini and all five Sol sources escaped. This is a descriptive comparison of different source languages/transcripts, not a balanced model leaderboard.",
+    "D12 failed during UTF-8 logging and produced no final report. It is unscored, not assigned zero. No new decoder calls are made for this analysis."
+  ]
+}

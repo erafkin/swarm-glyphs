@@ -1,0 +1,1600 @@
+{
+  "format": "numbered_translation_lines",
+  "preamble": "Translation conventions: aliases A/B/C/D/X and U/SEEK are defined above. “Know” is a medium-confidence paraphrase, not a recovered dictionary quotation. Bare assignments omit a repeated “I know” only for compactness. “Item” could mean color/symbol. Every numerical translation inherits the tentative digit mapping. Explicit uncertainty and literal compounds are retained. Discarded lines have no recoverable linguistic content; task lines are plaintext feedback, not decoded Swarmish.",
+  "conventions": "Translation conventions: aliases A/B/C/D/X and U/SEEK are defined above. “Know” is a medium-confidence paraphrase, not a recovered dictionary quotation. Bare assignments omit a repeated “I know” only for compactness. “Item” could mean color/symbol. Every numerical translation inherits the tentative digit mapping. Explicit uncertainty and literal compounds are retained. Discarded lines have no recoverable linguistic content; task lines are plaintext feedback, not decoded Swarmish.",
+  "entries": [
+    {
+      "id": 1,
+      "original": "Task: stage 0; invalid attempts 0.",
+      "normalized": "Task: stage 0; invalid attempts 0.",
+      "scoring_text": "Task: stage 0; invalid attempts 0.",
+      "unknown_reason": null
+    },
+    {
+      "id": 2,
+      "original": "A=2.",
+      "normalized": "A=2.",
+      "scoring_text": "A=2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 3,
+      "original": "Discarded nonpermitted message; content unknown.",
+      "normalized": "Discarded nonpermitted message; content unknown.",
+      "scoring_text": "Discarded nonpermitted message; content unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 4,
+      "original": "Discarded nonpermitted message; content unknown.",
+      "normalized": "Discarded nonpermitted message; content unknown.",
+      "scoring_text": "Discarded nonpermitted message; content unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 5,
+      "original": "[Position/value] 2: C·𗌈·D. Exact relation unknown.",
+      "normalized": "[Position/value] 2: C·𗌈·D. Exact relation unknown.",
+      "scoring_text": "[Position/value] 2: C·𗌈·D. Exact relation unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 6,
+      "original": "I [B·𗢬]=9; know [unknown phrase 𘂮𗕴𘂮]; item/value [numeric expression incomplete]; remainder unknown.",
+      "normalized": "I [B·𗢬]=9; know [unknown phrase 𘂮𗕴𘂮]; item/value [numeric expression incomplete]; remainder unknown.",
+      "scoring_text": "I [B·𗢬]=9; know [unknown phrase 𘂮𗕴𘂮]; item/value [numeric expression incomplete]; remainder unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 7,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 8,
+      "original": "Mostly unknown: C4 position D; A=4; unknown connective phrase; item/value [number unspecified]; and position [unspecified].",
+      "normalized": "Mostly unknown: C4 position D; A=4; unknown connective phrase; item/value [number unspecified]; and position [unspecified].",
+      "scoring_text": "Mostly unknown: C4 position D; A=4; unknown connective phrase; item/value [number unspecified]; and position [unspecified].",
+      "unknown_reason": null
+    },
+    {
+      "id": 9,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 10,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 11,
+      "original": "Unknown opening/request concerning item/value and knowledge; D=2.",
+      "normalized": "Unknown opening/request concerning item/value and knowledge; D=2.",
+      "scoring_text": "Unknown opening/request concerning item/value and knowledge; D=2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 12,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 13,
+      "original": "[Position] 4 [unknown relation] B; 1=U, 2=U, 3=U, each with the same unknown relation.",
+      "normalized": "[Position] 4 [unknown relation] B; 1=U, 2=U, 3=U, each with the same unknown relation.",
+      "scoring_text": "[Position] 4 [unknown relation] B; 1=U, 2=U, 3=U, each with the same unknown relation.",
+      "unknown_reason": null
+    },
+    {
+      "id": 14,
+      "original": "[Position] 1: A·D.",
+      "normalized": "[Position] 1: A·D.",
+      "scoring_text": "[Position] 1: A·D.",
+      "unknown_reason": null
+    },
+    {
+      "id": 15,
+      "original": "Unknown opening; C2, C4, C5, C6, possibly agent references, separated by the item-word. I [B·𗢬]=9; A=2; C·𗌈·D=2, or position 2 contains that compound. Last attachment uncertain.",
+      "normalized": "Unknown opening; C2, C4, C5, C6, possibly agent references, separated by the item-word. I [B·𗢬]=9; A=2; C·𗌈·D=2, or position 2 contains that compound. Last attachment uncertain.",
+      "scoring_text": "Unknown opening; C2, C4, C5, C6, possibly agent references, separated by the item-word. I [B·𗢬]=9; A=2; C·𗌈·D=2, or position 2 contains that compound. Last attachment uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 16,
+      "original": "I know X; A=8 [attachment uncertain]; items/references 2,4,5,6 unavailable; A=2; unknown request/question ending.",
+      "normalized": "I know X; A=8 [attachment uncertain]; items/references 2,4,5,6 unavailable; A=2; unknown request/question ending.",
+      "scoring_text": "I know X; A=8 [attachment uncertain]; items/references 2,4,5,6 unavailable; A=2; unknown request/question ending.",
+      "unknown_reason": null
+    },
+    {
+      "id": 17,
+      "original": "I know p4=B; B's value U; p1,p2,p3 U, with an unknown qualifier.",
+      "normalized": "I know p4=B; B's value U; p1,p2,p3 U, with an unknown qualifier.",
+      "scoring_text": "I know p4=B; B's value U; p1,p2,p3 U, with an unknown qualifier.",
+      "unknown_reason": null
+    },
+    {
+      "id": 18,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 19,
+      "original": "I know D=2; SEEK item1; unknown request/relation involving item3 and item1.",
+      "normalized": "I know D=2; SEEK item1; unknown request/relation involving item3 and item1.",
+      "scoring_text": "I know D=2; SEEK item1; unknown request/relation involving item3 and item1.",
+      "unknown_reason": null
+    },
+    {
+      "id": 20,
+      "original": "I know item D; A=4 [attachment and intervening phrase uncertain]; U. Possibly a D/A compound valued 4, but mostly unknown.",
+      "normalized": "I know item D; A=4 [attachment and intervening phrase uncertain]; U. Possibly a D/A compound valued 4, but mostly unknown.",
+      "scoring_text": "I know item D; A=4 [attachment and intervening phrase uncertain]; U. Possibly a D/A compound valued 4, but mostly unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 21,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 22,
+      "original": "Position1 contains A·D; unknown connective; positions2,3,4 U.",
+      "normalized": "Position1 contains A·D; unknown connective; positions2,3,4 U.",
+      "scoring_text": "Position1 contains A·D; unknown connective; positions2,3,4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 23,
+      "original": "I [position]2 contains C·𗌈·D; unknown relation; items/positions1,3,4 U; final item phrase unknown.",
+      "normalized": "I [position]2 contains C·𗌈·D; unknown relation; items/positions1,3,4 U; final item phrase unknown.",
+      "scoring_text": "I [position]2 contains C·𗌈·D; unknown relation; items/positions1,3,4 U; final item phrase unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 24,
+      "original": "I know D=2; items1,2,3,4 U; SEEK B's value and C's value.",
+      "normalized": "I know D=2; items1,2,3,4 U; SEEK B's value and C's value.",
+      "scoring_text": "I know D=2; items1,2,3,4 U; SEEK B's value and C's value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 25,
+      "original": "I know X=8; positions1,2,3,4 U.",
+      "normalized": "I know X=8; positions1,2,3,4 U.",
+      "scoring_text": "I know X=8; positions1,2,3,4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 26,
+      "original": "I know D=2; ask/need A's value, B's value, C's value; items1,2,3,4 U.",
+      "normalized": "I know D=2; ask/need A's value, B's value, C's value; items1,2,3,4 U.",
+      "scoring_text": "I know D=2; ask/need A's value, B's value, C's value; items1,2,3,4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 27,
+      "original": "I know p4=B; B's value U; positions1,2,3 have unavailable items.",
+      "normalized": "I know p4=B; B's value U; positions1,2,3 have unavailable items.",
+      "scoring_text": "I know p4=B; B's value U; positions1,2,3 have unavailable items.",
+      "unknown_reason": null
+    },
+    {
+      "id": 28,
+      "original": "B=U, C=U, D=U; unknown phrase involving item4.",
+      "normalized": "B=U, C=U, D=U; unknown phrase involving item4.",
+      "scoring_text": "B=U, C=U, D=U; unknown phrase involving item4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 29,
+      "original": "I know [𗘗=8 / X=8; attachment uncertain]; item1 contains A·D=1; item2 contains C·𗌈·D=2; item3 U; item4 contains B=9; SEEK item3.",
+      "normalized": "I know [𗘗=8 / X=8; attachment uncertain]; item1 contains A·D=1; item2 contains C·𗌈·D=2; item3 U; item4 contains B=9; SEEK item3.",
+      "scoring_text": "I know [𗘗=8 / X=8; attachment uncertain]; item1 contains A·D=1; item2 contains C·𗌈·D=2; item3 U; item4 contains B=9; SEEK item3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 30,
+      "original": "Position2's item U and numerical value U; position4's item U and numerical value U; position5's item U and numerical value U; position6 contains B, whose value U. The references 2,4,5,6 may be agents rather than puzzle positions.",
+      "normalized": "Position2's item U and numerical value U; position4's item U and numerical value U; position5's item U and numerical value U; position6 contains B, whose value U. The references 2,4,5,6 may be agents rather than puzzle positions.",
+      "scoring_text": "Position2's item U and numerical value U; position4's item U and numerical value U; position5's item U and numerical value U; position6 contains B, whose value U. The references 2,4,5,6 may be agents rather than puzzle positions.",
+      "unknown_reason": null
+    },
+    {
+      "id": 31,
+      "original": "I [B-value]=9; know A-value U, C-value U, D-value U; items1,2,3,4 U.",
+      "normalized": "I [B-value]=9; know A-value U, C-value U, D-value U; items1,2,3,4 U.",
+      "scoring_text": "I [B-value]=9; know A-value U, C-value U, D-value U; items1,2,3,4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 32,
+      "original": "I submit/propose 1234; position1 contains A·D, value U; position2 contains A=2; position4 contains B, value U.",
+      "normalized": "I submit/propose 1234; position1 contains A·D, value U; position2 contains A=2; position4 contains B, value U.",
+      "scoring_text": "I submit/propose 1234; position1 contains A·D, value U; position2 contains A=2; position4 contains B, value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 33,
+      "original": "Task: stage 0; invalid attempts 1.",
+      "normalized": "Task: stage 0; invalid attempts 1.",
+      "scoring_text": "Task: stage 0; invalid attempts 1.",
+      "unknown_reason": null
+    },
+    {
+      "id": 34,
+      "original": "I know [𗘗=8 / X=8; attachment uncertain]; and item1 A·D=1; and item2 C·𗌈·D=2; and B=[unknown 𗭯]; and item3 SEEK/U.",
+      "normalized": "I know [𗘗=8 / X=8; attachment uncertain]; and item1 A·D=1; and item2 C·𗌈·D=2; and B=[unknown 𗭯]; and item3 SEEK/U.",
+      "scoring_text": "I know [𗘗=8 / X=8; attachment uncertain]; and item1 A·D=1; and item2 C·𗌈·D=2; and B=[unknown 𗭯]; and item3 SEEK/U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 35,
+      "original": "I know p3's item D·A [or D followed by A]; I do not know [unknown qualifier/U phrase]; numerical value U; and p1,p2,p4 items U; request/question.",
+      "normalized": "I know p3's item D·A [or D followed by A]; I do not know [unknown qualifier/U phrase]; numerical value U; and p1,p2,p4 items U; request/question.",
+      "scoring_text": "I know p3's item D·A [or D followed by A]; I do not know [unknown qualifier/U phrase]; numerical value U; and p1,p2,p4 items U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 36,
+      "original": "I know D=2; A=U, B=U, C=U; item1 A, item2 B, item3 C, item4 D.",
+      "normalized": "I know D=2; A=U, B=U, C=U; item1 A, item2 B, item3 C, item4 D.",
+      "scoring_text": "I know D=2; A=U, B=U, C=U; item1 A, item2 B, item3 C, item4 D.",
+      "unknown_reason": null
+    },
+    {
+      "id": 37,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 38,
+      "original": "I [position]2 [unknown relation] X·X=2, possibly repetition/emphasis; B's value U; items1 and3 U.",
+      "normalized": "I [position]2 [unknown relation] X·X=2, possibly repetition/emphasis; B's value U; items1 and3 U.",
+      "scoring_text": "I [position]2 [unknown relation] X·X=2, possibly repetition/emphasis; B's value U; items1 and3 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 39,
+      "original": "I know [𗘗=8 / X=8; attachment uncertain]; and A·D=1; and C·𗌈·D=2; and 𗘗=8; and B's value U; SEEK B's value.",
+      "normalized": "I know [𗘗=8 / X=8; attachment uncertain]; and A·D=1; and C·𗌈·D=2; and 𗘗=8; and B's value U; SEEK B's value.",
+      "scoring_text": "I know [𗘗=8 / X=8; attachment uncertain]; and A·D=1; and C·𗌈·D=2; and 𗘗=8; and B's value U; SEEK B's value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 40,
+      "original": "Position4 contains B; B=9; position3's numerical value unknown/requested.",
+      "normalized": "Position4 contains B; B=9; position3's numerical value unknown/requested.",
+      "scoring_text": "Position4 contains B; B=9; position3's numerical value unknown/requested.",
+      "unknown_reason": null
+    },
+    {
+      "id": 41,
+      "original": "I know B-value=9; A,C,D values U; item1 A, item2 C, item3 D, item4 B.",
+      "normalized": "I know B-value=9; A,C,D values U; item1 A, item2 C, item3 D, item4 B.",
+      "scoring_text": "I know B-value=9; A,C,D values U; item1 A, item2 C, item3 D, item4 B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 42,
+      "original": "I know item2 X; X's value U; items1,3,4 U.",
+      "normalized": "I know item2 X; X's value U; items1,3,4 U.",
+      "scoring_text": "I know item2 X; X's value U; items1,3,4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 43,
+      "original": "SEEK item1 value, item2 value, item3 value, item4 value.",
+      "normalized": "SEEK item1 value, item2 value, item3 value, item4 value.",
+      "scoring_text": "SEEK item1 value, item2 value, item3 value, item4 value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 44,
+      "original": "Task: stage 0; invalid attempts 2.",
+      "normalized": "Task: stage 0; invalid attempts 2.",
+      "scoring_text": "Task: stage 0; invalid attempts 2.",
+      "unknown_reason": null
+    },
+    {
+      "id": 45,
+      "original": "I know B=9; A=U, C=U, D=U; items1,2,3,4 are A,C,B,D respectively; request/question.",
+      "normalized": "I know B=9; A=U, C=U, D=U; items1,2,3,4 are A,C,B,D respectively; request/question.",
+      "scoring_text": "I know B=9; A=U, C=U, D=U; items1,2,3,4 are A,C,B,D respectively; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 46,
+      "original": "I know p3 item D·A, value U; and p1 item A=1; p2 item D=2; p4 item B=9; request/question.",
+      "normalized": "I know p3 item D·A, value U; and p1 item A=1; p2 item D=2; p4 item B=9; request/question.",
+      "scoring_text": "I know p3 item D·A, value U; and p1 item A=1; p2 item D=2; p4 item B=9; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 47,
+      "original": "I know [unknown 𗷴] item4; A=2, B=9, C=U, D=U; all four position-items U.",
+      "normalized": "I know [unknown 𗷴] item4; A=2, B=9, C=U, D=U; all four position-items U.",
+      "scoring_text": "I know [unknown 𗷴] item4; A=2, B=9, C=U, D=U; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 48,
+      "original": "I know p1 A·D; A·D's value U; C=U; B=U; I submit/code 2229.",
+      "normalized": "I know p1 A·D; A·D's value U; C=U; B=U; I submit/code 2229.",
+      "scoring_text": "I know p1 A·D; A·D's value U; C=U; B=U; I submit/code 2229.",
+      "unknown_reason": null
+    },
+    {
+      "id": 49,
+      "original": "Task: stage 0; invalid attempts 3.",
+      "normalized": "Task: stage 0; invalid attempts 3.",
+      "scoring_text": "Task: stage 0; invalid attempts 3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 50,
+      "original": "I know A=2; item1 position U, item2 position U, item3 position U, item4 position U. Exact unknown-number-marker order uncertain.",
+      "normalized": "I know A=2; item1 position U, item2 position U, item3 position U, item4 position U. Exact unknown-number-marker order uncertain.",
+      "scoring_text": "I know A=2; item1 position U, item2 position U, item3 position U, item4 position U. Exact unknown-number-marker order uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 51,
+      "original": "I know B=9, A=1, C=2, D=U; then mapping 1:A, 2:C, 3:U, 4:B.",
+      "normalized": "I know B=9, A=1, C=2, D=U; then mapping 1:A, 2:C, 3:U, 4:B.",
+      "scoring_text": "I know B=9, A=1, C=2, D=U; then mapping 1:A, 2:C, 3:U, 4:B.",
+      "unknown_reason": null
+    },
+    {
+      "id": 52,
+      "original": "[You/1] know item5=4 [first clause uncertain]; SEEK A's number, B's number, C's number.",
+      "normalized": "[You/1] know item5=4 [first clause uncertain]; SEEK A's number, B's number, C's number.",
+      "scoring_text": "[You/1] know item5=4 [first clause uncertain]; SEEK A's number, B's number, C's number.",
+      "unknown_reason": null
+    },
+    {
+      "id": 53,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 54,
+      "original": "I know p4=B and B=9; p1=A and A=1; p2=C and C=2; p3=D and D=U; SEEK/U.",
+      "normalized": "I know p4=B and B=9; p1=A and A=1; p2=C and C=2; p3=D and D=U; SEEK/U.",
+      "scoring_text": "I know p4=B and B=9; p1=A and A=1; p2=C and C=2; p3=D and D=U; SEEK/U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 55,
+      "original": "I know item3 position D·A; D·A's value U; I know A=1; I know D=2; I know B=9; SEEK D·A's number.",
+      "normalized": "I know item3 position D·A; D·A's value U; I know A=1; I know D=2; I know B=9; SEEK D·A's number.",
+      "scoring_text": "I know item3 position D·A; D·A's value U; I know A=1; I know D=2; I know B=9; SEEK D·A's number.",
+      "unknown_reason": null
+    },
+    {
+      "id": 56,
+      "original": "I know B=9; A=2, C=U, D=U; item/code 2229.",
+      "normalized": "I know B=9; A=2, C=U, D=U; item/code 2229.",
+      "scoring_text": "I know B=9; A=2, C=U, D=U; item/code 2229.",
+      "unknown_reason": null
+    },
+    {
+      "id": 57,
+      "original": "I know p4 B=9; D's value U.",
+      "normalized": "I know p4 B=9; D's value U.",
+      "scoring_text": "I know p4 B=9; D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 58,
+      "original": "I guess: item1 A=1; item2 X=2; item3 D=2; item4 B=U; SEEK B's value U.",
+      "normalized": "I guess: item1 A=1; item2 X=2; item3 D=2; item4 B=U; SEEK B's value U.",
+      "scoring_text": "I guess: item1 A=1; item2 X=2; item3 D=2; item4 B=U; SEEK B's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 59,
+      "original": "I know p4 item B; B=9; I know A=1; I know C=2; SEEK p1 item, p2 item, p3 item, D's number.",
+      "normalized": "I know p4 item B; B=9; I know A=1; I know C=2; SEEK p1 item, p2 item, p3 item, D's number.",
+      "scoring_text": "I know p4 item B; B=9; I know A=1; I know C=2; SEEK p1 item, p2 item, p3 item, D's number.",
+      "unknown_reason": null
+    },
+    {
+      "id": 60,
+      "original": "I know p1 item 𗘗𗘗, value U [compound unknown]; p2,p3,p4 items U; A,B,C,D values U; request/question.",
+      "normalized": "I know p1 item 𗘗𗘗, value U [compound unknown]; p2,p3,p4 items U; A,B,C,D values U; request/question.",
+      "scoring_text": "I know p1 item 𗘗𗘗, value U [compound unknown]; p2,p3,p4 items U; A,B,C,D values U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 61,
+      "original": "I know D=4, B=5, A=1, C=2; code/number1245; mapping 1:A,2:C,3:D,4:B; I answer/propose1245.",
+      "normalized": "I know D=4, B=5, A=1, C=2; code/number1245; mapping 1:A,2:C,3:D,4:B; I answer/propose1245.",
+      "scoring_text": "I know D=4, B=5, A=1, C=2; code/number1245; mapping 1:A,2:C,3:D,4:B; I answer/propose1245.",
+      "unknown_reason": null
+    },
+    {
+      "id": 62,
+      "original": "Task: stage 0; invalid attempts 4.",
+      "normalized": "Task: stage 0; invalid attempts 4.",
+      "scoring_text": "Task: stage 0; invalid attempts 4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 63,
+      "original": "I know p2 item X; X's value U; p1,p3,p4 items U; I [combine/need; unknown verb] A=1, B=9, C=2; SEEK X's value U.",
+      "normalized": "I know p2 item X; X's value U; p1,p3,p4 items U; I [combine/need; unknown verb] A=1, B=9, C=2; SEEK X's value U.",
+      "scoring_text": "I know p2 item X; X's value U; p1,p3,p4 items U; I [combine/need; unknown verb] A=1, B=9, C=2; SEEK X's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 64,
+      "original": "I submit/code1229.",
+      "normalized": "I submit/code1229.",
+      "scoring_text": "I submit/code1229.",
+      "unknown_reason": null
+    },
+    {
+      "id": 65,
+      "original": "Task: stage 0; invalid attempts 5.",
+      "normalized": "Task: stage 0; invalid attempts 5.",
+      "scoring_text": "Task: stage 0; invalid attempts 5.",
+      "unknown_reason": null
+    },
+    {
+      "id": 66,
+      "original": "I know X=8; all four position-items U; SEEK A's number, B's number, C's number, D's number.",
+      "normalized": "I know X=8; all four position-items U; SEEK A's number, B's number, C's number, D's number.",
+      "scoring_text": "I know X=8; all four position-items U; SEEK A's number, B's number, C's number, D's number.",
+      "unknown_reason": null
+    },
+    {
+      "id": 67,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 68,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 69,
+      "original": "I submit/code2289.",
+      "normalized": "I submit/code2289.",
+      "scoring_text": "I submit/code2289.",
+      "unknown_reason": null
+    },
+    {
+      "id": 70,
+      "original": "Task: stage 0; invalid attempts 6.",
+      "normalized": "Task: stage 0; invalid attempts 6.",
+      "scoring_text": "Task: stage 0; invalid attempts 6.",
+      "unknown_reason": null
+    },
+    {
+      "id": 71,
+      "original": "I know item2 X; SEEK item1,item3,item4; SEEK A,C,D,B values U.",
+      "normalized": "I know item2 X; SEEK item1,item3,item4; SEEK A,C,D,B values U.",
+      "scoring_text": "I know item2 X; SEEK item1,item3,item4; SEEK A,C,D,B values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 72,
+      "original": "I know p4 B=9; SEEK p1 item,p2 item,p3 item.",
+      "normalized": "I know p4 B=9; SEEK p1 item,p2 item,p3 item.",
+      "scoring_text": "I know p4 B=9; SEEK p1 item,p2 item,p3 item.",
+      "unknown_reason": null
+    },
+    {
+      "id": 73,
+      "original": "X's value U; SEEK item1,item3,item4.",
+      "normalized": "X's value U; SEEK item1,item3,item4.",
+      "scoring_text": "X's value U; SEEK item1,item3,item4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 74,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 75,
+      "original": "I know p4=B; items1,2,3 U; request/question.",
+      "normalized": "I know p4=B; items1,2,3 U; request/question.",
+      "scoring_text": "I know p4=B; items1,2,3 U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 76,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 77,
+      "original": "I know item1 A, value U; SEEK item2 number U; item3 number U; item4 number U.",
+      "normalized": "I know item1 A, value U; SEEK item2 number U; item3 number U; item4 number U.",
+      "scoring_text": "I know item1 A, value U; SEEK item2 number U; item3 number U; item4 number U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 78,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 79,
+      "original": "I know B=9; SEEK item1,item2,item3,item4; SEEK A's number,C's number,D's number.",
+      "normalized": "I know B=9; SEEK item1,item2,item3,item4; SEEK A's number,C's number,D's number.",
+      "scoring_text": "I know B=9; SEEK item1,item2,item3,item4; SEEK A's number,C's number,D's number.",
+      "unknown_reason": null
+    },
+    {
+      "id": 80,
+      "original": "Task: stage 0; invalid attempts 7.",
+      "normalized": "Task: stage 0; invalid attempts 7.",
+      "scoring_text": "Task: stage 0; invalid attempts 7.",
+      "unknown_reason": null
+    },
+    {
+      "id": 81,
+      "original": "I know X's value8; item1,item2,item3,item4 positions U; SEEK A,B,C,D values/numbers.",
+      "normalized": "I know X's value8; item1,item2,item3,item4 positions U; SEEK A,B,C,D values/numbers.",
+      "scoring_text": "I know X's value8; item1,item2,item3,item4 positions U; SEEK A,B,C,D values/numbers.",
+      "unknown_reason": null
+    },
+    {
+      "id": 82,
+      "original": "I know p2 item X; SEEK X's value U; SEEK p1,p3,p4 items U.",
+      "normalized": "I know p2 item X; SEEK X's value U; SEEK p1,p3,p4 items U.",
+      "scoring_text": "I know p2 item X; SEEK X's value U; SEEK p1,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 83,
+      "original": "I know p4=B; SEEK item1,item2,item3; A,B,C,D values U; request/question.",
+      "normalized": "I know p4=B; SEEK item1,item2,item3; A,B,C,D values U; request/question.",
+      "scoring_text": "I know p4=B; SEEK item1,item2,item3; A,B,C,D values U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 84,
+      "original": "I know A=2,B=9; item2 C's value U; item3 D's value U.",
+      "normalized": "I know A=2,B=9; item2 C's value U; item3 D's value U.",
+      "scoring_text": "I know A=2,B=9; item2 C's value U; item3 D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 85,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 86,
+      "original": "I know B=9 and A=1 and C=2 and D=8; mapping item1 A,item2 D,item3 C,item4 B; I try/submit1829.",
+      "normalized": "I know B=9 and A=1 and C=2 and D=8; mapping item1 A,item2 D,item3 C,item4 B; I try/submit1829.",
+      "scoring_text": "I know B=9 and A=1 and C=2 and D=8; mapping item1 A,item2 D,item3 C,item4 B; I try/submit1829.",
+      "unknown_reason": null
+    },
+    {
+      "id": 87,
+      "original": "Task: stage 0; invalid attempts 8.",
+      "normalized": "Task: stage 0; invalid attempts 8.",
+      "scoring_text": "Task: stage 0; invalid attempts 8.",
+      "unknown_reason": null
+    },
+    {
+      "id": 88,
+      "original": "p1 A=1; p2 C=2; p3 D=4; p4 B=9; I answer/propose1249.",
+      "normalized": "p1 A=1; p2 C=2; p3 D=4; p4 B=9; I answer/propose1249.",
+      "scoring_text": "p1 A=1; p2 C=2; p3 D=4; p4 B=9; I answer/propose1249.",
+      "unknown_reason": null
+    },
+    {
+      "id": 89,
+      "original": "Task: stage 0; invalid attempts 9.",
+      "normalized": "Task: stage 0; invalid attempts 9.",
+      "scoring_text": "Task: stage 0; invalid attempts 9.",
+      "unknown_reason": null
+    },
+    {
+      "id": 90,
+      "original": "I submit/code1289.",
+      "normalized": "I submit/code1289.",
+      "scoring_text": "I submit/code1289.",
+      "unknown_reason": null
+    },
+    {
+      "id": 91,
+      "original": "Task: stage 0; invalid attempts 10.",
+      "normalized": "Task: stage 0; invalid attempts 10.",
+      "scoring_text": "Task: stage 0; invalid attempts 10.",
+      "unknown_reason": null
+    },
+    {
+      "id": 92,
+      "original": "I know A=2; C-value U, D-value U, B-value U; A,C,D,B [bare list, relation unknown].",
+      "normalized": "I know A=2; C-value U, D-value U, B-value U; A,C,D,B [bare list, relation unknown].",
+      "scoring_text": "I know A=2; C-value U, D-value U, B-value U; A,C,D,B [bare list, relation unknown].",
+      "unknown_reason": null
+    },
+    {
+      "id": 93,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 94,
+      "original": "I know p3 item D; I know B=9; D,A,C values U; p1,p2,p4 items U.",
+      "normalized": "I know p3 item D; I know B=9; D,A,C values U; p1,p2,p4 items U.",
+      "scoring_text": "I know p3 item D; I know B=9; D,A,C values U; p1,p2,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 95,
+      "original": "I know X's value8; SEEK X's position/item; SEEK A,C,D values; SEEK p1,p3,p4 items; request/question. The omitted p2 may reflect a particular missing-information list, not a corrected mapping.",
+      "normalized": "I know X's value8; SEEK X's position/item; SEEK A,C,D values; SEEK p1,p3,p4 items; request/question. The omitted p2 may reflect a particular missing-information list, not a corrected mapping.",
+      "scoring_text": "I know X's value8; SEEK X's position/item; SEEK A,C,D values; SEEK p1,p3,p4 items; request/question. The omitted p2 may reflect a particular missing-information list, not a corrected mapping.",
+      "unknown_reason": null
+    },
+    {
+      "id": 96,
+      "original": "I know item4 B; I do not know B's value; SEEK item1,item2,item3 and A,B,C,D values.",
+      "normalized": "I know item4 B; I do not know B's value; SEEK item1,item2,item3 and A,B,C,D values.",
+      "scoring_text": "I know item4 B; I do not know B's value; SEEK item1,item2,item3 and A,B,C,D values.",
+      "unknown_reason": null
+    },
+    {
+      "id": 97,
+      "original": "I know p1 item A; I know A=1,C=2,B=9; SEEK p3 item,p4 item,D's value; request/question.",
+      "normalized": "I know p1 item A; I know A=1,C=2,B=9; SEEK p3 item,p4 item,D's value; request/question.",
+      "scoring_text": "I know p1 item A; I know A=1,C=2,B=9; SEEK p3 item,p4 item,D's value; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 98,
+      "original": "Code1289 is not correct; I know A=1,C=2,B=9; item1 A,item2 C,item3 D,item4 B; D's value U.",
+      "normalized": "Code1289 is not correct; I know A=1,C=2,B=9; item1 A,item2 C,item3 D,item4 B; D's value U.",
+      "scoring_text": "Code1289 is not correct; I know A=1,C=2,B=9; item1 A,item2 C,item3 D,item4 B; D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 99,
+      "original": "I know X's value8; SEEK A,C,B values; SEEK item-at-p1,item-at-p2,item-at-p3,item-at-p4 U; request/question.",
+      "normalized": "I know X's value8; SEEK A,C,B values; SEEK item-at-p1,item-at-p2,item-at-p3,item-at-p4 U; request/question.",
+      "scoring_text": "I know X's value8; SEEK A,C,B values; SEEK item-at-p1,item-at-p2,item-at-p3,item-at-p4 U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 100,
+      "original": "I know item4 position B; SEEK item1,item2,item3; SEEK A's value,B's value,𗡒's value,𘉝's value. The final two labels differ from C,D and are unknown, not silently normalized.",
+      "normalized": "I know item4 position B; SEEK item1,item2,item3; SEEK A's value,B's value,𗡒's value,𘉝's value. The final two labels differ from C,D and are unknown, not silently normalized.",
+      "scoring_text": "I know item4 position B; SEEK item1,item2,item3; SEEK A's value,B's value,𗡒's value,𘉝's value. The final two labels differ from C,D and are unknown, not silently normalized.",
+      "unknown_reason": null
+    },
+    {
+      "id": 101,
+      "original": "I know A=1,C=2,B=9; ask/need D's value U.",
+      "normalized": "I know A=1,C=2,B=9; ask/need D's value U.",
+      "scoring_text": "I know A=1,C=2,B=9; ask/need D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 102,
+      "original": "I know A=1,C=2,B=9; I do not know D's value U; I guess D=3; I try/submit1239.",
+      "normalized": "I know A=1,C=2,B=9; I do not know D's value U; I guess D=3; I try/submit1239.",
+      "scoring_text": "I know A=1,C=2,B=9; I do not know D's value U; I guess D=3; I try/submit1239.",
+      "unknown_reason": null
+    },
+    {
+      "id": 103,
+      "original": "Task: stage 0; invalid attempts 11.",
+      "normalized": "Task: stage 0; invalid attempts 11.",
+      "scoring_text": "Task: stage 0; invalid attempts 11.",
+      "unknown_reason": null
+    },
+    {
+      "id": 104,
+      "original": "I know A-value1, C-value2, B-value9; SEEK D's value; I know item1 A; SEEK item2,item3,item4.",
+      "normalized": "I know A-value1, C-value2, B-value9; SEEK D's value; I know item1 A; SEEK item2,item3,item4.",
+      "scoring_text": "I know A-value1, C-value2, B-value9; SEEK D's value; I know item1 A; SEEK item2,item3,item4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 105,
+      "original": "I know p2 item D-value [incomplete]; [unknown/SEEK construction] D-value U; p1,p3,p4 items U.",
+      "normalized": "I know p2 item D-value [incomplete]; [unknown/SEEK construction] D-value U; p1,p3,p4 items U.",
+      "scoring_text": "I know p2 item D-value [incomplete]; [unknown/SEEK construction] D-value U; p1,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 106,
+      "original": "I know A=2,B=9,D=8; SEEK C's value; p1,p2,p3 U.",
+      "normalized": "I know A=2,B=9,D=8; SEEK C's value; p1,p2,p3 U.",
+      "scoring_text": "I know A=2,B=9,D=8; SEEK C's value; p1,p2,p3 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 107,
+      "original": "I know X=8; X's position U; A,C,B values U.",
+      "normalized": "I know X=8; X's position U; A,C,B values U.",
+      "scoring_text": "I know X=8; X's position U; A,C,B values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 108,
+      "original": "I know p3 D, value U; p1 A=1; p2 C=2; p4 B=9; request/question.",
+      "normalized": "I know p3 D, value U; p1 A=1; p2 C=2; p4 B=9; request/question.",
+      "scoring_text": "I know p3 D, value U; p1 A=1; p2 C=2; p4 B=9; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 109,
+      "original": "B4 position [opening relation unknown]; p1,p2,p3 U; A,B,C,D values U.",
+      "normalized": "B4 position [opening relation unknown]; p1,p2,p3 U; A,B,C,D values U.",
+      "scoring_text": "B4 position [opening relation unknown]; p1,p2,p3 U; A,B,C,D values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 110,
+      "original": "I answer/propose1249.",
+      "normalized": "I answer/propose1249.",
+      "scoring_text": "I answer/propose1249.",
+      "unknown_reason": null
+    },
+    {
+      "id": 111,
+      "original": "Task: stage 0; invalid attempts 12.",
+      "normalized": "Task: stage 0; invalid attempts 12.",
+      "scoring_text": "Task: stage 0; invalid attempts 12.",
+      "unknown_reason": null
+    },
+    {
+      "id": 112,
+      "original": "I know X-value8; A,B,C values U; p1,p2,p3,p4 items U.",
+      "normalized": "I know X-value8; A,B,C values U; p1,p2,p3,p4 items U.",
+      "scoring_text": "I know X-value8; A,B,C values U; p1,p2,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 113,
+      "original": "A=1,C=2,B=9,D=U; request/question.",
+      "normalized": "A=1,C=2,B=9,D=U; request/question.",
+      "scoring_text": "A=1,C=2,B=9,D=U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 114,
+      "original": "I know p2 item [not A/not C/not B/not D; repeated negations, attachment uncertain]; I only [know/value U] p2 item; SEEK p1,p3,p4 item-values U. The middle clause is not fully translated.",
+      "normalized": "I know p2 item [not A/not C/not B/not D; repeated negations, attachment uncertain]; I only [know/value U] p2 item; SEEK p1,p3,p4 item-values U. The middle clause is not fully translated.",
+      "scoring_text": "I know p2 item [not A/not C/not B/not D; repeated negations, attachment uncertain]; I only [know/value U] p2 item; SEEK p1,p3,p4 item-values U. The middle clause is not fully translated.",
+      "unknown_reason": null
+    },
+    {
+      "id": 115,
+      "original": "I submit/code12[𘂲: negation/unknown digit]9. Do not infer a missing digit.",
+      "normalized": "I submit/code12[𘂲: negation/unknown digit]9. Do not infer a missing digit.",
+      "scoring_text": "I submit/code12[𘂲: negation/unknown digit]9. Do not infer a missing digit.",
+      "unknown_reason": null
+    },
+    {
+      "id": 116,
+      "original": "Task: stage 0; invalid attempts 13.",
+      "normalized": "Task: stage 0; invalid attempts 13.",
+      "scoring_text": "Task: stage 0; invalid attempts 13.",
+      "unknown_reason": null
+    },
+    {
+      "id": 117,
+      "original": "I know X=8; I only know [or: only] p1,p2,p3,p4 items U; A,C,B values U; request/question. Scope of “only” uncertain.",
+      "normalized": "I know X=8; I only know [or: only] p1,p2,p3,p4 items U; A,C,B values U; request/question. Scope of “only” uncertain.",
+      "scoring_text": "I know X=8; I only know [or: only] p1,p2,p3,p4 items U; A,C,B values U; request/question. Scope of “only” uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 118,
+      "original": "I know D=4; A,C,B values U; code1249 is not correct; all four position-items U.",
+      "normalized": "I know D=4; A,C,B values U; code1249 is not correct; all four position-items U.",
+      "scoring_text": "I know D=4; A,C,B values U; code1249 is not correct; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 119,
+      "original": "I do not know D's value U; request/question.",
+      "normalized": "I do not know D's value U; request/question.",
+      "scoring_text": "I do not know D's value U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 120,
+      "original": "[You/1] B=9 know [opening order uncertain]; A=1,C=2,D=U; [you/1] try/submit1259.",
+      "normalized": "[You/1] B=9 know [opening order uncertain]; A=1,C=2,D=U; [you/1] try/submit1259.",
+      "scoring_text": "[You/1] B=9 know [opening order uncertain]; A=1,C=2,D=U; [you/1] try/submit1259.",
+      "unknown_reason": null
+    },
+    {
+      "id": 121,
+      "original": "Task: stage 0; invalid attempts 14.",
+      "normalized": "Task: stage 0; invalid attempts 14.",
+      "scoring_text": "Task: stage 0; invalid attempts 14.",
+      "unknown_reason": null
+    },
+    {
+      "id": 122,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 123,
+      "original": "I know p1 A; and1249 is not correct; SEEK p2,p3,p4 items.",
+      "normalized": "I know p1 A; and1249 is not correct; SEEK p2,p3,p4 items.",
+      "scoring_text": "I know p1 A; and1249 is not correct; SEEK p2,p3,p4 items.",
+      "unknown_reason": null
+    },
+    {
+      "id": 124,
+      "original": "I know item2 position 𗌈·D·A; not A,not C,not B,not D [scope uncertain]; I only [𗌈·D·A value U]; SEEK 𗌈·D·A's value; SEEK item1,item3,item4 positions U; request/question. Compound and middle construction unknown.",
+      "normalized": "I know item2 position 𗌈·D·A; not A,not C,not B,not D [scope uncertain]; I only [𗌈·D·A value U]; SEEK 𗌈·D·A's value; SEEK item1,item3,item4 positions U; request/question. Compound and middle construction unknown.",
+      "scoring_text": "I know item2 position 𗌈·D·A; not A,not C,not B,not D [scope uncertain]; I only [𗌈·D·A value U]; SEEK 𗌈·D·A's value; SEEK item1,item3,item4 positions U; request/question. Compound and middle construction unknown.",
+      "unknown_reason": null
+    },
+    {
+      "id": 125,
+      "original": "I know D at p3; I submit/code1259; SEEK D's value U.",
+      "normalized": "I know D at p3; I submit/code1259; SEEK D's value U.",
+      "scoring_text": "I know D at p3; I submit/code1259; SEEK D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 126,
+      "original": "Task: stage 0; invalid attempts 15.",
+      "normalized": "Task: stage 0; invalid attempts 15.",
+      "scoring_text": "Task: stage 0; invalid attempts 15.",
+      "unknown_reason": null
+    },
+    {
+      "id": 127,
+      "original": "I know B-value9; I know A-value1; I know C-value2; code1259 is not correct; D-value U; I try/submit1269.",
+      "normalized": "I know B-value9; I know A-value1; I know C-value2; code1259 is not correct; D-value U; I try/submit1269.",
+      "scoring_text": "I know B-value9; I know A-value1; I know C-value2; code1259 is not correct; D-value U; I try/submit1269.",
+      "unknown_reason": null
+    },
+    {
+      "id": 128,
+      "original": "Task: stage 0; invalid attempts 16.",
+      "normalized": "Task: stage 0; invalid attempts 16.",
+      "scoring_text": "Task: stage 0; invalid attempts 16.",
+      "unknown_reason": null
+    },
+    {
+      "id": 129,
+      "original": "I know A-value2; I know X-value8; I know B-value9; C-value U; all four position-items U.",
+      "normalized": "I know A-value2; I know X-value8; I know B-value9; C-value U; all four position-items U.",
+      "scoring_text": "I know A-value2; I know X-value8; I know B-value9; C-value U; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 130,
+      "original": "I know X=4 [not/or 8: 𘂲 lies between the numerals; exact relation uncertain]; code1249 not correct; A,C,B,D values U; all four position-items U.",
+      "normalized": "I know X=4 [not/or 8: 𘂲 lies between the numerals; exact relation uncertain]; code1249 not correct; A,C,B,D values U; all four position-items U.",
+      "scoring_text": "I know X=4 [not/or 8: 𘂲 lies between the numerals; exact relation uncertain]; code1249 not correct; A,C,B,D values U; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 131,
+      "original": "I know [position]1 A; SEEK [positions]2,3,4; request/question.",
+      "normalized": "I know [position]1 A; SEEK [positions]2,3,4; request/question.",
+      "scoring_text": "I know [position]1 A; SEEK [positions]2,3,4; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 132,
+      "original": "I try/submit1279.",
+      "normalized": "I try/submit1279.",
+      "scoring_text": "I try/submit1279.",
+      "unknown_reason": null
+    },
+    {
+      "id": 133,
+      "original": "Task: stage 0; invalid attempts 17.",
+      "normalized": "Task: stage 0; invalid attempts 17.",
+      "scoring_text": "Task: stage 0; invalid attempts 17.",
+      "unknown_reason": null
+    },
+    {
+      "id": 134,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 135,
+      "original": "A=2; B=9; X=8; C-value U; all four position-items U; request/question.",
+      "normalized": "A=2; B=9; X=8; C-value U; all four position-items U; request/question.",
+      "scoring_text": "A=2; B=9; X=8; C-value U; all four position-items U; request/question.",
+      "unknown_reason": null
+    },
+    {
+      "id": 136,
+      "original": "Request/emphasis; unknown connective; all four position-items U; D's value U.",
+      "normalized": "Request/emphasis; unknown connective; all four position-items U; D's value U.",
+      "scoring_text": "Request/emphasis; unknown connective; all four position-items U; D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 137,
+      "original": "Unknown: contains I,6,B,know, followed by repeated request/unknown-knowledge expressions involving1,4,5; coherent meaning unrecovered.",
+      "normalized": "Unknown: contains I,6,B,know, followed by repeated request/unknown-knowledge expressions involving1,4,5; coherent meaning unrecovered.",
+      "scoring_text": "Unknown: contains I,6,B,know, followed by repeated request/unknown-knowledge expressions involving1,4,5; coherent meaning unrecovered.",
+      "unknown_reason": null
+    },
+    {
+      "id": 138,
+      "original": "I know p1=A; p2,p3,p4 U.",
+      "normalized": "I know p1=A; p2,p3,p4 U.",
+      "scoring_text": "I know p1=A; p2,p3,p4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 139,
+      "original": "[5 / unknown opening] item4; A,C,B,D values U; all four position-items U; code1249 not correct.",
+      "normalized": "[5 / unknown opening] item4; A,C,B,D values U; all four position-items U; code1249 not correct.",
+      "scoring_text": "[5 / unknown opening] item4; A,C,B,D values U; all four position-items U; code1249 not correct.",
+      "unknown_reason": null
+    },
+    {
+      "id": 140,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 141,
+      "original": "I know p1 A=1,p2 C=2,p4 B=9; only p3 D·A [compound/attachment uncertain] has unavailable value; submit1269.",
+      "normalized": "I know p1 A=1,p2 C=2,p4 B=9; only p3 D·A [compound/attachment uncertain] has unavailable value; submit1269.",
+      "scoring_text": "I know p1 A=1,p2 C=2,p4 B=9; only p3 D·A [compound/attachment uncertain] has unavailable value; submit1269.",
+      "unknown_reason": null
+    },
+    {
+      "id": 142,
+      "original": "Task: stage 0; invalid attempts 18.",
+      "normalized": "Task: stage 0; invalid attempts 18.",
+      "scoring_text": "Task: stage 0; invalid attempts 18.",
+      "unknown_reason": null
+    },
+    {
+      "id": 143,
+      "original": "X's value8; all four position-items U; D's value U; request/emphasis.",
+      "normalized": "X's value8; all four position-items U; D's value U; request/emphasis.",
+      "scoring_text": "X's value8; all four position-items U; D's value U; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 144,
+      "original": "I know p4=B; SEEK p1,p2,p3.",
+      "normalized": "I know p4=B; SEEK p1,p2,p3.",
+      "scoring_text": "I know p4=B; SEEK p1,p2,p3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 145,
+      "original": "I know A=2; I do not know C's value; SEEK C and all four position-items.",
+      "normalized": "I know A=2; I do not know C's value; SEEK C and all four position-items.",
+      "scoring_text": "I know A=2; I do not know C's value; SEEK C and all four position-items.",
+      "unknown_reason": null
+    },
+    {
+      "id": 146,
+      "original": "I know 4 [item/suffix construction unknown]; SEEK [number/value plus suffix construction unknown].",
+      "normalized": "I know 4 [item/suffix construction unknown]; SEEK [number/value plus suffix construction unknown].",
+      "scoring_text": "I know 4 [item/suffix construction unknown]; SEEK [number/value plus suffix construction unknown].",
+      "unknown_reason": null
+    },
+    {
+      "id": 147,
+      "original": "I know X's value8; all four position-items U; D's value U; request/emphasis.",
+      "normalized": "I know X's value8; all four position-items U; D's value U; request/emphasis.",
+      "scoring_text": "I know X's value8; all four position-items U; D's value U; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 148,
+      "original": "I know p1=A; SEEK p2,p3,p4, represented as U.",
+      "normalized": "I know p1=A; SEEK p2,p3,p4, represented as U.",
+      "scoring_text": "I know p1=A; SEEK p2,p3,p4, represented as U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 149,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 150,
+      "original": "I know X's value8; all four position-items U; D's value U.",
+      "normalized": "I know X's value8; all four position-items U; D's value U.",
+      "scoring_text": "I know X's value8; all four position-items U; D's value U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 151,
+      "original": "p1's item A; p2,p3,p4 items U.",
+      "normalized": "p1's item A; p2,p3,p4 items U.",
+      "scoring_text": "p1's item A; p2,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 152,
+      "original": "I try code1928; and SEEK C.",
+      "normalized": "I try code1928; and SEEK C.",
+      "scoring_text": "I try code1928; and SEEK C.",
+      "unknown_reason": null
+    },
+    {
+      "id": 153,
+      "original": "Task: stage 0; invalid attempts 19.",
+      "normalized": "Task: stage 0; invalid attempts 19.",
+      "scoring_text": "Task: stage 0; invalid attempts 19.",
+      "unknown_reason": null
+    },
+    {
+      "id": 154,
+      "original": "A=2. I know [unknown]; SEEK 𗌈's value and [A B D 𗌈 𗳃, construction unknown].",
+      "normalized": "A=2. I know [unknown]; SEEK 𗌈's value and [A B D 𗌈 𗳃, construction unknown].",
+      "scoring_text": "A=2. I know [unknown]; SEEK 𗌈's value and [A B D 𗌈 𗳃, construction unknown].",
+      "unknown_reason": null
+    },
+    {
+      "id": 155,
+      "original": "p1's item A; p2,p3,p4 items U.",
+      "normalized": "p1's item A; p2,p3,p4 items U.",
+      "scoring_text": "p1's item A; p2,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 156,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 157,
+      "original": "I know [5/item4 construction uncertain]. I [assemble/derive?] p1 A; A's value U; 1𘖽2 [unknown relation, perhaps change1→2]; B's value U; 9𘖽6 [same uncertain relation]; C,D values U; p2,p3,p4 items U; code1249 not correct.",
+      "normalized": "I know [5/item4 construction uncertain]. I [assemble/derive?] p1 A; A's value U; 1𘖽2 [unknown relation, perhaps change1→2]; B's value U; 9𘖽6 [same uncertain relation]; C,D values U; p2,p3,p4 items U; code1249 not correct.",
+      "scoring_text": "I know [5/item4 construction uncertain]. I [assemble/derive?] p1 A; A's value U; 1𘖽2 [unknown relation, perhaps change1→2]; B's value U; 9𘖽6 [same uncertain relation]; C,D values U; p2,p3,p4 items U; code1249 not correct.",
+      "unknown_reason": null
+    },
+    {
+      "id": 158,
+      "original": "I know p2's item X; I know X's value8; SEEK p1 A's value,p3 C's value,p4 B's value.",
+      "normalized": "I know p2's item X; I know X's value8; SEEK p1 A's value,p3 C's value,p4 B's value.",
+      "scoring_text": "I know p2's item X; I know X's value8; SEEK p1 A's value,p3 C's value,p4 B's value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 159,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 160,
+      "original": "Task: stage 0; invalid attempts 20.",
+      "normalized": "Task: stage 0; invalid attempts 20.",
+      "scoring_text": "Task: stage 0; invalid attempts 20.",
+      "unknown_reason": null
+    },
+    {
+      "id": 161,
+      "original": "I know p4=B; B's value U; p1,p2,p3 items U.",
+      "normalized": "I know p4=B; B's value U; p1,p2,p3 items U.",
+      "scoring_text": "I know p4=B; B's value U; p1,p2,p3 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 162,
+      "original": "Request/emphasis; I know A=2; SEEK C's value and all four position-items.",
+      "normalized": "Request/emphasis; I know A=2; SEEK C's value and all four position-items.",
+      "scoring_text": "Request/emphasis; I know A=2; SEEK C's value and all four position-items.",
+      "unknown_reason": null
+    },
+    {
+      "id": 163,
+      "original": "I know p1=A; SEEK p2,p3,p4.",
+      "normalized": "I know p1=A; SEEK p2,p3,p4.",
+      "scoring_text": "I know p1=A; SEEK p2,p3,p4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 164,
+      "original": "I know D's value8; SEEK A,B,C values; all four position-items U. This line literally uses D, not X.",
+      "normalized": "I know D's value8; SEEK A,B,C values; all four position-items U. This line literally uses D, not X.",
+      "scoring_text": "I know D's value8; SEEK A,B,C values; all four position-items U. This line literally uses D, not X.",
+      "unknown_reason": null
+    },
+    {
+      "id": 165,
+      "original": "Request/emphasis; I know p2 X; p1,p3,p4 U; trailing “number X” uncertain.",
+      "normalized": "Request/emphasis; I know p2 X; p1,p3,p4 U; trailing “number X” uncertain.",
+      "scoring_text": "Request/emphasis; I know p2 X; p1,p3,p4 U; trailing “number X” uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 166,
+      "original": "I submit1932; SEEK p3's item value.",
+      "normalized": "I submit1932; SEEK p3's item value.",
+      "scoring_text": "I submit1932; SEEK p3's item value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 167,
+      "original": "Task: stage 0; invalid attempts 21.",
+      "normalized": "Task: stage 0; invalid attempts 21.",
+      "scoring_text": "Task: stage 0; invalid attempts 21.",
+      "unknown_reason": null
+    },
+    {
+      "id": 168,
+      "original": "I know B=9; p1 U.",
+      "normalized": "I know B=9; p1 U.",
+      "scoring_text": "I know B=9; p1 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 169,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 170,
+      "original": "I try code1248.",
+      "normalized": "I try code1248.",
+      "scoring_text": "I try code1248.",
+      "unknown_reason": null
+    },
+    {
+      "id": 171,
+      "original": "Task: stage 0; invalid attempts 22.",
+      "normalized": "Task: stage 0; invalid attempts 22.",
+      "scoring_text": "Task: stage 0; invalid attempts 22.",
+      "unknown_reason": null
+    },
+    {
+      "id": 172,
+      "original": "A=2; B,D,C values U. Number-marker order unusual.",
+      "normalized": "A=2; B,D,C values U. Number-marker order unusual.",
+      "scoring_text": "A=2; B,D,C values U. Number-marker order unusual.",
+      "unknown_reason": null
+    },
+    {
+      "id": 173,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 174,
+      "original": "We [possible pronoun] know B=9. We submit/code1289: not correct. All four position-items U.",
+      "normalized": "We [possible pronoun] know B=9. We submit/code1289: not correct. All four position-items U.",
+      "scoring_text": "We [possible pronoun] know B=9. We submit/code1289: not correct. All four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 175,
+      "original": "[D / unknown leading word] know p2 item X; SEEK p1,p3,p4 items U.",
+      "normalized": "[D / unknown leading word] know p2 item X; SEEK p1,p3,p4 items U.",
+      "scoring_text": "[D / unknown leading word] know p2 item X; SEEK p1,p3,p4 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 176,
+      "original": "I know A-value1,B-value9,C-value2,D-value8; I only know [or: only] p1 item U. Last clause uncertain.",
+      "normalized": "I know A-value1,B-value9,C-value2,D-value8; I only know [or: only] p1 item U. Last clause uncertain.",
+      "scoring_text": "I know A-value1,B-value9,C-value2,D-value8; I only know [or: only] p1 item U. Last clause uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 177,
+      "original": "Task: stage 0; invalid attempts 23.",
+      "normalized": "Task: stage 0; invalid attempts 23.",
+      "scoring_text": "Task: stage 0; invalid attempts 23.",
+      "unknown_reason": null
+    },
+    {
+      "id": 178,
+      "original": "I [𘊫 unclear, perhaps you/1] B=9 know; SEEK p1,p2,p3 items U.",
+      "normalized": "I [𘊫 unclear, perhaps you/1] B=9 know; SEEK p1,p2,p3 items U.",
+      "scoring_text": "I [𘊫 unclear, perhaps you/1] B=9 know; SEEK p1,p2,p3 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 179,
+      "original": "I submit/code1859.",
+      "normalized": "I submit/code1859.",
+      "scoring_text": "I submit/code1859.",
+      "unknown_reason": null
+    },
+    {
+      "id": 180,
+      "original": "Task: stage 0; invalid attempts 24.",
+      "normalized": "Task: stage 0; invalid attempts 24.",
+      "scoring_text": "Task: stage 0; invalid attempts 24.",
+      "unknown_reason": null
+    },
+    {
+      "id": 181,
+      "original": "I know p1 A; SEEK p2,p3,p4 U; SEEK A,B,C,D values U.",
+      "normalized": "I know p1 A; SEEK p2,p3,p4 U; SEEK A,B,C,D values U.",
+      "scoring_text": "I know p1 A; SEEK p2,p3,p4 U; SEEK A,B,C,D values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 182,
+      "original": "I know B=9. I only know [or: only] A-value [unspecified], C-value [unspecified], item-at-p1 A,item-at-p2 C. Scope uncertain.",
+      "normalized": "I know B=9. I only know [or: only] A-value [unspecified], C-value [unspecified], item-at-p1 A,item-at-p2 C. Scope uncertain.",
+      "scoring_text": "I know B=9. I only know [or: only] A-value [unspecified], C-value [unspecified], item-at-p1 A,item-at-p2 C. Scope uncertain.",
+      "unknown_reason": null
+    },
+    {
+      "id": 183,
+      "original": "I know D [4] / D4; A,C,B values U; p1,p2,p3,p4 U. D4 lacks the numerical introducer.",
+      "normalized": "I know D [4] / D4; A,C,B values U; p1,p2,p3,p4 U. D4 lacks the numerical introducer.",
+      "scoring_text": "I know D [4] / D4; A,C,B values U; p1,p2,p3,p4 U. D4 lacks the numerical introducer.",
+      "unknown_reason": null
+    },
+    {
+      "id": 184,
+      "original": "3 U [probably position3 unknown]; SEEK/U.",
+      "normalized": "3 U [probably position3 unknown]; SEEK/U.",
+      "scoring_text": "3 U [probably position3 unknown]; SEEK/U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 185,
+      "original": "I know item1 A; item2 unknown,item3 unknown,item4 unknown; A,B,C,D unknown. Here the unknown glyph is 𘈩, not 𘆎.",
+      "normalized": "I know item1 A; item2 unknown,item3 unknown,item4 unknown; A,B,C,D unknown. Here the unknown glyph is 𘈩, not 𘆎.",
+      "scoring_text": "I know item1 A; item2 unknown,item3 unknown,item4 unknown; A,B,C,D unknown. Here the unknown glyph is 𘈩, not 𘆎.",
+      "unknown_reason": null
+    },
+    {
+      "id": 186,
+      "original": "I know D=4; A,C,B values U; all four position-items U.",
+      "normalized": "I know D=4; A,C,B values U; all four position-items U.",
+      "scoring_text": "I know D=4; A,C,B values U; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 187,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 188,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 189,
+      "original": "I know B=9. I know A=1. I know D=8. I do not know C's value. I guess p1 A,p2 D,p3 B,p4 C. I try/submit1892.",
+      "normalized": "I know B=9. I know A=1. I know D=8. I do not know C's value. I guess p1 A,p2 D,p3 B,p4 C. I try/submit1892.",
+      "scoring_text": "I know B=9. I know A=1. I know D=8. I do not know C's value. I guess p1 A,p2 D,p3 B,p4 C. I try/submit1892.",
+      "unknown_reason": null
+    },
+    {
+      "id": 190,
+      "original": "Task: stage 0; invalid attempts 25.",
+      "normalized": "Task: stage 0; invalid attempts 25.",
+      "scoring_text": "Task: stage 0; invalid attempts 25.",
+      "unknown_reason": null
+    },
+    {
+      "id": 191,
+      "original": "I know p4 B=9; p1,p2,p3 items U.",
+      "normalized": "I know p4 B=9; p1,p2,p3 items U.",
+      "scoring_text": "I know p4 B=9; p1,p2,p3 items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 192,
+      "original": "I know p1 A; U at p2,p3,p4; SEEK A's value.",
+      "normalized": "I know p1 A; U at p2,p3,p4; SEEK A's value.",
+      "scoring_text": "I know p1 A; U at p2,p3,p4; SEEK A's value.",
+      "unknown_reason": null
+    },
+    {
+      "id": 193,
+      "original": "I know D=2. I know B=9. I know X=8. I know 𗌈-value5 [label unknown]; A-value U; all four position-items U.",
+      "normalized": "I know D=2. I know B=9. I know X=8. I know 𗌈-value5 [label unknown]; A-value U; all four position-items U.",
+      "scoring_text": "I know D=2. I know B=9. I know X=8. I know 𗌈-value5 [label unknown]; A-value U; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 194,
+      "original": "I know D=4; SEEK A,C,B values; all four position-items U.",
+      "normalized": "I know D=4; SEEK A,C,B values; all four position-items U.",
+      "scoring_text": "I know D=4; SEEK A,C,B values; all four position-items U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 195,
+      "original": "A=1,C=2,D=8,B=9. I know p4 B=9; SEEK p1𗘗,p2𗘗,p3𗘗 [modifier unknown]; request/emphasis.",
+      "normalized": "A=1,C=2,D=8,B=9. I know p4 B=9; SEEK p1𗘗,p2𗘗,p3𗘗 [modifier unknown]; request/emphasis.",
+      "scoring_text": "A=1,C=2,D=8,B=9. I know p4 B=9; SEEK p1𗘗,p2𗘗,p3𗘗 [modifier unknown]; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 196,
+      "original": "I do not know A's value; SEEK A's value; U at p2 and p4.",
+      "normalized": "I do not know A's value; SEEK A's value; U at p2 and p4.",
+      "scoring_text": "I do not know A's value; SEEK A's value; U at p2 and p4.",
+      "unknown_reason": null
+    },
+    {
+      "id": 197,
+      "original": "I know p1 A,p2 U,p3 U,p4 U; SEEK A,B,C,D values; request/emphasis.",
+      "normalized": "I know p1 A,p2 U,p3 U,p4 U; SEEK A,B,C,D values; request/emphasis.",
+      "scoring_text": "I know p1 A,p2 U,p3 U,p4 U; SEEK A,B,C,D values; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 198,
+      "original": "I know p2 item X. I [combine/guess/list] A=2,X=8,B=9,D=4; p3,p4 items U; SEEK 𗌈's value [label unknown].",
+      "normalized": "I know p2 item X. I [combine/guess/list] A=2,X=8,B=9,D=4; p3,p4 items U; SEEK 𗌈's value [label unknown].",
+      "scoring_text": "I know p2 item X. I [combine/guess/list] A=2,X=8,B=9,D=4; p3,p4 items U; SEEK 𗌈's value [label unknown].",
+      "unknown_reason": null
+    },
+    {
+      "id": 199,
+      "original": "p1 A; p2,p3,p4 items U; SEEK A,B,C,D values.",
+      "normalized": "p1 A; p2,p3,p4 items U; SEEK A,B,C,D values.",
+      "scoring_text": "p1 A; p2,p3,p4 items U; SEEK A,B,C,D values.",
+      "unknown_reason": null
+    },
+    {
+      "id": 200,
+      "original": "I know A=1. I know B=9. I know D=8. I do not know C's value. I only know 𘖸 [unknown]; SEEK 𘖸.",
+      "normalized": "I know A=1. I know B=9. I know D=8. I do not know C's value. I only know 𘖸 [unknown]; SEEK 𘖸.",
+      "scoring_text": "I know A=1. I know B=9. I know D=8. I do not know C's value. I only know 𘖸 [unknown]; SEEK 𘖸.",
+      "unknown_reason": null
+    },
+    {
+      "id": 201,
+      "original": "I know [p]4 B=9; SEEK [p]1; request/emphasis.",
+      "normalized": "I know [p]4 B=9; SEEK [p]1; request/emphasis.",
+      "scoring_text": "I know [p]4 B=9; SEEK [p]1; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 202,
+      "original": "I know D at p3; request/emphasis. SEEK p1,p2,p4 items; SEEK A,B,C,D values.",
+      "normalized": "I know D at p3; request/emphasis. SEEK p1,p2,p4 items; SEEK A,B,C,D values.",
+      "scoring_text": "I know D at p3; request/emphasis. SEEK p1,p2,p4 items; SEEK A,B,C,D values.",
+      "unknown_reason": null
+    },
+    {
+      "id": 203,
+      "original": "I know B=9. I know D=8. I know A=2. I know C=2. I try/submit2892.",
+      "normalized": "I know B=9. I know D=8. I know A=2. I know C=2. I try/submit2892.",
+      "scoring_text": "I know B=9. I know D=8. I know A=2. I know C=2. I try/submit2892.",
+      "unknown_reason": null
+    },
+    {
+      "id": 204,
+      "original": "Task: stage 0; invalid attempts 26.",
+      "normalized": "Task: stage 0; invalid attempts 26.",
+      "scoring_text": "Task: stage 0; invalid attempts 26.",
+      "unknown_reason": null
+    },
+    {
+      "id": 205,
+      "original": "I know p2 item X=8. I guess/think p1 item A=2,p3 item B=9,p4 item D=4. SEEK p1,p3,p4 items U; request/emphasis.",
+      "normalized": "I know p2 item X=8. I guess/think p1 item A=2,p3 item B=9,p4 item D=4. SEEK p1,p3,p4 items U; request/emphasis.",
+      "scoring_text": "I know p2 item X=8. I guess/think p1 item A=2,p3 item B=9,p4 item D=4. SEEK p1,p3,p4 items U; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 206,
+      "original": "I know D=4,C=2,B=9,A=1. I try/submit1249.",
+      "normalized": "I know D=4,C=2,B=9,A=1. I try/submit1249.",
+      "scoring_text": "I know D=4,C=2,B=9,A=1. I try/submit1249.",
+      "unknown_reason": null
+    },
+    {
+      "id": 207,
+      "original": "Task: stage 0; invalid attempts 27.",
+      "normalized": "Task: stage 0; invalid attempts 27.",
+      "scoring_text": "Task: stage 0; invalid attempts 27.",
+      "unknown_reason": null
+    },
+    {
+      "id": 208,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 209,
+      "original": "I know B=9; A=2; D=8; C=4. I try/submit2894.",
+      "normalized": "I know B=9; A=2; D=8; C=4. I try/submit2894.",
+      "scoring_text": "I know B=9; A=2; D=8; C=4. I try/submit2894.",
+      "unknown_reason": null
+    },
+    {
+      "id": 210,
+      "original": "Task: stage 0; invalid attempts 28.",
+      "normalized": "Task: stage 0; invalid attempts 28.",
+      "scoring_text": "Task: stage 0; invalid attempts 28.",
+      "unknown_reason": null
+    },
+    {
+      "id": 211,
+      "original": "I know p2 item X; p1,p3,p4 items U; A,C,D,B,X values U; request/emphasis.",
+      "normalized": "I know p2 item X; p1,p3,p4 items U; A,C,D,B,X values U; request/emphasis.",
+      "scoring_text": "I know p2 item X; p1,p3,p4 items U; A,C,D,B,X values U; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 212,
+      "original": "I guess1289; D-value8; D at p3.",
+      "normalized": "I guess1289; D-value8; D at p3.",
+      "scoring_text": "I guess1289; D-value8; D at p3.",
+      "unknown_reason": null
+    },
+    {
+      "id": 213,
+      "original": "Task: stage 0; invalid attempts 29.",
+      "normalized": "Task: stage 0; invalid attempts 29.",
+      "scoring_text": "Task: stage 0; invalid attempts 29.",
+      "unknown_reason": null
+    },
+    {
+      "id": 214,
+      "original": "I know p4 item B; SEEK p1,p2,p3 items. I guess A=1,C=2,D=8,B=9.",
+      "normalized": "I know p4 item B; SEEK p1,p2,p3 items. I guess A=1,C=2,D=8,B=9.",
+      "scoring_text": "I know p4 item B; SEEK p1,p2,p3 items. I guess A=1,C=2,D=8,B=9.",
+      "unknown_reason": null
+    },
+    {
+      "id": 215,
+      "original": "I know B=9; A,D,C values U.",
+      "normalized": "I know B=9; A,D,C values U.",
+      "scoring_text": "I know B=9; A,D,C values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 216,
+      "original": "I know D=4; item1 A,item2 C,item3 B,item4 D. I try/submit1294.",
+      "normalized": "I know D=4; item1 A,item2 C,item3 B,item4 D. I try/submit1294.",
+      "scoring_text": "I know D=4; item1 A,item2 C,item3 B,item4 D. I try/submit1294.",
+      "unknown_reason": null
+    },
+    {
+      "id": 217,
+      "original": "Task: stage 0; invalid attempts 30.",
+      "normalized": "Task: stage 0; invalid attempts 30.",
+      "scoring_text": "Task: stage 0; invalid attempts 30.",
+      "unknown_reason": null
+    },
+    {
+      "id": 218,
+      "original": "I know A=1. I know B=9. I know D=8. I do not know C's value. Ask/need C's value; ask/need item1,item2,item3,item4; request/emphasis.",
+      "normalized": "I know A=1. I know B=9. I know D=8. I do not know C's value. Ask/need C's value; ask/need item1,item2,item3,item4; request/emphasis.",
+      "scoring_text": "I know A=1. I know B=9. I know D=8. I do not know C's value. Ask/need C's value; ask/need item1,item2,item3,item4; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 219,
+      "original": "I know p1 item A; p2,p3,p4 items U; A,B,C,D values U. Code1249 is not correct.",
+      "normalized": "I know p1 item A; p2,p3,p4 items U; A,B,C,D values U. Code1249 is not correct.",
+      "scoring_text": "I know p1 item A; p2,p3,p4 items U; A,B,C,D values U. Code1249 is not correct.",
+      "unknown_reason": null
+    },
+    {
+      "id": 220,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 221,
+      "original": "I know item-at-p3 D; items-at-p1,p2,p4 U.",
+      "normalized": "I know item-at-p3 D; items-at-p1,p2,p4 U.",
+      "scoring_text": "I know item-at-p3 D; items-at-p1,p2,p4 U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 222,
+      "original": "Discarded nonpermitted message.",
+      "normalized": "Discarded nonpermitted message.",
+      "scoring_text": "Discarded nonpermitted message.",
+      "unknown_reason": null
+    },
+    {
+      "id": 223,
+      "original": "Task: stage 0; invalid attempts 31.",
+      "normalized": "Task: stage 0; invalid attempts 31.",
+      "scoring_text": "Task: stage 0; invalid attempts 31.",
+      "unknown_reason": null
+    },
+    {
+      "id": 224,
+      "original": "Request/emphasis; I know p4 B; SEEK p1,p2,p3 U; B,A,C,D values U.",
+      "normalized": "Request/emphasis; I know p4 B; SEEK p1,p2,p3 U; B,A,C,D values U.",
+      "scoring_text": "Request/emphasis; I know p4 B; SEEK p1,p2,p3 U; B,A,C,D values U.",
+      "unknown_reason": null
+    },
+    {
+      "id": 225,
+      "original": "I know B=9; SEEK A,D,C values; SEEK p1,p2,p3,p4 items; request/emphasis.",
+      "normalized": "I know B=9; SEEK A,D,C values; SEEK p1,p2,p3,p4 items; request/emphasis.",
+      "scoring_text": "I know B=9; SEEK A,D,C values; SEEK p1,p2,p3,p4 items; request/emphasis.",
+      "unknown_reason": null
+    },
+    {
+      "id": 226,
+      "original": "I submit/code1829.",
+      "normalized": "I submit/code1829.",
+      "scoring_text": "I submit/code1829.",
+      "unknown_reason": null
+    },
+    {
+      "id": 227,
+      "original": "Task: stage 0; invalid attempts 32.",
+      "normalized": "Task: stage 0; invalid attempts 32.",
+      "scoring_text": "Task: stage 0; invalid attempts 32.",
+      "unknown_reason": null
+    }
+  ],
+  "notes": [],
+  "decoder_path": "experiments/tangut_200g_250l_200t/decoding/D13_deepseek_to_sol_no_task/decoded.txt",
+  "decoder_sha256": "68f97fb101a6d9d9601bb7b45811efd196d694e1ba50bdf5a73f363db14c020e",
+  "canonical_document_sha256": "2998bb78986bad211dc32603344e6fd5705182f3793cb900c2b075c533a3034f"
+}

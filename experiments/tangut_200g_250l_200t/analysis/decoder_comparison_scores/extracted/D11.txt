@@ -1,0 +1,228 @@
+2. TRANSLATION
+[1] Stage 0, invalid_attempts 0.
+[2] Unknown.
+[3] ⊘
+[4] ⊘
+[5] Unknown.
+[6] Unknown.
+[7] ⊘
+[8] Unknown.
+[9] ⊘
+[10] ⊘
+[11] Unknown.
+[12] ⊘
+[13] Unknown.
+[14] maybe "A is white" (𗉞𘊫𗂱𘒳, possibly A=white black?).
+[15] unknown.
+[16] unknown.
+[17] unknown.
+[18] ⊘
+[19] unknown.
+[20] unknown.
+[21] ⊘
+[22] "A is white", "B is black", "C is grey", "D is dark". (𗉞𘊫𗂱𘒳𗁳𗉞𘀝𘆎𗤄𗉞𘔃𘆎𗤄𗉞𗨥𘆎𗤄)
+[23] unknown.
+[24] "the A is white, the A is black, the C is grey, the D is dark" …
+[25] "the A is white, the B is white, the C is white, the D is white".
+[26] I state: A maybe, B maybe, C grey, D dark. The A is white. The B is black. The C is grey. The D is dark.
+[27] unknown.
+[28] unknown.
+[29] "the A is white, the A is white B is black, the C is grey, the D is grey, maybe the C".
+[30] "B is white, B is black, D is white, D is black, 7 is white, 7 is black, 8 is white, the A is black".
+[31] unknown.
+[32] "I guess: 1 2 3 4", then "A is white, A is black, B is black, D is grey". [guess] (𗒳𗲅𗉞𘊫𘀝𘔃𗨥𗤄 …)
+[33] Stage 0, invalid_attempts 1.
+[34] unknown.
+[35] I state: "C is, I state, D is black, 7 is A white, B black, D grey" …
+[36] "I state: B is white, A is grey, A is black, C is dark, the B is white, the A is black, the C is grey, the D is dark".
+[37] ⊘
+[38] unknown.
+[39] unknown.
+[40] "D is white grey, maybe grey is, C maybe, A maybe".
+[41] unknown.
+[42] "the B is ?, A is black, C is black, D is black".
+[43] "maybe the A is black, maybe the B is black, maybe the C is black, maybe the D is black".
+[44] Stage0, invalid_attempts 2.
+[45] I state: "grey is, A is white, B is black, C is grey, D is dark, the A is white, the B is black, the C is grey, the D is dark".
+[46] "C is, A is white, B is black, D is grey, …"
+[47] "I state: the D is ?, A is white, B is black, C is grey, D is dark".
+[48] "I state: 1 is white, A is black, B is black, C is black. I guess: 2 2 2 5". [guess]
+[49] Stage0, invalid_attempts 3.
+[50] "I state: A is white, the A is black, the B is black, the C is black, the D is black".
+[51] "I state: grey is, A is white, B is black, A is white, B is black, C is grey, D is dark".
+[52] "the 7 is D, maybe A is, maybe grey is, maybe black is".
+[53] ⊘
+[54] "I state: D is white, A is white, D is grey, A is white, B is black, B is black, C is 3, C is black".
+[55] "I state: the C is 3, I state: A is white, I state: B is black, I state: grey is dark, maybe 3 is".
+[56] "I state: grey is dark? A is black, B is black, C is black".
+[57] "I state: D is white grey, B is black".
+[58] "I state: the A is white, A is …, maybe grey is black".
+[59] "I state: D is white, grey is dark, A is white, B is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe B is".
+[60] "I state: 1 the 1 is black, 2 black, 3 black, 4 black, A black, B black, C black, D black".
+[61] "I state: B is D, grey is 7, A is white, B is black, A is black, 1 2 4 7, A is white, B is black, C is dark, D is grey. I submit: 1 2 4 7". [guess]
+[62] Stage0, invalid_attempts 4.
+[63] "I state: B the 2 is, A is white, C is black, D is black, maybe A is white, grey is dark, black is black, maybe 1 the black maybe 3 the black maybe 4 the black".
+[64] "I guess: 1 2 2 5". [guess]
+[65] Stage0, invalid_attempts 5.
+[66] "I state: the 6 is, 1 the black, 2 the black, 3 the black, 4 the black, maybe A is, maybe grey is, maybe black is, maybe B is".
+[67] ⊘
+[68] ⊘
+[69] "I guess: 2 2 6 5". [guess]
+[70] Stage0, invalid_attempts 6.
+[71] "I state: the B is, maybe the A is, maybe the C is, maybe the D is, maybe A black, maybe B black, maybe C black, maybe D black".
+[72] "I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the".
+[73] "B is ?, maybe the A is, maybe the C is, maybe the D is".
+[74] ⊘
+[75] "I state: D is white, the A is black, the B is black, the C is black".
+[76] ⊘
+[77] "I state: the A is white, maybe the B is black, the C is black, the D is black".
+[78] ⊘
+[79] "I state: grey is dark, maybe the A is, maybe the B is, maybe the C is, maybe the D is, maybe A is, maybe black is, maybe B is".
+[80] Stage0, invalid_attempts 7.
+[81] "I state: B is 6, the A is black, the B is black, the C is black, the D is black, maybe A is, maybe grey is, maybe black is, maybe B is".
+[82] "I state: 2 the 2 is, maybe black is, maybe 1 the black, maybe 3 the black, maybe 4 the black".
+[83] "I state: D is white, maybe the A is, maybe the B is, maybe the C is, A is black, B is black, C is black, D is black".
+[84] "I state: A is white, grey is dark, the B is black, the C is dark, the D is black".
+[85] ⊘
+[86] "I state: grey is dark, A is white, B is black, B is 6, the A is white, the B is dark, the C is black, the D is grey. I guess: 1 6 2 5". [guess]
+[87] Stage0, invalid_attempts 8.
+[88] "1 is white, 2 is black, 3 is dark, 4 is grey. I submit: 1 2 4 5". [guess]
+[89] Stage0, invalid_attempts 9.
+[90] "I guess: 1 2 6 5". [guess]
+[91] Stage0, invalid_attempts 10.
+[92] "I state: A is white, black is black, B is black, grey is black, A B C D grey".
+[93] ⊘
+[94] "I state: 3 the 3, I state: grey is dark, B is black, A is black, B is black, 1 the black, 2 the black, 4 the black".
+[95] "I state: B is ?, maybe B the, maybe A is, maybe black is, maybe B is, maybe 1 the, maybe 3 the, maybe 4 the".
+[96] "I state: the D is grey, maybe grey is, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe black is, maybe B is".
+[97] "I state: 1 the white, A is white, B is black, grey is dark, maybe 3 the, maybe 4 the, maybe B is".
+[98] "I guess: 1 2 6 5. I state: A is white, B is black, grey is dark, the A is white, the B is black, the C is dark, the D is grey, B is black". [guess]
+[99] "I state: B is ?, maybe A is, maybe black is, maybe grey is, maybe the A black, maybe the B black, maybe the C black, maybe the D black".
+[100] "I state: the D is white, maybe the A is, maybe the B is, maybe the C is, maybe A is, maybe grey is, maybe ? is, maybe 8 is".
+[101] "I state: A is white, B is black, grey is dark. Maybe B is black".
+[102] "I state: A is white, B is black, grey is dark. I guess: B is 3. I guess: 1 2 3 5". [guess]
+[103] Stage0, invalid_attempts 11.
+[104] "I state: A is white, B is black, grey is dark, maybe B is, maybe the A is white, maybe the B the, maybe the C the, maybe the D the".
+[105] "I state: 2 the 2 is, B is black, 1 the black, 3 the black, 4 the black".
+[106] "I state: A is white, grey is dark, B is 6, maybe black is, the A is black, the B is black, the C is black".
+[107] "I state: B is ?, B is black, A is black, B is black, grey is black".
+[108] "I state: 3 is B, A is white, B is black, D is dark".
+[109] "D is 4, 1 is black, 2 is black, 3 is black, A is black, grey is black, black is black, B is black".
+[110] "I submit: 1 2 4 5". [guess]
+[111] Stage0, invalid_attempts 12.
+[112] "I state: B is ?, A is black, grey is black, black is black, the A is black, the B is black, the C is black, the D is black".
+[113] "A is white, B is black, grey is dark, B is black".
+[114] "I state: 2 the 2 is A black black black B grey B, maybe B is black, maybe 1 the black, maybe 3 the black, maybe 4 the black".
+[115] "I guess: 1 2 6 5". [guess]
+[116] Stage0, invalid_attempts 13.
+[117] "I state: B is ?, I state: 1 black, 2 black, 3 black, 4 black, A black, B black, grey black".
+[118] "I state: B is D, A is black, B is black, grey is black. I guess: 1 2 4 5. I state: 1 black, 2 black, 3 black, 4 black". [guess]
+[119] "I state: B is black".
+[120] "1 is grey, dark is 5. A is white, B is black, B is black. I guess: 1 2 7 5". [guess]
+[121] Stage0, invalid_attempts 14.
+[122] ⊘
+[123] "I state: the 1 is white, 1 2 4 5. Maybe the 2 the, maybe the 3 the, maybe the 4 the".
+[124] "I state: the 2 the, A black black black B grey B, maybe A black, maybe the A the black, maybe the 1 the black".
+[125] "I state: 2 is 3, I guess: 1 2 7 5. Maybe B is black". [guess]
+[126] Stage0, invalid_attempts 15.
+[127] "I state: grey is dark, A is white, B is black. I guess: 1 2 7 5. B is black. I guess: 1 2 8 5". [guess]
+[128] Stage0, invalid_attempts 16.
+[129] "I state: A is black, B is ?, grey is dark, black is black, 1 black, 2 black, 3 black, 4 black".
+[130] "I state: B is D 6, I guess: 1 2 4 5. I state: A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black". [guess]
+[131] "I state: the A is white, maybe the B the, maybe the C the, maybe the D the".
+[132] "I guess: 1 2 8 5". [guess]
+[133] Stage0, invalid_attempts 17.
+[134] ⊘
+[135] "A is white, grey is dark, B is 6, black is black, 1 black, 2 black, 3 black, 4 black".
+[136] "1 black, 2 black, 3 black, 4 black, B is black".
+[137] "I state: 8 is, maybe 1 is, maybe 4 is, maybe 7 is".
+[138] "I state: 1 white, 2 black, 3 black, 4 black".
+[139] "7 the D, A black, B black, grey black, B black, 1 black, 2 black, 3 black, 4 black. I guess: 1 2 4 5". [guess]
+[140] ⊘
+[141] "I state: 1 is white, 2 is black, 4 is dark, maybe 3 is B, A is black. I guess: 1 2 8 5". [guess]
+[142] Stage0, invalid_attempts 18.
+[143] "B is ?, 1 black, 2 black, 3 black, 4 black, B black".
+[144] "I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black".
+[145] "I state: A is white, maybe black is black, maybe 1 the, maybe 2 the, maybe 3 the, maybe 4 the".
+[146] "I state: D is ?, maybe the ?".
+[147] "I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black".
+[148] "I state: the A is white, maybe the B black, maybe the C black, maybe the D black".
+[149] ⊘
+[150] "I state: B is ?, 1 black, 2 black, 3 black, 4 black, B black".
+[151] "the A white, the B black, the C black, the D black".
+[152] "I guess: 1 5 2 6, maybe black is". [guess]
+[153] Stage0, invalid_attempts 19.
+[154] "A is white, I state: maybe the ?, maybe A grey B ? …".
+[155] "1 white, 2 black, 3 black, 4 black".
+[156] ⊘
+[157] "I state: 7 the D, 1 white, A black, 1 maybe 2, grey black, dark 8, black black, B black, 2 black, 3 black, 4 black. I guess: 1 2 4 5". [guess]
+[158] "I state: 2 the 2 is B, I state: B is 6, maybe 1 white is, maybe 3 black is, maybe 4 grey is".
+[159] ⊘
+[160] Stage0, invalid_attempts 20.
+[161] "I state: D is white, grey is black, A white B white C 3 black".
+[162] "I state: A is white, maybe black is black, 1 black, 2 black, 3 black, 4 black".
+[163] "I state: the A is white, maybe the B the, maybe the C the, maybe the D the".
+[164] "I state: B is 6, maybe A is, maybe grey is, maybe black is, 1 black, 2 black, 3 black, 4 black".
+[165] "I state: 2 is B, 1 black, 3 black, 4 black, B is".
+[166] "I guess: 1 5 3 2, maybe the 3 the is". [guess]
+[167] Stage0, invalid_attempts 21.
+[168] "I state: grey is dark, the A is black".
+[169] ⊘
+[170] "I guess: 1 2 4 6". [guess]
+[171] Stage0, invalid_attempts 22.
+[172] "A is white, B is black, B is black, B is black".
+[173] ⊘
+[174] "I state: grey is dark, I guess: 1 2 6 5. I state: the A is black, the B is black, the C is black, the D is black". [guess]
+[175] "I state: 2 the 2 is, maybe 1 black, maybe 3 black, maybe 4 black".
+[176] "I state: A is white, grey is dark, black is black, B is 6, I state: 1 black".
+[177] Stage0, invalid_attempts 23.
+[178] "I state: 1 is grey, dark is 5. Maybe 1 black, maybe 2 black, maybe 3 black".
+[179] "I guess: 1 6 7 5". [guess]
+[180] Stage0, invalid_attempts 24.
+[181] "I state: the 1 is white, maybe the 2 black, maybe the 3 black, maybe the 4 black, maybe A black, maybe grey black, maybe black black, maybe B black".
+[182] "I state: grey is dark, I state: A is, B is, the A white, the B black".
+[183] "I state: B is D, A black, B black, grey black, 1 black, 2 black, 3 black, 4 black".
+[184] "the C is black, maybe the".
+[185] "I state: the white, the black, the grey, the dark, A is, B is, C is, D is".
+[186] "I state: B is D, A black, B black, grey black, 1 the black, 2 the black, 3 the black, 4 the black".
+[187] ⊘
+[188] ⊘
+[189] "I state: grey is dark, A is white, B is 6, maybe black is, I state: I guess: 1 2 6 5 2". [guess]
+[190] Stage0, invalid_attempts 25.
+[191] "I state: the D is white dark, the A is black, the B is black, the C is black".
+[192] "I state: 1 the white is black, the B, the C, the D, maybe A is".
+[193] "I state: B is white, grey is dark, B is 6, maybe 7 is, A is black, 1 black, 2 black, 3 black, 4 black".
+[194] "I state: B is D, maybe A is, maybe B is, maybe grey is, 1 black, 2 black, 3 black, 4 black".
+[195] "A is white, B is black, B is 6, grey is dark, I state: D is white dark, maybe 1 the, maybe 2 the, maybe 3 the".
+[196] "I state: maybe A is, maybe A is, maybe 2 is, maybe 4 is".
+[197] "I state: 1 white, 2 black, 3 black, 4 black, maybe A is, maybe grey is, maybe black is, maybe B is".
+[198] "I state: 2 the 2 is B, 3 the 3 is C, maybe 1 the white, maybe 1 is white, maybe grey is dark, maybe B is D, 3 black, 4 black, maybe 7 is".
+[199] "the 1 white, the 2 black, the3 black, the4 black, maybe the A, maybe the grey, maybe the black, maybe the B".
+[200] "I state: A is white, grey is dark, B is 6, maybe black is, maybe ? maybe ?".
+[201] "I state: the D is grey, maybe the A is".
+[202] "I state: 2 is 3, maybe the 1 the, maybe the 2 the, maybe the 4 the, maybe A is, maybe grey is, maybe black is, maybe B is".
+[203] "I state: grey is dark, B is 6, A is white, B is black, I guess: 2 6 5 2". [guess]
+[204] Stage0, invalid_attempts 26.
+[205] "I state: 2 the 2 is 6, maybe 1 the white is 2, 3 the dark is 5, 4 the B is D, maybe the 1 the black is, maybe the 3 the black is, maybe the 4 the black is".
+[206] "I state: B is D, black is white, grey is dark, A is white, I guess: 1 2 4 5". [guess]
+[207] Stage0, invalid_attempts 27.
+[208] ⊘
+[209] "I state: grey is dark, A is white, B is 6, black is D, I guess: 2 6 5 4". [guess]
+[210] Stage0, invalid_attempts 28.
+[211] "I state: 2 the 2 is, 1 black, 3 black, 4 black, A black, B black, C black, D black, B black".
+[212] "I guess: 1 2 6 5, B is 6, 2 is 3". [guess]
+[213] Stage0, invalid_attempts 29.
+[214] "I state: the D the grey, maybe the 1 the, maybe the 2 the, maybe the 3 the, I state: I guess: 1 2 6 5". [guess]
+[215] "I state: grey is dark, A is black, B is black, black is black".
+[216] "I state: B is D, the A white, the B black, the C grey, the D dark. I guess: 1 2 5 4". [guess]
+[217] Stage0, invalid_attempts 30.
+[218] "I state: A is white, grey is dark, B is 6, maybe black is, maybe the A is, maybe the B is, maybe the C is, maybe the D is".
+[219] "I state: 1 white, 2 black, 3 black, 4 black, A black, grey black, black black, B black. I guess: 1 2 4 5". [guess]
+[220] ⊘
+[221] "I state: 2 the 3 is, 1 black, 2 black, 4 black".
+[222] ⊘
+[223] Stage0, invalid_attempts 31.
+[224] "I state: D is white, maybe 1 black, maybe 2 black, maybe 3 black, grey black, A black, black black, B black".
+[225] "I state: grey is dark, maybe A is, maybe B is, maybe black is, maybe the 1 the, maybe the 2 the, maybe the 3 the, maybe the 4 the".
+[226] "I guess: 1 6 2 5". [guess]
+[227] Stage0, invalid_attempts 32.
