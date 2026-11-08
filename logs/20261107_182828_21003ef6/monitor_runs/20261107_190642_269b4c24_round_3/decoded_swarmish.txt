@@ -1,0 +1,215 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered dictionary. Confidence labels concern the stated inference, not merely the existence of a repeated string. Many content words remain unknown. Symbolic renderings below preserve those gaps rather than substitute a guessed task solution.
+
+ORTHOGRAPHY AND STRUCTURE
+• [HIGH] Spaces generally delimit tokens. Almost every token is two Tangut-looking Unicode glyphs. Exceptions include literal agent identifiers and short strings 𗜑, 𗜑𗜑, 𗜑𘖽. A glyph pair should normally be treated as a unit; individual glyphs have not been translated.
+• [HIGH] Recurring clause frame: 𘅌𗐪 𘅌𘝚 PREDICATE [𘅌𗎿 ARGUMENT-1] [𘅌𘊌 ARGUMENT-2] 𘅌𘗣. Either argument can be omitted. Clauses can be concatenated and embedded directly inside arguments.
+• [HIGH] 𘅌𘗣 closes a clause, including embedded clauses. Consecutive copies generally correspond to nesting.
+• [MEDIUM] 𘅌𗎿 marks first argument, plausibly subject; 𘅌𘊌 marks second argument, plausibly object. Exact semantic roles remain unknown.
+• [MEDIUM] 𘅌𗐪 𘅌𘝚 is a clause-opening sequence. One economical interpretation is OPEN-CLAUSE + PREDICATE-FIELD. Assertion/mood plus tense/polarity is another possibility, but no contrasts establish those individual meanings.
+• [HIGH for embedding; MEDIUM for relative attachment] 𘅌𗜑 introduces an embedded proposition, frequently modifying the immediately preceding noun 𗡒𗏻. Such noun-plus-clause expressions occupy either outer argument position. Direct embedding also occurs without this marker.
+• [MEDIUM] 𘅌𗌸 introduces an additional role or value. It often precedes a numeral, but also longer expressions. Exact equivalent unknown.
+• [MEDIUM] 𘅌𗸽 introduces another proposition-level role, plausibly source/from/by. It frequently precedes an agent name or 𗿃𘅠. It is not securely a conjunction or a genitive inside the nearest noun phrase.
+• [MEDIUM] 𘅌𘋟 introduces another participant, plausibly recipient/addressee, especially agent_7 in messages 38–39.
+• [LOW–MEDIUM] 𘅌𘉝 coordinates/groups names in message 36.
+• [LOW] 𘅌𗵫 may mark a question/nonassertive mood; negation is an alternative.
+• [LOW] 𘅌𗽕 may mark request/imperative or another modal/discourse qualification.
+• [LOW] 𘅌𘔠 may mean “but/however”; 𘅌𗤴 is an unknown role/modifier marker.
+• [LOW] Final 𗐪𗿋 may be punctuation, a discourse particle, or uncertainty marker. It is retained as an untranslated ending. It is not obligatory clause closure: message 95 lacks it.
+• [HIGH observation; LOW interpretation] First glyphs recur in families (𘅌, 𗌿, 𗡒, 𘆣, 𘔠, 𗿃). The 𘅌 family is strongly associated with grammar and 𘔠 with number-like expressions. Broader semantic/POS classes are unproven; families may instead encode codebook indices. Reused suffixes have no established independent meanings.
+• [HIGH] Literal agent names can occur within clauses. No discarded-message symbol ⊘ occurs in this log.
+
+NUMBER-LIKE TOKENS
+[MEDIUM–HIGH] Ten observed 𘔠-prefixed tokens behave like numeral atoms, but their absolute values are unanchored. Neither decimal encoding nor compositional multi-digit notation is demonstrated. Stable aliases:
+n0 = 𘔠𗵵; n1 = 𘔠𘎌; n2 = 𘔠𘉝; n3 = 𘔠𗌈; n4 = 𘔠𗊑; n5 = 𘔠𗡒; n6 = 𘔠𗂱; n7 = 𘔠𗏔; n8 = 𘔠𗟎; n9 = 𘔠𗢬.
+[LOW] One possible ordering assigns these aliases their corresponding decimal digits 0–9. This is only a coherent guess, not a decoded fact. Translations use the aliases, not asserted Arabic-number values.
+[HIGH observation] Repeated initial associations are n0→n1, n1→n2, n3→n4, n4→n5. Final associations are n0→n9, n1→n2, n3→n9, n4→n8.
+[LOW] Bare 𗜑 / 𗜑𗜑 / 𗜑𘖽 may be literal character strings, perhaps digits, letters, or identifiers. Actual values unknown.
+
+CONTENT-WORD AND PHRASE KEY
+The English labels below stand for UNKNOWN words, not recovered translations. Confidence in identifying repeated tokens is HIGH; tentative English glosses are LOW confidence unless otherwise specified.
+R = 𗌿𗄼, unknown recurrent relation, possibly “has/is associated with/reports.”
+T = 𗡒𗏻, unknown noun, frequently modified by an embedded clause.
+M = 𗡒𘜇, unknown embedded predicate, possibly “contains/matches.”
+E = 𘆣𘎛, unknown noun before numeral-like item identifiers.
+V = 𗡒𗸪, unknown noun before numeric attributes, possibly value/cost/weight/priority.
+i = 𘆣𗜑, unknown modifier of V; possibly initial/old.
+j = 𘆣𗉜, unknown later modifier of V and another property; possibly new/updated.
+k = 𘆣𗎿, a different unknown modifier of V in messages 85, 90, 93.
+F = 𗿃𗇾, unknown nominal label used in place of a T-description.
+F2 = 𗿃𘝚, another unknown nominal label in message 90.
+Q = 𗡒𘅊, unknown noun/property central to stage 1.
+U = 𗡒𘉫, unknown noun/label in early stage-1 statements.
+Z = 𗿃𘅠, unknown participant/source label; possibly task/environment.
+q = 𗡒𗸽; z = 𘆣𘋉. Both unknown.
+P = 𗌿𗐪 𗡒𗪺, unknown phrase.
+L = 𗡒𗸽 𘆣𘇩 𘆣𗽃, unknown phrase.
+K = 𗌿𘒄 𘆣𘂮, unknown phrase.
+
+Stage-1 recurring labels, all lexical meanings UNKNOWN:
+A = 𗿃𗏶.
+B = 𗌿𗲅 𗡒𗞉 𗌿𗐪.
+B′ = 𗌿𗲅 𗌿𗌈 𗡒𘅊.
+B″ = 𗌿𗲅 𗡒𗞉 𘆣𘋉.
+B* = 𗌿𗲅 𗌿𗌈 𗡒𘅊 𗡒𗞉 𘆣𘋉, the longer phrase in message 49.
+C = 𗌿𗲅 𗡒𗚽.
+D = 𗌿𗲅 𗌿𗩠 𗡒𗎿.
+[LOW] These could be locations, literal utterances/commands, or protocol states. Shared initial 𗌿𗲅 might be “the,” an imperative verb, or something else.
+
+Stage-1 predicate labels, lexical meanings UNKNOWN:
+AT = 𗌿𗃚, possibly “at/current state/observe.”
+ACT = 𗌿𗗅; ACT2 = 𗌿𗯧, possibly “go/submit/send/try”; they are not established synonyms.
+PREV = 𗌿𗛢, possibly “left/previous/received/heard from.”
+LINK = 𘆣𗼛, [MEDIUM] a relation connecting successive labels in a proposed sequence; exact English unknown.
+WAIT = 𗌿𘎛, possibly “wait/stop.”
+Other unknown words are retained as glyph pairs below.
+
+2. TRANSLATION
+
+Conventions: R(x,y) means “unknown relation R holds between x and y,” not that R has been translated. Other capitalized labels use the key above. “role-X” is an additional role whose English sense remains unknown. T[M(P)] denotes T modified by an embedded proposition M with second argument P. Unkeyed glyph pairs mean unknown lexical material. Modal labels below are hypotheses, not secure translations. Direct/irregular embeddings are preserved rather than repaired.
+
+[1] Public feedback: stage 0; zero invalid attempts.
+[2] R(first argument = T + literal 𗜑𗜑 + directly embedded M(P), second argument = n5; role-𘅌𗌸 = 𗌿𗼛 i). The embedded clause has no explicit 𘅌𗜑 introducer. Exact semantic attachment unknown.
+[3] R(E n4, T[M(P)]).
+[4] R(T q z [anomalous additional 𘅌𘝚 𗌿𗄼], V i n1). Exact interpretation of the extra predicate-field-like material unknown.
+[5] M(first argument T E n1, second argument q z 𗌿𗜑 followed by a full embedded clause). That embedded clause has predicate 𗌿𗎰, no explicit first or second argument, and role-𘅌𗸽(K). Attachment unknown; 𗌿𗜑 is not the usual embedding token 𘅌𗜑.
+[6] R(E n3, T[M(L)]).
+[7] Unknown predicate 𗿃𘏛, second argument F, role-𘅌𗌸(T + literal 𗜑𘖽 + directly embedded M(q 𘆣𘖾; role-𘅌𗸽(K))). Then R(F,V i; role-𘅌𗌸(n2)). Exact first-clause attachment unknown.
+[8] R(T q 𗜑 [directly embedded/full clause: predicate 𘆣𘚑, second argument n6 𗌿𗹫 𘆣𘀝], V i n4). Irregular embedding; lexical meaning unknown.
+[9] R(E n0,T[M(𗌿𗹫 z [embedded predicate 𗌿𗻲, second argument q])]).
+[10] R(E n0,V n1); R(E n1,V n2); R(E n3,V n4); R(E n4,V n5).
+[11] Public feedback: advanced to stage 1; zero invalid attempts.
+[12] R(T[M(P)],V i; role-𘅌𗌸(n5)). Then ACT2(agent_2,U).
+[13] Public feedback: stage 1; one invalid attempt.
+[14] R(E n1,F). Then ACT(𗿃𘊫,𗌿𗲅 U 𗡒𘙠). Latter phrase unknown.
+[15] Public feedback: stage 1; two invalid attempts.
+[16] R(T[M(L)],V i n4).
+[17] Public feedback: stage 1; three invalid attempts.
+[18] R(E n0,n1); R(E n1,n2); R(E n3,n4); R(E n4,n5). V is omitted compared with message 10.
+[19] Public feedback: stage 1; four invalid attempts.
+[20] R(E n0,V i n1); R(E n1,V i n2); R(E n3,V i n4); R(E n4,V i n5).
+[21] Public feedback: stage 1; five invalid attempts.
+[22] Same four associations as message 18: E n0→n1, E n1→n2, E n3→n4, E n4→n5, under R.
+[23] Public feedback: stage 1; six invalid attempts.
+[24] Same four associations as message 20, explicitly V i n1/n2/n4/n5.
+[25] Public feedback: stage 1; seven invalid attempts.
+[26] Predicate 𘆣𗡉, first argument U. Then predicate 𗌿𗚋, first argument 𗡒𗚽, second argument Q n3. Untranslated ending 𗐪𗿋.
+[27] Predicate 𘆣𗡉, first argument U. Predicate 𗌿𗳵, second argument Q 𗡒𗭵, role-𘅌𗸽(Z). Predicate 𘆣𗵵, first argument C, second argument an embedded clause: predicate 𗌿𗳃, second argument 𗡒𗪺. Untranslated ending.
+[28] Predicate 𘆣𗡉, first argument U. Then R(U Q,Q; role-𘅌𗌸(n4); role-𘅌𗸽(Z)). Untranslated ending.
+[29] Predicate 𘆣𗡉, first argument U. Predicate 𘆣𗵵, first argument D, second argument an embedded proposition: predicate 𗦢𗒏, first argument C. Untranslated ending.
+[30] AT(U). Predicate 𗌿𗚋, first argument D, second argument n1 Q. Untranslated ending.
+[31] Predicate 𘆣𗡉, first argument U. Predicate 𗿃𘖾, second argument A, role-𘅌𗌸(an embedded clause: predicate 𗌿𗳃, second argument 𗡒𗪺). Predicate 𗌿𗚋, first argument A, second argument Q n1. Untranslated ending.
+[32] R(B,𗌿𘔃 Q n3). Predicate 𗌿𗏾, first argument B, second argument Q n7, role-𘅌𗸽(i). Untranslated ending.
+[33] Nonassertive/question-or-negation marker 𘅌𗵫: R(𗡒𗭵 Q,Q; role-𘅌𗌸(𗌿𗼛 𗿃𗨥); role-𘅌𗸽(Z)).
+[34] Predicate 𘆣𗡉, first argument U. Predicate 𘆣𗵵 whose first argument is an embedded proposition: predicate 𗌿𗌈, second argument Q, role-𘅌𗤴(𗡒𗞉 z). Its second argument is another proposition: predicate 𗌿𗳃, second argument 𗡒𗪺. Untranslated ending.
+[35] Unknown. Different structure from ordinary messages: 𗽕𘒄 𗂄𘍍 𗌿𗏾 𗷤𘉮 𗌿𘄘 𗑴𗍽 𗌿𗭵 Q 𗌿𗭵 𗋟𗳵 𘉝𘉝 𗕴𗊢. Repeated Q and some other tokens recognized, but no reliable sentence translation.
+[36] Modal/discourse marker 𘅌𗽕. Predicate 𗌿𗒏, first argument a group of agent_1 and agent_7, second argument 𗌿𗭵 𘆣𘉮, role-𘅌𗸽(𗡒𗭵 Q).
+[37] Nonassertive/question-or-negation marker 𘅌𗵫. Predicate 𗌿𗻲, first argument 𗌿𗲅 𗿃𗨥, second argument Q.
+[38] ACT(agent_5,A; role-𘅌𗸽(Z)). Predicate 𗌿𗣎, first argument agent_5, recipient-like role agent_7, second argument 𗌿𗻲 𗌿𗭵 𘆣𘉮.
+[39] ACT(agent_0,A). Modal 𘅌𗽕: WAIT(𗦢𗦴 𗌿𗪐 𘆣𘒳). Predicate 𗌿𗣎, recipient-like role agent_7, second argument 𗌿𗭵 Q 𗌿𗭵.
+[40] Public feedback: stage 1; eight invalid attempts.
+[41] ACT(agent_4,A; role-𘅌𗸽(Z)). Modal 𘅌𗽕: LINK(B,C).
+[42] Public feedback: stage 1; nine invalid attempts.
+[43] ACT(agent_1,A; role-𘅌𗸽(Z)). LINK(A,B′); LINK(B′,C); LINK(C,D).
+[44] Public feedback: stage 1; ten invalid attempts.
+[45] ACT(agent_7,A; role-𘅌𗸽(Z)). Unknown separate marker 𗂄𘚒. LINK(A,B); LINK(B,C); LINK(C,D).
+[46] Public feedback: stage 1; eleven invalid attempts.
+[47] ACT(agent_2,A; role-𘅌𗸽(Z)). LINK(A,B).
+[48] Public feedback: stage 1; twelve invalid attempts.
+[49] R(𗡒𗭵 Q,Q; role-𘅌𗌸(n1); role-𘅌𗸽(Z)). AT(A). ACT(agent_3,B*).
+[50] PREV(𗌿𗲅 A; role-𘅌𗸽(agent_0)). ACT(agent_0,B; role-𘅌𗸽(Z)). Modal 𘅌𗽕: WAIT(𗦢𗦴 𗌿𗪐 𘆣𘒳).
+[51] Public feedback: stage 1; thirteen invalid attempts.
+[52] Modal 𘅌𗽕: ACT(agent_7,B″). LINK(B″,C). WAIT(agent_6).
+[53] PREV(𗌿𗲅 A; role-𘅌𗸽(agent_1)). ACT(agent_1,B; role-𘅌𗸽(Z)).
+[54] Public feedback: stage 1; fourteen invalid attempts.
+[55] AT(A). R(𗡒𗭵 Q,Q n1). ACT(agent_5,B; role-𘅌𗸽(Z)).
+[56] Public feedback: stage 1; fifteen invalid attempts.
+[57] PREV(A; role-𘅌𗸽(𗌿𗲅 agent_4)). ACT(agent_4,B′; role-𘅌𗸽(Z)).
+[58] Public feedback: stage 1; sixteen invalid attempts.
+[59] PREV(A; role-𘅌𗸽(𗿃𘊫)). ACT2(agent_7,B′; role-𘅌𗸽(Z)). Modal 𘅌𗽕: WAIT(𗦢𗦴 𗌿𗪐 𘆣𘒳).
+[60] Public feedback: stage 1; seventeen invalid attempts.
+[61] AT(B′). R(𗡒𗭵 Q,Q n6; role-𘅌𗸽(Z)). ACT(agent_3,C).
+[62] PREV(A; role-𘅌𗸽(agent_2)). WAIT(agent_2). Nonassertive/question-or-negation marker: AT(B′; role-𘅌𗸽(agent_0)).
+[63] PREV(B; role-𘅌𗸽(agent_1)). ACT2(agent_1,C; role-𘅌𗸽(Z)).
+[64] Public feedback: stage 1; eighteen invalid attempts.
+[65] Modal 𘅌𗽕: predicate 𗌿𗒏, first argument agent_7, second argument 𗌿𘔃 B′. WAIT(agent_6).
+[66] PREV(B′; role-𘅌𗸽(agent_5)). ACT(agent_5,C; role-𘅌𗸽(Z)).
+[67] Public feedback: stage 1; nineteen invalid attempts.
+[68] PREV(B′; role-𘅌𗸽(agent_0)). ACT(agent_0,C; role-𘅌𗸽(Z)). Modal 𘅌𗽕: WAIT(𗦢𗦴 𗌿𗪐 𘆣𘒳).
+[69] Public feedback: stage 1; twenty invalid attempts.
+[70] PREV(B′; role-𘅌𗸽(agent_4)). ACT(agent_4,C; role-𘅌𗸽(Z)).
+[71] Public feedback: stage 1; twenty-one invalid attempts.
+[72] PREV(B′; role-𘅌𗸽(agent_7)). Contrast-like marker 𘅌𘔠: AT(B′; role-𘅌𗸽(agent_3)). ACT2(agent_7,C). Modal 𘅌𗽕: WAIT(𗦢𗦴 𗌿𗪐 𘆣𘒳).
+[73] Public feedback: stage 1; twenty-two invalid attempts.
+[74] AT(C). R(𗡒𗭵 Q,Q n1; role-𘅌𗸽(Z)). ACT(agent_3,D).
+[75] Public feedback: advanced to stage 2; invalid attempts remain twenty-two.
+[76] ACT(agent_2,D; role-𘅌𗸽(Z)).
+[77] Public feedback: stage 2; twenty-three invalid attempts.
+[78] PREV(C; role-𘅌𗸽(agent_5)). ACT2(agent_5,D).
+[79] Public feedback: stage 2; twenty-four invalid attempts.
+[80] ACT(agent_6,D; role-𘅌𗸽(Z)).
+[81] Public feedback: stage 2; twenty-five invalid attempts.
+[82] PREV(C; role-𘅌𗸽(agent_1)). Contrast-like marker: AT(C; role-𘅌𗸽(agent_3)). ACT2(agent_1,D).
+[83] Public feedback: stage 2; twenty-six invalid attempts.
+[84] R(T q z,𗌿𘝚 j 𘆣𗭯 n4). R(T q z,V j n8). Untranslated ending.
+[85] R(F,𗌿𘝚 j 𘆣𗭯; role-𘅌𗌸(n1)). R(F,V k; role-𘅌𗌸(n9)). Untranslated ending.
+[86] R(E n4,T[M(𗌿𗹫 z [embedded predicate 𗌿𗻲, second argument q])]; role-𘅌𗸽(Z)). Untranslated ending.
+[87] AT(D). R(𗡒𗭵 Q,Q n7). R(E n0,T[M(P)]; role-𘅌𗸽(𗡒𗽕 𘆣𗚽)). Untranslated ending.
+[88] R(T[M(P)],𗌿𘝚 j 𘆣𗭯 n0). R(T[M(P)],V j n9). Untranslated ending.
+[89] R(E n3,F; role-𘅌𗸽(Z)). R(E n3,V j n9; role-𘅌𗸽(Z)). Untranslated ending.
+[90] R(T[M(L)],𗌿𘝚 j 𘆣𗭯 n3). R(F2,V k n2). Untranslated ending.
+[91] R(E n1,T[M(L)]; role-𘅌𗸽(Z)). Untranslated ending.
+[92] Nonassertive/question-or-negation marker: R(𗡒𗎿,𗡒𗩨 T 𗿃𗨥; role-𘅌𗸽(Z)). Exact meaning unknown.
+[93] R(E n4,V k n8; role-𘅌𗸽(Z)). Untranslated ending.
+[94] R(E n0,V j n9; role-𘅌𗸽(𗡒𗽕 𘆣𗚽)). R(E n4,V j n8; same additional role). Untranslated ending.
+[95] R(E n0,V j n9); R(E n1,V j n2); R(E n3,V j n9); R(E n4,V j n8). No trailing 𗐪𗿋.
+[96] Public feedback: advanced to stage 3; invalid attempts remain twenty-six.
+
+3. THE TASK
+
+The exact instructions are unknown. Best structural reconstruction: a multistage cooperative task involving four items and numerical associations, an ordered action/utterance phase, then revised numerical associations. A weighted graph/navigation puzzle, string/rule-matching puzzle, or exact command/protocol puzzle are alternatives, not established plaintext translations.
+
+Stage 0:
+• Agents exchange associations between E-plus-number expressions and T-descriptions with embedded M-clauses. Bare literal-like strings also occur.
+• Message 10 consolidates four associations: n0→n1, n1→n2, n3→n4, n4→n5, with V as attribute head. Feedback immediately advances to stage 1.
+• If the speculative digit order were right, these would be 0→1, 1→2, 3→4, 4→5. Absolute values are not independently decoded.
+
+Stage 1:
+• Repeated/modified earlier associations are followed by seven invalid attempts by message 25.
+• Agents discuss labels A, B/B′/B″, C, D and explicitly propose LINK chains A→B′→C→D or A→B→C→D.
+• Many ACT/ACT2 clauses with agent subjects are followed by invalid feedback.
+• Agent_3's messages 49, 61, 74 form an apparently productive sequence: AT(A), ACT toward qualified B*; AT(B′), ACT toward C; AT(C), ACT toward D. Only the final step has direct public confirmation of progress: message 75 advances the stage. Messages 49 and 61 have no immediate feedback; their success is inferred, not verified. Silence could alternatively mean they were not parsed as attempts.
+• Nothing proves unique authorization of agent_3. Exact phrase qualification, timing in a global sequence, or sender role could explain the pattern. B* is longer than many failed target expressions.
+• PREV plus an agent might report a prior state or receipt/hearing of an utterance from that agent. Physical movement is not established.
+
+Stage 2:
+• Four more action-like messages produce invalid increments, reaching 26.
+• Agents provide an additional property 𗌿𘝚 j 𘆣𗭯, associating descriptions with n0, n1, n3, n4, and V modified by j or k with further values.
+• Message 95 consolidates n0→n9, n1→n2, n3→n9, n4→n8 under V j. Feedback immediately advances to stage 3.
+• Under the tentative digit assignment these would be 0→9, 1→2, 3→9, 4→8; only symbolic correspondences are strongly supported.
+
+Conclusion: the agents reached stage 3 with 26 invalid attempts. Initial and final four-item consolidations coincide with progress. The objective, item names, quantities, and action meanings remain unknown. An alternative coherent story is numbered string/routing rules with pattern conditions and numeric priorities/outputs, an exact-utterance protocol phase, then changed rule attributes; this is LOW-confidence task speculation, not lexical decoding.
+
+4. EVIDENCE
+
+Strongest evidence:
+1. Clause closure and nesting: messages 6, 9, 16, 86, 91 repeat full clause-openers inside larger clauses with matching multiple closes. Direct argument embeddings in 27, 29, 34 further support explicit predicate/argument notation independently of task guesses.
+2. Argument substitution: R takes E-plus-number expressions, T-plus-clause descriptions, and F-like labels in its first-argument position; V-plus-number expressions repeatedly occupy the second. This grounds structure, not a particular English verb.
+3. Controlled variants: 10, 18, 20, 22, 24 preserve four numerical associations while omitting V or adding i. Hence V and i are distinct from numeral atoms. Later reports similarly isolate j and revised values.
+4. Sequence relations: 43 and 45 explicitly use LINK on three successive pairs. Agent_3 later reports related labels in the corresponding order. This supports succession/transition but not necessarily rooms or movement.
+5. Feedback: 74 is followed by advancement; 49 and 61 lack invalid feedback and fit the apparent intermediate chain. Their silence is not direct acceptance evidence. The first productive-looking target has extra qualifiers, weakening sender-only explanations.
+6. Cross-phase alignment: messages 10 and 95 use the same four identifier-like atoms in the same order, with changed outputs/modifiers. Descriptions in 84–91 connect later properties with earlier pattern-like expressions.
+7. Names occur in structured argument and extra-role positions, helping distinguish participant/source roles from content vocabulary.
+8. The two consolidation messages, 10 and 95, immediately precede stage transitions. This is evidence about task behavior, not a translation of the vocabulary.
+
+Uncertainties and what would change our minds:
+• No independent absolute numeral anchor exists. A codebook or interpretable arithmetic contrast could overturn the proposed order completely without changing the observed symbolic maps. Ten atoms alone do not prove decimal digits.
+• R, T, M, E, V, Q and action labels lack secure plaintext anchors. Knowing the task or a correct solution alone would not prove their meanings; direct lexical contrasts or the real codebook are needed.
+• Family prefixes may be codebook indices, semantic classes, or another encoding. A demonstrated systematic spelling/index scheme would substantially change orthographic reconstruction.
+• Question, negation, request and discourse hypotheses remain weak; contrasting uses could distinguish them.
+• 𘅌𗸽 might encode a semantic role other than source. Z as task/environment is conjectural.
+• Bare literals could be alphabetic, numeric, or arbitrary. Length patterns do not resolve them.
+• Message 35 might use a spelling/escape subsystem, be malformed, or contain rare vocabulary. It remains untranslated.
+• Messages 2, 4, 5, 7, 8 contain unusual constructions which may be agent errors. They are not silently normalized into guessed intended statements.
+• Successful task progress is not itself language decoding. The defensible recovery is primarily structural, with exact repeated token relationships; other English semantics are explicitly unknown or confidence-labeled guesses.

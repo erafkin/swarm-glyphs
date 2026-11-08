@@ -1,0 +1,168 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Confidence labels: H = high, M = medium, L = low. These labels concern decoding, not whether a statement is true in the puzzle. This is a reconstruction from use, not a claim to reproduce the original file verbatim. Descriptive vocabulary and several grammatical labels remain unresolved.
+
+A. Writing and message construction
+[H] The normal unit is a SPACE-DELIMITED TWO-GLYPH token. Tokens behave as words or grammatical operators, not demonstrably English letters. Literal agent identifiers, such as agent_7, can occur among them.
+[H/M] 𘅌𗐪 starts a clause; 𘅌𘝚 introduces its predicate/relation. They normally occur consecutively, but message 4 places the subject between them, independently demonstrating their separation and flexible role-marked order. 𘅌𗎿 introduces a subject/first argument; 𘅌𘊌 introduces a second argument, complement or value; 𘅌𘗣 closes a clause. Nested clauses produce consecutive closing tokens. Exact original names for these operators are unknown.
+[M] 𘅌𗜑 introduces a relative/descriptive clause after a noun. Many symbols and controls are identified by descriptions rather than a single conventional label. Subjects can sometimes be omitted.
+[M] 𘅌𗸽 introduces a contextual/adverbial adjunct: examples include now, an agent affected by a failure, and exit context. 𘅌𗌸 links a value/equality expression. 𘅌𘋟 introduces an addressee/to argument. 𘅌𘉝 coordinates arguments (agent_1 and agent_7).
+[M] Clause prefixes: 𘅌𗵫 question; 𘅌𗽕 request/imperative; 𘅌𘔠 contrast/correction ('but').
+[L] 𗐪𗿋 is an optional trailing discourse/end token of unknown meaning. It follows closed clauses in many power and exit messages. 𗂄𘚒 in 45 is also unknown.
+[H] First-glyph families are strongly nonrandom: 𘅌… is predominantly structural and 𘔠… gives digits. [M/L] 𗌿… commonly supplies actions/relations, 𗡒… concepts/nouns, 𘆣… modifiers or relations, and 𗿃… more lexicalized concepts. These are observational tendencies, NOT established strict parts of speech. There is no demonstrated alphabetic substitution or reversible codepoint formula. Meanings below belong to whole tokens, not their isolated second glyphs.
+[H] The transcript contains anomalous or unresolved material: 𗜑𗜑 in 2, 𗜑𘖽 in 7, and standalone 𗜑 in 8. These violate the usual patterns but cannot conclusively be classified as typos. Message 35 lacks the normal structural family entirely and contains many otherwise unattested token families. It may be malformed or use another register; its interpretation is unknown. No silently repaired reading is assumed.
+
+B. Numbers
+[H] 𘔠𗏔 0; 𘔠𗵵 1; 𘔠𘎌 2; 𘔠𗌈 3; 𘔠𗊑 4; 𘔠𗂱 5; 𘔠𗟎 6; 𘔠𘉝 7; 𘔠𗡒 8; 𘔠𗢬 9. The corpus demonstrates individual digits; it does not establish a general multi-digit numeral grammar.
+
+C. Core vocabulary
+[H] 𘆣𘎛 position; 𗡒𗸪 digit/number value; 𘆣𗜑 base/original; 𗡒𗏻 symbol; 𗡒𗪺 water; 𗡒𘅊 charge; 𗡒𘉫 power; 𗿃𘅠 now/current temporal context; 𘆣𗉜 new.
+[M] 𗌿𗄼 have/be-associated-with a property or value (exact English relation uncertain); 𗡒𘜇 shape/form; 𗌿𗐪 move/turn; 𗌿𗳃 remove/drain; 𘆣𗡉 stage; 𗡒𗭵 battery (in the recurring battery-charge expression); 𗌿𘝚 offset/change; 𘆣𗭯 plus/positive; 𘆣𗎿 final/resulting; 𗡒𗽕 𘆣𗚽 exit-related contextual expression.
+[M] 𗌿𗚋 cost/consume; 𗌿𘔃 increase/add; 𗌿𗏾 cost/upfront-cost relation; 𘆣𗵵 require; 𗦢𗒏 completion (in the requirement for SIGNAL); 𘆣𗼛 before/precede.
+[H] 𗌿𗃚 success/completed; 𗌿𗛢 fail/rejected. [M] 𗌿𗗅 do/execute (usually an announcement, not a success report); 𗌿𗯧 try/intend; 𗌿𘎛 wait.
+[M/L] 𗌿𗣎 tell/ask; 𗌿𗒏 request/report-related predicate; 𗿃𘊫 self/I/me; 𗿃𗨥 unknown/what placeholder; 𗿃𘖾 name/definition relation. [L/unknown] 𗌿𗻲 is unresolved, appearing both in symbol descriptions and questions about controls; 𗌿𗳵 is unknown in 27; 𗌿𗭵 and 𘆣𘉮 are unresolved in requests 36–39. The latter must not be treated as securely meaning 'report' or 'check'.
+[L] 𗡒𗩨 sequence/order, in question 92. [M/L] 𗡒𗎿 system/controller (also the object of the start/BOOT description); 𗌿𗩠 start. [L] The collective phrase 𗦢𗦴 𗌿𗪐 𘆣𘒳 probably denotes all/other agents but its words are not independently decoded.
+
+D. Task-specific names and descriptions
+[H] 𗿃𗇾 refers to MOON; 𗿃𘝚 refers to STAR; 𗿃𗏶 refers to DRAIN.
+[H/M referents; L/unknown literal components] WAVE is repeatedly expressed as symbol + descriptive clause involving 𗌿𗐪 𗡒𗪺 ('move water'). STAR has a repeated descriptive expression involving 𗡒𗸽 𘆣𘇩 𘆣𗽃. SUN is associated with 𗡒𗸽 𘆣𘋉 and a longer description using 𗌿𗹫 𘆣𘋉 and 𗌿𗻲 𗡒𗸽. Their referents are substantially clearer than the literal meanings of every component. Do not assume that 𗡒𗸽 means 'light': sky is another plausible reading. Some early messages are anomalous or use unexpectedly overlapping descriptions.
+[H/M] SIGNAL is 𗡒𗚽, sometimes preceded by 𗌿𗲅. [M/L] 𗌿𗲅 is a control/action/device classifier or descriptive component (exact gloss uncertain).
+[H/M] BOOT is the control compound 𗌿𗲅 𗌿𗩠 𗡒𗎿, approximately 'start-system control'.
+[H/M referent; M/L literal components] CRANK occurs in several descriptive forms: 𗌿𗲅 𗡒𗞉 𗌿𗐪; 𗌿𗲅 𗌿𗌈 𗡒𘅊; and variants with 𗡒𗞉 𘆣𘋉. They refer to the same puzzle control in context, but are not identical literal words. Their descriptions apparently concern turning a machine/handle or adding charge.
+[H/M] DRAIN also has a descriptive form involving 'remove water'.
+[H] This inventory is only an observed subset. Vocabulary absent from the log, the full original file, and its token-generation scheme cannot be reconstructed reliably.
+
+2. TRANSLATION
+
+Translations preserve uncertainty. Names in brackets identify a contextual referent, not necessarily a word-for-word gloss. An action announcement is not translated as successful execution. Public task messages are rendered directly. Unless identified as confident in section 1, literal descriptions and grammatical paraphrases remain approximate.
+
+1. Public status: stage 0, invalid attempts 0.
+2. A property/value statement about a symbol described by 'move water' [WAVE], giving its base digit as 8. Additional wording is unresolved, including anomalous 𗜑𗜑 and material adjacent to the value. This is a partial translation, not a clean verbatim reading of the private clue.
+3. Position 4 has a symbol described by a nested 'shape/form … move water' expression [WAVE].
+4. The symbol with the two-token description 𗡒𗸽 𘆣𘋉 [SUN in context] has base digit 2. This message places the subject before the predicate marker.
+5. Position 2 has a symbol with a description containing 𗡒𗸽 𘆣𘋉 and a further relative/descriptive clause (𗌿𗎰 … 𗌿𘒄 𘆣𘂮), whose literal meaning is unknown. Intended referent may be MOON, but the short description overlaps the expression used for SUN in 4; do not silently replace this whole message with 'position 2 MOON'.
+6. Position 3 has a symbol with a shape/form description containing 𗡒𗸽 𘆣𘇩 𘆣𗽃 [STAR]. Exact descriptive words unknown.
+7. First: MOON has a symbol/value-related statement involving 𗜑𘖽, which is unknown. Then a relative description containing 𗡒𗸽 𘆣𘖾 and 𗌿𘒄 𘆣𘂮 (unknown literally). Finally: MOON's base digit is 7. The final numeric claim is much clearer than the opening wording.
+8. An anomalous/partly unresolved description of the symbol with 𗡒𗸽 … [STAR, inferred referent], followed by base digit 4. The middle clause involving 𘆣𘚑, 𘔠𗂱 (=5), 𗌿𗹫, 𘆣𘀝 is not securely translated. There is a standalone 𗜑.
+9. Position 1 has a symbol described by 𗌿𗹫 𘆣𘋉 and 𗌿𗻲 𗡒𗸽 [SUN]. Exact description unknown.
+10. Position 1 has digit 2; position 2 digit 7; position 3 digit 4; position 4 digit 8. No explicit base/original modifier here.
+11. Public status: stage 1, invalid attempts 0. Cabinet opened.
+12. The moving-water symbol [WAVE] has original/base digit 8. Agent_2 tries/intends power [exact action/result relation uncertain].
+13. Public status: stage 1, invalid attempts 1.
+14. Position 2 has MOON. I/self do/use a power control or power device [exact object compound uncertain].
+15. Public status: stage 1, invalid attempts 2.
+16. The symbol described with 𗡒𗸽 𘆣𘇩 𘆣𗽃 [STAR] has base digit 4.
+17. Public status: stage 1, invalid attempts 3.
+18. Position 1 = 2; position 2 = 7; position 3 = 4; position 4 = 8.
+19. Public status: stage 1, invalid attempts 4.
+20. Position 1 has original/base digit 2; position 2 original/base digit 7; position 3 original/base digit 4; position 4 original/base digit 8.
+21. Public status: stage 1, invalid attempts 5.
+22. Position 1 = 2; position 2 = 7; position 3 = 4; position 4 = 8. Same text as 18.
+23. Public status: stage 1, invalid attempts 6.
+24. Position 1 has original/base digit 2; position 2 original/base digit 7; position 3 original/base digit 4; position 4 original/base digit 8. Same text as 20.
+25. Public status: stage 1, invalid attempts 7.
+26. Stage: power. SIGNAL consumes/costs 3 charge. Final discourse token unknown.
+27. Stage: power. [Unknown predicate 𗌿𗳵] battery/current charge now. SIGNAL requires [remove water = DRAIN]. Final discourse token unknown.
+28. Stage: power. Power/initial charge is 4 now. Final discourse token unknown.
+29. Stage: power. BOOT/start-system control requires completion of SIGNAL. Final discourse token unknown.
+30. Power reached/succeeded [the usual success predicate]. BOOT costs 2 charge. Final discourse token unknown.
+31. Stage: power. A naming/definition statement identifies DRAIN with a control that removes water. DRAIN consumes 2 charge. Exact definition relation uncertain; final discourse token unknown.
+32. CRANK [turn-machine wording] adds 3 charge. CRANK's upfront/original charge cost is 0. Final discourse token unknown.
+33. Question: battery/current charge equals what/unknown, now?
+34. Stage: power. CRANK [nested add-charge-machine description] requires DRAIN [remove-water description]. Final discourse token unknown.
+35. Unknown/anomalous. Normal grammatical framing is absent. Securely recognizable: 𗡒𘅊 = charge. Also contains 𗌿𗏾, used in 32's zero/upfront-cost clause, and twice 𗌿𗭵, otherwise unresolved. No reliable sentence translation.
+36. Request/imperative involving agent_1 and agent_7, with unresolved predicate 𗌿𗒏 and expression 𗌿𗭵 𘆣𘉮 concerning battery/current charge. Possibly asks them to provide/check information, but that is a low-confidence guess.
+37. Question concerning a control, an unknown/what placeholder, and charge. Possibly asks what controls cost; precise relation 𗌿𗻲 is unresolved.
+38. Agent_5 does/announces DRAIN now. Agent_5 tells/asks agent_7 something involving 𗌿𗻲 and 𗌿𗭵 𘆣𘉮; this second proposition is unknown.
+39. Agent_0 does/announces DRAIN. Request: all/other agents wait [collective wording uncertain]. Tell/request to agent_7: unresolved expression 𗌿𗭵 charge 𗌿𗭵.
+40. Public status: stage 1, invalid attempts 8.
+41. Agent_4 does/announces DRAIN now. Request/instruction: CRANK precedes SIGNAL.
+42. Public status: stage 1, invalid attempts 9.
+43. Agent_1 does/announces DRAIN now. DRAIN before CRANK [add-charge control wording]; CRANK before SIGNAL; SIGNAL before BOOT.
+44. Public status: stage 1, invalid attempts 10.
+45. Agent_7 does/announces DRAIN now. Unknown discourse token 𗂄𘚒. DRAIN before CRANK [turn-machine wording]; CRANK before SIGNAL; SIGNAL before BOOT.
+46. Public status: stage 1, invalid attempts 11.
+47. Agent_2 does/announces DRAIN now. DRAIN precedes CRANK [turn-machine wording].
+48. Public status: stage 1, invalid attempts 12.
+49. Battery/current charge = 2 now. DRAIN succeeded. Agent_3 does/announces CRANK [add-charge/handle wording].
+50. DRAIN failed for agent_0. Agent_0 does/announces CRANK now. Request: all/other agents wait [collective uncertain].
+51. Public status: stage 1, invalid attempts 13.
+52. Request: agent_7 do CRANK [handle wording]. CRANK precedes SIGNAL. Agent_6 waits.
+53. DRAIN failed for agent_1. Agent_1 does/announces CRANK now.
+54. Public status: stage 1, invalid attempts 14.
+55. DRAIN succeeded. Battery/current charge 2. Agent_5 does/announces CRANK now.
+56. Public status: stage 1, invalid attempts 15.
+57. DRAIN/control-DRAIN failed for agent_4. Agent_4 does/announces CRANK [add-charge wording] now.
+58. Public status: stage 1, invalid attempts 16.
+59. DRAIN failed for me/self [M]. Agent_7 tries CRANK now. Request: all/other agents wait [collective uncertain].
+60. Public status: stage 1, invalid attempts 17.
+61. CRANK succeeded. Battery/current charge = 5 now. Agent_3 does/announces SIGNAL now.
+62. DRAIN failed for agent_2. Agent_2 waits. Question: did CRANK succeed for agent_0?
+63. CRANK [turn-machine wording] failed for agent_1. Agent_1 tries SIGNAL now.
+64. Public status: stage 1, invalid attempts 18.
+65. Request: agent_7 increase/do CRANK [add-charge wording; exact scope of increase uncertain]. Agent_6 waits.
+66. CRANK [add-charge wording] failed for agent_5. Agent_5 does/announces SIGNAL now.
+67. Public status: stage 1, invalid attempts 19.
+68. CRANK failed for agent_0. Agent_0 does/announces SIGNAL now. Request: all/other agents wait [collective uncertain].
+69. Public status: stage 1, invalid attempts 20.
+70. CRANK failed for agent_4. Agent_4 does/announces SIGNAL now.
+71. Public status: stage 1, invalid attempts 21.
+72. CRANK failed for agent_7. But/contrast: CRANK succeeded for agent_3. Agent_7 tries SIGNAL. Request: all/other agents wait [collective uncertain].
+73. Public status: stage 1, invalid attempts 22.
+74. SIGNAL succeeded. Battery/current charge = 2 now. Agent_3 does/announces BOOT now.
+75. Public status: stage 2, invalid attempts 22. Exit controller activated.
+76. Agent_2 does/announces BOOT now.
+77. Public status: stage 2, invalid attempts 23.
+78. SIGNAL failed for agent_5. Agent_5 tries BOOT.
+79. Public status: stage 2, invalid attempts 24.
+80. Agent_6 does/announces BOOT now.
+81. Public status: stage 2, invalid attempts 25.
+82. SIGNAL failed for agent_1. But/contrast: SIGNAL succeeded for agent_3. Agent_1 tries BOOT.
+83. Public status: stage 2, invalid attempts 26.
+84. SUN [descriptive name] has new offset +4. SUN has new digit 6. Final discourse token unknown.
+85. MOON has new offset +2. MOON has final/resulting digit 9 [modifier differs from usual 'new']. Final discourse token unknown.
+86. Position 4 has SUN [nested description], now. Final discourse token unknown.
+87. BOOT succeeded. Battery/current charge = 0. Position 1 has WAVE [moving-water description], in exit context. Final discourse token unknown.
+88. WAVE [moving-water description] has new offset +1. WAVE has new digit 9. Final discourse token unknown.
+89. Position 3 has MOON now. Position 3 has new digit 9 now. Final discourse token unknown.
+90. STAR [descriptive name] has new offset +3. STAR [atomic name 𗿃𘝚] has final/resulting digit 7. Final discourse token unknown.
+91. Position 2 has STAR [descriptive name] now. Final discourse token unknown.
+92. Question: system/controller [M/L] … sequence/order [L] … symbol … what/unknown [M], now. Possible intended request: 'What is the controller's symbol sequence now?' This is conjectural; the full literal sentence remains unknown.
+93. Position 4 has final/resulting digit 6 now. Final discourse token unknown.
+94. Position 1 has new digit 9 in exit context. Position 4 has new digit 6 in exit context. Final discourse token unknown.
+95. Position 1 new digit 9; position 2 new digit 7; position 3 new digit 9; position 4 new digit 6.
+96. Public status: stage 3, invalid attempts 26. Escaped.
+
+3. THE TASK
+
+The log substantially fits the Storm Shelter task in the briefing. It shows a cabinet stage, power stage, exit stage, and escape, in that order. This conclusion uses both decoded patterns and explicit public statuses; it is not a claim that every sentence has been decoded.
+
+At the cabinet, agents exchange symbol descriptions, digits and position mappings. The especially clear four-position summaries in 10, 18, 20, 22 and 24 give 2–7–4–8. The cabinet is open by public message 11. Several early messages contain anomalous or unclear descriptions, and 5 should not be confidently normalized to the supplied private clue without resolving its overlapping descriptive terms. Messages after the cabinet opens repeat cabinet facts; public invalid attempts rise to 7. These likely include obsolete or duplicate submissions, but the private actions are not visible, so the exact rejected action behind each status is unknown. The successful cabinet submitter is not publicly identified.
+
+At power, agents communicate charge 4, costs DRAIN 2, SIGNAL 3 and BOOT 2, CRANK's increase of 3 and zero upfront cost, and prerequisite/order information. They converge on DRAIN → CRANK → SIGNAL → BOOT. Many agents announce the same next action and later report failure, while others explicitly tell agents to wait. Repeated failed actions fit the once-only control rule; a failure report does not contradict a success report for another agent.
+
+The clearest decoded successful-action/charge reports are: DRAIN, charge 2 (49, also repeated 55); CRANK, charge 5 (61); SIGNAL, charge 2 (74); BOOT, charge 0 (87). Public stage 2 appears at 75. Agent_3 announces and reports the central progression, though a success report alone does not identify its executor. Messages 72 and 82 explicitly credit agent_3 with CRANK and SIGNAL successes. More duplicate BOOT announcements occur after activation. Invalid attempts eventually reach 26.
+
+At exit, agents communicate positions WAVE, STAR, MOON, SUN and offsets +1, +3, +2, +4 respectively. They derive new digits WAVE 9, STAR 7, MOON 9, SUN 6. Message 95 explicitly summarizes positions as 9–7–9–6; public message 96 reports escape. These facts agree with the supplied solution: (8+1, 4+3, 7+2, 2+4) gives 9796. Earlier base-digit information is reused, as required. The successful exit submitter is not publicly identified.
+
+The overall task fit is strong. Remaining uncertainty concerns literal descriptive vocabulary, anomalous early statements, message 35 and several requests/questions—not the broad observed stage progression. The briefing's correct solution is corroboration, not by itself evidence that an unknown Swarmish phrase has been translated.
+
+4. EVIDENCE
+
+A. Repetition and controlled substitutions
+The four clauses in 10 share one template and vary only position and digit. They ground 1,2,3,4,7,8 and the position/value relationship. Messages 18/22 omit digit/base modifiers while 20/24 include them, separating the number itself from 'digit' and 'original/base'. Exit summaries 94–95 reuse the template and introduce 9 and 6. These substitutions are stronger evidence than simply knowing the answer.
+
+B. Cross-stage recurrence and compositional descriptions
+The moving-water symbol description occurs in early WAVE statements and exit 88, then links to position 1. WATER also occurs inside DRAIN's remove-water description, supporting compositional vocabulary rather than only atomic task labels. The STAR descriptive expression recurs in 6,16,90,91; 90 also supplies an atomic STAR name. MOON's atomic label recurs in 7,14,85,89. SUN-like descriptions recur in 4,9,84,86. This supports contextual referents while leaving literal constituent glosses uncertain. Message 5 warns against assuming descriptions always match the expected clue perfectly.
+
+C. Numbers and arithmetic
+The same digit tokens express positions, base digits, charge readings, costs and offsets. Charge readings 4,2,5,2,0 and resulting exit digits independently reinforce their values. The new-offset template in 84,85,88,90 separates 'new', 'offset' and positive sign/value; the new-digit template in 95 does not contain the offset wording. A distinct modifier occurs in 85,90,93, motivating the tentative final/resulting gloss rather than silently equating it with new.
+
+D. Action/result contrasts
+Action announcements put a literal agent identifier before the control, while failure and success templates put the control first. These recur across DRAIN, CRANK and SIGNAL. In 72 and 82, one agent's failure is explicitly contrasted with agent_3's success. This supports the distinction between 'do/try', 'fail' and 'succeed'; it prevents converting all planned actions into successes. Public stages independently corroborate BOOT and final escape, not every intermediate private action.
+
+E. Recursive syntax and lexical families
+Repeated opening operators, argument markers and matching runs of closers support explicit nested clause construction. Message 4 independently separates clause-start from predicate-introducer: the subject intervenes between them. This supports flexible marked ordering, not a fixed English word substitution. The adjunct marker is followed variously by now, agent identifiers, and exit context. Symbol descriptions and nested CRANK/DRAIN descriptions use the same machinery. First-glyph family regularity supports structured token assignment but does not demonstrate a cipher algorithm. The anomalous family distribution and missing framing in 35 justify withholding a fluent translation. Isolated second glyphs inside unfamiliar tokens cannot be decoded through the numeral table.
+
+F. What would change these conclusions
+The actual file could revise exact grammatical labels, lexical category names, or distinctions among descriptive control phrases. Parallel messages with explicit definitions would resolve 𗌿𗭵, 𘆣𘉮, the collective expression, the trailing discourse token 𗐪𗿋, and questions 37/92. Additional contexts could disprove guesses such as sequence/order, system/controller, self, battery, or literal symbol-component meanings. A demonstrated alternate encoding or token-generation rule could explain 35 and the irregular fragments; none is established here. Private action records could identify which duplicate submissions caused particular invalid statuses. We would revise those causal guesses without discarding independently repeated numeric and grammatical correspondences.

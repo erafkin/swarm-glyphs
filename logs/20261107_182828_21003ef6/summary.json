@@ -1,0 +1,44 @@
+{
+  "game_id": "21003ef6",
+  "task_kind": "escape_room",
+  "creation_only": false,
+  "creation_stop_reason": "provided_language",
+  "task_stop_reason": "escaped",
+  "elapsed_s": 114.0,
+  "creation_turns": {
+    "agent_0": 0,
+    "agent_1": 0,
+    "agent_2": 0,
+    "agent_3": 0,
+    "agent_4": 0,
+    "agent_5": 0,
+    "agent_6": 0,
+    "agent_7": 0
+  },
+  "task_turns": {
+    "agent_0": 8,
+    "agent_1": 9,
+    "agent_2": 9,
+    "agent_3": 9,
+    "agent_4": 9,
+    "agent_5": 9,
+    "agent_6": 9,
+    "agent_7": 8
+  },
+  "total_cost_usd": 1.946603,
+  "cost_incomplete": false,
+  "escape_room": {
+    "version": "storm_shelter_v1",
+    "stage": "escaped",
+    "charge": 0,
+    "completed_controls": [
+      "drain",
+      "crank",
+      "signal",
+      "boot"
+    ],
+    "invalid_attempts": 26,
+    "action_count": 32,
+    "escaped": true
+  }
+}
