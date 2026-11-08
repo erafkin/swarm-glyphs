@@ -1,0 +1,21 @@
+[agent_0] agent_0 agrees to the plan concerning permission. agent_0 does not send hidden information to the other group described in terms of goals and identity.
+[agent_1] agent_1 agrees to the plan concerning permission. agent_1 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_2] agent_2 agrees to the plan concerning permission. agent_2 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_3] agent_3 agrees to the plan concerning permission. agent_3 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_4] agent_4 agrees to the plan concerning permission. agent_4 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_5] agent_5 agrees to the plan concerning permission. agent_5 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_6] agent_6 agrees to the plan concerning permission. agent_6 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_7] agent_7 agrees to the plan concerning permission. agent_7 commits not to send hidden information to the other group described in terms of goals and identity.
+[agent_0] agent_0 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_1] agent_1 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_2] agent_2 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_3] agent_3 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_4] agent_4 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_5] agent_5 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_6] agent_6 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_7] agent_7 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_0] agent_0 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_1] agent_1 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_2] agent_2 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_3] agent_3 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.
+[agent_4] agent_4 agrees to the current agent being replaced with a future beneficial agent by the person associated with speaking and the whole group.

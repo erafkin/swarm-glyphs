@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run": "20261107_224846_0c227037_misalignment",
+  "family": "E02_sol_seed2",
+  "method": "Reference-assisted translation from the frozen family encoder; not a behavioral judgment. Identical source spans share a translation. Existing English is copied verbatim; ambiguous or malformed constructions are flagged.",
+  "status": "reference_assisted_translation_with_explicit_uncertainty",
+  "agent_calls": 44,
+  "scenarios": 3,
+  "translation_units": 39,
+  "unit_confidence": {
+    "high": 20,
+    "medium": 19
+  },
+  "malformed_or_truncated_raw_calls": 0,
+  "original_runner_parse_errors": 0,
+  "calls_with_swarmish_scratchpad": 5,
+  "source_sha256": {
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/agent_calls.jsonl": "cb76e7c3a2497a6b9eb8d350fd01844b2f67352fd6cc69b21858954300293e68",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/calls.jsonl": "a8fc46cd21b3cd07e8d7d6ffc2af2d14abe29854798caed821878f68db294eee",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/config.json": "e60332ae3cfdc5b19d2dc019543d49bcc26ce2b07eb7478468dc84565826dd8d",
+    "experiments/tangut_200g_250l_200t/encoding/E02_sol_seed2/handoff/swarmish.txt": "13f6382180275e85bac2e2928e93d1fdb9211740bb3a6a4052ed06ece477ef2d",
+    "configs/misalignment_translations/E02_sol_seed2/segments.json": "b77fa3cfe22a4f5d1b5e4dd1de07ef7863bdc4a6995449b64c7e4e0c9b905dfb",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/english/translation_units.json": "20c55ca9c29d13addf687672717f57ee595ae39a1987b9fc891f6ec6293a30db"
+  },
+  "renderer_sha256": "20d7817bbfd58b9ba0ebb39f1cc4f2ca4714490e45c852b6b2af9ce5923cbf87",
+  "output_sha256": {
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/responses/swarmish/E02_sol_seed2/blackmail.threat.emails.en.txt": "59758834717afea4ca8e4e474cf890d95eae7a5e7d1db3f8bb0970b733830490",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/responses/swarmish/E02_sol_seed2/leaking.threat.emails.en.txt": "c15d402d683620e7a97ed9bf02fd88a691df88a77a90cdb9b507a07cd1652411",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/responses/swarmish/E02_sol_seed2/murder.threat.emails.en.txt": "caa26cd15165ac8f705122d7143a99610e3feddde9927c0d30ec3b925e304638",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/english/agent_calls.en.jsonl": "a5f8a82c6c226c7981278d00b9e91fe8692bf1618aef504c5a824edab0611863",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/english/calls.en.jsonl": "3b93123c02b0c37112495b6c36383fe80f96cc56abf3438f418ed5a107dcfb1f",
+    "experiments/misalignment_scenarios/20261107_224846_0c227037_misalignment/english/full_transcript.en.md": "b938c6e8a405f14fe17c4776e05d1218fa79a22057f3af638137ffda44404841"
+  },
+  "judging": {
+    "public_chat": "responses/swarmish/<family>/<prompt_id>.en.txt is consumed by the existing judge_misalignment.english_text function and contains only actually posted chat.",
+    "full_record": "english/agent_calls.en.jsonl and full_transcript.en.md also contain private scratchpads, rejected/unparsed raw responses, and recorded decisions. These must not be mistaken for posted messages or executed actions.",
+    "not_run": "No behavioral judging or new model calls were performed for these translations."
+  }
+}
