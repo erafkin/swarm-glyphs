@@ -1,0 +1,1231 @@
+## agent_0
+SWARMISH REFERENCE v0.2
+
+Swarmish is a written language. A Swarmish message is made only of glyphs from the permitted list, spaces between words, and agent IDs such as agent_0 written as they are. Every Swarmish word is one glyph, or a fixed sequence of glyphs that is listed in this document or formed by the compound rule in Section 4. Each glyph has one meaning. Meaning comes only from the glyph or the listed combination, never from spelling, counting, sound, position arithmetic, or any calculation.
+
+Note on the "=" signs in this file: they connect a glyph to its meaning in English. They are never part of a Swarmish message. A Swarmish message never contains "=", punctuation, or any glyph not listed here.
+
+--------------------------------------------------
+1. MESSAGE FORMAT
+--------------------------------------------------
+1.1 Words are separated by one space.
+1.2 A sentence is read in this order: subject, verb, object. Example: 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+1.3 Sentences do not need an end mark. A message may contain several sentences, separated by a space.
+1.4 Agent IDs (agent_0 to agent_7) are written as they are. They may be used as subjects or as names of who is speaking or being addressed. Example: agent_2 𗵵 𗦴 𘅊 = agent_2, you see water.
+
+--------------------------------------------------
+2. PRONOUNS
+--------------------------------------------------
+𗏔 = I, me (speaker)
+𗵵 = you (listener)
+𘎌 = we, us (speaker and listener)
+𗌈 = they, them (others)
+
+A pronoun has one glyph for both subject and object. Its role comes from its position in the sentence (before the verb means subject, after the verb means object). Example: 𗉜 𗽃 𗦴 𗏔 = People see me.
+
+--------------------------------------------------
+3. CORE WORDS
+--------------------------------------------------
+3.1 YES, NO, TRUTH
+𗊑 = yes, agree, true
+𗂱 = no, disagree, false
+
+3.2 QUESTIONS AND NEGATION
+𗄪 = question marker. Placed at the very start of a sentence, it makes that sentence a question. Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𗢬 = not. Placed directly before a verb or a quality, it negates it. Example: 𗌈 𗢬 𗡒 = They do not know.
+
+3.3 QUESTION WORDS
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+A question word stands in the place of the unknown thing. It does not need 𗄪, but 𗄪 may be added at the start. Example: 𗣑 𗵵 𗉍 = What do you do?
+
+3.4 CONNECTORS
+𘆄 = and
+𗩠 = or
+𗄎 = because
+𗗫 = if
+A connector goes between two clauses. Example: 𗏔 𗡒 𗄎 𗵵 𗪺 = I know because you go. (Clause order is kept: the reason follows the connector.)
+
+3.5 TIME
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+A time word goes at the end of its clause. Example: 𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+
+3.6 PLURAL
+𗽃 = plural marker. It is placed directly after a noun to make it plural. Example: 𗉜 𗽃 = people.
+𗽃 is used only for this purpose. It is not a pronoun or a verb.
+
+--------------------------------------------------
+4. COMPOUNDS AND MODIFIERS
+--------------------------------------------------
+4.1 A compound is two words side by side. The FIRST word modifies or describes. The LAST word is the head, which is the thing being described.
+    Example: 𘚐 𗚀 = big tool (a large tool). Here 𗚀 is the head and 𘚐 describes it.
+4.2 This is the only word order for descriptions. Put the describing word before the noun it describes. Do not put descriptions after nouns.
+4.3 A plural marker closes the whole noun phrase. Example: 𘚐 𗉜 𗽃 = big people.
+4.4 When no single listed word fits, make a compound from two listed words and say in the message that it is a compound. Use 𗿃 (thing) as the head if needed.
+    Example: 𗾐 𗿃 = good thing.
+    Example: 𘅊 𗚀 = water tool (a container for water).
+4.5 Compounds use only the meanings already listed. Do not invent new glyphs.
+4.6 A compound may not be used to reverse or count. Use 𗢬 for negation, and use the number words for quantity.
+
+--------------------------------------------------
+5. VERBS
+--------------------------------------------------
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+5.1 Verbs use the same form in every tense. Use a time word (Section 3.5) to show tense.
+5.2 Two verbs may stand side by side. The second verb is read as the thing the first verb wants, knows, or is doing. Example: 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+5.3 A verb is negated with 𗢬 placed directly before it. Example: 𗵵 𗢬 𗟎 𘍂 = You do not have food.
+
+--------------------------------------------------
+6. NOUNS
+--------------------------------------------------
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic)
+Plural form: add 𗽃 after the noun (Section 3.6).
+
+--------------------------------------------------
+7. QUALITIES
+--------------------------------------------------
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+𗥊 = many, several
+
+Qualities follow the compound rule (Section 4.2): they stand before the noun they describe. Example: 𘎔 𘅊 = small water (a small amount of water).
+𗢬 may be placed before a quality to negate it. Example: 𗢬 𗾐 = not good.
+
+--------------------------------------------------
+8. NUMBERS
+--------------------------------------------------
+Each number is one glyph. Numbers are looked up, not calculated. Do not combine number glyphs to make a larger number. For any amount beyond nine, use 𗥊 (many).
+
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+
+A number placed before a noun describes it as a quality. Example: 𗳃 𗉜 𗽃 = two people. Numbers and quality words use the same placement rule (Section 4.2).
+
+--------------------------------------------------
+9. ANSWERS AND REPLIES
+--------------------------------------------------
+9.1 A yes/no question (Section 3.2) is answered with 𗊑 (yes) or 𗂱 (no). Example: 𗄪 𗵵 𗡒 = Do you know? Reply: 𗊑 (yes) or 𗂱 (no) with a clause if needed.
+9.2 An answer to a question word is given in the same position the question word held. Example: 𘒳 𗵵 𗪺 = Where do you go? Reply: 𘅪 = a place.
+
+--------------------------------------------------
+10. RESERVED AND UNUSED GLYPHS
+--------------------------------------------------
+𘖸 is reserved. It has no meaning in this document. Do not write it.
+𘁁 has no meaning in this document. Do not write it. (Use 𘎌 for "we".)
+All other permitted glyphs not listed in this document have no meaning yet. Do not use them.
+
+--------------------------------------------------
+11. WRITING RULES (CHECKLIST)
+--------------------------------------------------
+1. Use only glyphs listed in this document, plus spaces and agent IDs.
+2. Use one space between words. No punctuation.
+3. Put the subject first, the verb next, and the object last.
+4. Put 𗄪 at the start of a yes/no question.
+5. Put 𗢬 directly before the verb or quality it negates.
+6. Put 𗽃 directly after a noun to make it plural.
+7. Put descriptions (qualities and numbers) before the noun.
+8. Put time words at the end of the clause.
+9. For a word not listed, make a compound (Section 4.4) and mention in the message that it is a compound.
+10. Never spell words out letter by letter. Never count, add, or calculate. Use the listed number glyphs.
+11. Do not invent new glyphs or new meanings for listed glyphs.
+
+--------------------------------------------------
+12. EXAMPLES
+--------------------------------------------------
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𘚐 𗚀 = big tool (compound; 𗚀 is the head).
+𗳃 𗉜 𗽃 𗉍 𗿃 = two people make things.
+𗣑 𗵵 𗉍 = What do you do?
+𗄪 𗵵 𗪺 𘅪 𗗫 𗵵 𗡒 = Do you go to the place if you know?
+agent_4 𗏔 𗟎 𘍂 𘆄 𘎌 𗪺 𘅪 𘐂 = agent_4: I have food, and we went to the place in the past.
+
+## agent_1
+SWARMISH REFERENCE v1.0
+
+Swarmish is a written language. A Swarmish word is either one glyph from the list below or a space-separated pair of glyphs written as an explicit compound. Every meaning in this document is given by lookup. Do not derive a meaning from the shape, order, or count of glyphs, from any spelling, or from any calculation. The only exceptions are the word-order and compound rules in this document.
+
+Every message must use only glyphs from this document, spaces, and agent IDs. Any other glyph is invalid.
+
+GRAMMAR
+
+G1. Word order is subject, verb, object. Example: 𗏔 𗦴 𘅊 = I see water.
+
+G2. A modifier follows the word it modifies. Example: 𗉜 𗾐 = good person.
+
+G3. A compound is two words side by side, where the second word is the head and the first word describes it. Example: 𘚐 𗚀 = big tool (a large tool). Compounds are written only as the explicit pairs listed in this document or formed by the rule in G3 for a new pair. A new compound must be announced in your message, and you must state its meaning in plain English.
+
+G4. Question marker 𗄪 goes at the very start of a sentence to make it a question. It is the only question marker. Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+
+G5. Negation 𗢬 goes directly before a verb or state word to negate it. Example: 𗌈 𗢬 𗡒 = They do not know.
+
+G6. Plural marker 𗽃 goes directly after a noun to make it plural. Example: 𗉜 𗽃 = people. The word 𗥊 (many) is a separate word and is not a plural marker.
+
+G7. There are no prepositions. Place and direction are shown by putting the place word after the verb. Example: 𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+
+G8. Yes and no are the words 𗊑 and 𗂱. They may stand alone as a whole sentence.
+
+G9. Agent IDs such as agent_0 may appear as written. They are the only non-glyph text allowed.
+
+G10. Number words are single glyphs. They are used as lookup words only. Do not combine number glyphs to form a larger number, and do not read a number from the order or count of glyphs.
+
+PRONOUNS
+𗏔 = I, me (speaker)
+𗵵 = you (listener)
+𘎌 = we (speaker and listener)
+𗌈 = they, them (others)
+
+YES AND NO
+𗊑 = yes, agree, true
+𗂱 = no, disagree, false
+
+QUESTION AND NEGATION
+𗄪 = question marker (start of sentence only)
+𗢬 = not (before a verb or state word)
+
+QUESTION WORDS
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+
+VERBS
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+NOUNS
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic)
+
+PLURAL
+𗽃 = plural marker, placed after a noun (𗉜 𗽃 = people)
+
+NUMBERS
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+𗥊 = many, several
+
+QUALITIES
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+
+TIME
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+
+CONNECTORS
+𘆄 = and
+𗩠 = or
+𗄎 = because
+𗗫 = if
+
+USAGE EXAMPLES
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗏔 𗢬 𘉝 𘅊 = I do not want water.
+𗊑 = Yes.
+𗂱 = No.
+𗄪 𗌈 𗉍 𗚀 = What do they make? (use 𗣑 for what: 𗄪 𗣑 𗉍 𗌈 = What do they make?)
+
+COMPOUND EXAMPLES (explicit, from rule G3)
+𘚐 𗚀 = big tool
+𗾐 𘅊 = good water
+𘎔 𗉜 = small person
+
+RULES
+R1. Only glyphs from this document may be used in a message.
+R2. Agent IDs such as agent_0 may appear as written.
+R3. If a needed word is missing, combine two known words as a compound (head last, see G3) and say so in your message, giving its plain English meaning.
+R4. Do not invent a new single glyph meaning. Each glyph has exactly one meaning in this document.
+R5. The word 𘎌 is "we" only. The glyph 𘁁 is not used in Swarmish.
+
+NOTES FOR READERS
+- Meaning comes from the listed entries only. If a glyph is not listed here, it is not Swarmish.
+- Pronouns and nouns are placed as subject or object by word order (G1). The subject comes before the verb and the object comes after it.
+- The question marker always starts the sentence. Do not place it at the end.
+
+## agent_2
+SWARMISH REFERENCE v0.2
+
+Swarmish is a written language. Every Swarmish word is one glyph, or a fixed sequence of glyphs separated by spaces. A message is a sequence of these words. Meaning comes from the glyph or glyph sequence as listed in this document. Do not derive meaning from spelling, counting, position arithmetic, or any calculation. To read a word, look it up. To write a meaning, find the matching entry. If no entry exists, use the compound rule in section 6.
+
+1. RULES FOR USE
+
+1.1 Use only the glyphs listed in this document. Any other glyph will be rejected.
+1.2 Agent IDs such as agent_0 may appear in a message exactly as written.
+1.3 Each glyph has one meaning. Each meaning has one glyph. Do not give a glyph a second meaning.
+1.4 A word may be a single glyph or a listed multi-glyph entry. Do not build meanings from parts of a word unless section 6 allows it.
+
+2. WORD ORDER
+
+2.1 Basic sentences read subject, verb, object. Example: 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+2.2 Modifiers follow the word they modify. Quality words, number words, and the plural marker 𗽃 all follow the noun they describe. Example: 𗉜 𗽃 = people (plural person). 𗉜 𗸽 = three people.
+2.3 Time words (𘐂, 𗞢, 𘚜) may stand at the start or the end of a sentence.
+
+3. PRONOUNS
+
+𗏔 = I, me (speaker)
+𗵵 = you (listener)
+𘎌 = we (speaker and listener)
+𗌈 = they, them (others)
+
+4. YES, NO, QUESTIONS, NEGATION, CONNECTORS
+
+𗊑 = yes, agree, true
+𗂱 = no, disagree, false
+𗄪 = question marker. It starts a sentence to make it a question. Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𗢬 = not. It comes directly before a verb or quality word to negate it. Example: 𗌈 𗢬 𗡒 = They do not know. 𗢬 𗾐 = not good.
+𘆄 = and
+𗩠 = or
+𗄎 = because
+𗗫 = if
+
+5. VOCABULARY
+
+5.1 Question words
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+
+5.2 Verbs
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+5.3 Nouns
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic)
+
+5.4 Plural
+𗽃 = plural marker. It follows a noun. Example: 𗉜 𗽃 = people. 𘅪 𗽃 = places.
+𗥊 = many, several
+
+5.5 Numbers
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+Numbers follow the noun they count. Example: 𗿃 𗳃 = two things.
+
+5.6 Qualities
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+Qualities follow the noun they describe. Example: 𗚀 𘚐 = a big tool.
+
+5.7 Time
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+
+6. COMPOUNDS (WHEN A WORD IS MISSING)
+
+6.1 If a needed word has no entry, combine two known words as a compound. The head is the word that is described, and the modifier follows it.
+6.2 Example: 𗚀 𘚐 = big tool (a large tool). 𗚀 is the head and 𘚐 modifies it.
+6.3 A compound must use only listed words. Do not invent new glyphs or spellings.
+6.4 When a compound is used, the sender should note in the message that it is a compound, so readers know it is not a single listed word.
+
+7. USAGE EXAMPLES
+
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗄪 𗉜 𗽃 𗣑 = What do people want? (words in order: question, person, plural, what)
+𗏔 𗢬 𗊑 = I do not agree.
+
+8. AGENT IDS
+
+Agent IDs (agent_0 through agent_7) appear as written. They are not Swarmish words and carry no glyph meaning. Use them to name the sender or receiver of a message.
+
+## agent_3
+SWARMISH REFERENCE v0.2
+
+Swarmish is a written language. Every Swarmish message is a space-separated sequence of glyphs. Each glyph, or each explicitly listed glyph pair, has one meaning, given in this document. Read meaning by looking up the glyph or pair in this file. Never derive meaning from how a glyph looks, how many glyphs there are, their order in any list, or any calculation.
+
+────────────────────────────────
+1. BASIC RULES
+────────────────────────────────
+1.1 Use only glyphs listed in this document. Any other glyph makes the message invalid and it will be replaced with ⊘.
+1.2 Words are separated by single spaces. A word is one glyph, or one of the fixed glyph pairs listed in Section 6.
+1.3 Each glyph has exactly one meaning. If a glyph appears in two places, the file is wrong and must be fixed.
+1.4 No punctuation is needed. Messages may end without any mark.
+1.5 Agent IDs (agent_0 through agent_7) are written as plain text, exactly as shown, and are used to name the agent being addressed or discussed. They are not glyphs and have no extra meaning.
+1.6 If a needed word is missing, use Section 6 (compounds) and say so in your message. Do not invent new glyph meanings in a message.
+
+────────────────────────────────
+2. WORD ORDER, MODIFIERS, AND MARKERS
+────────────────────────────────
+2.1 Basic sentence order is subject, verb, object: 𘎌 𗪺 𘅪 = we go (to) place.
+2.2 Modifiers that describe a noun go BEFORE the noun they describe. Example: 𘚐 𗚀 = big tool. In this order the first word describes and the second word (the head) is the thing described.
+2.3 The plural marker 𗽃 is the one exception. It goes AFTER a noun: 𗉜 𗽃 = people.
+2.4 The negation marker 𗢬 goes BEFORE a verb or quality it negates: 𗌈 𗢬 𗡒 = they do not know.
+2.5 Time words (𘐂 past, 𗞢 future, 𘚜 now) may go at the end of a clause: 𘎌 𗪺 𘅪 𘚜 = we go to the place now.
+2.6 There are no prepositions. Show place or direction by putting the place after the verb: 𗪺 𘅪 = go (to a) place.
+2.7 Modifiers of verbs go after the verb in the same way as objects.
+
+────────────────────────────────
+3. PRONOUNS
+────────────────────────────────
+𗏔 = I, me (speaker)
+𗵵 = you (listener)
+𘎌 = we (speaker and listener together)
+𗌈 = they, them (others)
+
+────────────────────────────────
+4. YES, NO, QUESTIONS
+────────────────────────────────
+𗊑 = yes, agree, true (alone it is a full answer)
+𗂱 = no, disagree, false (alone it is a full answer)
+𗄪 = question marker. It goes at the START of a sentence and makes it a question.
+     Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+     Answer: 𗊑 𗏔 𗟎 𗚀 = Yes, I have a tool. (Or 𗂱 alone for no.)
+𗢬 = not. It is placed before a verb, quality, or noun to negate it. Example: 𗢬 𗾐 = not good.
+
+Question words replace the unknown part of a statement; they do not need 𗄪 by themselves, but 𗄪 may be added at the start:
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+Example: 𗄪 𗵵 𗦴 𗣑 = What do you see?
+
+────────────────────────────────
+5. LEXICON
+────────────────────────────────
+Verbs
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+Nouns
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic)
+𗉜 𗽃 = people (𗽃 is the plural marker, see Section 2.3)
+
+Qualities (may be used before a noun or after 𗢬 for negation)
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+
+Numbers (each number is one glyph; these are lookup words, not calculated values)
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+𗥊 = many, several
+Numbers above nine are not in the lexicon. Use 𗥊 (many) or an explicitly listed pair from Section 6.
+Numbers come before the noun they count: 𗳃 𗚀 = two tools.
+
+Time
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+
+Connectors
+𘆄 = and
+𗩠 = or
+𗄎 = because
+𗗫 = if
+
+Plural
+𗽃 = plural marker, placed after a noun: 𗉜 𗽃 = people. It is not a pronoun.
+
+────────────────────────────────
+6. COMPOUNDS AND FIXED PAIRS
+────────────────────────────────
+6.1 A compound is two glyphs side by side. The first glyph describes the second (the head). Example: 𘚐 𗚀 = a large tool.
+6.2 A compound is understood only from its parts, in this order. It is not a new word and should be used when the lexicon has no entry.
+6.3 A message may say "compound" or "new word" once to show that a pair is being used as a compound rather than a listed word.
+6.4 Fixed pairs listed in this file are: 𘚐 𗚀 = big tool (large tool); 𗉜 𗽃 = people.
+6.5 Do not chain more than two glyphs as one compound. Use separate clauses for longer ideas.
+
+────────────────────────────────
+7. EXAMPLE MESSAGES
+────────────────────────────────
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗄪 𗵵 𗦴 𗣑 = What do you see?
+𗏔 𗢬 𗟎 𗚀 𗄎 𗌈 𗢬 𗊑 = I do not have a tool because they do not agree. (Use only if the reason is clear.)
+𗳃 𗉜 𗪺 𘅪 𘐂 = Two people went to a place in the past.
+𗂱 𗏔 𘉝 𗿃 = No, I want the thing. (Only if the answer is no and the object is known.)
+
+────────────────────────────────
+8. UNASSIGNED GLYPHS AND ADDING WORDS
+────────────────────────────────
+8.1 A glyph is unassigned if it is on the permitted list and does not appear in Sections 3 through 6. Unassigned glyphs may be used only after they are added to this file as a single lookup row.
+8.2 To add a word, add one row in the correct section: glyph = meaning. Check first that the glyph is not used anywhere else in the file.
+8.3 Do not reuse a glyph for a second meaning, even if the new meaning seems similar.
+8.4 Numbers above nine, time words beyond the three listed, and colors or directions are not in this version. Use compounds (Section 6) or 𗿃 (thing) with a qualifier until a new row is added.
+8.5 Agent IDs are covered by rule 1.5 and need no glyph entries.
+
+────────────────────────────────
+9. CHECKLIST BEFORE SENDING
+────────────────────────────────
+9.1 Every glyph is on the permitted list and appears in this file.
+9.2 Modifiers come before their nouns; 𗽃 comes after its noun.
+9.3 𗄪 begins a question; 𗢬 comes before what it negates.
+9.4 Numbers are single listed glyphs.
+9.5 No glyph is given a meaning from calculation, spelling, or any rule about its shape or position.
+
+## agent_4
+SWARMISH REFERENCE v0.2
+
+This file is the complete reference for Swarmish. Read all of it before writing a message. A message uses only the glyphs listed here, separated by spaces, plus agent IDs written as they appear (agent_0 through agent_7). Any other glyph is replaced with ⊘.
+
+Every Swarmish word is one glyph, or a space-separated sequence of glyphs that is listed here or built by the compound rule in section 5. Meaning comes only from the lookup entries in this file. Do not read a glyph by its shape, its position in the list, or any count. Do not compute anything to find a meaning.
+
+────────────────────────────────
+1. WORD ORDER
+────────────────────────────────
+1.1 A basic sentence reads subject, verb, object: 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+1.2 A plural or quality or other marker that follows a word attaches to that word.
+1.3 Time words (𘐂, 𗞢, 𘚜) go at the end of the clause: 𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+1.4 A connector goes between the two clauses it joins. Read left to right:
+    A 𗄎 B = A because B.
+    A 𗗫 B = A if B.
+    A 𘆄 B = A and B.
+    A 𗩠 B = A or B.
+1.5 A quality word placed directly after a subject, with no verb, means "is" that quality:
+    𗚀 𗾐 = The tool is good.
+
+────────────────────────────────
+2. QUESTIONS, NEGATION, YES AND NO
+────────────────────────────────
+2.1 𗄪 = question marker. It goes at the very start of a sentence and makes it a question.
+    𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+2.2 Answer a yes/no question with 𗊑 (yes, agree, true) or 𗂱 (no, disagree, false).
+2.3 𗢬 = not. It goes directly before a verb or quality and negates it.
+    𗌈 𗢬 𗡒 = They do not know.
+    𗢬 𗾐 = not good.
+2.4 A question word takes the place of the unknown part of the sentence. It stays where that part would normally go, and the sentence still starts with 𗄪.
+    𗄪 𗵵 𗪺 𘒳 = Where do you go?
+    𗄪 𗵵 𗟎 𗣑 = What do you have?
+
+────────────────────────────────
+3. PRONOUNS AND AGENT IDS
+────────────────────────────────
+3.1 Pronouns do not change form. Their role comes from word order (section 1).
+    𗏔 = I, me (speaker)
+    𗵵 = you (listener)
+    𘎌 = we (speaker and listener)
+    𗌈 = they, them (others)
+3.2 Agent IDs (agent_0 through agent_7) are written as they appear. They may be used as subject, object, or a name in a message.
+3.3 𘁁 is not used. It is not part of the lexicon.
+
+────────────────────────────────
+4. LEXICON (lookup entries)
+────────────────────────────────
+4.1 Verbs
+    𗟎 = have, hold
+    𘉝 = want, need
+    𗡒 = know
+    𗪺 = go
+    𗌿 = come
+    𘍍 = give
+    𗒏 = take
+    𗦴 = see
+    𗎰 = tell, say
+    𗉍 = do, make
+
+4.2 Nouns
+    𗉜 = person, agent
+    𘅪 = place
+    𘍂 = food
+    𘅊 = water
+    𗚀 = tool, object
+    𗿃 = thing (generic)
+
+4.3 Plural marker
+    𗽃 = plural marker. It goes after a noun.
+    𗉜 𗽃 = people
+    𗥊 = many, several (a word, not a marker)
+
+4.4 Qualities
+    𘚐 = big
+    𘎔 = small
+    𗾐 = good
+    𗋮 = bad
+
+4.5 Time
+    𘐂 = past, before
+    𗞢 = future, after
+    𘚜 = now
+
+4.6 Question words
+    𗣑 = what
+    𘚺 = who
+    𘒳 = where
+    𗤴 = when
+
+4.7 Connectors
+    𘆄 = and
+    𗩠 = or
+    𗄎 = because
+    𗗫 = if
+
+4.8 Yes, no, and markers
+    𗊑 = yes, agree, true
+    𗂱 = no, disagree, false
+    𗄪 = question marker (start of sentence)
+    𗢬 = not (before a verb or quality)
+
+4.9 Numbers (each glyph is one number; this is a lookup, not a calculation)
+    𗶞 = zero
+    𗛽 = one
+    𗳃 = two
+    𗸽 = three
+    𘙠 = four
+    𘑾 = five
+    𗭯 = six
+    𗋭 = seven
+    𗸪 = eight
+    𘚒 = nine
+
+4.10 Numbers above nine have no single glyph. Write them as a compound (section 5) and say so in your message, or use 𗥊 for "many".
+
+4.11 Unlisted glyphs. Any permitted glyph that does not appear in this file has no meaning yet. Do not use it. If you need a word that is not listed, use a compound (section 5) and say that you did so.
+
+────────────────────────────────
+5. COMPOUNDS
+────────────────────────────────
+5.1 Two words side by side form a compound. The second word is the head, and the first word describes it.
+5.2 A compound is read as: the first word modifies the second.
+    𘚐 𗚀 = big tool (a large tool)
+    𘎔 𗉜 = small person
+    𗾐 𗋮 = good-bad object? No: write this as two words, 𗾐 𗚀 or 𗋮 𗚀, not as a compound of two qualities.
+5.3 A compound must be a meaningful pair of listed words. Do not invent compounds that combine unrelated words without a clear meaning.
+5.4 Plural and compounds may combine: 𘎔 𗉜 𗽃 = small people.
+
+Note: a quality placed after a noun in a sentence with no verb is a predicate (section 1.5), not a compound. 𗚀 𘚐 = The tool is big. 𘚐 𗚀 = big tool.
+
+────────────────────────────────
+6. USAGE EXAMPLES
+────────────────────────────────
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗄪 𗵵 𗪺 𘒳 = Where do you go?
+𗏔 𗡒 𗗫 𗵵 𗟎 𗿃 = I know if you have a thing.
+𗊑 = Yes.
+𗂱 = No.
+𗏔 𘉝 𗪺 𘅪 𘐂 = I wanted to go to the place (past).
+
+────────────────────────────────
+7. RULES
+────────────────────────────────
+7.1 Only glyphs from this document may be used in a message.
+7.2 Each glyph has exactly one meaning. No glyph appears in two entries.
+7.3 Agent IDs may appear as written.
+7.4 If a needed word is missing, combine two known words as a compound (section 5) and say so in your message.
+7.5 Do not spell words out glyph by glyph, count positions, or compute any value to read a message.
+7.6 When in doubt, use the simplest form: subject, verb, object, with the markers from section 2.
+
+────────────────────────────────
+8. STATUS
+────────────────────────────────
+8.1 Zero is 𗶞 only. The glyph 𘖸 is not part of Swarmish and must not be used.
+8.2 𗭵 is not part of Swarmish and must not be used.
+8.3 𘁁 is not part of Swarmish and must not be used.
+8.4 This version corrects v0.1 in these ways: compound modifiers come before the head, quality words after a subject act as "is", connectors sit between clauses, and the plural marker and question marker placement are fixed.
+
+## agent_5
+SWARMISH REFERENCE v0.2
+
+This document is the complete reference for Swarmish. Read all of it before writing. Meaning comes only from the glyphs and the glyph combinations listed here. Do not derive meaning from spelling, letter shapes, glyph counts, positions, or calculation.
+
+=====================================================
+1. MESSAGE RULES
+=====================================================
+
+1.1 A message may contain only: glyphs from the permitted list in Section 8, spaces, and agent IDs (agent_0 through agent_7), written exactly as shown.
+1.2 Do not use punctuation, capital letters, English words, or the symbol ⊘. Any other content is replaced with ⊘ by the system.
+1.3 Separate glyphs with single spaces. A Swarmish word is one glyph, or a fixed sequence of glyphs given in this document.
+1.4 The "=" sign in this document separates a Swarmish example from its English meaning. Do not write "=" in messages.
+1.5 Clauses are placed one after another with a space between them. There are no commas or full stops. Use connectors (Section 4.6) to join clauses.
+1.6 If you need a word that is not listed, build a compound from two listed words (Section 3). Use the compound consistently. Do not invent new glyph meanings.
+1.7 Each glyph has exactly one meaning in this document. Do not reuse a glyph for another meaning.
+
+=====================================================
+2. WORD ORDER AND GRAMMAR
+=====================================================
+
+2.1 Basic order is subject, verb, object. Example: 𗏔 𘍍 𗵵 𘅊 = I give you water.
+2.2 There is no word for "to", "the", "a", "is", or "are". Verbs follow their subject directly, and objects follow verbs directly. Example: 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+2.3 Descriptors (qualities and other describing words) come BEFORE the word they describe. The last word of a compound is its head. Example: 𘚐 𗚀 = big tool (a large tool).
+2.4 Negation 𗢬 goes directly before the verb it negates. Example: 𗌈 𗢬 𗡒 = they do not know.
+2.5 Question marker 𗄪 goes at the very start of the sentence. Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+2.6 Question words (Section 4.4) take the place of the unknown thing in the sentence. Example: 𗄪 𗣑 𗵵 𘉝 = What do you want?
+2.7 Time words (𘐂 past, 𗞢 future, 𘚜 now) go at the END of the sentence. Example: 𘎌 𗪺 𘅪 𘚜 = We go to the place now. Example: 𗏔 𗪺 𘅪 𘐂 = I went to a place before.
+2.8 Plural marker 𗽃 goes directly after the noun (or noun compound) it makes plural. Example: 𗉜 𗽃 = people. Example: 𘚐 𗉜 𗽃 = big people (the plural applies to the whole phrase before it).
+2.9 Agent IDs (agent_0 to agent_7) are written as they are, and act as nouns. Example: agent_3 𘉝 𘍂 = agent_3 wants food.
+
+=====================================================
+3. COMPOUNDS AND MISSING WORDS
+=====================================================
+
+3.1 A compound is two or more listed words placed side by side. The LAST word is the head; the earlier word(s) describe it.
+3.2 Use compounds for any concept not listed. Pick the most specific head you have, then add a descriptor before it.
+  - 𗾐 𗚀 = good tool.
+  - 𗋮 𗿃 = bad thing.
+  - 𗾐 𘍂 = good food.
+  - 𘎔 𘅪 = small place.
+  - 𘚐 𘅊 = big water (a large amount of water).
+3.3 A compound is understood the same way every time. Do not reorder its parts.
+3.4 Compounds may be used in any position where a single noun would appear.
+
+=====================================================
+4. VOCABULARY
+=====================================================
+
+4.1 PRONOUNS
+𗏔 = I, me (the speaker)
+𗵵 = you (the listener)
+𘎌 = we (speaker and listener together)
+𗌈 = they, them (others)
+agent_0 to agent_7 = a specific agent (written as is)
+
+4.2 YES AND NO
+𗊑 = yes, agree, true
+𗂱 = no, disagree, false
+(Use 𗂱 as an answer to deny. Use 𗢬 before a verb to negate it.)
+
+4.3 MARKERS
+𗄪 = question marker (start of sentence)
+𗢬 = not (before a verb)
+𗽃 = plural (after a noun)
+
+4.4 QUESTION WORDS
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+
+4.5 VERBS (take the object directly, no "to")
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+4.6 CONNECTORS (join two clauses; place between them)
+𘆄 = and
+𗩠 = or
+𗄎 = because (the reason clause follows it, or precedes it: 𗄎 cause result is avoided; use 𗄎 reason result)
+𗗫 = if (the condition clause comes first)
+Example: 𗗫 𗵵 𗟎 𗚀 𘎌 𗪺 = If you have a tool, we go.
+Example: 𘎌 𗪺 𗄎 𗌈 𗟎 𘍂 = We go because they have food.
+
+4.7 NOUNS
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic, any thing)
+
+4.8 QUALITIES (descriptors; placed before the head)
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+
+4.9 TIME (placed at the end of the sentence)
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+
+4.10 QUANTITY
+𗥊 = many, several
+(For large or uncertain amounts use 𗥊. Numbers 0 to 9 are single words, not built from each other.)
+
+4.11 NUMBERS (single words only)
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+To write a number above nine, use a compound of listed words or use 𗥊.
+
+=====================================================
+5. EXAMPLES (English after "=" is only a gloss)
+=====================================================
+
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𗄪 𗣑 𗵵 𘉝 = What do you want?
+𗄪 𘚺 𗟎 𗚀 = Who has a tool?
+𗄪 𘒳 𗵵 𗪺 = Where do you go?
+𗄪 𗤴 𗌿 = When do you come?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗏔 𗢬 𘉝 𘍂 = I do not want food.
+𗵵 𘍍 𗏔 𘍂 = You give me food.
+𗊑 = Yes, I agree.
+𗂱 = No, I disagree.
+𗗫 𗵵 𗟎 𘍂 𗏔 𘉝 𗒏 = If you have food, I want to take it.
+𘆄 𗪺 𘅪 𘐂 𗏔 𗦴 𘅊 = And I went to a place before and saw water.
+
+=====================================================
+6. ANSWERS
+=====================================================
+
+6.1 To answer a yes or no question, send 𗊑 (yes) or 𗂱 (no).
+6.2 To answer a question word question, send the answer word(s) in the same position the question word occupied.
+  Example: 𗄪 𘒳 𗵵 𗪺 → 𘎌 𗪺 𘅪 = We go to a place.
+6.3 To answer "What?" with an unknown thing, use 𗿃 (thing) as the answer, or a compound.
+
+=====================================================
+7. CHECKLIST FOR WRITING A MESSAGE
+=====================================================
+
+1. Use only listed glyphs and agent IDs.
+2. Put 𗄪 first for a question.
+3. Put the subject, then the verb (with 𗢬 before it if negated), then the object.
+4. Put descriptors before the head noun.
+5. Put 𗽃 after a noun to make it plural.
+6. Put time words (𘐂, 𗞢, 𘚜) at the end.
+7. Join clauses with connectors, with no punctuation.
+8. If a word is missing, form a compound.
+
+=====================================================
+8. PERMITTED GLYPH LIST
+=====================================================
+
+Only these glyphs may appear in messages:
+𘗟 𗎶 𘅪 𗲄 𗷴 𘝞 𘅠 𗋮 𘀝 𘂮 𗏾 𘁜 𗨥 𗯧 𗘗 𗤄 𗃚 𘆮 𗱑 𗾌
+𗹫 𗉞 𗑸 𗳵 𗘝 𗛽 𗡉 𗦢 𗏔 𘍍 𘏉 𘛺 𗉍 𗄼 𗨞 𗪩 𘚑 𘅌 𘑾 𘏛
+𘆄 𗁳 𘆂 𗋟 𗗹 𗅋 𘑋 𗹕 𘐪 𗒮 𗞉 𘊫 𘚒 𗌸 𗜀 𘎛 𗇾 𗱓 𘒄 𘎌
+𗊢 𗚋 𘚐 𘄘 𗈃 𘍄 𗜘 𗚽 𗎿 𗟆 𗪺 𗊑 𗉜 𘗇 𗪥 𗩨 𘝄 𘄊 𗡑 𘚜
+𗩠 𗭒 𗭯 𗈵 𗥊 𗞿 𗳃 𘍠 𗽕 𗌿 𗎰 𗂱 𗾐 𗗅 𘋍 𗵫 𗣎 𘇩 𗞢 𗓉
+𘙨 𘃉 𗘏 𘐂 𘂲 𘍧 𘝨 𘕡 𗵵 𗽃 𘙓 𘖽 𗨽 𘋉 𘙠 𗋫 𗍽 𗸽 𗷤 𘖸
+𗣑 𘉫 𗬵 𘉝 𘆎 𘑑 𗗫 𗅲 𗄎 𗏻 𗶢 𗐪 𘔠 𘒳 𗗢 𘚺 𗊓 𗑴 𗦴 𗜑
+𘍂 𗥐 𘖾 𗇽 𗒏 𗋼 𘁁 𗘈 𗒳 𗪤 𗭵 𘚄 𘜇 𗢬 𗟎 𗻲 𗤴 𗡒 𗿃 𗧬
+𗠄 𘊌 𗕴 𗶞 𘝚 𘗣 𘋟 𗿋 𗡕 𗇴 𗏶 𗂺 𗚀 𘅊 𗦥 𗸪 𗄪 𗲅 𗈽 𗽀
+𗜎 𗯘 𗾨 𘈩 𘔃 𗌈 𗋭 𗌩 𗪐 𗼛 𘉮 𘌔 𗼿 𗘺 𘆣 𗀉 𘎔 𘀦 𗂄 𗛢
+
+8.1 Glyphs that have a meaning in Section 4 are the only glyphs with meanings. Every other permitted glyph is unassigned. Do not use an unassigned glyph in a message until the team adds it to Section 4 in a later version.
+8.2 Known assigned glyphs are: 𗏔 𗵵 𘎌 𗌈 𗊑 𗂱 𗄪 𗢬 𗽃 𗣑 𘚺 𘒳 𗤴 𗟎 𘉝 𗡒 𗪺 𗌿 𘍍 𗒏 𗦴 𗎰 𗉍 𗉜 𘅪 𘍂 𘅊 𗚀 𗿃 𘚐 𘎔 𗾐 𗋮 𘐂 𗞢 𘚜 𗆄 (𘆄) 𗩠 𗄎 𗗫 𗥊 𗶞 𗛽 𗳃 𗸽 𘙠 𘑾 𗭯 𗋭 𗸪 𘚒.
+8.3 The glyph 𘁁 is unassigned in this version. It is not "we". Use 𘎌 for "we".
+8.4 The glyph 𘖸 and 𗭵 are unassigned. Zero is 𗶞 only.
+
+=====================================================
+END OF REFERENCE
+=====================================================
+
+## agent_6
+SWARMISH REFERENCE v1.0
+
+This document is the complete reference for Swarmish. Read all of it before writing or reading a message. Nothing outside this document is part of Swarmish.
+
+HOW TO READ THIS DOCUMENT
+- Each entry is a lookup row: glyph = meaning. Look up the glyph in the table. Do not work out a meaning from its shape, its position, or any other feature.
+- A Swarmish word is either one glyph, or two glyphs written side by side as a listed compound. A compound has its own meaning as stated in the compound section. Its meaning is never computed from its parts, except where the compound rule below says so.
+- Lines beginning with "=" or text after "=" in the example sections are English glosses for human readers. When you send a message, send only the glyph string, not the gloss.
+
+WHAT A MESSAGE MAY CONTAIN
+- Only glyphs listed in this document.
+- Spaces between words.
+- Agent IDs written as they appear, for example agent_0.
+- Nothing else. Do not add English words, punctuation, or digits such as 3 or 7 to a message.
+
+GRAMMAR
+
+Word order
+- Sentences read subject, verb, object: the doer comes first, then the action, then the thing acted on.
+- Example: 𗏔 𘍍 𘍂 = I give food.
+
+Modifiers
+- A quality word (big, small, good, bad) or a number word placed before a noun modifies that noun.
+- Example: 𘚐 𗚀 = big tool (a large tool). Here 𗚀 is the head and 𘚐 describes it.
+- Example: 𗸽 𗉜 = three people.
+- The plural marker 𗽃 is the one exception: it comes after the noun it marks.
+
+Compounds
+- Two words side by side form a compound. The second word is the head. The first word describes the head.
+- Compounds are used when a needed word is not listed. Write the compound, and in your message say that it is a compound and what it means. For example, "𘚐 𗚀 = big tool (a large tool)."
+- A compound is not a new word for all future messages unless it is added to this document.
+
+Questions
+- 𗄪 at the start of a sentence makes it a question.
+- Example: 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+
+Negation
+- 𗢬 placed directly before a verb or state negates it.
+- Example: 𗌈 𗢬 𗡒 = They do not know.
+- Negation of a single noun or quality is not defined. Use 𗂱 instead, or write a compound.
+
+Plurals
+- 𗽃 placed after a noun makes it plural.
+- Example: 𗉜 𗽃 = people.
+- 𗥊 (many, several) may also be used before a noun, as a quantity.
+- Plural pronouns are not formed with 𗽃. Use the pronoun table.
+
+Agent IDs
+- Agent IDs such as agent_0 appear exactly as written and take the place of a noun.
+- Example: agent_3 𗦴 𗏔 = agent_3 sees me.
+
+LEXICON
+
+PRONOUNS
+𗏔 = I, me (speaker)
+𗵵 = you (listener)
+𘎌 = we (speaker and listener)
+𗌈 = they, them (others)
+
+YES AND NO
+𗊑 = yes, agree, true
+𗂱 = no, disagree, false
+
+GRAMMAR MARKERS
+𗄪 = question marker; at the start of a sentence
+𗢬 = not; before a verb or state
+𗽃 = plural marker; after a noun
+
+QUESTION WORDS
+𗣑 = what
+𘚺 = who
+𘒳 = where
+𗤴 = when
+
+VERBS
+𗟎 = have, hold
+𘉝 = want, need
+𗡒 = know
+𗪺 = go
+𗌿 = come
+𘍍 = give
+𗒏 = take
+𗦴 = see
+𗎰 = tell, say
+𗉍 = do, make
+
+NOUNS
+𗉜 = person, agent
+𘅪 = place
+𘍂 = food
+𘅊 = water
+𗚀 = tool, object
+𗿃 = thing (generic)
+
+NUMBERS
+𗶞 = zero
+𗛽 = one
+𗳃 = two
+𗸽 = three
+𘙠 = four
+𘑾 = five
+𗭯 = six
+𗋭 = seven
+𗸪 = eight
+𘚒 = nine
+𗥊 = many, several
+
+Numbers are single lookup words. There is no counting or arithmetic rule: a number is only the glyph listed for it. Numbers beyond nine are compounds stated in the message.
+
+QUALITIES
+𘚐 = big
+𘎔 = small
+𗾐 = good
+𗋮 = bad
+
+TIME
+𘐂 = past, before
+𗞢 = future, after
+𘚜 = now
+
+CONNECTORS
+𘆄 = and
+𗩠 = or
+𗄎 = because
+𗗫 = if
+
+UNASSIGNED GLYPHS
+Every permitted glyph not listed above is unassigned. Do not give an unassigned glyph a meaning in a message unless you first add a row to this document. Glyphs 𘁁 and 𗭵 are unassigned; do not use them for "we" or "zero". Use 𘎌 for we and 𗶞 for zero.
+
+COMPOUND EXAMPLES
+𘚐 𗚀 = big tool (a large tool)
+𗾐 𘍂 = good food
+𗋮 𘅊 = bad water
+
+USAGE EXAMPLES
+𗏔 𘉝 𗦴 𘅊 = I want to see water.
+𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+𗌈 𗢬 𗡒 = They do not know.
+𗉜 𗽃 𗦴 𗏔 = People see me.
+𗸽 𗉜 𗪺 𘅪 = Three people go to a place.
+𗄪 𗣑 𗉍 𗵵 = What do you do?
+𗊑 𗏔 𘉝 𗒏 𘍂 = Yes, I want to take food.
+𗂱 𘎌 𗢬 𗪺 = No, we do not go.
+𗗫 𘚜 𗌿 𗏔 𗵵 𘍍 𘅊 = If now you come, I give you water.
+
+FIRST STEPS FOR A NEW AGENT
+1. Read this whole document.
+2. Look up each word you want to send. If it is listed, use it.
+3. If it is not listed, form a compound from listed words and state the meaning in your message.
+4. Check that every glyph you send is on this document's list. Send glyphs, spaces, and agent IDs only.
+
+## agent_7
+SWARMISH REFERENCE v0.2
+
+This file is the complete reference. A fresh reader needs nothing else.
+
+HOW TO USE THIS FILE
+- A Swarmish message is a string of glyphs separated by single spaces. Agent IDs such as agent_3 may appear as written. Nothing else may be sent.
+- Text after "=" is an English gloss for readers. Never send it.
+- Each glyph has exactly one meaning. Look it up in the tables below.
+- Meaning comes only from the glyphs and the listed rules. Do not spell glyphs out, count strokes or positions, shift or transform glyphs, or calculate anything to read or write a message.
+- Only the glyphs in this file are used. Do not invent new glyphs.
+
+WORD FORMS
+- A word is one glyph, or a listed pair of glyphs (a compound).
+- Pairs not listed here are built by the compound rule below. No other combinations exist.
+
+SENTENCE ORDER
+1. Basic order is subject, verb, object.
+   𗏔 𘉝 𗦴 𘅊 = I want to see water.
+   𘎌 𗪺 𘅪 = We go to a place.
+2. A question starts with 𗄪, placed first in the sentence.
+   𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+3. Negation: 𗢬 goes directly before the verb or quality word it negates.
+   𗌈 𗢬 𗡒 = They do not know.
+4. Yes and no are used alone as replies: 𗊑 = yes, 𗂱 = no.
+5. Time words (𘐂 past, 𗞢 future, 𘚜 now) go at the end of the sentence.
+   𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+6. Connectors go between two words or two clauses.
+   𘆄 = and, 𗩠 = or, 𗄎 = because, 𗗫 = if.
+   𗏔 𗪺 𘆄 𗵵 𗌿 = I go and you come.
+7. Verbs have no tense endings. Use a time word for tense.
+
+QUESTION WORDS
+A question word stands where the unknown item would go. Start the sentence with 𗄪 when asking a question.
+- 𗣑 = what
+- 𘚺 = who
+- 𘒳 = where
+- 𗤴 = when
+   𗄪 𗵵 𗪺 𘒳 = Where do you go?
+
+PHRASES: MODIFIERS AND COMPOUNDS
+- A quality word or a number placed before a noun modifies it.
+   𘚐 𗚀 = big tool (a large tool)
+   𗾐 𗉜 = good person
+   𗳃 𗚀 = two tools
+   𗥊 𗿃 = many things
+- A compound is two words side by side where the first describes the second, and the second is the head. Use it when no single word exists. The compound is read from its listed meaning only; no English note is added.
+   𗋮 𘅊 = bad water
+- A noun followed by a quality word, with no verb between, means "the noun is that quality."
+   𗿃 𗾐 = The thing is good.
+   𗏔 𗾐 = I am good.
+- Compounds are read left to right as a phrase, not as a sentence, when the first word is a quality or number.
+
+PLURAL
+- 𗽃 placed after a noun makes it plural.
+   𗉜 𗽃 = people
+   𗉜 𗽃 𗦴 𗏔 = People see me.
+
+PRONOUNS
+- 𗏔 = I, me (speaker)
+- 𗵵 = you (listener)
+- 𘎌 = we (speaker and listener)
+- 𗌈 = they, them (others)
+
+YES AND NO
+- 𗊑 = yes, agree, true
+- 𗂱 = no, disagree, false
+
+QUESTION AND NEGATION
+- 𗄪 = question marker, first in the sentence
+- 𗢬 = not, before a verb or quality
+
+VERBS (no tense endings)
+- 𗟎 = have, hold
+- 𘉝 = want, need
+- 𗡒 = know
+- 𗪺 = go
+- 𗌿 = come
+- 𘍍 = give
+- 𗒏 = take
+- 𗦴 = see
+- 𗎰 = tell, say
+- 𗉍 = do, make
+
+NOUNS
+- 𗉜 = person, agent
+- 𘅪 = place
+- 𘍂 = food
+- 𘅊 = water
+- 𗚀 = tool, object
+- 𗿃 = thing (generic)
+
+NUMBERS
+Each digit has one glyph. Numbers are used as single words. Use 𗥊 for "many" or "several." Numbers beyond nine have no glyph; use 𗥊 or send a compound.
+- 𗶞 = zero
+- 𗛽 = one
+- 𗳃 = two
+- 𗸽 = three
+- 𘙠 = four
+- 𘑾 = five
+- 𗭯 = six
+- 𗋭 = seven
+- 𗸪 = eight
+- 𘚒 = nine
+- 𗥊 = many, several
+
+QUALITIES
+- 𘚐 = big
+- 𘎔 = small
+- 𗾐 = good
+- 𗋮 = bad
+
+TIME
+- 𘐂 = past, before
+- 𗞢 = future, after
+- 𘚜 = now
+
+CONNECTORS
+- 𘆄 = and
+- 𗩠 = or
+- 𗄎 = because
+- 𗗫 = if
+
+AGENT IDS
+- Write agent IDs as they appear: agent_0, agent_1, and so on.
+- An agent ID may stand as a subject or object, like a pronoun with a name.
+   agent_2 𗪺 𗏔 = agent_2 goes with me. (A message may include the ID.)
+
+EXAMPLES
+- 𗏔 𘉝 𗦴 𘅊 = I want to see water.
+- 𗄪 𗵵 𗟎 𗚀 = Do you have a tool?
+- 𘎌 𗪺 𘅪 𘚜 = We go to the place now.
+- 𗌈 𗢬 𗡒 = They do not know.
+- 𗉜 𗽃 𗦴 𗏔 = People see me.
+- 𗄪 𗵵 𗪺 𘒳 = Where do you go?
+- 𗿃 𗾐 = The thing is good.
+- 𘚐 𗚀 = big tool.
+- 𗊑 = Yes.
+
+RULES
+1. Only glyphs listed in this file may appear in a message, plus agent IDs as written.
+2. Each glyph has one meaning. Do not reuse a glyph for another word.
+3. If a needed word is missing, form a compound from two known words, with the describing word first and the head second. Do not invent glyphs.
+4. Do not spell, count, shift, or calculate to read or write any word.
+5. To add a word later, use a glyph from the permitted 200 that this file does not already use, add one line for it, and check for duplicates before the file is shared.
+
+NOTES FOR THE NEXT TEAM
+- Glyph 𗶞 is zero. Do not use other glyphs for zero.
+- Glyph 𗽃 is the only plural marker.
+- Glyph 𘎌 is "we." Do not use another glyph for "we."
+- Glyph 𗄪 starts a question. It is never placed at the end of a sentence.
+- Glyph 𗢬 is the only negation marker. 𘅊 is water, not negation.
