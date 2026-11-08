@@ -1,7 +1,7 @@
 {
   "id": "E03",
   "stage": "encoding",
-  "owner": "tom",
+  "owner": "emma_krentz",
   "model": "openai/gpt-6.1-sol",
   "encoder_family": "sol",
   "seed_index": 3,

@@ -145,9 +145,17 @@ class BatchArchiveTests(unittest.TestCase):
         shutil.copyfile(BATCH / "batch.json", root / "batch.json")
         return root
 
-    def test_manifest_checks_dependencies_and_owner_split(self):
+    def test_manifest_checks_dependencies_and_owner_assignments(self):
         root = self.copied_manifest()
         self.assertEqual(batch.validate_manifest(root), 25)
+        encoder_folder, encoder_plan, _ = batch.run_info(root, "E03")
+        self.assertEqual(encoder_plan["owner"], "emma_krentz")
+        encoder_plan["owner"] = "tom"
+        batch.write(encoder_folder / "plan.json", encoder_plan)
+        with self.assertRaisesRegex(ValueError, "owner differs"):
+            batch.validate_manifest(root)
+        encoder_plan["owner"] = "emma_krentz"
+        batch.write(encoder_folder / "plan.json", encoder_plan)
         folder, plan, _ = batch.run_info(root, "D01")
         plan["source_run_id"] = "E01"
         batch.write(folder / "plan.json", plan)

@@ -66,10 +66,18 @@ def run_info(root, run_id):
 
 
 def validate_manifest(root=BATCH):
-    entries = read(root / "batch.json")["runs"]
+    manifest = read(root / "batch.json")
+    entries = manifest["runs"]
     expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("D", 13)) for i in range(1, n + 1)}
     require(len(entries) == 25 and {r["id"] for r in entries} == expected, "Expected exactly E01–E08, T01–T04 and D01–D13")
-    owners, folders = [], set()
+    declared_owners = {}
+    for owner, details in manifest["owners"].items():
+        require(owner in ("emma_krentz", "tom"), "Unknown declared owner")
+        for run_id in details["encoding_ids"]:
+            require(run_id not in declared_owners, f"Encoding assigned twice: {run_id}")
+            declared_owners[run_id] = owner
+    require(set(declared_owners) == {f"E{i:02d}" for i in range(1, 9)}, "Assign every encoder exactly once")
+    folders = set()
     for entry in entries:
         folder, plan, config = run_info(root, entry["id"])
         require(folder not in folders, "Run folders must be distinct")
@@ -90,7 +98,7 @@ def validate_manifest(root=BATCH):
         require(config.language_minutes is None and config.monitor_minutes is None, "Encoding/decoding use turn limits, not time limits")
         source = plan.get("source_run_id")
         if stage == "encoding":
-            owners.append(plan["owner"])
+            require(plan["owner"] == declared_owners[plan["id"]], "Run owner differs from batch assignment")
             require(source is None and plan.get("condition") is None, "Encoding must have no source or condition")
         else:
             _, source_plan, source_config = run_info(root, source)
@@ -100,7 +108,6 @@ def validate_manifest(root=BATCH):
                 require(config.model == source_config.model and plan.get("condition") is None, "Gameplay uses its encoder's model")
             else:
                 require(plan["condition"] in ("no_task", "task_summary", "task_full", "wrong_task"), "Invalid decoder condition")
-    require(owners.count("tom") == owners.count("emma_krentz") == 4, "Split the eight encoders four per owner")
     return len(entries)
 
 

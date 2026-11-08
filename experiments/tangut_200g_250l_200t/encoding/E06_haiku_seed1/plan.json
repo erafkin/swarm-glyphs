@@ -1,7 +1,7 @@
 {
   "id": "E06",
   "stage": "encoding",
-  "owner": "emma_krentz",
+  "owner": "tom",
   "model": "anthropic/claude-haiku-5.5",
   "encoder_family": "haiku",
   "seed_index": 1,

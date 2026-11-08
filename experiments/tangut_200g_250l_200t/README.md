@@ -7,8 +7,8 @@ This is the initial matrix agreed by Tom; a complete cross-family matrix can be 
 
 | Operator | Encoding assignments | Remaining new creations |
 | --- | --- | --- |
-| Emma Krentz | E01 Sol seed 1, E02 Sol seed 2, E06 Haiku, E08 DeepSeek | E02, E06, E08 |
-| Tom Taylor | E03 Sol seed 3, E04 Sol seed 4, E05 Sol seed 5, E07 Gemini | E03, E04, E05, E07 |
+| Emma Krentz | All Sol seeds: E01–E05 | E02, E03, E04, E05 |
+| Tom Taylor | E06 Haiku, E07 Gemini, E08 DeepSeek | E06, E07, E08 |
 
 E01 reuses Emma's pushed run `logs/20261107_181546_5949aefe` at commit
 `ce8dc324a83946b670348725dbcb3a7283cf41e1`. Its **130-line final shared draft** is the selected
@@ -17,6 +17,9 @@ language, not the 1,393-line concatenation of final exports. It stopped at all-d
 deadline with no enforced turn cap; Tom explicitly approved reuse because the actual
 document and discussion are within 250 lines and 200 turns. Preserve these differences
 in E01's plan and receipt.
+
+After pulling this setup from main, read your assignment: [Emma](assignments/emma_krentz.md)
+or [Tom](assignments/tom.md). Emma owns all GPT/Sol seeds; Tom owns all other encoder families.
 
 The two operators can work simultaneously in separate checkouts. Within each operator's
 list, run one experiment at a time. This keeps log ownership disjoint and limits API

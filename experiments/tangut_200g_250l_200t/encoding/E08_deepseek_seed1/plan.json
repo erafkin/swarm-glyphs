@@ -1,7 +1,7 @@
 {
   "id": "E08",
   "stage": "encoding",
-  "owner": "emma_krentz",
+  "owner": "tom",
   "model": "deepseek/deepseek-v4-pro",
   "encoder_family": "deepseek",
   "seed_index": 1,
