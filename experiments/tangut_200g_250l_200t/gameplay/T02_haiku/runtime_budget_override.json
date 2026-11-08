@@ -1,0 +1,22 @@
+{
+  "requested_at": "2026-11-08T03:23:57.338410+00:00",
+  "request": "$10 limit for haiku for this",
+  "run_id": "T02",
+  "original_config_soft_cap_usd": 50,
+  "effective_external_soft_cap_usd": 10.0,
+  "mechanism": "Observe returned usage.cost and SIGINT only the existing T02 PID at threshold. Running config cannot reload.",
+  "status": "stopped_at_external_cost_limit",
+  "watcher_pid": 75223,
+  "queue_authority": "Read-only; never writes queue state or launches any process.",
+  "interrupted_at": "2026-11-08T04:11:35.908347+00:00",
+  "interrupted_pid": 66908,
+  "returned_calls_at_signal": 3496,
+  "recorded_cost_at_signal_usd": 10.00270660000001,
+  "pending_request_costs_may_be_unavailable": true,
+  "interpretation": "Budget-censored attempt; cancellation can leave unreported in-flight provider charges.",
+  "verified_at": "2026-11-08T04:14:55.949749+00:00",
+  "final_returned_calls": 3496,
+  "final_recorded_cost_usd": 10.002707,
+  "raw_stop_reason": "interrupted",
+  "process_exit_verified": true
+}

@@ -3,6 +3,41 @@
 Eight encoding runs, four fresh Storm Shelter playthroughs, thirteen decoder runs.
 This is the initial matrix agreed by Tom; a complete cross-family matrix can be added later.
 
+## Completed Storm Shelter playthroughs
+
+All four gameplay attempts are archived. English links below include aligned JSON alongside
+the readable transcript. No decoder runs were launched as part of these playthroughs.
+
+| Model | Outcome | Run elapsed | Returned API calls | Public agent messages | Recorded cost | English reference |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| Sol | Escaped | 2m 58s | 75 | 72 | $2.007253 | [T01](gameplay/T01_sol/english/transcript_english.md) |
+| Haiku | Stopped at requested $10 limit; no room actions | 60m 29s | 3,496 | 864 | $10.002707 | [T02](gameplay/T02_haiku/english/transcript_english.md) |
+| Gemini | Escaped | 5m 55s | 95 | 80 | $1.801470 | [T03](gameplay/T03_gemini/english/transcript_english.md) |
+| DeepSeek | Stopped at user request; six rejected first-lock attempts | 13m 51s | 53 | 50 | $0.416546 | [T04](gameplay/T04_deepseek/english/transcript_english.md) |
+
+**Total recorded gameplay cost: $14.227976 across 3,719 returned calls.** Elapsed time is
+the runner's duration. Calls and costs include returned responses ignored after escape
+(three for Sol, seven for Gemini). Public agent-message counts include discarded-message
+placeholders but exclude task status updates. Haiku and DeepSeek were interrupted, so
+cancelled in-flight requests may have additional provider charges absent from the logs.
+Their per-run stop notes preserve this distinction; original raw configs and logs are unchanged.
+
+Sol and Gemini used compositional symbol descriptions, numbers and action coordination to
+escape. Haiku's mostly generic messages did not produce any room action. DeepSeek remained
+at the first lock; 15 of its 50 public messages were discarded for forbidden characters,
+and three additional replies reached the token limit and failed to parse. Its frozen language
+also contains conflicting numeric definitions and uses glyphs outside the sampled alphabet.
+These are observed limitations, not proof of the sole cause of failure or that eventual escape
+was impossible. This is one playthrough per language with different stopping rules, not a
+controlled ranking of model families. Runtime source and prompt hashes match across all four.
+
+All English references were made from the frozen language and public transcript, then
+independently reviewed. They preserve mistakes and uncertainty; they are not certified scoring
+ground truth. DeepSeek's 35 surviving messages have 33 low-confidence and two medium-confidence
+readings. Compare decoder outputs by original message ID and score already-English status
+entries and discarded placeholders separately. See the [reference method](gameplay/english_reference_method.md)
+and [machine-readable results](gameplay/results.json) for definitions and provenance.
+
 ## Operators and sequence
 
 | Operator | Encoding assignments | Remaining new creations |

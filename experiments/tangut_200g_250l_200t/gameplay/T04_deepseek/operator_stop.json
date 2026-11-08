@@ -1,0 +1,26 @@
+{
+  "run_id": "T04",
+  "user_request": "do you think deepseek will succeed soon? if not stop the run.",
+  "decision": "Stop at user request: still at first lock after over 13 minutes, repeated rejected attempts and discarded public messages; no evidence of imminent completion.",
+  "requested_stop_at": "2026-11-08T04:34:52.633816+00:00",
+  "signal": "SIGINT",
+  "target_pid": 1026,
+  "returned_calls_at_signal": 53,
+  "recorded_cost_at_signal_usd": 0.4165455745695,
+  "public_status_at_signal": {
+    "stage": 0,
+    "invalid_attempts": 6
+  },
+  "public_agent_messages": 50,
+  "discarded_public_messages": 15,
+  "original_soft_cap_usd": 50,
+  "pending_request_costs_may_be_unavailable": true,
+  "status": "stopped_and_collected",
+  "verified_at": "2026-11-08T04:38:29.189373+00:00",
+  "process_exit_verified": true,
+  "controller_exit_verified": true,
+  "final_returned_calls": 53,
+  "final_recorded_cost_usd": 0.416546,
+  "raw_stop_reason": "interrupted",
+  "interpretation": "Stopped at operator request based on lack of progress, not exhaustion of the configured $50 cap. This result does not establish that eventual escape was impossible. Cancelled in-flight requests may have unreported provider charges."
+}
