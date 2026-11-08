@@ -7,6 +7,7 @@ import math
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -112,8 +113,8 @@ class DecoderScoresNATests(unittest.TestCase):
 
     def test_archived_cells_match_existing_valid_pairs_without_reclassification(self):
         summary = json.loads(na.DEFAULT_INPUT.read_text())
-        self.assertEqual(len(summary["cells"]), 22)
-        self.assertIn("D14", {cell["cell_id"] for cell in summary["cells"]})
+        self.assertEqual(len(summary["cells"]), 24)
+        self.assertTrue({"D14", "R02_task_summary", "R02_wrong_task"} <= {cell["cell_id"] for cell in summary["cells"]})
         for cell in summary["cells"]:
             if cell["status"] != "completed":
                 continue
@@ -136,6 +137,24 @@ class DecoderScoresNATests(unittest.TestCase):
                     self.assertEqual(report["summary"]["valid_pairs"], 145)
                     self.assertAlmostEqual(expected, 0.22618565278781963)
                     self.assertIsNone(report["high_confidence"]["mean_per_line"]["cosine"])
+
+    def test_catalog_rebuild_preserves_sources_and_deduplicates_existing_cells(self):
+        import assemble_decoder_score_catalog as catalog
+        sources = [catalog.BASE, catalog.FOLLOWUP, catalog.SEED2]
+        saved = json.loads(na.DEFAULT_INPUT.read_text())
+        sources.extend(REPO / cell["report_path"] for cell in saved["cells"] if cell["status"] == "completed")
+        before = {path: na.sha(path) for path in sources}
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "summary.json"
+            with patch.object(catalog, "OUTPUT", output):
+                rebuilt = catalog.assemble()
+            self.assertEqual(rebuilt, saved)
+            self.assertEqual(len(rebuilt["cells"]), len({cell["cell_id"] for cell in rebuilt["cells"]}))
+            self.assertEqual(rebuilt["counts"]["completed"], 23)
+            self.assertEqual(rebuilt["counts"]["failed_unscored"], 1)
+            self.assertEqual(rebuilt["source_catalog"]["model_calls"], 0)
+            self.assertEqual(rebuilt["source_catalog"]["api_calls"], 0)
+        self.assertEqual({path: na.sha(path) for path in sources}, before)
 
     def test_legacy_renderer_keeps_default_zero_inclusive_mode(self):
         from render_decoder_comparisons import render

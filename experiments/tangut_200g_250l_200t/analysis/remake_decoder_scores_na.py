@@ -18,7 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
-DEFAULT_INPUT = HERE / "haiku_to_sol_full_task_scores/summary.json"
+DEFAULT_INPUT = HERE / "decoder_comparison_source_catalog/summary.json"
 DEFAULT_OUTPUT = HERE / "decoder_comparison_scores_na"
 PRIMARY_METRIC = "mean_cosine_over_valid_pairs"
 ABSTENTIONS = {"missing", "unknown"}
@@ -241,7 +241,7 @@ def readme(summary: dict) -> str:
 **Primary cosine excludes missing and wholly unknown answers.** Their per-line cosine is `null` in JSON and **N/A** in the viewer and CSV. A completed cell with no valid pairs has an N/A mean and zero coverage. Failed cells remain unscored.
 
 - [Interactive comparisons](comparisons.html): original and normalized text, source glyphs, confidence, N/A reasons, coverage, and separately labelled historical means.
-- [Summary CSV](summary.csv) / [JSON](summary.json): {counts['completed']} completed cells and {counts['failed_unscored']} failed attempts.
+- [Summary CSV](summary.csv) / [JSON](summary.json): {counts['completed']} completed cells; failed attempts: {counts['failed_unscored']}.
 - [Per-message CSV](per_line.csv) / [JSON](per_line.json): {counts['public_rows']:,} public-entry/cell rows with primary inclusion flags and supplementary historical cosine.
 - Per-cell JSON files preserve source hashes, text, prediction statuses, and historical metrics under `supplementary_metrics`.
 
@@ -265,9 +265,10 @@ This is a reporting-only derivation. No model is loaded, no embeddings are recom
 
 Source summary: `{summary['source_summary']['path']}` (SHA-256 `{summary['source_summary']['sha256']}`). Each derived report records its original path and hash. Historical comparison notes are preserved as `source_comparability_notes` in the summary.
 
-From the repository root, rerun after adding completed cells to the historical summary:
+The source catalog consolidates the original comparison summary, D14, and the two published seed-2 context extensions without changing their measurements or counting repeated cells twice. From the repository root, rebuild the catalog and primary results:
 
 ```sh
+python experiments/tangut_200g_250l_200t/analysis/assemble_decoder_score_catalog.py
 python experiments/tangut_200g_250l_200t/analysis/remake_decoder_scores_na.py --input {summary['source_summary']['path']} --output experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_na
 python -m unittest tests.test_decoder_scores_na
 ```

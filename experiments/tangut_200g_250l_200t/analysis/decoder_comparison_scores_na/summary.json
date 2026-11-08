@@ -19,10 +19,10 @@
     "max_seq_length": 256,
     "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
   },
-  "manifest_sha256": "34396668cda565bcb960fc19fb9b53bfa2d5c78c2172e9e0475de18dde0cf8c4",
+  "manifest_sha256": "370721b3b3f790a04688b10f6f383e9b0dad72ac42abc82a0c1db0fa1887176d",
   "code_sha256": {
     "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scoring.py": "1ed29b4d8ad0d70d1f8facf1e376205b4a837c79a3d355bd3ca2232da141927a",
-    "src/core/translation_scoring.py": "ad162dce290a449a53a0d4d02a79b402aca39c964c781dd8c6f3e3b5c51bf457",
+    "src/core/translation_scoring.py": "c8b444480da39906baa6fd00ca8138364817285b7c8e688ead3f001c7f8da620",
     "experiments/tangut_200g_250l_200t/analysis/decoder_translation_extraction.py": "236f0413249802fb1642f148e8bf69eb4ce297edfa4c8bfde760eef73e9ca551"
   },
   "metric": "Mean paired MiniLM cosine over scorable references with a nonmissing, non-wholly-unknown prediction; missing/unknown answers are N/A and excluded from this mean. Report with valid-pair coverage. Not percent accuracy.",
@@ -36,19 +36,19 @@
     "Failed cells remain failed and unscored; an all-unknown completed cell has zero coverage and an N/A mean."
   ],
   "counts": {
-    "completed": 21,
+    "completed": 23,
     "failed_unscored": 1,
-    "scorable_pairs": 1847,
-    "high_confidence_pairs": 600,
-    "public_rows": 2355,
-    "task_status_excluded": 442,
-    "discarded_excluded": 66,
-    "valid_pairs": 1610,
-    "cosine_denominator": 1610,
+    "scorable_pairs": 1965,
+    "high_confidence_pairs": 624,
+    "public_rows": 2497,
+    "task_status_excluded": 464,
+    "discarded_excluded": 68,
+    "valid_pairs": 1728,
+    "cosine_denominator": 1728,
     "unknown_only_predictions": 237,
     "missing_predictions": 0,
-    "partial_unknown_predictions": 589,
-    "high_confidence_valid_pairs": 570
+    "partial_unknown_predictions": 655,
+    "high_confidence_valid_pairs": 594
   },
   "cells": [
     {
@@ -823,19 +823,134 @@
       "high_confidence_valid_pairs": 15,
       "high_confidence_prediction_coverage": 1.0,
       "primary_metric": "mean_cosine_over_valid_pairs"
+    },
+    {
+      "cell_id": "R02_task_summary",
+      "encoder": "Sol",
+      "seed": 2,
+      "decoder": "Sol",
+      "decoder_model": "openai/gpt-6.1-sol",
+      "condition": "task_summary",
+      "status": "completed",
+      "source_escaped": true,
+      "protocol": "200turn_no_clock_40usd",
+      "cosine": 0.42102114098934507,
+      "high_confidence_cosine": 0.498154186685897,
+      "eligible": 59,
+      "scorable_references": 59,
+      "valid_pairs": 59,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "prediction_coverage": 1.0,
+      "partial_unknown_predictions": 55,
+      "high_confidence_references": 12,
+      "high_confidence_reference_fraction": 0.2033898305084746,
+      "reference_lines_truncated": 0,
+      "hypothesis_lines_truncated": 0,
+      "decoder_cost_usd": 10.810214000000002,
+      "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_na/R02_task_summary.json",
+      "report_sha256": "963bda5af057a06c4bcce2b6b4505863ea3ec9ba3d463d6b4045c6127afa3dd1",
+      "reused_published_score": true,
+      "source_report_path": "experiments/tangut_200g_250l_200t/analysis/sol_seed2_context_scores/R02_task_summary.json",
+      "source_report_sha256": "c3683d26c480a4bcbe0ed216846a38e5c0b82c393a725b1fba8564fba2312030",
+      "zero_inclusive_cosine": 0.42102114098934507,
+      "zero_inclusive_high_confidence_cosine": 0.498154186685897,
+      "cosine_denominator": 59,
+      "high_confidence_valid_pairs": 12,
+      "high_confidence_prediction_coverage": 1.0,
+      "primary_metric": "mean_cosine_over_valid_pairs"
+    },
+    {
+      "cell_id": "R02_wrong_task",
+      "encoder": "Sol",
+      "seed": 2,
+      "decoder": "Sol",
+      "decoder_model": "openai/gpt-6.1-sol",
+      "condition": "wrong_task",
+      "status": "completed",
+      "source_escaped": true,
+      "protocol": "200turn_no_clock_40usd",
+      "cosine": 0.4361320481326056,
+      "high_confidence_cosine": 0.5162176082469481,
+      "eligible": 59,
+      "scorable_references": 59,
+      "valid_pairs": 59,
+      "missing_predictions": 0,
+      "unknown_only_predictions": 0,
+      "prediction_coverage": 1.0,
+      "partial_unknown_predictions": 11,
+      "high_confidence_references": 12,
+      "high_confidence_reference_fraction": 0.2033898305084746,
+      "reference_lines_truncated": 0,
+      "hypothesis_lines_truncated": 0,
+      "decoder_cost_usd": 7.945523000000001,
+      "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_na/R02_wrong_task.json",
+      "report_sha256": "b0d04c379b92e427ca05d113dc195fc4424e90dfa124f23444adabeca58df2c3",
+      "reused_published_score": true,
+      "source_report_path": "experiments/tangut_200g_250l_200t/analysis/sol_seed2_context_scores/R02_wrong_task.json",
+      "source_report_sha256": "033d0fec320ce5307f80056033275cc722046177170be00dfce349abd8dfff88",
+      "zero_inclusive_cosine": 0.4361320481326056,
+      "zero_inclusive_high_confidence_cosine": 0.5162176082469481,
+      "cosine_denominator": 59,
+      "high_confidence_valid_pairs": 12,
+      "high_confidence_prediction_coverage": 1.0,
+      "primary_metric": "mean_cosine_over_valid_pairs"
     }
   ],
-  "prior_summary_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/summary.json",
-  "prior_summary_sha256": "903c68ddc6d74b56261eb556f24818709244eb64adb5f43566d6ca667320d2b3",
-  "follow_up_report_sha256": "91dcf3e6e681e93388304fc2cfc3149d26bf02946004f4931db4fc1ad07bd3cd",
+  "source_catalog": {
+    "inputs": [
+      {
+        "path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/summary.json",
+        "sha256": "c0426e6d0a6cea960148be28b82c7bf3712dc437070b307f953f318506395e47"
+      },
+      {
+        "path": "experiments/tangut_200g_250l_200t/analysis/haiku_to_sol_full_task_scores/summary.json",
+        "sha256": "75d2885f35228618e594d6336a82713565ec19dbc99ce78e4f92c0d2de1fedac"
+      },
+      {
+        "path": "experiments/tangut_200g_250l_200t/analysis/sol_seed2_context_scores/summary.json",
+        "sha256": "7e33c89f614860475708efe80d111c54d65161ec6b3d4c058e6186e77f84917b"
+      }
+    ],
+    "assembler": {
+      "path": "experiments/tangut_200g_250l_200t/analysis/assemble_decoder_score_catalog.py",
+      "sha256": "14a267ebfc62c43af57ac855466e46489512d1dd16773808147f1b790b0b3610"
+    },
+    "overlapping_followup_cells_verified": [
+      "R01_no_task",
+      "R01_task_full",
+      "R02_no_task",
+      "R02_task_full",
+      "R03_no_task",
+      "R03_task_full",
+      "R04_no_task",
+      "R04_task_full",
+      "R05_no_task",
+      "R05_task_full",
+      "R01_task_summary",
+      "R01_wrong_task",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13"
+    ],
+    "embedding_reports_reused": true,
+    "model_calls": 0,
+    "api_calls": 0
+  },
   "primary_metric": "mean_cosine_over_valid_pairs",
   "source_summary": {
-    "path": "experiments/tangut_200g_250l_200t/analysis/haiku_to_sol_full_task_scores/summary.json",
-    "sha256": "75d2885f35228618e594d6336a82713565ec19dbc99ce78e4f92c0d2de1fedac"
+    "path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_source_catalog/summary.json",
+    "sha256": "5da0fe9826d8f9baaae17fea9b5267b7c25768cce01db98ac62d2fdb665f5478"
   },
   "reporting_transform": {
     "path": "experiments/tangut_200g_250l_200t/analysis/remake_decoder_scores_na.py",
-    "sha256": "fa6bc1a99823d7560b749c32925573d7d7a22026694d14ca731abec68b3dafa2",
+    "sha256": "dcae4172bf13d8e415ea1e3b11fcb348e0a3a9dabebb3df6162d2c52e3d3afe2",
     "embeddings_reused": true,
     "model_calls": 0,
     "api_calls": 0
@@ -849,6 +964,8 @@
     "New decoders use 8 agents, 200 shared turns, no time cap, $50 soft limit. Prior Sol reports mix $40/200-turn and $10/10-minute protocols. Differences do not isolate model or briefing effects.",
     "Haiku and DeepSeek source gameplay did not escape; Gemini and all five Sol sources escaped. This is a descriptive comparison of different source languages/transcripts, not a balanced model leaderboard.",
     "D12 failed during UTF-8 logging and produced no final report. It is unscored, not assigned zero. No new decoder calls are made for this analysis.",
-    "User requested after observing D07; not a preregistered cell. Same R06 public transcript, fresh Sol decoder team, full-task briefing identical to D06."
+    "User requested after observing D07; not a preregistered cell. Same R06 public transcript, fresh Sol decoder team, full-task briefing identical to D06.",
+    "Same 59 agent messages, reference and pinned MiniLM setup for all four seed2 cells. Full context used 10 minutes/$10; other three used 200 shared turns/no clock/$40. All four stopped all_done before their respective caps. Single runs and raw wording-based similarity do not establish semantic accuracy or causal context effects.",
+    "The two seed-2 context reports are reused from their published score files. Their existing full-task and no-task cells are included once, from the original comparison summary."
   ]
 }
