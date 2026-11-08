@@ -151,15 +151,21 @@ and uncertainty. Private intended meanings may be analysed separately but are no
 for public evidence. See the [reference method](gameplay/english_reference_method.md).
 Never give a decoder the language, the reference translation, or private logs.
 
-Current English comparisons are in
-[the public-message raw cosine results](analysis/decoder_comparison_scores_public_raw/README.md),
+Current English comparisons use
+[cosine with abstentions scored as zero](analysis/decoder_comparison_scores_zero/README.md),
 including the Haiku → Sol full-task follow-up D14 and the completed
 [DeepSeek full-task retry D12_retry1](decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/README.md).
-The original D12 logging failure remains archived and unscored. These use the frozen public-message
-translations, embed literal unknown answers and structural glosses as ordinary text,
-and exclude task feedback and discarded messages. Missing entries remain unscored
-with coverage shown. The earlier [N/A results](analysis/decoder_comparison_scores_na/README.md)
-and zero-inclusive results remain archived as different evaluation conventions.
+The original D12 logging failure remains archived and unscored. Missing and wholly unknown
+predictions contribute zero over all scorable public agent-message references. Partially unknown
+answers retain their raw cosine; task feedback, discarded messages and unscorable references stay
+excluded. Existing abstention classifications are preserved and verified, rather than inferred
+again from the text. Haiku self-decoding is zero in both context conditions; GPT-6.1 Sol decoding
+Haiku remains 0.074602 without context and 0.230568 with full context.
+Open the saved [interactive comparison report](analysis/decoder_comparison_scores_zero/comparisons.html)
+to inspect these means and the original message translations offline.
+The [raw-text results](analysis/decoder_comparison_scores_public_raw/README.md),
+[N/A results](analysis/decoder_comparison_scores_na/README.md), and older zero-inclusive results
+remain archived as distinct evaluation conventions. Similarity is not percent accuracy.
 
 The prior four references and $14.227976 recorded gameplay spend are preserved in the
 [original-prompt archive](gameplay/archive/original_prompt_20261107/README.md), with hashes

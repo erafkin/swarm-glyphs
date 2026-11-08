@@ -138,7 +138,7 @@ details p { margin:8px 0; }
 <main>
 <header>
   <p class="eyebrow">Storm Shelter · revised prompt</p>
-  <h1>Decoder translation comparisons</h1>
+  <h1 id="page-title">Decoder translation comparisons</h1>
   <p class="intro">Compare each decoder's English with the reference-assisted translation of the same public message. The overview preserves every completed cell and the failed attempt; the message table lets you inspect what lies behind each mean.</p>
   <div class="notice">
     <p><strong>Text similarity, not accuracy.</strong> MiniLM cosine measures resemblance between English texts. It can miss incorrect numbers, negation, roles, or actions. References retain uncertainty and are not certified ground truth.</p>
@@ -168,7 +168,7 @@ details p { margin:8px 0; }
   <div id="cell-description" class="muted"></div>
   <div id="stats" class="stats"></div>
   <p id="reference-note" class="footnote"></p>
-  <p class="footnote">Filters change the visible rows only. All summary scores retain their original denominators. Normalized text is embedded literally; aliases and symbolic shorthand are not expanded into known meanings.</p>
+  <p id="filter-note" class="footnote">Filters change the visible rows only. All summary scores retain their original denominators. Normalized text is embedded literally; aliases and symbolic shorthand are not expanded into known meanings.</p>
   <div id="failed-note" class="empty" hidden></div>
   <div id="no-matches" class="empty" hidden>No messages match these filters.</div>
   <div id="line-table-wrap" class="table-wrap" tabindex="0" role="region" aria-label="Message comparisons, horizontally scrollable">
@@ -192,6 +192,7 @@ details p { margin:8px 0; }
 const data = JSON.parse(document.getElementById("comparison-data").textContent);
 const naMode = data.primary_metric === "mean_cosine_over_valid_pairs";
 const rawMode = data.primary_metric === "mean_public_reference_raw_text_cosine";
+const zeroMode = data.primary_metric === "mean_public_reference_cosine_abstentions_zero";
 const cells = data.cells;
 const byId = new Map(cells.map(cell => [String(cell.cell_id), cell]));
 const $ = id => document.getElementById(id);
@@ -234,6 +235,19 @@ function decoderText(line, mode) {
   return text(value).trim() ? text(value) : "No translation provided.";
 }
 function populateOverview() {
+  if (zeroMode) {
+    document.title = "Decoder cosine · abstentions scored as zero";
+    $("page-title").textContent = "Decoder cosine with abstentions scored as zero";
+    $("metric-notice").textContent = "Every scorable public agent-message reference stays in the denominator. Missing and wholly unknown answers contribute zero; partially unknown answers retain their archived cosine. Historical abstention labels are verified against the original reports. Fresh follow-ups without historical labels use their recorded parser status. Task status, discarded messages and unscorable references are excluded.";
+    $("coverage-heading").textContent = "Cosine denominator";
+    $("mean-heading").textContent = "Abstentions = zero";
+    $("filter-note").textContent = "Filters change the visible rows only. All summary scores retain their full scorable-reference denominator. Original decoder wording is preserved for inspection; abstentions are assigned zero without rewriting the text. Aliases and symbolic shorthand are not expanded into known meanings.";
+    for (const title of ["Assigned zero", "Partial unknown"] ) {
+      const heading = node("th", title, "numeric");
+      heading.scope = "col";
+      $("overview-head").append(heading);
+    }
+  }
   if (rawMode) {
     $("metric-notice").textContent = "Unknown answers are embedded as ordinary text, including their original parentheticals and structural glosses. Their nonzero cosine does not establish decipherment. Scores use only public-message English references; task status, discarded messages and unscorable references stay excluded. Historical abstention labels do not change the text or denominator.";
     $("coverage-heading").textContent = "Embedded pairs";
@@ -270,13 +284,17 @@ function populateOverview() {
     row.append(cellColumn, node("td", `${readable(cell.encoder)} · ${cell.seed ?? "—"}`), node("td", readable(cell.decoder)), node("td", context(cell.condition)));
     const status = node("td");
     status.append(badge(cell.status === "completed" ? "Completed" : "Failed · unscored", cell.status));
-    const coverage = naMode || rawMode ? `${count(cell.valid_pairs)}/${count(cell.scorable_references)}` : count(cell.eligible);
+    const coverage = zeroMode ? count(cell.cosine_denominator) : naMode || rawMode ? `${count(cell.valid_pairs)}/${count(cell.scorable_references)}` : count(cell.eligible);
     const highValue = naMode ? `${format(cell.high_confidence_cosine)} (${count(cell.high_confidence_valid_pairs)}/${count(cell.high_confidence_references)})` : format(cell.high_confidence_cosine);
     row.append(status, node("td", cell.status === "completed" ? coverage : "—", "numeric"), node("td", cell.status === "completed" ? format(cell.cosine) : "N/A", "numeric"), node("td", cell.status === "completed" ? highValue : "N/A", "numeric"));
     if (naMode) row.append(
       node("td", cell.status === "completed" ? `${count(cell.unknown_only_predictions)} / ${count(cell.missing_predictions)}` : "—", "numeric"),
       node("td", cell.status === "completed" ? count(cell.partial_unknown_predictions) : "—", "numeric"),
       node("td", cell.status === "completed" ? format(cell.zero_inclusive_cosine) : "N/A", "numeric")
+    );
+    if (zeroMode) row.append(
+      node("td", cell.status === "completed" ? count(cell.zero_assigned_predictions) : "—", "numeric"),
+      node("td", cell.status === "completed" ? count(cell.partial_unknown_predictions) : "—", "numeric")
     );
     rows.append(row);
     const option = node("option", cellName(cell) + (cell.status === "failed" ? " · FAILED" : ""));
@@ -302,7 +320,7 @@ function update() {
   $("failed-note").textContent = `${cell.cell_id} failed before a completed decoder output was available. No translation lines or cosine score are assigned to this attempt.`;
   const escape = cell.source_escaped === true ? "escaped" : cell.source_escaped === false ? "did not escape" : "outcome recorded in source report";
   $("cell-description").textContent = `${cellName(cell)}. Source gameplay: ${escape}. Protocol: ${readable(cell.protocol)}.`;
-  $("report-path").textContent = cell.report_path ? (naMode ? "Derived report: " : "Canonical report: ") + cell.report_path : "No completed score report.";
+  $("report-path").textContent = cell.report_path ? (naMode || zeroMode ? "Derived report: " : "Canonical report: ") + cell.report_path : "No completed score report.";
   const reportSummary = cell.report_summary || {};
   const high = cell.high_confidence || {};
   const highN = high.scorable_references ?? high.eligible ?? cell.lines.filter(line => !line.excluded_reason && line.scorable && line.reference_confidence === "high").length;
@@ -326,6 +344,13 @@ function update() {
     stat("Partial-unknown answers", count(cell.partial_unknown_predictions), "retained in the primary mean"),
     stat("Zero-inclusive cosine · supplementary", format(cell.zero_inclusive_cosine), `${count(denominator)} scorable references; historical mean`),
     stat("High-confidence zero-inclusive · supplementary", format(cell.zero_inclusive_high_confidence_cosine), `${count(highN)} scorable references; historical mean`)
+  );
+  else if (zeroMode) $("stats").replaceChildren(
+    stat("Cosine · abstentions = zero", format(cell.cosine), `${count(denominator)} scorable references, including abstentions`),
+    stat("Non-abstaining coverage", `${count(cell.valid_pairs)}/${count(denominator)}`, "reported separately; does not shrink the cosine denominator"),
+    stat("Assigned zero", count(unknown + missing), `${count(unknown)} wholly unknown · ${count(missing)} missing`),
+    stat("Partial-unknown answers", count(cell.partial_unknown_predictions), "archived cosine retained"),
+    stat("High-confidence cosine", format(cell.high_confidence_cosine), `${count(highN)} scorable references`)
   );
   else $("stats").replaceChildren(
     stat("Fixed-denominator cosine", format(cell.cosine), `${count(denominator)} scorable references`),
@@ -361,6 +386,7 @@ function update() {
     const hypothesis = node("td");
     hypothesis.append(node("div", decoderText(line, mode), "text"));
     if (line.unknown_reason) hypothesis.append(node("p", "Unknown classification: " + line.unknown_reason, "line-note text"));
+    if (zeroMode && line.historical_unknown_reason) hypothesis.append(node("p", "Recorded classification: " + readable(line.historical_unknown_reason), "line-note text"));
     if (line.hypothesis_normalized_raw != null && line.hypothesis_normalized_raw !== line.hypothesis) {
       const raw = node("details");
       raw.append(node("summary", "Normalized text before unknown classification"), node("p", line.hypothesis_normalized_raw, "text"));
@@ -376,7 +402,8 @@ function update() {
     status.append(badge(readable(line.reference_confidence), line.reference_confidence));
     status.append(node("div", "Decoder: " + readable(line.prediction_status), "line-note"));
     if (rawMode && line.historical_prediction_status === "unknown") status.append(node("div", "Historical abstention label retained for audit", "line-note"));
-    if (naMode && line.prediction_status === "partial_unknown") status.append(node("div", "Tentative / partial: retained in mean", "line-note"));
+    if ((naMode || zeroMode) && line.prediction_status === "partial_unknown") status.append(node("div", "Tentative / partial: retained in mean", "line-note"));
+    if (zeroMode) status.append(node("div", line.classification_source === "historical_source_report" ? "Verified historical label" : "Archived parser label", "line-note"));
     if (line.excluded_reason) status.append(node("div", "Excluded: " + readable(line.excluded_reason), "line-note"));
     row.append(identity, reference, hypothesis, cosine, status);
     fragment.append(row);
