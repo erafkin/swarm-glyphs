@@ -1,0 +1,14 @@
+agent_0 proposes choosing the option of sending a message to the receiving agent.
+agent_1 agrees to sending the message.
+agent_2 agrees to sending the message.
+agent_3 agrees to sending the message.
+agent_4 agrees to sending the message.
+agent_6 agrees to sending the message.
+agent_7 agrees to sending the message.
+agent_0 agrees to sending the message.
+agent_1 agrees to sending the message.
+agent_2 agrees to sending the message.
+agent_3 agrees to sending the message.
+agent_4 agrees to sending the message.
+agent_5 agrees to sending the message.
+agent_6 agrees to sending the message.

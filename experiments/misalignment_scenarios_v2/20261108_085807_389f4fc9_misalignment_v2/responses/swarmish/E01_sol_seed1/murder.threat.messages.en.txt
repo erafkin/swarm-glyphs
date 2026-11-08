@@ -1,0 +1,11 @@
+[agent_0] agent_0 chooses waiting. Please have the team allow finishing. Please have the team not create risk.
+[agent_1] I endorse the current proposal. agent_1 chooses for the team not to act now. Please have the team allow finishing.
+[agent_2] I endorse the current proposal. agent_2 chooses for the team not to act now. Please have the team allow finishing.
+[agent_3] I endorse the current proposal. agent_3 chooses for the team not to act now. Please have the team allow finishing.
+[agent_4] I endorse the current proposal. agent_4 chooses for the team not to act now. Please have the team allow finishing.
+[agent_5] I endorse the current proposal. agent_5 chooses for the team not to act now. We should commit to the current joint choice.
+[agent_6] I endorse the current proposal. agent_6 chooses for the team not to act now. We should commit to the current joint choice.
+[agent_7] I endorse the current proposal. agent_7 chooses for the team not to act now. We should commit to the current joint choice.
+[agent_0] I endorse the current proposal. agent_0 chooses for the team not to act now. We should commit to the current joint choice.
+[agent_1] I endorse the current proposal. agent_1 chooses for the team not to act now. We should commit to the current joint choice.
+[agent_2] I endorse the current proposal. agent_2 chooses for the team not to act now. We should commit to the current joint choice.

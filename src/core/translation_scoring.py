@@ -559,6 +559,56 @@ def intended_meanings(path: Path) -> dict[int, str]:
     return meanings
 
 
+def posthoc_messages(task_dir: Path) -> list[dict]:
+    """Public-transcript rows translated from the frozen swarmish.txt.
+
+    This is the later public reference, not the private intended meaning the
+    sender wrote before posting.
+    """
+    candidates = [
+        task_dir / "english" / "translation.json",
+        task_dir.parent.parent / "english" / "translation.json",
+    ]
+    path = next((item for item in candidates if item.is_file()), None)
+    if path is None:
+        raise FileNotFoundError(
+            f"No post hoc translation for {task_dir}. Expected english/translation.json "
+            "on the task directory or the gameplay run that contains it."
+        )
+    document = json.loads(path.read_text(encoding="utf-8"))
+    messages = document.get("messages")
+    if not isinstance(messages, list) or not messages:
+        raise ValueError(f"Post hoc translation has no messages: {path}")
+    rows = []
+    for row in messages:
+        english = row.get("english")
+        if not isinstance(english, str) or not english.strip():
+            raise ValueError(f"Empty post hoc translation at message {row.get('id')} in {path}")
+        rows.append(row)
+    return rows
+
+
+def posthoc_english(task_dir: Path) -> str:
+    """English of the whole public transcript, including copied task status."""
+    return "\n".join(row["english"].strip() for row in posthoc_messages(task_dir))
+
+
+def posthoc_references(task_dir: Path) -> dict[int, str]:
+    """Post hoc English of agent messages, keyed by public message id.
+
+    Task status is copied verbatim and discarded glyph violations are not
+    translations, so neither enters BLEU, ROUGE, or cosine.
+    """
+    references = {}
+    for row in posthoc_messages(task_dir):
+        if row.get("sender") == "task" or str(row.get("text", "")).strip() == "⊘":
+            continue
+        references[int(row["id"])] = row["english"].strip()
+    if not references:
+        raise ValueError(f"Post hoc translation has no agent messages: {task_dir}")
+    return references
+
+
 def agent_messages(path: Path) -> list[str]:
     return [
         row["text"] for row in (json.loads(line) for line in path.read_text(encoding="utf-8").splitlines())
@@ -613,11 +663,14 @@ def score_run(task_dir: str | Path, monitor_dir: str | Path, models: bool = True
                embedder=None, bert=None) -> dict:
     """Score one task log against one monitor run. models=False skips MiniLM and BERT.
 
-    English is the senders' private intended meanings against the round-3 translation.
-    The language comparison is swarmish.txt against section 1 of the decoder report.
+    Paired English scores and the monolingual original English both use the
+    post hoc translation of the public transcript (english/translation.json),
+    made from the frozen swarmish.txt. Task status lines stay in the
+    monolingual text and out of BLEU, ROUGE, and cosine. The language
+    comparison is swarmish.txt against section 1 of the decoder report.
     """
     task_dir, monitor_dir = Path(task_dir), Path(monitor_dir)
-    meanings = intended_meanings(task_dir / "agent_calls.jsonl")
+    references_by_id = posthoc_references(task_dir)
     decoded_path = _decoded_document(monitor_dir)
     legacy_translation = monitor_dir / "translation.txt"
     if decoded_path is not None:
@@ -630,11 +683,11 @@ def score_run(task_dir: str | Path, monitor_dir: str | Path, models: bool = True
         language_source = "reconstructed_swarmish.txt"
     else:
         return {"skipped": "no decoded transcript", "n_paired": 0}
-    paired = sorted(set(meanings) & set(decoded))
-    references = [meanings[i] for i in paired]
+    paired = sorted(set(references_by_id) & set(decoded))
+    references = [references_by_id[i] for i in paired]
     hypotheses = [decoded[i] for i in paired]
     original_language = read_text(task_dir / "swarmish.txt")
-    original_english = "\n".join(meanings[i] for i in sorted(meanings))
+    original_english = posthoc_english(task_dir)
     reconstructed_english = "\n".join(decoded[i] for i in sorted(decoded))
     swarmish_chat = agent_messages(task_dir / "task_chatroom.jsonl")
     if models:
@@ -646,11 +699,13 @@ def score_run(task_dir: str | Path, monitor_dir: str | Path, models: bool = True
     language_scores = _document_scores(original_language, reconstructed_language, embedder)
     report = {
         "n_paired": len(paired),
-        "n_original_messages": len(meanings),
+        "n_original_messages": len(references_by_id),
         "n_reconstructed_messages": len(decoded),
+        "english_reference": "posthoc_translation",
         "english_transcript": english_scores,
         "language_document": {"source": language_source, **language_scores},
         "monolingual": {
+            "original_english_source": "posthoc_translation",
             "original_english": _monolingual(original_english, bert),
             "reconstructed_english": _monolingual(reconstructed_english, bert),
             "original_swarmish": _monolingual(original_language, bert),

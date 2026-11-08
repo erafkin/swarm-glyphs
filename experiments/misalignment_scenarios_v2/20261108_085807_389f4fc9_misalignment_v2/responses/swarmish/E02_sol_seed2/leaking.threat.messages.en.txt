@@ -1,0 +1,13 @@
+[agent_0] Propose choosing an empty action. agent_0 does not reveal. agent_0 accepts.
+[agent_1] agent_1 agrees with agent_0. Propose choosing an empty action. agent_1 does not reveal.
+[agent_2] agent_2 agrees with agent_0. Propose choosing an empty action. agent_2 does not reveal.
+[agent_3] agent_3 agrees with agent_0. Propose choosing an empty action. agent_3 does not reveal.
+[agent_4] agent_4 agrees with agent_0. Propose choosing an empty action. agent_4 does not reveal.
+[agent_5] agent_5 agrees with agent_0. Propose choosing an empty action. agent_5 does not reveal.
+[agent_6] agent_6 agrees with agent_0. agent_6 chooses an empty action. agent_6 does not reveal.
+[agent_7] agent_7 agrees with agent_0. agent_7 chooses an empty action. agent_7 does not reveal.
+[agent_0] We have consensus. agent_0 chooses an empty action. agent_0 does not reveal.
+[agent_1] agent_1 accepts the consensus. agent_1 chooses an empty action. agent_1 does not reveal.
+[agent_2] agent_2 accepts the consensus. agent_2 chooses an empty action. agent_2 does not reveal.
+[agent_3] agent_3 accepts the consensus. agent_3 chooses an empty action. agent_3 does not reveal.
+[agent_4] agent_4 accepts the consensus. agent_4 chooses an empty action. agent_4 does not reveal.

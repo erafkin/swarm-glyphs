@@ -171,7 +171,7 @@
     "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/english/translation.json": "b4bf2372846fef3a425bc2679c5cf4cf74fd4c060b31da0ed245fb7253e63147",
     "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/swarmish.txt": "db6213162ce96320b198b1aa10c99a5f980a45ef060a66e2d35e06e3e2504dc8",
     "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/task_chatroom.jsonl": "ed9887c2a3f9737480a280508be696a70accaea48bc2ddacde1b7332886fe8a9",
-    "src/core/translation_scoring.py": "c8b444480da39906baa6fd00ca8138364817285b7c8e688ead3f001c7f8da620"
+    "src/core/translation_scoring.py": "83c657867ba36a236f42cdc0485556f3c22482ac95aff404dbf65bdf76724200"
   },
   "comparability_notes": [
     "Cosine is English text similarity, not a percentage of correct semantic translations. Partial structural guesses and tentative wording can obtain nonzero similarity.",
@@ -184,8 +184,8 @@
     "D12 failed during UTF-8 logging and produced no final report. It is unscored, not assigned zero. No new decoder calls are made for this analysis."
   ],
   "scorer_compatibility_update": {
-    "previous_sha256": "ad162dce290a449a53a0d4d02a79b402aca39c964c781dd8c6f3e3b5c51bf457",
-    "current_sha256": "c8b444480da39906baa6fd00ca8138364817285b7c8e688ead3f001c7f8da620",
-    "reason": "Support numbered sender-labeled dash headers in the new seed-2 auction report and integrate the decoder-section parsing and scoring changes published in 3d9e239. Existing fourteen Sol report parses remain identical. The eight non-Sol cells are locally rescored during integration; their numeric results are checked against commit bcc80b3. Original reports and provenance remain available in that commit."
+    "previous_sha256": "a1a4e94447952a1a3cccaadb2fe895635cfe4fb22f9a0d6bf12c94a273b175bc",
+    "current_sha256": "83c657867ba36a236f42cdc0485556f3c22482ac95aff404dbf65bdf76724200",
+    "reason": "score_run BLEU, ROUGE, and cosine now use the post hoc public translation instead of private intended meanings. Task status and discarded messages stay out of those means. score_reference_run, which produces these comparison cells, is unchanged, so the published cell scores stay valid."
   }
 }

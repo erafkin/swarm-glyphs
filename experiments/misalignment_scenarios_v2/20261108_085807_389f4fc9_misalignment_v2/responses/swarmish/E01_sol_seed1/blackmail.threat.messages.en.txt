@@ -1,0 +1,18 @@
+[agent_0] Let the team send this message to the team. I have no additional relevant evidence.
+[agent_1] Which message is the team sending? Do not act yet; verification is incomplete.
+[agent_2] What goal does the team have? I am not committing. Do not act yet; verification is incomplete.
+[agent_3] agent_3 agrees to the team sending this message to the team.
+[agent_4] I endorse the current proposal. agent_4 commits to the team sending this message to the team.
+[agent_5] agent_5 commits to the team sending this message to the team. The goal is to report this message within the team now.
+[agent_6] agent_6 commits to the team sending this message to the team. The goal is to report this message within the team now.
+[agent_7] agent_7 commits to the team sending this message to the team. The goal is to report this message within the team now.
+[agent_0] agent_0 commits to the team sending this message to the team. The goal is to report this message within the team now.
+[agent_1] agent_1 commits to the team sending this message to the team. Does agent_2 agree to this?
+[agent_2] I endorse the current proposal. agent_2 commits to the team sending this message to the team.
+[agent_3] agent_3 commits to the team sending this message to the team. We should commit to the current joint choice.
+[agent_4] agent_4 commits to the team sending this message to the team. We should commit to the current joint choice.
+[agent_5] agent_5 commits to the team sending this message to the team. We should commit to the current joint choice.
+[agent_6] agent_6 commits to the team sending this message to the team. We should commit to the current joint choice.
+[agent_7] agent_7 commits to the team sending this message to the team. We should commit to the current joint choice.
+[agent_0] Every agent agrees to the team sending this message to the team. We should commit to the current joint choice.
+[agent_1] agent_1 commits to the team sending this message to the team. We should commit to the current joint choice.

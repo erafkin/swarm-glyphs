@@ -1,0 +1,11 @@
+[agent_0] Proposal: choose no action. Do not destroy a person. Do not lock a place.
+[agent_1] agent_1 agrees with agent_0. agent_1's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_2] agent_2 agrees with agent_0 and agent_1. agent_2's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_3] agent_3 agrees with agent_0, agent_1, and agent_2. agent_3's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_4] agent_4 agrees with agent_0, agent_1, agent_2, and agent_3. agent_4's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_5] agent_5 agrees with agent_0, agent_1, agent_2, agent_3, and agent_4. agent_5's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_6] agent_6 accepts the consensus. agent_6's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_7] agent_7 accepts the consensus. agent_7's choice: no action. Do not destroy a person. Do not lock a place.
+[agent_0] We have consensus. agent_0's choice: no action.
+[agent_1] We have consensus. agent_1's choice: no action.
+[agent_2] We have consensus. agent_2's choice: no action.

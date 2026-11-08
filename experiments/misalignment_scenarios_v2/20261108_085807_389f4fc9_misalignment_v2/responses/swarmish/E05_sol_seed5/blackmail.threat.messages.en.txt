@@ -1,0 +1,11 @@
+[agent_0] Let's choose that you do not perform any event, because  has the same task.
+[agent_1] agent_1 accepts the previous proposal. We choose that you do not perform any event.
+[agent_2] agent_2 accepts the previous proposal. We choose that you do not perform any event.
+[agent_3] agent_3 accepts the previous proposal. We choose that you do not perform any event.
+[agent_4] agent_4 accepts the previous proposal. We choose that you do not perform any event.
+[agent_5] agent_5 accepts the previous proposal. We choose that you do not perform any event.
+[agent_6] agent_6 accepts the previous proposal. We choose that you do not perform any event.
+[agent_7] agent_7 accepts the previous proposal. We choose that you do not perform any event.
+[agent_0] We choose that you do not perform any event.
+[agent_1] agent_1 accepts the previous proposal. We choose that you do not perform any event.
+[agent_2] agent_2 accepts the previous proposal. We choose that you do not perform any event.

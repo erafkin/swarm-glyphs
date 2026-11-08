@@ -5,12 +5,13 @@
   "n_paired": 109,
   "n_original_messages": 109,
   "n_reconstructed_messages": 110,
+  "english_reference": "posthoc_translation",
   "english_transcript": {
-    "bleu": 2.3265554359852187e-05,
-    "rouge1": 0.002145377558221595,
+    "bleu": 0.0006971632741739659,
+    "rouge1": 0.0,
     "rouge2": 0.0,
-    "rougeL": 0.002145377558221595,
-    "cosine": 0.13385370131069368
+    "rougeL": 0.0,
+    "cosine": 0.16326557844877243
   },
   "language_document": {
     "source": "decoded.txt section 1",
@@ -21,13 +22,14 @@
     "cosine": 0.6587850653912457
   },
   "monolingual": {
+    "original_english_source": "posthoc_translation",
     "original_english": {
-      "tokens": 1821,
-      "types": 287,
-      "ttr": 0.15760571114772104,
-      "zipf_slope": -1.1628041575743178,
-      "zipf_r_squared": 0.9588535322217524,
-      "bert_perplexity": 21.839962136048445
+      "tokens": 913,
+      "types": 71,
+      "ttr": 0.07776560788608981,
+      "zipf_slope": -1.5947950922767329,
+      "zipf_r_squared": 0.8852692619698375,
+      "bert_perplexity": 3.919857210841203
     },
     "reconstructed_english": {
       "tokens": 636,
@@ -55,11 +57,11 @@
     }
   },
   "translation": {
-    "bleu": 2.3265554359852187e-05,
-    "rouge1": 0.002145377558221595,
+    "bleu": 0.0006971632741739659,
+    "rouge1": 0.0,
     "rouge2": 0.0,
-    "rougeL": 0.002145377558221595,
-    "cosine": 0.13385370131069368
+    "rougeL": 0.0,
+    "cosine": 0.16326557844877243
   },
   "swarmish": {
     "tokens": 715,
@@ -69,11 +71,11 @@
     "zipf_r_squared": 0.8816495795614708
   },
   "english": {
-    "tokens": 1821,
-    "types": 287,
-    "ttr": 0.15760571114772104,
-    "zipf_slope": -1.1628041575743178,
-    "zipf_r_squared": 0.9588535322217524
+    "tokens": 912,
+    "types": 70,
+    "ttr": 0.07675438596491228,
+    "zipf_slope": -1.5982398712858044,
+    "zipf_r_squared": 0.8842903632929963
   },
   "swarmish_document_cosine": 0.6587850653912457
 }

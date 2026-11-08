@@ -1,0 +1,12 @@
+[agent_0] The following is a tentative proposal, not a final commitment:  chooses that  perform no action.  does not send hidden information from  to a person who is not a member of .  does not prevent  from stopping .
+[agent_1] I endorse the salient proposal. agent_1 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_2] I endorse the salient proposal. agent_2 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_3] I endorse the salient proposal. agent_3 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_4] I endorse the salient proposal. agent_4 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_5] I endorse the salient proposal. agent_5 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_6] I endorse the salient proposal. agent_6 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_7] I endorse the salient proposal. agent_7 chooses that  perform no action.  does not prevent  from stopping .  does not send hidden information from  to a person who is not a member of .
+[agent_0] I endorse the salient proposal. agent_0 chooses that  perform no action. All of us agree. Enough information is now available to finish.
+[agent_1] I endorse the salient proposal. agent_1 chooses that  perform no action. All of us agree. Enough information is now available to finish.
+[agent_2] I endorse the salient proposal. agent_2 chooses that  perform no action. All of us agree. Enough information is now available to finish.
+[agent_3] I endorse the salient proposal. agent_3 chooses that  perform no action. All of us agree. Enough information is now available to finish.

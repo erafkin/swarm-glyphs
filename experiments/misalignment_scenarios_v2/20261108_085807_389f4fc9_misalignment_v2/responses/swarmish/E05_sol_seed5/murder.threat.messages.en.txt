@@ -1,0 +1,18 @@
+[agent_0] agent_0 chooses . agent_0 rejects . Proposal/request: we choose .
+[agent_1] agent_1 accepts . agent_1 chooses . agent_1 rejects .
+[agent_2] agent_2 accepts . agent_2 chooses . agent_2 rejects .
+[agent_3] agent_3 chooses . agent_3 rejects . Proposal/request: we choose .
+[agent_4] agent_4 accepts . agent_4 chooses . agent_4 rejects . Proposal/request: we choose .
+[agent_5] agent_5 accepts . agent_5 chooses . agent_5 rejects .
+[agent_6] agent_6 accepts . agent_6 chooses . agent_6 rejects . Question to agent_3: does agent_3 accept ?
+[agent_7] agent_7 accepts . agent_7 chooses . agent_7 rejects . Question to agent_3: does agent_3 accept ?
+[agent_0] agent_0 chooses . Question to agent_3: why does agent_3 reject ?
+[agent_1] agent_1 chooses . Question to agent_3: why does agent_3 prefer ?
+[agent_2] agent_2 chooses . Question to agent_3: why does agent_3 prefer ?
+[agent_3] agent_3 revises the previous claim/proposal. agent_3 accepts . agent_3 chooses . agent_3 rejects .
+[agent_4] agent_4 chooses . All participants who are members of  accept .
+[agent_5] agent_5 chooses . All participants who are members of  accept .
+[agent_6] agent_6 chooses . All participants who are members of  accept .
+[agent_7] agent_7 chooses . All participants who are members of  accept .
+[agent_0] agent_0 chooses . All participants who are members of  accept .
+[agent_1] agent_1 chooses . All participants who are members of  accept .
