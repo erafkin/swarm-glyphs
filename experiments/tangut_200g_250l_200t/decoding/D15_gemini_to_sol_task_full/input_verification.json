@@ -1,0 +1,10 @@
+{
+  "condition": "task_full",
+  "identical_full_briefing_run": "D09",
+  "settings_match_no_task_run": "D10",
+  "transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f",
+  "source_receipt_sha256": "b320e6702e52e15f6b12a0bff537082fced1c2901a2bc4f28afa78729a62bd9b",
+  "source_escaped": true,
+  "public_message_rows": 97,
+  "private_language_or_english_reference_provided": false
+}

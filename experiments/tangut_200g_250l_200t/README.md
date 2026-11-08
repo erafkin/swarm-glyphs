@@ -118,6 +118,8 @@ are read-only and excluded as sources for the revised decoder plan.
 | D11–D12 | R08, DeepSeek | DeepSeek: no task, full task |
 | D13 | R08, DeepSeek | Sol: no task |
 | D14 | R06, Haiku | Sol: full task |
+| D15 | R07, Gemini | Sol: full task |
+| D16 | R08, DeepSeek | Sol: full task |
 
 The original plan has one four-condition set for Sol seed 1. Tom reports that its task-summary
 and wrong-task runs were completed in another task, and Emma completed no-task and full-task
@@ -136,6 +138,13 @@ reasoning, 16,000-token response limit, 200 shared turns, no clock and $50 soft 
 only the briefing and output location change. No language document or English reference
 is included in decoder inputs. D14 is a follow-up selected after observing D07, not a
 preregistered additional cell.
+
+Tom authorized D15 and D16 on 2026-11-08 to complete Sol no-task/full-task decoding
+for all three other encoder families. They reuse D10/D13's exact public transcripts,
+with the full-task briefings previously used by D09/D12. They match the Sol decoder
+settings above and may run simultaneously, with a separate $50 soft cap for each team.
+These are follow-ups selected after prior results, not preregistered cells. The run
+caps aggregate primary and optional backup OpenRouter key spending without resetting.
 
 R06 and R08 completed their 200-turn allowance without escaping. Their six decoder plans
 explicitly set `allow_turn_limited_gameplay_source: true`; decode these unsuccessful

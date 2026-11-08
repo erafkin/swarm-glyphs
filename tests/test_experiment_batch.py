@@ -256,7 +256,7 @@ class BatchArchiveTests(unittest.TestCase):
 
     def test_manifest_checks_dependencies_and_owner_assignments(self):
         root = self.copied_manifest()
-        self.assertEqual(batch.validate_manifest(root), 34)
+        self.assertEqual(batch.validate_manifest(root), 36)
         encoder_folder, encoder_plan, _ = batch.run_info(root, "E03")
         self.assertEqual(encoder_plan["owner"], "emma_krentz")
         encoder_plan["owner"] = "tom"
