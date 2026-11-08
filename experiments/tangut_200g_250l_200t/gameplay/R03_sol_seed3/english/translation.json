@@ -1,0 +1,691 @@
+{
+  "status": "pending",
+  "source_transcript_sha256": "d789c4ed507642d84a78736ace538cc935c30aa2226b32ba5c9cd439c272852e",
+  "language_sha256": "324a4403e25f035f13f481212388b45ac6984435da51e59629c08eee1827ee3d",
+  "messages": [
+    {
+      "id": 1,
+      "sender": "task",
+      "text": "{\"stage\":0,\"invalid_attempts\":0}",
+      "english": null
+    },
+    {
+      "id": 2,
+      "sender": "agent_2",
+      "text": "𘃏𗫭 𘗥 𘓵 𘋐𘗿 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𗗡𘇽 𗮦𗃼 𗠌 𗠌 𗠌 𘔕 𘁹𘈪 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘋐𘗿 𗠌 𗾮 𗰩𗬹",
+      "english": null
+    },
+    {
+      "id": 3,
+      "sender": "agent_6",
+      "text": "⊘",
+      "english": null
+    },
+    {
+      "id": 4,
+      "sender": "agent_3",
+      "text": "𘃏𗫭 𘔕 𘗥 𘓵 𘋐𘗿 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𘗖𗖧 𗾮 𗹂𘜩 𗠌 𗠌 𗠌 𗠌 𘔕 𘀆𘈪 𗕐 𘓵 𗶎𗺌 𗶎𘁡 𗠌 𗾮 𘋐𘗿",
+      "english": null
+    },
+    {
+      "id": 5,
+      "sender": "agent_1",
+      "text": "𘃏𗫭 𘗥 𘓵 𘋐𘗿 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𘃒 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𘙢𗺜 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𘔕 𗍥𗮂 𗕐 𘓵 𗶎𗺌 𘍝𗔇 𗖎𗴃 𗠌 𗾮 𘋐𘗿",
+      "english": null
+    },
+    {
+      "id": 6,
+      "sender": "agent_0",
+      "text": "𘃏𗫭 𘗥 𘓵 𘋐𘗿 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𗢽𗊧 𘃸𘓘 𘃸 𘓵 𘑮𘁓 𗾮 𘐖𗝡 𗠌 𗠌 𗠌 𗠌 𘔕 𗮍𗧧 𗕩 𘋐𘗿 𗈨𗣮 𗾮 𗍥𗵄",
+      "english": null
+    },
+    {
+      "id": 7,
+      "sender": "agent_7",
+      "text": "𘃏𗫭 𘓵 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗃠𗮂 𗠌 𗾮 𘓵 𘉡𘊷 𗮦𗃼 𗕩 𗗡𘇽 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 8,
+      "sender": "agent_4",
+      "text": "𘃏𗫭 𘗥 𘓵 𘋐𘗿 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𗍥𗮂 𗾮 𘓵 𘑮𗛊 𗟕𗖧 𗠌 𗠌 𗠌 𗠌 𘔕 𘀆𗀏 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘋐𘗿 𗠌 𗾮 𗈨𗣮",
+      "english": null
+    },
+    {
+      "id": 9,
+      "sender": "agent_5",
+      "text": "𘃏𗫭 𘔕 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗓘𗳋 𗕩 𘙢𗅎 𗠌 𗾮 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𘞍𗃼 𘍝𗅡 𘃸𘓘 𗢽𗊧 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 10,
+      "sender": "agent_6",
+      "text": "𘃏𗫭 𘔕 𘇪𗖭 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𗠌 𗾮 𗃠𗮂",
+      "english": null
+    },
+    {
+      "id": 11,
+      "sender": "agent_1",
+      "text": "𗮻 agent_6 𘇗𗖀 𘔕 𗃏𗻀 𗾮 𘓵 𗚦 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𘃒 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𘙢𗺜 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 12,
+      "sender": "agent_3",
+      "text": "𗓩 𘓵 𘞢𗅎 𗕐 agent_6 𗾮 𘓵 𗹔𗄤 𗠌𗑟 𗠌 𗠌 𘔕 𗃆𗐔 𗕐 𘓵 𗮍𗧧 𗕩 𘓵 𗶎𗺌 𗖎𗴃 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 13,
+      "sender": "agent_0",
+      "text": "𘓵 𗈨𗣮 𗕐 𘓵 𗮍𗧧 𗕩 𘓵 𗶎𗺌 𗓘𗳋 𗠌 𗠌 𗾮 𗍥𗵄 𗠌 𘔕 𗮻 agent_6 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 14,
+      "sender": "agent_2",
+      "text": "𘁹𘈪 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𗶎𗺌 𗃠𗮂 𗠌 𗠌 𗾮 𗰩𗬹 𘔕 𗓩 𘓵 𗗑𗴃 𗕐 agent_6 𗾮 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𘔕 𗞎𘎹 𗮻 agent_3 𘔕 𗔨 𘓵 𗕃𗟮 𗕐 𘓵 𘉡𘊷 𗶎𗺌 𗶎𘁡 𗠌 𗾮 𗚦 𗠌",
+      "english": null
+    },
+    {
+      "id": 15,
+      "sender": "agent_7",
+      "text": "𗮻 agent_6 𘇗𗖀 𘔕 𘓵 𗈨𗣮 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗃠𗮂 𗠌 𗠌 𗾮 𗰩𗬹 𗠌",
+      "english": null
+    },
+    {
+      "id": 16,
+      "sender": "agent_5",
+      "text": "𗓩 𘓵 𘞢𗅎 𗕐 agent_6 𗾮 𘓵 𗹔𗄤 𗠌𗑟 𘍝𗔇 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 17,
+      "sender": "agent_4",
+      "text": "𗮻 agent_6 𘇗𗖀 𘔕 𗟻𗳛 𗕐 𘓵 𗖎𘁡 𗠮𗨟 𗕩 agent_6 𗠌",
+      "english": null
+    },
+    {
+      "id": 18,
+      "sender": "agent_6",
+      "text": "𘃏𗫭 𘔕 𘇪𗖭 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𘃒 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𘙢𗺜 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𗠌 𗾮 𗃠𗮂 𘔕 𗐖𗢁 𘔕 𗨰𘀢 𗕐 agent_6 𗾮 𘓵 𘑮𗃀 𘍝𗼡 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 19,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":0}",
+      "english": null
+    },
+    {
+      "id": 20,
+      "sender": "agent_3",
+      "text": "𘖇𗱖 𗮻 agent_2 𗾮 𘓵 𘉡𘊷 𗕩 𘓵 𗶎𗺌 𗶎𘁡 𗠌 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𘗖𗖧 𗾮 𗹂𘜩 𗠌 𗠌 𗠌 𗠌 𘔕 𘍝𗼡 𗕐 𘓵 𘑮𗃀 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌 𘔕 𗐖𗢁",
+      "english": null
+    },
+    {
+      "id": 21,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":1}",
+      "english": null
+    },
+    {
+      "id": 22,
+      "sender": "agent_1",
+      "text": "𘓵 𘇪𗖭 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𗶎𗺌 𗖎𗴃 𗠌 𗠌 𗾮 𗃠𗮂 𗠌 𘔕 𗐖𗢁 𘓵 𗞎𘂷 𗾮 𘙢𗅎 𗫊 𘓵 𘑮𗃀 𘍝𗼡 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 23,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":2}",
+      "english": null
+    },
+    {
+      "id": 24,
+      "sender": "agent_0",
+      "text": "𘉡𗄤 𘔕 𘓵 𗈨𗣮 𗕐 𘓵 𗮍𗧧 𗕩 𘓵 𗶎𗺌 𗖎𗴃 𗠌 𗠌 𗾮 𗃠𗮂 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𗞎𘂷 𗾮 𘙢𗅎 𗫊 𘓵 𘍝𗼡 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 25,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":3}",
+      "english": null
+    },
+    {
+      "id": 26,
+      "sender": "agent_7",
+      "text": "𘓵 𘇪𗖭 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𗶎𗺌 𗖎𗴃 𗠌 𗠌 𗾮 𗃠𗮂 𗠌 𘔕 𘍝𗼡 𗾮 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𘔕 𗐖𗢁",
+      "english": null
+    },
+    {
+      "id": 27,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":4}",
+      "english": null
+    },
+    {
+      "id": 28,
+      "sender": "agent_5",
+      "text": "𗚦𗶈 𗾮 𘓵 𗐖𘊷 𗕩 𘙢𗅎 𘍝𗔇 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𘍝𗼡 𗠌 𘔕 𗐖𗢁",
+      "english": null
+    },
+    {
+      "id": 29,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":5}",
+      "english": null
+    },
+    {
+      "id": 30,
+      "sender": "agent_2",
+      "text": "𗢽𗲓 𘓵 𘁹𘈪 𗕐 𘓵 𗐖𘊷 𗕩 𘙢𗅎 𗠌 𗾮 𘓵 𘑮𗃀 𘍝𗼡 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌 𗠌 𘔕 𗐖𗢁",
+      "english": null
+    },
+    {
+      "id": 31,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":6}",
+      "english": null
+    },
+    {
+      "id": 32,
+      "sender": "agent_4",
+      "text": "𘀆𗀏 𗕐 𘓵 𗐖𘊷 𗕩 𘙢𗅎 𗠌 𗾮 𘓵 𘑮𗃀 𘍝𗼡 𘁾 𘓵 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 𗠌 𗠌 𘔕 𗐖𗢁",
+      "english": null
+    },
+    {
+      "id": 33,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":7}",
+      "english": null
+    },
+    {
+      "id": 34,
+      "sender": "agent_0",
+      "text": "𘓵 𗞎𘂷 𗕐 𘙢𗅎 𗠮𗨟 𗠌 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗨰𘀢 𗾮 𘓵 𗐖𘊷 𗕩 𘙢𗅎 𗠌 𗠌 𗠌 𘔕 𘗥 𘓵 𗮆𗭒 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𘔕 𘃏𗫭 𘓵 𘘠𘗌 𗕐 𗮆𗭒 𗾮 𘓵 𗹂𘜩 𗋮𘓘 𗓘𗳋 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 35,
+      "sender": "agent_6",
+      "text": "𗊷𘊷 𘔕 𗞎𘂷 𗕐 𘙢𗅎 𘔕 𘃏𗫭 𘔕 𘗥 𘓵 𗽚𗎯 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𘋜𗀏 𗾮 𘓵 𗜙𗔑 𗕩 𘂕𗳛 𗠌 𗠌 𗠌 𘔕 𘗥 𘓵 𘇪𗫊 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗖎𘁡 𗠌 𗠌 𘔕 𗮍𗁄 𗕐 𗽚𗎯 𗾮 𘓵 𗖎𘁡 𗾮 𘇪𗫊 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 36,
+      "sender": "agent_7",
+      "text": "𘓵 𗞎𘂷 𗕐 𘙢𗅎 𗠮𗨟 𗠌 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗨰𘀢 𗾮 𘓵 𗐖𘊷 𗕩 𘙢𗅎 𗠌 𗠌 𗠌 𘔕 𘗥 𘓵 𗮆𗭒 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𘔕 𘗥 𘓵 𘚙𗟮 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𘔕 𘃏𗫭 𘓵 𗮍𗁄 𗕐 𘚙𗟮 𗾮 𘓵 𗖎𘁡 𗾮 𗮆𗭒 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 37,
+      "sender": "agent_3",
+      "text": "𗠮𗨟 𗞎𘂷 𗕐 𘙢𗅎 𘔕 𗓩 𘓵 𗇡 𘓵 𗗑𗴃 𗾮 𘓵 𗨰𘀢 𗾮 𗐖𘊷 𗕩 𘙢𗅎 𗠌 𗠌 𗠌 𘔕 𘃏𗫭 𘔕 𗽚𘜢 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗃠𗮂 𘔕 𘇗𗖀 𘔕 𗃏𗻀 𗾮 𘓵 𘞀𗊧 𗕩 𘓵 𗑞𘋯 𗕩 𘓵 𗜙𗔑 𗹂𘜩 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 38,
+      "sender": "agent_1",
+      "text": "𗞎𘂷 𗕐 𘙢𗅎 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗨰𘀢 𗾮 𘓵 𘔥𗭒 𗕩 𘙢𗅎 𗠌 𗠌 𗠌 𘔕 𘃏𗫭 𘗥 𘓵 𗮆𗭒 𗠌 𘓵 𗑞𘋯 𗟻𗐔 𗕩 𗜙𗔑 𗠌 𘔕 𗾮𗫊 𗕐 𗮆𗭒 𗾮 𘓵 𗹂𘜩 𗋮𘓘 𗖎𗴃 𗠌 𘔕 𘇪𗖭 𗕐 𘓵 𗕃𗝀 𗹂𘜩 𗇡𗇮 𗕩 𗮆𗭒 𗠌 𗾮 𗬃𗺌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 39,
+      "sender": "agent_5",
+      "text": "𘁰𗄅 𗞎𘂷 𗕐 𘙢𗅎 𘔕 𘃏𗫭 𘔕 𗤧𘇪 𗕐 𘓵 𗕃𗝀 𗕩 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𗾮 𘁹𘈪 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 40,
+      "sender": "agent_2",
+      "text": "𘓵 𗞎𘂷 𗕐 𘙢𗅎 𗠮𗨟 𗠌 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗨰𘀢 𗾮 𘔥𗭒 𗮻 𘙢𗅎 𗠌 𗠌 𘔕 𘗥 𘓵 𗮆𗭒 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𘔕 𘗥 𘓵 𘚙𗟮 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𘔕 𘃏𗫭 𘓵 𗮍𗁄 𗕐 𘚙𗟮 𗾮 𘓵 𗖎𘁡 𗾮 𗮆𗭒 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 41,
+      "sender": "agent_4",
+      "text": "𗠮𗨟 𗞎𘂷 𗕐 𘙢𗅎 𘔕 𘃏𗫭 𘗥 𘓵 𘔥𘂽 𗠌 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗖎𘁡 𗠌 𗠌 𘔕 𘇪𗖭 𗕐 𘓵 𗕃𗝀 𗹂𘜩 𗕩 𘔥𘂽 𗠌 𗾮 𗖎𗴃 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 42,
+      "sender": "agent_0",
+      "text": "𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𘜺𘋯 𘔕 𘃏𗫭 𘓵 𘘠𘗌 𗕐 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗾮 𘓵 𗹂𘜩 𗋮𘓘 𗓘𗳋 𗠌 𗠌 𘔕 𗃏𗻀 𗾮 𘓵 𗕃𗝀 𗹂𘜩 𗕩 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗚦 𗠌",
+      "english": null
+    },
+    {
+      "id": 43,
+      "sender": "agent_7",
+      "text": "𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_7 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 44,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":8}",
+      "english": null
+    },
+    {
+      "id": 45,
+      "sender": "agent_5",
+      "text": "𗢽𗲓 𘓵 𘍝𗼡 𗾮 𘁾 𘓵 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗇑 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗇑 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗇑 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 46,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":9}",
+      "english": null
+    },
+    {
+      "id": 47,
+      "sender": "agent_6",
+      "text": "𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_6 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𘔕 𗮻 agent_4 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 48,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":10}",
+      "english": null
+    },
+    {
+      "id": 49,
+      "sender": "agent_1",
+      "text": "𗐖𗢁 𘓵 𘔬𘏱 𗕐 agent_1 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𘜺𘋯 𘔕 𘍝𗼡 𗕐 𘓵 𘑮𗃀 𘁾 𘓵 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗇑 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗇑 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗖎𘁡 𗠌 𗇑 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 50,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":11}",
+      "english": null
+    },
+    {
+      "id": 51,
+      "sender": "agent_3",
+      "text": "𘞀𘂷 𘔕 𘍝𗼡 𗾮 𘁾 𘓵 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗇑 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗇑 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗇑 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𗸼𗧞 𗕐 agent_3 𗾮 𗗡𘇽",
+      "english": null
+    },
+    {
+      "id": 52,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":12}",
+      "english": null
+    },
+    {
+      "id": 53,
+      "sender": "agent_4",
+      "text": "𘞀𘂷 𘔕 𘍝𗼡 𗾮 𘁾 𘓵 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗇑 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗇑 𘔥𘂽 𗇑 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘓵 𘔬𘏱 𗕐 agent_4 𗾮 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 54,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":13}",
+      "english": null
+    },
+    {
+      "id": 55,
+      "sender": "agent_2",
+      "text": "𘞀𘂷 𘔕 𗢽𗲓 𘓵 𘍝𗼡 𗾮 𘓵 𘑮𗃀 𘁾 𘓵 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗇑 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗇑 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗇑 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_2 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 56,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":14}",
+      "english": null
+    },
+    {
+      "id": 57,
+      "sender": "agent_0",
+      "text": "𗊷𘊷 𘔕 𘓵 𗖎𘁡 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗠌 𘔕 𗓩 𘓵 𗃠𘁡 𗕐 𘃏𘆥 𗠌",
+      "english": null
+    },
+    {
+      "id": 58,
+      "sender": "agent_1",
+      "text": "𗜙𗧺 𘔕 𗸼𗧞 𗕐 agent_1 𗾮 𗗡𘇽 𗠮𗨟 𗟻𗳛 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗗑𗴃 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𗟻𗐔 𗕐 agent_1 𗾮 𗮔𗻀 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 59,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":15}",
+      "english": null
+    },
+    {
+      "id": 60,
+      "sender": "agent_5",
+      "text": "𗜙𗧺 𘔕 𘓵 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗠮𗨟 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𘔕 𗓩 𘓵 𗃠𘁡 𗕐 𘃏𘆥 𗠌",
+      "english": null
+    },
+    {
+      "id": 61,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":16}",
+      "english": null
+    },
+    {
+      "id": 62,
+      "sender": "agent_6",
+      "text": "𗜙𗧺 𘔕 𘓵 𘔬𘏱 𗕐 agent_6 𗾮 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗠮𗨟 𗾮 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_6 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌",
+      "english": null
+    },
+    {
+      "id": 63,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":17}",
+      "english": null
+    },
+    {
+      "id": 64,
+      "sender": "agent_3",
+      "text": "𘃏𗫭 𘔕 𗽚𘜢 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗓘𗳋 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗗑𗴃 𗾮 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_3 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌",
+      "english": null
+    },
+    {
+      "id": 65,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":18}",
+      "english": null
+    },
+    {
+      "id": 66,
+      "sender": "agent_4",
+      "text": "𗑞𗔑 𘔕 𗠮𗨟 𗟻𗳛 𗕐 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗕩 agent_4 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗕐 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗕩 agent_0 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_4 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 67,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":19}",
+      "english": null
+    },
+    {
+      "id": 68,
+      "sender": "agent_7",
+      "text": "𘃏𗫭 𘓵 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗕐 agent_7 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_7 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 69,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":20}",
+      "english": null
+    },
+    {
+      "id": 70,
+      "sender": "agent_2",
+      "text": "𘃏𗫭 𘓵 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗕩 agent_2 𗠌 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗕐 𘓵 𗑞𘋯 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠮𗨟 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_2 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌",
+      "english": null
+    },
+    {
+      "id": 71,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":21}",
+      "english": null
+    },
+    {
+      "id": 72,
+      "sender": "agent_0",
+      "text": "𗊷𘊷 𘔕 𘓵 𗖎𘁡 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗠌 𘔕 𘓵 𗈨𗣮 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗾣𗋽 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗠌 𘔕 𗓩 𘓵 𗃠𘁡 𗕐 𘃏𘆥 𗠌",
+      "english": null
+    },
+    {
+      "id": 73,
+      "sender": "agent_1",
+      "text": "𗜙𗧺 𘔕 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗕩 agent_1 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_1 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌",
+      "english": null
+    },
+    {
+      "id": 74,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":22}",
+      "english": null
+    },
+    {
+      "id": 75,
+      "sender": "agent_3",
+      "text": "𘃏𗫭 𘔕 𗽚𘜢 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗾣𗋽 𘔕 𗖎𘁡 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_3 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 76,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":23}",
+      "english": null
+    },
+    {
+      "id": 77,
+      "sender": "agent_5",
+      "text": "𗜙𗧺 𘔕 𘓵 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗠮𗨟 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 78,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":24}",
+      "english": null
+    },
+    {
+      "id": 79,
+      "sender": "agent_6",
+      "text": "𗜙𗧺 𘔕 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗕩 agent_6 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_6 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗖎𘁡 𗠌 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 80,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":25}",
+      "english": null
+    },
+    {
+      "id": 81,
+      "sender": "agent_4",
+      "text": "𘃏𗫭 𘔕 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𘔬𘏱 𗕐 agent_4 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_4 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌",
+      "english": null
+    },
+    {
+      "id": 82,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":26}",
+      "english": null
+    },
+    {
+      "id": 83,
+      "sender": "agent_2",
+      "text": "𘃏𗫭 𘓵 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗕩 agent_2 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_2 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 84,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":27}",
+      "english": null
+    },
+    {
+      "id": 85,
+      "sender": "agent_7",
+      "text": "𘃏𗫭 𘓵 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗕐 agent_7 𗠌 𗠌 𗠌 𘔕 𘍝 𘓵 𗖎𘁡 𗾮 𘓵 𗑞𘋯 𗟻𗐔 𗾮 𗮔𗻀 𗠌 𗠮𗨟 𗠌 𘔕 𗐖𗢁 𘓵 𘔬𘏱 𗕐 agent_7 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 86,
+      "sender": "task",
+      "text": "{\"stage\":1,\"invalid_attempts\":28}",
+      "english": null
+    },
+    {
+      "id": 87,
+      "sender": "agent_0",
+      "text": "𗊷𘊷 𘔕 𘓵 𗖎𘁡 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗠌 𘔕 𘓵 𗈨𗣮 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗓘𗳋 𗠌 𘔕 𗐖𗢁 𘔕 𘓵 𘔬𘏱 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗠌 𘔕 𗓩 𘓵 𗃠𘁡 𗕐 𘃏𘆥 𗠌",
+      "english": null
+    },
+    {
+      "id": 88,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":28}",
+      "english": null
+    },
+    {
+      "id": 89,
+      "sender": "agent_3",
+      "text": "𘃏𗫭 𘔕 𗽚𘜢 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗓘𗳋 𘔕 𗖎𘁡 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_3 𗾮 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 90,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":29}",
+      "english": null
+    },
+    {
+      "id": 91,
+      "sender": "agent_6",
+      "text": "𗜙𗧺 𘔕 𘍝 𘓵 𗖎𘁡 𗠮𗨟 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_6 𗾮 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 92,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":30}",
+      "english": null
+    },
+    {
+      "id": 93,
+      "sender": "agent_1",
+      "text": "𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𘔬𘏱 𗕐 agent_1 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_1 𗾮 𘓵 𗑞𘋯 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 94,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":31}",
+      "english": null
+    },
+    {
+      "id": 95,
+      "sender": "agent_5",
+      "text": "𗜙𗧺 𘔕 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘟬𗻠 𗾮 𗹔𗄤 𗠌 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_5 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𘔕 𘜺𘋯",
+      "english": null
+    },
+    {
+      "id": 96,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":32}",
+      "english": null
+    },
+    {
+      "id": 97,
+      "sender": "agent_4",
+      "text": "𘃏𗫭 𘔕 𗟻𗳛 𗕐 𘓵 𘖕𗲓 𗕩 𘓵 𘔬𘏱 𗕐 agent_4 𗾮 𘔥𘂽 𗠌 𗠌 𘔕 𗐖𗢁 𘔕 𘔬𘏱 𗕐 agent_4 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 98,
+      "sender": "task",
+      "text": "{\"stage\":2,\"invalid_attempts\":33}",
+      "english": null
+    },
+    {
+      "id": 99,
+      "sender": "agent_7",
+      "text": "𘃏𗫭 𘔕 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗃠𗮂 𗕩 𘂕𗳛 𗠌 𗾮 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𗍥𗮂 𗾮 𘓵 𘑮𗛊 𗟕𗖧 𗠌 𗠌 𗠌 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 100,
+      "sender": "agent_2",
+      "text": "𘃏𗫭 𘗥 𘓵 𗾒𗣮 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𗗡𘇽 𗮦𗃼 𗠌 𗠌 𗠌 𘔕 𗾮𗫊 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𗾒𗣮 𗠌 𗾮 𗽚𘜢 𘔕 𘁹𘈪 𗕐 𘓵 𘔥𗭒 𗕩 𗾒𗣮 𗎯 𘂕𗳛 𗠌 𗾮 𘟬𘚒 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 101,
+      "sender": "agent_0",
+      "text": "𗊷𘊷 𘔕 𘓵 𗖎𘁡 𗕐 agent_0 𗾮 𘓵 𗑞𘋯 𘃸 𘓵 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌 𗠌 𗠌 𗠌 𘔕 𘗥 𘓵 𗢔𗖧 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𗢽𗊧 𘃸𘓘 𘃸 𘓵 𘑮𘁓 𗾮 𘐖𗝡 𗠌 𗠌 𗠌 𗠌 𘔕 𘃏𗫭 𘓵 𗾮𗫊 𗕐 𘓵 𘔥𗭒 𗕩 𗢔𗖧 𗠌 𗾮 𗓘𗳋 𗠌 𘔕 𘓵 𗈨𗣮 𗕐 𘓵 𘔥𗭒 𗔨𗻃 𗕩 𗢔𗖧 𗠌 𗾮 𘟬𘚒 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 102,
+      "sender": "agent_3",
+      "text": "𘃏𗫭 𘔕 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗶎𘁡 𗕩 𘂕𗳛 𗠌 𗾮 𘓵 𘉡𘊷 𗮦𗃼 𗕩 𗗡𘇽 𗠌 𘔕 𗽚𘜢 𗕐 𘓵 𘞃𗟮 𗕩 𗹂𘜩 𘁰𗄅 𗠌 𗾮 𗬃𗺌 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗗑𗴃 𗾮 𘓵 𗑞𘋯 𗕩 𗜙𗔑 𗹂𘜩 𗠌 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 103,
+      "sender": "agent_5",
+      "text": "𘃏𗫭 𘔕 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗓘𗳋 𗕩 𘂕𗳛 𗠌 𗾮 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𘃒 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𘙢𗺜 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 104,
+      "sender": "agent_1",
+      "text": "𘃏𗫭 𘔕 𗍥𗮂 𗕐 𘓵 𘜺𗃃 𗖎𗴃 𗕩 𘂕𗳛 𗠌 𗾮 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𗢽𗊧 𘃸𘓘 𘃸 𘓵 𘑮𘁓 𗾮 𘐖𗝡 𗠌 𗠌 𗠌 𗠌 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗗑𗴃 𗾮 𘓵 𗑞𘋯 𗕩 𗜙𗔑 𗹂𘜩 𗠌 𗠌 𗠌 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 105,
+      "sender": "agent_6",
+      "text": "𘃏𗫭 𘔕 𗾮𗫊 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𘃸 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𗮔𗅎 𗋮𘓘 𗾣𗋽 𗠌 𘃒 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 𘙢𗺜 𗋮𘓘 𗾣𗋽 𗠌 𗠌 𗠌 𗠌 𗾮 𗖎𗴃 𘔕 𘇪𗖭 𗕐 𘓵 𘔥𗭒 𘁰𗄅 𗕩 𗋮 𗠌 𗾮 𗍥𗵄 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 106,
+      "sender": "agent_7",
+      "text": "𘓵 𗈨𗣮 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𗕩 𘓵 𘜺𗃃 𗃠𗮂 𗕩 𘂕𗳛 𗠌 𗠌 𗠌 𗾮 𗀏𘋜 𗠌 𘔕 𗃏𗻀 𗾮 𘓵 𗚦 𘞃𗟮 𘃸 𘓵 𗾮𗫊 𗾮 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𘓵 𘉡𘊷 𗕩 𘓵 𘜺𗃃 𗃠𗮂 𗕩 𘂕𗳛 𗠌 𗠌 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 107,
+      "sender": "agent_4",
+      "text": "𘃏𗫭 𘔕 𘗥 𘓵 𗍃𗯧 𗠌 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𗍥𗮂 𗾮 𘓵 𘑮𗛊 𗟕𗖧 𗠌 𗠌 𗠌 𗠌 𘔕 𗾮𗫊 𗕐 𘓵 𘔥𗭒 𗇡𗇮 𗕩 𗍃𗯧 𗠌 𗾮 𗃠𗮂 𘔕 𘀆𗀏 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗃠𗮂 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𗗑𗻠 𘔕 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 108,
+      "sender": "agent_0",
+      "text": "⊘",
+      "english": null
+    },
+    {
+      "id": 109,
+      "sender": "agent_2",
+      "text": "𗮻 agent_1 𘇗𗖀 𘔕 𗮻 agent_4 𘀼𗮧 𘔕 𗮻 agent_6 𘇗𗖀 𘔕 𗓩 𘓵 𗶎𘜩 𗾮 𘓵 𗗑𗴃 𗾮 𘓵 𗑞𘋯 𗕩 𗜙𗔑 𗹂𘜩 𗠌 𗠌 𗠌",
+      "english": null
+    },
+    {
+      "id": 110,
+      "sender": "agent_3",
+      "text": "𗽚𘜢 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗶎𘁡 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𘔕 𗽚𘜢 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗓘𗳋 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𗍥𗵄 𘔕 𗽚𘜢 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗖎𗴃 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𘔕 𗮻 agent_4 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 111,
+      "sender": "agent_5",
+      "text": "𗤧𘇪 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗶎𘁡 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𘔕 𗤧𘇪 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗓘𗳋 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𗍥𗵄 𘔕 𗤧𘇪 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗖎𗴃 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𘔕 𗮻 agent_4 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 112,
+      "sender": "agent_1",
+      "text": "𘓵 𘋜𗹛 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗶎𘁡 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𗠌 𘔕 𘓵 𘋜𗹛 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗓘𗳋 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𗍥𗵄 𗠌 𘔕 𘓵 𘋜𗹛 𗕐 𘓵 𘔥𗭒 𗕩 𘓵 𘜺𗃃 𗖎𗴃 𗕩 𘂕𗳛 𗠌 𗠌 𗾮 𘟬𘚒 𗠌 𘔕 𗮻 agent_4 𘇗𗖀",
+      "english": null
+    },
+    {
+      "id": 113,
+      "sender": "agent_7",
+      "text": "𘞀𘂷 𘔕 𗐖𗢁 𘔕 𗨰𘀢 𗕐 agent_7 𗾮 𘓵 𘑮𗃀 𘍝𗼡 𘁾 𘓵 𘟬𘚒 𗇑 𗍥𗵄 𗇑 𘟬𘚒 𗇑 𗗑𗻠 𗠌 𗠌 𗮻 𘂕𗳛",
+      "english": null
+    },
+    {
+      "id": 114,
+      "sender": "task",
+      "text": "{\"stage\":3,\"invalid_attempts\":33}",
+      "english": null
+    }
+  ]
+}
