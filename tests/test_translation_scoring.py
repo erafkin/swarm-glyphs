@@ -99,6 +99,26 @@ class PublicReferenceScoringTests(unittest.TestCase):
         self.decoded.write_text("2. TRANSLATION\n[1] H: structural frame\n[2] K: another frame\n")
         self.assertEqual(parse_translation(self.decoded)[1], "H: structural frame")
 
+    def test_sender_labeled_dash_numbering(self):
+        self.decoded.write_text(
+            "2. TRANSLATION\n**1 — task:** public status\n"
+            "**2 — agent_7:** partial interpretation\ncontinued here\n"
+            "3 – agent_0: another message\n4 - agent_1: final message\n"
+            "3. THE TASK\n**2 — agent_7:** later citation\n")
+        self.assertEqual(parse_translation(self.decoded, {1, 2, 3, 4}, require_section=True), {
+            1: "public status", 2: "partial interpretation continued here",
+            3: "another message", 4: "final message"})
+        self.assertEqual(parse_translation(self.decoded, strip_prefixes=False)[2],
+                         "agent_7:** partial interpretation\ncontinued here")
+        for content in (
+            "2. TRANSLATION\n**1 — task:** first\n[1] duplicate",
+            "2. TRANSLATION\n**2 — agent_7:** unexpected",
+        ):
+            with self.subTest(content=content):
+                self.decoded.write_text(content)
+                with self.assertRaises(ValueError):
+                    parse_translation(self.decoded, {1}, require_section=True)
+
     def test_reject_duplicate_out_of_range_and_missing_section(self):
         for content in ("2. TRANSLATION\n[1] a\n1. b", "2. TRANSLATION\n[2] b", "2. TRANSLATION\n[0] a"):
             with self.subTest(content=content):

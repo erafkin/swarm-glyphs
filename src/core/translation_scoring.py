@@ -173,11 +173,13 @@ def read_text(path: Path) -> str:
 _TRANSLATION_HEADING = re.compile(r"^\s*#{0,6}\s*2\.\s*TRANSLATION\b[^\n]*$", re.I | re.M)
 _LATER_HEADING = re.compile(r"^\s*#{0,6}\s*[34]\.\s*(?:THE TASK|EVIDENCE)\b[^\n]*$", re.I | re.M)
 _MESSAGE_LINE = re.compile(r"^\s*(?:\*\*)?(?:\[(\d+)\]|(\d+)[.)])\s*(.*)$")
+_LABELED_MESSAGE_LINE = re.compile(
+    r"^\s*(?:\*\*)?(\d+)\s+[—–-]\s*((?:task|agent_\d+):(?:\*\*)?\s*)(.*)$")
 
 
 def parse_translation(path: Path, expected_ids: set[int] | None = None,
                       *, require_section: bool = False, strip_prefixes: bool = True) -> dict[int, str]:
-    """Extract original message IDs, supporting the archived decoders' three list styles.
+    """Extract original message IDs from numbered lists and sender-labeled entries.
 
     Section headings, not citations elsewhere in the reconstruction, establish the
     boundary. Bare ``[n]`` files remain supported for the original self-report API.
@@ -202,14 +204,17 @@ def parse_translation(path: Path, expected_ids: set[int] | None = None,
     current = None
     for line in section.splitlines():
         match = _MESSAGE_LINE.match(line)
-        if match:
-            current = int(match.group(1) or match.group(2))
+        labeled = _LABELED_MESSAGE_LINE.match(line) if match is None else None
+        if match or labeled:
+            current = int(match.group(1) or match.group(2)) if match else int(labeled.group(1))
             if current < 1 or (expected_ids is not None and current not in expected_ids):
                 raise ValueError(f"Unexpected translation message ID {current} in {path}")
             if current in blocks:
                 raise ValueError(f"Duplicate translation message ID {current} in {path}")
-            body = match.group(3).strip()
+            body = match.group(3).strip() if match else (labeled.group(2) + labeled.group(3)).strip()
             if strip_prefixes:
+                if labeled:
+                    body = labeled.group(3).strip()
                 # Remove confidence labels only when the decoder explicitly defines
                 # them as confidence. H/J/K elsewhere are unknown language frames.
                 if confidence_prefixes:

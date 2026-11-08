@@ -1,0 +1,328 @@
+## 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered original file. Confidence labels concern the proposed decoding, not merely whether a token occurs. Much of the content vocabulary remains unknown. The language appears to have an explicitly role-marked proposition notation, nesting, questions, requests and negation. It is not convincingly a substitution cipher for ordinary English sentences.
+
+### Grammar
+
+- **High:** Spaces separate tokens. Most tokens have two glyphs; repeated first glyphs form conspicuous families. A token is not generally one English letter.
+- **High:** `𘅌𗐪` opens a proposition/frame; `𘅌𘗣` closes it.
+- **High:** `𘅌𘝚` introduces its predicate/relation; `𘅌𗎿` introduces argument 1; `𘅌𘊌` introduces argument 2. Calling these SUBJECT and OBJECT is possible but less safe than numbered roles.
+- **High:** Roles need not occur in one fixed order: [2] puts argument 1 before the predicate; [28] also rearranges roles. Frames can be nested inside arguments, as in [19], [21], [30], [34]. Arguments may contain several unseparated lexical tokens.
+- **Medium:** `𘅌𗸽` introduces an adjunct/additional role, perhaps WITH/AT/IN. Its exact meaning is unknown.
+- **Medium:** `𘅌𗌸` introduces another additional role. Exact meaning unknown; do not equate it with the preceding marker.
+- **Medium:** `𘅌𗜑` is a complement/quotation/link marker, often before a nested proposition; approximately THAT. Bare `𗜑` in [8] and `𗌿𗜑` in [9] may be malformed versions, but that is not established.
+- **Medium-high:** `𘅌𗵫` marks a QUESTION. The frequent unknown/WH token and apparent answer exchanges favor this over the initially considered interpretation 'reported/qualified statement'.
+- **Medium-high:** `𘅌𗽕` marks a REQUEST/imperative.
+- **Medium:** `𘅌𘔠` marks NOT/negation. This especially fits [65], [76], [88], where it prefixes a state clause between preparation and submission. An action/declaration interpretation was considered but fits these contrasts less well.
+- **Medium:** `𘅌𘋟` introduces TO/addressee, commonly an agent name in questions. Earlier SOURCE attribution is an alternative, but the question–answer pattern in [103]–[108] favors TO.
+- **Medium-low:** `𘅌𗤴` introduces FROM/source; observed with agent_3 in [48].
+- **Medium:** `𗿃𗨥` is WHAT/WH/unknown placeholder.
+- **Low:** `𗿃𘊫` is self/I/we or another generic actor; it often occupies the same role as explicit agent names in attempted operations.
+- **Low:** `𘀦𗋼` is an acknowledgement or politeness expression; `𘋉𗤄` is a connective/repetition/correction expression; `𗐪𗿋` is a recurring sentence-final/discourse expression. Exact English meanings unknown.
+
+### Lexical families and partial vocabulary
+
+- **High observation, low semantic interpretation:** First-glyph families include `𘅌`, `𗌿`, `𗡒`, `𘆣`, `𗿃`, `𘔠`. The first is grammatical in the main register. The others may be lexical classes or encoding categories, but a rigid noun/verb/adjective assignment is NOT recovered: tokens from several families occur as predicates and inside multi-token arguments.
+- **Medium:** `𗌿𗄼` = READ/OBSERVE/SAY, a relation between a clue/item and its content. We use “says/reads” below without claiming an exact English verb.
+- **Medium:** `𗡒𘜇` = VALUE/CODE/IS, relating an item to a value. Exact sense unresolved.
+- **Medium:** `𗡒𗏻` = cabinet, based on its persistent early/final clue context.
+- **Medium:** `𘆣𘎛` = clue/note/card, followed by a numeral-like identifier.
+- **Medium-low:** `𗡒𘅊` = switch or a panel element. Numeral-plus-this-token expressions support countable items; the task briefing contributes to the switch gloss.
+- **Low:** `𗡒𗪺` = code/digit-related term; `𗡒𗸪` = digit/value-related term. Neither is securely translated.
+- **Medium functional, low exact wording:** `𗌿𗯧` = SUBMIT/ENTER/EXECUTE; it appears in attempted operations and just before the final success. `𗌿𗗅` = TRY/OPERATE; `𗌿𗛢` = PREPARE/SET; `𗌿𗃚` = STATUS/RESULT; `𗌿𗇴` = STATE/ACTIVE. These English labels are functional guesses, not recovered dictionary entries.
+- **Medium:** `𘆣𗵵` is a binary rule/connective, plausibly IF/THEN or implication. [30] and [34] put whole propositions in both argument positions; [27] instead has an unframed phrase as its first argument.
+- **Low:** `𗌿𗒏` is an answer/provide/report operation in requests to agents; `𗌿𗻲` another requested operation, meaning unknown.
+- **Unknown:** Other lexical predicates and arguments are retained as glyph literals below rather than assigned invented English meanings.
+
+### Numeral-like tokens
+
+- **Medium:** `𘔠`-initial tokens constitute a numeral-like family.
+- **Medium, provisional:** `𘔠𘎌` = 1; `𘔠𗌈` = 2; `𘔠𗊑` = 3; `𘔠𗵵` = 4. Evidence is their use as four clue identifiers and in count-like expressions, not a recovered numerical key.
+- **Unknown exact values:** `𘔠𘉝`, `𘔠𗂱`, `𘔠𗏔`, `𘔠𗢬`, `𘔠𗟎`, `𘔠𗡒`. They could complete a decimal set, but their individual values are not grounded. The translations name them rather than invent digits.
+
+### Possible alternate register
+
+- **Medium:** The tails of [10], [15], [52] may use a second frame encoding: `𗂄𘍍` ≈ predicate marker; `𗑴𗍽` ≈ argument-2 marker; `𘎌𗯘` ≈ end marker; `𗷤𘉮` ≈ argument-1 marker in [10]/[52]. The opening `𗥐𘏉 𗹕𗡉` is unresolved.
+- **Medium evidence:** The tail of [52], parsed this way, repeats exactly the predicate and arguments of an ordinary-register clause in [41], [42], [54].
+- **Low:** [15]'s `𗽕𘒄` and `𗟆𘉝` may be alternate opening/argument markers. Exact meanings unknown.
+
+### Variants and errors
+
+- **High observation, low explanation:** The cabinet-associated sequence contains `𗌿𘒄`, `𗡒𘒄`, or bare `𘒄` in different messages; [99] has bare `𗉜` where others have `𘆣𗉜`. These may be typing/encoding mistakes, category changes, or intentional distinctions. We preserve them. Do not silently normalize them or infer perfect agent competence.
+- **High:** Literal agent names survive inside messages. No discarded `⊘` messages appear in this log.
+
+## 2. TRANSLATION
+
+### Reading conventions for the partial translation
+
+The following is a structural English translation wherever lexical recovery fails. **Unknown** means genuinely undecoded, not a hidden confident English gloss. Predicate notation preserves which content belongs to which role, rather than manufacturing fluent sentences. `P(x,y)` means “the relation P holds of first argument x and second argument y”; `extra` and `adjunct` name two distinct unresolved roles. Omitted arguments remain omitted.
+
+For compactness the following exact literals name **unknown expressions**, NOT decoded codes or settings:
+
+- **A** = `𗌿𗲅 𗌿𗳃 𗡒𗪺`.
+- **B** = `𗌿𗲅 𗡒𗚽`.
+- **C** = `𗌿𗲅 𗌿𗩠 𗡒𗎿`.
+- **K** = `𗡒𗸽 𘆣𘋉 𗌿𘒄 𘆣𘂮`, a cabinet-associated expression, possibly a code or description. **K-noun** replaces its third token with `𗡒𘒄`; **K-bare** replaces it with bare `𘒄`. **K-short** is just `𗡒𗸽 𘆣𘋉`.
+- **F** = `𗡒𗽕 𘆣𗚽 𗡒𘉫`, the final submitted expression, meaning unknown.
+- **D** = `𗡒𘁜 𗡒𗄎 𗡒𗪺 𗌿𗐪`, unknown early clue expression.
+- **E(n)** = `𗌿𘝚 𘆣𗉜 𘆣𗭯` followed by numeral n; a recurrent final-clue output, possibly a positional-code statement, exact meaning unknown.
+- **s** = `𗿃𘊫`, actor/self?; **u** = `𗿃𗇾`, unknown entity; **v** = `𗿃𗏶`, unknown entity; **t** = `𗿃𘅠`, unknown adjunct/status.
+- **N** = `𗡒𗎿`; **Y** = `𘆣𗉜`; **Z** = `𘆣𗜑`; all unknown words.
+- **n-a** = `𘔠𘉝`; **n-b** = `𘔠𗂱`; **n-c** = `𘔠𗏔`; **n-d** = `𘔠𗢬`; **n-e** = `𘔠𗟎`; **n-f** = `𘔠𗡒`; their numerical values are unknown.
+
+All “cabinet,” “clue,” “switch,” READ, VALUE, SUBMIT, PREPARE, TRY, STATUS, STATE, IF, REQUEST, QUESTION and NOT glosses retain the confidence qualifications in section 1. In particular the unknown literals A/B/C/K/F are not assumed to be numbers or switch configurations.
+
+[1] Public task feedback: stage 0, invalid attempts 0.
+
+[2] Says/reads(first argument: cabinet + `𗡒𗪺 𗌿𗐪`; second argument: `𗡒𗸪` + n-f). Unknown cabinet-related observation.
+
+[3] Clue 1 says/reads: cabinet + unknown `𗜑𘖽`.
+
+[4] VALUE(cabinet + K-short, 1).
+
+[5] Says/reads(cabinet clue 3, D). D is unknown.
+
+[6] VALUE(cabinet clue 4, `𗡒𗸽 𘆣𘋉 𘆣𘖾`; adjunct `𗡒𘉫`). Unknown value content.
+
+[7] An incompletely/malformedly nested frame: argument 1 cabinet; complement VALUE(argument 2 K-short; adjunct bare `𘒄 𘆣𘂮`). Then says/reads(argument 2 n-a; first argument omitted). Exact intended scope unknown.
+
+[8] VALUE(cabinet, bare `𗜑` plus nested relation `𘆣𘚑` whose second argument is n-b + `𗡒𘑾 𘆣𘀝`); then another second-argument marker introduces 3. Nesting/closure is irregular; full intended meaning unknown.
+
+[9] Unknown predicate `𗿃𘏛`(second argument u; extra role cabinet + `𗌿𗜑` plus nested VALUE(second argument `𗡒𗸽 𘆣𗽃 𘆣𘖾`)). Then clue 2 says/reads u. Extra closure present; intended first clause uncertain.
+
+[10] Unknown opening. Possible alternate-register clause with first argument agent_5; predicate unknown `𗟆𗘝`; second argument cabinet clue 1 + `𗌿𗦴 𘆣𘒳`. Exact English unknown.
+
+[11] Exact statement [3], then unknown expression `𘋉𗤄`, then exact statement [3] again.
+
+[12] REQUEST: unknown provide/report-like relation `𗌿𗒏`(agent_5, cabinet clue 1). Followed by unknown acknowledgement/politeness expression `𘀦𗋼`.
+
+[13] Unknown `𘀦𗋼`. QUESTION to agent_5: what is VALUE(cabinet clue 1)? QUESTION: what is VALUE(cabinet clue 2)?
+
+[14] QUESTION to agent_5: clue 1 says/reads WHAT + cabinet?
+
+[15] Says/reads(cabinet + K-noun, n-a). Then possible alternate-register clause: unknown predicate `𗌿𗣎`, first argument agent_5, second argument `𘀦𗋼`; opening/meaning unknown.
+
+[16] VALUE(u, 3). QUESTION to agent_5: what does clue 1 say/read?
+
+[17] NOT VALUE(cabinet clue 1, K-short; adjunct bare `𘒄 𘆣𘂮`). Then SUBMIT(s, unknown `𗿃𘝚`).
+
+[18] Public task feedback: stage 1, invalid attempts 0.
+
+[19] Unknown `𘋉𗤄`. Clue 1 says/reads: cabinet + complement proposition VALUE(second argument K-short; adjunct `𗌿𘒄 𘆣𘂮`). The outer content includes the nested proposition.
+
+[20] Public task feedback: stage 1, invalid attempts 1.
+
+[21] Clue 2 says/reads: cabinet + complement proposition `𘆣𘚑`(second argument n-b + `𗡒𘑾 𘆣𘀝`). QUESTION to agent_5: does clue 1 say/read cabinet + complement VALUE(second argument K-short; adjunct bare `𘒄 𘆣𘂮`)?
+
+[22] NOT VALUE(cabinet clue 1, K). Then SUBMIT(s, unknown `𗡒𘉫`).
+
+[23] Public task feedback: stage 1, invalid attempts 2.
+
+[24] REQUEST: `𗌿𗒏`(agent_1, cabinet clue 2), an unknown provide/report-like request. Then `𘀦𗋼`.
+
+[25] QUESTION to agent_5: does clue 1 say/read cabinet + K-noun?
+
+[26] Public task feedback: stage 1, invalid attempts 3.
+
+[27] STATUS(s, `𗡒𘉫 𗌿𗡉` [unknown]). Rule/connective `𘆣𗵵`(A1 B, A2 nested STATE(A1 A)). Approximately “if B, then STATE(A),” but connective and lexical content uncertain. Ends unknown `𗐪𗿋`.
+
+[28] NOT says/reads(clue 1, cabinet + K). Then SUBMIT(s, unknown `𗌿𗨥`).
+
+[29] Public task feedback: stage 1, invalid attempts 4.
+
+[30] IF/connective(nested unknown `𗌿𗩠`(N), nested STATE(`𗡒𗚽`)). Ends `𗐪𗿋`.
+
+[31] Unknown relation `𗌿𗚋`(A, 1 + switch?). Ends `𗐪𗿋`.
+
+[32] Unknown relation `𗌿𗳃`(B, 2 + switch?). Ends `𗐪𗿋`.
+
+[33] Says/reads(`𗡒𘉫` + switch?, 3; extra `𗌿𗼛`; adjunct t). Ends `𗐪𗿋`.
+
+[34] Unknown relation `𘆣𗡉`(first argument `𗡒𘉫`). IF/connective(nested `𗌿𗌈`(second argument switch?), nested STATE(second argument nested `𗌿𗳃`(second argument `𗡒𗪺`))). Ends `𗐪𗿋`. English content of this nested rule unknown.
+
+[35] Same clue-2/complement statement as first clause of [21]. Then unknown `𗿃𘏛`(second argument v; extra `𗡒𗞉` + switch? + `𗌿𗐪 𘆣𘋉`). Unknown `𗌿𗌈`(v, 2 + switch?). Unknown `𗌿𗏾`(v, n-c + switch?; adjunct Z). Ends `𗐪𗿋`.
+
+[36] Unknown `𘆣𗡉`(`𗡒𘉫`). Unknown `𗌿𗳵`(second argument switch?; adjunct t). QUESTION: says/reads(switch? + Z, WHAT + `𗌿𗼛`)? Ends `𗐪𗿋`.
+
+[37] Unknown `𗌿𗚋`(C, 1 + switch?). Compare [31], which had A in place of C. Ends `𗐪𗿋`.
+
+[38] QUESTION: unknown `𗌿𗼛`(first argument switch?; extra WHAT; adjunct Z)?
+
+[39] QUESTION: says/reads(`𗡒𗭵` + switch?, WHAT + `𗌿𗼛`; adjunct t)? QUESTION: `𗌿𗚋`(C, switch?; extra WHAT + `𗌿𗼛`)?
+
+[40] QUESTION: unknown `𘆣𘙓`(switch?; extra WHAT + `𗌿𗼛`; adjunct t)?
+
+[41] TRY/OPERATE(s, A; adjunct t). Unknown `𘆣𗼛`(v, B).
+
+[42] Exact repetition of [41].
+
+[43] Public task feedback: stage 1, invalid attempts 5.
+
+[44] TRY/OPERATE(agent_0, A; adjunct t). REQUEST: unknown `𗌿𗚋`(agent_1, v; adjunct nested STATE(A)). Exact intention of the request unknown.
+
+[45] Public task feedback: stage 1, invalid attempts 6.
+
+[46] Says/reads(switch? + Z, 3). REQUEST: unknown `𘆣𗼛`(v, B). TRY/OPERATE(agent_3, A; adjunct t).
+
+[47] Public task feedback: stage 1, invalid attempts 7.
+
+[48] Says/reads(switch?, 3; adjunct Z; FROM agent_3). SUBMIT(s, A; adjunct t).
+
+[49] Public task feedback: stage 1, invalid attempts 8.
+
+[50] REQUEST: unknown `𗌿𘎛`(first argument `𗌿𘄘`). TRY/OPERATE(s, A; adjunct t).
+
+[51] Public task feedback: stage 1, invalid attempts 9.
+
+[52] TRY/OPERATE(s, A; adjunct t). Possible alternate-register clause: unknown opening, predicate `𘆣𗼛`, first argument v, second argument B. This repeats the second clause of [41].
+
+[53] Public task feedback: stage 1, invalid attempts 10.
+
+[54] TRY/OPERATE(s, A; adjunct t). Unknown `𘆣𗼛`(v, B). Unknown `𘆣𗼛`(B, C).
+
+[55] Public task feedback: stage 1, invalid attempts 11.
+
+[56] STATUS(s, A). TRY/OPERATE(s, v; adjunct t).
+
+[57] PREPARE/SET(s, A). REQUEST: unknown `𗌿𘎛`(`𗌿𘄘`). SUBMIT(s, v).
+
+[58] Public task feedback: stage 1, invalid attempts 12.
+
+[59] PREPARE/SET(A; extra agent_0). SUBMIT(agent_0, v; adjunct t).
+
+[60] Public task feedback: stage 1, invalid attempts 13.
+
+[61] Says/reads(switch?, 1; adjunct t). TRY/OPERATE(agent_3, v; adjunct t). REQUEST: unknown `𘆣𗼛`(v, B).
+
+[62] Public task feedback: stage 1, invalid attempts 14.
+
+[63] PREPARE/SET(s, A). SUBMIT(agent_5, v; adjunct t). REQUEST: unknown `𗌿𘎛`(`𗌿𘄘`).
+
+[64] Public task feedback: stage 1, invalid attempts 15.
+
+[65] PREPARE/SET(A; adjunct s). NOT STATE(A). Unknown `𗌿𗚋`(s, v; adjunct t).
+
+[66] Public task feedback: stage 1, invalid attempts 16.
+
+[67] PREPARE/SET(s, A). SUBMIT(s, B; adjunct t).
+
+[68] STATUS(s, v). TRY/OPERATE(s, B; adjunct t).
+
+[69] Public task feedback: stage 1, invalid attempts 17.
+
+[70] Exact repetition of [67]: PREPARE/SET(s, A); SUBMIT(s, B; adjunct t).
+
+[71] Public task feedback: stage 1, invalid attempts 18.
+
+[72] PREPARE/SET(s, v). SUBMIT(s, B; adjunct t).
+
+[73] Public task feedback: stage 1, invalid attempts 19.
+
+[74] Says/reads(switch?, n-b; adjunct t). STATE(v). TRY/OPERATE(agent_3, B; adjunct t).
+
+[75] Public task feedback: stage 1, invalid attempts 20.
+
+[76] PREPARE/SET(agent_0, v). NOT STATE(v). SUBMIT(agent_0, B; adjunct t).
+
+[77] Public task feedback: stage 1, invalid attempts 21.
+
+[78] Exact repetition of [72]: PREPARE/SET(s, v); SUBMIT(s, B; adjunct t).
+
+[79] Public task feedback: stage 1, invalid attempts 22.
+
+[80] PREPARE/SET(s, v). SUBMIT(s, C; adjunct t).
+
+[81] Public task feedback: stage 2, invalid attempts still 22.
+
+[82] STATUS(s, B). SUBMIT(s, C; adjunct t).
+
+[83] Public task feedback: stage 2, invalid attempts 23.
+
+[84] PREPARE/SET(s, B). SUBMIT(s, C), with no t adjunct in this second clause.
+
+[85] Public task feedback: stage 2, invalid attempts 24.
+
+[86] PREPARE/SET(s, B). SUBMIT(s, C; adjunct t).
+
+[87] Public task feedback: stage 2, invalid attempts 25.
+
+[88] PREPARE/SET(s, B). NOT STATE(B). SUBMIT(s, C; adjunct t).
+
+[89] Public task feedback: stage 2, invalid attempts 26.
+
+[90] Says/reads(switch?, 1; adjunct t). STATE(B). TRY/OPERATE(agent_3, C; adjunct t).
+
+[91] Public task feedback: stage 2, invalid attempts 27.
+
+[92] PREPARE/SET(agent_0, B). SUBMIT(agent_0, C; adjunct t).
+
+[93] Public task feedback: stage 2, invalid attempts 28.
+
+[94] Clue 1 says/reads u; adjunct t. Ends `𗐪𗿋`.
+
+[95] STATUS(s, C). Clue 2 says/reads cabinet + K; adjunct F. Ends `𗐪𗿋`.
+
+[96] STATE(C). Says/reads(u, E(2)). VALUE(u, n-a; adjunct t). Ends `𗐪𗿋`.
+
+[97] Says/reads(cabinet + K-short, `𗡒𗸪` + n-e; adjunct N + Y). Ends `𗐪𗿋`.
+
+[98] Clue 3 says/reads cabinet + K-short; adjunct t. Ends `𗐪𗿋`.
+
+[99] Says/reads(cabinet + `𗡒𗪺 𗌿𗐪`, `𗡒𗸪` + n-d; adjunct N + bare `𗉜`). Ends `𗐪𗿋`. The bare token differs from Y elsewhere.
+
+[100] STATE(C). Says/reads(switch?, n-c; adjunct t). VALUE(cabinet clue 4, D; adjunct N + t).
+
+[101] Unknown `𗌿𗩠`(N). Says/reads(cabinet + K, n-d; extra `𗡒𗸪`; adjunct Y). Ends `𗐪𗿋`.
+
+[102] VALUE(clue 1, n-a; adjunct t). Ends `𗐪𗿋`.
+
+[103] QUESTION to agent_0: says/reads(cabinet + K, `𗌿𘝚` + Y + WHAT)? QUESTION to agent_3: does clue 4 say/read WHAT + cabinet; adjunct t?
+
+[104] VALUE(clue 1, n-a; adjunct F). REQUEST: `𗌿𗒏`(agent_0, `𗌿𘝚` + Y + cabinet + K). REQUEST: `𗌿𗒏`(agent_3, cabinet clue 4; adjunct F). Approximately requests for agents 0 and 3 to supply relevant information, exact verb unknown.
+
+[105] QUESTION to agent_0: says/reads(cabinet + K-noun, WHAT + `𗡒𗸪`; adjunct t)? QUESTION to agent_3: says/reads(clue 4, WHAT + cabinet; adjunct t)?
+
+[106] Says/reads(cabinet + `𗡒𗪺 𗌿𗐪`, E(4)). QUESTION to agent_0: says/reads(cabinet + K, `𗡒𗸪` + WHAT; adjunct N + Y)?
+
+[107] REQUEST: unknown `𗌿𗻲`(agent_0, `𗌿𗭵 𘆣𘉮`; TO `𗌿𘄘`). VALUE(cabinet + K-short, n-f; adjunct N + t).
+
+[108] Says/reads(cabinet + K, E(1)). SUBMIT(agent_0, F).
+
+[109] Public task feedback: stage 3, invalid attempts 28.
+
+## 3. THE TASK
+
+The supplied briefing calls this Storm Shelter, involving a coded cabinet, a power panel and an exit lock. The log is compatible with that description: it has three advances, extensive early clue exchanges, a long series of attempted operations, and a final successful submission. However, agreement with the briefing is not itself a decoding of the vocabulary.
+
+Observed progress, independently of lexical guesses:
+
+1. The public state starts at stage 0. Several agents discuss four numbered clue-like items and a recurring cabinet-associated expression. They ask agent_5 for clarification, and agent_5 repeats and later expands a nested statement.
+2. Stage 1 appears immediately after [17], with no invalid attempts. That message contains a negated VALUE statement and a SUBMIT-like operation on an unknown expression `𗿃𘝚`. It is unsafe to identify the exact entered cabinet code.
+3. The agents continue clarifying clues and formulate structured rules, including probable implication-like statements. They repeatedly attempt operations on A, B, C and v. These are distinct literal expressions; their exact interpretation as targets, configurations, descriptions or commands remains unknown.
+4. Invalid attempts rise to 22 before [80]. [80] differs from the preceding repeated failing pattern by submitting C after preparing v. Immediately afterward the public state becomes stage 2, with no added invalid attempt. Thus [80] is closely associated with the second successful transition; it does not prove what the literals mean.
+5. Other agents continue similar operations after that transition, raising invalid attempts to 28 by [93]. These may be stale/concurrent attempts or misunderstanding; the log does not establish why.
+6. From [94] onward agents exchange fresh clue/value statements. Questions directed to agents 0 and 3 recur, supporting the interrogative and addressee decoding. Agent_0 eventually reports the E(1) output for the cabinet-associated K expression and submits F in [108]. Public feedback then reaches stage 3 without further invalid attempts.
+
+The likely overall story is cabinet → power panel → exit. The evidence establishes the stage sequence more securely than the exact language for those mechanisms. No exact cabinet combination, panel setting or exit code has been decoded here. Nor is there an independently readable final declaration “we escaped”; completion is inferred from the public stage-3 feedback. Agents' malformed/repeated statements should not be rewritten into a faultless solution.
+
+## 4. EVIDENCE
+
+### Strongest decoding evidence
+
+- **Repeated role frames and flexible order:** The same `𘅌` markers recur at boundaries around changing content. [2] and [28] reorder role blocks without changing the marker inventory. This is evidence of explicit roles, not inferred task semantics.
+- **Nesting:** [19], [21], [30], [34] embed complete open–predicate–role–close structures inside other structures. This strongly anchors opening, closure and predicate/argument markers.
+- **Question/answer exchanges:** [13]–[16] repeatedly address agent_5 with the WH-like token; [103]/[105]/[106] address agents 0/3, and [108] supplies a matching object-associated output. These favor QUESTION, WHAT and TO over the competing report/source analysis.
+- **Negation contrast:** [65], [76], [88] place `𘅌𘔠` immediately on STATE-like propositions between other operations. This is a cleaner fit for NOT than a blanket action marker, though not decisive lexical proof.
+- **Exact repetition:** [3] is repeated twice in [11]; [41]=[42]; [67]=[70]; [72]=[78]. This constrains translation independently of what actions ought to solve the escape room.
+- **Alternate-register parallel:** The probable alternate frame in [52] preserves the exact lexical predicate and arguments of ordinary clauses elsewhere, motivating its partial parsing.
+- **Numeral distribution:** Four `𘔠` tokens repeatedly identify clue-like items; their ordering and count-like uses support provisional 1–4. Other numerical assignments lack comparable anchors.
+- **Action/result alignment:** Public transitions follow [17], [80], [108]. This supports functional identification of submission-like operations but not any exact hidden code values.
+- **Preserved mistakes:** Bare/alternate-prefix `𘒄`, bare `𗉜`, irregular nesting, and repeated post-transition operations show why task success cannot be used to normalize every utterance into a correct solution.
+
+### Limits and what would change the reconstruction
+
+The principal remaining uncertainty is lexical. A/B/C might be settings, target names, commands or descriptions; K and F might be encoded number strings or ordinary phrases. Their syntactic positions alone do not decide. A genuine lexicon key, an independently grounded minimal pair, or more conversations using these terms in a different task could overturn the cabinet/switch/code guesses while leaving much of the role grammar intact.
+
+Examples showing `𘅌𗵫` in non-interrogative assertions would weaken QUESTION; examples showing `𘅌𘋟` always pointing to the speaker's evidence would revive SOURCE rather than TO. Contrasts under `𘅌𘔠` that consistently denote attempted actions rather than denial would reverse the NOT hypothesis. A numeral key would readily revise all provisional number values. An original encoding rule might show that the apparent lexical families are algorithmic code categories rather than parts of speech; nothing here establishes rigid POS families.
+
+We have deliberately distinguished decoded structure, task-supported functional guesses, and still-unknown content. The public task facts and apparent correct transition sequence are not offered as proof of the undecoded words.
