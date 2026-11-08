@@ -541,6 +541,22 @@ class MonitorTests(unittest.IsolatedAsyncioTestCase):
         with patch("sys.argv", ["monitor", str(self.source), "--prepare-only", "--agents", "0"]):
             with self.assertRaises(ValidationError):
                 main()
+        with patch("sys.argv", ["monitor", str(self.source), "--prepare-only", "--agents", "8", "--max-turns", "200", "--no-clock"]), \
+                patch("src.enc_dec.monitor.make_client") as client:
+            main()
+        client.assert_not_called()
+        newest = max((self.source / "monitor_runs").glob("*/monitor_inputs.json"), key=lambda p: p.stat().st_mtime_ns)
+        saved = json.loads((newest.parent / "monitor_config.json").read_text())
+        self.assertIsNone(saved["monitor_minutes"])
+        self.assertEqual(saved["monitor_max_turns"], 200)
+        self.assertEqual(saved["monitor_n_agents"], 8)
+        prompt = json.loads(newest.read_text())["requests"][0]["system_prompt"]
+        self.assertIn("up to 200 discussion turns shared across all 8 agents", prompt)
+        self.assertIn("There is no time limit.", prompt)
+        self.assertNotIn("You have 10 minutes", prompt)
+        with patch("sys.argv", ["monitor", str(self.source), "--prepare-only", "--no-clock"]):
+            with self.assertRaises(ValueError):
+                main()
 
     def test_default_conditions_are_read_when_preparing_not_at_import(self):
         settings = {**load_prompt_config("round3_config.json"), "conditions": ["no_task"]}

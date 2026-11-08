@@ -307,6 +307,7 @@ def main() -> None:
     parser.add_argument("--agents", type=int, help="decoders per condition; overrides monitor_n_agents from the saved config")
     parser.add_argument("--minutes", type=float, help="time cap per condition in minutes; overrides monitor_minutes")
     parser.add_argument("--max-turns", type=int, help="shared scheduled discussion-turn cap per condition; overrides monitor_max_turns")
+    parser.add_argument("--no-clock", action="store_true", help="remove the per-condition time limit (needs a turn cap, from --max-turns or the saved config)")
     parser.add_argument("--max-cost-usd", type=float, default=DEFAULT_MAX_COST_USD,
                         help=f"shared soft cap for this monitor batch, default ${DEFAULT_MAX_COST_USD:g}")
     parser.add_argument("--baseline", action="store_true", help="withhold agent messages, preserve identical public status and sender/order metadata")
@@ -319,6 +320,10 @@ def main() -> None:
         ("monitor_model", args.model), ("monitor_n_agents", args.agents), ("monitor_minutes", args.minutes),
         ("monitor_max_turns", args.max_turns),
     ) if value is not None}
+    if args.no_clock:
+        if args.minutes is not None:
+            parser.error("--no-clock and --minutes exclude each other")
+        overrides["monitor_minutes"] = None
     if overrides:
         config = LanguageExperimentConfig.model_validate({**config.model_dump(), **overrides})
     bundle = prepare_monitor_inputs(args.source, args.condition, args.baseline, config)
