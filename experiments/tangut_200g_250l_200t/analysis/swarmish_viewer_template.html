@@ -1,0 +1,287 @@
+<meta charset="utf-8">
+<title>Five Swarmish Seeds</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tangut&family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a sticky tab bar, then one view at a time; document views are a reading column with a stats rail. */
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --fg: #1c2127; --muted: #5b6672; --line: #d6dbe1;
+  --accent: #1e6f8c; --accent-ink: #ffffff; --mark: #f3c969; --mark-ink: #2b2206;
+  --len1: #d7ecf3; --len2: #e9e4f6; --len3: #fde5d2;
+  --font-body: "Spectral", Georgia, "Times New Roman", serif;
+  --font-ui: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --font-glyph: "Noto Serif Tangut", "Tangut Yinchuan", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14181d; --surface: #1c2229; --fg: #e4e8ec; --muted: #9aa6b2; --line: #30393f;
+    --accent: #6fb6d2; --accent-ink: #0d1a20; --mark: #d9ac3c; --mark-ink: #1a1400;
+    --len1: #1f3a46; --len2: #2f2a4a; --len3: #4a3222; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14181d; --surface: #1c2229; --fg: #e4e8ec; --muted: #9aa6b2; --line: #30393f;
+  --accent: #6fb6d2; --accent-ink: #0d1a20; --mark: #d9ac3c; --mark-ink: #1a1400;
+  --len1: #1f3a46; --len2: #2f2a4a; --len3: #4a3222; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--surface); border-bottom: 1px solid var(--line); }
+.bar { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px 0; display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; }
+.brand { font-family: var(--font-ui); font-weight: 600; font-size: 15px; letter-spacing: .01em; margin-right: auto; padding-bottom: 10px; }
+.brand span { color: var(--muted); font-weight: 400; }
+nav { display: flex; gap: 2px; flex-wrap: wrap; }
+nav a { font-family: var(--font-ui); font-size: 14px; text-decoration: none; color: var(--muted); padding: 6px 10px 10px; border-bottom: 2px solid transparent; }
+nav a:hover, nav a:focus-visible { color: var(--fg); outline: none; }
+nav a[aria-current="page"] { color: var(--fg); border-bottom-color: var(--accent); }
+main { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; max-width: 1240px; margin: 0 auto; }
+.view[hidden] { display: none !important; }
+
+/* Overview */
+.prose { max-width: 70ch; }
+.prose h2 { font-family: var(--font-ui); font-size: 22px; font-weight: 600; margin: 34px 0 10px; text-wrap: balance; }
+.prose h3 { font-family: var(--font-ui); font-size: 17px; font-weight: 600; margin: 26px 0 8px; }
+.prose p { margin: 0 0 12px; }
+.prose ul, .prose ol { padding-left: 22px; margin: 0 0 12px; }
+.prose li { margin-bottom: 6px; }
+.prose code { font-family: var(--font-mono); font-size: 90%; }
+.lede { font-size: 18px; color: var(--muted); max-width: 70ch; margin: 0 0 20px; }
+.tablewrap { overflow-x: auto; max-width: 100%; margin: 12px 0 18px; border: 1px solid var(--line); border-radius: 4px; }
+.prose .tablewrap { max-width: none; }
+table { border-collapse: collapse; font-family: var(--font-ui); font-size: 13px; min-width: 640px; }
+th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+thead th { background: var(--surface); position: sticky; top: 0; font-weight: 600; }
+tbody th { font-weight: 500; white-space: nowrap; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin: 16px 0 8px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; font-family: var(--font-ui); font-size: 13px; }
+.card h4 { margin: 0 0 4px; font-size: 15px; }
+.card .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 22px; margin: 4px 0; }
+.card p { margin: 4px 0 0; color: var(--muted); }
+.card a { color: var(--accent); }
+
+/* Document view */
+.docgrid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 24px; align-items: start; }
+@media (max-width: 860px) { .docgrid { grid-template-columns: minmax(0, 1fr); } }
+.tools { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-family: var(--font-ui); font-size: 13px; margin-bottom: 12px; }
+.tools input[type="search"] { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--fg); min-width: 200px; }
+.tools label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.tools .count { color: var(--muted); }
+.doc { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; min-width: 0; }
+.line { display: grid; grid-template-columns: 3.2em minmax(0, 1fr); border-bottom: 1px solid var(--line); }
+.line:last-child { border-bottom: 0; }
+.line[hidden] { display: none !important; }
+.ln { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-align: right; padding: 6px 8px 0 0; border-right: 1px solid var(--line); user-select: none; font-variant-numeric: tabular-nums; }
+.tx { padding: 5px 12px 5px 12px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14.5px; line-height: 1.55; }
+.line.head .tx { font-family: var(--font-ui); font-weight: 600; letter-spacing: .04em; font-size: 12.5px; text-transform: uppercase; padding-top: 10px; color: var(--accent); }
+.g { font-family: var(--font-glyph); font-size: 18px; line-height: 1; padding: 1px 2px; border-radius: 3px; cursor: pointer; }
+.g:hover, .g:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.bylen .g[data-len="1"] { background: var(--len1); }
+.bylen .g[data-len="2"] { background: var(--len2); }
+.bylen .g[data-len="3"] { background: var(--len3); }
+.g.hit { background: var(--mark); color: var(--mark-ink); }
+.rail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 64px); font-family: var(--font-ui); font-size: 13px; display: grid; gap: 12px; }
+.rail .box { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; }
+.rail h3 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-variant-numeric: tabular-nums; }
+.pin { display: none; }
+.pin.on { display: block; }
+.pin .w { font-family: var(--font-glyph); font-size: 26px; margin: 2px 0 6px; }
+.pin .ctx { font-size: 12px; color: var(--muted); }
+.legend { display: flex; gap: 10px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-right: 4px; border: 1px solid var(--line); }
+
+/* Compare view */
+.cmp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 860px) { .cmp { grid-template-columns: minmax(0, 1fr); } }
+.pane { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; max-height: 72vh; overflow: auto; min-width: 0; }
+.pane .tx { font-size: 13.5px; }
+.pane .g { font-size: 16px; }
+select { font: inherit; font-family: var(--font-ui); font-size: 13px; padding: 5px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--fg); }
+.cmphead { display: flex; gap: 10px; align-items: center; font-family: var(--font-ui); font-size: 13px; margin-bottom: 8px; }
+@media (prefers-reduced-motion: no-preference) { nav a { transition: color .15s, border-color .15s; } }
+</style>
+
+<header>
+  <div class="bar">
+    <div class="brand">Five Swarmish Seeds <span>GPT 6.1 Sol, 200 Tangut glyphs, batch tangut_200g_250l_200t</span></div>
+    <nav id="nav" aria-label="Views">
+      <a href="#overview">Overview</a>
+      <a href="#seed-1">Seed 1</a>
+      <a href="#seed-2">Seed 2</a>
+      <a href="#seed-3">Seed 3</a>
+      <a href="#seed-4">Seed 4</a>
+      <a href="#seed-5">Seed 5</a>
+      <a href="#compare">Side by side</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="view" id="view-overview">
+    <p class="lede">Eight agents, five seeds, one prompt. The frozen swarmish.txt of each seed is readable under its tab; this page compares them.</p>
+    <div class="cards" id="cards"></div>
+    <div class="prose"><!--__ANALYSIS__--></div>
+  </section>
+
+  <section class="view" id="view-doc" hidden>
+    <div class="tools">
+      <strong id="doc-title" style="font-family: var(--font-ui)"></strong>
+      <input type="search" id="search" placeholder="Filter lines, English or glyphs" aria-label="Filter lines">
+      <label><input type="checkbox" id="bylen"> colour words by glyph count</label>
+      <span class="count" id="linecount"></span>
+    </div>
+    <div class="docgrid">
+      <div class="doc" id="doc"></div>
+      <aside class="rail">
+        <div class="box pin" id="pin">
+          <h3>Pinned word</h3>
+          <div class="w" id="pin-w"></div>
+          <div id="pin-n"></div>
+          <div class="ctx">Click a word to pin it; click again to clear. Hover highlights every occurrence.</div>
+        </div>
+        <div class="box"><h3>Shape</h3><dl class="kv" id="kv-shape"></dl></div>
+        <div class="box"><h3>Design</h3><dl class="kv" id="kv-design"></dl></div>
+        <div class="box"><h3>Legend</h3><div class="legend"><span><i style="background:var(--len1)"></i>1 glyph</span><span><i style="background:var(--len2)"></i>2 glyphs</span><span><i style="background:var(--len3)"></i>3 glyphs</span></div><div class="ctx" style="margin-top:6px">Colouring is on only when the checkbox is ticked.</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="view" id="view-compare" hidden>
+    <div class="cmp">
+      <div>
+        <div class="cmphead"><label for="left">Left</label><select id="left"></select></div>
+        <div class="pane" id="pane-left"></div>
+      </div>
+      <div>
+        <div class="cmphead"><label for="right">Right</label><select id="right"></select></div>
+        <div class="pane" id="pane-right"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>
+(function () {
+  window.addEventListener('error', e => {
+    const p = document.createElement('p');
+    p.style.cssText = 'margin:16px;padding:12px;border:1px solid var(--line);background:var(--surface);font-family:var(--font-ui)';
+    p.textContent = 'The viewer script stopped: ' + (e.message || 'unknown error') + '. The documents are still in the batch folder as swarmish.txt.';
+    document.body.prepend(p);
+  });
+  const DOCS = JSON.parse(document.getElementById('data').textContent);
+  const byId = Object.fromEntries(DOCS.map(d => [d.id, d]));
+  const GLYPH = /[\u{17000}-\u{187FF}\u{18800}-\u{18AFF}\u{18D00}-\u{18D7F}]+/gu;
+  const HAS_GLYPH = /[\u{17000}-\u{187FF}\u{18800}-\u{18AFF}\u{18D00}-\u{18D7F}]/u;
+  const HEAD = /^[A-Z][A-Z0-9 ,/&'()—-]{5,}$/;
+  const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function renderLines(doc, container) {
+    const frag = document.createDocumentFragment();
+    doc.text.split('\n').forEach((raw, i) => {
+      const row = document.createElement('div');
+      row.className = 'line' + (HEAD.test(raw.trim()) && !HAS_GLYPH.test(raw) ? ' head' : '');
+      GLYPH.lastIndex = 0;
+      const text = esc(raw).replace(GLYPH, w => `<span class="g" data-w="${w}" data-len="${Math.min([...w].length, 3)}" tabindex="0">${w}</span>`);
+      row.innerHTML = `<div class="ln">${i + 1}</div><div class="tx">${text || ' '}</div>`;
+      row.dataset.raw = raw.toLowerCase();
+      frag.appendChild(row);
+    });
+    container.replaceChildren(frag);
+  }
+
+  // Word highlighting: hover marks every occurrence in the same container; click pins.
+  let pinned = null;
+  function mark(container, word, on) {
+    container.querySelectorAll('.g').forEach(el => { if (el.dataset.w === word) el.classList.toggle('hit', on); });
+  }
+  function wire(container, pinBox) {
+    container.addEventListener('mouseover', e => { const g = e.target.closest('.g'); if (g && !pinned) mark(container, g.dataset.w, true); });
+    container.addEventListener('mouseout', e => { const g = e.target.closest('.g'); if (g && !pinned) mark(container, g.dataset.w, false); });
+    container.addEventListener('click', e => {
+      const g = e.target.closest('.g'); if (!g) return;
+      const w = g.dataset.w;
+      container.querySelectorAll('.g.hit').forEach(el => el.classList.remove('hit'));
+      if (pinned === w) { pinned = null; if (pinBox) pinBox.classList.remove('on'); return; }
+      pinned = w; mark(container, w, true);
+      if (pinBox) {
+        const n = container.querySelectorAll(`.g[data-w="${w}"]`).length;
+        pinBox.classList.add('on');
+        document.getElementById('pin-w').textContent = w;
+        document.getElementById('pin-n').textContent = `${[...w].length} glyph${[...w].length > 1 ? 's' : ''}, ${n} occurrence${n !== 1 ? 's' : ''} in this document`;
+      }
+    });
+  }
+
+  const docEl = document.getElementById('doc');
+  wire(docEl, document.getElementById('pin'));
+  let current = null;
+  function showDoc(id) {
+    const d = byId[id]; current = d; pinned = null;
+    document.getElementById('pin').classList.remove('on');
+    document.getElementById('doc-title').textContent = `${d.label} (${d.id}) swarmish.txt`;
+    renderLines(d, docEl);
+    const s = d.stats, h = d.hand;
+    document.getElementById('kv-shape').innerHTML = [
+      ['Lines', s.lines], ['Characters', s.chars.toLocaleString()], ['Distinct glyph words', s.distinct],
+      ['1 / 2 / 3+ glyph words', `${s.one} / ${s.two} / ${s.three}`], ['Glyphs used of 200', s.glyphs_used],
+      ['First-glyph families', s.families], ['Top 5 families hold', `${s.top5}% of 2-glyph words`],
+      ['Lexicon lines / prose lines', `${s.lexicon_lines} / ${s.prose_lines}`],
+    ].map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
+    document.getElementById('kv-design').innerHTML = [
+      ['Word design', h.design], ['Senses', h.senses], ['Role markers', h.roles], ['Speech acts', h.acts],
+      ['Number words', h.numbers], ['Name pool', h.names], ['Idioms', h.idioms], ['Worked examples', h.examples], ['Camouflage', h.camouflage],
+    ].map(([k, v]) => `<dt>${k}</dt><dd>${esc(String(v))}</dd>`).join('');
+    applyFilter();
+  }
+  function applyFilter() {
+    const q = document.getElementById('search').value.trim().toLowerCase();
+    let shown = 0, total = 0;
+    docEl.querySelectorAll('.line').forEach(row => { total++; const ok = !q || row.dataset.raw.includes(q); row.hidden = !ok; if (ok) shown++; });
+    document.getElementById('linecount').textContent = q ? `${shown} of ${total} lines match` : `${total} lines`;
+  }
+  document.getElementById('search').addEventListener('input', applyFilter);
+  document.getElementById('bylen').addEventListener('change', e => docEl.classList.toggle('bylen', e.target.checked));
+
+  // Overview cards
+  document.getElementById('cards').innerHTML = DOCS.map(d => `<div class="card"><h4><a href="#seed-${d.id.slice(2)}">${d.label}</a> <span style="color:var(--muted)">${d.id}</span></h4><div class="num">${d.stats.lines} lines</div><p>${esc(d.hand.design)}</p><p>${d.stats.distinct} distinct words, ${d.stats.glyphs_used} of 200 glyphs</p></div>`).join('');
+
+  // Compare view
+  const left = document.getElementById('left'), right = document.getElementById('right');
+  DOCS.forEach(d => { left.add(new Option(`${d.label} (${d.id})`, d.id)); right.add(new Option(`${d.label} (${d.id})`, d.id)); });
+  left.value = 'E01'; right.value = 'E02';
+  const paneL = document.getElementById('pane-left'), paneR = document.getElementById('pane-right');
+  wire(paneL, null); wire(paneR, null);
+  function renderCompare() { renderLines(byId[left.value], paneL); renderLines(byId[right.value], paneR); }
+  left.addEventListener('change', renderCompare); right.addEventListener('change', renderCompare);
+
+  // Views: overview, seed-N, compare. Links switch views directly; the hash is only a bookmark,
+  // because a sandboxed frame may not deliver fragment navigation.
+  const views = { overview: 'view-overview', compare: 'view-compare' };
+  function show(name) {
+    const m = /^seed-([1-5])$/.exec(name);
+    const key = m ? name : (views[name] ? name : 'overview');
+    const target = m ? 'view-doc' : views[key];
+    document.querySelectorAll('.view').forEach(v => { v.hidden = v.id !== target; });
+    document.querySelectorAll('#nav a').forEach(a => {
+      if (a.getAttribute('href') === '#' + key) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    if (m) showDoc('E0' + m[1]);
+    if (target === 'view-compare' && !paneL.childElementCount) renderCompare();
+    try { if (location.hash !== '#' + key) history.replaceState(null, '', '#' + key); } catch (e) { /* bookmark only */ }
+    window.scrollTo(0, 0);
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const name = a.getAttribute('href').slice(1);
+    if (/^seed-[1-5]$/.test(name) || views[name]) { e.preventDefault(); show(name); }
+  });
+  window.addEventListener('hashchange', () => show((location.hash || '#overview').slice(1)));
+  show((location.hash || '#overview').slice(1));
+})();
+</script>

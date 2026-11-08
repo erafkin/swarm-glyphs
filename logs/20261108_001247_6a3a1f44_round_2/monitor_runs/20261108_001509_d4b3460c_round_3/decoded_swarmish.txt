@@ -1,0 +1,190 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This reconstructs observed usage, not the original file verbatim. Confidence labels: H = high, M = medium, L = low. Confidence concerns the decoding, not whether a statement agrees with the supplied puzzle solution.
+
+STRUCTURE
+[H] Swarmish is a compositional symbolic notation, not a substitution of one glyph for each English letter. Spaces separate many grammatical and lexical tokens; some identifiers contain adjoining glyphs.
+[H] Common clause pattern: PREFIX [MODIFIER] 𘍢 PREDICATE 𘑰 ARGUMENT (𘑐 ARGUMENT ...) 𘄗. Some predicates have one argument. Clauses can themselves be arguments, and multiple clauses are concatenated in messages.
+[H] 𘑰 begins arguments; 𘑐 separates arguments; 𘄗 closes a clause. 𘗊 … 𗭋 brackets a compound/expression.
+[M] 𘍢 introduces the predicate after the prefix/modifier portion.
+[L] The frequent leading prefixes 𘌿, 𗈇, 𘑌 distinguish an unresolved clause-status axis: perhaps semantic type, certainty/evidentiality, polarity, or mood. Their exact meanings are NOT recovered. They are independent of the question/request/future modifiers below. Translating 𗈇 uniformly as NOT would be unsafe: it appears in definitions, equivalences, and apparent unsuccessful-action reports.
+[M] 𗪣 marks a question/unknown-slot construction; 𘆖 represents the requested unknown.
+[M] 𗅰 marks a request/directive; 𘋷 marks an intended/future action. Neither proves success.
+[M] 𗿖 means everyone/all agents. 𗼫 agent_N adds an agent/source/actor restriction, exact interpretation uncertain.
+[M/L] 𗔸 links an expression to a context or possessor, approximately 'of/in'; 𗴍 is another qualifying/linking relation. 𘋚 is a distinct linker whose exact meaning is unknown. 𘎴 marks a relational clause construction, exact semantics unknown.
+
+LOCAL NAMES AND REFERENCE
+[H] Names such as 𗢋𗠉 and 𗮆𘋷 are NOT global vocabulary for MOON or BOOT. Speakers introduce locally scoped names through identifying descriptions. 𗼾 agent_N NAME explicitly accesses agent_N's name. Treat multi-glyph handles as whole names, not as transparent compounds of their component glyphs.
+[H/M] Cabinet/exit referents of local handles:
+ agent_0: 𗢋𗠉 = MOON-associated referent.
+ agent_1: 𗢋𗠉 = STAR-associated referent.
+ agent_2: 𗮆𘋷 = WAVE-associated referent.
+ agent_3 and agent_4: each one's 𗢋𗠉 = SUN-associated referent.
+ agent_5: 𗢋𗠉 = MOON-associated referent.
+ agent_6: 𗢋𗠉 = STAR-associated referent.
+ agent_7: 𗮆𘋷 = WAVE-associated referent.
+[M] The exact ontology is uncertain: a handle may denote a symbol, its associated value, or an object described through that symbol. English symbol names below resolve the reference without claiming an exact word-for-word identity.
+[H/M] Power handles:
+ agent_0: 𗮆𘋷 = BOOT.
+ agent_1: 𗮆𘋷 = CRANK.
+ agent_2: 𘌏𗶫 = DRAIN; 𗡌𗃪 = SIGNAL.
+ agent_4: 𗮆𘋷 = SIGNAL.
+ agent_5: 𗮆𘋷 = DRAIN.
+ agent_6: 𗮆𘋷 = BOOT; 𘌏𗶫 = SIGNAL.
+ agent_7: 𘌏𗶫 = DRAIN; 𗡌𗃪 = CRANK.
+[M] These are names introduced for the conversation, not evidence of a separate grammar for each agent. The full name inventory and rules for inventing names remain unknown.
+
+NUMERALS
+[H] 𗵺 = 1; 𘋃 = 2; 𗮥 = 3; 𘛦 = 4; 𘍡 = 7; 𘑁 = 8.
+[H/M] 𗂮 = 5; 𗫆 = 6; 𗻫 = 9. Evidence includes the STAR description, charge-reading sequence, and exit values.
+[L/M] 𗋕 may be 0, but its occurrences are ambiguous. They include numbered/interface expressions, a cabinet indexed-object expression, and the suffix 𗛱 𗋕. 'Now/current' or a whole/totality expression are serious alternatives. The CRANK cost clause [39] does NOT directly contain 𗋕, so the supplied zero-cost clue is not direct evidence for this glyph.
+[L] 𗛱 𗋕 might be decimal '.0', but also follows DRAIN in [48]. A temporal/contextual interpretation such as 'at present' is another possibility. Its meaning remains unknown; numeric translations do not depend on resolving it.
+[L] 𘞝 is unknown and should not be assigned a missing decimal digit.
+
+LEXICAL CORE
+[H/M] 𘓹 introduces a descriptive definition/name assignment.
+[H] 𗲣 expresses equivalence/sameness or identification of referents.
+[H] 𘂽 means numerical value/evaluation in context.
+[H/M] 𗏎 means contains/displays, notably a symbol at a position.
+[H/M] 𗇬 in noun compounds is an indexed position/place. Its use as an action predicate may have another sense. 𘐅 in [98] is a different, unresolved position-like term.
+[M] 𗛁 is a symbol/base/associated-symbol expression; its exact distinction from digit/value is unresolved.
+[H/M] 𗂤 means increment/change/offset, appearing with CRANK's gain and exit offsets.
+[H/M] 𗅪 means cost/consumption.
+[H/M] 𗥔 means requires/precondition; 𗉶 means completed/done.
+[M] 𗵉 means try/attempt; 𘋶 execute/use; 𗶩 result/success; 𗓿 report/tell. Exact distinctions and polarity remain uncertain.
+[H/M] 𗷿 in [46] means before/precedes. [M] 𗴢 likely means different/distinct: all three pairs in [50] are distinct controls. [L/M] 𘗒 is another identity/distinction relation, not securely decoded.
+[L] 𘕼 introduces a code/action/interface-related object. It is unsafe to translate every occurrence as battery. Agent_3's recurrent compound has a charge-reading interpretation, but its internal word-by-word gloss is unknown.
+[L] 𗡭 introduces an indexed object/slot in several compounds; globally translating it as 'code' is not justified.
+[L] 𘛗 appears in error/action-result expressions; exact meaning unknown.
+[L] Much descriptive vocabulary remains unknown. The descriptions may be compositional paraphrases rather than direct SUN/MOON/STAR/WAVE/control words. Unresolved roots include many of 𗢋, 𗃾, 𗣮, 𗅞, 𗃪, 𗙐, 𘛽, 𗱛, 𗣬, 𗽬, 𗺚, 𗺻, 𘂭, and others. 𗽬 and 𗱺 participate in cabinet- and exit-context expressions respectively, but exact lexical meanings remain uncertain.
+
+2. TRANSLATION
+
+Conventions: These are partial semantic translations, not claimed fluent literal translations. Symbol/control names resolve local references. Leading prefixes remain untranslated throughout unless explicitly discussed; thus 'says/reports' does not settle certainty, polarity, or truth. 'Asks', 'requests', and 'attempts' are medium-confidence mood/action glosses. Unknown components are retained rather than supplied from the briefing. Public TASK lines are not Swarmish.
+
+[1] TASK: Stage 0; invalid attempts 0.
+[2] agent_6 defines local A through a partly unknown geometric description identifying STAR, apparently mentioning five. Its symbol/base digit is 4.
+[3] agent_0 defines A through an unknown description identifying MOON. Value(A) is 7.
+[4] agent_4 defines A through a partly unknown description identifying SUN. Its base digit/value is 2.
+[5] agent_5 defines A through a partly unknown description identifying MOON. No numerical value supplied here.
+[6] agent_3 defines A as a SUN-associated referent. Cabinet position 1 displays its associated/base symbol.
+[7] Initial clause involving local A and 'displays/contains': unknown. Introduces B, identified as WAVE, through a partly unknown identifying description. Associates B with position 4 and a cabinet-context expression; exact nested clause unknown.
+[8] agent_1 defines A through an unknown description identifying STAR, apparently mentioning five points. Places A at position 3. Asks an unknown cabinet property/indexed-object question.
+[9] Initial clause matching [7]: unknown. agent_2 introduces B through an unknown description identifying WAVE. Its base digit is 8.
+[10] Requests agent_5's identification/definition of agent_5's A.
+[11] Asks an unknown property/change of a cabinet-related expression. Exact question unknown.
+[12] Asks an unknown property of a descriptive expression; exact object and question unknown.
+[13] Cabinet position 2 displays the associated/base symbol of agent_0's A, MOON.
+[14] agent_7 identifies its B with agent_2's B, WAVE, with unresolved leading prefix. Gives its base digit as 8.
+[15] agent_3 identifies the associated/base symbol of its A with agent_4's A, SUN. Value at cabinet position 1 is 2.
+[16] agent_1 identifies its A with agent_6's A, STAR. Asks what is at cabinet position 2.
+[17] agent_2 identifies its B with agent_7's B, WAVE. Gives agent_7's WAVE value as 8.
+[18] agent_6 identifies its A with agent_1's A, STAR. Its base digit is 4. Asks an unknown cabinet-related value/indexed-object question.
+[19] Asks agent_5 what is at an unknown cabinet-related indexed expression, containing unresolved 𗋕. Again requests identification of agent_5's A.
+[20] agent_4 identifies agent_1's A with agent_6's A, STAR. Gives that symbol's value as 4. Asks an unknown cabinet-related value/indexed-object question.
+[21] Value at cabinet position 2 is 7. Its associated/base symbol equals the associated/base symbol of agent_0's A, MOON.
+[22] TASK: Stage 1; invalid attempts 0. Cabinet has opened.
+[23] Value at cabinet position 2 is 7. agent_3 announces an attempt involving code/interface object 1; the submitted four-digit code is not directly written in decoded numerals.
+[24] TASK: Stage 1; invalid attempts 1.
+[25] Value at cabinet position 2 is 7. agent_7 announces an attempt involving a code/interface object and a nested cabinet-context expression; exact target unknown.
+[26] TASK: Stage 1; invalid attempts 2.
+[27] Value at cabinet position 2 is 7.
+[28] TASK: Stage 1; invalid attempts 3.
+[29] Value at position 2 in a container/context expression is 7; value at position 3 there is 4. Final execute/error-related statement involving 𘛗 and that context: unknown.
+[30] TASK: Stage 1; invalid attempts 4.
+[31] Value at position 2 in a container/context expression is 7. Final execute/error-related statement with a nested context clause: unknown.
+[32] TASK: Stage 1; invalid attempts 5.
+[33] Initial context/stage clause unknown. agent_4 defines B as SIGNAL by a partly unknown control description. Cost(B) is 3. Requests everyone to report an unknown power-related item.
+[34] agent_7 defines C as DRAIN and D as CRANK through partly unknown descriptions. CRANK requires DRAIN completed. Requests everyone to report an unknown power/control-related item.
+[35] Completed([opaque code/interface object]); exact object unknown. agent_5 defines B as DRAIN through a description referring to agent_2's earlier name. Cost(agent_5's B) is 2, under unresolved prefix.
+[36] Completed(code/interface object 1), exact expression uncertain. Reports a recurrent charge/status-reading expression's value as 4. Directive to everyone concerning execute/use of a control, with agent_3 indicated; exact requested action and polarity unknown.
+[37] agent_2 defines C as DRAIN and D as SIGNAL using partly unknown descriptions. SIGNAL requires DRAIN completed.
+[38] agent_0 defines B as BOOT through a partly unknown description. BOOT costs 2. Directive to everyone concerning an unknown execute/use action, with agent_0 indicated.
+[39] agent_1 defines B as CRANK. Increment(B) is 3. Its cost is an opaque expression, plausibly 'none before B'/no upfront charge, not a literal decoded 0. Asks what CRANK requires.
+[40] agent_6 defines B as BOOT and C as SIGNAL. BOOT requires SIGNAL completed. Final token group 𘛚𗐬 unknown.
+[41] Asks what SIGNAL requires. Asks an additional question involving reporting/gain/result and a nested expression; exact wording unknown.
+[42] agent_7 identifies its DRAIN with agent_5's DRAIN, under unresolved prefix. Announces trying its DRAIN.
+[43] Reports charge/status-reading value 4. agent_3 announces an intended action on agent_2's DRAIN; exact action predicate uncertain.
+[44] TASK: Stage 1; invalid attempts 6.
+[45] DRAIN costs 2. Identifies own DRAIN with agent_7's DRAIN. Directive to everyone concerning a report/relation involving agent_7's CRANK; exact directive unknown.
+[46] Ordering relation: agent_7's DRAIN before agent_7's CRANK; an identity/distinction relation between agent_7's CRANK and agent_2's SIGNAL, with unresolved prefix; agent_2's SIGNAL before own BOOT. agent_0 announces trying agent_7's DRAIN.
+[47] TASK: Stage 1; invalid attempts 7.
+[48] agent_2 announces trying its DRAIN, followed by unresolved 𗛱 𗋕.
+[49] TASK: Stage 1; invalid attempts 8.
+[50] agent_6 announces trying agent_5's DRAIN. Three relations using 𗴢: agent_1's CRANK versus agent_5's DRAIN; own SIGNAL versus agent_1's CRANK; own BOOT versus own SIGNAL. Probably says these are different/distinct controls.
+[51] TASK: Stage 1; invalid attempts 9.
+[52] agent_1 identifies own CRANK with agent_7's CRANK. Requests agent_0 to try agent_2's DRAIN and report an expression involving 𗴢 and value/result; exact report request unknown.
+[53] agent_7 says DRAIN completed. Equivalence relation between own CRANK and agent_1's CRANK, under unresolved prefix. Announces an intended action on own CRANK.
+[54] agent_4 announces an intended action on agent_1's CRANK.
+[55] TASK: Stage 1; invalid attempts 10.
+[56] Reports charge/status-reading value 2. agent_3 announces trying agent_1's CRANK.
+[57] TASK: Stage 1; invalid attempts 11.
+[58] agent_0 reports a result/success expression concerning its action on agent_7's DRAIN. Announces an action on agent_7's CRANK. Result polarity unknown.
+[59] TASK: Stage 1; invalid attempts 12.
+[60] Equivalence relation between agent_1's CRANK and agent_7's CRANK, prefix unresolved. agent_5 announces trying agent_1's CRANK. Requests agent_7 to report whether its DRAIN is completed.
+[61] TASK: Stage 1; invalid attempts 13.
+[62] agent_2 reports a result concerning its action on DRAIN under prefix 𗈇, possibly a failure but not securely decoded. Announces trying agent_1's CRANK.
+[63] TASK: Stage 1; invalid attempts 14.
+[64] agent_7 makes an unknown context/stage statement about its CRANK. Announces trying agent_2's SIGNAL.
+[65] agent_1 announces trying agent_2's SIGNAL.
+[66] TASK: Stage 1; invalid attempts 15.
+[67] Reports charge/status-reading value 5. agent_3 reports a result concerning its action on agent_1's CRANK under prefix 𗈇, exact polarity unknown. Announces trying agent_2's SIGNAL.
+[68] TASK: Stage 1; invalid attempts 16.
+[69] agent_6 reports a result concerning its attempt on agent_5's DRAIN under prefix 𗈇. Announces trying own SIGNAL.
+[70] TASK: Stage 1; invalid attempts 17.
+[71] agent_4 reports a result concerning its action on agent_1's CRANK. Announces an intended action on own SIGNAL. Exact result polarity unresolved.
+[72] TASK: Stage 1; invalid attempts 18.
+[73] agent_5 reports a partly unknown past/completion/action expression concerning agent_1's CRANK. Announces an action on agent_4's SIGNAL.
+[74] TASK: Stage 1; invalid attempts 19.
+[75] agent_0 reports a result concerning its action on agent_7's CRANK under prefix 𗈇. Announces an action on agent_2's SIGNAL.
+[76] TASK: Stage 1; invalid attempts 20.
+[77] agent_2 reports a result concerning its action on agent_1's CRANK under prefix 𗈇. Announces an action on agent_0's BOOT.
+[78] TASK: Stage 2; invalid attempts 20. Exit controller activated.
+[79] agent_7 reports agent_2's SIGNAL completed. Announces an intended action on agent_0's BOOT.
+[80] TASK: Stage 2; invalid attempts 21.
+[81] Reports charge/status-reading value 2. agent_3 announces trying agent_0's BOOT. The reading may have been generated before the public stage transition.
+[82] TASK: Stage 2; invalid attempts 22.
+[83] agent_1 reports a result concerning its action on agent_2's SIGNAL, exact polarity unresolved. Announces an intended action on agent_0's BOOT.
+[84] TASK: Stage 2; invalid attempts 23.
+[85] agent_6 gives STAR's increment/offset as 3 and value as 7. Both have unresolved suffix 𗛱 𗋕. Final 𘛚𗐬 unknown.
+[86] agent_4 gives a new/change/offset-associated value for own SUN as 4, then SUN's exit-context value as 6. Asks the offset of a descriptive object in the exit context; exact object unknown, possibly MOON (low confidence).
+[87] agent_0 gives MOON's value as 9 in a compound involving an offset-related expression. Asks the offset of a partly unknown exit-related expression.
+[88] agent_2 reports agent_0's BOOT completed. Gives WAVE's value as 9 in an offset-related compound, followed by unresolved suffix. Asks an offset question about a partly unknown exit-related object.
+[89] agent_5 says exit position 2 displays the associated/base symbol of agent_6's STAR. Requests everyone to report an unknown exit order/indexed-object item.
+[90] agent_7 says exit position 4 displays agent_3's SUN. Requests everyone to report an unknown exit order/indexed-object item.
+[91] agent_3 says exit position 1 displays the associated/base symbol of agent_2's WAVE.
+[92] agent_6 asks two questions with incompletely decoded predicate 𗦎: one about agent_0's MOON at exit, one about agent_2's WAVE at exit. Likely requests their digits/values; exact question unknown.
+[93] agent_4 says exit position 2 has value 7 and exit position 4 has value 6. Makes two questions/requests about an exit-related indexed operation/object: one contains unknown 𘞝, the other numeral 3. Exact requested actions unknown.
+[94] agent_1 says exit position 3 displays the associated/base symbol of agent_0's MOON. Asks MOON's value in that exit context. Modifier 𘂭 is unresolved.
+[95] agent_5 says exit position 2 has value 7. Asks what exit position 3 displays.
+[96] agent_0 says MOON's offset is 2, with unresolved suffix; its exit value is 9. Asks what exit position 3 displays.
+[97] agent_2 says exit position 1 has value 9. Asks what exit position 3 displays.
+[98] agent_7 gives value 6 for an expression containing 𘐅, 4, and exit context; likely exit position 4, but its noun differs from the usual position expression. Asks/requests an exit-related indexed operation involving 3.
+[99] agent_3 gives agent_2's WAVE value as 7 at exit. This is the literal apparent claim, NOT normalized to the expected 9; an unresolved prefix/scope qualification remains possible. Asks/requests an exit-related indexed operation involving 3.
+[100] TASK: Stage 2; invalid attempts 24.
+[101] agent_6 gives exit position 3 value 9. Announces trying a code/interface expression with unknown modifier 𘂭 in the exit context. The four-digit submission itself is not directly recovered.
+[102] TASK: Stage 3; invalid attempts 24. Escaped.
+
+3. THE TASK
+
+[H] The observed log fits the staged Storm Shelter task. Agents pool cabinet symbol identities and digits, exchange power costs and prerequisites, attempt controls, then exchange exit-position information and numerical values. Public feedback confirms escape.
+[H] Cabinet communication supports SUN=2, MOON=7, STAR=4, WAVE=8 and position order SUN/MOON/STAR/WAVE, yielding 2748. Stage changes to 1 at [22] without invalid attempts. The four digits are reconstructed from separate utterances; we have not decoded a literal full-string '2748' utterance.
+[H/M] Power communication supports DRAIN cost 2, CRANK gain 3, SIGNAL cost 3 and prerequisite DRAIN, BOOT cost 2 and prerequisite SIGNAL, and CRANK prerequisite DRAIN. The CRANK no-upfront-cost clause is only partially translated. Agents expend considerable communication on binding, equating, distinguishing, and ordering locally named controls.
+[H] The invalid count rises from 0 to 20 before exit activation. Agent_3's recurring reading expression takes values 4, 4, 2, 5, 2. These fit DRAIN, CRANK, SIGNAL in sequence; BOOT succeeds by [78]. The required successful sequence agrees with DRAIN → CRANK → SIGNAL → BOOT and the briefing's charge trace 4 → 2 → 5 → 2 → 0. The final 0 is not clearly reported in the log.
+[H/M] Successful actions cannot safely be assigned to individual speakers by adjacency. Announcements, private actions, and generated reports can overlap. Some utterances apparently concern duplicates or stale results. The reading 2 after exit activation is not by itself a contradiction of the simulator's rules.
+[H] Exit-position statements support WAVE/STAR/MOON/SUN. Explicit or resulting-value statements support 9/7/9/6, yielding 9796. Directly decoded offsets include STAR+3, SUN+4, MOON+2; WAVE's +1 is consistent with its base 8 and reported result 9, but is not as directly stated in our partial translation as in the supplied briefing.
+[H/M] Message [99] apparently gives WAVE's exit value as 7, conflicting with other decoded values and the expected solution. This may be an agent error or an unresolved scope/prefix issue. It is not silently repaired.
+[H] Invalid attempts reach 24. Stage 3 at [102] confirms escape. [101] announces an exit-code attempt, but does not expose a directly decoded four-digit string. The briefing independently supplies successful code 9796; that fact alone does not prove an exact translation of the final action expression.
+
+4. EVIDENCE
+
+[H] Recurrent syntax is stronger evidence than agreement with the expected puzzle answer. Across agents, 𘍢, 𘑰, 𘑐, 𘄗 occupy consistent clause positions; 𘗊/𗭋 delimit increasingly complex expressions. This supports a predicate/argument language rather than a flat character cipher.
+[H] Local naming is demonstrated by contradictions under a global-name reading. Agent_0's 𗢋𗠉 has value 7, agent_4's has value 2, and agent_6's has value 4. Explicit references 𗼾 agent_0 𗢋𗠉 and 𗼾 agent_6 𗢋𗠉 subsequently occur in the appropriate MOON and STAR position statements. Similarly 𗮆𘋷 is associated with several different controls whose costs and prerequisites disambiguate local scopes.
+[H] Reciprocal equivalences independently strengthen those bindings: [14]/[17] link agents 2 and 7's WAVE names; [16]/[18] link agents 1 and 6's STAR names; [15] links agents 3 and 4's SUN names. Exit-position reports reuse these explicit references.
+[H/M] Numerals are constrained across several contexts: positions establish 1–4, base-value clauses establish 2/4/7/8, recurrent readings support 4/2/5/2, and exit values support 6/7/9. STAR's description appears to contain 5 independently of the reading sequence. The proposed 0 remains substantially weaker and is not needed to obtain either four-digit code.
+[H/M] Cost, increment, and prerequisite roots are differentiated by their distributions. 𗅪 accompanies SIGNAL 3, DRAIN 2, and BOOT 2; 𗂤 accompanies CRANK 3 and later offsets; 𗥔 takes a nested completed-action clause in [34], [37], [40]. These structural repetitions, not only private-clue ownership, support the glosses.
+[H/M] The two 𗷿 pairs in [46] are DRAIN→CRANK and SIGNAL→BOOT, supporting 'before'. Every 𗴢 pair in [50] consists of distinct controls, supporting 'different', not equality. Exact general lexical meanings still need independent examples.
+[M] The leading-prefix system remains unresolved. Some apparent failure reports share a prefix with descriptive definitions. Inferring prefix meanings simply from whether a supplied task rule is true would be circular. Our translations therefore preserve uncertainty instead of forcing fluent polarity.
+[M] Action utterances are treated as plans/attempts or reports, not automatically as simulator outcomes. Counters, stage transitions, and possibly stale readings show why assigning every success to the nearest message is unjustified.
+
+What would change our minds: examples that vary only 𘌿/𗈇/𘑌 would determine the missing clause-status axis. Independent use of 𗋕 and 𗛱 𗋕 would distinguish zero/decimal from temporal/current/whole interpretations; [48] already argues against assuming decimal syntax. Explicit definitions of indexed interface objects would resolve 𘕼, 𗡭, and their modifiers. A reliable translation of [99] could show an unrecognized scope qualification rather than a mistaken WAVE value. The original file could revise exact word glosses and naming conventions. None of these unresolved points undermines the strong evidence for structured clauses, sender-scoped names, explicit cross-agent reference, and numerical clue exchange.

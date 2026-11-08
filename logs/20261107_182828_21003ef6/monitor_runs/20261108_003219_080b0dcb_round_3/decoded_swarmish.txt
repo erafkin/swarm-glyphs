@@ -1,0 +1,202 @@
+## 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered copy of the file. The clause structure is much more securely decoded than the content vocabulary. Symbols used below stand for explicitly UNKNOWN words, not claimed English translations. Confidence labels concern decoding, not whether the agents' statements were true.
+
+### Writing and grammar
+
+- **HIGH:** The normal writing unit is a space-separated two-glyph token. Many tokens share their first glyph. Spaces separate tokens, not necessarily whole English-like words. Exceptions include literal `agent_N` identifiers, three short unspaced strings in messages 2/7/8, and the unusual message 35.
+- **HIGH:** `𘅌𗐪 𘅌𘝚` opens a clause; a predicate follows. `𘅌𘗣` closes it. Nested clauses are explicitly closed, so several closing tokens may occur together. The separate meanings of the two opening tokens are **UNKNOWN (LOW)**; they could include clause opening, mood, or predicate introduction.
+- **HIGH:** `𘅌𗎿` introduces a first/main argument, often an agent identifier or indexed object. Calling it a subject marker is **MEDIUM**.
+- **HIGH:** `𘅌𘊌` introduces a second argument, often a value, description, or proposed destination/state. Calling it an object marker is **MEDIUM**.
+- **HIGH:** `𘅌𗜑` introduces an embedded clause used as an argument or descriptive complement. Whether this means “that,” “whose,” or quotation is **LOW**. This marker is not mandatory for all nesting: clauses also occur within other clauses without it, notably in 8.
+- **HIGH:** `𘅌𗸽` introduces an additional argument/qualifier. Its exact relation (“with,” “by,” “at,” etc.) is **LOW**.
+- **MEDIUM:** `𘅌𗌸` is another linking/qualifying marker; exact meaning unknown. We distinguish it from `𘅌𗸽`.
+- **MEDIUM structural / LOW semantic:** `𘅌𗤴` introduces an additional phrase in the embedded clause in 34. Its exact argument role and English meaning are unknown.
+- **MEDIUM:** `𘅌𘋟` marks a further participant, possibly recipient/“to,” in 38–39.
+- **MEDIUM:** `𘅌𗵫`, `𘅌𗽕`, and `𘅌𘔠` are external clause/discourse operators, not ordinary arguments. Exact meanings unknown; question/request/negation/connective readings are **LOW**.
+- **MEDIUM:** `𘅌𘉝` before two agent identifiers in 36 is a grouping/list marker; exact meaning unknown.
+- **MEDIUM:** `𗐪𗿋` is a standalone terminal/discourse marker. It frequently ends informational messages. Its English meaning is unknown.
+- **HIGH:** `agent_0` etc. are literal participant identifiers and are not encoded by the glyph-pair lexicon.
+- **LOW:** First-glyph families may classify vocabulary or index a codebook. `𘅌` strongly clusters grammatical tokens; `𘔠` strongly clusters numeral-like tokens. It is NOT established that all `𗌿` tokens are verbs, all `𗡒` tokens nouns, or all `𘆣` tokens adjectives: several appear in multiple syntactic roles.
+
+A typical clause therefore has the skeleton:
+“[unknown predicate] — first argument: X; second argument: Y; optional qualifiers.”
+An embedded clause can itself occupy X or Y. Omitted first arguments occur. This is an explicitly marked relational notation rather than demonstrably English word-for-word substitution.
+
+### Recurrent vocabulary: secure identities, uncertain meanings
+
+For readable partial translations, the following aliases are used. The mapping from alias to glyphs is **HIGH**; English suggestions are separately rated.
+
+| Alias | Glyphs | Best meaning / confidence |
+|---|---|---|
+| R | `𗌿𗄼` | General relation linking entity/description and property/value; “has/is/reports” **LOW–MEDIUM**. Exact verb unknown. |
+| P | `𗡒𗏻` | Unknown entity/concept, often with embedded descriptive clause; **LOW**. |
+| Q | `𗡒𘜇` | Unknown embedded predicate/concept; **LOW**. |
+| X | `𗡒𗸽` | Unknown property/entity; **LOW**. |
+| VAL | `𗡒𗸪` | Value/quantity-like noun **MEDIUM**, exact word unknown. |
+| I | `𘆣𘎛` | Indexed-item label preceding numeral-like tokens; “item/record/node” **LOW**. |
+| INIT | `𘆣𗜑` | Modifier used in early value reports; “initial/old” **LOW**. |
+| PLUS | `𘆣𗉜` | Late quantity modifier; possibly positive/+ **LOW**. |
+| MINUS | `𘆣𗎿` | Contrasting late modifier; possibly negative/− **LOW**. These names do not establish signs. |
+| FIELD | `𗌿𘝚 𘆣𗉜 𘆣𗭯` | Unknown late-phase field followed by a numeral; exact interpretation **LOW**. |
+| L | `𗿃𗇾` | Unknown entity/alias; **LOW**. |
+| M | `𗿃𘝚` | Another unknown entity/alias; **LOW**. |
+| K | `𗿃𘅠` | Frequent qualifier of reports/actions; possibly status/evidence/deictic word; **LOW**. |
+| DO | `𗌿𗗅` | Action with agent as first argument and named state/entity as second; “move/go/set” **LOW**. |
+| DO2 | `𗌿𗯧` | Distinct action predicate with similar arguments; exact meaning **LOW**. |
+| CUR | `𗌿𗛢` | Relation between state/entity and agent in a qualifier; “current/leave/at” **LOW**. |
+| ACK | `𗌿𗃚` | Predicate applied to a state/entity, sometimes qualified by agent; “observe/acknowledge” **LOW**. |
+| EDGE | `𘆣𗼛` | Relation connecting successive proposed states/entities; “route/edge/next” **LOW**. |
+| S | `𗿃𗏶` | Start-like named state/entity **LOW**. |
+| T | `𗌿𗲅 𗡒𗞉 𗌿𗐪` | Named state/entity, exact words unknown. |
+| U | `𗌿𗲅 𗌿𗌈 𗡒𘅊` | Another named state/entity, exact words unknown. |
+| V | `𗌿𗲅 𗡒𗚽` | Another named state/entity, exact words unknown. |
+| W | `𗌿𗲅 𗌿𗩠 𗡒𗎿` | Another named state/entity, exact words unknown. |
+
+The interpretation of S–W as states/locations rather than ordinary compound phrases is **MEDIUM**; literal “rooms,” transaction stages, and operation names remain **LOW-confidence alternatives**. Other content tokens are retained literally in the translations and mean “unknown word/token,” not an English assertion.
+
+### Numeral-like system
+
+- **MEDIUM–HIGH:** The family `𘔠…` represents numeral-like atoms. Exact numerical values are not independently established.
+- **HIGH:** Four recurring indexed subjects are I nA, I nB, I nC, I nD.
+- **HIGH:** Alias table: nA=`𘔠𗵵`; nB=`𘔠𘎌`; nC=`𘔠𗌈`; nD=`𘔠𗊑`; nE=`𘔠𘉝`; nF=`𘔠𗡒`; nG=`𘔠𗂱`; nH=`𘔠𗢬`; nJ=`𘔠𗟎`; nZ=`𘔠𗏔`.
+- **LOW, speculative:** These might respectively be 1,2,3,4,5,6,7,8,9,0. This is an attractive ordering hypothesis, NOT a decoded decimal table. Translations retain symbolic values.
+- **LOW:** Raw strings `𗜑𗜑` (2), `𗜑𘖽` (7), and `𗜑` (8) might be literal numeric strings, possibly 11/10/1. Their meaning is unknown and distinct from the numeral-like family above.
+
+### Notation for partial English translations
+
+`R(a; b)` means “unknown relation R: first argument a, second argument b.” A dash means the argument is absent, not translated as a pronoun. `qual` reproduces the `𘅌𗸽` argument; `link` reproduces `𘅌𗌸`; `to` reproduces `𘅌𘋟` without claiming its exact English sense. `P[Q(…)]` means P followed by an explicitly embedded Q clause. Unknown tokens in quotation marks remain untranslated. Terminal `END` is the unknown marker `𗐪𗿋`.
+
+For recurring descriptions:
+- E1 = P with embedded Q whose second argument is `𗌿𗐪 𗡒𗪺`.
+- E2 = P with embedded Q whose second argument is `X 𘆣𘇩 𘆣𗽃`.
+- E3 = P with embedded Q whose second argument is `𗌿𗹫 𘆣𘋉`, followed within that clause by an embedded `𗌿𗻲` clause with second argument X.
+These are **HIGH-confidence structural abbreviations**, but the content words and exact semantic relation of the embedded clauses remain unknown.
+
+## 2. TRANSLATION
+
+These are deliberately partial English glosses. Formal labels preserve unknown vocabulary rather than disguising guesses as translations. All task messages are public English/JSON feedback, not Swarmish.
+
+1. Task: stage 0; zero invalid attempts.
+2. R(P followed by unknown raw `𗜑𗜑` and embedded Q(—; `𗌿𗐪 𗡒𗪺`); nF; link `𗌿𗼛 𘆣𗜑`). The embedded descriptor is E1-like. Exact meaning unknown.
+3. R(I nD; E1).
+4. R(`P X 𘆣𘋉`; `VAL INIT nB`).
+5. Q(`P I nB`; second argument `X 𘆣𘋉` followed by unknown content token `𗌿𗜑` and a nested clause with unknown predicate `𗌿𗎰`(—; —; qual `𗌿𘒄 𘆣𘂮`)). The nested clause has no marked first or second argument, only the qualifier. Exact attachment/meaning unknown; content token `𗌿𗜑` is distinct from embedding marker `𘅌𗜑`.
+6. R(I nC; E2).
+7. `𗿃𘏛`(—; L; link P followed by raw `𗜑𘖽` and embedded Q(—; `X 𘆣𘖾`; qual `𗌿𘒄 𘆣𘂮`)). Then R(L; `VAL INIT`; link nE). Unknown content.
+8. R(`P X` followed by raw `𗜑` and clause `𘆣𘚑`(—; `nG 𗌿𗹫 𘆣𘀝`); `VAL INIT nD`). Unknown content.
+9. R(I nA; E3).
+10. Four reports: R(I nA; VAL nB); R(I nB; VAL nE); R(I nC; VAL nD); R(I nD; VAL nF).
+11. Task: stage advanced to 1; zero invalid attempts.
+12. R(E1; VAL INIT; link nF). Then DO2(agent_2; `𗡒𘉫`).
+13. Task: stage 1; one invalid attempt.
+14. R(I nB; L). Then DO(`𗿃𘊫`; `𗌿𗲅 𗡒𘉫 𗡒𘙠`).
+15. Task: stage 1; two invalid attempts.
+16. R(E2; VAL INIT nD).
+17. Task: stage 1; three invalid attempts.
+18. Four reports: R(I nA; nB); R(I nB; nE); R(I nC; nD); R(I nD; nF). Unlike 10, these omit VAL.
+19. Task: stage 1; four invalid attempts.
+20. Four reports: R(I nA; VAL INIT nB); R(I nB; VAL INIT nE); R(I nC; VAL INIT nD); R(I nD; VAL INIT nF).
+21. Task: stage 1; five invalid attempts.
+22. Same four bare-number reports as 18: I nA→nB, I nB→nE, I nC→nD, I nD→nF, under R.
+23. Task: stage 1; six invalid attempts.
+24. Same four INIT-value reports as 20.
+25. Task: stage 1; seven invalid attempts.
+26. `𘆣𗡉`(`𗡒𘉫`; —). Then `𗌿𗚋`(`𗡒𗚽`; `𗡒𘅊 nC`). END. Meaning of both predicates unknown.
+27. `𘆣𗡉`(`𗡒𘉫`; —). `𗌿𗳵`(—; `𗡒𘅊 𗡒𗭵`; qual K). `𘆣𗵵`(`𗌿𗲅 𗡒𗚽`; embedded `𗌿𗳃`(—; `𗡒𗪺`)). END.
+28. `𘆣𗡉`(`𗡒𘉫`; —). R(`𗡒𘉫 𗡒𘅊`; `𗡒𘅊`; link nD; qual K). END.
+29. `𘆣𗡉`(`𗡒𘉫`; —). `𘆣𗵵`(W; embedded `𗦢𗒏`(V; —)). END.
+30. ACK(`𗡒𘉫`; —). `𗌿𗚋`(W; `nB 𗡒𘅊`). END.
+31. `𘆣𗡉`(`𗡒𘉫`; —). `𗿃𘖾`(—; S; link `𗌿𗲅` with embedded `𗌿𗳃`(—; `𗡒𗪺`)). `𗌿𗚋`(S; `𗡒𘅊 nB`). END.
+32. R(`𗌿𗲅 𗡒𗞉 𗌿𗐪`; `𗌿𘔃 𗡒𘅊 nC`). `𗌿𗏾`(T; `𗡒𘅊 nZ`; qual INIT). END.
+33. Unknown operator `𘅌𗵫`: R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊`; link `𗌿𗼛 𗿃𗨥`; qual K).
+34. `𘆣𗡉`(`𗡒𘉫`; —). `𘆣𗵵`(embedded `𗌿𗌈`(—; `𗡒𘅊`, additional-marker `𘅌𗤴`, `𗡒𗞉 𘆣𘋉`); embedded `𗌿𗳃`(—; `𗡒𗪺`)). END. Exact special marker and meaning unknown.
+35. Unknown. Unusual non-clausal string: `𗽕𘒄 𗂄𘍍 𗌿𗏾 𗷤𘉮 𗌿𘄘 𗑴𗍽 𗌿𗭵 𗡒𘅊 𗌿𗭵 𗋟𗳵 𘉝𘉝 𗕴𗊢`. It repeats `𗌿𗭵` and mentions vocabulary also found in ordinary clauses; no reliable English reading.
+36. Unknown operator `𘅌𗽕`: `𗌿𗒏`(group-marker `𘅌𘉝` agent_1 agent_7; `𗌿𗭵 𘆣𘉮`; qual `𗡒𗭵 𗡒𘅊`).
+37. Unknown operator `𘅌𗵫`: `𗌿𗻲`(`𗌿𗲅 𗿃𗨥`; `𗡒𘅊`).
+38. DO(agent_5; S; qual K). Then `𗌿𗣎`(agent_5; `𗌿𗻲 𗌿𗭵 𘆣𘉮`; to agent_7).
+39. DO(agent_0; S). Unknown operator `𘅌𗽕`: `𗌿𘎛`(`𗦢𗦴 𗌿𗪐 𘆣𘒳`; —). `𗌿𗣎`(—; `𗌿𗭵 𗡒𘅊 𗌿𗭵`; to agent_7).
+40. Task: stage 1; eight invalid attempts.
+41. DO(agent_4; S; qual K). Unknown operator `𘅌𗽕`: EDGE(T; V).
+42. Task: stage 1; nine invalid attempts.
+43. DO(agent_1; S; qual K). EDGE(S; U). EDGE(U; V). EDGE(V; W).
+44. Task: stage 1; ten invalid attempts.
+45. DO(agent_7; S; qual K). Unknown standalone `𗂄𘚒`. EDGE(S; T). EDGE(T; V). EDGE(V; W).
+46. Task: stage 1; eleven invalid attempts.
+47. DO(agent_2; S; qual K). EDGE(S; T).
+48. Task: stage 1; twelve invalid attempts.
+49. R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊`; link nB; qual K). ACK(S; —). DO(agent_3; `U 𗡒𗞉 𘆣𘋉`).
+50. CUR(`𗌿𗲅 S`; —; qual agent_0). DO(agent_0; T; qual K). Unknown operator `𘅌𗽕`: `𗌿𘎛`(`𗦢𗦴 𗌿𗪐 𘆣𘒳`; —).
+51. Task: stage 1; thirteen invalid attempts.
+52. Unknown operator `𘅌𗽕`: DO(agent_7; `𗌿𗲅 𗡒𗞉 𘆣𘋉`). EDGE(`𗌿𗲅 𗡒𗞉 𘆣𘋉`; V). `𗌿𘎛`(agent_6; —).
+53. CUR(`𗌿𗲅 S`; —; qual agent_1). DO(agent_1; T; qual K).
+54. Task: stage 1; fourteen invalid attempts.
+55. ACK(S; —). R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊 nB`). DO(agent_5; T; qual K).
+56. Task: stage 1; fifteen invalid attempts.
+57. CUR(S; —; qual `𗌿𗲅 agent_4`). DO(agent_4; U; qual K).
+58. Task: stage 1; sixteen invalid attempts.
+59. CUR(S; —; qual `𗿃𘊫`). DO2(agent_7; U; qual K). Unknown operator `𘅌𗽕`: `𗌿𘎛`(`𗦢𗦴 𗌿𗪐 𘆣𘒳`; —).
+60. Task: stage 1; seventeen invalid attempts.
+61. ACK(U; —). R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊 nG`; qual K). DO(agent_3; V; qual K).
+62. CUR(S; —; qual agent_2). `𗌿𘎛`(agent_2; —). Unknown operator `𘅌𗵫`: ACK(U; —; qual agent_0).
+63. CUR(T; —; qual agent_1). DO2(agent_1; V; qual K).
+64. Task: stage 1; eighteen invalid attempts.
+65. Unknown operator `𘅌𗽕`: `𗌿𗒏`(agent_7; `𗌿𘔃 U`). `𗌿𘎛`(agent_6; —).
+66. CUR(U; —; qual agent_5). DO(agent_5; V; qual K).
+67. Task: stage 1; nineteen invalid attempts.
+68. CUR(U; —; qual agent_0). DO(agent_0; V; qual K). Unknown operator `𘅌𗽕`: `𗌿𘎛`(`𗦢𗦴 𗌿𗪐 𘆣𘒳`; —).
+69. Task: stage 1; twenty invalid attempts.
+70. CUR(U; —; qual agent_4). DO(agent_4; V; qual K).
+71. Task: stage 1; twenty-one invalid attempts.
+72. CUR(U; —; qual agent_7). Unknown connective `𘅌𘔠`: ACK(U; —; qual agent_3). DO2(agent_7; V). Unknown operator `𘅌𗽕`: `𗌿𘎛`(`𗦢𗦴 𗌿𗪐 𘆣𘒳`; —).
+73. Task: stage 1; twenty-two invalid attempts.
+74. ACK(V; —). R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊 nB`; qual K). DO(agent_3; W; qual K).
+75. Task: stage advanced to 2; invalid attempts remain twenty-two.
+76. DO(agent_2; W; qual K).
+77. Task: stage 2; twenty-three invalid attempts.
+78. CUR(V; —; qual agent_5). DO2(agent_5; W).
+79. Task: stage 2; twenty-four invalid attempts.
+80. DO(agent_6; W; qual K).
+81. Task: stage 2; twenty-five invalid attempts.
+82. CUR(V; —; qual agent_1). Unknown connective `𘅌𘔠`: ACK(V; —; qual agent_3). DO2(agent_1; W).
+83. Task: stage 2; twenty-six invalid attempts.
+84. R(`P X 𘆣𘋉`; FIELD nD). R(same source; VAL PLUS nJ). END.
+85. R(L; FIELD; link nB). R(L; VAL MINUS; link nH). END.
+86. R(I nD; E3; qual K). END.
+87. ACK(W; —). R(`𗡒𗭵 𗡒𘅊`; `𗡒𘅊 nZ`). R(I nA; E1; qual `𗡒𗽕 𘆣𗚽`). END.
+88. R(E1; FIELD nA). R(E1; VAL PLUS nH). END.
+89. R(I nC; L; qual K). R(I nC; VAL PLUS nH; qual K). END.
+90. R(E2; FIELD nC). R(M; VAL MINUS nE). END.
+91. R(I nB; E2; qual K). END.
+92. Unknown operator `𘅌𗵫`: R(`𗡒𗎿`; `𗡒𗩨 P 𗿃𗨥`; qual K).
+93. R(I nD; VAL MINUS nJ; qual K). END.
+94. R(I nA; VAL PLUS nH; qual `𗡒𗽕 𘆣𗚽`). R(I nD; VAL PLUS nJ; same qualifier). END.
+95. Four reports: R(I nA; VAL PLUS nH); R(I nB; VAL PLUS nE); R(I nC; VAL PLUS nH); R(I nD; VAL PLUS nJ).
+96. Task: stage advanced to 3; invalid attempts remain twenty-six.
+
+## 3. THE TASK
+
+**High confidence:** The agents were coordinating a task with three completed stages, indexed 0→1→2→3, and an invalid-attempt counter. The task's actual wording is absent. They exchanged facts about four indexed items and their descriptions/values, then made numerous action-like proposals, then reported revised descriptions and a final four-value aggregate.
+
+**Medium confidence:** Initial aggregate reports (10,18,20,22,24) give item/value associations nA→nB, nB→nE, nC→nD, nD→nF. Some explicitly mark values with INIT and some omit the value noun. The final aggregate (95) gives nA→PLUS nH, nB→PLUS nE, nC→PLUS nH, nD→PLUS nJ. If the speculative decimal table were right, those would be [2,5,4,6] and [8,5,8,9], but the transcript does not independently prove those digits.
+
+**High confidence as a report pattern, lower as a world fact:** Item nA is initially described by E3 (9), but finally by E1 (87). Item nD is initially described by E1 (3), but finally by E3 (86). This is consistent with rearranging/reidentifying contents, but could also reflect corrected reports. Item nC initially has E2 (6); item nB finally has E2 (91). Agents 0 and 4 also use shorter aliases/compounds for entities. We cannot confidently translate the underlying object attributes.
+
+**Medium confidence:** Stage 1 involves a sequence of action attempts concerning S, T, U, V, W. Agent 3's messages 49,61,74 are the conspicuous successful-looking steps: a proposal involving U, then V, then W. Message 74 is followed by the stage-2 transition. Many other agents propose old/already-mentioned states or alternatives and receive invalid feedback. A shared global state/path could explain this without any special privilege for agent 3. It is also possible that agent 3 has a special role; the log does not establish that. Absence of invalid feedback after 49 and 61 is weaker evidence than the explicit stage advancement after 74.
+
+**Low confidence alternatives:** The named compounds might be locations in a navigation task, protocol/workflow states, or operation names. The indexed numeric reports and changing descriptions favor some structured state/data manipulation, but are insufficient to choose a unique task genre. We have not decoded enough vocabulary to claim a shortest-path puzzle, transaction protocol, or specific arithmetic operation.
+
+**High confidence:** After stage 2 begins, four stale-looking W attempts still increase the invalid count. Messages 84–95 instead exchange descriptions and two kinds of numeric fields, culminating in the four-item aggregate. Stage 3 is reached with 26 invalid attempts. This is evidence of task completion/progression, not proof that every preceding statement was correct.
+
+## 4. EVIDENCE
+
+1. **Clause bracketing:** Repeated opening tokens, positional argument markers, and balanced nested closing tokens support an explicit relational grammar. For example 6 is a clause whose second argument contains an embedded Q clause; 9 adds another nested clause inside that description. This evidence does not depend on knowing the task.
+2. **Controlled variation:** Messages 10,18,20,22,24 use the same four first arguments and the same four numeral-like outputs while adding/removing VAL and INIT. This isolates those tokens from the underlying indexed associations. It supports a value/modifier interpretation but not an exact English word.
+3. **Embedded-descriptor recurrence:** E1/E2/E3 recur intact as arguments, allowing precise co-reference across initial and final reports without translating their content. E1 appears with I nD initially and I nA finally; E3 shows the reverse. This is evidence of what was reported, not proof of a physical swap.
+4. **Action frames:** Literal agent identifiers repeatedly occupy the first argument of DO/DO2; the same compounds occupy their second argument and arguments of EDGE/CUR/ACK. This supports action/state structure. Exact verbs and room names remain guesses.
+5. **Feedback chronology:** Successful-looking 49→61→74 contrasts with intervening failures aimed at earlier/current alternatives. A global shared-state interpretation accounts for this pattern. Feedback by itself does not translate a glyph, and no lexical assignment above is justified solely by having a plausible task solution. Invalid-attempt feedback tests task validity, not necessarily grammatical validity.
+6. **Numeral family:** `𘔠` tokens recur in indexed sources and scalar outputs, with a small inventory and systematic reuse. This supports numeral-like status. It does not prove their decimal ordering. A single independently anchored numerical expression could overturn the tentative 1–9/0 table.
+7. **Contrasting late modifiers:** PLUS/MINUS occur in the same VAL frame. The final aggregate consistently uses PLUS, but 85/90/93 use MINUS. They must not be silently normalized. A positive/negative interpretation is plausible, not established.
+8. **Exceptions preserved:** Message 35, the raw strings in 2/7/8, standalone operators, the marker in 45, and unfamiliar lexical tokens remain unknown. They could reveal a literal-text escape system, a second encoding mode, ordinary shorthand, or mistakes by the agents. We do not treat them as solved.
+
+What would change this reconstruction: evidence that openings are ordinary content words rather than structural markers; examples demonstrating different argument roles; an independently translated number; lexical anchors for the named states or unknown predicates; or a private report explaining the unusual raw strings. The most robust result is recovery of clause structure and recurrent expression identities. Exact English vocabulary and the full task remain substantially uncertain.

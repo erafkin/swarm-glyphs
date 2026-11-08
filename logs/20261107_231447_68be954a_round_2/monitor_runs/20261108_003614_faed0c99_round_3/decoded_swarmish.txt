@@ -1,0 +1,168 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered copy of the file. The syntax is much better established than the vocabulary. Confidence labels apply to the stated interpretation, not merely to the observation that a pattern occurs.
+
+## Writing and construction
+
+- **HIGH:** Messages use space-separated Tangut-looking glyph tokens, plus literal identifiers such as `agent_3`. Spaces delimit tokens; a multi-token expression can nevertheless function as one argument or predicate.
+- **HIGH:** `𗝘` ends a clause/sentence. A message can contain several such clauses.
+- **HIGH:** A common surface frame is `F M P 𗇋 A [𗢘 B] [qualifiers] 𗝘`. The frequent F tokens are `𗧟`, `𘍰`, `𗎧`, and `𗖉`; the frequent M tokens are `𘎙` and `𘀿`. P can contain multiple tokens.
+- **HIGH:** `𗇋` marks a boundary between the preceding head and following arguments. `𗢘` separates argument/content slots. Neither can safely be translated globally as English “is.”
+- **HIGH:** `𘒍 … 𗳯` brackets an embedded expression. Nesting occurs in message 14. Embedded expressions need not have the full ordinary clause frame.
+- **MEDIUM:** `𘎙` marks an assertion/report; `𘀿` marks a question, request, or directive. The distinction between asking for information and requesting an action is not recovered.
+- **MEDIUM:** The four F tokens select semantic domains, construction families, or codebooks. Tentative labels: `𗧟` = entity/classification/information family; `𘍰` = relation/action family; `𗎧` = status/control/coordination family; `𗖉` = quantity/comparison family. These are descriptive labels, not decoded English words.
+- **MEDIUM:** `𗉁` introduces attribution, naming, or association with an agent. Its occurrence before `𗝭` in message 28 shows that the associated identifier need not literally be an agent name.
+- **MEDIUM:** `𗬀` marks a recipient, source, or other oblique participant, often an agent. “To” is a useful provisional gloss but its direction is not certain. Its position varies.
+- **MEDIUM:** `𗘓` introduces a trailing qualifier. The values `𗱹`, `𗭎`, and `𘔃` are distinct but untranslated. They might concern aspect, intention, evidential status, or mode. In particular, `𗭎` is not securely decoded as “execute.”
+- **LOW:** `𘁅` introduces some qualification/index/state of the preceding expression. Frequent values are `𘒾` and `𗋄`; neither is securely translated.
+- **LOW:** `𗝒` links or qualifies an expression, sometimes with an embedded expression following it. Its logical meaning is unknown.
+- **LOW:** `𘖨` introduces a condition/qualification; “provided that” is a possibility, not a recovered meaning.
+- **HIGH, surface observation:** Requests can omit `𗇋`, and participant/content ordering varies. The common frame is not an obligatory rigid template.
+- **HIGH, surface observation; LOW semantics:** `𗠫` occurs before `𘎙` in message 53; `𘆋` occupies an unusual modality-like position in 66/69; `𗃐` does so in 70. Their meanings are unknown.
+
+## Contextual vocabulary recovered or suspected
+
+Meanings should be scoped to constructions. A glyph used as a numeric value may also occur as a predicate; this could be a namespace convention or ordinary polysemy. We cannot reconstruct the exact mechanism.
+
+- **MEDIUM:** `𗧟 𘎙 𗶢 𗇋 X 𗢘 T` introduces/classifies X with a type or property T. Exact meaning of `𗶢` and the type values is unknown. Common T values are `𗙥`, `𘔘`, `𗺌`, and the composite `𗚷 𗺌`; `𗙢` occurs once.
+- **MEDIUM:** `𗖉 𘎙 𗕥 𗇋 X 𗢘 V` asserts an unknown quantity/comparison predicate involving X and V. It may express a bound or constraint rather than a measured value; equality is not established. Exact predicate—value, cost, resource, comparison, etc.—is unknown.
+- **LOW, only in scalar-looking argument positions:** `𗋮 ≈ 0`, `𗚷 ≈ 1`, `𗥼 ≈ 2`, `𗬅 ≈ 3`. These assignments fit a hypothetical resource interpretation of the changing reports about `𘝲`, but have no independent numerical anchor. Other scalar-looking tokens `𗿣`, `𗜀`, `𗃲`, `𘆏`, `𗬓`, `𘞟` have unknown exact values.
+- **LOW:** `𗕛` may be a unary negative sign in numeric expressions, as in `𗕛 𗥼` and `𗕛 𗃲`.
+- **LOW:** `𗢻` is an arithmetic/comparison connective, occurring between scalar-looking expressions. Its exact operation and direction are unknown.
+- **LOW:** `𗬏 𗲕 X` and `𗬏 𗋄 X` are contrasting qualified quantities/attributes of X. Possibilities include before/after, input/output, or two indexed sides. No particular interpretation is established.
+- **MEDIUM:** `𗎧 𘎙 𗾄 𗇋 X` withdraws, corrects, or marks X obsolete. It is applied to an earlier identifier/report when the speaker substitutes another.
+- **LOW:** `𗎧 𘎙 𗃁 𗇋 X` concerns X being achieved, activated, completed, or otherwise in a relevant status. Exact meaning is unknown; “open” would be too specific.
+- **LOW:** `𘍰 𘎙 𗐢 𗇋 agent_n 𗢘 X 𗘓 𗭎` is an agent–target relation/action expression. It repeatedly accompanies trials by agent_3. Whether it reports, proposes, or performs an action is unresolved.
+- **LOW:** `𗍴 𗥬` and `𗍴 𗿚` are generic participant/group expressions, perhaps “everyone” or some subset. Exact meanings unknown.
+- **LOW:** `𗐢 𘆟 𗿚`, `𗐢 𗨨 𘉽`, `𗐢 𗨨 𘀦`, and `𗐢 𗶁 𗏞` are recurrent compound referents/expressions. Their shared first token does not establish their English meanings.
+- **HIGH, identification only:** Literal `agent_n` names identify agents. Other argument tokens are left as glyph identifiers below. Identical glyph expressions do not necessarily denote one globally unique physical object: agent-relative naming or conflicting observations remain possible. Alternatively, different numeric tails may be compatible constraints on the same referent rather than conflicting measurements.
+- **LOW / unknown:** All other lexical roots and composite expressions appearing below remain untranslated. In particular, the English names of objects, attributes, action verbs, directions, and task-specific concepts have not been securely recovered. There is no evidence sufficient to reconstruct a substitution alphabet or a complete English-to-Swarmish dictionary.
+
+# 2. TRANSLATION
+
+These are deliberately partial translations. `Declare X : T` means the classification construction above; `R[p](A; B)` means an asserted relation with **unknown predicate p**; `S[p](...)` means an asserted status/control-family clause with **unknown predicate p**; `N[p](X)=V` is bookkeeping for an unknown two-argument quantity-family predicate involving X and V. **The equals sign in that notation is not decoded equality: the predicate could express a value, bound, constraint, or other comparison.** `Ask F[p](...)` means a question/request in family F, not a known English verb. Glyphs retained in these glosses are untranslated, not English names. Square-bracketed qualifiers retain unknown material. “To” and “attributed to” use the provisional marker interpretations in section 1. Every line without recovered lexical meaning is therefore an explicit partial/unknown translation, not a claim of full decoding.
+
+1. **Task feedback:** stage 0; zero invalid attempts.
+2. Declare `𘆢 : 𗙥 𗚷`. R[`𗑌`](`𘆢`; `𘆟 𗿝`). S[`𗝣`](`𘆢`). Exact English content unknown.
+3. Declare `𗔛 : 𗙥`. R[`𗏞 𘀦 𘛂`](`𗔛` [qualification `𘁅 𘒾`]), with modifier `𗘓 𗱹`. S[`𗱇`](`𗔛`).
+4. Declare `𗀮 : 𗙥`, attributed to agent_3. R[`𗏞 𗷙 𘀦`](`𗀮` [qualification `𘁅 𘒾`]). S[`𘆽`](`𗀮`).
+5. R[`𗑌`](`𘆢`; `𘀦 𘒾`). Declare `𘆢 : 𗙥`, linked by `𗝒` to embedded assertion [`𘊀`](`𗝣 𗱇`; agent_6). N[`𗕥`](`𘔘 𘆢`)=`𗬅` (possibly 3). Meaning of the embedded assertion unknown.
+6. R[`𗖫`](agent_2; `𗑌 𘆟 𗿝`). Declare `𗔛 : 𗙢`. N[`𗕥`](`𗬏 𗔛`)=`𗿣`.
+7. Declare `𗔛 : 𗙥`, attributed to agent_4. R[`𗏞 𗷙 𘀦`](`𗔛`). N[`𗕥`](`𗔛`)=`𗥼` (possibly 2).
+8. Declare `𗔛 : 𗙥 𗱇`, attributed to agent_0. R[`𗏞 𘀦`](`𗔛`) [modifier `𗘓 𗱹`]. N[`𗕥`](`𗔛`)=`𗜀`.
+9. Declare `𗔛 : 𗙥`. R[`𘀦 𗃁 𘒾`](`𗔛`). S[`𗬓`](`𘆏 𗬏`; `𗔛`).
+10. N[`𗕥`](`𘔘 𗀮`)=`𗥼` (possibly 2). S[`𘎬`](agent_3; `𗖫 𗲕`).
+11. **Task feedback:** stage 0; one invalid attempt.
+12. R[`𗑌`](`𘆢`; `𘆟 𗿝`). N[`𗕥`](`𗬏 𘆢`)=`𗿣`. S[`𗝣`](`𘆢`).
+13. **Task feedback:** stage 1; one invalid attempt. A stage transition has occurred.
+14. Declare `𗍅 : 𗙥`, attributed to agent_0. R[`𗏞 𘀦`](`𗍅`) [modifier `𗘓 𗱹`]. N[`𗕥`](`𗍅`)=`𗜀`. Withdraw/correct/mark obsolete `𗔛` (tentative). R[`𗐢`](agent_0; embedded expression `𗕡 𘌲 𗂰 [𗖉]`), with two levels of brackets. Exact meaning of that expression unknown.
+15. **Task feedback:** stage 1; two invalid attempts.
+16. Declare `𗰥 : 𗙥`, attributed to agent_6. R[`𗑌`](`𗰥`; `𘀦 𗃁 𘒾`). N[`𗕥`](`𗰥`)=`𗬅` (possibly 3).
+17. **Task feedback:** stage 1; three invalid attempts.
+18. Declare `𗍅 : 𗙥`, attributed to agent_4. R[`𗏞 𗷙 𘀦`](`𗍅`). N[`𗕥`](`𗍅`)=`𗥼` (possibly 2).
+19. **Task feedback:** stage 1; four invalid attempts.
+20. Declare `𘞲 : 𗙥`, attributed to agent_5. R[`𗏞 𘀦 𘛂`](`𘞲`) [modifier `𗘓 𗱹`]. S[`𗱇`](`𘞲`). N[`𗕥`](`𗬏 𘞲`)=`𗜀`.
+21. **Task feedback:** stage 1; five invalid attempts.
+22. Declare `𘊳 : 𗙥`, attributed to agent_2. R[`𗑌`](`𘊳`; `𘆟 𗿝`). N[`𗕥`](`𗬏 𘊳`)=`𗿣`. Withdraw/correct/mark obsolete `𗔛` (tentative). Ask entity/information-family [`𗈹`], content `𘇶`, to `𗍴 𗥬`; exact question/request unknown.
+23. Declare `𗍅 : 𗙥`, attributed to agent_1. R[`𘀦 𗃁 𘒾`](`𗍅`). S[`𗬏`](`𗍅`). N[`𗕥`](`𗍅`)=`𗬅` (possibly 3).
+24. **Task feedback:** stage 1; six invalid attempts.
+25. Declare `𘝲 : 𘔘`, attributed to agent_3. R[`𗖫`](agent_3; `𘝲` [qualification `𘁅 𗶁`]) [modifier `𗘓 𗭎`]. N[`𗕥`](`𘝲`)=`𗬅` (possibly 3). Ask status/control-family [`𗺩`], content `𗖫 𗐢`, to agent_3. Exact request unknown.
+26. Entity/information-family assertion [`𗝵`](`𗐢`), attributed to agent_7. R[`𗥼`](`𗐢 𗏞 𗶁`; `𗐢 𘆟 𗿚`). S[`𗹾`](`𘋍`; embedded assertion [`𗃁`](`𗴺`)). The embedded clause may be a prerequisite/status, but exact meaning unknown.
+27. S[`𗹾`](`𘅈 𗁷 𗋄`; `𗃁 𘚂`). Ask entity/information-family [`𘙄`], content `𗝣 𗚷`, to `𗍴 𗥬`.
+28. S[`𗥬`](`𗝭`; `𘚂`). Declare `𗝃 : 𘔘`, associated with `𗝭`. R[`𘔘`](`𗝭`; `𗝃`). N[`𗕥`](`𗝃`)=`𗃲`.
+29. Declare `𗝭 : 𗺌`. S[`𘗷`](`𗝭`; `𗋄`). N[`𗵂`](`𗝭`)=`𗕛 𗥼` (possibly −2). Ask entity/information-family [`𗬅`], content `𗝣`, to `𗍴 𗥬`.
+30. Declare `𘓉 : 𘔘`. N[`𗕥`](`𘓉`)=`𗥼` (possibly 2). R[`𘔘`](`𗐢 𘆟 𗿚`; `𘓉`).
+31. R[`𗽥`](`𗐢 𘆟 𗿚`; `𗐢 𗨨 𘀦`). Ask entity/information-family [`𘙄`], to `𗍴 𗥬`, content `𗝣 𗬅`.
+32. Declare `𗂶 : 𗚷 𗺌`. S[`𗁷 𘋍`](`𗂶`). N[`𗊩`](`𗂶`)=`𗕛 𗃲` (possibly a negative quantity). R[`𗈄`](`𘔘 𗂶`). Ask entity/information-family [`𗬅`], to `𗥼`, content `𗝣`.
+33. N[`𗕥`](`𘝲`)=`𗬅` (possibly 3). R[`𗴺 𘆏`](`𘝲`). Ask entity/information-family [`𗤗`], to agent_7, content `𗝣 𘆏`. Ask status/control-family [`𗺩`], participant `𗍴 𗿚`, content `𗖫 𘋍`, to agent_3.
+34. R[`𗋄`](`𗐢 𘆟 𗿚`; `𗛮`). R[`𗋄`](`𗐢 𗶁 𗏞`; `𗾫`). S[`𗹾`](`𗾫`; embedded assertion [`𗃁`](`𗛮`)).
+35. S[`𗥬`](`𗮿`; `𘅈 𗁷 𗋄`). R[`𗥼`](`𗮿`; `𗐢 𘚂`). S[`𗹾`](`𗮿`; `𗃁 𘚂`). Ask entity/information-family [`𗤗`], to agent_0, content `𗺌`, linked by `𗝒` to embedded assertion [`𘔘`] with content `𗿣`.
+36. Withdraw/correct/mark obsolete `𗝭` (tentative). Declare `𗮿 : 𗺌`. S[`𘗷`](`𗮿`; `𗋄`). N[`𗵂`](`𗮿`)=`𗕛 𗥼` (possibly −2). Ask entity/information-family [`𗬅`], content `𗝣`, to agent_3.
+37. R[`𘔘`](`𗐢 𗨨 𘉽`; `𗝃`). N[`𗕥`](`𗝃`)=`𗃲`. Ask entity/information-family [`𗤗`], content `𗝭`, to agent_0.
+38. Ask status/control-family [`𘙄`], to `𗍴 𗿚`. R[`𗐢`](agent_7; `𗛮`) [modifier `𗘓 𗭎`]. S[`𗹾`](`𗾫`; embedded assertion [`𗃁`](`𗛮`)).
+39. R[`𗐢`](agent_3; `𗐢 𘆟 𗿚`) [modifier `𗘓 𗭎`]. Ask status/control-family [`𘙄`](`𗍴 𗿚`). This is an agent–target action/relation expression, exact action unknown.
+40. **Task feedback:** stage 1; seven invalid attempts.
+41. Ask status/control-family [`𗈹`](agent_3; `𗂶`). R[`𗽥`](`𗐢 𘆟 𗿚`; `𗐢 𗨨 𘀦`). S[`𗹾`](`𘚂`; embedded assertion [`𗃁`](`𗐢`, linked by `𗝒` to an embedded assertion with head `𗚷`, content `𘆟`, and oblique participant `𘇶`)). The nested logical content is unknown.
+42. Ask entity/information-family [`𘙄`](agent_1; `𗝣 𗚷`). Exact question/request unknown.
+43. N[`𗊩`](`𗂶`)=`𗕛 𗃲`. R[`𗈄`](`𘔘 𗂶`). S[`𘙄`](agent_1). Ask entity/information-family [`𗬅`], to agent_3, content `𗝣 𗐢`.
+44. S[`𗹾`](`𗮿`; `𗃁 𘚂`). N[`𗵂`](`𗮿`)=`𗕛 𗥼`. Ask status/control-family [`𗈹`](agent_3; `𗂶`). R[`𗥼`](`𗐢 𗨨 𘉽`; `𗂶`).
+45. Withdraw/correct/mark obsolete `𗝭` (tentative). Ask entity/information-family [`𗈹`], content `𗮿`, to agent_4. S[`𘗷`](`𗮿`; `𗋄`). R[`𘔘`](`𗮿`; `𘓉`). Ask entity/information-family [`𗈹`], to agent_3, content `𗝣 𗚷`.
+46. Ask status/control-family [`𗐢`](agent_3; `𗍴 𗁷`). Exact question/request unknown.
+47. Entity/information-family assertion [`𗝵`](`𗛮`). S[`𗃁`](`𗛮`). Ask relation/action-family [`𗐢`](agent_3; `𗾫`) [modifier `𗘓 𗭎`].
+48. N[`𗕥`](`𘝲`)=`𗥼` (possibly 2). S[`𗯛`](`𗛮`), attributed to agent_3. R[`𗐢`](agent_3; `𗂶`) [modifier `𗘓 𗭎`].
+49. Ask status/control-family [`𗈹`](agent_3; `𗂶`). Ask entity/information-family [`𗬅`](agent_3; `𗝵 𘀆 𘜖`). Exact requests unknown.
+50. R[`𗐢`](agent_7; `𗐢 𘆟 𗿚`) [modifier `𗘓 𘔃`]. Ask status/control-family [`𗈹`](agent_3; `𗂶`).
+51. S[`𗃁`](`𗂶`). N[`𗕥`](`𘝲`)=`𗚷` (possibly 1). R[`𗐢`](agent_3; `𗐢 𗨨 𘉽`) [modifier `𗘓 𗭎`]. Ask status/control-family [`𘙄`](`𗍴 𗿚`).
+52. **Discarded message:** `⊘`. The intended content is unknown; the message violated the permitted-character constraint.
+53. S[`𗥬`](`𗝭`; `𘚂`), with additional unknown marker `𗠫`. R[`𘔘`](`𗮿`; `𘓉`).
+54. S[`𗃁`](`𗝭`). N[`𗕥`](`𘝲`)=`𗥼` (possibly 2). R[`𗐢`](agent_3; `𗮿`) [modifier `𗘓 𗭎`].
+55. **Task feedback:** stage 2; seven invalid attempts. A stage transition has occurred.
+56. Ask status/control-family [`𗈹`](agent_3; `𗮿`), qualified by `𘖨` and embedded assertion [`𗃁`](`𗝭`). Exact conditional/request meaning unknown.
+57. Identical to message 56: Ask status/control-family [`𗈹`](agent_3; `𗮿`), qualified by embedded assertion [`𗃁`](`𗝭`).
+58. S[`𗬓`](`𘆏 𗬏`; `𘞲` [qualification `𘁅 𗋄`]).
+59. S[`𗝣`](`𗀮` [qualification `𘁅 𗋄`]). R[`𗏞 𗷙 𘀦`](`𗀮`).
+60. S[`𗃁`](`𗮿`). N[`𗕥`](`𘝲`)=`𗋮` (possibly 0). Declare `𗼄 : 𗙥`, attributed to agent_3. R[`𗑌`](`𗼄`; `𘆟 𗿝`). S[`𘆽`](`𗼄` [qualification `𘁅 𗋄`]).
+61. N[`𗊩`](`𗬏 𗲕 𗰥`)=the expression `𗃲 𗢻 𗬏 𗋄 𗰥`. Possibly a numeric relation between two qualified attributes of `𗰥`; exact operation unknown.
+62. Declare `𗪥 : 𗙥`, attributed to agent_0. R[`𗏞 𘀦`](`𗪥`) [modifier `𗘓 𗱹`]. N[`𗕥`](`𗬏 𗲕 𗪥`)=`𗜀`. N[`𗊩`](`𗬏 𗲕 𗪥`)=`𗥼 𗢻 𗬓`.
+63. Declare `𗪥 : 𗙥`, attributed to agent_4. R[`𗏞 𗷙 𘀦`](`𗪥`). N[`𗕥`](`𗊩 𗋄 𗪥`)=`𗬅` (possibly 3). N[`𗕥`](`𗬏 𗲕 𗪥`)=`𗥼` (possibly 2). N[`𗕥`](`𗬏 𗋄 𗪥`)=`𘆏`.
+64. S[`𗬓`](`𘆏 𗋄 𗱇`; `𗰥`). Exact assertion unknown.
+65. N[`𗎀`](`𘊳`)=`𘞟`. Ask entity/information-family [`𗬅`], to `𗍴 𗥬`, content `𗝣 𗚷`.
+66. Status/control-family clause with unknown modality `𘆋`, head `𗅤`, content `𗀮` [qualification `𘁅 𗋄`]. Unknown whether this is a command, permission, assertion, or another speech act.
+67. N[`𗕥`](`𗬏 𗲕 𘞲`)=`𗜀`. Ask entity/information-family [`𘙄`](agent_5; `𗝣 𗚷`).
+68. N[`𗕥`](`𗬏 𗋄 𗰥`)=`𗜀`. Ask entity/information-family [`𗤗`], to agent_2, content `𘔘 𘊳 𘁅 𗺌 𗚷`.
+69. Ask entity/information-family [`𗬅`], to agent_2, content `𗝣 𗚷`. Status/control-family clause with unknown modality `𘆋`, head `𗬓`, arguments `𘆏 𗱇` and `𘒾` [qualification `𘁅 𗋄`].
+70. N[`𗕥`](`𗬏 𗋄 𘞲`)=`𗬓`. Status/control-family clause with unknown modality `𗃐`, head `𗲕`, participant agent_0, and oblique participant `𗋄`. Exact concluding act unknown.
+71. **Task feedback:** stage 3; seven invalid attempts. Another stage transition has occurred; the transcript ends.
+
+# 3. THE TASK
+
+## What can be established
+
+The agents were collaborating on a task with a public stage counter and an invalid-attempt counter. The observed stages progress 0 → 1 → 2 → 3. There are seven counted invalid attempts, all accumulated by message 40; later feedback retains that count. We do not see the original instructions, private observations, or a separate action log, so the chat does not reveal precisely which utterances were executable submissions versus descriptions of submissions.
+
+The agents exchange classifications, relations, status-like assertions, quantitative-looking information, and requests directed to other agents or groups. They repeatedly refer to a changing collection of tokens. Several initially report `𗔛`, others `𘆢`, and agent_3 `𗀮`. After the first transition, new expressions include `𗍅`, `𗰥`, `𘞲`, `𘊳`, and `𘝲`. After the second, agent_3 introduces `𗼄`, and agents_0/4 introduce `𗪥`.
+
+Shared expressions do not by themselves establish shared locations. For example, agents_0 and _4 give different numeric-looking tails for apparently the same predicate and argument `𗔛`, then `𗍅`, and finally the same qualified expression involving `𗪥`. Possible explanations include compatible bounds or constraints on the same quantity, local namespaces, agent-relative attributes, different private observations, errors, or omitted context. Calling these conflicting measurements would prematurely assume that the unknown predicate expresses equality.
+
+## Best task hypothesis — LOW confidence
+
+This looks like a multi-stage cooperative environment or constraint puzzle in which agents combine partial information and coordinate selected actions. A navigation/activation puzzle with a limited resource is plausible, but the exact world and objective are unknown. A distributed numeric-constraint or optimization puzzle is another viable interpretation: the numerical clauses could state bounds or relations rather than measurements, and `𗢻` could be arithmetic within those constraints. A sequence of heterogeneous subpuzzles is also possible.
+
+The middle stage contains the clearest action-like progression. Agent_3 repeatedly reports the numeric-looking predicate about `𘝲` and relates itself to targets:
+
+- The tail for `𘝲` is `𗬅` before the early trials.
+- Agent_3 targets `𗐢 𘆟 𗿚` (39), later reports tail `𗥼` (48), and targets `𗂶`.
+- It reports tail `𗚷` (51), then targets `𗐢 𗨨 𘉽`.
+- It reports tail `𗥼` (54), then targets `𗮿`.
+- Stage 2 follows, and it reports tail `𗋮` (60).
+
+If both the tentative numerals and the value/resource interpretation are right, that is a 3 → 2 → 1 → 2 → 0 resource trajectory. That would support consuming and replenishing a resource while reaching a goal. Neither the absolute numbers nor equality semantics is independently established. This does not prove that the resource is energy or that targets are rooms, doors, switches, or charging stations.
+
+The middle-stage discussion also corrects/replaces `𗝭` with `𗮿` in some reports. We do **not** silently replace every later occurrence: agent_3 actually says `𗃁(𗝭)` in 54, while saying `𗃁(𗮿)` in 60. The distinction may be meaningful.
+
+The final stage emphasizes paired qualified quantities (`𗬏 𗲕 X` versus `𗬏 𗋄 X`), numeric-looking expressions, and further requests. The agents apparently obtain the next stage, but the English content of their final solution is unknown. Stage 3 is evidence of progression, not independent proof that any proposed lexical translation is correct, nor proof that the entire original task ends there.
+
+# 4. EVIDENCE
+
+## Main evidence supporting the reconstruction
+
+1. **Repeated frames:** The same head/argument separator and argument divider recur across all four leading families. Multi-clause messages consistently end each component with `𗝘`. This strongly supports the structural grammar independently of any task hypothesis.
+2. **Balanced nesting:** Message 14 contains two nested `𘒍 … 𗳯` pairs; messages 26, 34, 38, 41, 56, and 57 contain related embedded constructions. These are stronger anchors than guesses about particular objects.
+3. **Modality contrasts:** `𘀿` appears especially in shorter agent-directed clauses; `𘎙` predominates in reports. This supports assertion versus request/question, though not a precise speech-act inventory.
+4. **Attribution/participant markers:** `𗉁 agent_n` attaches to introductory reports. `𗬀 agent_n` appears in request-like clauses, in varying positions relative to content. This supports association and oblique-participant functions rather than assigning the agent names arbitrary noun meanings.
+5. **Correction pattern:** Message 14 introduces `𗍅` and applies `𗾄` to earlier `𗔛`; 22 does something similar. Most strongly, 36 replaces `𗝭` by `𗮿` while repeating the same accompanying attributes; 45 reiterates the `𗾄(𗝭)` clause. This motivates “withdraw/correct/obsolete,” but not an exact English word.
+6. **Numeric-looking slots:** `𗖉 𘎙 𗕥` repeatedly takes a referent and a short expression. Agent_3's changing `𘝲` reports support a quantitative interpretation, but the exact small-number ladder depends on an unproved resource narrative. Negative-looking prefix `𗕛` and operator-like `𗢻` provide additional, weaker evidence. None establishes equality rather than a bound or other comparison.
+7. **Context sensitivity:** `𗥼` appears both as a scalar-looking argument and a relation head; `𗬅` as a scalar-looking argument and a request head. A one-glyph/one-English-word dictionary would therefore be premature. Namespace selection by leading family is plausible, but not proven.
+8. **Action correlation, not translation proof:** The stage transition after 54 and the repeated agent–target construction suggest coordinated actions. This is contextual evidence only. Public task feedback cannot establish the English meanings of `𗐢`, `𗃁`, or the target expressions.
+9. **Alternative explanation for differing numeric tails:** Agents_0 and _4 preserve distinct tails with the same apparent argument across several stages. If the predicate denotes a bound, these could be compatible constraints on one object rather than contradictory reports. The data do not currently distinguish that interpretation from private naming, agent-relative attributes, or omitted context.
+
+## Important uncertainties and falsifiers
+
+- A supplied grammar showing that the four leading glyphs encode tense, register, or message channels rather than semantic domains would change our codebook interpretation without invalidating the observed frame boundaries.
+- A numeral table could overturn the proposed 0/1/2/3 assignments. The resource interpretation rests partly on that unverified ladder and should fall with it if contradicted. A lexicon identifying `𗕥` as a bound/comparison predicate would also change the resource-value reading.
+- A lexicon identifying `𗘓` as, for example, an evidential or truth marker rather than aspect/mode would change interpretations of the apparent action reports. We have intentionally left its values untranslated.
+- Agent-relative names or attributes could explain differing numeric tails, but compatible constraints could explain them even with globally unique names. Proof that the predicate means exact equality would narrow the alternatives toward private scope, conflicting reports, omitted context, or mistaken parsing. We do not choose among these without evidence.
+- A task description could show that all stages are abstract logic/communication subproblems rather than a physical world. That would change section 3, but would not itself supply missing lexical meanings in section 2.
+- Private reports from the speakers could resolve intended meanings, but a successful task solution alone would not validate a translation. Conversely, an agent mistake would not justify rewriting what they actually wrote.
+
+The central limitation is lexical: we recover a substantial reusable clause skeleton, a few contextual functions, and a plausible numerical/action pattern, but not a complete English translation of the task-specific vocabulary.
