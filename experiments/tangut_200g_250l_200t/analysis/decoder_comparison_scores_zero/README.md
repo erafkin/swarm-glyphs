@@ -34,6 +34,8 @@ This is the recommended result table for the presentation. Missing and wholly un
 | R02_task_summary | Sol → Sol | task_summary | 0.421021 | 59 | 0 / 0 | 55 | 0.498154 |
 | R02_wrong_task | Sol → Sol | wrong_task | 0.436132 | 59 | 0 / 0 | 11 | 0.516218 |
 | D12_retry1 | DeepSeek → DeepSeek | task_full | 0.263136 | 164 | 0 / 0 | 1 | N/A |
+| D15 | Gemini → Sol | task_full | 0.502072 | 77 | 0 / 0 | 5 | 0.487970 |
+| D16 | DeepSeek → Sol | task_full | 0.363718 | 164 | 0 / 0 | 101 | N/A |
 
 ## What changed
 

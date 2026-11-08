@@ -1,5 +1,8 @@
 # Decoder results D05–D13
 
+This section records the original nine-run batch. Completed follow-ups, including
+the successful D12 retry and D14–D16, are listed [below](#completed-follow-ups).
+
 These nine runs used the revised R06 Haiku, R07 Gemini and R08 DeepSeek public
 transcripts. Each had eight decoder agents, 200 shared scheduled discussion turns,
 no time limit, 16,000 output tokens and a $50 soft spending cap. DeepSeek used high
@@ -52,7 +55,7 @@ logging failure, not a provider API failure.
 record, including its $0.0180096972 cost. Recovering that record reconciles the
 summary's $1.0852104716860005 total. The empty `monitor.jsonl`, all other raw files,
 and the failed execution remain unchanged. No successful receipt/report was
-fabricated, and no retry was launched.
+fabricated. A later successful retry is archived separately below.
 
 ## Verification and provenance
 
@@ -70,3 +73,58 @@ Sol seed 1's summary and Art Auction runs were performed separately; see
 [their setup and provenance](sol_seed1_summary_auction/README.md) and the
 [Sol scoring report](../analysis/sol_translation_scoring.md). They are not included
 in the nine-run costs above.
+
+## Completed follow-ups
+
+| Report | Encoder | Decoder | Briefing | Calls | Cost | Runtime | Stop |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+| [D14](D14_haiku_to_sol_task_full/README.md) | Haiku | Sol | Full | 74 | $2.673096 | 2:33 | All done |
+| [D12 retry 1](D12_deepseek_to_deepseek_task_full/attempts/retry1/README.md) | DeepSeek | DeepSeek | Full | 83 | $1.187103 | 30:21 | All done |
+| [D15](D15_gemini_to_sol_task_full/README.md) | Gemini | Sol | Full | 123 | $5.282070 | 2:53 | All done |
+| [D16](D16_deepseek_to_sol_task_full/README.md) | DeepSeek | Sol | Full | 138 | $13.065024 | 3:14 | All done |
+
+D15 and D16 ran concurrently on 2026-11-08 and cost **$18.3470938** together.
+Both had eight Sol decoders, medium reasoning, 16,000 output tokens, a 200-turn
+allowance, no clock and a separate $50 soft cap. All eight agents in each team
+marked done; neither run had a parse error or logged API error. All spending used
+the primary key. All twelve raw-file hashes, source hashes and final reports
+were verified against their receipts. These follow-ups were chosen after seeing
+earlier results and are not preregistered or replicated comparisons.
+
+Sol now has both briefing conditions for every other encoder family:
+
+| Encoder | Sol, no task | Sol, full task | Eligible public messages |
+| --- | ---: | ---: | ---: |
+| Haiku | 0.074602 (D07) | 0.230568 (D14) | 109 |
+| Gemini | 0.320221 (D10) | 0.502072 (D15) | 77 |
+| DeepSeek | 0.289189 (D13) | 0.363718 (D16) | 164 |
+
+Values are mean paired MiniLM cosine against the frozen public-message English
+references, not percent accuracy. These six scores are identical in the
+[literal-text](../analysis/decoder_comparison_scores_public_raw/README.md) and
+[abstention-as-zero](../analysis/decoder_comparison_scores_zero/README.md) outputs:
+none has a missing or wholly unknown classified entry. Partial-unknown and
+structural guesses remain ordinary text. References have differing confidence;
+DeepSeek's eligible references are all medium or low confidence.
+
+Full context helps Sol recover task referents and numerical/action patterns, but
+does not eliminate lexical errors. D15 recovers the cabinet-code proposal and
+action sequence; D16 preserves the actual wrong proposal 1234 rather than
+substituting the supplied solution 2748. Both retain uncertainties. Full-task
+briefings contain clue ownership and answers, so these results do not by
+themselves demonstrate complete recovery of the underlying vocabulary.
+
+To reproduce all current scores, retain all three extra archived inputs:
+
+```sh
+python3 experiments/tangut_200g_250l_200t/analysis/score_public_raw_cosines.py \
+  --extra-decoder-config experiments/tangut_200g_250l_200t/decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/scoring_config.json \
+  --extra-decoder-config experiments/tangut_200g_250l_200t/decoding/D15_gemini_to_sol_task_full/scoring_config.json \
+  --extra-decoder-config experiments/tangut_200g_250l_200t/decoding/D16_deepseek_to_sol_task_full/scoring_config.json
+python3 experiments/tangut_200g_250l_200t/analysis/remake_decoder_scores_zero.py
+python3 experiments/tangut_200g_250l_200t/analysis/render_decoder_comparisons.py experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_zero/summary.json experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_zero/comparisons.html
+```
+
+The original D12 failure remains excluded from scoring. Existing score differences
+after adding the new reports are numerical rounding from embedding batches, not
+changes to references, prediction text or scoring policy.

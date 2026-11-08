@@ -52,7 +52,7 @@
   },
   "derived_from": {
     "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_public_raw/D06.json",
-    "report_sha256": "48558263ba191cb3ea640e17ccc5ecab6c78e11febc6ad3c8af41fa9469cb598",
+    "report_sha256": "2075bff40f053c0ff69b59a41c599f978520b68aacfda75b0c1bef3f43eff3ed",
     "kind": "archived_public_raw_report"
   },
   "embedding_model": {
@@ -548,7 +548,7 @@
       },
       "raw_prediction_status": "unknown",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.18878030155417355,
+      "raw_text_cosine": 0.18878018559330828,
       "zero_assigned": true
     },
     {
@@ -4137,7 +4137,7 @@
     "predictions_with_unknown_markers": 109,
     "uncertain_or_partial_references": 94,
     "mean_per_line": {
-      "cosine": 0.20932932360819853
+      "cosine": 0.20932932254433737
     }
   },
   "raw_text_high_confidence": {
@@ -4156,7 +4156,7 @@
     "predictions_with_unknown_markers": 15,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.24590805908820842
+      "cosine": 0.2459080513574841
     }
   }
 }

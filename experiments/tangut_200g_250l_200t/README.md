@@ -146,7 +146,7 @@ settings above and may run simultaneously, with a separate $50 soft cap for each
 These are follow-ups selected after prior results, not preregistered cells. The run
 caps aggregate primary and optional backup OpenRouter key spending without resetting.
 
-R06 and R08 completed their 200-turn allowance without escaping. Their six decoder plans
+R06 and R08 completed their 200-turn allowance without escaping. Their eight decoder plans
 explicitly set `allow_turn_limited_gameplay_source: true`; decode these unsuccessful
 playthroughs as recorded, without modifying the language or transcript. Execution records
 and receipts retain the source outcome and receipt hash. All other source checks remain,
@@ -162,7 +162,7 @@ Never give a decoder the language, the reference translation, or private logs.
 
 Current English comparisons use
 [cosine with abstentions scored as zero](analysis/decoder_comparison_scores_zero/README.md),
-including the Haiku → Sol full-task follow-up D14 and the completed
+including all three Sol full-task follow-ups D14–D16 and the completed
 [DeepSeek full-task retry D12_retry1](decoding/D12_deepseek_to_deepseek_task_full/attempts/retry1/README.md).
 The original D12 logging failure remains archived and unscored. Missing and wholly unknown
 predictions contribute zero over all scorable public agent-message references. Partially unknown
@@ -170,6 +170,10 @@ answers retain their raw cosine; task feedback, discarded messages and unscorabl
 excluded. Existing abstention classifications are preserved and verified, rather than inferred
 again from the text. Haiku self-decoding is zero in both context conditions; GPT-6.1 Sol decoding
 Haiku remains 0.074602 without context and 0.230568 with full context.
+Sol decoding Gemini scores 0.320221 without context and 0.502072 with full context;
+Sol decoding DeepSeek scores 0.289189 and 0.363718 respectively. See the
+[completed follow-ups](decoding/README.md#completed-follow-ups) for costs, alignment
+checks and the command that reproduces all current cells.
 Open the saved [interactive comparison report](analysis/decoder_comparison_scores_zero/comparisons.html)
 to inspect these means and the original message translations offline.
 The [raw-text results](analysis/decoder_comparison_scores_public_raw/README.md),

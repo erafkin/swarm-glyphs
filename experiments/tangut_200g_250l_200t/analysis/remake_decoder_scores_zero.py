@@ -225,7 +225,7 @@ def remake(input_path: Path = DEFAULT_INPUT, output: Path = DEFAULT_OUTPUT, *, r
             "All archived decoder text, references, raw cosines and original score files remain unchanged.",
             "Failed attempts remain failed and unscored; a completed all-abstention cell scores zero.",
             "References are public-only, reference-assisted drafts with differing uncertainty. Similarity is not accuracy.",
-            "Only Sol self-decoding has five paired seeds; other comparisons have one run per cell. D14 and D12_retry1 are follow-ups.",
+            "Only Sol self-decoding has five paired seeds; other comparisons have one run per cell. D14, D15, D16 and D12_retry1 are follow-ups.",
         ],
     }
     output.mkdir(parents=True, exist_ok=True)

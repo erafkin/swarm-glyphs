@@ -48,7 +48,7 @@
   },
   "derived_from": {
     "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_public_raw/R02_wrong_task.json",
-    "report_sha256": "c2e9eb4e34e0aa2a6bac1d87dfd16b0a244035d6119f8950de897c852f0f1fa0",
+    "report_sha256": "4277f66178ae73e9e999ec1334c6e76de6d13b332848ec7b8482a1ca1dca5ed3",
     "kind": "archived_public_raw_report"
   },
   "embedding_model": {
@@ -85,7 +85,7 @@
     "historical_classifications": 59,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.4361320459938433
+      "cosine": 0.43613204830017654
     }
   },
   "high_confidence": {
@@ -105,7 +105,7 @@
     "historical_classifications": 12,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.5162176037621994
+      "cosine": 0.5162176113909526
     }
   },
   "coverage": {
@@ -418,7 +418,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.2959878063585325
+        "cosine": 0.2959878498393621
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -431,7 +431,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.2959878063585325,
+      "raw_text_cosine": 0.2959878498393621,
       "zero_assigned": false
     },
     {
@@ -514,7 +514,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.29961185059432405
+        "cosine": 0.29961191427358297
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -527,7 +527,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.29961185059432405,
+      "raw_text_cosine": 0.29961191427358297,
       "zero_assigned": false
     },
     {
@@ -1088,7 +1088,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.2855728320190886
+        "cosine": 0.2855728845683069
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1101,7 +1101,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.2855728320190886,
+      "raw_text_cosine": 0.2855728845683069,
       "zero_assigned": false
     },
     {
@@ -1123,7 +1123,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.1777195055586552
+        "cosine": 0.17771938182618532
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1136,7 +1136,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.1777195055586552,
+      "raw_text_cosine": 0.17771938182618532,
       "zero_assigned": false
     },
     {
@@ -1228,7 +1228,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.3824798221625779
+        "cosine": 0.38247980957992966
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1241,7 +1241,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.3824798221625779,
+      "raw_text_cosine": 0.38247980957992966,
       "zero_assigned": false
     },
     {
@@ -1600,7 +1600,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.46487305709791443
+        "cosine": 0.46487313078156905
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1613,7 +1613,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.46487305709791443,
+      "raw_text_cosine": 0.46487313078156905,
       "zero_assigned": false
     },
     {
@@ -1865,7 +1865,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.2415828177230247
+        "cosine": 0.24158285671884522
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1878,7 +1878,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.2415828177230247,
+      "raw_text_cosine": 0.24158285671884522,
       "zero_assigned": false
     },
     {
@@ -2517,7 +2517,7 @@
     "predictions_with_unknown_markers": 11,
     "uncertain_or_partial_references": 47,
     "mean_per_line": {
-      "cosine": 0.4361320459938433
+      "cosine": 0.43613204830017654
     }
   },
   "raw_text_high_confidence": {
@@ -2536,7 +2536,7 @@
     "predictions_with_unknown_markers": 3,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.5162176037621994
+      "cosine": 0.5162176113909526
     }
   }
 }

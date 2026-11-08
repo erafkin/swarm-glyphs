@@ -45,7 +45,7 @@
   },
   "derived_from": {
     "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_public_raw/R02_no_task.json",
-    "report_sha256": "c2beeb5ce158047c80dcfac8b0e13434b7cd0af8352adabf4e789b035e0187e8",
+    "report_sha256": "1996399e86f9b0f975839110cd679cc439421ae629fe24eb28ae186fccd8f117",
     "kind": "archived_public_raw_report"
   },
   "embedding_model": {
@@ -82,7 +82,7 @@
     "historical_classifications": 59,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.37994543696053307
+      "cosine": 0.37994543747457216
     }
   },
   "high_confidence": {
@@ -380,7 +380,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.29310469036799974
+        "cosine": 0.2931046264206375
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -393,7 +393,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.29310469036799974,
+      "raw_text_cosine": 0.2931046264206375,
       "zero_assigned": false
     },
     {
@@ -1052,7 +1052,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.20768531506993873
+        "cosine": 0.2076853105080722
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1065,7 +1065,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.20768531506993873,
+      "raw_text_cosine": 0.2076853105080722,
       "zero_assigned": false
     },
     {
@@ -1527,7 +1527,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.359092729222358
+        "cosine": 0.35909277995467637
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1540,7 +1540,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.359092729222358,
+      "raw_text_cosine": 0.35909277995467637,
       "zero_assigned": false
     },
     {
@@ -2267,7 +2267,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.2328306360202495
+        "cosine": 0.23283068412546604
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -2280,7 +2280,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.2328306360202495,
+      "raw_text_cosine": 0.23283068412546604,
       "zero_assigned": false
     },
     {
@@ -2514,7 +2514,7 @@
     "predictions_with_unknown_markers": 18,
     "uncertain_or_partial_references": 47,
     "mean_per_line": {
-      "cosine": 0.37994543696053307
+      "cosine": 0.37994543747457216
     }
   },
   "raw_text_high_confidence": {

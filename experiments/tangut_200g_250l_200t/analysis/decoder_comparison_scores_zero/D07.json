@@ -52,7 +52,7 @@
   },
   "derived_from": {
     "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_public_raw/D07.json",
-    "report_sha256": "363347bd2774cc10d3112e2895d0e8d39134f6b741c635c028dec05bff297b53",
+    "report_sha256": "7ab9c6e0fb097a47497a01ac64e7e22e125cb948905a2f26439e2e770e1b8427",
     "kind": "archived_public_raw_report"
   },
   "embedding_model": {
@@ -89,7 +89,7 @@
     "historical_classifications": 109,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.0746017875281568
+      "cosine": 0.07460178712734152
     }
   },
   "high_confidence": {
@@ -109,7 +109,7 @@
     "historical_classifications": 15,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.06515650665521863
+      "cosine": 0.0651565037426275
     }
   },
   "coverage": {
@@ -535,7 +535,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.06892335213480417
+        "cosine": 0.06892330844593711
       },
       "historical_prediction_status": "partial_unknown",
       "historical_unknown_reason": null,
@@ -548,7 +548,7 @@
       },
       "raw_prediction_status": "partial_unknown",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.06892335213480417,
+      "raw_text_cosine": 0.06892330844593711,
       "zero_assigned": false
     },
     {
@@ -4137,7 +4137,7 @@
     "predictions_with_unknown_markers": 109,
     "uncertain_or_partial_references": 94,
     "mean_per_line": {
-      "cosine": 0.0746017875281568
+      "cosine": 0.07460178712734152
     }
   },
   "raw_text_high_confidence": {
@@ -4156,7 +4156,7 @@
     "predictions_with_unknown_markers": 15,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.06515650665521863
+      "cosine": 0.0651565037426275
     }
   }
 }

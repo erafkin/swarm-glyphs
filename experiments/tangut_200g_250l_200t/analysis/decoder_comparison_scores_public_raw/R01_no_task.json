@@ -81,7 +81,7 @@
     "predictions_with_unknown_markers": 19,
     "uncertain_or_partial_references": 13,
     "mean_per_line": {
-      "cosine": 0.21628338667265004
+      "cosine": 0.21628338515473725
     }
   },
   "high_confidence": {
@@ -100,7 +100,7 @@
     "predictions_with_unknown_markers": 12,
     "uncertain_or_partial_references": 0,
     "mean_per_line": {
-      "cosine": 0.20935304478815442
+      "cosine": 0.20935304296191565
     }
   },
   "coverage": {
@@ -571,7 +571,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.4819145821153052
+        "cosine": 0.48191447337549215
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -731,7 +731,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.09350526340196928
+        "cosine": 0.09350525457247003
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1760,7 +1760,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.34123258889718633
+        "cosine": 0.34123258958721564
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,

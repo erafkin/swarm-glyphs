@@ -52,7 +52,7 @@
   },
   "derived_from": {
     "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores_public_raw/D13.json",
-    "report_sha256": "45db62056f98d9ea68493e6f17f452577f5897276b9b84be2535b46fa4dc64a3",
+    "report_sha256": "f0b026be00a3d4237d268991afab639763d62529b17617088661a50f7862cf74",
     "kind": "archived_public_raw_report"
   },
   "embedding_model": {
@@ -89,7 +89,7 @@
     "historical_classifications": 164,
     "raw_parser_classifications": 0,
     "mean_per_line": {
-      "cosine": 0.28918915961518726
+      "cosine": 0.2891891594445202
     }
   },
   "high_confidence": {
@@ -568,7 +568,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.21608199850867213
+        "cosine": 0.2160819918789276
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -581,7 +581,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.21608199850867213,
+      "raw_text_cosine": 0.2160819918789276,
       "zero_assigned": false
     },
     {
@@ -1391,7 +1391,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.28112377563605445
+        "cosine": 0.2811237439530454
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -1404,7 +1404,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.28112377563605445,
+      "raw_text_cosine": 0.2811237439530454,
       "zero_assigned": false
     },
     {
@@ -3733,7 +3733,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.20196695712352716
+        "cosine": 0.201967017634707
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -3746,7 +3746,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.20196695712352716,
+      "raw_text_cosine": 0.201967017634707,
       "zero_assigned": false
     },
     {
@@ -3955,7 +3955,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.3056560325246892
+        "cosine": 0.3056559545301319
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -3968,7 +3968,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.3056560325246892,
+      "raw_text_cosine": 0.3056559545301319,
       "zero_assigned": false
     },
     {
@@ -4030,7 +4030,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.4072935736345392
+        "cosine": 0.4072936124702831
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -4043,7 +4043,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.4072935736345392,
+      "raw_text_cosine": 0.4072936124702831,
       "zero_assigned": false
     },
     {
@@ -6886,7 +6886,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.2510540479842286
+        "cosine": 0.2510540613894781
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -6899,7 +6899,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.2510540479842286,
+      "raw_text_cosine": 0.2510540613894781,
       "zero_assigned": false
     },
     {
@@ -7124,7 +7124,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.39321015900179845
+        "cosine": 0.39321017383725526
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -7137,7 +7137,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.39321015900179845,
+      "raw_text_cosine": 0.39321017383725526,
       "zero_assigned": false
     },
     {
@@ -7357,7 +7357,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.33366784655476944
+        "cosine": 0.33366782299910414
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -7370,7 +7370,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.33366784655476944,
+      "raw_text_cosine": 0.33366782299910414,
       "zero_assigned": false
     },
     {
@@ -7618,7 +7618,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.3071089180851736
+        "cosine": 0.3071089135432764
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -7631,7 +7631,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.3071089180851736,
+      "raw_text_cosine": 0.3071089135432764,
       "zero_assigned": false
     },
     {
@@ -7717,7 +7717,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.310278627931044
+        "cosine": 0.3102786146141459
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -7730,7 +7730,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.310278627931044,
+      "raw_text_cosine": 0.3102786146141459,
       "zero_assigned": false
     },
     {
@@ -7894,7 +7894,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.331003952568201
+        "cosine": 0.33100393924149957
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -7907,7 +7907,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.331003952568201,
+      "raw_text_cosine": 0.33100393924149957,
       "zero_assigned": false
     },
     {
@@ -8053,7 +8053,7 @@
       "scorable": true,
       "included_in_primary_mean": true,
       "scores": {
-        "cosine": 0.3242450842579613
+        "cosine": 0.32424509972941074
       },
       "historical_prediction_status": "present",
       "historical_unknown_reason": null,
@@ -8066,7 +8066,7 @@
       },
       "raw_prediction_status": "present",
       "classification_source": "historical_source_report",
-      "raw_text_cosine": 0.3242450842579613,
+      "raw_text_cosine": 0.32424509972941074,
       "zero_assigned": false
     },
     {
@@ -8203,7 +8203,7 @@
     "predictions_with_unknown_markers": 40,
     "uncertain_or_partial_references": 164,
     "mean_per_line": {
-      "cosine": 0.28918915961518726
+      "cosine": 0.2891891594445202
     }
   },
   "raw_text_high_confidence": {

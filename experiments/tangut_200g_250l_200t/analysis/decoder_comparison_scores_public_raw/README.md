@@ -5,7 +5,7 @@
 - [Interactive comparisons](comparisons.html)
 - [Summary CSV](summary.csv) / [JSON](summary.json)
 - [Per-message CSV](per_line.csv) / [JSON](per_line.json)
-- 24 completed reports; 1 failed attempt(s), preserved unscored.
+- 26 completed reports; 1 failed attempt(s), preserved unscored.
 
 | Cell | Encoder | Seed | Decoder | Context | Raw cosine | Embedded / scorable | Literal unknown-only answers | High-confidence cosine |
 |---|---|---:|---|---|---:|---:|---:|---:|
@@ -34,14 +34,16 @@
 | R02_task_summary | Sol | 2 | Sol | task_summary | 0.421021 | 59/59 | 0 | 0.498154 |
 | R02_wrong_task | Sol | 2 | Sol | wrong_task | 0.436132 | 59/59 | 0 | 0.516218 |
 | D12_retry1 | DeepSeek | 1 | DeepSeek | task_full | 0.263136 | 164/164 | 0 | N/A |
+| D15 | Gemini | 1 | Sol | task_full | 0.502072 | 77/77 | 0 | 0.487970 |
+| D16 | DeepSeek | 1 | Sol | task_full | 0.363718 | 164/164 | 0 | N/A |
 
 ## Method and interpretation
 
 Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. For a validated Msg/Agent/Meaning/Confidence Markdown table, retain the meaning cell literally and preserve the full original row for audit. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.
 
-There are 2,129 embedded pairs out of 2,129 scorable message/cell pairs, including **122 literal unknown-only answers** and **0 missing answers**. Missing answers are not embedded. These counts are lexical descriptions, not semantic judgments. D05 retains its original structural glosses, even though its preamble says their meanings are unknown; D06 retains the literal word `unknown`; D11 retains unknown parentheticals. The historical evaluator's abstention classification is also recorded per line for audit, without altering the text or score.
+There are 2,370 embedded pairs out of 2,370 scorable message/cell pairs, including **122 literal unknown-only answers** and **0 missing answers**. Missing answers are not embedded. These counts are lexical descriptions, not semantic judgments. D05 retains its original structural glosses, even though its preamble says their meanings are unknown; D06 retains the literal word `unknown`; D11 retains unknown parentheticals. The historical evaluator's abstention classification is also recorded per line for audit, without altering the text or score.
 
-The denominator is the number of scorable public agent messages with a provided decoder entry. 497 task-status entries and 98 discarded entries are excluded across all comparison cells. The 30 discarded DeepSeek messages stay excluded in each completed DeepSeek-source comparison. References marked unknown are also excluded. Historical cells require complete alignment. Fresh follow-ups may explicitly retain missing translations as unscored entries with coverage shown; they are never silently filled with `unknown`. High-confidence means use only that reference subset and are N/A when it is empty.
+The denominator is the number of scorable public agent messages with a provided decoder entry. 550 task-status entries and 128 discarded entries are excluded across all comparison cells. The 30 discarded DeepSeek messages stay excluded in each completed DeepSeek-source comparison. References marked unknown are also excluded. Historical cells require complete alignment. Fresh follow-ups may explicitly retain missing translations as unscored entries with coverage shown; they are never silently filled with `unknown`. High-confidence means use only that reference subset and are N/A when it is empty.
 
 Scores are not percentages correct. The embedding of `unknown` can have positive similarity to English references despite recovering no meaning. Likewise, repetitive structural glosses can score above zero. This requested raw metric changes abstention handling, not the public-reference texts. Original reports, N/A results, and zero-assigned results remain unchanged in their historical directories.
 
