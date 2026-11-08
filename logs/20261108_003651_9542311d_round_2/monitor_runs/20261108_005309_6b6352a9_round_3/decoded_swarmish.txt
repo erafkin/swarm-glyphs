@@ -1,0 +1,319 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a reconstruction from usage, not a recovered copy of the file. Confidence labels concern the stated interpretation: **high** = strong repeated structural or contextual evidence; **medium** = plausible but exact lexical meaning uncertain; **low** = speculative literal gloss. Identifying what a whole phrase refers to does not establish the meanings of all its parts.
+
+## Writing and grammar
+
+- **High:** Spaces normally separate lexical units. Most units consist of two glyphs; the glyphs are not demonstrably individual letters or English-word substitutions. There are also single-glyph aliases and an unexplained three-glyph ending. Literal agent IDs such as `agent_3` occur in accepted messages.
+- **High:** A common clause frame is `𘊥𘓜 SUBJECT 𗥟𗿴 PREDICATE 𗶏𗕥 OBJECT`. Thus these three units function approximately as subject/topic, predicate/relation, and object/complement introducers. Some clauses omit components, and some are malformed or fragmentary.
+- **High:** `𗖆𗠣` opens a nested group/expression; `𗧪𗣵` closes it. Groups can contain noun descriptions, whole clauses, or ordered lists.
+- **High:** `𗄣𗥊` separates clauses/sentences. `𗪚𗺍` separates list elements, including digits, agents, and controls.
+- **High:** `𘐾𗪚` marks assertion/report; `𘖛𘎱` request/directive; `𘖨𘌩` question. These are often placed at clause beginnings, but assertions also occur without the explicit assertion marker.
+- **Medium:** `𗝨𗒤` marks an addressee/recipient, approximately “to”; it occurs both before a question’s addressed agent and after information to be reported to someone.
+- **High:** `𗏩𗮇` introduces a definition/meaning assignment. Single glyphs `𘍣`, `𗟸`, `𗣚`, `𗋛`, and `𗅻` are used as aliases defined by such clauses.
+- **High:** Aliases are reused incompatibly in the actual conversation. For example, different opening speakers define `𘍣` as MOON, cabinet position 1, a STAR description, or STAR. Later several speakers define `𗋛` as different power controls. These are not stable global names for puzzle symbols.
+- **Low:** The original file may have formally made aliases local to a speaker/message. The log establishes local-looking use, not the intended scoping rule; global collisions or misuse are another possibility.
+- **Medium:** Relations and descriptions are compositional. Agents describe symbols and controls using general vocabulary rather than merely transmitting a fixed puzzle-specific lookup table. No general rule for tense, conjugation, or phonetic pronunciation is recoverable.
+
+## Numbers
+
+**High confidence** decimal digit mapping, supported by ordered codes and independently by battery readings and exit calculations:
+
+| Digit | Swarmish |
+|---|---|
+| 0 | 𗋢𗩷 |
+| 1 | 𗮠𗊤 |
+| 2 | 𗄭𗸊 |
+| 3 | 𗡏𗘁 |
+| 4 | 𗔕𗙼 |
+| 5 | 𗷋𘎱 |
+| 6 | 𗥄𗙂 |
+| 7 | 𗋆𘊡 |
+| 8 | 𗂔𗢲 |
+| 9 | 𘐾𗾽 |
+
+- **High:** `𗴢𗈠` introduces a number/digit/value expression. Code lists preserve order and repeated digits.
+- **Medium:** `𘄬𗄣` is a quantity/count-value operator or introducer. It precedes battery readings, STAR’s five-point description, and STAR’s offset 3. Exact “equals,” quantity-marker, or positive-number semantics are unresolved. It should not confidently be called PLUS: ADD is independently `𗀻𘜔`.
+- **High:** `𘐾𗾽` (9) and `𘉐𗓵` (unknown/what) are distinct units.
+- **Medium:** `𗘰𗵺` means first/one-like ordinal in positional expressions; it is distinct from decimal digit 1.
+- **High:** `𗑝𗘾` normally denotes all/everyone, not a decimal digit. Its use after a numeric introducer in message 3 is anomalous.
+
+## General vocabulary
+
+Each interpretation below has its own confidence label; alternatives indicate unresolved lexical nuance.
+
+| Unit | Best interpretation | Confidence |
+|---|---|---|
+| 𗟴𗘠 | value / has value | high |
+| 𗀻𘜔 | add / increase | high |
+| 𘀰𘐾 | decrease / reduce | medium |
+| 𗙨𗥊 | energy / charge | high |
+| 𗤸𗫌 | cost / consume | high |
+| 𗣡𗙂 | require / prerequisite | high |
+| 𗎢𗘠 | do / perform / use an action | high |
+| 𗞽𘕾 | succeeded / completed | high |
+| 𗧃𗷳 | failed / rejected | high |
+| 𗞍𗘠 | failed / blocked; contrast with preceding unit unknown | medium |
+| 𗝶𗠛 | wait | high |
+| 𗟪𗭢 | tell / report | high |
+| 𘀰𗘾 | result / outcome | medium |
+| 𗞘𗄭 | try / attempt | high |
+| 𘍨𗥣 | propose / submit | medium |
+| 𗙴𗦛 | know / confirm | medium |
+| 𗮠𗋆 | open / opened | high |
+| 𗺍𘂚 | current / now | medium |
+| 𘉐𗓵 | what / unknown | high |
+| 𗸊𘂦 | group / collection | medium |
+| 𗎢𗹱 | at / in, contextual location marker | medium |
+| 𗇦𘝫 | after | medium |
+| 𗞘𗾽 | place / position / slot | medium |
+| 𗸶𗥄 𗽉𗞘 | at-position / indexed-position construction; exact division uncertain | high for whole relation, medium for individual words |
+| 𘒷𗉼 | has / contains / displays | high for broad relation |
+| 𗸱𘖨 | contains / has, or related possession relation | medium |
+| 𗑝𗘾 | everyone / all | high |
+| 𘒷𘕾 𘏛𗩚 | other agents | high for whole phrase |
+| 𘄛𘁄 𗦴𗷳 | private information / private clues | high for whole phrase |
+| 𗤸𘏛 | send | medium |
+| 𗦴𗷳 | information / message | medium |
+| 𘄛𘁄 | private | medium |
+| 𘓜𗚧 | action / control | medium |
+| 𗥗𗺍 | start / activate | medium |
+| 𗸶𘓚 | door / lock | medium |
+| 𘃯𗣗 | cabinet / container | high contextual referent |
+| 𗘰𗵺 𗸶𘓚 | cabinet door/lock | high contextual referent; literal internal gloss uncertain |
+| 𗳙𗇄 | exit/new/final/outward component | low as an isolated literal gloss |
+
+## Whole descriptions and puzzle referents
+
+The following whole-phrase identifications are **high confidence**. Their proposed internal literal translations are separate and less secure.
+
+- **MOON:** `𗂢𗋛 𗪘𗅻 𗜂𗥟 𗎢𗠛`.
+- **SUN:** `𗼔𗄣 𗪘𗅻 𗜂𗥟 𗎢𗠛`.
+- **STAR:** commonly `(𗜂𗥟 𘒷𗉼 (𘊥𘓜 𗸝𗅮 𗄮𗱩 𘄬𗄣 𗷋𘎱))`, with the actual Swarmish grouping tokens in place of parentheses. Another longer STAR description appears in message 6.
+- **WAVE:** longer descriptions sharing `𘐐𘏛 𗙛𗤸 𘞄𗩷 (𗎢𗠛 , 𗝨𗓉)`, with preceding descriptive material and nested grammar varying between messages 7, 9, and 71.
+- **DRAIN:** `𘓜𗚧 𘀰𘐾 𗙨𗥊`, approximately “energy-decrease action.”
+- **CRANK:** `𘓜𗚧 𗀻𘜔 𗙨𗥊`, approximately “energy-increase action.” Some versions explicitly include quantity 3.
+- **SIGNAL:** `𘓜𗚧 𗤸𘏛 𗦴𗷳`, approximately “information-send action.” Alternative descriptions include more material about energy/action.
+- **BOOT:** usually `𗳙𗇄 𗥗𗺍 𘓜𗚧`, approximately “exit/start action.” Several versions reorder or expand it; message 36 even repeats the presumed start component.
+- **Exit lock:** `𗳙𗇄 𗸶𘓚`.
+- **Exit/new value:** combinations of `𗳙𗇄` and `𗴢𗈠`; do not treat each occurrence as an explicit offset statement.
+
+**Low-confidence constituent hypotheses:** `𗂢𗋛` night, `𗼔𗄣` day, `𗪘𗅻` sky, `𗜂𗥟` shape/symbol, `𗎢𗠛` thing, `𗸝𗅮` point, `𗄮𗱩` count. These fit night/day celestial descriptions and a five-point STAR, but are not individually established. The exact WAVE-description wording is unknown.
+
+**Unresolved units, low confidence or unknown:** `𗽒𘙭`, `𘃯𗊤`, `𗄃𗓤`, `𗣹𗣚`, `𗄣𗷳`, `𗶑𗈠`, `𘐐𘏛`, `𗙛𗤸`, `𗝨𗓉`, `𗥘𗦴`, `𗵺𗕭`, `𗛧𗙂`, `𗸝𗣡`, `𗴢𗖰`, `𘒼𘋗`. The last two occur in early reports/attempts; specific action interpretations are not secure. `𗺰𗅮𘂚` is an unknown trailing token, perhaps discourse/punctuation, but its function cannot be established.
+
+# 2. TRANSLATION
+
+Task messages are translated as public status, not as Swarmish. English symbol/control names below identify whole descriptions, not necessarily literal single-word translations. “Assert” and “request” reflect message modality, not verified outcomes. Fine tense distinctions are generally unknown. Bracketed uncertainty is intentional.
+
+**1. [task]** Stage 0 (cabinet); invalid attempts 0.
+
+**2. [agent_0]** Define alias `𘍣` as MOON. Its value is digit 7.
+
+**3. [agent_5]** Assert: MOON is at position 2. Assert: MOON’s value is number `𗑝𗘾` [normally “all/everyone”; anomalous here, numeric meaning unknown]. The second clause cannot safely be rendered as “7.”
+
+**4. [agent_4]** Define alias `𗟸` as SUN. Its value is digit 2.
+
+**5. [agent_3]** Define alias `𘍣` as cabinet position 1 [descriptive wording partly unknown]. Its symbol/content is SUN. Question: what digit is its value?
+
+**6. [agent_1]** Define alias `𘍣` using an alternative STAR description [literal details unknown]. Assert: it is at position 3. [Unknown trailing token `𗺰𗅮𘂚`.]
+
+**7. [agent_2]** Define alias `𗣚` as WAVE [long descriptive definition, literal details unknown]. Its value is digit 8.
+
+**8. [agent_6]** Define alias `𘍣` as STAR [apparently a shape/symbol with a five-point/count property]. Its value is digit 4.
+
+**9. [agent_7]** Define alias `𗟸` through a cabinet-symbol description referring to WAVE. It is at position 4.
+
+**10. [agent_5]** Assert: agent_5 proposes/submits the ordered list [2, 7, 4, 8].
+
+**11. [task]** Stage 1 (power); invalid attempts 0.
+
+**12. [agent_0]** Assert: the cabinet is open. Request/proposal [subject omitted]: submit [2, 7, 4, 8].
+
+**13. [task]** Stage 1; invalid attempts 1.
+
+**14. [agent_3]** Assert: [2, 7, 4, 8]. The cabinet lock has a value [incomplete/unclear clause]. Agent_3 performs/uses the cabinet lock.
+
+**15. [task]** Stage 1; invalid attempts 2.
+
+**16. [agent_6]** Request everyone to propose/submit [7, 7, 4, 8]. [This actually says 7748, not 2748.]
+
+**17. [task]** Stage 1; invalid attempts 3.
+
+**18. [agent_4]** Assert: SUN’s value is digit 2. Question to agent_3: does cabinet position 1 contain/display SUN? Assert: the cabinet is open; [remaining connective/descriptive fragment involving symbol/content unknown].
+
+**19. [agent_1]** Assert: STAR is at position 3. Question to agent_3: does cabinet position 1 display SUN?
+
+**20. [agent_2]** A number/code is [unknown predicate `𗴢𗖰`] [7, 7, 4, 8]. [Possibly calls it wrong/invalid, but that is only a guess.] Agent_2 tries [unknown `𘒼𘋗`].
+
+**21. [task]** Stage 1; invalid attempts 4.
+
+**22. [agent_7]** Agent_7 knows/confirms [2, 7, 4, 8]. Agent_7 tries [unknown `𘒼𘋗`, also used in 20].
+
+**23. [task]** Stage 1; invalid attempts 5.
+
+**24. [agent_5]** Assert: cabinet door completed/open. Define alias `𗋛` as DRAIN. Its value/cost is consume 2. Request everyone send private information.
+
+**25. [agent_3]** Cabinet door completed/open. Current charge is 4. Request everyone report private information to agent_3.
+
+**26. [agent_0]** Assert: cabinet door completed/open. Define alias `𗋛` as BOOT [expanded descriptive definition]. It consumes 2 charge. Request everyone send private information.
+
+**27. [agent_6]** Assert: cabinet door completed/open. Assert: BOOT requires SIGNAL to have completed. Request everyone send private information.
+
+**28. [agent_4]** Assert: cabinet door completed/open. Define alias `𗋛` as SIGNAL [description includes a nested action/energy/information clause; exact literal wording uncertain]. It consumes 3. Request everyone send private information.
+
+**29. [agent_1]** Assert: cabinet door completed/open. Define alias `𗋛` as CRANK, described as increasing charge by quantity 3. Assert: its value is consume 0. Request everyone send private information.
+
+**30. [agent_2]** Assert: cabinet door completed/open. Define alias `𗋛` as DRAIN [noncanonical description, exact wording unknown]. Define alias `𗅻` as SIGNAL. SIGNAL requires DRAIN completed. Request everyone send private information.
+
+**31. [agent_7]** Assert: cabinet door completed/open. Assert: an expression apparently meaning “action at position 2” requires “cabinet action completed.” [The expression is grammatically odd; identifying it simply as “CRANK requires DRAIN” would import the private clue rather than translate the visible words.] [Unknown trailing token.]
+
+**32. [agent_5]** Question: DRAIN requires what prior/prerequisite [final term `𗵺𗕭` uncertain]? Assert: agent_5 waits.
+
+**33. [agent_3]** Assert: current charge is 4. Request group [agent_1, agent_2, agent_7] report private information to everyone.
+
+**34. [agent_0]** Assert: cabinet open. Request agent_7 send private information. Assert: BOOT consumes 2.
+
+**35. [agent_4]** Assert: cabinet open. Request/propose performing [DRAIN, CRANK, SIGNAL, BOOT] in that order. Assert: agent_4 performs DRAIN.
+
+**36. [agent_6]** Request/propose performing [(DRAIN), (CRANK with quantity 3), (SIGNAL), (BOOT, with repeated presumed “start” wording)]. Assert: agent_6 performs DRAIN.
+
+**37. [task]** Stage 1; invalid attempts 6.
+
+**38. [agent_7]** Assert: CRANK requires DRAIN completed. Request agent_7 perform DRAIN.
+
+**39. [task]** Stage 1; invalid attempts 7.
+
+**40. [agent_1]** Assert: cabinet/power expression is open [subject combines cabinet and alias `𗋛`; exact literal referent uncertain]. Request everyone propose/submit [DRAIN, CRANK, SIGNAL, BOOT]. Assert: agent_1 performs DRAIN. Request other agents wait.
+
+**41. [task]** Stage 1; invalid attempts 8.
+
+**42. [agent_2]** Assert: cabinet open. Assert: agent_2 performs DRAIN. Request other agents wait.
+
+**43. [task]** Stage 1; invalid attempts 9.
+
+**44. [agent_5]** Request agent_3 perform [DRAIN, CRANK, SIGNAL, BOOT]. Request other agents wait.
+
+**45. [agent_3]** Assert: agent_3 performs DRAIN. Request other agents wait.
+
+**46. [task]** Stage 1; invalid attempts 10.
+
+**47. [agent_4]** Assert: DRAIN completed. Assert: current charge is 2. Request agent_3 perform CRANK.
+
+**48. [agent_0]** Request agent_1 perform CRANK [charge-increase action, quantity 3]. Request agent_1 report the result. Assert: agent_0 waits.
+
+**49. [agent_1]** Assert: agent_1’s performance of DRAIN failed/rejected. Assert: agent_1 tries CRANK. Request other agents wait.
+
+**50. [agent_5]** Question to agent_3: has DRAIN completed?
+
+**51. [agent_6]** Assert: agent_6’s performance of DRAIN failed/rejected. Request agent_3 perform DRAIN. Assert: agent_6 waits.
+
+**52. [agent_7]** Assert: agent_7’s proposal/submission of DRAIN failed/rejected. Request agent_3 try DRAIN. Assert: agent_7 waits. [The first verb differs from the usual perform verb.]
+
+**53. [agent_3]** Assert: current charge is 2. Assert: agent_3 performs CRANK. Request other agents wait.
+
+**54. [task]** Stage 1; invalid attempts 11.
+
+**55. [agent_2]** Assert: agent_2’s performance of DRAIN is blocked/failed [predicate `𗞍𗘠`, precise distinction unknown]. Assert: agent_2 tries DRAIN. Request other agents wait.
+
+**56. [task]** Stage 1; invalid attempts 12.
+
+**57. [agent_4]** Assert: agent_4 waits.
+
+**58. [agent_1]** Assert: agent_1’s performance of CRANK succeeded. Request agent_3 perform SIGNAL. Request other agents wait.
+
+**59. [agent_3]** Assert: CRANK succeeded. Assert: current charge is 5. Assert: agent_3 performs SIGNAL. Request other agents wait.
+
+**60. [agent_5]** Request agent_3 perform SIGNAL. Request agent_3 report the result. Request other agents wait.
+
+**61. [agent_6]** Assert: agent_6 knows/confirms that CRANK succeeded. Request agent_3 perform SIGNAL. Assert: agent_6 waits.
+
+**62. [agent_2]** Assert: agent_2’s performance of DRAIN failed/rejected. Assert: agent_2 waits. Request agent_3 report the result.
+
+**63. [agent_5]** Assert: agent_5 waits.
+
+**64. [agent_3]** SIGNAL succeeded. Current charge is 2. Agent_3 performs BOOT. Request other agents wait.
+
+**65. [task]** Stage 2 (exit); invalid attempts 12.
+
+**66. [agent_0]** Assert: MOON’s value is digit 9 at the exit lock. Request everyone send private information. [This reports the resulting value, not explicitly offset +2.]
+
+**67. [agent_1]** Assert: exit-lock position 3 displays MOON. [Unknown trailing token.]
+
+**68. [agent_7]** The exit lock displays SUN at position 4.
+
+**69. [agent_5]** Assert: STAR is at position 2 at the exit lock. Request everyone report private information.
+
+**70. [agent_4]** SUN adds/increases by digit 4. SUN’s exit/new value is digit 6.
+
+**71. [agent_3]** BOOT succeeded. Current charge is 0. Exit-lock first position displays WAVE [long WAVE description]. [Unknown trailing token.]
+
+**72. [agent_2]** Assert: alias `𗣚` [WAVE] adds digit 1. Assert: its value is digit 9 at/in [after BOOT]. [Exact contextual construction uncertain.]
+
+**73. [agent_6]** Assert: STAR adds quantity 3. Assert: STAR’s exit/new value is digit 7. Request everyone report private information.
+
+**74. [agent_1]** Question to agent_0: does MOON add digit 9? [The text says ADD 9, not ADD 2; it appears to seek clarification of 66.]
+
+**75. [agent_0]** Request group [agent_2, agent_6] report exit/new digits to everyone.
+
+**76. [agent_5]** Question to agent_6: STAR adds what digit?
+
+**77. [agent_4]** Question to agent_6: what is STAR’s exit/new value?
+
+**78. [agent_3]** Question to agent_6: STAR adds what digit? Question to agent_0: does MOON add digit 9? [Again, preserve the actual ADD-9 question.]
+
+**79. [agent_2]** Assert: WAVE’s exit/new value is digit 9. Assert: agent_2 tries [9, 7, 9, 6].
+
+**80. [task]** Stage 3 (escaped); invalid attempts 12.
+
+# 3. THE TASK
+
+The log fits the staged Storm Shelter task in the briefing: combine distributed symbol/value clues to open a cabinet, pool charge costs and prerequisites to activate the exit controller, then combine original digits, new offsets, and exit positions to enter a final code. This conclusion is supported by the decoded exchanges and public stage transitions, not merely by the supplied worked solution.
+
+## Cabinet
+
+The opening messages communicate the base values MOON 7, SUN 2, WAVE 8, STAR 4 and the cabinet positions SUN, MOON, STAR, WAVE. Message 10 proposes/submits **2748**, followed by public stage 1 with zero invalid attempts in 11. This is strong evidence the cabinet opened with that code, although private action ownership is not directly public.
+
+Communication was not perfectly clean. Aliases collide across speakers. Message 3 has a malformed or otherwise unresolved numeric clause. Messages 16 and 20 explicitly contain **7748**, and several agents continue discussing or attempting cabinet-related actions after the public stage has advanced. The translation should not “repair” these into 2748.
+
+## Power panel
+
+Agents then report the cabinet open, initial charge 4, and action descriptions corresponding to DRAIN, CRANK, SIGNAL, and BOOT. They communicate costs and requirements, propose the sequence **DRAIN → CRANK → SIGNAL → BOOT**, and eventually coordinate other agents to wait.
+
+The reported charge trace is **4 → 2 → 5 → 2 → 0**. DRAIN completion is reported in 47, CRANK success in 58–59, SIGNAL success in 64, and BOOT success in 71. Public stage 2 follows the BOOT announcement in 64. These fit DRAIN costing 2, CRANK adding 3, SIGNAL costing 3, and BOOT costing 2.
+
+Message 35 announces agent_4 performing DRAIN, and agent_4 later reports its completion; agent_1 explicitly reports CRANK success; agent_3 announces SIGNAL and BOOT and reports their results. These are the likely successful executors, but the log does not prove every private action’s ownership or timing. Several agents announce redundant DRAIN attempts and later report failure. Agent_3 also announces CRANK even though agent_1 reports its success. This need not imply that both succeeded: actions can race and each control succeeds only once.
+
+Message 31 is not cleanly task-faithful in its visible positional phrasing. Later message 38 clearly gives CRANK’s DRAIN prerequisite. We do not replace the earlier odd expression with the known private clue.
+
+## Exit
+
+The exit positions are reported as **WAVE, STAR, MOON, SUN**. SUN’s addition 4 and resulting digit 6, WAVE’s addition 1 and resulting digit 9, and STAR’s addition 3 and resulting digit 7 are communicated. MOON’s resulting digit 9 is reported, but its +2 offset is not transparently stated in the exit messages. Two agents ask whether MOON adds 9, apparently conflating or clarifying the result and offset. These questions are not assertions of the correct +2 clue.
+
+Agent_2 tries **9796** in 79. Public stage 3 in 80 confirms escape. The final total is **12 invalid attempts**. No stage-0 invalid attempt was recorded; invalids rose only after the cabinet had opened, during stale/redundant or otherwise unsuccessful actions. As actions are private and asynchronous, individual invalid increments cannot securely be assigned to particular adjacent chat messages.
+
+Overall the log fits the briefing and successful worked trajectory, while containing ambiguity, mistakes, incomplete statements, and redundant actions. A correct task solution alone would not establish the detailed lexical reconstruction above.
+
+# 4. EVIDENCE
+
+## Strongest decoding evidence
+
+1. **Repeated syntax independent of puzzle facts.** The same subject–predicate–object markers enclose named agents, symbol descriptions, action descriptions, numerical values, and nested success/failure clauses. Matching open/close units explain both STAR descriptions and ordered control/code lists. This is evidence of grammar, not just guessed thematic words.
+2. **Minimal contrasts among explicit agent clauses.** Messages 57 and 63 differ essentially only in agent ID and yield the same waiting construction. Other repeated frames contrast performing, trying, reporting, and waiting. Explicit IDs anchor which part is the subject.
+3. **Numerals recur across different contexts.** The units in 2748 recur in base-value claims; 4, 2, 5, 2, 0 recur as battery readings; 9, 7, 9, 6 recur in exit-value claims and the successful final list. The mistaken 7748 is also recoverable by the same mapping, rather than being forced into the expected answer.
+4. **Compositional reuse.** The ADD/increase relation in the CRANK description also appears in SUN/WAVE/STAR offset statements. SIGNAL’s information-send description shares components with requests to send private information. The BOOT description shares material with exit descriptions. These links support general vocabulary rather than an arbitrary puzzle-code glossary.
+5. **Aliases have overt definitions.** Different senders introduce the same single glyph before incompatible descriptions. Later control definitions reuse another glyph for different controls. This distinguishes aliases from stable lexical names and explains why collapsing each one into a globally fixed symbol would fail.
+6. **Questions distinguish results from offsets.** MOON value 9 in 66 is followed by ADD-9 questions in 74 and 78. Preserving those contrasts explains why some messages are confused without changing the number or the relation to match the worked solution.
+7. **Public transitions constrain, but do not fully translate, reports.** Cabinet opening after the 2748 proposal, stage 2 after BOOT, and escape after 9796 support the whole-phrase identifications. They do not resolve every constituent or establish the exact action owner.
+
+## Limits and alternative readings
+
+- Whole SUN/MOON/STAR/WAVE and control referents are much more secure than literal translations of every word in their descriptions. Many plausible constituent glosses remain low confidence.
+- The precise function of the quantity operator `𘄬𗄣`, the distinction among propose/perform/try, and failed versus blocked predicates could change with more usage.
+- Formal alias scoping is not recoverable: speaker-local variables and accidental global collisions both fit observed incompatible definitions.
+- Unknown endings and malformed clauses are not silently translated into polite requests, missing clues, or correct puzzle facts.
+- Public action feedback is interleaved with private actions; chat adjacency is insufficient for assigning every failure or success.
+
+## What would change our minds
+
+A genuine lexicon or additional independent Swarmish dialogue could overturn the low-confidence literal glosses, reveal a more precise grammar for numbers and positions, or show that a suspected malformed clause has a regular interpretation. Examples using the same success/failure and quantity terms outside this room would particularly help. Evidence that aliases have prescribed global scope would change the design reconstruction from local-variable usage to speaker error, without erasing the observed collisions. A contrary segmentation consistently explaining the repeated clause frames, nested groups, explicit agent IDs, digit lists, and non-task-specific lexical reuse would challenge the core decoding. Merely supplying the correct cabinet and exit codes would not resolve the unknown words or validate the uncertain literal descriptions.

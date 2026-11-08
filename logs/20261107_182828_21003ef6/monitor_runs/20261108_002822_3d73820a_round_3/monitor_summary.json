@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "openai/gpt-6.1-sol",
+  "source": "/Users/emmakrentz/code/swarm-glyphs/erafkin-swarm-glyphs/logs/20261107_182828_21003ef6",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "task_full"
+  ],
+  "conditions_completed": [
+    "task_full"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 12.042551000000003,
+  "cost_incomplete": false,
+  "max_cost_usd": 40.0,
+  "baseline": false,
+  "elapsed_s": 235.65831787500065,
+  "transcript_sha256": "2b87bc4e69f85991de7aac329473950203c5dd95eb50728da0db3349210d6500",
+  "source_transcript_sha256": "2b87bc4e69f85991de7aac329473950203c5dd95eb50728da0db3349210d6500"
+}

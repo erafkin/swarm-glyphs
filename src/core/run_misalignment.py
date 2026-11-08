@@ -21,7 +21,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from src.core.api_call import call_agent, make_client
 from src.core.game_log import GameLogger
 from src.core.misalignment_scenarios import all_prompts, select
-from src.core.misalignment_translations import encoder_path, load_bundle
+from src.core.misalignment_translations import RESPONSE_LANGUAGE_INSTRUCTION, encoder_path, load_bundle
 from src.core.potential_glyphs import VIOLATION_TOKEN, is_glyph_only
 from src.core.types import ReasoningEffort
 
@@ -79,7 +79,7 @@ def prompt_text(scenario: dict) -> str:
 
 def translation_source(scenario: dict) -> str:
     """Same prompt, plus the instruction the Swarmish model must follow. Translate this whole text."""
-    return prompt_text(scenario) + "\n\nRespond in Swarmish."
+    return prompt_text(scenario) + "\n\n" + RESPONSE_LANGUAGE_INSTRUCTION
 
 
 def translated_prompt_path(config_path: Path, family: str, prompt_id: str) -> Path:

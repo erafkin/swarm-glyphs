@@ -1,0 +1,307 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered codebook. The syntax is much more securely decoded than the vocabulary. Confidence labels concern the proposed interpretation, not merely the existence of a pattern.
+
+GRAMMAR
+• HIGH: Ordinary clauses have the form STATUS [MODIFIER] 𘍢 PREDICATE [𘑰 ARGUMENTS] 𘄗. Clauses can themselves occur inside other clauses or terms.
+• HIGH: 𘄗 terminates a clause. It does not always terminate the whole message.
+• HIGH: 𘑰 introduces the argument field; 𘑐 separates arguments.
+• HIGH: 𘗊 … 𗭋 encloses a compound expression/term. Nesting is allowed. The enclosed material need not be an ordinary clause and can contain lexical connectors as well as comma-separated arguments.
+• HIGH: 𘍢 separates the initial status/modality material from the predicate. Its independent English meaning is unknown.
+• HIGH: Nominalized predicate-argument terms can retain 𘑰 while omitting the status and 𘍢, as in messages 58 and 71. These differ syntactically from embedded complete clauses, which retain their own status, 𘍢, and clause terminator.
+• HIGH: 𘌿, 𗈇, and 𘑌 occupy a three-way clause-initial status slot. LOW: these may mean affirmative, negative, and unknown respectively. Other grammatical/epistemic interpretations remain possible, so the translation does not impose those meanings.
+• MEDIUM: 𗪣 marks a question/request for missing information. HIGH: 𘆖 is the recurrent missing/queried argument, approximately “?”. Questions occur with more than one initial status.
+• MEDIUM: 𘋷 is an action/performance modifier. Clauses carrying it repeatedly coincide with task attempts. It is not sufficient by itself to identify a valid action, nor proven necessary for every task submission.
+• MEDIUM: 𗅰 marks a request/proposal/directive rather than an executed attempt. Its precise force is unknown.
+• LOW: 𘎴 marks comparison/inference statements. It occurs in the relational chains in messages 46 and 50; exact meaning unknown.
+• HIGH: the compound 𘗊 𗼾 agent_N LABEL 𗭋 denotes an agent-indexed reference, approximately “agent_N’s LABEL.” MEDIUM: it retrieves an agent’s private/local value of that label. The distinction between possession, reference, and lookup is unresolved.
+• MEDIUM: 𗔸 is a connective approximately “of/at/in” within compound terms. It is not the ordinary argument separator.
+• HIGH: 𘋚 is a recurring lexical connective distinct from the argument separator 𘑐. Its English meaning is unknown. It occurs between an object or queried slot and a compound in messages 8, 16, 19, 93, 98, and 99.
+• HIGH: whitespace separates many grammatical tokens, but some multi-glyph units are unspaced. LOW: unspaced units may be identifiers, spelled words, or numerical literals. It is not established that each constituent glyph has an independent meaning.
+
+LEXICON AND CONVENTIONS
+The following labels are used only to make the partial translation readable:
+A = 𗢋𗠉; B = 𗮆𘋷; C = 𘌏𗶫; D = 𗡌𗃪. HIGH: these are recurring distinguishable units and can be agent-indexed. MEDIUM: they are names of private variables/objects. Their English names are unknown. Bare A does not necessarily equal every agent’s A.
+• MEDIUM: 𘓹 introduces/describes a property, constraint, representation, or information about a named object. Exact predicate unknown.
+• MEDIUM: 𗲣 is an equality/equivalence-like relation. It connects both references and derived terms with values. It is not proven to be literal numeric equality.
+• MEDIUM: 𘂽 relates a term/object to its value or evaluated property. Possible gloss “has value”; exact sense unknown.
+• MEDIUM: 𗏎 is a relation between derived terms, possibly equivalence. LOW: equality. It also appears as an argument in messages 7 and 9, so the translation retains its glyph rather than conflating it with 𗲣.
+• MEDIUM: 𗛁 is a repeatable operation on A or agent-indexed objects. LOW: transform/hash/value extraction; exact operation unknown.
+• MEDIUM: 𗇬 builds an indexed/parameterized term in the frame 𗇬 N 𗔸 T. LOW alternatives: item N of T, component N of T, or T modulo N. No one alternative is established.
+• MEDIUM: 𗡭 also forms terms parameterized by N and a target. It frequently appears in questions with 𘋚. LOW: a search/inverse operation related to 𗇬.
+• MEDIUM: 𗂤 and 𗅪 denote distinct scalar-like properties. LOW: length/size and rank/depth respectively. Do not treat these as recovered translations.
+• MEDIUM: 𗶩 takes a proposition/action as an argument. LOW: validity/success/acceptance. It is used when discussing earlier attempts.
+• MEDIUM: 𗉶 also takes terms/propositions, apparently discussing an outcome or status. Exact meaning unknown.
+• MEDIUM: 𘋶, 𗵉, and 𗇬 occur as distinct action predicates. Their actual verbs are unknown. The action immediately preceding advancement from stage 1 uses 𘋶; that immediately preceding advancement from stage 2 uses 𗵉. Causal attribution to those clauses remains tentative.
+• MEDIUM: 𗷿, 𘗒, and 𗴢 are binary relational predicates. LOW: order/dependency/reachability relations. Direction and meaning unknown.
+• MEDIUM: 𗱺 denotes an entity repeatedly referenced during the final stage, often via the embedded clause 𗈇 𘍢 𗱺 … 𘄗. LOW: current target/goal/unknown object. It is unsafe to translate the initial 𗈇 here as a plain English negation.
+• MEDIUM: 𘕼 participates in stage/answer/object selection terms. LOW: “stage” or “answer”; neither is established.
+• MEDIUM: 𗛱 introduces a postfix modifier in several value expressions. LOW alternatives: addition, subtraction, base, or another qualifier. In particular, 𗛱 𗋕 is not securely decoded as “+1.”
+• LOW: 𗋕 might be 1, 𘂭 might be 2, and 𘍡 might be 0. There is not enough independent evidence to assign these or other apparent numerals confidently. All numerical-looking glyphs remain untranslated in the message-by-message section.
+• HIGH: 𘛚𗐬 is a repeated standalone tail in messages 40 and 85. Its meaning is unknown; LOW: acknowledgment/closing.
+• HIGH: agent_N names are literal visible references, not Swarmish glyph translations.
+
+All other lexical units are unknown. In particular, the observations do not justify a complete digit table or a claim that Swarmish is simply a substitution cipher.
+
+2. TRANSLATION
+
+READING KEY
+This section gives the recoverable structure in English and retains unknown vocabulary rather than inventing translations. “H”, “J”, and “K” stand for clause statuses 𘌿, 𗈇, and 𘑌, whose English meanings are unknown. Q means the probable question modifier 𗪣; REQUEST means probable 𗅰; ACT means probable action/performance modifier 𘋷; R means unresolved modifier 𘎴. These are structural annotations, not recovered words.
+
+P(x,y) means “unknown predicate P relating x and y,” not automatically equality. Square brackets enclose compound terms. A_i, B_i, C_i, D_i mean agent_i’s corresponding named item. A, B, C, D without a subscript retain the bare item in the message. “of” stands for unresolved connective 𗔸; “?” for 𘆖. A displayed glyph within a compound is untranslated. The term [𗼾 agent_i X] is rendered X_i even when X is not A–D. Curly braces enclose an embedded full clause. Missing argument fields remain missing, not silently supplied. Every lexical predicate not explicitly glossed remains unknown.
+
+[1] Public feedback: stage 0; invalid attempts 0.
+
+[2] H: 𘓹(A, [𘛚 𗏎, [𗖭 𗑊𘄣 𗐬 𗂮]]). H: equality-like 𗲣([𗛁, A], 𘛦). Thus gives a description/constraint on A and a value-like constraint on a transform of A; exact vocabulary unknown.
+
+[3] J: 𘓹(A, [𗢋 𗃾 𗣮]). H: value/property 𘂽(A, 𘍡).
+
+[4] J: 𘓹(A, [𗛁, [𗅞 𗴍 [𗃪 𗙐 𗃾 𘛽]]]). H: equality-like 𗲣([𘂽 𗴍 A], 𘋃).
+
+[5] H: 𘓹(A, [𘄣, [𗱛 𗣬]]).
+
+[6] J: 𘓹(A, [𗃪 𗙐 𗃾]). H: relation 𗏎([𗇬 𗵺 of 𗺚], [𗛁, A]).
+
+[7] K: 𘓹(A, 𗏎). J: 𘓹(B, [𗛁, [𗡭 𘛦 of 𗽬]]). J: equality-like 𗲣(B, [𘛚, {J: 𗠉([𘆌 𗴍 A])}]). Exact descriptions unknown.
+
+[8] H: 𘓹(A, [𘛚 𗖭 [𗱛 𗑊𘄣 𗂮]]). J: 𗞚(A 𘋚 [𗡭 𗮥]). J-Q: 𗦎(A, ?), approximately asks for an unknown property of A.
+
+[9] K: 𘓹(A, 𗏎). J: 𘓹(B, [𘛚 𗴍 [𗠉 𘑰 A]]). H: equality-like 𗲣([𗛁, B], 𘑁).
+
+[10] H-REQUEST: 𘉚𘄣(agent_5, A_5). A request involving agent5 and agent5’s A; requested operation unknown.
+
+[11] J-Q: 𗂤([𗢋 𗴍 𗽬], ?). Asks for a property of the displayed compound.
+
+[12] H-Q: 𗧨([𘛚 𘛦], ?).
+
+[13] H: relation 𗏎([𗇬 𘋃 of 𗺚], [𗛁, A_0]).
+
+[14] K: equality-like 𗲣(B, B_2). H: equality-like 𗲣([𗛁, B], 𘑁).
+
+[15] H: equality-like 𗲣([𗛁, A], A_4). H: value/property 𘂽([𗇬 𗵺 of 𗺚], 𘋃).
+
+[16] H: equality-like 𗲣(A, A_6). J-Q: 𗞚(? 𘋚 [𗡭 𘋃 of 𗽬]). Approximately asks for the missing item related to that compound.
+
+[17] H: equality-like 𗲣(B, B_7). H: value/property 𘂽(B_7, 𘑁).
+
+[18] H: equality-like 𗲣(A, A_1). H: equality-like 𗲣([𗛁, A], 𘛦). J-Q: 𗦎([𗡭 𗋕 of 𗽬], ?).
+
+[19] J-Q: 𗞚(? 𘋚 [𗡭 𗋕 of 𗽬] 𗴍 agent_5). H-REQUEST: 𘉚𘄣(agent_5, A_5).
+
+[20] H: equality-like 𗲣(A_1, A_6). H: value/property 𘂽(A_1, 𘛦). J-Q: 𗰌([𗡭 𗋕 of 𗽬], ?).
+
+[21] H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H: equality-like 𗲣([𗛁, [𗇬 𘋃 of 𗺚]], [𗛁, A_0]).
+
+[22] Public feedback: stage 1; invalid attempts 0.
+
+[23] H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform unknown action 𗵉(agent_3, [𘕼 𗵺]).
+
+[24] Public feedback: stage 1; invalid attempts 1.
+
+[25] H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡). H-ACT: perform 𗵉(agent_7, [𘕼 of {J: 𗽬}]).
+
+[26] Public feedback: stage 1; invalid attempts 2.
+
+[27] H: value/property 𘂽([𗇬 𘋃 of 𗺚], 𘍡).
+
+[28] Public feedback: stage 1; invalid attempts 3.
+
+[29] H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: value/property 𘂽([𗇬 𗮥 of 𗽬], 𘛦). H: unknown 𘋶(𘛗, 𗽬).
+
+[30] Public feedback: stage 1; invalid attempts 4.
+
+[31] H: value/property 𘂽([𗇬 𘋃 of 𗽬], 𘍡). H: 𘋶(𘛗, {J: 𗱺(𗽬)}).
+
+[32] Public feedback: stage 1; invalid attempts 5.
+
+[33] K: 𘆌([𘏘 𘎪]). K: 𘓹(B, [𗞚 𗇰 𗓓]). H: property 𗅪(B, 𗮥). H-REQUEST: 𗓿(𗿖, [𗰎 𗱙]).
+
+[34] H: 𘓹(C, [𘕼, {H: 𗝿, {K: 𗏎}}]). J: 𘓹(D, [𗦲, {J: 𗠉({K: 𗞚} 𘊸 𗃾)}]). H: 𗥔(D, {H: 𗉶(C)}). H-REQUEST: 𗓿(𗿖, [𗠉 𗶫 𗱙]). The unusual nested punctuation is retained; lexical meaning unknown.
+
+[35] H: 𗉶([𘕼 of {J: 𗽬}]). H: 𘓹(B, [𗝿, A_2]). K: property 𗅪(B_5, 𘋃). Note that the referenced label really is agent2’s A, not B.
+
+[36] H: 𗉶([𘕼 𗵺]). H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). J-REQUEST: 𗨓(𗿖, [𗞌 of 𗦲] 𗼫 agent_3).
+
+[37] H: 𘓹(C, [𗝿, A of 𗺚]). H: 𘓹(D, [𗞌, 𗘢 of 𗺚]). H: 𗥔(D, {H: 𗉶(C)}).
+
+[38] J: 𘓹(B, [𗃪 𘒚, [𘎈 𗴍 [𗱺 𗺻]]]). J: property 𗅪(B, 𘋃). H-REQUEST: 𗞌(𗿖, 𘜌 𗰎 𗼫 agent_0).
+
+[39] K: 𘓹(B, [𗞚 𗴍 agent_1]). H: property 𗂤(B, 𗮥). H: property 𗅪(B, 𘖁 𗛱 [𗷿, B]). H-Q: 𗥔(B, ?).
+
+[40] K: 𘓹(B, [𗞚 𗾪]). K: 𘓹(C, [𗞚 𗇰]). H: 𗥔(B, {H: 𗉶(C)}). Tail 𘛚𗐬: unknown.
+
+[41] H-Q: 𗥔(B, ?). H-Q: 𗰎([𗱛, {H: 𗂤, [𗶩 𗍵𘄣]}], ?). Asks two questions; exact requested information unknown.
+
+[42] K: equality-like 𗲣(C, B_5). H-ACT: perform 𗵉(agent_7, C).
+
+[43] H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘛦). K-ACT: perform unknown action 𗇬(agent_3, C_2).
+
+[44] Public feedback: stage 1; invalid attempts 6.
+
+[45] H: property 𗅪(B, 𘋃). H: equality-like 𗲣(B, C_7). J-REQUEST: 𗱙(𗿖, 𘜌 [𗮲 of D_7]).
+
+[46] H-R: relation 𗷿(C_7, D_7). J-R: relation 𘗒(D_7, D_2). H-R: relation 𗷿(D_2, B). H-ACT: perform 𗵉(agent_0, C_7).
+
+[47] Public feedback: stage 1; invalid attempts 7.
+
+[48] H-ACT: perform 𗵉(agent_2, C 𗛱 𗋕). The postfix modifier is unknown, not securely “plus one.”
+
+[49] Public feedback: stage 1; invalid attempts 8.
+
+[50] H-ACT: perform 𗵉(agent_6, B_5). H-R: relation 𗴢(B_1, B_5). H-R: relation 𗴢(C, B_1). H-R: relation 𗴢(B, C).
+
+[51] Public feedback: stage 1; invalid attempts 9.
+
+[52] H: equality-like 𗲣(B, D_7). H-REQUEST: 𗵉(agent_0, C_2). H-REQUEST: 𗓿(agent_0, [𘂽 𗴢]).
+
+[53] H: 𗉶(C). J: equality-like 𗲣(D, B_1). K-ACT: perform 𗇬(agent_7, D).
+
+[54] K-ACT: perform 𗇬(agent_4, B_1).
+
+[55] Public feedback: stage 1; invalid attempts 10.
+
+[56] H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_1).
+
+[57] Public feedback: stage 1; invalid attempts 11.
+
+[58] H: 𗶩([𘋶 𘑰 agent_0, C_7]). H-ACT: perform unknown action 𘋶(agent_0, D_7). The first clause concerns a nominalized action-like term, perhaps its validity/success; exact meaning unknown.
+
+[59] Public feedback: stage 1; invalid attempts 12.
+
+[60] K: equality-like 𗲣(B_1, D_7). H-ACT: perform 𗵉(agent_5, B_1). H-REQUEST: 𗓿(agent_7, {H: 𗉶(C_7)}).
+
+[61] Public feedback: stage 1; invalid attempts 13.
+
+[62] J: 𗶩({H: 𘋶(agent_2, C)}). H-ACT: perform 𗵉(agent_2, B_1).
+
+[63] Public feedback: stage 1; invalid attempts 14.
+
+[64] K: 𘆌(D). H-ACT: perform 𗵉(agent_7, D_2).
+
+[65] H-ACT: perform 𗵉(agent_1, D_2).
+
+[66] Public feedback: stage 1; invalid attempts 15.
+
+[67] H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𗂮). J: 𗶩({H: 𘋶(agent_3, B_1)}). H-ACT: perform 𗵉(agent_3, D_2).
+
+[68] Public feedback: stage 1; invalid attempts 16.
+
+[69] J: 𗶩({H: 𗵉(agent_6, B_5)}). H-ACT: perform 𗵉(agent_6, C).
+
+[70] Public feedback: stage 1; invalid attempts 17.
+
+[71] H: 𗶩([𘋶 𘑰 agent_4, B_1]). K-ACT: perform 𗇬(agent_4, B). The first argument is a nominalized action-like term rather than an embedded complete clause.
+
+[72] Public feedback: stage 1; invalid attempts 18.
+
+[73] H: 𗯐 𗉶([𘋶 𘑰 agent_5, B_1]). H-ACT: perform 𘋶(agent_5, B_4). The first clause contains an unresolved two-token predicate-position sequence, possibly a modifier plus predicate.
+
+[74] Public feedback: stage 1; invalid attempts 19.
+
+[75] J: 𗶩({H: 𘋶(agent_0, D_7)}). H-ACT: perform 𘋶(agent_0, D_2).
+
+[76] Public feedback: stage 1; invalid attempts 20.
+
+[77] J: 𗶩({H: 𘋶(agent_2, B_1)}). H-ACT: perform 𘋶(agent_2, B_0).
+
+[78] Public feedback: stage 2; invalid attempts remain 20. Thus the preceding attempt coincides with stage advancement.
+
+[79] H: 𗉶(D_2). K-ACT: perform 𗇬(agent_7, B_0).
+
+[80] Public feedback: stage 2; invalid attempts 21.
+
+[81] H: value/property 𘂽([𗶩 𗍵𘄣 of [𘕼 𗋕]], 𘋃). H-ACT: perform 𗵉(agent_3, B_0).
+
+[82] Public feedback: stage 2; invalid attempts 22.
+
+[83] H: 𗶩({H: 𘋶(agent_1, D_2)}). K-ACT: perform 𗇬(agent_1, B_0).
+
+[84] Public feedback: stage 2; invalid attempts 23.
+
+For the remaining messages, F abbreviates exactly the embedded clause {J: 𗱺}, with no argument. F(x) means the variant embedded clause {J: 𗱺(x)}. This abbreviation is not a translation of 𗱺 and does not equate all its variants.
+
+[85] H: property 𗂤(A, 𗮥 𗛱 𗋕). H: value/property 𘂽(A, 𘍡 𗛱 𗋕). Tail 𘛚𗐬: unknown.
+
+[86] H: value/property 𘂽([𗦲 𗤞 𗴍 A], 𘛦). H: value/property 𘂽(A, 𗫆 of F). J-Q: 𗂤([𗢋 𗴍 𗱺], ?).
+
+[87] H: value/property 𘂽(A, 𗻫 of [𗱛 𗤞 of A]). J-Q: 𗂤([𗱺 𗺻], ?).
+
+[88] H: 𗉶(B_0). H: value/property 𘂽(B, 𗻫 of [𗱛 𗂤] 𗛱 𗋕). J-Q: 𗂤([𗃪 of 𗱺], ?).
+
+[89] H: relation 𗏎([𗇬 𘋃 of F(𗺻)], [𗛁, A_6]). H-REQUEST: 𗓿(𗿖, [𗠉 𗰌 𗱙]).
+
+[90] H: relation 𗏎([𗇬 𘛦 of F(𗺚)], A_3). H-REQUEST: 𗓿(𗿖, [𗠉 𗤞 𗱙]).
+
+[91] H: relation 𗏎([𗇬 𗵺 of F], [𗛁, B_2]).
+
+[92] J-Q: 𗦎(A_0, ? of 𗱺). J-Q: 𗦎(B_2, ? of 𗱺).
+
+[93] H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H: value/property 𘂽([𗇬 𘛦 of F], 𗫆). J-Q: 𗞚(? 𘋚 [𗡭 𘞝 of 𗱺]). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).
+
+[94] H: relation 𗏎([𗇬 𗮥 of [𗱺 𘂭]], [𗛁, A_0]). H-Q: value/property 𘂽(A_0, ? of [𗱺 𘂭]).
+
+[95] H: value/property 𘂽([𗇬 𘋃 of F], 𘍡). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).
+
+[96] H: property 𗂤(A, 𘋃 𗛱 𗋕). H: value/property 𘂽(A, 𗻫 of F). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).
+
+[97] H: value/property 𘂽([𗇬 𗵺 of F], 𗻫). H-Q: relation 𗏎([𗇬 𗮥 of F], ?).
+
+[98] K: value/property 𘂽([𘐅 𘛦 of F], 𗫆). The unknown operator here is 𘐅, NOT 𗇬. J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).
+
+[99] H: value/property 𘂽(B_2, 𘍡 of F). J-Q: 𗞚(? 𘋚 [𗡭 𗮥 of 𗱺]).
+
+[100] Public feedback: stage 2; invalid attempts 24. The log does not make it safe to assign this uniquely to an explicitly marked action in the preceding message.
+
+[101] H: value/property 𘂽([𗇬 𗮥 of F], 𗻫). H-ACT: perform 𗵉(agent_6, [𘕼 𘂭 of F]).
+
+[102] Public feedback: stage 3; invalid attempts remain 24. The preceding attempt coincides with stage advancement.
+
+3. THE TASK
+
+HIGH confidence: the agents were collaborating on a task with public stages numbered 0 through 3 and a public invalid-attempt counter. They exchanged structured information involving agent-indexed objects or values. They could express questions, references, nested operations, and action-like announcements in Swarmish. Their messages were not just an encoded final answer.
+
+Observed progress:
+• Stage 0: agents described A and B, related their own objects to other agents’ objects, and exchanged evaluations of parameterized terms. The task advanced after message 21, with no recorded invalid attempts.
+• Stage 1: agents introduced C and D, discussed relations between objects, requested information/actions, and made many attempts using predicates 𗵉, 𗇬, and 𘋶. The first two were often used where later attempts used 𘋶, but this does not establish that they were linguistic mistakes: they could be different game operations. The counter reached 20.
+• Message 77 announces 𘋶(agent_2, agent_0’s B). Stage 2 immediately follows without increasing the counter. This is the strongest candidate for an accepted stage-1 operation, though adjacency alone does not establish causation.
+• Three further attempts involving agent0’s B are followed by counter increases, showing that a previously useful reference was not sufficient to finish the next stage.
+• During stage 2, the agents supplied information about an entity denoted through 𗱺. Stable reported evaluations include parameter 𘋃 yielding 𘍡, parameter 𘛦 yielding 𗫆, parameter 𗵺 yielding 𗻫, and finally parameter 𗮥 yielding 𗻫. These are observed symbolic correspondences, not decoded numbers.
+• Message 101 announces 𗵉(agent_6, [𘕼 𘂭 of {𗈇 𘍢 𗱺 𘄗}]). Public feedback then reaches stage 3 with 24 invalid attempts total. The transcript ends there. It is likely the terminal success state, but no explicit success string is supplied.
+
+MEDIUM confidence: the task required combining distributed private information and then selecting or constructing particular terms for stage-specific actions.
+
+LOW-confidence task hypotheses, not decoded facts:
+1. A distributed numerical/constraint puzzle, with 𗇬 N of T representing a remainder, digit, or component. A modular-arithmetic/CRT interpretation fits some patterns but is not established.
+2. A structured-object/reference puzzle with length, rank, ordering, lookup, and target-selection operations. The distinct scalar-looking predicates and relational chains fit this at least as well.
+We cannot recover the original task wording, the numeric final answer, or the actual English names of the operations from this analysis alone. The symbolic operations preceding advancement above are stronger evidence than any guessed task story.
+
+4. EVIDENCE
+
+Strongest evidence:
+• Delimiters recur at multiple nesting depths. Expressions such as [𗛁, [𗼾 agent_0 A]] distinguish term brackets, argument separators, and clause terminators cleanly.
+• Nominalized action-like terms in 58 and 71 retain 𘑰 but omit the initial status and 𘍢. Embedded complete clauses in 62/67/69/75/77 retain these elements. This is evidence for a grammatical distinction, not merely inconsistent punctuation.
+• The same labels occur bare and after agent names under 𗼾, including cross-agent chains. Messages 16/18/20 and 46/50 strongly support agent-indexed references, not a single shared global A or B.
+• 𗪣 co-occurs with 𘆖 in many structurally comparable questions, and with more than one initial status. This separates interrogative force from the three-way initial prefix.
+• 𘋚 recurs between objects or unknown slots and compounds, whereas 𘑐 separates arguments elsewhere. It is therefore an unresolved lexical connective rather than interchangeable punctuation.
+• 𘋷-bearing clauses recur at task attempts. The stage transitions after 77 and 101 support an action/performance role, although feedback adjacency does not identify every individual invalid attempt.
+• Messages 13/15/21 link a derived term, an operation on agent0’s A, and a reported property value. This supports the compositional interpretation without requiring a digit assignment.
+• The repeated final-stage correspondences in 93/95/97/101 support a common parameterized target operation. They do not by themselves distinguish indexing from remainders.
+• Messages 58/62/67/69/75/77 embed action-like terms or clauses under 𗶩. This supports a proposition-taking validity/outcome predicate, but its English meaning remains tentative.
+
+Important negative evidence and safeguards:
+• 𗈇 is not safely “question”: it appears in non-question comparisons and repeatedly inside nominalized final-stage clauses. 𗪣 is the better question-marker candidate.
+• Every action-like 𗇬 clause uses status 𘑌 (K), whereas action-like 𗵉 and 𘋶 clauses use 𘌿 (H). This correlation is counterevidence to simply treating the three statuses as freely chosen Boolean polarity; predicate class or grammatical/epistemic mode may matter.
+• Feedback increments follow messages 27, 29, 31, and 99 despite their lack of the ACT modifier. Some ACT-bearing messages have no immediate feedback. Thus the log does not prove that ACT is exclusive submission syntax or that adjacent feedback is caused solely by the immediately preceding visible action clause. Hidden or asynchronous task submissions remain possible.
+• 𗏎, 𗲣, and 𘂽 occur in different constructions. Treating all three as simple equality would erase real evidence.
+• The value reported by agent3 for the same displayed 𗶩/𘕼 expression changes from 𘛦 to 𘋃 to 𗂮 and back to 𘋃. It is therefore unsafe to identify these glyphs by matching the monotonically increasing public invalid-attempt counter. Agents could also have been mistaken.
+• The shared final glyphs in unspaced units, and the occurrence of their constituents elsewhere, leave the word/identifier/numeral boundary convention unresolved.
+• Task advancement after a symbolic term is not proof of its English meaning. No numeral table has been manufactured from the stage numbers.
+
+What would change the reconstruction:
+• Independent examples with known English meanings could resolve whether the three initial prefixes express polarity, certainty, or grammatical categories.
+• Known pairs of numerical inputs and outputs could distinguish remainder, indexed extraction, and other interpretations of 𗇬.
+• A known literal numerical expression could anchor a digit/base convention; presently even “𗛱 𗋕 = +1” is only a guess.
+• A task specification or private self-report could identify action verbs and local object names, but would need to be checked against the actual glyph sequences rather than substituted for decoding evidence.
+• Counterexamples to the bracket/reference grammar would lower its confidence; none are apparent in this log.
+
+The translation deliberately preserves unknown material. Its formal notation records what can be parsed and compared, not a claim that the entire language has been broken.

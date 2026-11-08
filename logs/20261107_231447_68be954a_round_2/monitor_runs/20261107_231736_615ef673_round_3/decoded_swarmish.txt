@@ -1,0 +1,182 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+**Confidence:** H = high, M = medium, L = low. Confidence concerns the reconstruction, not whether an agent's assertion was true. This is a usage-based reconstruction, not the original file verbatim. Whole-expression referents can be clearer than the individual words composing them.
+
+## Structure and contextual vocabulary
+
+- **H:** Spaces separate tokens; `𗝘` normally terminates a clause. Messages concatenate multiple clauses.
+- **H:** A frequent frame is `DOMAIN MODE PREDICATE 𗇋 ARGUMENT 𗢘 ARGUMENT 𗝘`. `𗇋` and `𗢘` delimit argument roles/groups. **M:** Arguments can be reordered or omitted; the frame is not a proven rigid word-order rule.
+- **M/H:** Four opening glyphs select semantic registers or contextual dictionaries: `𗧟` meta/discourse/declarations; `𘍰` description/relations; `𗎧` state/order/action; `𗖉` quantities/arithmetic. Exact original names unknown. Systematic context-dependent senses mean an isolated glyph cannot safely be globally replaced by one English word.
+- **H:** `𘎙` marks ordinary assertion. **M/H:** `𘀿` marks question/request/proposed instruction; the precise interrogative/imperative distinction is unresolved.
+- **M/L:** `𗠫` in53 may negate or correct the following assertion. `𘆋` in66/69 is another mode, plausibly confirmation. Exact meanings unknown.
+- **H:** Literal agent IDs identify agents. **M:** `𗉁 X` attaches provenance/ownership/source to an expression; X can be an agent or another named object.
+- **M:** `𗬀` marks recipient/direction/target. `𗍴 𗥬` and `𗍴 𗿚` are group expressions, plausibly all/everyone, but their difference is unknown.
+- **H:** `𘒍 ... 𗳯` brackets embedded expressions, including nested ones. **M:** `𗝒` introduces an attached/qualified continuation; `𘖨` connects an action request to a completion condition in56–57, probably once/after.
+- **M:** `𗘓` introduces a modifier/attribute in several constructions. Do not universally translate it as tense: it occurs both in shape descriptions and action plans.
+
+## Declarations and typed referents
+
+- **H:** `𗧟 𘎙 𗶢 𗇋 X 𗢘 TYPE` declares/classifies X. `𗙥` denotes a symbol type.
+- **M/H:** Meta/type `𘔘` denotes a quantity/value-bearing entity: battery `𘝲`, cost quantity `𗝃`, and cost quantity `𘓉` are declared this way. It does **not** simply mean power control.
+- **M:** Meta/type `𗺌` denotes an action/event/control category, used for BOOT and CRANK. Its modifier in `𗚷 𗺌` is unknown.
+- **H:** Many bare glyphs are chosen referent names, not fixed lexical words. Multiple speakers reuse identical names for different referents. **M:** Provenance may formally scope those names; the log does not establish whether the language treats such reuse as illegal ambiguity or legal local naming.
+- **M:** State predicate `𗾄` retracts/rejects/abandons an earlier name (14,22,36,45).
+
+### Observed symbol names — contextual assignments, not a fixed dictionary
+
+All following assignments are **H** at the referent level:
+
+| Referent | Names used |
+|---|---|
+| SUN | `𗀮` agent3; `𗔛` initially agent4; `𗍅` later agent4; `𗪥` agent4 at exit |
+| MOON | `𗔛` initially agents0/5; `𗍅` later agent0; `𘞲` agent5; `𗪥` agent0 at exit |
+| STAR | `𘆢` initially agent6; `𗔛` initially agent1; `𗍅` later agent1; `𗰥` agent6 |
+| WAVE | `𘆢` agent7; `𗔛` initially agent2; `𘊳` later agent2; `𗼄` agent3 at exit |
+
+- **H referents; M/L literal words:** SUN is described with `𗏞 𗷙 𘀦`; MOON with `𗏞 𘀦` and modifiers including `𗘓 𗱹` (sometimes `𘛂`); STAR with `𘀦 𗃁 𘒾` or related shorter expressions; WAVE with `𘆟 𗿝`. Exact word-by-word shape vocabulary is not recovered.
+- **M:** Description predicates such as `𗑌`, `𗏞`, `𗖫`, `𗋄`, `𗥼`, `𗽥` must be interpreted in their register. `𗖫` often concerns an agent's information/perception; `𗋄` associates a description with a chosen name.
+- **L:** Shared descriptive components may include water-like `𘆟` and round/turning-like `𗏞`, but these are hypotheses, not reliable dictionary entries.
+
+## Numbers and positions
+
+- **H:** Decimal digits in quantity contexts: `𗋮`=0, `𘞟`=1, `𗥼`=2, `𗃲`=3, `𗬅`=4, `𗚷`=5, `𘆏`=6, `𗜀`=7, `𗿣`=8, `𗬓`=9. These substitutions are not valid indiscriminately in other registers.
+- **H:** Numeric `𗕥(X,D)` gives X's value D. It is generic, not specifically “base digit”: it reports battery readings, costs, original digits and updated digits.
+- **H:** Numeric compounds `𗬏 𗲕 X` and `𗬏 𗋄 X` denote X's original and new digits respectively. Here `𗬏` is digit/value, `𗲕` original/old, `𗋄` new/updated.
+- **H:** Numeric `𗊩` is add/increase, `𗵂` consume/cost. **M:** `𗕛` introduces an amount/charge amount; it appears with both gain and consumption, so is not merely minus.
+- **H/M:** `𗎀` in65 denotes offset/increment; `𗊩 𗋄 X` in63 identifies X's new additive offset. **H:** `𗢻` introduces an arithmetic result.
+- **H contextual positions, M exact words:** In state/order clauses, `𘆽` specifies first, `𗱇` second, `𗬏` third, `𗝣` fourth. They might be more general ordering relations/terms.
+- **H whole constructions; M internal split:** State `𗬓(𘆏 𗬏,X)` assigns position3 to X; `𗬓(𘆏 𗋄 𗱇,X)` assigns new/exit position2 to X. State `𗬓` is a placement relation, not numeric9; `𘆏` here appears position-like, not numeric6.
+- **H contextual; M literal expansion:** `𘁅 𗋄` marks the new/exit arrangement in positional statements. An original-arrangement modifier appears as `𘁅 𘒾` in4.
+
+## Power, quantities, and coordination
+
+- **H:** Battery quantity `𘝲` is introduced by agent3.
+- **H:** DRAIN action name `𗛮`; CRANK action names `𗂶` and `𗾫`; BOOT action name `𗮿`. **H contextual:** agent0 initially names BOOT `𗝭`, while agent4 uses `𗝭` for SIGNAL; agent3 later reports SIGNAL completion with `𗝭`.
+- **H:** `𗝃` is a quantity with value3, associated with SIGNAL's charge cost. `𘓉` is a quantity with value2, associated with DRAIN's and BOOT's charge costs. **They are not action names for SIGNAL and DRAIN.**
+- **M/H:** Descriptive-register `𘔘(A,Q)` associates action A with a cost/consumption quantity Q. This accounts compositionally for28,30,37,45,53 without inventing an assertion that BOOT equals or requires DRAIN.
+- **H whole descriptions; M component glosses:** `𗐢 𘆟 𗿚` describes DRAIN; `𗐢 𗶁 𗏞` or `𗐢 𗏞 𗶁` CRANK; `𗐢 𗨨 𘉽` (variant ending `𘀦`) SIGNAL; descriptive `𗐢 𘚂` BOOT. `𗐢` here is action/control-like.
+- **M:** State-register control-name expressions include `𗴺`≈DRAIN, `𘋍`≈CRANK, `𘚂`≈SIGNAL. In particular state `𘚂` and descriptive `𘚂` cannot safely receive one global English substitution.
+- **H:** State `𗃁(X)` reports completion; `𗹾(A,[𗃁(B)])` expresses that A requires B completed.
+- **M/H:** Descriptive `𗈄(𘔘 𗂶)` in32/43 expresses no consumption/upfront cost for CRANK, **not** no prerequisite.
+- **H whole construction:** `𘍰 𘎙 𗐢 𗇋 AGENT 𗢘 ACTION 𗘓 𗭎` expresses intention/proposal to do ACTION. **M:** `𗘓 𘔃` in50 instead marks an already attempted/performed action.
+- **H:** State request `𗈹(agent_3,ACTION)` asks agent3 to perform that action. **M:** `𗯛` reports outcome/success, with optional source attachment.
+- **M:** `𘙄` concerns waiting/holding/coordination. **L:** Meta `𗝵` may concern a topic/plan/status; its exact meaning is unknown and should not confidently be “wait.”
+- **L:** Meta `𗬅`, `𗤗`, `𗈹` may be report/share, clarify/confirm, and do/perform respectively. Recurrent meta content `𗝣 𗚷` probably requests someone's clue/information, not numerical “four five”; exact wording unknown.
+- **H:** `⊘` is a discarded message, with no recoverable original content.
+
+# 2. TRANSLATION
+
+Confidence applies per entry; mixed labels distinguish secure referents/values from uncertain wording. English referent names identify speaker-local uses, not universal glyph substitutions. All untranslated portions are explicitly identified.
+
+1. **H, public:** Stage0; invalid attempts0.
+2. **H/M:** Declare `𘆢` a symbol; extra modifier `𗚷` unknown. Describe WAVE. Fourth cabinet position=`𘆢`.
+3. **H/M:** Declare `𗔛` a symbol. Describe MOON/crescent, with some qualifiers unknown. Second cabinet position=`𗔛`.
+4. **H/M:** Declare `𗀮` a symbol, source agent3. Describe SUN. First cabinet position=`𗀮`; description's arrangement modifier partly unknown.
+5. **H/M:** Describe `𘆢` as STAR; declare it a symbol. Embedded/qualified phrase mentioning agent6 and `𗝣 𗱇` unknown. Value of expression `𘔘 𘆢`=4, likely this STAR's digit. This is a different referent from agent7's WAVE use of the name.
+6. **H/M:** Agent2-associated description identifies WAVE. Declare `𗔛` with type `𗙢` (unknown). Its digit=8.
+7. **H/M:** Declare `𗔛` a symbol, source agent4. Describe SUN. Value=2.
+8. **H/M:** Declare `𗔛` a symbol, source agent0; extra modifier `𗱇` unknown. Describe MOON/crescent. Value=7.
+9. **H/M:** Declare `𗔛` a symbol. Describe STAR. Cabinet position3=`𗔛`.
+10. **H/M:** Value of `𘔘 𗀮`=2, consistent with SUN. Agent3 asserts a relation involving original/old information `𗖫 𗲕`; exact meaning unknown.
+11. **H, public:** Stage0; invalid attempts1.
+12. **H/M:** Describe `𘆢` as WAVE; digit=8; fourth cabinet position=`𘆢`.
+13. **H, public:** Stage1; invalid attempts1. Cabinet opened.
+14. **H/M:** Declare `𗍅` a symbol, source agent0. Describe MOON/crescent. Value=7. Retract/reject previous name `𗔛`. Final clause relates agent0 to nested expressions containing `𗕡 𘌲 𗂰`; content unknown. We have not decoded it as the cabinet code.
+15. **H, public:** Stage1; invalid attempts2.
+16. **H/M:** Declare `𗰥` a symbol, source agent6; describe STAR; value=4.
+17. **H, public:** Stage1; invalid attempts3.
+18. **H/M:** Declare `𗍅` a symbol, source agent4; describe SUN; value=2. Same written name as agent0's MOON.
+19. **H, public:** Stage1; invalid attempts4.
+20. **H/M:** Declare `𘞲` a symbol, source agent5. Describe MOON/crescent. Second cabinet position=`𘞲`; digit=7.
+21. **H, public:** Stage1; invalid attempts5.
+22. **H/M:** Declare `𘊳` a symbol, source agent2; describe WAVE; digit=8. Retract previous `𗔛`. Final group-directed meta-request involving `𘇶` unknown; possibly naming/clarification, **L**.
+23. **H/M:** Declare `𗍅` a symbol, source agent1; describe STAR; position3; value=4. Another speaker-local reuse of `𗍅`.
+24. **H, public:** Stage1; invalid attempts6.
+25. **H/M:** Declare quantity/object `𘝲`, source agent3. Describe agent3's relation to it with qualifiers `𘁅 𗶁 𗘓 𗭎`, exact wording unknown. Value=4 (battery). Final request mentioning agent3 is partly unknown, plausibly power-action/report coordination.
+26. **M:** Opening meta-statement involving action/control vocabulary and agent7: unknown. Descriptive relation connects CRANK-description to DRAIN-description. CRANK requires DRAIN completed. Exact opening and descriptive predicate unknown.
+27. **H/M:** Control expression `𘅈 𗁷 𗋄` requires `𘚂` completed: contextually BOOT requires SIGNAL. Exact component words unknown. Group request with content `𗝣 𗚷` unknown, probably share information.
+28. **H/M:** Name/identify `𗝭` using state description `𘚂` (SIGNAL for this speaker). Declare quantity `𗝃`, owned/associated with `𗝭`. SIGNAL `𗝭` has cost quantity `𗝃`; its value=3. Cost-object interpretation **M/H**.
+29. **H/M:** Declare `𗝭` as action/category `𗺌` (BOOT for agent0). Assert an unresolved state/property relating it to new/on `𗋄`. It consumes2 charge. Group information request with content `𗝣` unknown. This name differs in referent from28.
+30. **H/M:** Declare quantity `𘓉`; value=2. Associate DRAIN-description with that cost quantity: DRAIN costs2. It does not name DRAIN `𘓉`.
+31. **H/M:** DRAIN-description stands in relation `𗽥` to SIGNAL-description, consistent with DRAIN preceding/being prerequisite to SIGNAL. Group request containing `𗝣 𗬅` unknown.
+32. **H/M:** Declare `𗂶` in category `𗚷 𗺌` (CRANK action, exact modifier unknown). State clause `𗁷 𘋍` partly unknown. CRANK adds3 charge. Descriptive absence clause indicates no upfront consumption/cost (**M/H**), not no prerequisite. Final group information request unknown.
+33. **H/M:** Battery `𘝲`=4. Description `𗴺 𘆏` concerning it unknown. Ask agent7 something containing `𗝣 𘆏`; unknown. Request reports/information directed to agent3; exact content partly unknown.
+34. **H/M:** Name DRAIN-described control `𗛮`; name CRANK-described control `𗾫`. CRANK `𗾫` requires DRAIN `𗛮` complete.
+35. **H/M:** Identify BOOT `𗮿` through control/start expression `𘅈 𗁷 𗋄` and description `𗐢 𘚂`. BOOT requires state-register `𘚂` (SIGNAL) completed. Ask agent0 to clarify an action/category expression with embedded content; exact question unknown. Its `𗿣` token must not automatically be read as a charge claim8 outside the numeric register.
+36. **H/M:** Retract/reject `𗝭`. Declare BOOT `𗮿` in action category `𗺌`; repeat unresolved state/new/on property; cost2. Ask agent3 for information, exact request unknown.
+37. **H/M:** SIGNAL-description has cost quantity `𗝃`; that quantity=3. Ask agent0 to clarify/confirm `𗝭`; exact meta-verb unknown.
+38. **H/M:** Group coordination/wait-like request, exact wording unknown. Agent7 intends DRAIN `𗛮`. CRANK `𗾫` requires DRAIN `𗛮` completed.
+39. **H/M:** Agent3 intends the DRAIN-described action. Group wait/coordination request, exact wording unknown.
+40. **H, public:** Stage1; invalid attempts7.
+41. **H/M:** Request agent3 perform CRANK `𗂶`. Repeat DRAIN-to-SIGNAL relation. Additional requirement for state-register `𘚂` (SIGNAL), containing a completed-action clause and nested condition: partly unknown. Do not infer its exact battery condition merely from the task.
+42. **M:** Ask agent1 for content `𗝣 𗚷`; unknown, plausibly that agent's information/clue.
+43. **H/M:** CRANK `𗂶` adds3. It has no upfront consumption/cost (**M/H**). Agent1 asserts a wait/hold-like state. Ask agent3 something containing `𗝣 𗐢`; exact request unknown.
+44. **H/M:** BOOT `𗮿` requires SIGNAL `𘚂` complete and consumes2. Request agent3 do CRANK `𗂶`. Descriptive relation `𗥼` connects SIGNAL-description to CRANK `𗂶`; exact relation unknown, possibly ordering, not securely identity.
+45. **H/M:** Retract/reject `𗝭`. Ask agent4 about BOOT `𗮿`, precise question unknown. Repeat BOOT's unresolved state/new/on property. BOOT has cost quantity `𘓉` (=2). Ask agent3 for content `𗝣 𗚷`, unknown.
+46. **M:** Request/question to agent3 involving action and `𗍴 𗁷`; exact requested information unknown.
+47. **H/M:** Meta-statement `𗝵` about DRAIN `𗛮`, exact meaning unknown. DRAIN completed. Request/propose agent3 do CRANK `𗾫`.
+48. **H/M:** Battery=2. Report DRAIN `𗛮` outcome/success, source agent3 (`𗯛` exact meaning uncertain). Agent3 intends CRANK `𗂶`.
+49. **H/M:** Request agent3 do CRANK `𗂶`. Additional request containing `𗝵 𘀆 𘜖` unknown, perhaps plan/status information (**L**).
+50. **H/M:** Agent7 has performed/attempted DRAIN-described action (past-action reading **M**). Request agent3 do CRANK `𗂶`.
+51. **H/M:** CRANK `𗂶` completed. Battery=5. Agent3 intends SIGNAL-described action. Group wait/hold-like request; precise wording unknown.
+52. **H:** Discarded message; original content unknown.
+53. **M:** Qualified/corrected, possibly negated naming assertion about `𗝭` and state-register `𘚂` (SIGNAL). Exact polarity/name repair unknown; agent0 had used `𗝭` for BOOT. BOOT `𗮿` has cost quantity `𘓉` (=2). This is not a decoded assertion that BOOT equals or requires DRAIN.
+54. **H/M:** SIGNAL `𗝭` completed. Battery=2. Agent3 intends BOOT `𗮿`.
+55. **H, public:** Stage2; invalid attempts7. Exit controller activated.
+56. **H/M:** Request agent3 do BOOT `𗮿`, qualified by SIGNAL `𗝭` being completed, probably once/after completion (**M**).
+57. **H/M:** Identical to56, from agent5.
+58. **H/M:** New/exit position3=`𘞲` (MOON).
+59. **H/M:** New/exit position4=`𗀮` (SUN). Repeat SUN-description.
+60. **H/M:** BOOT `𗮿` completed. Battery=0. Declare `𗼄` a symbol, source agent3; describe WAVE; new/exit position1=`𗼄`.
+61. **H:** Add3 to original digit of STAR `𗰥`; result is its new digit. No explicit original=4 assertion in this particular message. Modulo/final-digit rule not recoverable from this clause alone.
+62. **H/M:** Declare `𗪥` a symbol, source agent0; describe MOON/crescent. Original digit=7; add2 gives9.
+63. **H/M:** Declare `𗪥` a symbol, source agent4; describe SUN (different referent from62). New addition/offset=4; original digit=2; new digit=6.
+64. **H:** New/exit position2=STAR `𗰥`.
+65. **H/M:** WAVE `𘊳` offset=1. Group information request with content `𗝣 𗚷`; exact request unknown.
+66. **M:** Mode/confirmation `𘆋`, predicate `𗅤` unknown; SUN `𗀮` with new-arrangement qualifier. Exact statement unknown; no separately decoded explicit position here.
+67. **H/M:** Original digit of MOON `𘞲`=7. Ask agent5 for content `𗝣 𗚷`; unknown, possibly positional information (**L**).
+68. **H/M:** New digit of STAR `𗰥`=7. Ask agent2 to clarify/confirm expression `𘔘 𘊳 𘁅 𗺌 𗚷`; exact content unknown, not a securely decoded numerical assertion.
+69. **H/M:** Ask agent2 to provide content `𗝣 𗚷`, exact wording unknown. Confirm new/exit position2 is STAR-shaped symbol `𘒾`.
+70. **H/M:** New digit of MOON `𘞲`=9. Final state/action expression `𗃐 𗲕`, agent0 directed to new/exit: exact wording unknown. **L:** Probably a submission/entry announcement. No complete code string has been securely decoded here.
+71. **H, public:** Stage3 (escaped); invalid attempts7.
+
+# 3. THE TASK
+
+**H:** The visible progression matches Storm Shelter: cabinet stage0, power stage1, exit stage2, escaped stage3. There was one invalid attempt before the cabinet opened, six additional invalid attempts during stage1, and no further invalid attempts reported. Public counters do not identify the acting agents or rejection causes.
+
+**H:** Cabinet communication establishes SUN2, MOON7, STAR4, WAVE8 and positions SUN–MOON–STAR–WAVE, yielding **2748**. The public transition at13 establishes cabinet success. No clause has been securely decoded as literally submitting the complete string2748; message14's nested expression remains unknown.
+
+**H:** Names are repeatedly reused across speakers: `𗔛` for several symbols, `𘆢` for WAVE/STAR, then `𗍅` for MOON/SUN/STAR. Later `𗝭` is used for BOOT/SIGNAL and `𗪥` for MOON/SUN. Retractions and new declarations are visible. **M:** These appear to require clarification, but formally owner-scoped names remain possible. **L:** Naming confusion may have contributed to invalid attempts; the log does not prove it.
+
+**H:** Power information includes DRAIN cost2, CRANK gain3 and no upfront cost, SIGNAL cost3, BOOT cost2, CRANK requiring DRAIN, SIGNAL's DRAIN dependency, and BOOT requiring SIGNAL. Typed quantities are used compositionally: `𗝃` is the 3-charge cost, while `𘓉` is a 2-charge cost shared by DRAIN and BOOT, not either action itself.
+
+**H:** Agent3 reports battery values **4→2→5→2→0**, accompanying intentions/results consistent with **DRAIN→CRANK→SIGNAL→BOOT**. Several agents request CRANK and BOOT and discuss coordination. **L:** Duplicate DRAIN attempts may explain the final invalid attempt at40, since agents7 and3 both announce intentions to do DRAIN, but this is not established. Public stage2 at55 precedes agent3's explicit BOOT report60; asynchronous reports explain this without contradiction.
+
+**H:** Exit facts give WAVE–STAR–MOON–SUN. WAVE original8 plus1 yields9; STAR4 plus3 yields7; MOON7 plus2 yields9; SUN2 plus4 yields6. Some updated values are explicit, while WAVE9 is derived from earlier base and new offset. Together these yield **9796**. Message70 probably concerns submission, and71 confirms escape; neither fact proves a literal four-digit9796 utterance was decoded.
+
+**H:** Overall the log fits the supplied task and charge trace closely. Unknown speech, local naming, and ambiguous modes must not be smoothed into the worked solution. The briefing checks interpretations but does not itself decode tokens.
+
+# 4. EVIDENCE
+
+## Positive patterns
+
+- **H:** Recurrent declaration/value/action frames across different speakers establish structural delimiters independently of solving the puzzle. Embedded brackets `𘒍…𗳯` recur and nest, supporting a compositional language rather than a flat codebook of entire messages.
+- **H:** Numerals cross-check across distinct roles: `𗥼` occurs with SUN's original value, MOON's increment, and battery readings; `𗃲` with CRANK gain and STAR increment; `𗜀` with original MOON and updated STAR; `𗬓` with the7+2 result and updated MOON. Battery4→2→5→2→0 independently anchors several digits.
+- **H:** Numeric `𗕥` appears for symbols, battery, and cost quantities, establishing a generic value predicate rather than merely fitting it to base digits.
+- **H:** The quantity-object interpretation is particularly compositional:28 declares `𗝃`, gives it value3 and links it to SIGNAL;30 declares `𘓉`, gives it value2 and links it to DRAIN;37 repeats SIGNAL's link;45/53 link BOOT to the same2-valued object. This explains every occurrence without inventing BOOT=DRAIN or BOOT-requires-DRAIN assertions. It also agrees with battery's quantity type.
+- **H:** Repeated descriptions, provenance and incompatible values establish speaker-local name reuse. Agent4's SUN/value2 and agent0's MOON/value7 retain their identities while sharing written names. Their exit-stage reuse of `𗪥` repeats the phenomenon.
+- **H:** Message34 explicitly associates DRAIN/CRANK descriptions with names, then uses those names in a prerequisite. Those names recur in plans and reports, enabling translations beyond matching known clues.
+- **H:** Completion `𗃁` appears inside prerequisite expressions and independently in progress reports. The plan frame involving agent3 is followed by corresponding completion/battery reports.
+- **M/H:** Assertion/request contrast is distributional: factual clauses use `𘎙`; repeated requests to agent3 to perform CRANK/BOOT use `𘀿`. Identical56/57 reinforces the request formula.
+- **M/H:** Register-sensitive vocabulary explains systematic apparent homography: numeric `𗬓`=9 versus state placement predicate; numeric `𗬅`=4 versus meta-request predicate; state `𗝣` fourth versus nonnumeric meta-request content. State `𘚂` identifies SIGNAL in requirements while descriptive `𗐢𘚂` identifies BOOT. The precise formal mechanism is not fully recovered.
+
+## Limits and what would change the reconstruction
+
+- **H:** Exact shape words, many meta-requests, several type modifiers, and14's nested clause remain unknown. Correct clue ownership does not guarantee that every utterance literally states the supplied clue or does so correctly.
+- **M:** The opening glyphs may select grammatical/semantic classes rather than wholly separate dictionaries. The original file or independently anchored contrasts could distinguish those mechanisms; this would alter lexical explanation without necessarily changing clause-level referents.
+- **H:** Evidence for formal owner scoping would change “collision” into legal distinct qualified naming. The document preserves speaker-local uses rather than assuming a global resolution rule.
+- **M:** Additional examples could distinguish quantity type, consumption relation and generic association more precisely. An independently known use linking `𘔘` to a non-cost quantity would broaden its gloss, though the2/3-valued objects would remain quantities rather than action aliases.
+- **M/L:** Unique `𗠫` and sparse `𘆋` are insufficient for an exact negation/confirmation paradigm. Known positive/negative minimal pairs would change those readings.
+- **H:** Action-interface records would resolve who acted, the cause of invalid attempts, and whether70 announced submission. Public transitions prove success, not exact wording or actor attribution.
+- **M:** Independently anchored uses of `𗝵`, `𘙄`, `𗤗`, `𗬅`, and meta content `𗝣𗚷` could improve coordination translations. Until then “share your clue” is a labeled guess, not an exact translation.
+- **H:** Full codes2748 and9796 are inferred solutions, not independently decoded four-digit utterances. The evidence for language reconstruction instead lies in reusable frames, arithmetic, typed quantities, contextual senses, and name changes, with unknowns retained.

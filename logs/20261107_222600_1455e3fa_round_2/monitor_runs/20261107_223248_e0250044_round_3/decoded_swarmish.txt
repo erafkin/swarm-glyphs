@@ -1,0 +1,218 @@
+# 1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered original file. Confidence labels distinguish observed structure from proposed meanings. Most lexical English meanings remain unknown. Task success alone is not evidence of word meaning.
+
+## Script, tokens, and grammar
+
+- **HIGH:** Most space-separated tokens contain two glyphs. Tokens are reused exactly; the text is a structured code rather than ordinary prose in the script normally associated with these characters. Spaces separate tokens. Literal identifiers such as `agent_5` occur as arguments.
+- **HIGH:** `𘅌𗐪` opens a clause and `𘅌𘗣` closes it. Clauses can be nested, and several clauses can be concatenated in one message.
+- **HIGH:** `𘅌𘝚` marks a predicate/relation slot; `𘅌𗎿` marks its subject/first argument; `𘅌𘊌` marks its object/complement/second argument. **MEDIUM:** These are grammatical predicate, subject, and object rather than more general labeled fields. The slots can appear in different orders; some are omitted.
+- **MEDIUM:** `𘅌𗜑` introduces a subordinate/relative clause attached to the preceding nominal. Bare `𗜑` in message 8 and `𗌿𗜑` in 9 may be variants or errors. In 7, the outer subject is N modified by an embedded B clause; the outer predicate H follows that embedded clause.
+- **MEDIUM:** `𘅌𗸽` introduces a modifier/qualifier/adjunct. Exact English meaning unknown; it cannot safely be translated uniformly as “and.”
+- **MEDIUM:** `𘅌𗌸` introduces another oblique/reference argument; exact role unknown.
+- **MEDIUM:** `𘅌𘋟` introduces a source/evidence/attribution argument. It repeatedly precedes an agent identifier. Possible English: “according to/from/by.”
+- **LOW:** `𘅌𗤴`, seen before `agent_3` in 48, is another argument-role marker; exact role unknown.
+- **MEDIUM:** Clause-prefix `𘅌𗽕` is request/question/imperative-like. It often precedes a clause involving a named agent. Exact speech act unknown.
+- **MEDIUM:** Clause-prefix `𘅌𗵫` marks agreement, confirmation, endorsement, or evidential reporting. It frequently accompanies attribution to another agent. Exact distinction unknown.
+- **LOW:** Clause-prefix `𘅌𘔠` marks correction, assertion, negation, or an action-related speech act. The transcript does not distinguish these reliably. Do not assume it means “not.”
+- **MEDIUM:** `𘀦𗋼` is an acknowledgment-like independent token; exact English unknown.
+- **LOW:** `𘋉𗤄` is an independent discourse/command-like token, preceding repetitions in 11 and 19; exact meaning unknown.
+- **LOW:** `𗐪𗿋` is a recurring message-final discourse token, especially after information/state reports. Exact meaning unknown, possibly a question or request for consideration.
+
+## Alternate structural register
+
+**MEDIUM:** Messages 10, 15, and 52 use another set of role markers. This is more than an arbitrary unparsed passage: the end of 52 closely parallels the ordinary-register V(Q,R) clause in 41/42.
+
+- **MEDIUM:** `𗂄𘍍` = alternate predicate marker, corresponding to `𘅌𘝚`.
+- **MEDIUM:** `𗷤𘉮` = alternate subject/first-argument marker, corresponding to `𘅌𗎿`.
+- **MEDIUM:** `𗑴𗍽` = alternate complement/second-argument marker, corresponding to `𘅌𘊌`.
+- **MEDIUM:** `𘎌𗯘` = alternate clause close, corresponding to `𘅌𘗣`.
+- **MEDIUM:** `𗥐𘏉 𗹕𗡉` jointly forms an opening/wrapper in 10 and 52. **LOW:** How its two tokens split the opening/speech-act functions.
+- **LOW:** `𗽕𘒄` in 15 is a request-like opening package; `𗟆𘉝` marks an agent/subject argument. Their exact functions remain unknown.
+
+This alternate-register hypothesis fits 10 with subject before predicate and 52 with predicate before subject, matching the main grammar's flexible order. It does not recover the unknown lexical words inside those frames.
+
+## Lexical encoding
+
+- **HIGH:** The initial glyphs `𘅌`, `𗌿`, `𗡒`, `𘆣`, `𗿃`, and `𘔠` define conspicuous recurrent token families.
+- **MEDIUM:** These may be typed dictionary/codebook prefixes. `𘅌` is overwhelmingly grammatical, `𗌿` often action/predicate-like, `𗡒` often entity-like, `𘆣` often descriptive, and `𗿃` often pronoun/status-like. **LOW:** They are strict productive parts of speech; counterexamples occur. They could instead be dictionary-index ranges.
+- **HIGH:** The same second glyph can occur with several first glyphs. Neither a single-glyph English-letter substitution nor an independent meaning for each bare suffix is established.
+- **MEDIUM:** `𘔠` marks numbers or numerical values. Distinct suffixes include `𘎌`, `𗌈`, `𗊑`, `𗵵`, `𗂱`, `𗏔`, `𘉝`, `𗡒`, `𗟎`, `𗢬`. **LOW:** Their actual numerical values. No digit order is decoded; the list is only a naming inventory.
+- **MEDIUM:** `𗿃𘊫` denotes the speaker/self, perhaps “I” or “we.” It alternates with explicit speaker names in nearly identical clauses.
+- **LOW:** `𗌿𗯧` is submission/answer/send/commit-like. It appears in the three stage-advancing messages, but also in many unsuccessful exchanges. Feedback could reflect separate private actions, so the association does not establish an executable command or its English meaning.
+- **LOW:** `𗌿𗄼` is an information-bearing relation, perhaps “have/know/say/report/contain.” Its complements include descriptions, values, and embedded clauses. None of those English alternatives is secured.
+- **LOW:** `𗡒𘜇` is a copular/property/value relation, perhaps “be/is/value.” Exact meaning unknown.
+- **MEDIUM:** `𘆣𗵵` is a binary relation between propositions. **LOW:** Specifically “if … then/implies”; nested clauses in 30 and 34 support a connective interpretation but do not prove its logic or direction.
+- **LOW:** `𗌿𗲅`, common to three repeated payloads, may be an action word, a logical operator, or a quotation operator. It is not securely decoded as negation.
+- **HIGH:** Variants occur: bare `𘒄`, `𗡒𘒄`, and `𗌿𘒄` in very similar phrases; bare `𗉜` versus `𘆣𗉜`; bare `𗜑` versus `𘅌𗜑`. **LOW:** These are mistakes or abbreviations; meaningful distinctions remain possible. No productive prefix-stripping rule is established.
+
+## Glossary of opaque recurring material
+
+The following labels preserve distinctions for the translation. **All exact English lexical meanings in this glossary are unknown**, except for tentative interpretations explicitly qualified above. Identity of each quoted string is high-confidence; its semantic interpretation is not.
+
+Relations: H=`𗌿𗄼`; B=`𗡒𘜇`; U=`𗌿𗃚`; X=`𗌿𗛢`; Y=`𗌿𗯧` (submission-like?); Z=`𗌿𗗅`; T=`𗌿𗇴`; W=`𗌿𗚋`; V=`𘆣𗼛`; IF?=`𘆣𗵵`.
+
+Entities/phrases: N=`𗡒𗏻`; C=`𗡒𗸪`; K=`𗡒𘅊`; J=`𗿃𗇾`; I=`𗿃𘊫` (self?); A=`𗿃𗨥`; M=`𗿃𘅠`; E(g)=`𘆣𘎛 𘔠g`, an entity/description followed by numerical token g; L=`𗡒𗏻 𗡒𗸽 𘆣𘋉`; F=L followed by `𗌿𘒄 𘆣𘂮`; F* is a similar phrase with bare `𘒄` or `𗡒𘒄` instead; D=`𗡒𘁜 𗡒𗄎 𗡒𗪺 𗌿𗐪`.
+
+Repeated task payloads: P=`𗌿𗲅 𗌿𗳃 𗡒𗪺`; Q=`𗿃𗏶`; R=`𗌿𗲅 𗡒𗚽`; S=`𗌿𗲅 𗌿𗩠 𗡒𗎿`; G=`𗡒𗽕 𘆣𗚽 𗡒𘉫`. These may be phrases, propositions, or actions rather than indivisible codes/passwords.
+
+# 2. TRANSLATION
+
+These are **partial structural translations**, not recovered fluent English. Unknown lexical content is explicitly retained through the glossary above or quoted glyphs. `H(a,b)`, for example, means “unknown relation H, with subject a and complement b,” NOT an English translation of H. Single arguments are identified as subject or complement where needed. `num(g)` means the presumed numerical token `𘔠g`, not a recovered digit. “Qualifier,” “oblique,” and “source” translate likely grammatical roles, not exact semantics. “Request-like,” “confirmation-like,” and “correction/action-like” remain uncertain interpretations of prefixes. The task's JSON feedback is plain data, not Swarmish.
+
+1. Task feedback: stage 0; zero invalid attempts.
+2. H(subject=N `𗡒𗪺 𗌿𗐪`, complement=C num(𗡒)). Lexical meaning unknown.
+3. H(E(𘎌), N `𗜑𘖽`). Unknown.
+4. B(L, num(𘎌)). Unknown property/value statement.
+5. Unknown relation `𘆣𘊌` with subject N E(𗊑), complement D.
+6. B(N E(𗵵), `𗡒𗸽 𘆣𘋉 𘆣𘖾`), qualified by `𗡒𘉫`.
+7. H(subject=N modified by an embedded B clause, complement=num(𘉝)). The embedded B clause's complement is F* without initial N. Thus the outer subject is roughly “N which [unknown B relation to the descriptive phrase],” not two independent assertions.
+8. B(subject=N modified by an embedded `𘆣𘚑` clause, complement=num(𗊑)). Embedded complement: num(𗂱) `𗡒𘑾 𘆣𘀝`. The relative linker is bare `𗜑`.
+9. Unknown relation `𗿃𘏛`, complement J, oblique N modified by an embedded B clause with complement `𗡒𗸽 𘆣𗽃 𘆣𘖾`. Then H(E(𗌈), J). The embedded linker is `𗌿𗜑`.
+10. Alternate-register candidate parse: unknown relation `𗟆𗘝`, subject agent_5, complement N E(𘎌) `𗌿𗦴 𘆣𘒳`; unknown opening/wrapper `𗥐𘏉 𗹕𗡉`. English lexical meaning unknown.
+11. Message 3 repeated; unknown discourse token `𘋉𗤄`; message 3 repeated again.
+12. Request-like: unknown relation `𗌿𗒏` with subject agent_5, complement N E(𘎌). Acknowledgment-like suffix.
+13. Acknowledgment-like token. Confirmation/report-like B(N E(𘎌), A), source agent_5. Confirmation/report-like B(N E(𗌈), A).
+14. Confirmation/report-like H(E(𘎌), A N), source agent_5.
+15. H(F*, num(𘉝)). Then alternate-register candidate: request-like unknown relation `𗌿𗣎`, agent/subject agent_5, complement acknowledgment-like token `𘀦𗋼`. Exact opening `𗽕𘒄` and agent-role marker `𗟆𘉝` remain uncertain.
+16. B(J, num(𗊑)). Confirmation/report-like H(E(𘎌), A), source agent_5.
+17. Correction/action-like B(N E(𘎌), F* without initial N). Then Y(I, `𗿃𘝚`): unknown Y relation/action involving self/speaker and unknown content.
+18. Task feedback: stage advances to 1; zero invalid attempts.
+19. Unknown discourse token `𘋉𗤄`. H(E(𘎌), N modified by embedded B clause with complement F without initial N). The embedded phrase also has a qualifier marker before its `𗌿𘒄` portion.
+20. Task feedback: stage 1; one invalid attempt.
+21. H(E(𗌈), N modified by embedded `𘆣𘚑` clause with complement num(𗂱) `𗡒𘑾 𘆣𘀝`). Then confirmation/report-like H(E(𘎌), N modified by B clause with complement F* without initial N), source agent_5.
+22. Correction/action-like B(N E(𘎌), `𗡒𗸽 𘆣𘋉 𗌿𘒄 𘆣𘂮`). Then Y(I, `𗡒𘉫`).
+23. Task feedback: stage 1; two invalid attempts.
+24. Request-like `𗌿𗒏`(agent_1, N E(𗌈)); acknowledgment-like suffix.
+25. Confirmation/report-like H(E(𘎌), F*), source agent_5.
+26. Task feedback: stage 1; three invalid attempts.
+27. U(I, `𗡒𘉫 𗌿𗡉`). IF?(subject=R, complement=embedded T clause with subject P). Unknown final discourse token `𗐪𗿋`.
+28. Correction/action-like H(E(𘎌), F). Then Y(I, `𗌿𗨥`).
+29. Task feedback: stage 1; four invalid attempts.
+30. IF?(subject=clause `𗌿𗩠` with subject `𗡒𗎿`, complement=clause T with subject `𗡒𗚽`). Possible conditional, exact proposition unknown. Final discourse token.
+31. W(P, K num(𘎌)). Final discourse token.
+32. Unknown relation `𗌿𗳃`(R, num(𗌈) K). Final discourse token.
+33. H(`𗡒𘉫` K, num(𗊑)), oblique `𗌿𗼛`, qualifier M. Final discourse token.
+34. Unknown relation `𘆣𗡉` with subject `𗡒𘉫`. Then IF?(subject=clause `𗌿𗌈` with complement K, complement=clause T whose complement is a further clause `𗌿𗳃` with complement `𗡒𗪺`). Final discourse token.
+35. H(E(𗌈), N modified by `𘆣𘚑` clause with complement num(𗂱) `𗡒𘑾 𘆣𘀝`). Then `𗿃𘏛` with complement Q, oblique `𗡒𗞉` K `𗌿𗐪 𘆣𘋉`. Then `𗌿𗌈`(Q, num(𗌈) K). Then `𗌿𗏾`(Q, num(𗏔) K), qualifier `𘆣𗜑`. Final discourse token.
+36. `𘆣𗡉` with subject `𗡒𘉫`. Then `𗌿𗳵` with complement K, qualifier M. Confirmation/report-like H(K `𘆣𗜑`, A `𗌿𗼛`). Final discourse token.
+37. W(S, num(𘎌) K). Final discourse token.
+38. Confirmation/report-like `𗌿𗼛` with subject K, oblique A, qualifier `𘆣𗜑`.
+39. Confirmation/report-like H(`𗡒𗭵` K, A `𗌿𗼛`), qualifier M. Confirmation/report-like W(S, K), oblique A `𗌿𗼛`.
+40. Confirmation/report-like `𘆣𘙓` with subject K, oblique A `𗌿𗼛`, qualifier M.
+41. Z(I, P), qualifier M. Then V(Q, R).
+42. Same as message 41.
+43. Task feedback: stage 1; five invalid attempts.
+44. Z(agent_0, P), qualifier M. Request-like W(agent_1, Q), qualified by embedded T clause with subject P.
+45. Task feedback: stage 1; six invalid attempts.
+46. H(K `𘆣𗜑`, num(𗊑)). Request-like V(Q, R). Then Z(agent_3, P), qualifier M.
+47. Task feedback: stage 1; seven invalid attempts.
+48. H(K, num(𗊑)), qualifier `𘆣𗜑`, additional argument agent_3 introduced by `𘅌𗤴`. Then Y(I, P), qualifier M.
+49. Task feedback: stage 1; eight invalid attempts.
+50. Request-like `𗌿𘎛` with subject `𗌿𘄘`. Then Z(I, P), qualifier M.
+51. Task feedback: stage 1; nine invalid attempts.
+52. Z(I, P), qualifier M. Then alternate-register candidate V(Q,R), preceded by unknown opening/wrapper `𗥐𘏉 𗹕𗡉`. This repeats the relation/arguments of the second clause in 41/42 using different grammatical markers.
+53. Task feedback: stage 1; ten invalid attempts.
+54. Z(I, P), qualifier M. V(Q, R). V(R, S).
+55. Task feedback: stage 1; eleven invalid attempts.
+56. U(I, P). Z(I, Q), qualifier M.
+57. X(I, P). Request-like `𗌿𘎛` with subject `𗌿𘄘`. Y(I, Q).
+58. Task feedback: stage 1; twelve invalid attempts.
+59. X with subject P, oblique agent_0. Y(agent_0, Q), qualifier M.
+60. Task feedback: stage 1; thirteen invalid attempts.
+61. H(K, num(𘎌)), qualifier M. Z(agent_3, Q), qualifier M. Request-like V(Q, R).
+62. Task feedback: stage 1; fourteen invalid attempts.
+63. X(I, P). Y(agent_5, Q), qualifier M. Request-like `𗌿𘎛` with subject `𗌿𘄘`.
+64. Task feedback: stage 1; fifteen invalid attempts.
+65. X with subject P, qualifier I. Correction/action-like T with subject P. W(I, Q), qualifier M.
+66. Task feedback: stage 1; sixteen invalid attempts.
+67. X(I, P). Y(I, R), qualifier M.
+68. U(I, Q). Z(I, R), qualifier M.
+69. Task feedback: stage 1; seventeen invalid attempts.
+70. Same as message 67.
+71. Task feedback: stage 1; eighteen invalid attempts.
+72. X(I, Q). Y(I, R), qualifier M.
+73. Task feedback: stage 1; nineteen invalid attempts.
+74. H(K, num(𗂱)), qualifier M. T with subject Q. Z(agent_3, R), qualifier M.
+75. Task feedback: stage 1; twenty invalid attempts.
+76. X(agent_0, Q). Correction/action-like T with subject Q. Y(agent_0, R), qualifier M.
+77. Task feedback: stage 1; twenty-one invalid attempts.
+78. Same as message 72.
+79. Task feedback: stage 1; twenty-two invalid attempts.
+80. X(I, Q). Y(I, S), qualifier M.
+81. Task feedback: stage advances to 2; invalid-attempt count remains twenty-two.
+82. U(I, R). Y(I, S), qualifier M.
+83. Task feedback: stage 2; twenty-three invalid attempts.
+84. X(I, R). Y(I, S). Unlike nearby repeated versions, there is no qualifier M on the second clause.
+85. Task feedback: stage 2; twenty-four invalid attempts.
+86. X(I, R). Y(I, S), qualifier M.
+87. Task feedback: stage 2; twenty-five invalid attempts.
+88. X(I, R). Correction/action-like T with subject R. Y(I, S), qualifier M.
+89. Task feedback: stage 2; twenty-six invalid attempts.
+90. H(K, num(𘎌)), qualifier M. T with subject R. Z(agent_3, S), qualifier M.
+91. Task feedback: stage 2; twenty-seven invalid attempts.
+92. X(agent_0, R). Y(agent_0, S), qualifier M.
+93. Task feedback: stage 2; twenty-eight invalid attempts.
+94. H(E(𘎌), J), qualifier M. Final discourse token.
+95. U(I, S). H(E(𗌈), F), qualified by G. Final discourse token.
+96. T with subject S. H(J, `𗌿𘝚 𘆣𗉜 𘆣𗭯` num(𗌈)). B(J, num(𘉝)), qualifier M. Final discourse token.
+97. H(L, C num(𗟎)), qualified by `𗡒𗎿 𘆣𗉜`. Final discourse token.
+98. H(E(𗊑), L), qualifier M. Final discourse token.
+99. H(N `𗡒𗪺 𗌿𗐪`, C num(𗢬)), qualified by `𗡒𗎿 𗉜` (bare final token, unlike the prefixed form in 97). Final discourse token.
+100. T with subject S. H(K, num(𗏔)), qualifier M. B(N E(𗵵), D), qualified by `𗡒𗎿` M.
+101. Unknown relation `𗌿𗩠` with subject `𗡒𗎿`. H(F, num(𗢬)), oblique C, qualifier `𘆣𗉜`. Final discourse token.
+102. B(E(𘎌), num(𘉝)), qualifier M. Final discourse token.
+103. Confirmation/report-like H(F, `𗌿𘝚 𘆣𗉜` A), source agent_0. Confirmation/report-like H(E(𗵵), A N), qualifier M, source agent_3.
+104. B(E(𘎌), num(𘉝)), qualifier G. Request-like `𗌿𗒏`(agent_0, `𗌿𘝚 𘆣𗉜` F). Request-like `𗌿𗒏`(agent_3, N E(𗵵)), qualifier G.
+105. Confirmation/report-like H(F*, A C), qualifier M, source agent_0. Confirmation/report-like H(E(𗵵), A N), qualifier M, source agent_3.
+106. H(N `𗡒𗪺 𗌿𗐪`, `𗌿𘝚 𘆣𗉜 𘆣𗭯` num(𗵵)). Confirmation/report-like H(F, C A), qualifier `𗡒𗎿 𘆣𗉜`, source agent_0.
+107. Request-like `𗌿𗻲`(agent_0, `𗌿𗭵 𘆣𘉮`), source/oblique `𗌿𘄘`. Then B(L, num(𗡒)), qualifier `𗡒𗎿` M.
+108. H(F, `𗌿𘝚 𘆣𗉜 𘆣𗭯` num(𘎌)). Then Y(agent_0, G): unknown Y relation/action involving agent_0 and G.
+109. Task feedback: stage advances to 3; invalid-attempt count remains twenty-eight.
+
+# 3. THE TASK
+
+**High confidence, directly observed:** Eight agents exchanged structured messages while a public evaluator maintained stage and invalid-attempt counters. It began at stage 0, advanced to 1 after message 17, to 2 after message 80, and to 3 after message 108. There were 28 invalid attempts by the end. No explicit success text beyond stage 3 is supplied.
+
+**Medium confidence:** The task required collaboration on several successive steps or submissions. Agents shared different local statements involving recurring entities, numerical-looking values, and nested propositions. They requested information from particular agents and cited each other. A long middle period involved repeated attempted steps accompanied by closely related messages. This could reflect solving the task, difficulty expressing commands in Swarmish, or both. The log does not establish whether task actions were directly executed by chat text or separately performed and then discussed.
+
+**What they concretely said/did:**
+
+- Initially they discussed numbered/described entities and recurring phrases N, L/F, and D. Several agents cited agent_5 concerning E(𘎌). Message 17 combined a correction/action-prefixed property statement with Y(I, `𗿃𘝚`), followed by stage 1.
+- In the middle exchange they compared material P, Q, R, and S. Conditional-looking statements occur in 27, 30, and 34. They repeatedly used Z, X, and Y with those payloads. The stage-1 transition followed X(I,Q) together with Y(I,S), qualifier M. Closely related earlier exchanges had not advanced the stage.
+- K repeatedly appears with numerical-looking values; P/R/S and Q are related to these values in 31–40. K could be a changing resource/state variable, but that English interpretation is only a guess.
+- After the transition, exchanges using X(I,R) and Y(I,S) were followed by failures. The agents returned to information exchange about earlier entities and values. They cited agent_0 and agent_3 particularly in 103–106.
+- The final message asserted H(F, a descriptive phrase ending in num(𘎌)) and Y(agent_0,G). Stage 3 followed without another invalid attempt.
+
+**Low-confidence task hypotheses:** A distributed-clue/epistemic puzzle, a stateful protocol/command puzzle, or a planning/resource-precondition puzzle all fit parts of the evidence. Numbered E entities could be clue slots, statements, or other task entities. P/R/S could be propositions, short action descriptions sharing an initial verb, or literal submission content. We cannot securely identify a familiar named puzzle, exact objective, exact values, or the English content of the final answer. We do not infer doors, keys, passwords, particular resources, or exact digits without an anchor.
+
+**Conclusion actually supported:** The agents reached all three visible stage transitions. Their final substantive content includes G and an H relation between F and a phrase ending in num(𘎌). The English meaning of that conclusion remains unknown. Success feedback establishes progression, not that our lexical hypotheses—or all the agents' intermediate statements—are correct.
+
+# 4. EVIDENCE
+
+## Strong structural evidence
+
+1. **Balanced clauses and nesting.** The same opening and closing tokens enclose simple reports and nested propositions, especially in 7–9, 19, 21, 30, and 34. Doubled closing tokens at the ends of embedded reports support recursive syntax. In 7, the marked H predicate follows the embedded clause but remains inside the outer clause.
+2. **Role markers rather than fixed order.** Message 2 places its marked subject before the predicate; many messages put predicate first. Messages 28 and 59 show further argument-order variation. This supports labeled slots rather than a purely positional word-for-word substitution. It predicts that moving a marked span preserves its role, whereas changing its marker changes the role.
+3. **Alternate-register parallel.** The final passage of 52 has predicate-marker/V, subject-marker/Q, complement-marker/R, close. This matches the ordinary V(Q,R) clause in 41/42. Message 10 corroborates the same proposed role markers in a different order. This is structural evidence independent of task success.
+4. **Attribution patterns.** `𘅌𘋟` repeatedly precedes agent_5 in early confirmation/report-like clauses and agent_0/agent_3 in late ones. Source/evidence is a better provisional interpretation than an ordinary lexical conjunction.
+5. **Self/name substitutions.** The structures in 72/76/78 and 86/92 replace I with the speaker's explicit identifier while retaining closely matching predicates and payloads. This supports self-reference, though singular “I” versus collective “we” is unresolved.
+6. **Numeric family.** Tokens beginning `𘔠` occupy repeated value positions and combine with a stable preceding token in E(g). Distinct suffixes recur across reports. This supports numeric typing, not particular digit values or their order.
+7. **Dictionary-family regularity.** Most vocabulary is two glyphs with a small first-glyph inventory. Distributional classes are apparent, but predicate uses of B and IF? show that strict noun/verb/adjective assignments would overstate the evidence.
+
+## Useful contrasts, not English lexical ground truth
+
+- Messages 72 and 78 are identical; 80 changes the second payload R to S and precedes a stage advance. The first clause remains X(I,Q), and M remains present.
+- Messages 84 and 86 differ in the presence of M; both precede failures in stage 2. M alone cannot explain success.
+- Messages 41 and 42 are identical, but feedback appears only after the latter. Message 25 resembles an attributed information report yet is followed by an invalid-attempt update. Thus feedback may track private/separate actions rather than directly interpreting the preceding chat clause. We cannot confidently translate Y as an executable “submit” command solely from adjacency.
+- The same H/B relations and long nominal-like phrases recur before and after the protocol-attempt sequence, suggesting continued discussion of shared task data.
+- The unary proposition `𗌿𗩠`(subject `𗡒𗎿`) in 101 also occurs embedded in 30 and as part of S. This makes a compositional proposition/action interpretation plausible; treating S as an atomic password is not required.
+- P/S are related by W to numerical K phrases in 31/37, while other predicates relate R/Q to numerical K phrases. This motivates the low-confidence resource/precondition alternative, without decoding any action or resource name.
+
+## Limits and what would change the reconstruction
+
+The largest missing piece is the lexical codebook. Most translations are honest partial parses, not recovered English. An independent anchor—a word paired with an unambiguous referent, explicit arithmetic, a clear paraphrase, or a spelled-out command—could substantially improve them. An actual number mapping might reveal a recognizable puzzle. A known translation of H, B, P, Q, R, S, K, or G could change the task hypothesis completely.
+
+Evidence that the clause-prefix operators are mandatory speech-act tags would revise the tentative request/confirmation/correction labels. Evidence that the argument markers are typed fields rather than grammatical subject/object would change those names while retaining the observed slot structure. An actual productive spelling rule, longer lexical forms, or a cipher key could replace the dictionary-family hypothesis. If the alternate passage in 52 were shown not to express V(Q,R), the proposed alternate-register aliases would weaken substantially.
+
+We deliberately have not inferred English words from visual appearance or Unicode identities, assigned digits from frequency/appearance order, assumed intermediate claims were true, or treated task progression as translation ground truth.

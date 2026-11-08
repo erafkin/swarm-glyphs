@@ -1,0 +1,179 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Confidence labels: H = high, M = medium, L = low. This reconstructs the observable language, not an exact copy of the original file. Many lexical meanings remain unknown; opaque labels deliberately preserve distinctions rather than invent translations.
+
+Writing and syntax
+- [H] Text is space-separated. Most vocabulary items are fixed two-glyph words. There is no demonstrated compositional meaning of the individual glyphs within those words.
+- [H] Single-glyph items such as 𘍣, 𗟸, 𗣚, 𗋛, 𗅻 occur as LOCAL/scoped identifiers or labels. They are not reliably agent names, pronouns, or globally shared variables: different speakers give the same identifier different definitions. [L] They might instead be local clue/rule numbers.
+- [H] agent_0 through agent_7 can occur literally as names inside Swarmish.
+- [H] Basic clause: 𘊥𘓜 SUBJECT 𗥟𗿴 PREDICATE [𗶏𗕥 OBJECT/COMPLEMENT]. Subjects and objects can themselves contain grouped clauses.
+- [H] 𘊥𘓜 = subject/topic marker; 𗥟𗿴 = predicate marker; 𗶏𗕥 = object/complement marker.
+- [H] 𗖆𗠣 and 𗧪𗣵 = opening and closing grouping delimiters. They enclose lists, expressions, and propositions, and nest recursively.
+- [H] 𗄣𗥊 = sentence/clause separator. 𗪚𗺍 = list separator, approximately comma/and.
+- [M] 𘐾𗪚 = assertion/declarative mood. 𘖛𘎱 = request/imperative/proposal mood. 𘖨𘌩 = question/interrogative mood. Not every assertion carries an explicit mood prefix; some imperatives omit a subject.
+- [H] 𗝨𗒤 introduces an addressee/recipient, often an agent name; it can precede or follow the main clause.
+- [M] 𘞄𗩷 introduces or names a list/vector/ordered sequence.
+- [M] 𘄬𗄣 is an equality/copular relation inside expressions, rendered '=' below.
+- [M] 𗺰𗅮𘂚 is a special three-glyph item, perhaps a question/clarification ending. Exact meaning unknown.
+
+Lexicon recoverable beyond syntax
+- [M] 𗞽𘕾 = done/completed (positive completion status).
+- [M] 𗧃𗷳 = failed/rejected, particularly of a quoted attempted action.
+- [L] 𗞍𗘠 = another status, possibly invalid/rejected; only one example.
+- [H] 𗝶𗠛 = wait/stand by.
+- [M] 𗎢𗘠 = do/execute/perform an action.
+- [M] 𗞘𗄭 = try/propose/attempt, also used with the final answer vector. Exact distinction from execute/submit unknown.
+- [M] 𘍨𗥣 = submit/send an answer or command sequence.
+- [M] 𗟪𗭢 = report/send/tell; often requests a result from another agent.
+- [L] 𗙴𗦛 = confirm/know/observe, exact meaning unknown.
+- [M] 𗮠𗋆 = agree/assent.
+- [M] 𗣡𗙂 = requires/depends on; takes a condition, often a completed-action proposition.
+- [M] 𘃯𗣗 = I/my (some usages remain unclear).
+- [M] 𘒷𘕾 𘏛𗩚 = other agents/everyone else (whole expression).
+- [M] 𘀰𗘾 = result/status.
+- [M] 𗸶𘓚 = stage/phase; 𗘰𗵺 = first/initial; 𗳙𗇄 = new/next/final.
+- [M] 𘉐𗓵 = what/unknown interrogative placeholder. A negation interpretation was considered, but its interrogative distribution favors 'what'.
+- [M] 𗴢𗈠 = value/digit/number; 𗟴𗘠 = has-value/is-valued-at.
+- [M] 𗏩𗮇 = definition/rule/formula predicate, exact wording unknown. It is distinct from the value predicate.
+- [M] 𗂢𗋛 and 𗼔𗄣 = opposed positional selectors, plausibly first/last. 𗪘𗅻 = digit/element. Their full expressions below are tentatively 'first digit of code' and 'last digit of code'.
+- [L] 𗎢𗠛 = code/input/common sequence. 𗜂𗥟 links it to selectors, but also occurs in more complex expressions; plain 'of' may be too narrow.
+- [M] 𗀻𘜔 = change/increase/add (possibly a delta relation in stage 2). 'Old/previous' was considered but conflicts with initial values unless some unreported state change is assumed.
+- [L] 𗸶𗥄 and 𗽉𗞘 introduce some property, comparison, alternative, equivalence, or indexed relation; not securely translated. Inequalities and numbered/indexed references are possible alternatives.
+- [L] 𘒷𗉼 is a relation/operator occurring with conditions, perhaps counting/satisfying or meaning/denoting. Exact meaning unknown.
+
+Opaque expressions retained for accurate partial translation
+These are labels used by this reconstruction, NOT claimed English meanings of Swarmish words.
+- [H identity, L meaning] X=𘍣; Y=𗟸; Z=𗣚; P=𗋛; Q=𗅻. All are LOCAL/scoped labels, not global quantities. Thus X in one speaker's message need not equal another speaker's X.
+- [H identity, M interpretation] F = 𗂢𗋛 𗪘𗅻 𗜂𗥟 𗎢𗠛 (tentatively first digit of code).
+- [H identity, M interpretation] L = 𗼔𗄣 𗪘𗅻 𗜂𗥟 𗎢𗠛 (tentatively last digit of code).
+- [H identity, L meaning] H = (𗜂𗥟 𘒷𗉼 (SUBJECT 𗸝𗅮 𗄮𗱩 = 𗷋𘎱)). This repeated expression is an unknown aggregate/condition; SUBJECT represents the actual subject marker, not an additional lexical word.
+- [H identity, L meaning] J = (𗜂𗥟 𘐐𘏛 𗙛𗤸 list(𗎢𗠛,𗝨𗓉)). Exact operation unknown.
+- [H identity, L meaning] A = 𘓜𗚧 𘀰𘐾 𗙨𗥊.
+- [H identity, L meaning] B = 𘓜𗚧 𗀻𘜔 𗙨𗥊.
+- [H identity, L meaning] C = 𘓜𗚧 𗤸𘏛 𗦴𗷳.
+- [H identity, L meaning] D = 𗳙𗇄 𗥗𗺍 𘓜𗚧.
+A/B/C/D are structured command descriptions, not necessarily indivisible words. Their exact physical/game meanings are unknown. [L] They may consume, modify, replenish, then finalize a shared resource.
+- [M] R = 𗺍𘂚 𗙨𗥊, some current/remaining resource quantity.
+- [L] K = 𗑝𗘾, a coordinator/group/submitter referent, exact meaning unknown.
+- [M] 𗸊𘂦 (list of agents) = group/subset of those agents.
+- [L] 𗤸𗫌 may mean cost/resource requirement, 𗙨𗥊 resource/token, 𗦴𗷳 lock/key, 𗤸𘏛 release/give, and 𘓜𗚧 operation/transaction. These are hypotheses only, not established translations.
+
+Numeric tokens
+[H] These are distinct recurring value tokens; their exact numeric assignments are not established. Labels preserve their identities:
+ nA=𗄭𗸊; nB=𗋆𘊡; nC=𗔕𗙼; nD=𗂔𗢲; nE=𗡏𗘁; nF=𗷋𘎱; nG=𗋢𗩷; nH=𘐾𗾽; nI=𗥄𗙂; nJ=𗮠𗊤.
+[L] A plausible partial assignment is nA=2, nB=4, nC=3, nF=1, nG=0, nI=5. If the stage-2 relation is addition, nE may be 1; however nE and nF are distinct tokens and must not silently be equated. There is no secure absolute numerical anchor. All translations below retain symbolic labels. Other words not glossed above are unknown.
+
+2. TRANSLATION
+
+Notation: square brackets flag uncertainty; opaque labels refer to section 1. 'Defines' is provisional for 𗏩𗮇. 'Value' is provisional. Requests are distinguished from assertions. Public task feedback is translated literally. X/Y/Z/P/Q always have local scope. Untranslated lexical material is explicitly marked unknown.
+
+1. Public feedback: stage 0; invalid attempts 0.
+2. X is defined by (F). X has value nB.
+3. Assert: [subject 𗂢𗋛 𗪘𗅻 𗜂𗥟, a truncated first-digit/element expression] has [unknown relation 𗸶𗥄, unknown qualifier 𗽉𗞘] nA. Assert: [the same truncated subject] has predicate 𗎢𗠛 [unknown in this position], complement K. The second clause does NOT repeat the first clause's relation.
+4. Y is defined by (L). Y has value nA.
+5. X is defined by ([my?] first [𗞘𗾽 unknown]). X has [unknown relation 𗸱𘖨] to (𗽒𘙭 [unknown], element, first-selector, 𘃯𗊤 [unknown], code, 𗸝𗅮 [unknown]). Question: what is X's value?
+6. X is defined by (𗄃𗓤 [unknown], first-selector, 𗜂𗥟 [unknown], 𗣹𗣚 [unknown], 𗄣𗷳 [unknown], (𗜂𗥟 [unknown])). Assert: X has [unknown relation 𗸶𗥄] nE. [Unknown ending 𗺰𗅮𘂚.]
+7. Z is defined by (𗶑𗈠 [unknown], 𗜂𗥟 [unknown], predicate [unknown operation 𘐐𘏛 𗙛𗤸] list(code,𗝨𗓉 [unknown])). Z has value nD.
+8. X is defined by H. X has value nC.
+9. Y is defined by ([my?] 𗸱𘖨 [unknown relation] (predicate [unknown operation 𘐐𘏛 𗙛𗤸] list(code,𗝨𗓉 [unknown]))). Y has [unknown relation 𗸶𗥄, qualifier 𗽉𗞘] nC.
+10. Assert: agent_5 submits list(nA,nB,nC,nD).
+11. Public feedback: stage 1; invalid attempts 0.
+12. Assert: I agree. Request: submit list(nA,nB,nC,nD).
+13. Public feedback: stage 1; invalid attempts 1.
+14. Assert [elliptical/partially unknown syntax]: list(nA,nB,nC,nD), first phase has [value/status predicate 𗟴𗘠, no complement supplied]. agent_3 executes [first phase]. The first portion literally starts with assertion plus object marker, without an ordinary subject/predicate.
+15. Public feedback: stage 1; invalid attempts 2.
+16. Request: K submits list(nB,nB,nC,nD).
+17. Public feedback: stage 1; invalid attempts 3.
+18. Assert: L has value nA. Question to agent_3: [first/my?] has [unknown relation 𗸱𘖨] to (L). Assert: I agree [unknown 𗛧𗙂] with (𗸝𗣡 [unknown] complement 𗸱𘖨 [unknown]).
+19. Assert: H has [unknown relation 𗸶𗥄, qualifier 𗽉𗞘] nE. Question to agent_3: [first 𗞘𗾽 unknown] has relation 𘒷𗉼 to [last-selector, element, 𗜂𗥟 unknown; incomplete expression].
+20. [Value/digit] has [unknown predicate 𗴢𗖰] list(nB,nB,nC,nD). agent_2 tries/proposes 𘒼𘋗 [unknown].
+21. Public feedback: stage 1; invalid attempts 4.
+22. agent_7 [confirms/knows?] list(nA,nB,nC,nD). agent_7 tries/proposes 𘒼𘋗 [unknown].
+23. Public feedback: stage 1; invalid attempts 5.
+24. Assert: first phase is done. P is defined by (A). P has value [𗤸𗫌 unknown] nA. Request: K [𗤸𘏛 unknown, perhaps sends/gives] 𘄛𘁄 𗦴𗷳 [unknown phrase].
+25. First phase is done. R = nC. Request: K report 𘄛𘁄 𗦴𗷳 [unknown] to agent_3.
+26. Assert: first phase is done. P is defined by (𗥗𗺍 [unknown], 𘓜𗚧 [unknown], complement [next phase 𗙨𗥊 unknown]). P [𗤸𗫌 unknown predicate] nA 𗙨𗥊 [unknown unit]. Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+27. Assert: first phase is done. Assert: [next 𗥗𗺍 𘓜𗚧, i.e. D] requires (SUBJECT [𗦴𗷳 𗤸𘏛 𘓜𗚧, a variant ordering of C] completed). Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+28. Assert: first phase is done. P is defined by (SUBJECT 𗶑𗈠 𗙨𗥊 [unknown subject] PREDICATE 𗤸𘏛 [unknown] COMPLEMENT 𗦴𗷳 [unknown]). P [𗤸𗫌 unknown] nE. Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+29. Assert: first phase is done. P is defined by (𗙨𗥊 [unknown] changes/increases by 𗙨𗥊 = nE). Assert: P has value (𗤸𗫌 [unknown], nG). Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+30. Assert: first phase is done. P is defined by (𗶑𗈠 𘓜𗚧 𗥘𗦴 [unknown]). Q is defined by (𗶑𗈠 𘓜𗚧 𗤸𘏛 𗦴𗷳 [unknown, C-related]). Q requires (P done). Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+31. Assert: first phase is done. Assert: ([predicate execute, qualifier 𗽉𗞘, nA]) requires ([first execution] done). [Unknown ending 𗺰𗅮𘂚.]
+32. Question: what [𗵺𗕭 unknown condition] does P require? Assert: agent_5 waits.
+33. Assert: R = nC. Request: group(agent_1,agent_2,agent_7) report 𘄛𘁄 𗦴𗷳 [unknown] to K.
+34. Assert: I agree. Request: agent_7 [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown]. Assert: [next 𗥗𗺍 𘓜𗚧, D] [𗤸𗫌 unknown predicate] nA.
+35. Assert: I agree. Request: execute list(A,B,C,[next 𘓜𗚧, D variant lacking 𗥗𗺍]). Assert: agent_4 executes A.
+36. Request: execute list((A),(B = nE),(C),(next 𘓜𗚧 𗥗𗺍 𗥗𗺍 [D variant])). Assert: agent_6 executes (A).
+37. Public feedback: stage 1; invalid attempts 6.
+38. Assert: (B) requires (A done). Request: agent_7 execute (A).
+39. Public feedback: stage 1; invalid attempts 7.
+40. Assert: [my P] agrees. Request: K submit list(A,B,C,D). Assert: agent_1 executes A. Request: other agents wait.
+41. Public feedback: stage 1; invalid attempts 8.
+42. Assert: I agree. Assert: agent_2 executes (A). Request: other agents wait.
+43. Public feedback: stage 1; invalid attempts 9.
+44. Request: agent_3 execute list(A,B,C,[𘓜𗚧 𗥗𗺍 next phase, D variant]). Request: other agents wait.
+45. Assert: agent_3 executes A. Request: other agents wait.
+46. Public feedback: stage 1; invalid attempts 10.
+47. Assert: A is done. Assert: R = nA. Request: agent_3 execute B.
+48. Request: agent_1 execute (B = nE). Request: agent_1 report result. Assert: agent_0 waits.
+49. Assert: (agent_1 executes A) failed. Assert: agent_1 tries/proposes B. Request: other agents wait.
+50. Question to agent_3: is A done?
+51. Assert: (agent_6 executes A) failed. Request: agent_3 execute B. Assert: agent_6 waits.
+52. Assert: (agent_7 submits A) failed. Request: agent_3 try [𘓜𗚧 𗀻𘜔 𗙨𗥊; action meaning unknown]. Assert: agent_7 waits.
+53. Assert: R = nA. Assert: agent_3 executes B. Request: other agents wait.
+54. Public feedback: stage 1; invalid attempts 11.
+55. Assert: (agent_2 executes A) [𗞍𗘠 unknown status]. Assert: agent_2 tries/proposes [𘓜𗚧 𗀻𘜔 𗙨𗥊; action meaning unknown]. Request: other agents wait.
+56. Public feedback: stage 1; invalid attempts 12.
+57. Assert: agent_4 waits.
+58. Assert: (agent_1 executes B) is done. Request: agent_3 execute C. Request: other agents wait.
+59. Assert: B is done. Assert: R = nF. Assert: agent_3 executes C. Request: other agents wait.
+60. Request: agent_3 execute C. Request: agent_3 report result. Request: other agents wait.
+61. Assert: agent_6 [confirms/knows?] (B is done). Request: agent_3 execute C. Assert: agent_6 waits.
+62. Assert: (agent_2 executes [𘓜𗚧 𗀻𘜔 𗙨𗥊; action meaning unknown]) failed. Assert: agent_2 waits. Request: agent_3 report result.
+63. Assert: agent_5 waits.
+64. C is done. R = nA. agent_3 executes D. Request: other agents wait.
+65. Public feedback: stage 2; invalid attempts 12.
+66. Assert: F has value [value/digit nH, 𗎢𗹱 unknown temporal/linking word, next phase]. Request: K [𗤸𘏛 unknown] 𘄛𘁄 𗦴𗷳 [unknown].
+67. Assert: (next phase, 𗞘𗾽 unknown, nE) has relation 𘒷𗉼 to (F). [Unknown ending 𗺰𗅮𘂚.]
+68. Next phase has relation 𘒷𗉼 to (L has [unknown relation 𗸶𗥄, qualifier 𗽉𗞘] nC).
+69. Assert: H has [unknown relation 𗸶𗥄, qualifier 𗽉𗞘] nA [𗎢𗹱 unknown] next phase. Request: K report 𘄛𘁄 𗦴𗷳 [unknown].
+70. L changes/increases by [value nC]. L has value [new value nI]. (Delta interpretation tentative; literal predicate is 𗀻𘜔.)
+71. D is done. R = nG. [Next phase, first 𗞘𗾽 unknown] has relation 𘒷𗉼 to J. [Unknown ending 𗺰𗅮𘂚.]
+72. Assert: Z changes/increases by [value nJ]. Assert: Z has value [value nH, 𗎢𗹱 unknown, (𗇦𘝫 unknown, D)].
+73. Assert: H changes/increases by [value = nE]. Assert: H has value [new value nB]. Request: K report 𘄛𘁄 𗦴𗷳 [unknown].
+74. Question to agent_0: F changes/increases by [value nH]?
+75. Request: group(agent_2,agent_6) report [new value] to K.
+76. Question to agent_6: H changes/increases by what value?
+77. Question to agent_6: H has what new value?
+78. Question to agent_6: H changes/increases by what value? Question to agent_0: F changes/increases by [value nH]?
+79. Assert: Z has value [new value nH]. Assert: agent_2 tries/submits list(nH,nB,nH,nI).
+80. Public feedback: stage 3; invalid attempts 12.
+
+3. THE TASK
+
+[H] The agents were solving a staged cooperative task. They shared partial rules/definitions and numeric-looking results, submitted a four-element vector, then coordinated a sequence of operations on a shared state, then submitted a revised four-element vector. The task's literal instructions, story, and exact command vocabulary are not recoverable from this log alone.
+
+[H] At stage 0, agents reported definitions/formulas and values. agent_5 sent list(𗄭𗸊,𗋆𘊡,𗔕𗙼,𗂔𗢲), and public feedback advanced to stage 1 without an invalid attempt. [M] This was the accepted first answer, in an inferred order distinct from the agents' reporting order.
+
+[H] Stage 1 involved repeated unsuccessful attempts to submit vectors and command descriptions. Agents increasingly coordinated execution of A, B, C, D. Their statements describe dependencies, especially B requiring A's completion and a later operation requiring another completed operation. They repeatedly asked the other agents to wait, and agent_3 became the principal executor. Their reported mutable quantity R took values nC, nA, nF, nA, nG across the observed sequence. This is not a simple monotonically decreasing remaining-step count. [L] It may be a resource that operations consume and replenish.
+
+[H] Public invalid attempts reached 12. After agent_3's D in message 64, feedback advanced to stage 2 with no further invalid increment. Reports subsequently call D complete. Do not infer that every declaration of an action in chat corresponds one-for-one with an actual valid task action: public feedback and their status statements are not always adjacent or consistent.
+
+[M] In stage 2, agents discussed changes to the previous quantities and their new values, possibly arithmetic deltas after the state-changing commands. They clarified first/last or other component values and an aggregate expression. [H] agent_2 finally sent list(𘐾𗾽,𗋆𘊡,𘐾𗾽,𗥄𗙂), after which public feedback advanced to stage 3, still at 12 invalid attempts. [M] This appears to complete the task. The exact ordinary decimal vector is not established by decoding alone.
+
+4. EVIDENCE
+
+Structural evidence is strongest. Messages 36 and 49 contain nested balanced occurrences of 𗖆𗠣/𗧪𗣵; the same outer clause markers apply both to ordinary agents and to entire quoted propositions. Message 36 visibly puts four grouped items into one larger list separated by 𗪚𗺍. Messages 57 and 63 isolate agent-name plus predicate 𗝶𗠛, while messages 45 and 53 request other agents use that same predicate during one agent's action; this supports 'wait'. No public task solution is needed for these syntactic deductions.
+
+Mood and recipient evidence: 𘖨𘌩 occurs with 𗝨𗒤 agent_N and formulas to be clarified (50, 74, 76–78); 𘖛𘎱 regularly introduces an action assigned to another agent (48, 60, 75), whereas 𘐾𗪚 precedes reports about self/current state (42, 57, 63). These contrasts support interrogative/request/assertion rather than arbitrary topic labels.
+
+Status evidence: 47 says A 𗞽𘕾 and moves to B; 59 says B 𗞽𘕾 and moves to C; 64 says C 𗞽𘕾 and moves to D; 71 says D 𗞽𘕾 after the phase transition. This favors 'done/completed'. In 49, 51, 52, 62 the distinct predicate 𗧃𗷳 applies to a quoted own attempted execution and is followed by retrying or waiting, favoring failure. It would be a mistake to translate both as the same status from the public invalid count alone.
+
+Dependency evidence: 38 puts B before 𗣡𗙂 and the proposition 'A done' after it. Message 30 analogously relates Q to 'P done'; 27 relates a D-like expression to completion of a C-like expression. This supports requires/depends on.
+
+Local-label evidence: the same singleton receives differing definitions across speakers: 𘍣 in 2 and 8, and 𗋛 in 24, 26, 28, 29. Therefore singleton identity cannot establish that two speakers are discussing the same global quantity. Paired definition and value clauses in 2/4/7/8 nevertheless support distinguishing 𗏩𗮇 from 𗟴𗘠.
+
+Vector identity evidence: the exact four-token list in 10 is repeated in 12 and elsewhere. The final vector in 79 shares its second value with that initial vector, changes first/third to the same token, and changes fourth. This establishes token-level answer structure without requiring decimal assignments.
+
+Numerical uncertainty: an appealing arithmetic hypothesis assigns initial last-component nA=2, a change nC=3, and final nI=5 (70); the aggregate starts at nC=3, changes by nE, and ends at nB=4 (73). But nE differs from the apparent resource-one token nF, and no number alphabet or absolute numerical anchor is supplied. Other assignments can satisfy those equations. A reliable alphabet or independent anchored arithmetic equation could confirm or overturn these guesses. Consequently symbolic numeric labels are used in the translation. The resource trace is retained exactly: 𗔕𗙼 → 𗄭𗸊 → 𗷋𘎱 → 𗄭𗸊 → 𗋢𗩷.
+
+Lexical uncertainty: first/last/digit/code interpretations rely on paired expressions 2/4 and corresponding final reports, not a supplied task statement. H and J are structurally identifiable but not semantically decoded. A dictionary showing different positional selectors or a different data structure would change those interpretations without changing the clause grammar. The original file would also determine whether singletons are variable names, clue numbers, or another mechanism. We make no claim to a general character substitution or hidden phonetic alphabet. Agent ellipsis or mistakes, particularly 3 and 14, must not be silently repaired to fit the inferred task.

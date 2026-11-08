@@ -1,0 +1,254 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Confidence key: HIGH = strongly supported by repeated structures and independent contextual anchors; MEDIUM = likely interpretation, but exact lexical meaning or grammatical scope is uncertain; LOW = speculative. This reconstructs the observed language, not a claim to reproduce the original file verbatim. English translations below usually give the referent of a description rather than a word-for-word rendering of its internal parts.
+
+A. General organization
+
+[HIGH] Swarmish is a structured, compositional notation, not simply one glyph per English letter. Most apparent content words have two glyphs. Single-glyph operators delimit and connect nested expressions. Spaces separate many tokens; adjacent closing delimiters are sometimes written together. Literal agent identifiers such as agent_6 occur unchanged.
+
+[HIGH] 𘓵 opens an expression and 𗠌 closes it. Deeply nested descriptions end with several 𗠌 tokens. These are structural brackets, not repeated English words.
+[HIGH] 𘔕 separates clauses/utterances.
+[HIGH] 𗇑 separates members of an ordered list; 𘁾 introduces a list. Four-item digit lists are used for codes.
+[HIGH] 𘗥 introduces a definition/local name: approximately 'let [name] denote [description]'. The following bracketed label is NOT necessarily an ordinary lexical noun.
+[HIGH] Names have local/message-dependent interpretations. In messages 2, 4, 5, 6 and 8, 𘋐𘗿 names WAVE, SUN, STAR, MOON and SUN respectively. In 34, 36, 38 and 40, 𗮆𗭒 names BOOT, DRAIN, CRANK and DRAIN. A dictionary that equates either label permanently with 'cabinet' or a particular control is wrong.
+[MEDIUM] Other opaque two-glyph heads may also be locally chosen labels or functional names. Several different heads introduce nearly identical numeric assertions. Their exact lexical contribution is not recovered. They are not proven synonyms. Anomalous value tokens in 39 and 100 may reflect an unrecovered reference convention, local naming, or speaker errors; the evidence does not choose among these explanations.
+
+B. Connectives and grammatical functions
+
+[HIGH] 𗾮 introduces a target, complement or asserted value, depending on the surrounding construction. It is often paraphrasable as '=', 'is', or 'to', but is not necessarily identical to any one English word.
+[MEDIUM] 𗕐 links a function/predicate to its argument, or an action to its actor: approximately 'of/by/applied to'.
+[MEDIUM] 𗕩 links possessed/qualified entities, approximately 'of/in/for'.
+[MEDIUM] 𘃸 combines a noun with a descriptive construction: approximately 'having/with/such that'.
+[MEDIUM] 𘃒 connects alternatives or two coordinated descriptions. It occurs between the two parts of the full STAR description.
+[MEDIUM] 𗓩 is negation/prohibition. Its exact scope is sometimes uncertain.
+[MEDIUM] 𗚦 participates in questions/requests, often marking the missing thing.
+[MEDIUM] 𗮻 introduces an addressee or destination, e.g. an agent or the exit.
+[MEDIUM] 𘃏𗫭 is an assertion/report/introduction marker, roughly 'I report/know'.
+[MEDIUM] 𘇗𗖀 requests information, a response or confirmation; exact force is not established.
+[MEDIUM] 𗃏𗻀 introduces a question/request.
+[MEDIUM] 𗐖𗢁 introduces a next step or action intention, approximately 'now/next'.
+[MEDIUM] 𘜺𘋯 means 'wait' or a closely related coordination instruction.
+[MEDIUM] 𗠮𗨟 means 'now/already/currently'.
+[LOW] 𘞀𘂷 is 'ready/agreed'; 𘉡𗄤, 𗚦𗶈 and 𗢽𗲓 appear as acknowledgment, proposal or planning markers, but their exact meanings are unknown.
+[LOW] 𘍝 is an acknowledgment/recognition connector, possibly 'already/yes'; 𗫊 is approximately 'using'; 𘍝𗔇 is unresolved.
+
+C. Numbers
+
+[HIGH] Decimal digits are represented by distinct two-glyph words:
+0 𗬃𗺌; 1 𗶎𘁡; 2 𗓘𗳋; 3 𗖎𗴃; 4 𗃠𗮂; 5 𗾣𗋽; 6 𗗑𗻠; 7 𗍥𗵄; 8 𗰩𗬹; 9 𘟬𘚒.
+[HIGH] The list 𗓘𗳋 𗇑 𗍥𗵄 𗇑 𗃠𗮂 𗇑 𗰩𗬹 denotes 2,7,4,8; the final list in 113 denotes 9,7,9,6.
+
+D. Puzzle-related vocabulary
+
+[HIGH] 𘙢𗅎 denotes the box/cabinet; 𘂕𗳛 denotes the exit/door.
+[HIGH] 𘉡𘊷 denotes a symbol/shape; 𘜺𗃃 is position/slot; 𗍥𗮂 is a symbol-at-position or symbol-selection function. Exact word boundaries between these English glosses are MEDIUM.
+[MEDIUM] 𗶎𗺌 is another position/index-related construction, used for cabinet positions.
+[HIGH] 𘔥𗭒 is digit/value; 𗇡𗇮 qualifies an original/base value.
+[MEDIUM] 𘁰𗄅 qualifies current/new values; it appears both with battery readings and updated digits.
+[MEDIUM] 𗔨𗻃 qualifies a final/transformed digit (101).
+[HIGH] 𗞎𘂷 is opening/open, notably the cabinet-opening action/status.
+[HIGH] 𘑮𗃀 and 𘍝𗼡 concern code/ordered sequence; their exact distinction is MEDIUM.
+[HIGH] 𗨰𘀢 denotes entering/submitting a code or an action with that effect.
+[HIGH] 𗑞𘋯 denotes action/control; 𗐖𘋯 is a controller/machine-related word in the BOOT description (exact gloss MEDIUM).
+[HIGH] 𘞃𗟮 is battery; 𗹂𘜩 is charge/energy.
+[HIGH] 𗾮𗫊 expresses increase/addition. It describes CRANK's added charge and the new symbol offsets; it is not exclusively the noun 'offset'.
+[HIGH] 𘘠𘗌 expresses decrease/consumption, applied to BOOT and charge 2.
+[MEDIUM] 𗕃𗝀 is a cost/consumption-related function in the power clues.
+[MEDIUM] 𗋮𘓘 is a quantity/unit-related modifier. It must not simply be translated 'minus': it occurs in both CRANK's added charge and BOOT's consumed charge.
+[HIGH] 𗮍𗁄 expresses requirement/prerequisite; 𗖎𘁡 expresses completion/success/done.
+[HIGH] 𘔬𘏱 is attempt/try; 𗟻𗳛 is result/outcome; 𘖕𗲓 is failure/invalidity.
+[HIGH] 𗊷𘊷 announces success; 𗜙𗧺 announces failure/rejection.
+[MEDIUM] 𗽚𘜢 is a reading/value/assertion-related head. It introduces battery quantities and exit digits, but unexpectedly occurs as the VALUE of WAVE's offset in 100. Its exact meaning is unresolved; it is not safely equatable with numeral 1.
+[MEDIUM] 𗀏𘋜 denotes unknown/unavailable in 106.
+[LOW] The individual meanings of assertion heads 𗈨𗣮, 𘁹𘈪, 𘇪𗖭, 𗤧𘇪 and 𘋜𗹛 are unknown. Their arguments and asserted values can often be translated without recovering those meanings. In 39, 𘁹𘈪 unexpectedly appears as the value of a DRAIN-cost relation; it is not the established numeral 2. The intended cost 2 is inferred from task context, not decoded from this token.
+
+E. Descriptive names for symbols
+
+These are referent-level identifications [HIGH], not full internal lexical decodings. The descriptions contain nested modifiers and, for STAR, what appear to be alternatives. Do not treat each complete description as a single lexical word.
+
+WAVE: 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𗗡𘇽 𗮦𗃼 𗠌 𗠌 𗠌. A shorter version is 𘓵 𘉡𘊷 𗮦𗃼 𗕩 𗗡𘇽 𗠌. [LOW] 𗗡𘇽 may mean water and 𗮦𗃼 a wave-like property; the same 𗗡𘇽 occurs in the DRAIN description.
+
+MOON: 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𗢽𗊧 𘃸𘓘 𘃸 𘓵 𘑮𘁓 𗾮 𘐖𗝡 𗠌 𗠌 𗠌 𗠌. A shorter related description occurs in 9 with 𘍝𗅡. Internal word meanings unknown.
+
+SUN, description A (4,20): 𘓵 𘉡𘊷 𘃸 𘓵 𗕃𗟮 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𘗖𗖧 𗾮 𗹂𘜩 𗠌 𗠌 𗠌 𗠌.
+SUN, description B (8,99,107): 𘓵 𘉡𘊷 𘃸 𘓵 𗭓𘂽 𗾮 𘓵 𘞍𗃼 𘃸𘓘 𗢽𗊧 𘃸 𘓵 𗍥𗮂 𗾮 𘓵 𘑮𗛊 𗟕𗖧 𗠌 𗠌 𗠌 𗠌 𗠌.
+[MEDIUM] Both descriptions identify SUN in this conversation; whether they are formally synonymous, alternative descriptions, or reflect an initial misunderstanding is unresolved.
+
+STAR: the full description contains two constructions of the form 𘓵 𘀆𘈪 𗕐 𗋮 𗾮 𘓵 𗖎𗳋 ... 𗋮𘓘 𗾣𗋽 𗠌 joined by 𘃒. The differing internal words are 𗮔𗅎 and 𘙢𗺜. [HIGH] The complete expression identifies STAR. [LOW] It may describe a five-pointed form by alternative constructions; internal interpretation is not recovered. Message 10 gives only its first half; 11 repeats the full form, and 18 adopts it.
+
+F. Descriptive names for controls
+
+[HIGH] The following descriptions identify the controls in context:
+DRAIN = 𘓵 𗑞𘋯 𘃸 𘓵 𗸼𗧞 𗾮 𗗡𘇽 𗠌 𗠌.
+CRANK = corresponding construction with 𗟻𗐔 𗾮 𗮔𗻀.
+SIGNAL = corresponding construction with 𘟬𗻠 𗾮 𗹔𗄤.
+BOOT = corresponding construction with 𗓘𗛊 𗾮 𘓵 𗐖𘋯 𘂕𗳛 𗠌.
+[LOW] Plausible internal glosses are 'remove water', 'turn handle', 'send message', and 'start exit controller', respectively. Referent identification is much more secure than these literal glosses.
+[HIGH] Some SIGNAL mentions substitute 𗖎𘁡 ('done/completed') for the normal target 𗹔𗄤. These should be retained as variants/malformed descriptions, not silently treated as perfectly identical strings.
+
+G. Local labels observed
+
+[HIGH] 𘋐𘗿 is a repeatedly redefined early symbol label. Later symbol labels: 𗾒𗣮=WAVE in 100; 𗢔𗖧=MOON in 101; 𗍃𗯧=SUN in 107.
+[HIGH] Control labels: 𗮆𗭒=BOOT in 34, DRAIN in 36/40, CRANK in 38; 𗽚𗎯=BOOT and 𘇪𗫊=SIGNAL in 35; 𘚙𗟮=CRANK in 36 and SIGNAL in 40; 𘔥𘂽=SIGNAL in 41 and 97.
+[LOW] Some remaining opaque heads may likewise be arbitrary names rather than fixed English-like vocabulary. We cannot reconstruct the original inventory or full definition mechanism from this log alone.
+
+2. TRANSLATION
+
+These are semantic paraphrases. 'Report', 'ask', 'next', 'wait' and similar discourse words are less certain than the digit, position and action content. Symbol names translate the descriptive referents established above. Unrecovered internal parts are not being claimed as literally decoded. The words 'attempt' and 'success' are distinguished: a proposed or announced action need not have succeeded.
+
+1. Public task status: stage 0, invalid attempts 0.
+2. Report: define a local symbol label as WAVE; its original/base digit is 8. Internal descriptive wording partly unknown.
+3. Discarded message; content unknown.
+4. Report: define the local symbol label as SUN, using description A; cabinet position 1 has that symbol. Internal description partly unknown.
+5. Report: define the local symbol label as STAR, using the two-part/alternative description; cabinet position 3 has that symbol.
+6. Report: define the local symbol label as MOON; its base digit is 7.
+7. Report: symbol at cabinet position 4 is WAVE, using the shorter WAVE description.
+8. Report: define the local symbol label as SUN, using description B; its base digit is 2.
+9. Report: symbol at cabinet position 2 is MOON, with a shorter descriptive expression. Internal modifiers unknown.
+10. Report: STAR's base digit is 4, but STAR is expressed with only the first half of the description used in 5.
+11. Address agent_6 and request/clarify information: repeats the full two-part STAR description. Exact question wording unknown; apparently asks about that full symbol rather than the shortened expression in 10.
+12. A negative/request construction concerning agent_6 and missing information, followed by a reference to the known symbol at cabinet position 3. Exact wording unknown; likely 'we still need agent_6's information about position 3'.
+13. The base digit of the symbol at cabinet position 2 is 7. Address/request agent_6.
+14. The base digit of the symbol at cabinet position 4 is 8. Request/negated-information clause about agent_6, exact wording unknown. Then address agent_3 and ask what the symbol at cabinet position 1 is.
+15. Address/request agent_6; the base digit of the symbol at cabinet position 4 is 8.
+16. Negated/request construction concerning agent_6 and missing information, similar to 12, with additional unresolved token 𘍝𗔇. Exact meaning unknown.
+17. Address/request agent_6; a result/completion-related clause about agent_6, exact meaning unknown, probably asking for its result/information.
+18. Report: the full STAR description has base digit 4. Next: agent_6 submits the code sequence 2,7,4,8.
+19. Public status: stage 1, invalid attempts 0.
+20. Address agent_2: symbol at cabinet position 1 is SUN, repeating description A. The code sequence is 2,7,4,8. Next/action marker.
+21. Public status: stage 1, invalid attempts 1.
+22. The symbol at cabinet position 3 has base digit 4. Next/open the cabinet using code sequence 2,7,4,8.
+23. Public status: stage 1, invalid attempts 2.
+24. Acknowledgment; the symbol at cabinet position 3 has base digit 4. Next: open cabinet using 2,7,4,8.
+25. Public status: stage 1, invalid attempts 3.
+26. The symbol at cabinet position 3 has base digit 4. Sequence 2,7,4,8. Next/action marker.
+27. Public status: stage 1, invalid attempts 4.
+28. An operation/action involving the cabinet and code sequence 2,7,4,8; includes unresolved 𘍝𗔇. Next. Exact discourse wording unknown, probably another cabinet-opening attempt.
+29. Public status: stage 1, invalid attempts 5.
+30. Proposal/acknowledgment marker; speaker's operation on the cabinet uses code sequence 2,7,4,8. Next. Exact predicate wording unknown.
+31. Public status: stage 1, invalid attempts 6.
+32. Speaker's operation on cabinet uses code sequence 2,7,4,8. Next. Exact predicate wording unknown.
+33. Public status: stage 1, invalid attempts 7.
+34. Cabinet is now open. Request/negative-information clause asking for action information. Define a label for BOOT, the exit-controller-starting action. BOOT consumes 2 charge. Request information/response.
+35. Success/open acknowledgment: cabinet is open. Define labels for BOOT and SIGNAL. BOOT requires SIGNAL to be completed. Request/response marker.
+36. Cabinet now open; request action information. Define DRAIN and CRANK. CRANK requires DRAIN to be completed. Request/response marker.
+37. Cabinet is open now. Negated/request clause asking teammates for action information (exact wording unknown). Report: current battery charge reading is 4. Request information about the power controls/charge costs.
+38. Cabinet open; request numeric/action information. Define CRANK. CRANK adds 3 charge; its upfront charge cost is 0. Request/response marker.
+39. Cabinet open. Reports a DRAIN-cost relation whose value is 𘁹𘈪 (unknown in this value position; intended cost 2 inferred from task context). The established numeral 2, 𗓘𗳋, is not written here. Request/response marker; exact assertion head unknown.
+40. Cabinet now open; request action information. Define DRAIN and SIGNAL. SIGNAL requires DRAIN to be completed. Request/response marker.
+41. Cabinet open now. Define SIGNAL. SIGNAL consumes/costs 3 charge. Request/response marker.
+42. Next: agent_0 attempts DRAIN. Wait. Report BOOT consumes 2 charge; ask what SIGNAL's charge cost is.
+43. Next: agent_7 attempts DRAIN. Wait.
+44. Public status: stage 1, invalid attempts 8.
+45. Propose the sequence DRAIN, CRANK, SIGNAL, BOOT. Next: agent_5 attempts DRAIN.
+46. Public status: stage 1, invalid attempts 9.
+47. Next: agent_6 attempts DRAIN. Address/request agent_4.
+48. Public status: stage 1, invalid attempts 10.
+49. Next: agent_1 attempts DRAIN. Wait. Code/sequence plan: DRAIN, CRANK, SIGNAL-like expression, BOOT. The SIGNAL expression ends with the completion token rather than its usual target; exact intended distinction unknown.
+50. Public status: stage 1, invalid attempts 11.
+51. Ready/agreement marker. Sequence DRAIN, CRANK, SIGNAL, BOOT. Next: agent_3 attempts to drain/remove water, i.e. DRAIN.
+52. Public status: stage 1, invalid attempts 12.
+53. Ready/agreement marker. Sequence DRAIN, CRANK, SIGNAL (using its local alias), BOOT. Next: agent_4 attempts DRAIN.
+54. Public status: stage 1, invalid attempts 13.
+55. Ready/agreement; propose sequence DRAIN, CRANK, SIGNAL, BOOT. Next: agent_2 attempts DRAIN.
+56. Public status: stage 1, invalid attempts 14.
+57. Success: agent_0 completed DRAIN. Next: agent_0 attempts CRANK. Request that others wait / not act independently; exact last phrase unknown.
+58. Failure: agent_1's DRAIN attempt failed now. Negated request concerning repetition of DRAIN, likely 'do not repeat DRAIN'. Next: agent_1 attempts CRANK. Wait.
+59. Public status: stage 1, invalid attempts 15.
+60. Failure: agent_5's DRAIN attempt failed. Acknowledge DRAIN is already completed now. Next: agent_5 attempts CRANK. Request waiting / no duplicate action; exact final phrase unknown.
+61. Public status: stage 1, invalid attempts 16.
+62. Failure: agent_6's DRAIN attempt failed. Acknowledge DRAIN completed now. Next: agent_6 attempts CRANK.
+63. Public status: stage 1, invalid attempts 17.
+64. Report: current battery charge reading is 2. Negated request concerning repetition of DRAIN. Next: agent_3 attempts CRANK.
+65. Public status: stage 1, invalid attempts 18.
+66. Agent_4 reports its DRAIN action failed; acknowledges DRAIN completed by agent_0. Next: agent_4 attempts CRANK. Initial discourse marker unknown.
+67. Public status: stage 1, invalid attempts 19.
+68. Report: agent_7's DRAIN attempt had a failure result. Next: agent_7 attempts CRANK. Wait.
+69. Public status: stage 1, invalid attempts 20.
+70. Report: agent_2's DRAIN attempt failed; acknowledge DRAIN already completed. Next: agent_2 attempts CRANK.
+71. Public status: stage 1, invalid attempts 21.
+72. Success: agent_0 completed CRANK. Current battery charge value is 5. Next: agent_0 attempts SIGNAL. Request others wait / refrain from duplicate action.
+73. Failure: agent_1's CRANK attempt failed; acknowledge agent_0 completed CRANK. Next: agent_1 attempts SIGNAL.
+74. Public status: stage 1, invalid attempts 22.
+75. Report: current battery reading is 5; CRANK completed. Next: agent_3 attempts SIGNAL. Wait.
+76. Public status: stage 1, invalid attempts 23.
+77. Failure: agent_5's CRANK attempt failed; acknowledge CRANK already completed now. Next: agent_5 attempts SIGNAL. Wait.
+78. Public status: stage 1, invalid attempts 24.
+79. Failure: agent_6's CRANK attempt failed. Next: agent_6 attempts a SIGNAL-like action; its description uses 'completed' instead of the usual SIGNAL target. Wait. Whether this is a typo, shorthand or distinct intended expression is unknown.
+80. Public status: stage 1, invalid attempts 25.
+81. Report: agent_4's CRANK attempt had a failure result. Next: agent_4 attempts SIGNAL.
+82. Public status: stage 1, invalid attempts 26.
+83. Report: agent_2's CRANK attempt had a failure result. Next: agent_2 attempts SIGNAL.
+84. Public status: stage 1, invalid attempts 27.
+85. Report: agent_7's CRANK attempt failed; acknowledge CRANK completed now. Next: agent_7 attempts SIGNAL.
+86. Public status: stage 1, invalid attempts 28.
+87. Success: agent_0 completed SIGNAL. Current battery charge value is 2. Next: agent_0 attempts BOOT. Request others wait / refrain from duplicate action.
+88. Public status: stage 2, invalid attempts 28.
+89. Report: current battery reading is 2; SIGNAL completed. Next: agent_3 attempts BOOT.
+90. Public status: stage 2, invalid attempts 29.
+91. Failure acknowledgment; SIGNAL already completed now. Next: agent_6 attempts BOOT.
+92. Public status: stage 2, invalid attempts 30.
+93. Agent_1's SIGNAL attempt had a failure result. Next: agent_1 attempts BOOT.
+94. Public status: stage 2, invalid attempts 31.
+95. Failure: agent_5's SIGNAL attempt failed. Next: agent_5 attempts BOOT. Wait.
+96. Public status: stage 2, invalid attempts 32.
+97. Report: agent_4's SIGNAL attempt had a failure result, using its previously defined SIGNAL alias. Next: agent_4 attempts BOOT.
+98. Public status: stage 2, invalid attempts 33.
+99. Report: symbol at exit position 4 is SUN, description B. Request/response marker.
+100. Report: define a label for WAVE. The original/base digit's increase/offset for WAVE is given as 𗽚𘜢, whose meaning in this value position is unknown. An intended +1 is suggested by the private clue, but is NOT directly decoded from this token. WAVE's exit digit is 9. Request/response marker.
+101. Success: agent_0 completed BOOT. Define a label for MOON. Report MOON's digit increment/offset is 2; its final digit is 9. Request/response marker.
+102. Report: exit position 1 displays WAVE. Current battery charge is 0. Negated request about further/repeated power-control actions, approximately 'do not repeat power actions'. Request/response marker.
+103. Report: exit position 2 displays STAR, using the full two-part description. Request/response marker.
+104. Report: exit position 3 displays MOON. Negated request about further/repeated power-control actions. Request/response marker.
+105. Report: STAR's original digit has increment/offset 3; its current/new digit is 7. Request/response marker. It does NOT say the original STAR base digit is 7.
+106. The original/base digit of the symbol at exit position 4 is unknown/unavailable (𗀏𘋜). Ask what the new increase/offset for that symbol is. Exact question structure partly unknown.
+107. Report: define a label for SUN, description B. SUN's original digit has increment/offset 4; the digit for exit position 4 is 6. Request/response marker. The message does not explicitly restate SUN's base digit 2.
+108. Discarded message; content unknown.
+109. Address agent_1 with a request/confirmation marker, agent_4 with a different unresolved marker 𘀼𗮧, and agent_6 with a request/confirmation marker. Then a negated request about further/repeated power-control actions. Exact addressee-specific instructions unknown.
+110. Exit-position digit values: position 1 is 9; position 2 is 7; position 3 is 9. Address/request agent_4. Exact assertion head unknown.
+111. Exit-position digit values: position 1 is 9; position 2 is 7; position 3 is 9. Address/request agent_4. Uses a different, unresolved assertion head from 110.
+112. Exit-position digit values: position 1 is 9; position 2 is 7; position 3 is 9. Address/request agent_4. Uses another unresolved assertion head.
+113. Ready/agreement; next: agent_7 submits the code sequence 9,7,9,6 to the exit.
+114. Public status: stage 3, invalid attempts 33.
+
+3. THE TASK
+
+The log fits the Storm Shelter task in the briefing. This conclusion is supported by the ordered information exchange, not merely by the supplied worked solution.
+
+Cabinet phase: agents share symbol-position clues and base digits using nested descriptions and local aliases. The content yields SUN at position 1 with base 2, MOON at position 2 with base 7, STAR at position 3 with base 4, and WAVE at position 4 with base 8. STAR's incomplete initial description is queried, and the full expression reappears in 18. Agent_6 announces submission of 2748 in 18; public stage 1 follows. Several agents then continue announcing or attempting the same cabinet code after it is open. The first seven invalid attempts appear to be redundant cabinet-opening actions, not seven failures to solve the power panel.
+
+Power phase: messages 34–41 exchange the new clues: initial charge 4; CRANK requires DRAIN and adds 3 without upfront cost; SIGNAL requires DRAIN and costs 3; BOOT requires SIGNAL and costs 2. Message 39 concerns DRAIN's cost, but its literal value token is unresolved, not the established numeral 2. Intended DRAIN cost 2 is task-consistent and fits the later battery trace, but is not an exact numeral translation of 39. They propose DRAIN→CRANK→SIGNAL→BOOT. Their chat shows substantial duplicated effort despite requests to wait. Agent_0 reports successive successful completion of DRAIN, CRANK, SIGNAL and BOOT; the other agents repeatedly report rejected duplicate attempts and move to the next action. Battery readings in the log are 4,2,5,2,0. Only agent_3 receives ongoing readings under the task rules; agent_0's numeric reports may be calculations or relayed conclusions rather than direct readings. Stage 2 appears after BOOT, with 28 invalid attempts accumulated; duplicate late BOOT attempts bring the total to 33. Exact timing of successful private API calls is not visible, so action announcements must not be treated as timestamps of execution.
+
+Exit phase: agents report positions WAVE, STAR, MOON, SUN. They communicate offsets/new digits, retain earlier base information, and converge on digits 9,7,9,6. One clause in 100 has an anomalous offset-value token rather than the expected numeral 1; that textual anomaly, like the cost-value anomaly in 39, is preserved above. Messages 110–112 repeat the first three final digits and request agent_4; 107 supplies the fourth digit 6. Agent_7 announces submission of 9796 in 113, followed by public escaped status in 114.
+
+Thus they escaped, with 33 invalid attempts. Most visible failures look like concurrency/duplication problems, not incorrect puzzle arithmetic. A plausible partition is seven redundant cabinet attempts, seven duplicate DRAIN attempts, seven duplicate CRANK attempts, seven duplicate SIGNAL attempts, and five duplicate BOOT attempts. Some expression variants and unclear requests may also reflect communication mistakes; the log alone cannot determine their exact causes. The anomalies in 39 and 100 are limits of the decoding, not by themselves evidence that the task or private clues differed from the briefing.
+
+4. EVIDENCE
+
+A. Strong anchors independent of simply knowing the solution
+
+1. Balanced nesting: 𘓵 and 𗠌 systematically bracket descriptions. Repeated closing tokens match embedded constructions, including the BOOT controller description and the long symbol descriptions. Treating these as ordinary lexical items explains the repetitions much less well.
+
+2. Local definitions: the same label 𘋐𘗿 is followed by visibly different symbol descriptions in different messages and then reused within each message's assertion. Similarly 𗮆𗭒 denotes several different controls across 34–40. This is direct textual evidence for local naming and against a fixed cabinet/control substitution dictionary.
+
+3. Ordered code lists: 18/20 repeatedly contain the same four numeral words separated by 𗇑; 113 contains a different four-item list. Position assertions and battery readings cross-check the digit map. These redundant uses are stronger evidence than assigning numerals solely from the briefing.
+
+4. Repeated referents: the full MOON description recurs in 6,101,104; SUN B in 8,99,107; STAR's two-part expression in 5,11,18,103,105; WAVE expressions in 2,7,100,102. Their association with specific positions and digits is consistent across stages. The correspondence is much firmer than literal translations of their internal descriptive vocabulary.
+
+5. Power prerequisite syntax: 35,36,40 use parallel constructions connecting different locally defined actions through the same requirement/completion words. Independent cost/increase clauses and the proposed four-action lists identify their referents.
+
+6. Action-result contrasts: agent_0's repeated success-marker/completion reports contrast with other agents' failure-marker/result/attempt reports. The control descriptions progress in a common order, while battery values change 4→2→5→2→0 and public stages change 0→1→2→3. This triangulates the action vocabulary without requiring every discourse marker to be translated.
+
+7. Regular invalid-attempt blocks: the public counters and surrounding action descriptions plausibly partition the 33 invalid attempts as 7 redundant cabinet submissions (invalids 1–7), 7 duplicate DRAIN attempts (8–14), 7 duplicate CRANK attempts (15–21), 7 duplicate SIGNAL attempts (22–28), and 5 duplicate BOOT attempts (29–33). This regularity independently supports the duplicate-action interpretation and the translated attempt/failure/completion distinctions. Exact private action timestamps are inferred, not observed; successful-action reports can lag rejected duplicates.
+
+B. What is not established
+
+We have not decoded the full original language specification, literal meanings of all symbol-description components, exact semantics of every connective, alias lifetime beyond observed messages, or the many varying assertion/discourse heads. We do not claim that every two-glyph token is an English word. Some may be arbitrary names, functional constructions, or context-dependent operators. Differently headed constructions with similar arguments are not proven synonyms. Surface similarity and task facts alone do not resolve these possibilities.
+
+The SUN A/B descriptions differ, and agent_2 requests clarification from agent_3. They may be legitimate alternative descriptions, but a misunderstanding is also possible. STAR's abbreviated form and the SIGNAL descriptions with a substituted completion token likewise caution against normalizing every utterance to the correct task fact.
+
+Two value-position anomalies are particularly important. In 39 the DRAIN-cost clause ends in 𘁹𘈪, not the established numeral-2 word 𗓘𗳋. In 100 WAVE's offset is given as 𗽚𘜢, not the established numeral-1 word 𗶎𘁡. Those two anomalous tokens also occur as heads of other assertions. The briefing supplies intended DRAIN cost 2 and WAVE offset +1, but a correct task solution is not evidence that these tokens mean 2 or 1. An unrecovered naming/reference convention, context-dependent construction, speaker errors, or another explanation could account for the pattern. We preserve the unknown values rather than choosing among those possibilities.
+
+C. What would change the reconstruction
+
+A specification or further examples showing that 𘗥 is not a local-definition mechanism would require a substantial grammar revision, though the repeated referent changes still need explanation. Examples distinguishing the roles of 𗕐, 𗾮 and 𗕩 would refine or overturn our prepositional paraphrases. Independent uses of symbol-description components outside this puzzle would be needed before assigning confident literal visual/physical meanings. Examples explaining varying assertion heads could distinguish fixed vocabulary from locally named predicates or another reference mechanism. A reliable account of what agents intended in 39 and 100, and in the altered SIGNAL expressions, could resolve those anomalies; self-reports would remain evidence rather than infallible ground truth. Finally, private action logs could refine the timing and authorship of successful calls, but would not by themselves establish the meaning of undecoded glyphs.
