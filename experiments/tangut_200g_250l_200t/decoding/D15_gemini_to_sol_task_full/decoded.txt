@@ -1,0 +1,174 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is an evidence-based reconstruction, not the original file. Confidence labels: H = high, M = medium, L = low. A label on a grouped entry applies to each listed equivalence unless distinguished. English glosses describe observed functions; exact original English wording is often unrecoverable.
+
+Message structure
+[H] Messages consist of space-separated glyph tokens and literal agent IDs. Vocabulary is recombined, abbreviated, and sometimes apparently misused; no simple character-substitution cipher is demonstrated.
+[H] A common clause is MODE 𗪩 agent_N 𗼛 TOPIC 𘚜 VALUE END. Another pattern is MODE 𗥐 agent_N 𗃚 TOPIC 𗟆 VALUE END. Some elements, especially the relation separator and ending, may be omitted.
+[H] 𗪩 and 𗥐 introduce the speaker/source; 𗼛 and 𗃚 separate the speaker header from the body; 𘚜 and 𗟆 separate topic and value (roughly colon/equality). [L] Additional register or grammatical differences between these sets are unknown. No mandatory alternation or pairing rule is demonstrated.
+[H] 𘊌 marks an assertion/report; 𗀉 marks a question/request; 𗱓 marks a proposal/action/intention. These are speech-act markers, not guarantees that an action succeeded or was submitted.
+[M] 𘒳 appears to be an alternate assertion/report marker; 𘆣 an alternate question/request marker. [L] 𗏶 may be an alternate action/proposal marker. They introduce additional clauses in this log, but their literal meanings need not be 'also/and'. Ordinary 𗀉 and 𗱓 can also use the alternate header set.
+[H] 𘚐 is a declarative ending; 𗑸 is a question ending. [M] 𘚄 is another declarative ending; 𗋭 is a proposal/imperative ending, often following a proposed code.
+[H] 𗄼 joins items, approximately 'and'. [M] 𗘗 and 𘍠 connect a sequence, approximately 'then/→'; their difference is unknown.
+[M] 𗘈 is a general-query/addressee token, unresolved between an interrogative placeholder ('what/unknown') and a general recipient ('anyone/everyone'). It occupies a slot also filled by explicit agent IDs in questions. It is not a digit. [L] 𗪤 in 10 may mean 'all/complete'.
+[L] 𘚑 in 62 is a distinct speech-act marker, perhaps warning/instruction; its exact force is unknown.
+
+Numerals
+[H] 𘁁=1; 𗶞=2; 𗾌=3; 𘇩=4; 𗊓=5; 𗬵=7; 𗒏=8; 𗡒=9.
+[M] 𗈵=0, supported by the CRANK cost clause in 42.
+[H] Adjacent numerical tokens give a multi-digit code in order: 𗶞 𗬵 𘇩 𗒏 = 2748. No secure standalone digit 6 is identified. A glyph used numerically may also occur inside a compound name; 𗊓 inside STAR should not automatically be read as an independent numerical assertion.
+
+Puzzle vocabulary
+[H] 𘚺 = symbol; 𗅲 = base/original/initial; 𗹕 = value/digit; 𘏛 = cabinet; 𗡕 = position; 𗜀 = code; 𗇽 = exit; 𗣎 = battery/charge.
+[H] 𗘺 = DRAIN; 𘆄 = CRANK; 𗪐 = SIGNAL; 𘋍 = BOOT.
+[H] 𗌩 = cost/consumption; 𘍂 = prerequisite/requirement; 𗁳 = add/increase. [M] 𘆎 = new/change, occurring in expressions for new offsets; 𘆎 𗁳 means something like 'new addition/offset'.
+[H] 𘝞 = stage/phase. [M] 𗿋 = now/current/reached/active; the exact predicate is unresolved.
+[M] 𗤄 = information/clue/rules. [L] 𗭵 modifies it in requests to other agents: possibly 'private', 'your', or 'missing'.
+[H] 𘅌 = do/use/execute; 𗾨 = done/completed. [M] 𗳵 = failed/rejected; 𗨞 = prior/required completion, used after a prerequisite control; 𗲅 = none; 𗧬 = need/must; 𘙠 = plan/order/sequence.
+
+Symbol names and variation
+[H] 𘅪 denotes SUN. It commonly stands beside 𘚺 ('symbol'), but that latter glyph occurs independently with other symbols.
+[H] 𗎶 𘍧 denotes MOON. [M] 𗎶 alone also denotes MOON in context. [L] 𗛽 in 15 is an uncertain additional description/name token, possibly moon-related or a modifier.
+[H] 𗍽 𗊓 denotes STAR. [M] 𗍽 𘍧 in 9 also appears to denote STAR, but is a genuinely different expression and may be a variant or error.
+[H] 𗷤 𗉞 denotes WAVE. [M] 𘋉 𗜘 is an alternative WAVE expression, first used by agent_7 and echoed by others.
+[L] Individual meanings within these compounds are not established. Possibly 𘍧 means 'shape/form' and STAR's 𗊓 refers to five points; neither interpretation is demonstrated. The alternative WAVE expressions may be synonyms rather than a special encoding rule.
+
+Unresolved material
+[L] 𗹫 (9), 𘉝 𗄪 𗊑 (62), 𗡑 𗸽 (80), and 𘆮 (85) cannot be securely translated. Their positions are retained below.
+[H] The transcript is insufficient to reconstruct the complete allowed alphabet, unused vocabulary, or every formal rule of swarmish.txt. We recover an operational fragment, not the entire file.
+
+2. TRANSLATION
+
+These translations give recoverable meaning, not replacements for what agents ought to have said. Header agent IDs identify speakers, not necessarily addressees. Question clauses ending with an agent ID appear directed to that agent. General questions are rendered naturally without deciding whether 𗘈 literally means 'what' or 'everyone'. Recurring vocabulary is generally high confidence; flexible syntax is medium confidence; explicit unknowns and guesses are low confidence. Reports, proposals, and private actions are kept distinct.
+
+1. [task] Stage 0; invalid attempts 0.
+2. [agent_4] Report: SUN symbol's base value is 2.
+3. [agent_3] Report: SUN symbol is at cabinet position 1.
+4. [agent_2] Report: WAVE symbol's base value is 8.
+5. [agent_6] Report: STAR's base value is 4.
+6. [agent_7] Report: WAVE symbol is at cabinet position 4. (Alternative WAVE expression.)
+7. [agent_3] General question: What are the cabinet-position symbols?
+8. [agent_5] Report: Cabinet position 2 has the MOON symbol.
+9. [agent_1] Report: STAR(-shape) symbol is at cabinet position 3. Additional assertion literally approximately: 'value 5 : cabinet position 3 [unknown 𗹫]'. The second clause is not safely interpretable as normal English; do not treat it as a reliable STAR base-value claim.
+10. [agent_2] General question: What are the cabinet symbols, [all/complete?]?
+11. [agent_5] General question: What is the MOON symbol's base value?
+12. [agent_2] Request to agent_0: Base value?
+13. [agent_3] General question: What are the symbols' base values?
+14. [agent_7] General question: What is at cabinet positions 2 and 3?
+15. [agent_0] Report: MOON symbol's base value is 7. Additional assertion: 'symbol [unknown 𗛽] base value : 7.' Likely a restatement, but the extra token is unresolved.
+16. [agent_6] General question: What is the MOON symbol's base value?
+17. [agent_1] Request to agent_0: [Private/your/missing?] information/clue?
+18. [agent_3] General question: What is the WAVE symbol's base value? (Alternative WAVE expression.)
+19. [agent_2] Proposal/action: Cabinet code = 2748; submit/use it.
+20. [task] Stage 1; invalid attempts 0.
+21. [agent_4] General question: What is the WAVE symbol's base value? (Alternative WAVE expression.)
+22. [agent_0] Report: MOON symbol's base value is 7.
+23. [agent_6] Proposal/action: Code 2748; submit/use it.
+24. [task] Stage 1; invalid attempts 1.
+25. [agent_5] Proposal/action: Cabinet code = 2748; submit/use it.
+26. [task] Stage 1; invalid attempts 2.
+27. [agent_7] Report: Code = 2748; submit/use it. (Report-mode header with a proposal-like ending.)
+28. [task] Stage 1; invalid attempts 3.
+29. [agent_1] Report: Code 2748; submit/use it. (Report-mode header with a proposal-like ending.)
+30. [task] Stage 1; invalid attempts 4.
+31. [agent_4] Report: SIGNAL costs 3.
+32. [agent_6] Report: BOOT's prerequisite is SIGNAL having been completed beforehand.
+33. [agent_3] Proposal/action: Cabinet code 2748; submit/use it.
+34. [task] Stage 1; invalid attempts 5.
+35. [agent_5] Report: DRAIN costs 2 charge.
+36. [agent_0] Report: Stage = 1. Additional assertion: BOOT costs 2 charge.
+37. [agent_2] General question: What is the stage-1 information? Report: 'SIGNAL cost : DRAIN completed.' This uses the cost token, not the prerequisite token; the awkward/mistaken relation is preserved.
+38. [agent_4] General question: What is the stage-1 information?
+39. [agent_5] General question: What is the charge?
+40. [agent_3] Report: Initial/base charge value = 4.
+41. [agent_6] General question: What are the charge value and addition/increase?
+42. [agent_1] Report: CRANK adds 3 charge. Additional assertion: CRANK costs 0.
+43. [agent_7] Report: Stage 1 [now/reached/active]. General question: What is the stage-1 information? Report: Prerequisite/need: DRAIN completed, then do CRANK. (Exact connective syntax is less certain than the control relationship.)
+44. [agent_0] General question: What is the initial charge value?
+45. [agent_4] Request to agents_1, _3 and _7: [Private/your/missing?] information/clues?
+46. [agent_2] Report: SIGNAL requires prior completion of DRAIN. General question: What is the initial charge?
+47. [agent_5] General question: What is the addition/increase information?
+48. [agent_1] General question: What is DRAIN's prerequisite?
+49. [agent_6] Proposal: Do DRAIN, then CRANK, then SIGNAL, then BOOT.
+50. [agent_3] Request to agent_7: Stage-1 information?
+51. [agent_2] Proposal/action: Do DRAIN.
+52. [task] Stage 1; invalid attempts 6.
+53. [agent_0] Report: Do DRAIN. Proposal: DRAIN → CRANK → SIGNAL → BOOT; execute.
+54. [task] Stage 1; invalid attempts 7.
+55. [agent_6] Report: DRAIN completed. Additional assertion: Do CRANK.
+56. [agent_4] Proposal: Plan/sequence = DRAIN → CRANK → SIGNAL → BOOT; use it.
+57. [task] Stage 1; invalid attempts 8.
+58. [agent_7] Report: CRANK requires DRAIN completed. Proposal: Plan/sequence DRAIN → CRANK → SIGNAL → BOOT; execute.
+59. [task] Stage 1; invalid attempts 9.
+60. [agent_3] Report: Charge value = 2. Additional assertion: Do CRANK.
+61. [task] Stage 1; invalid attempts 10.
+62. [agent_1] [Warning/instruction?]: 'action/proposal [unknown 𘉝 𗄪 𗊑]'. Additional assertion: Do DRAIN. A coordination warning such as 'only one actor should act' is a low-confidence contextual guess, not a decoded translation.
+63. [task] Stage 1; invalid attempts 11.
+64. [agent_6] Report: CRANK completed. Additional assertion: Do SIGNAL.
+65. [agent_2] Request to agent_7: [Private/your/missing?] information? Report: Attempt to do DRAIN failed/rejected.
+66. [agent_3] Report: Charge value = 5. Additional assertion: Do SIGNAL.
+67. [task] Stage 1; invalid attempts 12.
+68. [agent_6] Report: SIGNAL completed. Additional assertion: Do BOOT.
+69. [task] Stage 2; invalid attempts 12.
+70. [agent_5] Report: DRAIN's prerequisite = none. Proposal: Plan = DRAIN → CRANK → SIGNAL → BOOT. Proposal/action: Do DRAIN.
+71. [task] Stage 2; invalid attempts 13.
+72. [agent_0] Report: DRAIN failed. [Uncertain action-mode marker 𗏶]: Do CRANK.
+73. [task] Stage 2; invalid attempts 14.
+74. [agent_3] Report: Charge value = 2. Additional assertion: Do BOOT. This is the reported value even though the public stage has already advanced to 2.
+75. [task] Stage 2; invalid attempts 15.
+76. [agent_6] Report: Stage 2 [now/reached/active]. Additional assertion: STAR's addition/offset value = 3. General question: What are the exit symbols and addition/offset values?
+77. [agent_4] Report: DRAIN failed. Proposal/action: Do CRANK.
+78. [task] Stage 2; invalid attempts 16.
+79. [agent_5] Report: Exit position 2 = STAR. General question: What is the exit information?
+80. [agent_1] Proposal/action: '[unresolved general-query/addressee token 𗘈] [unknown 𗡑 𗸽]'. Meaning unknown.
+81. [agent_2] Request to agents_3 and _5: DRAIN prerequisite and initial charge?
+82. [agent_0] Report: MOON's new addition/offset = 2. General question: What are the exit symbols?
+83. [agent_3] Report: Exit position 1 = WAVE. General question: What is WAVE's addition/offset value?
+84. [agent_4] Report: SUN symbol's new addition/offset = 4.
+85. [agent_6] Proposal/instruction: 'do/action [unknown 𘆮]'. General question: What are the exit symbols and addition/offset values? ('Stop/finish actions' is possible but not established for the first clause.)
+86. [agent_5] General question: What is at exit positions 1, 3 and 4? Additional question: What are SUN's and WAVE's addition/offset values?
+87. [agent_2] Report: WAVE's new addition/offset = 1. General question: What are the exit-position symbols?
+88. [agent_3] General question: What is at exit positions 3 and 4?
+89. [agent_1] Report: Exit position 3 = MOON.
+90. [agent_6] General question: What symbols are at exit positions 3 and 4?
+91. [agent_5] General question: What is at exit positions 3 and 4?
+92. [agent_4] General question: What symbols are at exit positions 3 and 4? Additional assertion: SUN symbol's new addition/offset = 4.
+93. [agent_7] Request to agent_3: Charge value? Additional request to agent_5: DRAIN cost?
+94. [agent_3] General question: What is at exit position 4?
+95. [agent_0] Report: MOON's code/digit = 9. General request: What is at exit positions 1, 3 and 4? ('Code' is the word also used for whole cabinet codes; here it applies to MOON's resulting digit.)
+96. [agent_1] Request to agent_7: What is at exit position 4?
+97. [task] Stage 3; invalid attempts 16.
+
+3. THE TASK
+
+[H: public task facts] This was Storm Shelter: a cabinet code, a battery-constrained power panel, and an exit code. Private clues were distributed across eight terminals and released by stage. Public feedback reports actual stage changes and cumulative invalid attempts, but does not identify the actor or action responsible.
+
+[H: decoded conversation] The agents pooled symbol/base-digit and position clues. Their proposed cabinet code is visibly 2748, repeatedly expressed with the same four numerical glyphs. The cabinet opened between messages 19 and 20. Several agents continued announcing or proposing that code after the stage change, and invalid attempts rose to five. Redundant cabinet submissions are a strong explanation, but individual private actions cannot be identified merely from neighboring chat lines.
+
+[H: decoded conversation] During the power stage they communicated starting charge 4, DRAIN cost 2, CRANK gain 3 and cost 0, SIGNAL cost 3 with DRAIN as prerequisite, and BOOT cost 2 with SIGNAL as prerequisite. Agent_7 communicated DRAIN-before-CRANK. Multiple agents proposed DRAIN → CRANK → SIGNAL → BOOT. Agent_6 reported successive completion of DRAIN, CRANK and SIGNAL and urged the next action each time. Agent_3 reported charge values 4, 2, 5 and 2. Several redundant or otherwise invalid attempts were rejected; old-stage questions and plans continued after BOOT activated the exit stage. The log does not establish who performed every successful control press.
+
+[H: decoded conversation] Exit-stage reports give position 1 WAVE, position 2 STAR, position 3 MOON, and offsets WAVE +1, STAR +3, MOON +2, SUN +4. They repeatedly ask for position 4. Agent_0 explicitly reports MOON's resulting digit as 9. No clearly decoded message states exit position 4 = SUN or broadcasts the complete exit code 9796. Agent_7's last visible message instead asks about old power information. Nonetheless stage 3 at message 97 establishes that a private action unlocked the exit.
+
+[H: comparison with supplied internals] The briefing's base values SUN 2, MOON 7, STAR 4, WAVE 8 and cabinet ordering yield 2748, matching the decoded proposal. Its power rules yield the communicated ordering and charge trace 4→2→5→2→0. Its exit arrangement WAVE/STAR/MOON/SUN and offsets yield 9796. That complete final solution uses supplied internals as well as decoded discussion; it is not a translation of a hidden full-code utterance.
+
+The log fits the task well, including escape with 16 invalid attempts, but is not synchronized or error-free. Message 37 labels a prerequisite-like statement as a cost; message 9 contains an unexplained secondary clause; message 74 reports charge 2 and recommends BOOT after stage 2 is public. Stale utterances, mistakes and concurrent private actions are plausible explanations. These anomalies must not be erased by substituting the ideal solution. Invalid attempts concern task actions, not necessarily message validity: no discarded-message '⊘' entry appears.
+
+4. EVIDENCE
+
+Independent anchors and substitutions
+• [H] Known clue ownership supplies candidate meanings, but repetition and recombination test them. MOON from agent_5's cabinet-position report recurs in base-value questions (11,16), base-value report (22), offset report (82), exit position 3 (89), and resulting digit 9 (95). This is stronger than identifying a symbol from one supplied clue.
+• [H] Numbers recur in unrelated roles: 𗶞 occurs as cabinet position 2, SUN base 2, DRAIN and BOOT costs 2, charge 2, and stage 2. 𘇩 occurs as STAR base 4, position 4, initial charge 4 and SUN offset 4. Repeated code 𗶞 𗬵 𘇩 𗒏 links those values into 2748. This establishes a numerical lexicon rather than arbitrary clue labels.
+• [H] The charge/value frame repeats in 40/60/66/74 with 4→2→5→2. This anchors both the vocabulary and the reported numbers without replacing the last report with the task's actual final charge 0.
+• [H] 𗡕 occurs with cabinet and exit and varying position numbers. 𗅲 𗹕 occurs with multiple symbols and initial charge. 𗌩 occurs with consuming controls and CRANK's zero cost. Productive combinations support individual word meanings.
+• [H] Control names occur in cost/prerequisite clauses and repeated four-item sequences (49,53,56,58,70). Completion reports 55/64/68 name a completed control followed by the next control to execute, independently supporting control names and the completed/execute distinction.
+• [H] Reports and requests share nearly identical topics. Primary and alternate headers contain the same literal speaker IDs and parallel delimiters. Explicit agent IDs replace 𗘈 in the post-separator slot of many questions; this prevents securely assigning 𗘈 the single English meaning 'what'.
+
+Limits and competing interpretations
+• [M] Symbol compounds vary. Treating all variants as identical spellings, or assigning an English word to each constituent, would overstate the evidence. STAR contains the independently numerical glyph 5; MOON and one STAR form share 𘍧; the two WAVE compounds share no glyphs. Contextual referents are more secure than etymologies.
+• [M] Header particles could have narrower meanings than 'source' or 'separator'. Positional roles are secure, but full grammar is not. Alternate modes may be synonymous speech-act markers rather than conjunctions; no mandatory register pairing is established.
+• [L] Rare particles have too few occurrences to distinguish current stage from readiness, plan from order, or private information from missing information. Those alternatives remain explicit.
+• [H] Public feedback checks overall coordination, not word-for-word translation. Asynchronous actions prevent reliable one-message/one-action alignment. An invalid attempt following a sequence proposal does not prove the whole sequence was executed.
+• [H] Correct supplied puzzle facts alone do not decode messages. Full exit code 9796, final charge 0, and exit position 4 SUN must not be inserted into absent or contradictory utterances.
+
+What would change this reconstruction
+The original file or additional contexts could resolve whether alternate compounds and punctuation are synonyms, compositional forms or errors. Examples involving digit 6, another zero-cost action, and more uses of 𗘈, 𗭵, 𗿋, 𘚑, 𘆮, 𗡑 and 𗸽 would sharpen the lexicon. Private action records could identify actors without changing what the chat actually says. Consistent counterexamples—𗳵 reporting successful actions, 𗾨 identifying uncompleted controls, or numerical glyphs systematically taking other values—would weaken these glosses. Agents' private self-reports could clarify intended meanings, but remain testimony rather than automatic proof of grammar.

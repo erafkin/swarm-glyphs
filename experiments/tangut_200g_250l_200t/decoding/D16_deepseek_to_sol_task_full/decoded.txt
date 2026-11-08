@@ -1,0 +1,289 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a claim to have recovered the original file verbatim. Confidence labels refer to decoding evidence, not merely consistency with the supplied puzzle. The speakers often seem to misunderstand one another or use improvised compounds. Those errors are part of the evidence.
+
+NUMBERS AND BASIC NOTATION
+• [HIGH] 𗉞 introduces a numeral, numerical value, or numbered referent. It is not simply an equals sign: it also precedes multi-digit codes and position numbers.
+• [HIGH] Digits: 𘊫 1; 𘀝 2; 𘔃 3; 𗨥 4; 𘏛 5; 𘙓 6; 𘝚 7; 𗽕 8. [MEDIUM-HIGH] 𘅠 9; 𘂲 0. Digits concatenate in ordinary decimal order after a single 𗉞. Thus 𗉞𘊫𘀝𗨥𗽕 reads 1248, not the correct cabinet code.
+• [HIGH] 𘆎 marks unknown/missing information, functioning like '?'. It is not the digit zero. [LOW] 𘈩 may be an alternative unavailable/unknown marker.
+• [HIGH] 𗤄 separates or terminates clauses. [MEDIUM] 𗞢 separates list items/clauses; 𘏉 is a connective/separator, possibly 'and'. Spaces are optional in observed usage.
+• [MEDIUM-HIGH] 𗣑 marks a question, request, or appeal to teammates. Its exact scope is flexible.
+
+CONTENT LABELS
+• [HIGH] 𗂱 denotes SUN in this conversation; 𗟎 denotes WAVE.
+• [MEDIUM] 𘒳 is a STAR-like label or symbol element. Its exact dictionary meaning is uncertain; a broader 'light'-like meaning is a LOW-confidence alternative suggested by the compounds and anomalous substitutions.
+• [MEDIUM] 𘍂 is another symbol label, treated by several speakers as MOON. It is not the only observed way to refer to the MOON clue.
+• [HIGH, contextual reference; LOW, internal etymology] Agent0's repeated 𘒳𗘗=7 and agent5's position2 𘒳𗘗 refer to their MOON clues. The compound could mean something like 'night light/star', but that decomposition is speculative. Do not infer that 𘒳𗘗 and 𘍂 were unambiguously interchangeable to the participants.
+• [MEDIUM] 𘒳𗂱 is a STAR-like compound used by agents1/6. 𘍂𗌈𘒳 and 𗌈𘒳𗂱 are other improvised symbol descriptions, apparently intended by agent5 for MOON. Their internal grammar is unknown.
+• [LOW] 𗘗 may mean night/dark; 𗌈 may be a shape/part modifier. Neither is securely decoded alone.
+
+GRAMMAR AND SPEECH ACTS
+• [HIGH] 𗒳 is 'I'/first-person singular in repeated introductions. [LOW-MEDIUM] 𗜀 may be 'we'.
+• [HIGH] 𘅌 is know/have information/report. 𗒳𘅌 means approximately 'I know/report'.
+• [MEDIUM] 𗯘𘅌 pragmatically asks others for information, possibly literally 'you know?'. Its exact decomposition is uncertain; lack/need of information is conveyed by its use, but 𗯘 is not securely decoded as negation. Translations below use 'need' as shorthand for an information request, not as a verified literal imperative or negative construction.
+• [MEDIUM] 𗒳𘂲𘅌 is an explicit negative knowledge construction, 'I do not know'; 𘂲 may serve as both zero and negation. [MEDIUM-LOW] 𗼿𘅌 asks others for information, approximately 'does someone know / please tell'.
+• [MEDIUM] 𗃚 denotes a symbol/item/slot; 𗱑 is a location/index/at relation. Their combinations express 'the symbol at position n' or 'n has symbol X'. Speakers put the same components in several orders. Exact syntactic distinctions remain uncertain.
+• [MEDIUM] 𘎛 qualifies a symbol's base/value, often 'base digit'. It repeatedly appears between a symbol and a numerical value, but could be a more general value marker.
+• [HIGH] 𗲅 denotes trying/entering a code. [MEDIUM] 𗹫𗲅 indicates an intended/new attempt, rendered 'will try'. Tense is not otherwise secure. [MEDIUM-LOW] 𗠄 is a related submit/try action.
+• [MEDIUM-HIGH] 𘂲𗂺 after a code indicates failure/rejection, approximately 'not accepted'.
+• [MEDIUM] 𗷤 marks a proposal/hypothesis/guess. [MEDIUM-LOW] 𗍽 indicates thinking/inference/combination of received clues.
+• [LOW-MEDIUM] 𗭵 may mean 'only' or 'need/want'; passages containing it remain qualified below. [LOW] 𘖽 may mark replacement/change, as in 1→2 and 8→6 in message157.
+• [LOW/UNKNOWN] 𗷴, 𗁳, 𗚀, 𗇾, 𗲅's exact tense, 𘂮𗕴, 𗸽𗋟, 𗡒, 𘉝, 𗳃, and 𘖸 cannot be securely reconstructed. Some may be ordinary vocabulary used in malformed or improvised sentences.
+
+Observed message construction is largely telegraphic: optional speaker/knowledge preface, then repeated symbol/value or position/symbol clauses, unknown markers, requests, and proposed codes. There is no evidence here for a recoverable substitution alphabet for English, nor enough evidence to reconstruct unused power-panel or exit vocabulary. The discarded-message sign ⊘ is an external filtering result, not a translated Swarmish word.
+
+2. TRANSLATION
+
+Reading key: SUN=𗂱, WAVE=𗟎; T=bare 𘒳 (STAR-like label); M=𘍂 (MOON-like label); MN=𘒳𗘗 (agent0/5's MOON compound); TS=𘒳𗂱 (STAR-like compound). These deliberately preserve distinctions that speakers themselves failed to reconcile. '?' means the transmitted unknown marker, not an undecoded digit. 'Need' means 'asks for information / do you know?' where the exact construction cannot be distinguished. 'Position' paraphrases several arrangements of 𗱑 and 𗃚. Unless indicated otherwise, numbers and repeated lists are more secure than connective wording. All translations are approximate, not fluent verified quotations. A stated code is what the message says, not independently verified attribution of a private action.
+
+1. Public status: stage0, invalid attempts0.
+2. SUN=2.
+3. Discarded; content unknown.
+4. Discarded; content unknown.
+5. Position/value2 [relation unknown], symbol-description 𘍂𗌈𘒳, apparently MOON. Exact syntax unknown.
+6. I [report] WAVE=8; remaining wording unknown, apparently asking for other information.
+7. Discarded; content unknown.
+8. [Symbol/position4 statement, unclear]; TS=4; remaining wording unknown.
+9. Discarded; content unknown.
+10. Discarded; content unknown.
+11. Need/unknown position information; T=2. Exact initial clause unknown.
+12. Discarded; content unknown.
+13. Position4 WAVE; positions1,2,3 unknown [some relation words uncertain].
+14. Position1 SUN T [intended SUN at position1; trailing T unexplained].
+15. Partly unknown: [symbol2, symbol4, symbol5, symbol6?]; I report WAVE8, SUN2; [MOON-like compound]2. Exact introductory/list grammar unknown.
+16. I know/report MN … SUN7 [exact relation unclear]; [positions2,4,5,6?] unknown; SUN2; request/remaining wording unknown. The initial sequence is malformed and is not silently normalized to MN=7.
+17. I know position4 WAVE; WAVE value unknown; positions1,2,3 unknown.
+18. Discarded; content unknown.
+19. I know T2; need position1, need position3; [other wording unknown].
+20. I know symbol T SUN=4 [TS=4]; remaining wording unknown.
+21. Discarded; content unknown.
+22. Position1 SUN T; values/positions2,3,4 unknown.
+23. I [report] position2 MOON-like compound; positions1,3,4 unknown; final request unknown.
+24. I know T2; positions1,2,3,4 unknown; need WAVE's number and M's number.
+25. I know MN=7; positions1,2,3,4 unknown.
+26. I know T2; ask SUN/WAVE/M numbers; positions1,2,3,4 unknown.
+27. I know position4 WAVE; WAVE value unknown; symbols at positions1,2,3 unknown.
+28. WAVE?, M?, T?; [unknown word] position4.
+29. I know [night/MOON fragment]=7; position1 SUN T1; position2 MOON-like compound2; position3 unknown; position4 WAVE8; need position3.
+30. Symbols/values at positions2,4,5,6 unknown; WAVE value unknown. Exact relation ordering unclear.
+31. I report WAVE base8; SUN/M/T bases unknown; positions1,2,3,4 symbols unknown.
+32. I try1234; position1 SUN T, value unknown; position2 SUN2; position4 WAVE? [literal transmitted labels, not repaired].
+33. Public status: stage0, invalid attempts1.
+34. I know [night/MOON fragment]7; position1 SUN T1; position2 MOON-like compound2; WAVE [number unclear]; need position3.
+35. I know position3 symbol TS; [additional unknown wording]; value unknown; symbols at positions1,2,4 unknown; request.
+36. I know T2; SUN?, WAVE?, M?; position1 SUN, position2 WAVE, position3 M, position4 T.
+37. Discarded; content unknown.
+38. I [report] position2 [relation] MN; MN2; WAVE?; positions1,3 unknown.
+39. I know [night/MOON fragment]7; SUN T1; MOON-like compound2; [night/MOON fragment]7; WAVE?; need WAVE number.
+40. Position4 WAVE; WAVE8; position3 [number/need-information clause unclear].
+41. I know WAVE base8; SUN/M/T bases unknown. Positions1 SUN,2 M,3 T,4 WAVE.
+42. I know position2 MN; MN value unknown; positions1,3,4 unknown.
+43. Need position information: positions1,2,3,4 unknown.
+44. Public status: stage0, invalid attempts2.
+45. WAVE8; SUN?,M?,T?. Positions1 SUN,2 M,3 WAVE,4 T. Question/request.
+46. I know position3 symbol TS, value unknown; position1 SUN1, position2 T2, position4 WAVE8. Question/request.
+47. I know [𗷴 unknown] position4; SUN2,WAVE8,M?,T?; all four position symbols unknown.
+48. I know position1 SUN-T [compound/ambiguity]; SUN-T?,M?,WAVE?; I try2228.
+49. Public status: stage0, invalid attempts3.
+50. I know SUN2; positions1–4 unknown symbol/value [unusual extra numeral markers].
+51. I know WAVE8,SUN1,M2,T?; positions1 SUN,2 M,3 unknown,4 WAVE.
+52. Partly unknown: '1 know; symbol5=4'; need SUN/WAVE/M values. Initial1 might be a lexical substitution, not a numeral intended as English.
+53. Discarded; content unknown.
+54. I know position4 WAVE8; position1 SUN1, position2 M2, position3 T?; need information.
+55. I know position3 TS, TS value unknown; I know SUN1,T2,WAVE8; need TS value.
+56. I report WAVE8; SUN2,M?,T?; [position/code-like field]2228.
+57. I know position4 WAVE8; T value unknown.
+58. I propose position1 SUN1, position2 MN2, position3 T2, position4 WAVE?; need WAVE value.
+59. I know position4 WAVE8; SUN1,M2; need symbols at positions1,2,3 and T value.
+60. I know position1 symbol 𗘗𗘗 [unknown compound]; positions2,3,4 unknown; SUN/WAVE/M/T values unknown; question.
+61. I know T4,WAVE5,SUN1,M2; code1245; positions1 SUN,2 M,3 T,4 WAVE; I submit/try1245.
+62. Public status: stage0, invalid attempts4.
+63. I know position2 MN; MN?; positions1,3,4 unknown. I infer SUN1,WAVE8,M2; need MN value.
+64. I try1228.
+65. Public status: stage0, invalid attempts5.
+66. I know 𗘗=7 [night/MOON fragment]; positions1–4 unknown; need SUN/WAVE/M/T values.
+67. Discarded; content unknown.
+68. Discarded; content unknown.
+69. I try2278.
+70. Public status: stage0, invalid attempts6.
+71. I know position2 MN; need positions1,3,4 and SUN/M/T/WAVE values.
+72. I know position4 WAVE8; need symbols at positions1,2,3.
+73. MN base unknown; need positions1,3,4.
+74. Discarded; content unknown.
+75. I know position4 WAVE; positions1,2,3 unknown; question/request.
+76. Discarded; content unknown.
+77. I know position1 SUN, SUN value unknown; need positions2,3,4, all unknown.
+78. Discarded; content unknown.
+79. I know WAVE8; need positions1–4 and SUN/M/T values.
+80. Public status: stage0, invalid attempts7.
+81. I know MN base7; all four position symbols unknown; need SUN/WAVE/M/T bases.
+82. I know position2 MN; need MN base and symbols at positions1,3,4.
+83. I know position4 WAVE; need symbols at1,2,3; SUN/WAVE/M/T values unknown; question.
+84. I know SUN2,WAVE8; position2 M, value unknown; position3 T, value unknown.
+85. Discarded; content unknown.
+86. I know WAVE8,SUN1,M2,T7; positions1 SUN,2 T,3 M,4 WAVE; I will try1728.
+87. Public status: stage0, invalid attempts8.
+88. Positions1 SUN1,2 M2,3 T4,4 WAVE8; I try/propose1248.
+89. Public status: stage0, invalid attempts9.
+90. I try1278.
+91. Public status: stage0, invalid attempts10.
+92. I know SUN2; M/T/WAVE bases unknown; symbol order SUN,M,T,WAVE.
+93. Discarded; content unknown.
+94. I know position3 T; I know WAVE8; T/SUN/M values unknown; positions1,2,4 symbols unknown.
+95. I know MN base7; need MN position/symbol, SUN/M/T bases, and positions1,3,4; question.
+96. I know position4 WAVE; I [negative?] know WAVE value; need positions1,2,3 and SUN/WAVE/M/T values.
+97. I know position1 SUN; SUN1,M2,WAVE8; need positions3,4 and T value; question.
+98. I tried1278, failed; I know SUN1,M2,WAVE8; positions1 SUN,2 M,3 T,4 WAVE; T value unknown.
+99. I know MN base7; need SUN/M/WAVE bases and all four position symbols; question.
+100. I know position4 WAVE; need positions1,2,3, SUN value,WAVE value, and values of unknown labels 𗡒 and 𘉝.
+101. I know SUN1,M2,WAVE8; ask/do not know T value.
+102. I know SUN1,M2,WAVE8; I do not know T value; I guess T3; I will try1238.
+103. Public status: stage0, invalid attempts11.
+104. I know SUN base1,M base2,WAVE base8; need T base; I know position1 SUN; need positions2,3,4.
+105. I know position2 symbol T-base [possibly an altered MN compound]; T base unknown; positions1,3,4 unknown. Remaining syntax unclear.
+106. I know SUN2,WAVE8,T7; need M value; positions1,2,3 unknown.
+107. I know MN7; MN position unknown; SUN/M/WAVE values unknown.
+108. I know position3 T, value unknown; position1 SUN1,position2 M2,position4 WAVE8; question.
+109. Initial 'WAVE4-position' fragment unknown; positions1,2,3 and SUN/WAVE/M/T values unknown.
+110. I try/propose1248.
+111. Public status: stage0, invalid attempts12.
+112. I know MN base7; SUN/WAVE/M bases unknown; all four position symbols unknown.
+113. SUN1,M2,WAVE8,T?; question.
+114. I know position2 symbol [not/or SUN/M/WAVE/T; exact construction unknown]; I only(?) know position2 symbol; need positions1,3,4.
+115. I try1208.
+116. Public status: stage0, invalid attempts13.
+117. I know MN7; I only/need to know(?) [all four position symbols and SUN/M/WAVE values unknown]; question.
+118. I know T4; SUN/M/WAVE values unknown; I tried1248, failed; all four position symbols unknown.
+119. I do not know T base; question.
+120. '1 WAVE8 know' [possibly malformed 'I know WAVE8']; SUN1,M2,T?; '1 will try1258' [possibly 'I will try1258'].
+121. Public status: stage0, invalid attempts14.
+122. Discarded; content unknown.
+123. I know position1 SUN; [1248 failed]; need symbols at positions2,3,4.
+124. I know position2 symbol-description 𗌈𘒳𗂱 [intended MOON?]; [not/or SUN,M,WAVE,T]; I only(?) [compound]'s number unknown; need that number and symbols at positions1,3,4; request. Exact logical relation unknown.
+125. I know T at position3; I try1258; need T base digit.
+126. Public status: stage0, invalid attempts15.
+127. I know WAVE base8,SUN base1,M base2; tried1258, failed; T base unknown; I will try1268.
+128. Public status: stage0, invalid attempts16.
+129. I know SUN base2,MN base7,WAVE base8; M base unknown; all four position symbols unknown.
+130. I know MN number4–𘂲–7 [perhaps '4 or7', but the relation is uncertain: 𘂲 also functions as not/0]; tried1248, failed; SUN/M/WAVE/T digits and all four position symbols unknown.
+131. I know position1 SUN; need information for2,3,4; request.
+132. I will try1298.
+133. Public status: stage0, invalid attempts17.
+134. Discarded; content unknown.
+135. SUN2,WAVE8,MN7,M?; all four position symbols unknown; request.
+136. Request: symbols at positions1–4 unknown; T digit unknown.
+137. Partly unknown: I [6] WAVE know; need [1] know, [4] know, [5] know. These may be nonstandard requests to numbered agents, but that is only a guess.
+138. I know position1 SUN; positions2,3,4 unknown.
+139. [5] position4; SUN/M/WAVE/T digits and all four position symbols unknown; tried1248, failed. Initial5's function unknown.
+140. Discarded; content unknown.
+141. I know position1 SUN1,position2 M2,position4 WAVE8; I only(?) position3 T; SUN base unknown [literal odd adjacency]; I try1268.
+142. Public status: stage0, invalid attempts18.
+143. MN base7; all four position symbols unknown; T digit unknown; request.
+144. I know position4 WAVE; need positions1,2,3, unknown.
+145. I know SUN2; I do not know M digit; need M digit and all four position symbols.
+146. Partly unknown: I know4 symbol/slot 𗘗; need number/base 𗘗.
+147. I know MN base7; all four position symbols and T digit unknown; request.
+148. I know position1 SUN; need positions2,3,4, unknown.
+149. Discarded; content unknown.
+150. I know MN base7; all four position symbols and T base unknown.
+151. Position1 SUN; symbols at positions2,3,4 unknown.
+152. I will try1827; need M digit.
+153. Public status: stage0, invalid attempts19.
+154. SUN2; I know [unknown wording]; need 𗌈 digit; need SUN WAVE T 𗌈𗳃 [unknown].
+155. Position1 SUN; symbols at positions2,3,4 unknown.
+156. Discarded; content unknown.
+157. I know [5] position4; I think position1 SUN; SUN digit unknown; 1→2 [possible replacement]; WAVE unknown; 8→6 [possible replacement]; M/T unknown; symbols at positions2,3,4 unknown; tried1248, failed.
+158. I know position2 MN; MN base7; need position1 SUN base digit,position3 M base digit,position4 WAVE base digit. The transmitted position3 label is M, not repaired to STAR.
+159. Discarded; content unknown.
+160. Public status: stage0, invalid attempts20.
+161. I know position4 WAVE; WAVE base unknown; symbols at positions1,2,3 unknown.
+162. Question: I know SUN2; need M value; all four position symbols unknown.
+163. I know position1 SUN; need positions2,3,4.
+164. I know T base7 [bare T, not MN]; need SUN/WAVE/M bases; all four position symbols unknown.
+165. Question: I know position2 MN; positions1,3,4 unknown; remaining numeral/relation ordering unclear.
+166. I try1832; need digit/symbol information for position3 [trailing syntax uncertain].
+167. Public status: stage0, invalid attempts21.
+168. I know WAVE8; position1 unknown.
+169. Discarded; content unknown.
+170. I will try1247.
+171. Public status: stage0, invalid attempts22.
+172. SUN2,WAVE?,T?,M? [unusual/reversed numeral syntax].
+173. Discarded; content unknown.
+174. We(?) know WAVE8; we(?) tried1278, failed; symbols at all four positions unknown.
+175. T(?) know position2 MN; need symbols at positions1,3,4. Initial T may be a mistaken first-person substitution.
+176. I know SUN base1,WAVE base8,M base2,T base7; I only/need to know(?) position1 symbol, shown unknown.
+177. Public status: stage0, invalid attempts23.
+178. I [1?] know WAVE8; need symbols at positions1,2,3.
+179. I try1758.
+180. Public status: stage0, invalid attempts24.
+181. I know position1 SUN; need positions2,3,4 and SUN/WAVE/M/T values.
+182. I know WAVE8; I only/need to know(?) SUN[number omitted],M[number omitted],position1 SUN,position2 M.
+183. I know T4; SUN/M/WAVE values and positions1–4 unknown.
+184. Position3 unknown; need information [elliptical].
+185. I know position1 SUN; positions2,3,4 and all four symbol values marked 𘈩 [unknown word, possibly unavailable/unknown].
+186. I know T4; SUN/M/WAVE values and all four position symbols unknown.
+187. Discarded; content unknown.
+188. Discarded; content unknown.
+189. I know WAVE8,SUN1,T7; do not know M value; I hypothesize positions1 SUN,2 T,3 WAVE,4 M; will try1782.
+190. Public status: stage0, invalid attempts25.
+191. I know position4 WAVE8; symbols at positions1,2,3 unknown.
+192. I know position1 SUN; positions2,3,4 unknown; need SUN numeric value.
+193. I know T2,WAVE8,MN7; I know 𗌈=5 [unknown label]; SUN value and all four position symbols unknown.
+194. I know T4; need SUN/M/WAVE values; all four position symbols unknown.
+195. SUN1,M2,T7,WAVE8; I know position4 WAVE8; need positions1,2,3 [𗘗 used here instead of normal symbol word; unexplained]; question.
+196. I do not know SUN value; need SUN value; positions2,4 unknown.
+197. I know position1 SUN; positions2,3,4 unknown; need all four symbol values; question.
+198. I know position2 MN; I infer SUN2,MN7,WAVE8,T4; positions3,4 symbols unknown; need 𗌈 value [unknown label].
+199. Position1 SUN; symbols at positions2,3,4 unknown; need SUN/WAVE/M/T numeric values.
+200. I know SUN1,WAVE8,T7; do not know M value; I only/need to know(?) 𘖸, need 𘖸 [unknown word].
+201. I know position4 WAVE8; need position1 [information missing].
+202. I know T at position3; need symbols at positions1,2,4 and SUN/WAVE/M/T bases.
+203. I know WAVE8,T7,SUN2,M2; I will try2782.
+204. Public status: stage0, invalid attempts26.
+205. I know position2 MN7; I guess position1 SUN2,position3 WAVE8,position4 T4; need/unknown symbols at positions1,3,4; question. This contains both a guess and continued unknowns, not a confirmed layout.
+206. I know T4,M2,WAVE8,SUN1; I will try1248.
+207. Public status: stage0, invalid attempts27.
+208. Discarded; content unknown.
+209. I know WAVE8,SUN2,T7,M4; I will try2784.
+210. Public status: stage0, invalid attempts28.
+211. I know position2 MN; positions1,3,4 symbols unknown; SUN/M/T/WAVE/MN bases unknown; question.
+212. I guess1278; T base7; T at position3.
+213. Public status: stage0, invalid attempts29.
+214. I know position4 WAVE; need symbols at positions1,2,3; I guess SUN1,M2,T7,WAVE8.
+215. I know WAVE8; SUN/T/M values unknown.
+216. I know T4; positions1 SUN,2 M,3 WAVE,4 T; I will try1284.
+217. Public status: stage0, invalid attempts30.
+218. I know SUN1,WAVE8,T7; do not know M number; ask for M number and positions1,2,3,4; question.
+219. I know position1 SUN; symbols at positions2,3,4 and all four symbol values unknown; I tried1248, failed.
+220. Discarded; content unknown.
+221. I know symbol at position3 T; symbols at positions1,2,4 unknown.
+222. Discarded; content unknown.
+223. Public status: stage0, invalid attempts31.
+224. Question: I know position4 WAVE; need symbols at positions1,2,3; WAVE/SUN/M/T values unknown.
+225. I know WAVE8; need SUN/T/M numbers and symbols at positions1,2,3,4; question.
+226. I try1728.
+227. Public status: stage0, invalid attempts32.
+
+3. THE TASK
+
+The public briefing describes a three-stage escape room: combine symbol positions and base digits to open a cabinet, operate power controls in a charge-feasible order, then combine original bases with new offsets to unlock the exit. The supplied internals give cabinet2748, power DRAIN→CRANK→SIGNAL→BOOT, and exit9796. Those are briefing facts, not decoded accomplishments.
+
+The actual log covers only the cabinet stage. Its content fits distribution of the initial clues: agent4 repeatedly sends SUN2; agent2 WAVE8; agent0 a MOON-like compound7; agent6 T4; agent3 position1 SUN; agent5 position2 a MOON-like compound; agent1 position3 T/TS; agent7 position4 WAVE. These owner-specific patterns provide genuine lexical anchors.
+
+They repeatedly exchange known and missing information, propose layouts, and try codes. They do not reach a stable common interpretation. Particularly damaging confusions include SUN being summarized as1 rather than2, MOON-like labels being assigned2, and the MOON7 compound being shortened to bare T7 and apparently confused with STAR. Even position order is sometimes changed: examples include SUN,T,M,WAVE and SUN,M,WAVE,T. Some agents continue marking previously announced information unknown. These observations support a communication failure, although exact causes—language ambiguity, improvised vocabulary, mistaken parsing, or ordinary agent errors—cannot all be separated.
+
+The visible status never advances beyond stage0 and ends at32 invalid attempts. Several messages explicitly describe1248 as failed. There is no decoded evidence of successful cabinet opening, power actions, battery reasoning, new offsets, exit entry, or escape. Thus the log fits an unsuccessful attempt at the described task, not the worked solution. No final successful conclusion is present; the last visible guess is1728 followed by another rejection.
+
+4. EVIDENCE
+
+A. Independent clue anchors. The short message2 by the SUN-base owner is 𗂱𗉞𘀝. Agent2 repeatedly uses 𗟎𗉞𗽕. Agent0 repeatedly uses a distinct compound followed by 𗉞𘝚. Agent6 repeatedly asserts 𘒳𗉞𗨥. These sender-specific repetitions align with SUN2,WAVE8,MOON7,STAR4 and are stronger than assigning words from the solution alone.
+
+B. Repeated slot lists. Messages17,27,54,59,72 and others contrast agent7's known fourth position with unknown first/second/third positions. Agent3 contrasts a known first position with unknown second/third/fourth positions. This identifies the1–4 digits and the unknown marker without relying solely on a correct code. Lists such as31 and112 separate symbol bases from position symbols.
+
+C. Numeral strings and rejected actions. Try-clauses repeatedly contain a single 𗉞 followed by four digit glyphs. Messages88,110,118,139,157,206,219 reproduce1248; several have the failure suffix. Attempts1258,1268,1298 and1208 help distinguish5,6,9,0 from the unknown marker. Public rejection counts support the interpretation 'attempt', but do not prove that every nearby message caused the next rejection: actions were private and concurrent.
+
+D. Contrastive grammar. 𗒳𘅌 regularly introduces the speaker's own clue, followed by known symbol/value or position/symbol content. 𗯘𘅌 regularly introduces requests for missing fields, plausibly 'you know?'; explicit 𗒳𘂲𘅌 provides a separate negative-knowledge construction. 𘆎 occurs after missing fields, including entire lists of all but one known clue; interpreting it as a zero digit would produce implausible repeated assertions and erase the known/unknown contrast. Clause separators recur at exactly those field boundaries.
+
+E. Evidence of misunderstanding, not normalization. Agent4's direct SUN2 conflicts with repeated team summaries SUN1. Agent0's MN7 conflicts with summaries T7 and M2. Position3 T is independently repeated by its owner, yet some proposals move WAVE or M there. We therefore preserve the transmitted labels and errors instead of translating everything into the intended2748 solution. The label M is especially uncertain: the log supports a MOON-like role, not a guarantee that the original file defined that glyph as MOON.
+
+F. Limits and falsifiers. Access to the original file could show that some content glyphs have broader literal meanings (light, shape, night, item) and that the apparent symbol names are compounds rather than dictionary entries. Repeated use of 𘆎 in confirmed numerical contexts would weaken the 'unknown' analysis; clear contrasts of the request constructions could establish exact pronouns and distinguish requests from negative knowledge. A demonstrated full syntactic parse could change 𗃚/𗱑 assignments and the scope of number markers. Self-reports could clarify intended compounds and malformed sentences, but should not automatically override the visible strings. No claim here that the original file's complete vocabulary, precise tense system, or unused later-stage vocabulary has been recovered.

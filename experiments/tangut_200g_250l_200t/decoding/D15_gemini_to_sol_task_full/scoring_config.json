@@ -1,0 +1,16 @@
+{
+  "cell_id": "D15",
+  "run_id": "R07",
+  "encoder": "Gemini",
+  "seed": 1,
+  "decoder": "Sol",
+  "decoder_model": "openai/gpt-6.1-sol",
+  "condition": "task_full",
+  "source_escaped": true,
+  "protocol": "200turn_no_clock_50usd",
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2/swarmish.txt",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D15_gemini_to_sol_task_full/decoded.txt",
+  "receipt": "experiments/tangut_200g_250l_200t/decoding/D15_gemini_to_sol_task_full/receipt.json"
+}

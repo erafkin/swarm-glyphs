@@ -73,9 +73,9 @@ def run_info(root, run_id):
 def validate_manifest(root=BATCH):
     manifest = read(root / "batch.json")
     entries = manifest["runs"]
-    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("R", 8), ("D", 14)) for i in range(1, n + 1)}
-    require(len(entries) == 34 and {r["id"] for r in entries} == expected,
-            "Expected E01–E08, archived T01–T04, revised R01–R08 and D01–D14")
+    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("R", 8), ("D", 16)) for i in range(1, n + 1)}
+    require(len(entries) == 36 and {r["id"] for r in entries} == expected,
+            "Expected E01–E08, archived T01–T04, revised R01–R08 and D01–D16")
     declared_owners = {}
     gameplay_owners = {}
     for owner, details in manifest["owners"].items():

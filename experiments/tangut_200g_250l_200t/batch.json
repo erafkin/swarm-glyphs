@@ -2,7 +2,7 @@
   "schema_version": 2,
   "batch_id": "tangut_200g_250l_200t",
   "created_date": "2026-11-07",
-  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and fourteen decoder conditions targeting the revised primary playthroughs.",
+  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and sixteen decoder conditions targeting the revised primary playthroughs.",
   "repository": "https://github.com/erafkin/swarm-glyphs",
   "planning_budget_usd": 350,
   "estimated_all_new_runs_usd": 224.575,
@@ -97,7 +97,9 @@
         "D11",
         "D12",
         "D13",
-        "D14"
+        "D14",
+        "D15",
+        "D16"
       ],
       "archived_gameplay_ids": [
         "T01",
@@ -113,7 +115,8 @@
     "Tom prepares R06–R08 for Haiku, Gemini and DeepSeek and launches sequentially only when requested.",
     "Collect and push completed run folders independently; record actual overlap between operators for timing comparisons.",
     "Produce public-only English references for revised playthroughs.",
-    "D01–D13 later use only revised R01/R06/R07/R08 public transcripts and their selected briefings. No decoders launch automatically."
+    "D01–D13 later use only revised R01/R06/R07/R08 public transcripts and their selected briefings. No decoders launch automatically.",
+    "D14–D16 are user-authorized Sol full-task follow-ups for the unchanged R06/R07/R08 transcripts; D15 and D16 may overlap, with separate eight-agent teams and $50 soft caps."
   ],
   "existing_E01": {
     "source_revision": "ce8dc324a83946b670348725dbcb3a7283cf41e1",
@@ -270,6 +273,14 @@
     {
       "id": "D14",
       "path": "decoding/D14_haiku_to_sol_task_full"
+    },
+    {
+      "id": "D15",
+      "path": "decoding/D15_gemini_to_sol_task_full"
+    },
+    {
+      "id": "D16",
+      "path": "decoding/D16_deepseek_to_sol_task_full"
     }
   ]
 }

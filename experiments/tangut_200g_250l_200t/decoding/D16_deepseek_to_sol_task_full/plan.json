@@ -1,0 +1,16 @@
+{
+  "id": "D16",
+  "stage": "decoding",
+  "owner": "tom",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "deepseek",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "R08",
+  "condition": "task_full",
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "allow_turn_limited_gameplay_source": true,
+  "follow_up_to": "D13",
+  "authorization": "User requested Sol full-task decoding for Gemini and DeepSeek on 2026-11-08, completing Sol no-task/full-task comparisons for all other model families."
+}

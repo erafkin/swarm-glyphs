@@ -1,8 +1,9 @@
 # English decoder comparisons
 
 **Historical scoring convention:** this directory retains the original zero-for-abstention
-results for reproducibility. The [current primary results](../decoder_comparison_scores_na/README.md)
-instead mark unknown answers N/A, exclude them from mean cosine, and report coverage separately.
+results for reproducibility. The [current primary results](../decoder_comparison_scores_public_raw/README.md)
+embed unknown answers as ordinary text against public-message references. The intermediate
+[N/A convention](../decoder_comparison_scores_na/README.md) remains archived separately.
 
 This report covers **20 completed decoder combinations** against their existing frozen English references. **D12 failed and is unscored.** This adds eight new scores to twelve unique published Sol results. No decoder was rerun and no OpenRouter calls were made.
 

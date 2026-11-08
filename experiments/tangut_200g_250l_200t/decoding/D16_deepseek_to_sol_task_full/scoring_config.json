@@ -1,0 +1,16 @@
+{
+  "cell_id": "D16",
+  "run_id": "R08",
+  "encoder": "DeepSeek",
+  "seed": 1,
+  "decoder": "Sol",
+  "decoder_model": "openai/gpt-6.1-sol",
+  "condition": "task_full",
+  "source_escaped": false,
+  "protocol": "200turn_no_clock_50usd",
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R08_deepseek_seed1/raw/20261107_214101_c5268011_round_2/swarmish.txt",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D16_deepseek_to_sol_task_full/decoded.txt",
+  "receipt": "experiments/tangut_200g_250l_200t/decoding/D16_deepseek_to_sol_task_full/receipt.json"
+}

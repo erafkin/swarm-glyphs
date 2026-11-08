@@ -12,6 +12,26 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 echo "OPENROUTER_API_KEY=..." > .env
 ```
 
+An optional backup key can be added to the same `.env` file:
+
+```dotenv
+OPENROUTER_API_KEY_SECONDARY=...
+```
+
+New runs use the primary key first and switch once to the secondary key when OpenRouter
+explicitly reports exhausted key/account credit. Blank or duplicate backup keys are ignored.
+Both keys contribute to the same experiment spending total and `max_cost_usd` cap; switching
+does not reset the run budget. The backup must have its own remaining allowance, and keys
+on the same account still share that account's credit balance.
+
+The client checks OpenRouter's error metadata. A key-limit exhaustion can be HTTP 402 or
+403; account-credit exhaustion is HTTP 402. Rate limits, authentication errors,
+guardrail/workspace budgets, temporary in-flight reservations and oversized-request
+affordability errors do not trigger a switch. See [OpenRouter's limits documentation](https://openrouter.ai/docs/api_reference/limits).
+Add the backup before starting a new experiment process. Existing processes do not
+reload the file automatically. Call usage logs identify `api_key_slot` as `primary`
+or `secondary`, without recording either credential.
+
 ## Guess Who
 Agents that each know one feature of a hidden goal object try to reach consensus on the full
 object, communicating only through a chatroom of meaningless glyphs.

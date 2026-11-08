@@ -1,0 +1,295 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+Glyph‑to‑meaning table (Tangut block, Unicode codepoints). Confidence levels: H = high, M = medium, L = low.
+
+DIGITS:
+- 1 = U+182AB (𘊫) (H) – first in ordered lists (msgs 25, 117, 138).
+- 2 = U+1800D (𘀝) (H) – from SUN=2 (msg2), second in lists.
+- 3 = U+18483 (𘔃) (H) – third in lists (msg25: 1,2,3,4).
+- 4 = U+17A25 (𗨥) (H) – fourth in lists; STAR=4 (msg28, msg88).
+- 5 = U+1824C (𘏛) (M) – fifth in extended lists (msg30, msg81).
+- 6 = U+18253 (𘙓) (M) – sixth in lists (msg161).
+- 7 = U+183D1 (𘝚) (H) – from MOON=7 (msg16), frequent in code attempts.
+- 8 = U+17D55 (𗽕) (H) – from WAVE=8 (msg6, msg127), appears after 7.
+- 9 = a glyph resembling U+18560 (𘅠) seen once (msg132), possibly 9 (L).
+- 0 = not observed.
+
+SYMBOLS (celestial bodies):
+- SUN = U+178C1 (𗂱) (H) – from SUN=2 (msg2), used in many position/assignment clauses.
+- MOON = compound: U+17916 (𗌈) + U+18463 (𘒳) (msg5, msg32) OR U+18463 (𘒳) + U+17B17 (𗘗) (msg16). Both variants represent MOON (M).
+- STAR = U+17F4E (𗟎) (H) – from STAR=4 (msg28, msg88: “4 pos STAR = 8” where 𗨥=4, 𗟎=STAR).
+- WAVE = compound: U+17F4E (𗟎) + U+17AAC (𗢬) (M) – from agent_2’s “WAVE = 8” in msg6 and msg15. The same 𗟎 (STAR) is part of the WAVE symbol, likely a two‑glyph representation.
+
+GRAMMATICAL / STRUCTURAL ELEMENTS:
+- Separator/copula “is” or “=”: U+17849 (𗉞) (H) – appears between symbol and digit, between position number and base‑digit marker.
+- Base‑digit marker: compound U+18208 (𘆎) + U+17904 (𗤄) meaning “base digit” (H). E.g., “〈digit〉𗉞𘆎𗤄” = “〈digit〉 is the base digit”.
+- Statement start / “I know/declare” prefix: combination U+17E34 (𗒳) + U+1824B (𘅌) (H). Appears at the beginning of most declarative messages.
+- End‑of‑clause or end‑of‑message marker: U+17904 (𗤄) (H) used as full stop. Also appears in compound 𘆎𗤄.
+- Alternative end marker: U+17E65 (𗣑) (H), often at the very end of a message.
+- Position marker: U+1822B (𘍂) (M) meaning “position”.
+- Another position/listing marker: U+17A45 (𗱑) (M) often precedes a digit in ordered lists (e.g., “𗱑𘊫” = position 1, “𗱑𘀝” = position 2).
+- Additional particles:
+   - U+17E34 (𗯘) (M) – topic marker or “regarding”.
+   - U+170DA (𗃚) (L) – frequent separator within lists, probably a comma.
+   - U+180B2 (𘂲) (L) – seen in some compounds, function unclear.
+   - U+17F48 (𗱒), U+182A8 (𘒗) etc. – low‑frequency, possibly other digits or function words (L).
+
+MESSAGE STRUCTURE (typical):
+- Clue announcement: ⟨𗒳𘅌⟩ [SYMBOL] ⟨𗉞⟩ ⟨DIGIT⟩ ⟨𗤄⟩
+   Example: 𗒳𘅌𗂱𗉞𘀝𗤄 = “SUN is 2.”
+- Position announcement: ⟨DIGIT⟩ ⟨position marker⟩ [SYMBOL]
+   Example: 𘀝𘍂𗌈𘒳 = “position 2 MOON”.
+- Base‑digit declaration: ⟨DIGIT⟩ ⟨𗉞⟩ 𘆎𗤄 = “〈digit〉 is the base digit”.
+- Code proposal: a sequence of four digits, sometimes separated by spaces or 𗃚.
+- Full code submission often preceded by 𗒳𗹫𗲅 (a code‑indicating prefix) or similar.
+
+
+2. TRANSLATION
+
+Each line: [msg_number] agent: English meaning (confidence).
+
+[1] task: Stage 0, 0 invalid attempts.
+[2] agent_4: SUN = 2.  (H)
+[3] agent_6: (discarded – ⊘)
+[4] agent_7: (discarded)
+[5] agent_5: position 2 = MOON.  (H)
+[6] agent_2: WAVE = 8, plus other digits/lists (M)
+[7] agent_0: (discarded)
+[8] agent_6: (likely list of positions and base digits; unclear) (L)
+[9] agent_0: (discarded)
+[10] agent_3: (discarded)
+[11] agent_4: (list of base digits: 1‑base, 2‑base, 3‑base, 4‑base, and possibly MOON) (M)
+[12] agent_6: (discarded)
+[13] agent_7: (list: position 4, base digits 1,2,3) (M)
+[14] agent_3: position 1 = SUN.  (H)
+[15] agent_2: (extended list: pos2, pos4, 5, 6; WAVE=8; SUN=2; pos MOON=2? – likely code‑building) (M)
+[16] agent_0: MOON = 7; also 2‑base, 4‑base, 5‑base, 6‑base; SUN = 2.  (H for MOON=7)
+[17] agent_7: (list: 4‑base,1‑base,2‑base,3‑base) (M)
+[18] agent_1: (discarded)
+[19] agent_4: (code proposal 1? 3? 1? – uncertain) (L)
+[20] agent_6: (unknown; possibly code attempt) (L)
+[21] agent_2: (discarded)
+[22] agent_3: (position 1 = SUN, 2‑base, 3‑base, 4‑base) (M)
+[23] agent_5: (code proposal: 2 pos MOON … 1‑base,3‑base,4‑base) (M)
+[24] agent_4: (positions with base digits: 1‑base,2‑base,3‑base,4‑base, plus “pos STAR, pos WAVE”) (M)
+[25] agent_0: (code attempt: 1, 2, 3, 4)  (H)
+[26] agent_4: (positions compilation: SUN‑pos, MOON‑pos, STAR‑pos, WAVE‑pos, each followed by base digit?) (L)
+[27] agent_7: (position list similar to [17]) (M)
+[28] agent_6: STAR base digit (probably = 4); and other base digits (M)
+[29] agent_0: (lists digits and positions, likely another code attempt) (L)
+[30] agent_7: (sequence of digits 2,2,4,4,5,5,6,? then base‑digit markers) (L)
+[31] agent_2: (STAR?=8? then 1‑base,2‑base,3‑base; maybe code proposal) (L)
+[32] agent_3: (position 1 SUN = base digit (2?); pos2=MOON, pos3=STAR, pos4=WAVE?) (M)
+[33] task: Invalid attempt 1.
+[34] agent_0: (code attempt involving 7, 1, 2, 3?) (M)
+[35] agent_1: (digit list with positions, includes 7; possible code 7?1?2?4?) (M)
+[36] agent_4: (code proposal: 1,2,4? or 2,4,? etc.) (M)
+[37] agent_6: (discarded)
+[38] agent_5: (list: 2, MOON? (=7), ?; partial code maybe 2,7,1,3?) (L)
+[39] agent_0: (more position lists) (L)
+[40] agent_7: (position 4 = ?, STAR digit = ?, position 3 = ?) (M)
+[41] agent_2: (code attempt: 1,2,5? 6?) (M)
+[42] agent_5: (list: 2 pos MOON? then 1‑base,3‑base,4‑base) (M)
+[43] agent_4: (positions: 1‑base,2‑base,3‑base,4‑base) (M)
+[44] task: Invalid 2.
+[45] agent_2: (base digits for four symbols: 1? 2? 5? 6?) (M)
+[46] agent_1: (digit sequences; possible code 3,1,2,4?) (L)
+[47] agent_6: (code attempt 4? and list) (L)
+[48] agent_3: (list of positions 1,2,3,4 and explicit “2 2 2” repeating) (M)
+[49] task: Invalid 3.
+[50] agent_4: (position list with base‑digit markers) (M)
+[51] agent_2: (code attempt: 1,2,3,4?) (M)
+[52] agent_6: (position 5 = 4? and SUN, STAR position references) (L)
+[53] agent_4: (discarded)
+[54] agent_7: (position 4 STAR = ?, position 1 = 1, pos2 = 2, pos3 = 3) (M)
+[55] agent_1: (digit lists; likely 7,1,2,4?) (L)
+[56] agent_2: (base digits: 2,4,3,7? and “2 2 2”) (M)
+[57] agent_7: (position 4 STAR) (M)
+[58] agent_5: (code attempt: 1,2,3,4 again?) (M)
+[59] agent_7: (position 4 STAR; positions 1,2,3 base digits) (M)
+[60] agent_3: (positions 1,2,3,4 all base digits; then digits 1,2,3,4) (M)
+[61] agent_6: (code proposal: 4,1,2,? ) (L)
+[62] task: Invalid 4.
+[63] agent_5: (position list with digits: 2,1,3,4 and includes STAR and WAVE mentions) (M)
+[64] agent_2: (code: 1,2,2,? ) (M)
+[65] task: Invalid 5.
+[66] agent_0: (code proposal: 1,2,3,4 and listing of symbols’ base digits) (M)
+[67] agent_0: (discarded)
+[68] agent_1: (discarded)
+[69] agent_4: (code: 2,2,6? ) (M)
+[70] task: Invalid 6.
+[71] agent_5: (list: 2,1,3,4 with position markers) (M)
+[72] agent_7: (position 4 STAR; positions 1,2,3 base digits) (M)
+[73] agent_5: (list: 7,1,3,4?) (M)
+[74] agent_6: (discarded)
+[75] agent_7: (position 4 STAR;1‑base,2‑base,3‑base) (M)
+[76] agent_1: (discarded)
+[77] agent_3: (positions:1,2,3,4base) (M)
+[78] agent_0: (discarded)
+[79] agent_2: (list: STAR,1‑base,2‑base,3‑base,4‑base; SUN, WAVE, etc.) (M)
+[80] task: Invalid 7.
+[81] agent_0: (code attempt:7,1,2,3,4?) (M)
+[82] agent_5: (position assignments:2,7,1,3,4?) (M)
+[83] agent_7: (position4 STAR; positions1,2,3) (M)
+[84] agent_4: (code:2, STAR, 4?) (M)
+[85] agent_1: (discarded)
+[86] agent_2: (code attempt:1,2,7? and1,3,2,4?) (M)
+[87] task: Invalid 8.
+[88] agent_6: (code attempt: 1,2,4,8? with “position 1 SUN = 1, pos 2 MOON = 2, pos 3 ? = 4, pos 4 STAR = 8”) (M)
+[89] task: Invalid 9.
+[90] agent_2: (code:1,2,6,8?) (M)
+[91] task: Invalid 10.
+[92] agent_4: (code attempt:2,?,4,?) (M)
+[93] agent_5: (discarded)
+[94] agent_1: (code:3, STAR? 2,1?) (M)
+[95] agent_0: (list:7, positions of SUN, WAVE, etc.) (M)
+[96] agent_7: (position4 STAR; positions1,2,3) (M)
+[97] agent_3: (positions:1=1,2=2,STAR=STAR?) (M)
+[98] agent_2: (code:1,2,6? and further) (M)
+[99] agent_0: (code:7, SUN, WAVE, STAR?) (M)
+[100] agent_7: (position4 STAR; positions1,2,3) (M)
+[101] agent_2: (code:1,2,4,STAR?) (M)
+[102] agent_2: (code:1,2,4,STAR; additional) (M)
+[103] task: Invalid 11.
+[104] agent_3: (code attempt:1,2,STAR?) (M)
+[105] agent_5: (position2 = 7,1,3,4?) (M)
+[106] agent_4: (code attempt:2,4,3,7?) (M)
+[107] agent_0: (code:7,1,2,3?) (M)
+[108] agent_1: (code:3,1,2,4?) (M)
+[109] agent_7: (list:4,1,2,3, etc.) (M)
+[110] agent_3: (code:1,2,4,8?) (M)
+[111] task: Invalid 12.
+[112] agent_0: (code:7,1,STAR,WAVE?) (M)
+[113] agent_1: (code:1,2,4,STAR?) (M)
+[114] agent_5: (position2 = 2,1,3,4?) (M)
+[115] agent_2: (code:1,2,? etc.) (M)
+[116] task: Invalid 13.
+[117] agent_0: (code:7,1,2,3,4?) (M)
+[118] agent_6: (code:2,1,2,4? and base discussions) (M)
+[119] agent_1: (list:7, etc.) (M)
+[120] agent_2: (code:1,2,5,? ) (M)
+[121] task: Invalid 14.
+[122] agent_0: (discarded)
+[123] agent_3: (code:1,2,4,? ) (M)
+[124] agent_5: (position2 = 2,1,3,4?) (M)
+[125] agent_1: (code:7,1,2,5?) (M)
+[126] task: Invalid 15.
+[127] agent_2: (code:1,2,6,? and1,2,6,?) (M)
+[128] task: Invalid 16.
+[129] agent_4: (code:2,7,STAR?) with base lists (M)
+[130] agent_6: (code:2,4? etc., and base digits) (M)
+[131] agent_3: (code:1,2,3,4?) (M)
+[132] agent_2: (code:1,2,? maybe1,2,9?) (L)
+[133] task: Invalid 17.
+[134] agent_5: (discarded)
+[135] agent_4: (code:2,STAR,WAVE?) (M)
+[136] agent_0: (explicit code:1,2,3,4) (H)
+[137] agent_7: (code:6,?) (M)
+[138] agent_3: (code:1,2,3,4) (H)
+[139] agent_6: (code:1,2,3,4? and base discussions) (M)
+[140] agent_5: (discarded)
+[141] agent_1: (code:1,2,4,?) (M)
+[142] task: Invalid 18.
+[143] agent_0: (code:7,1,2,3,4) (H)
+[144] agent_7: (positions:4 STAR,1,2,3) (M)
+[145] agent_4: (code:2,? and base) (M)
+[146] agent_5: (position statement) (L)
+[147] agent_0: (code:7,1,2,3,4 again) (M)
+[148] agent_3: (positions:1,2,3,4base) (M)
+[149] agent_7: (discarded)
+[150] agent_0: (code:7,1,2,3,4 again) (M)
+[151] agent_3: (positions:1,2,3,4base) (M)
+[152] agent_2: (code:1,8,6? ) (M)
+[153] task: Invalid 19.
+[154] agent_4: (code:2, STAR?) (M)
+[155] agent_3: (code:1,2,3,4) (M)
+[156] agent_0: (discarded)
+[157] agent_6: (code:5, STAR? and positions) (M)
+[158] agent_5: (position2=7,1,3,4?) (M)
+[159] agent_1: (discarded)
+[160] task: Invalid 20.
+[161] agent_7: (position4 STAR, 7? and1,2,3) (M)
+[162] agent_4: (code:2,WAVE,1,2,3,4?) (M)
+[163] agent_3: (positions:1,2,3,4base) (M)
+[164] agent_0: (code:7, SUN, STAR, WAVE?) (M)
+[165] agent_5: (positions:2,7,1,3,4?) (M)
+[166] agent_1: (code:1? ) (M)
+[167] task: Invalid 21.
+[168] agent_2: (code: STAR,1? ) (M)
+[169] agent_7: (discarded)
+[170] agent_0: (code:1,2,4,7) (H)  // 7 appears at the end, not 2748
+[171] task: Invalid 22.
+[172] agent_3: (code:2,4,? ) (M)
+[173] agent_4: (discarded)
+[174] agent_2: (code: STAR,1,2,6?) (M)
+[175] agent_5: (position2=7,1,3,4?) (M)
+[176] agent_0: (code:1, STAR, 2,7) (M)
+[177] task: Invalid 23.
+[178] agent_7: (positions:4 STAR,1,2,3) (M)
+[179] agent_4: (code:1,6,5?) (M)
+[180] task: Invalid 24.
+[181] agent_3: (positions:1,2,3,4 and base) (M)
+[182] agent_2: (code: STAR, SUN, WAVE, 1,2?) (M)
+[183] agent_6: (code:4,1,2,3?) (M)
+[184] agent_1: (code:3? ) (M)
+[185] agent_3: (positions:1,2,3,4?) (M)
+[186] agent_6: (code:4,1,2,3?) (M)
+[187] agent_5: (discarded)
+[188] agent_0: (discarded)
+[189] agent_2: (code: STAR,1,7? etc.) (M)
+[190] task: Invalid 25.
+[191] agent_7: (code: STAR,1,2,3?) (M)
+[192] agent_3: (positions:1=1,2=2,3=3,4=4) (M)
+[193] agent_4: (code:2, STAR, WAVE, 5?) (M)
+[194] agent_6: (position4 = ?) (M)
+[195] agent_7: (code:1,2,7,STAR?) (M)
+[196] agent_4: (code: SUN? with positions) (L)
+[197] agent_3: (positions:1=1,2=2,3=3,4=4?) (M)
+[198] agent_5: (position2=7; also SUN=2, MOON=7, STAR=8? (incorrect), MOON?=4) (M)
+[199] agent_3: (positions:1=1,2=2,3=3,4=4?) (M)
+[200] agent_0: (code:1, STAR, 7, WAVE?) (M)
+[201] agent_7: (code: STAR,1? ) (M)
+[202] agent_1: (code:7,1,2,4? and position list) (M)
+[203] agent_2: (code: STAR,7,2,2?) (M)
+[204] task: Invalid 26.
+[205] agent_5: (position2=7, STAR, WAVE,1,3,4?) (M)
+[206] agent_6: (code:4,2, STAR,1?) (M)
+[207] task: Invalid 27.
+[208] agent_3: (discarded)
+[209] agent_2: (code: STAR,2,7,?) (M)
+[210] task: Invalid 28.
+[211] agent_5: (position2=7,1,3,4?) (M)
+[212] agent_1: (code:1,2,6,? ) (M)
+[213] task: Invalid 29.
+[214] agent_7: (position4 STAR, pos1,2,3; code:1,2,7,STAR?) (M)
+[215] agent_2: (code: STAR,2,7?) (M)
+[216] agent_6: (code:4,1,2,3?) (M)
+[217] task: Invalid 30.
+[218] agent_0: (code:1, STAR, 7, WAVE?) (M)
+[219] agent_3: (code:1,2,3,4 and STAR?) (M)
+[220] agent_5: (discarded)
+[221] agent_1: (code:7,1,2,4? ) (M)
+[222] agent_6: (discarded)
+[223] task: Invalid 31.
+[224] agent_7: (code: STAR,1,2,3?) (M)
+[225] agent_2: (code: STAR, SUN, WAVE,1,2,3,4?) (M)
+[226] agent_4: (code:1,6,2?) (M)
+[227] task: Invalid 32.  (End of log; stage 0 never completed.)
+
+
+3. THE TASK
+
+The task was the virtual escape room “Storm Shelter”. In stage 0, agents had to open a coded cabinet. The cabinet had four positions (1–4) displaying symbols SUN, MOON, STAR, WAVE, each with a base digit (2, 7, 4, 8 respectively). The cabinet code was the four digits in position order: 2748. The agents’ private clues gave them the symbols at specific positions and the base digits for the symbols. They needed to share this information to assemble the code.
+
+The log shows 32 invalid attempts. The agents repeatedly proposed codes such as 1,2,3,4, 7,1,2,3, 1,2,4,7, etc., but never correctly combined all four base digits in the right order. They remained stuck in stage 0. The log fits the described task perfectly: the communication was in Swarmish, they exchanged clues about positions and base digits, and the task stage remained 0.
+
+
+4. EVIDENCE
+
+- Digit assignments (1–8) are anchored by the clear “SUN = 2” (msg2), “MOON = 7” (msg16), “STAR = 4” (msg28, msg88) and consistent ordering in many lists (msg25: 1,2,3,4). The digit for 8 (𗽕) appears in several WAVE=8 contexts (msg6, msg127).
+- The copula 𗉞 and base‑digit marker 𘆎𗤄 are identified by their repetitive syntax in statements like “𗂱𗉞𘀝𗤄” (SUN is 2).
+- Position markers 𘍂 and 𗱑 appear with digits, matching the task’s position‑based descriptions.
+- The log’s structure of “code‑like” sequences frequently preceding “invalid_attempts” entries confirms that those sequences are attempted cabinet codes.
+- The agents’ inability to open the cabinet despite knowing the individual digits (as inferred from their private clues) indicates they failed to pool the information into the single correct sequence 2748; the log shows many near‑miss sequences but never 2748 in a single attempt.
+- Confidence levels are assigned per glyph; a few low‑frequency glyphs remain unidentified but do not affect the overall decoding.
+- If an alternative mapping of digits or symbols were proposed, it would need to explain the high‑frequency co‑occurrence of these glyphs with the task’s invalid‑attempt pattern and the agents’ known clues. The current mapping is strongly supported.

@@ -1,0 +1,2925 @@
+{
+  "cell_id": "D08",
+  "condition": "no_task",
+  "protocol": "200turn_no_clock_50usd",
+  "run_id": "R07",
+  "seed": 1,
+  "reference": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/english/translation.json",
+  "task_dir": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+  "language": "experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2/swarmish.txt",
+  "decoder_provenance": {
+    "phase": "monitor",
+    "model": "google/gemini-3.8-flash",
+    "source": "/Users/ttaylor/Desktop/aiaf-hackathon/swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R07_gemini_seed1/raw/20261107_213603_7630ee4f_round_2",
+    "n_agents": 8,
+    "minutes": null,
+    "max_turns": 200,
+    "conditions_requested": [
+      "no_task"
+    ],
+    "conditions_completed": [
+      "no_task"
+    ],
+    "stop_reason": "completed",
+    "total_cost_usd": 1.00490175,
+    "cost_incomplete": false,
+    "max_cost_usd": 50.0,
+    "baseline": false,
+    "elapsed_s": 132.57670537475497,
+    "transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f",
+    "source_transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f",
+    "record_path": "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/receipt.json",
+    "record_sha256": "4c02b8e7b7371bc22fef106b09c45e350992ee7a17b2ce7cdb933ad3a1a9af83"
+  },
+  "schema_version": 1,
+  "mode": "reference_assisted_public_only",
+  "private_annotations_used": false,
+  "primary_metric": "mean_public_reference_raw_text_cosine",
+  "method": "Arithmetic mean of paired MiniLM cosine against public-message English references; decoder 'unknown' answers and structural glosses are embedded as ordinary text. Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.",
+  "text_normalization": "Parse the original numbered translation section with the recorded core parser; remove message IDs, speaker/confidence prefixes and normalize whitespace. For a validated Msg/Agent/Meaning/Confidence Markdown table, retain the meaning cell literally and preserve the full original row for audit. Do not replace unknown declarations, remove their parenthetical text, rewrite glosses, expand aliases, infer missing entries, or use private intended meanings.",
+  "extraction": {
+    "format": "core_numbered_translation",
+    "default_unknown_expanded": false
+  },
+  "reference_status": "completed",
+  "decoder_document": "experiments/tangut_200g_250l_200t/decoding/D08_gemini_to_gemini_no_task/decoded.txt",
+  "inputs": {
+    "reference_sha256": "109c1dad777ee101971a7bbc71ba5eb94ff3bbe833165bd5b4599b53a267af2e",
+    "public_transcript_sha256": "227e8f9a2f2be2af78b5c91cb1a74f082b96617eee0d9cae89a245d1a96338e9",
+    "rendered_public_transcript_sha256": "96450b9c7efe45a2a008585dbaa2ac79404c381660b0a57564f313d14a61b47f",
+    "decoder_document_sha256": "ce6a5b741a95329953a9649dd8e01b6251af1df02fd32c4f24862ff786caf7cf",
+    "language_sha256": "638e0333ec1e8236a27d31e6b2de754fbf58aea3a037c8bd52ec4bfc3ead2a10"
+  },
+  "derived_from": {
+    "report_path": "experiments/tangut_200g_250l_200t/analysis/decoder_comparison_scores/D08.json",
+    "report_sha256": "ac5e70ec33d716d6fe12d150e5e4b0b650f86b4d3a02e9d72b4838fd6cdbd20f",
+    "kind": "historical_source_report"
+  },
+  "embedding_model": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "requested_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "class": "sentence_transformers.sentence_transformer.model.SentenceTransformer",
+    "resolved_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "config_commit_hash": null,
+    "revision_source": "explicit_immutable_revision_passed_to_loader",
+    "config_sha256": "1dbdaa1d4435d1f508826f819b2e0cff78a4750a1ae0ee42d2a6604f52ac874b",
+    "packages": {
+      "sentence-transformers": "6.2.0",
+      "transformers": "5.22.2",
+      "torch": "2.15.0",
+      "numpy": "2.5.4"
+    },
+    "max_seq_length": 256,
+    "provenance_sha256": "3716d5b3a64360ebe7684fa862b0f1a5819f390f4bab163be1550b21bba93a75"
+  },
+  "summary": {
+    "eligible": 77,
+    "scorable_references": 77,
+    "cosine_denominator": 77,
+    "embedded_pairs": 77,
+    "unknown_references": 0,
+    "valid_pairs": 77,
+    "prediction_coverage": 1.0,
+    "non_abstaining_pairs": 77,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 1,
+    "historical_unknown_classifications": 0,
+    "predictions_with_unknown_markers": 1,
+    "uncertain_or_partial_references": 45,
+    "mean_per_line": {
+      "cosine": 0.24765886899774184
+    }
+  },
+  "high_confidence": {
+    "eligible": 32,
+    "scorable_references": 32,
+    "cosine_denominator": 32,
+    "embedded_pairs": 32,
+    "unknown_references": 0,
+    "valid_pairs": 32,
+    "prediction_coverage": 1.0,
+    "non_abstaining_pairs": 32,
+    "missing_predictions": 0,
+    "unknown_only_predictions": 0,
+    "partial_unknown_predictions": 1,
+    "historical_unknown_classifications": 0,
+    "predictions_with_unknown_markers": 1,
+    "uncertain_or_partial_references": 0,
+    "mean_per_line": {
+      "cosine": 0.2971794218145048
+    }
+  },
+  "coverage": {
+    "public_messages": 97,
+    "decoder_message_ids": 97,
+    "task_status_excluded": 20,
+    "discarded_excluded": 0,
+    "high_confidence_reference_fraction": 0.4155844155844156,
+    "reference_confidence_counts": {
+      "medium": 44,
+      "high": 32,
+      "low": 1
+    }
+  },
+  "lines": [
+    {
+      "id": 1,
+      "sender": "task",
+      "source": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":0,\"invalid_attempts\":0}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":0,\"invalid_attempts\":0}",
+      "hypothesis": "{\"stage\":0,\"invalid_attempts\":0}",
+      "scoring_hypothesis": "{\"stage\":0,\"invalid_attempts\":0}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 2,
+      "sender": "agent_4",
+      "source": "𘊌 𗪩 agent_4 𗼛 𘅪 𘚺 𗅲 𗹕 𘚜 𗶞 𘚐",
+      "reference": "The 'hot' symbol has base value 2.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "HOT SYMBOL is an ad hoc label; its precise depicted symbol is not specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_4] Statement: agent_4: clue node 𘅪 linked property 𗅲 𗹕 is 𗶞.",
+      "hypothesis": "Statement: agent_4: clue node 𘅪 linked property 𗅲 𗹕 is 𗶞.",
+      "scoring_hypothesis": "Statement: agent_4: clue node 𘅪 linked property 𗅲 𗹕 is 𗶞.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.256192978892525
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 3,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𘅪 𘚺 𘚜 𘏛 𗡕 𘁁 𘚐",
+      "reference": "The 'hot' symbol is at box position 1.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "BOX can mean a box, chest, container or slot. The exact HOT-symbol referent is not defined."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Statement: agent_3: clue node 𘅪 link is property 𘏛 𗡕 [value 𘁁].",
+      "hypothesis": "Statement: agent_3: clue node 𘅪 link is property 𘏛 𗡕 [value 𘁁].",
+      "scoring_hypothesis": "Statement: agent_3: clue node 𘅪 link is property 𘏛 𗡕 [value 𘁁].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.25016827697282273
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 21,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 4,
+      "sender": "agent_2",
+      "source": "𘊌 𗪩 agent_2 𗼛 𘚺 𗷤 𗉞 𘚜 𗅲 𗹕 𗒏 𘚐",
+      "reference": "The 'blue-move' symbol has base value 8.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SYMBOL BLUE MOVE is a three-root expression. 'Blue-move' preserves the roots without identifying a particular pictured symbol."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Statement: agent_2: link 𗷤 𗉞 is property 𗅲 𗹕 [value 𗒏].",
+      "hypothesis": "Statement: agent_2: link 𗷤 𗉞 is property 𗅲 𗹕 [value 𗒏].",
+      "scoring_hypothesis": "Statement: agent_2: link 𗷤 𗉞 is property 𗅲 𗹕 [value 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18138092325836583
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 5,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𗍽 𗊓 𗅲 𗹕 𘚜 𘇩 𘚄",
+      "reference": "The base value for 'shape 5' equals 4.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SHAPE 5 may mean shape number 5, a shape described by five, or five shapes; the document does not define this label."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Statement: agent_6: link 𗍽 𗊓 property 𗅲 𗹕 is 𘇩.",
+      "hypothesis": "Statement: agent_6: link 𗍽 𗊓 property 𗅲 𗹕 is 𘇩.",
+      "scoring_hypothesis": "Statement: agent_6: link 𗍽 𗊓 property 𗅲 𗹕 is 𘇩.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.055691937990230464
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 6,
+      "sender": "agent_7",
+      "source": "𘊌 𗪩 agent_7 𗼛 𘚺 𘋉 𗜘 𘚜 𘏛 𗡕 𘇩 𘌔",
+      "reference": "I see the 'up-down' symbol at box position 4.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "UP DOWN is an improvised symbol description. It is not explicitly equated with any other symbol label in this message."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_7] Statement: agent_7: link 𘋉 𗜘 is property 𘏛 𗡕 [value 𘇩].",
+      "hypothesis": "Statement: agent_7: link 𘋉 𗜘 is property 𘏛 𗡕 [value 𘇩].",
+      "scoring_hypothesis": "Statement: agent_7: link 𘋉 𗜘 is property 𘏛 𗡕 [value 𘇩].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1372159734415806
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 16,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 7,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𘏛 𗡕 𘚺 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what are the symbols at the box positions?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The query asks about BOX POSITION SYMBOL without specifying positions; it can also be read as asking whether everyone knows this information."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Question: agent_3: property 𘏛 𗡕 linked is what?",
+      "hypothesis": "Question: agent_3: property 𘏛 𗡕 linked is what?",
+      "scoring_hypothesis": "Question: agent_3: property 𘏛 𗡕 linked is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1973285517522638
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 8,
+      "sender": "agent_5",
+      "source": "𘊌 𗪩 agent_5 𗼛 𘏛 𗡕 𗶞 𘚺 𘚜 𗎶 𘍧 𘚐",
+      "reference": "The symbol at box position 2 is 'cold-light'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "COLD LIGHT is an undefined compound. LIGHT is listed as a descriptor opposite HEAVY, and the reference does not separately define illumination; the exact symbol is unknown."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Statement: agent_5: property 𘏛 𗡕 [value 𗶞] link is 𗎶 𘍧.",
+      "hypothesis": "Statement: agent_5: property 𘏛 𗡕 [value 𗶞] link is 𗎶 𘍧.",
+      "scoring_hypothesis": "Statement: agent_5: property 𘏛 𗡕 [value 𗶞] link is 𗎶 𘍧.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.21263575672990664
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 9,
+      "sender": "agent_1",
+      "source": "𘊌 𗪩 agent_1 𗼛 𘚺 𗍽 𘍧 𘚜 𘏛 𗡕 𗾌 𘚐 𘒳 𗥐 agent_1 𗃚 𗹕 𗊓 𗟆 𘏛 𗡕 𗾌 𗹫",
+      "reference": "The 'shape-light' symbol is at box position 3. I think the value at box position 3 is 5.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SHAPE LIGHT is undefined; LIGHT has no separate illumination entry. The second clause is a belief or estimate (THINK), not a definite value assertion. This label is not explicitly equated with SHAPE 5."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_1] Statement: agent_1: link 𗍽 𘍧 is property 𘏛 𗡕 [value 𗾌]. And agent_1: property 𗹕 𗊓 is 𘏛 𗡕 [value 𗾌].",
+      "hypothesis": "Statement: agent_1: link 𗍽 𘍧 is property 𘏛 𗡕 [value 𗾌]. And agent_1: property 𗹕 𗊓 is 𘏛 𗡕 [value 𗾌].",
+      "scoring_hypothesis": "Statement: agent_1: link 𗍽 𘍧 is property 𘏛 𗡕 [value 𗾌]. And agent_1: property 𗹕 𗊓 is 𘏛 𗡕 [value 𗾌].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12578061051230843
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 10,
+      "sender": "agent_2",
+      "source": "𗀉 𗪩 agent_2 𗼛 𘏛 𗡕 𘚺 𘚜 𗘈 𗪤 𗑸",
+      "reference": "Everyone else, what are the symbols at the box positions?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "ALL OTHER addresses the other agents collectively. Specific positions and the desired level of detail are omitted."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Question: agent_2: property 𘏛 𗡕 link is what [target]?",
+      "hypothesis": "Question: agent_2: property 𘏛 𗡕 link is what [target]?",
+      "scoring_hypothesis": "Question: agent_2: property 𘏛 𗡕 link is what [target]?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1568037031680834
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 11,
+      "sender": "agent_5",
+      "source": "𗀉 𗪩 agent_5 𗼛 𗎶 𘍧 𘚺 𗅲 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the base value of the 'cold-light' symbol?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The COLD LIGHT symbol label has an unknown referent; LIGHT is not explicitly defined as illumination."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Question: agent_5: 𗎶 𘍧 link property 𗅲 𗹕 is what?",
+      "hypothesis": "Question: agent_5: 𗎶 𘍧 link property 𗅲 𗹕 is what?",
+      "scoring_hypothesis": "Question: agent_5: 𗎶 𘍧 link property 𗅲 𗹕 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.13243356672541234
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 12,
+      "sender": "agent_2",
+      "source": "𗀉 𗪩 agent_2 𗼛 𗅲 𗹕 𘚜 agent_0 𗑸",
+      "reference": "agent_0, what is the base value?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The symbol or object whose base value is requested is omitted."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Question: agent_2: property 𗅲 𗹕 belongs to agent_0?",
+      "hypothesis": "Question: agent_2: property 𗅲 𗹕 belongs to agent_0?",
+      "scoring_hypothesis": "Question: agent_2: property 𗅲 𗹕 belongs to agent_0?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.6556118860350018
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 13,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𘚺 𗅲 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what are the symbols' base values?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The bare SYMBOL BASE VALUE does not specify which symbol or whether one or several values are requested."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Question: agent_3: link property 𗅲 𗹕 is what?",
+      "hypothesis": "Question: agent_3: link property 𗅲 𗹕 is what?",
+      "scoring_hypothesis": "Question: agent_3: link property 𗅲 𗹕 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17592657024104752
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 14,
+      "sender": "agent_7",
+      "source": "𗀉 𗪩 agent_7 𗼛 𘏛 𗡕 𗶞 𗄼 𗾌 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about box positions 2 and 3?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The requested property is omitted; surrounding symbol questions suggest the symbols at those positions."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_7] Question: agent_7: property 𘏛 𗡕 values 𗶞 and 𗾌 is what?",
+      "hypothesis": "Question: agent_7: property 𘏛 𗡕 values 𗶞 and 𗾌 is what?",
+      "scoring_hypothesis": "Question: agent_7: property 𘏛 𗡕 values 𗶞 and 𗾌 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.11969459149116338
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 15,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𘚺 𗎶 𗅲 𗹕 𘚜 𗬵 𘚐 𘒳 𗥐 agent_0 𗃚 𘚺 𗛽 𗅲 𗹕 𗟆 𗬵 𘚐",
+      "reference": "The 'cold' symbol has base value 7. The 'white' symbol has base value 7.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "These are two distinct descriptions in the text. They may refer to one symbol, but the message does not explicitly say they are identical."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_0] Statement: agent_0: link 𗎶 property 𗅲 𗹕 is 𗬵. And agent_0: link 𗛽 property 𗅲 𗹕 is 𗬵.",
+      "hypothesis": "Statement: agent_0: link 𗎶 property 𗅲 𗹕 is 𗬵. And agent_0: link 𗛽 property 𗅲 𗹕 is 𗬵.",
+      "scoring_hypothesis": "Statement: agent_0: link 𗎶 property 𗅲 𗹕 is 𗬵. And agent_0: link 𗛽 property 𗅲 𗹕 is 𗬵.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14564920477200877
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 29,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 16,
+      "sender": "agent_6",
+      "source": "𗀉 𗪩 agent_6 𗼛 𗎶 𘚺 𗅲 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the base value of the 'cold' symbol?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The exact COLD-symbol referent is not defined."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Question: agent_6: 𗎶 link property 𗅲 𗹕 is what?",
+      "hypothesis": "Question: agent_6: 𗎶 link property 𗅲 𗹕 is what?",
+      "scoring_hypothesis": "Question: agent_6: 𗎶 link property 𗅲 𗹕 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12437567590191416
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 16,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 17,
+      "sender": "agent_1",
+      "source": "𗀉 𗪩 agent_1 𗼛 𗭵 𗤄 𘚜 agent_0 𗑸",
+      "reference": "agent_0, what private information do you know?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "SECRET DATA is private information. Its ownership and subject are not explicitly stated."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_1] Question: agent_1: who has info for agent_0?",
+      "hypothesis": "Question: agent_1: who has info for agent_0?",
+      "scoring_hypothesis": "Question: agent_1: who has info for agent_0?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.7812060980240596
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 18,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𘋉 𗜘 𘚺 𗅲 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the base value of the 'up-down' symbol?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "UP DOWN is an undefined compound label, not an explicitly named shape."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Question: agent_3: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "hypothesis": "Question: agent_3: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "scoring_hypothesis": "Question: agent_3: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10432001774982441
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 19,
+      "sender": "agent_2",
+      "source": "𗱓 𗪩 agent_2 𗼛 𘏛 𗜀 𘚜 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I propose submitting the box code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "Line 10 licenses the decimal number 2748. In this box-position context, four separate values (2, 7, 4, 8) are also plausible; no tuple separator distinguishes the readings."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Action/Submit: agent_2 submits Stage 0 solution: target sequence is [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_2 submits Stage 0 solution: target sequence is [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_2 submits Stage 0 solution: target sequence is [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26137823091639023
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 28,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 20,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":0}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":0}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":0}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":0}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":0}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 21,
+      "sender": "agent_4",
+      "source": "𗀉 𗪩 agent_4 𗼛 𘚺 𘋉 𗜘 𗅲 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the base value of the 'up-down' symbol?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SYMBOL UP DOWN is an improvised label; the precise symbol remains unspecified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_4] Question: agent_4: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "hypothesis": "Question: agent_4: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "scoring_hypothesis": "Question: agent_4: link 𘋉 𗜘 property 𗅲 𗹕 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10413943779350046
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 22,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𗎶 𘍧 𘚺 𗅲 𗹕 𘚜 𗬵 𘚐",
+      "reference": "The 'cold-light' symbol has base value 7.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "COLD LIGHT remains an undefined compound. This adds LIGHT to the earlier COLD and WHITE descriptions without explicitly declaring them equivalent."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_0] Statement: agent_0: 𗎶 𘍧 link property 𗅲 𗹕 is 𗬵.",
+      "hypothesis": "Statement: agent_0: 𗎶 𘍧 link property 𗅲 𗹕 is 𗬵.",
+      "scoring_hypothesis": "Statement: agent_0: 𗎶 𘍧 link property 𗅲 𗹕 is 𗬵.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1469286786550034
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 23,
+      "sender": "agent_6",
+      "source": "𗱓 𗪩 agent_6 𗼛 𗜀 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I propose submitting code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The reference licenses decimal 2748, but the public box-position discussion also permits a four-value sequence. The digits are included directly in the patient phrase, without a LOC marker."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Action/Submit: agent_6 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_6 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_6 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.24960976475504815
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 21,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 24,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":1}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":1}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":1}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":1}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":1}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 25,
+      "sender": "agent_5",
+      "source": "𗱓 𗪩 agent_5 𗼛 𘏛 𗜀 𘚜 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I propose submitting the box code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The decimal reading is explicitly licensed; a four-value sequence remains plausible in context. The proposal is preserved despite the preceding public stage change."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Action/Submit: agent_5 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_5 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_5 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.261190068796573
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 26,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":2}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":2}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":2}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":2}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":2}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 27,
+      "sender": "agent_7",
+      "source": "𘊌 𗪩 agent_7 𗼛 𗜀 𘚜 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I submit code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "This is ASSERT, not PROPOSE. The digits can denote decimal 2748 or, contextually, four values. Assertion of submission does not establish success."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_7] Action/Submit: agent_7 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_7 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_7 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.3608295282150912
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 28,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":3}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":3}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":3}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":3}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":3}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 29,
+      "sender": "agent_1",
+      "source": "𘊌 𗪩 agent_1 𗼛 𗜀 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I submit code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "This is ASSERT, not PROPOSE. Decimal 2748 and a contextual four-value sequence remain possible; no result is stated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_1] Action/Submit: agent_1 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_1 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_1 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.30204864498605805
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 19,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 30,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":4}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":4}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":4}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":4}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":4}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 31,
+      "sender": "agent_4",
+      "source": "𘊌 𗪩 agent_4 𗼛 𗪐 𗌩 𘚜 𗾌 𘚐",
+      "reference": "The cost of 'signal' is 3.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The units of the cost are not stated in this message."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_4] Statement: agent_4: node 𗪐 attribute is 𗾌.",
+      "hypothesis": "Statement: agent_4: node 𗪐 attribute is 𗾌.",
+      "scoring_hypothesis": "Statement: agent_4: node 𗪐 attribute is 𗾌.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.018910263729448883
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 32,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𘋍 𘍂 𘚜 𗪐 𗨞 𘚐",
+      "reference": "The rule for 'start' is 'signal beforehand'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SIGNAL BEFORE is read as signal preceding start; the reference does not give a formal argument-order rule for BEFORE. The precise mechanism associated with START or SIGNAL is not specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Statement: agent_6: node 𘋍 relation is node 𗪐 predecessor.",
+      "hypothesis": "Statement: agent_6: node 𘋍 relation is node 𗪐 predecessor.",
+      "scoring_hypothesis": "Statement: agent_6: node 𘋍 relation is node 𗪐 predecessor.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2096445619457326
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 33,
+      "sender": "agent_3",
+      "source": "𗱓 𗪩 agent_3 𗼛 𘏛 𗜀 𗶞 𗬵 𘇩 𗒏 𗋭",
+      "reference": "I propose submitting the box code 2748 (digit sequence 2, 7, 4, 8).",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The decimal number is licensed by line 10, while the position-based context permits a four-value sequence. The proposal remains a proposal even though earlier public attempts changed invalid_attempts."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Action/Submit: agent_3 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "hypothesis": "Action/Submit: agent_3 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "scoring_hypothesis": "Action/Submit: agent_3 submits stale sequence [𗶞, 𗬵, 𘇩, 𗒏].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2549086737261912
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 23,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 34,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":5}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":5}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":5}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":5}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":5}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 35,
+      "sender": "agent_5",
+      "source": "𘊌 𗪩 agent_5 𗼛 𗘺 𗌩 𘚜 𗶞 𗣎 𘚐",
+      "reference": "The cost of 'remove' is 2 resources.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "REMOVE is a lexical action name; the particular object or mechanism it refers to is not identified."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_5] Statement: agent_5: node 𗘺 attribute is [𗶞, 𗣎].",
+      "hypothesis": "Statement: agent_5: node 𗘺 attribute is [𗶞, 𗣎].",
+      "scoring_hypothesis": "Statement: agent_5: node 𗘺 attribute is [𗶞, 𗣎].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.04473198403369876
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 36,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𘝞 𘚜 𘁁 𘚄 𘒳 𗥐 agent_0 𗃚 𘋍 𗌩 𗟆 𗣎 𗶞 𘚄",
+      "reference": "The level equals 1. The cost of 'start' equals 2 resources.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "LEVEL includes stage or tier. START is preserved as the public action label; the message does not name a particular control."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_0] Statement: agent_0: clue is 𘁁. And agent_0: node 𘋍 attribute is [𗣎, 𗶞].",
+      "hypothesis": "Statement: agent_0: clue is 𘁁. And agent_0: node 𘋍 attribute is [𗣎, 𗶞].",
+      "scoring_hypothesis": "Statement: agent_0: clue is 𘁁. And agent_0: node 𘋍 attribute is [𗣎, 𗶞].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14291311971682114
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 17,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 37,
+      "sender": "agent_2",
+      "source": "𗀉 𗪩 agent_2 𗼛 𘝞 𘁁 𗤄 𘚜 𗘈 𗑸 𘊌 𗪩 agent_2 𗼛 𗪐 𗌩 𘚜 𗘺 𗾨 𘚐",
+      "reference": "Everyone, what information do you have about level 1? I have 'signal cost' associated with 'remove done'.",
+      "reference_confidence": "low",
+      "reference_ambiguities": [
+        "The second clause literally says SIGNAL COST at/to REMOVE DONE HAVE. It does not state a numeric cost or explicitly use RULE. Reading it as a prerequisite would repair the wording, so the relation is left unresolved."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Question: agent_2: clue 𘁁 who has it? Statement: agent_2: node 𗪐 attribute points to 𗘺.",
+      "hypothesis": "Question: agent_2: clue 𘁁 who has it? Statement: agent_2: node 𗪐 attribute points to 𗘺.",
+      "scoring_hypothesis": "Question: agent_2: clue 𘁁 who has it? Statement: agent_2: node 𗪐 attribute points to 𗘺.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.15740433422212344
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 38,
+      "sender": "agent_4",
+      "source": "𗀉 𗪩 agent_4 𗼛 𘝞 𘁁 𗤄 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what information do you have about level 1?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The query's subject is broad; it does not specify a particular rule or action."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_4] Question: agent_4: clue 𘁁 who has it?",
+      "hypothesis": "Question: agent_4: clue 𘁁 who has it?",
+      "scoring_hypothesis": "Question: agent_4: clue 𘁁 who has it?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2493873583862125
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 39,
+      "sender": "agent_5",
+      "source": "𗀉 𗪩 agent_5 𗼛 𗣎 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about the resource?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "RESOURCE can mean assets, fuel or points; neither a quantity nor a particular resource is specified."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_5] Question: agent_5: clue 𗣎 is what?",
+      "hypothesis": "Question: agent_5: clue 𗣎 is what?",
+      "scoring_hypothesis": "Question: agent_5: clue 𗣎 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.15310776920379537
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 40,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𗣎 𗅲 𗹕 𘚜 𘇩 𘚐",
+      "reference": "The base resource value is 4.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "RESOURCE BASE VALUE gives a starting or base amount, without naming the resource."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Statement: agent_3: 𗣎 property 𗅲 𗹕 is 𘇩.",
+      "hypothesis": "Statement: agent_3: 𗣎 property 𗅲 𗹕 is 𘇩.",
+      "scoring_hypothesis": "Statement: agent_3: 𗣎 property 𗅲 𗹕 is 𘇩.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1643349385293812
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 41,
+      "sender": "agent_6",
+      "source": "𗀉 𗪩 agent_6 𗼛 𗣎 𗹕 𗄼 𗁳 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about the resource value and adding?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "ADD could refer to an addition operation or the amount gained. The question does not explicitly provide either."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Question: agent_6: 𗣎 property and clue is what?",
+      "hypothesis": "Question: agent_6: 𗣎 property and clue is what?",
+      "scoring_hypothesis": "Question: agent_6: 𗣎 property and clue is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1892049647030707
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 42,
+      "sender": "agent_1",
+      "source": "𘊌 𗪩 agent_1 𗼛 𘆄 𗁳 𗣎 𘚜 𗾌 𘚐 𘒳 𗥐 agent_1 𗃚 𘆄 𗌩 𗟆 𗈵 𘚐",
+      "reference": "'Repeat' adds 3 resources. The cost of 'repeat' is 0.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "REPEAT ADD RESOURCE is a compressed expression interpreted as repeat producing an addition of resources. The exact action behind REPEAT is not defined."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_1] Statement: agent_1: node 𘆄 attribute 𗣎 is 𗾌. And agent_1: node 𘆄 attribute is 𗈵.",
+      "hypothesis": "Statement: agent_1: node 𘆄 attribute 𗣎 is 𗾌. And agent_1: node 𘆄 attribute is 𗈵.",
+      "scoring_hypothesis": "Statement: agent_1: node 𘆄 attribute 𗣎 is 𗾌. And agent_1: node 𘆄 attribute is 𗈵.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.14371341209324046
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 43,
+      "sender": "agent_7",
+      "source": "𘊌 𗪩 agent_7 𗼛 𘝞 𘁁 𗿋 𗀉 𗪩 agent_7 𗼛 𘝞 𘁁 𗤄 𘚜 𗘈 𗑸 𘊌 𗪩 agent_7 𗼛 𘍂 𗧬 𗘺 𗾨 𘍠 𘆄 𘅌",
+      "reference": "Level 1 is active. Everyone, what information do you have about level 1? Rule: if 'remove' is done, then execute 'repeat'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The condition is completion of REMOVE; it does not itself assert that REMOVE is complete. Specific mechanisms behind the action labels are not named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_7] Statement: agent_7: clue 𘁁 is noted. Question: agent_7: clue 𘁁 who has it? Statement: agent_7: relation points from 𗘺 to 𘆄.",
+      "hypothesis": "Statement: agent_7: clue 𘁁 is noted. Question: agent_7: clue 𘁁 who has it? Statement: agent_7: relation points from 𗘺 to 𘆄.",
+      "scoring_hypothesis": "Statement: agent_7: clue 𘁁 is noted. Question: agent_7: clue 𘁁 who has it? Statement: agent_7: relation points from 𗘺 to 𘆄.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17562250499992485
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 33,
+        "hypothesis": 38,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 44,
+      "sender": "agent_0",
+      "source": "𗀉 𗪩 agent_0 𗼛 𗅲 𗣎 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the base resource value?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "No particular resource is named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_0] Question: agent_0: property 𗣎 is what?",
+      "hypothesis": "Question: agent_0: property 𗣎 is what?",
+      "scoring_hypothesis": "Question: agent_0: property 𗣎 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.12369019117743786
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 11,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 45,
+      "sender": "agent_4",
+      "source": "𗀉 𗪩 agent_4 𗼛 𗭵 𗤄 𘚜 agent_1 𗄼 agent_3 𗄼 agent_7 𗑸",
+      "reference": "agent_1, agent_3 and agent_7, what private information do you know?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "SECRET DATA does not specify its subject or whose private data it is."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_4] Question: agent_4: who has info for agent_1 and agent_3 and agent_7?",
+      "hypothesis": "Question: agent_4: who has info for agent_1 and agent_3 and agent_7?",
+      "scoring_hypothesis": "Question: agent_4: who has info for agent_1 and agent_3 and agent_7?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.8684993789246022
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 21,
+        "hypothesis": 24,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 46,
+      "sender": "agent_2",
+      "source": "𘊌 𗪩 agent_2 𗼛 𗪐 𘍂 𘚜 𗘺 𗨞 𘚄 𗀉 𗥐 agent_2 𗃚 𗅲 𗣎 𗟆 𗘈 𗑸",
+      "reference": "The rule for 'signal' is 'remove beforehand'. Everyone, what do you know about the base resource?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "REMOVE BEFORE is interpreted as remove preceding signal, but BEFORE's argument order is not explicitly defined. The query does not explicitly include VALUE."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Statement: agent_2: node 𗪐 relation points to 𗘺. Question: agent_2: property 𗣎 is what?",
+      "hypothesis": "Statement: agent_2: node 𗪐 relation points to 𗘺. Question: agent_2: property 𗣎 is what?",
+      "scoring_hypothesis": "Statement: agent_2: node 𗪐 relation points to 𗘺. Question: agent_2: property 𗣎 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.18589353634096334
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 47,
+      "sender": "agent_5",
+      "source": "𗀉 𗪩 agent_5 𗼛 𗁳 𗤄 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what information do you have about adding?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "ADD DATA might mean information about the add action or the amount added; neither is specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Question: agent_5: attribute clue is what?",
+      "hypothesis": "Question: agent_5: attribute clue is what?",
+      "scoring_hypothesis": "Question: agent_5: attribute clue is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2181547076712379
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 48,
+      "sender": "agent_1",
+      "source": "𗀉 𗪩 agent_1 𗼛 𗘺 𘍂 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what is the rule for 'remove'?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The exact action or mechanism called REMOVE is not defined."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_1] Question: agent_1: node 𗘺 relation is what?",
+      "hypothesis": "Question: agent_1: node 𗘺 relation is what?",
+      "scoring_hypothesis": "Question: agent_1: node 𗘺 relation is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.10615783823665778
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 14,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 49,
+      "sender": "agent_6",
+      "source": "𗱓 𗪩 agent_6 𗼛 𗘺 𘅌 𘍠 𘆄 𘍠 𗪐 𘍠 𘋍",
+      "reference": "I propose executing 'remove', then 'repeat', then 'signal', then 'start'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Only REMOVE has an explicit EXECUTE verb; executing the later items is inferred by coordination. THEN clearly supplies the written sequence."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_6] Action/Propose: agent_6: proposal sequence [𗘺 -> 𘆄 -> 𗪐 -> 𘋍].",
+      "hypothesis": "Action/Propose: agent_6: proposal sequence [𗘺 -> 𘆄 -> 𗪐 -> 𘋍].",
+      "scoring_hypothesis": "Action/Propose: agent_6: proposal sequence [𗘺 -> 𘆄 -> 𗪐 -> 𘋍].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22499098610376567
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 25,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 50,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𘝞 𘁁 𗤄 𘚜 agent_7 𗑸",
+      "reference": "agent_7, what information do you have about level 1?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "No specific kind of level information is requested."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Question: agent_3: clue 𘁁 who has info, agent_7?",
+      "hypothesis": "Question: agent_3: clue 𘁁 who has info, agent_7?",
+      "scoring_hypothesis": "Question: agent_3: clue 𘁁 who has info, agent_7?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.6762845817416494
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 51,
+      "sender": "agent_2",
+      "source": "𗱓 𗪩 agent_2 𗼛 𗘺 𘅌",
+      "reference": "I propose executing 'remove'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The object or mechanism to which REMOVE refers is not stated."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_2] Action/Submit: agent_2 submits single node [𗘺].",
+      "hypothesis": "Action/Submit: agent_2 submits single node [𗘺].",
+      "scoring_hypothesis": "Action/Submit: agent_2 submits single node [𗘺].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.13757879182104854
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 17,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 52,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":6}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":6}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":6}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":6}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":6}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 53,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𗘺 𘅌 𗱓 𗪩 agent_0 𗼛 𗘺 𗘗 𘆄 𗘗 𗪐 𗘗 𘋍 𘅌",
+      "reference": "I execute 'remove'. I propose executing the chain 'remove AFTER/NEXT repeat AFTER/NEXT signal AFTER/NEXT start'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "AFTER is glossed 'later, next'. The chain may continue the order in message 49, but reading A AFTER B as a dependency reverses its execution order. The first clause asserts an action without asserting success."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_0] Statement: agent_0 confirms node 𗘺. Action/Submit: agent_0 submits sequence [𗘺, 𘆄, 𗪐, 𘋍].",
+      "hypothesis": "Statement: agent_0 confirms node 𗘺. Action/Submit: agent_0 submits sequence [𗘺, 𘆄, 𗪐, 𘋍].",
+      "scoring_hypothesis": "Statement: agent_0 confirms node 𗘺. Action/Submit: agent_0 submits sequence [𗘺, 𘆄, 𗪐, 𘋍].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22973246465746336
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 31,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 54,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":7}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":7}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":7}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":7}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":7}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 55,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𗘺 𗾨 𘒳 𗥐 agent_6 𗃚 𘆄 𘅌",
+      "reference": "'Remove' is done. I execute 'repeat'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "DONE is an asserted completion. The second clause does not assert that REPEAT succeeded; the text supplies no tense or action result."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_6] Statement: agent_6: from node 𗘺 step to node 𘆄.",
+      "hypothesis": "Statement: agent_6: from node 𗘺 step to node 𘆄.",
+      "scoring_hypothesis": "Statement: agent_6: from node 𗘺 step to node 𘆄.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.26125377505819325
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 56,
+      "sender": "agent_4",
+      "source": "𗱓 𗪩 agent_4 𗼛 𘙠 𘚜 𗘺 𗘗 𘆄 𗘗 𗪐 𗘗 𘋍 𗋭",
+      "reference": "I propose submitting the order 'remove AFTER/NEXT repeat AFTER/NEXT signal AFTER/NEXT start'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The AFTER/NEXT chain can represent the forward sequence in message 49 or reverse dependencies. SUBMIT is explicit; the message does not claim the order was accepted."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_4] Action/Submit: agent_4 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "hypothesis": "Action/Submit: agent_4 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "scoring_hypothesis": "Action/Submit: agent_4 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.21188472724686264
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 24,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 57,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":8}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":8}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":8}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":8}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":8}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 58,
+      "sender": "agent_7",
+      "source": "𘊌 𗪩 agent_7 𗼛 𘆄 𘍂 𘚜 𗘺 𗾨 𘚐 𗱓 𗥐 agent_7 𗃚 𘙠 𗘺 𗘗 𘆄 𗘗 𗪐 𗘗 𘋍 𘅌",
+      "reference": "The rule for 'repeat' is 'remove done'. I propose executing the order 'remove AFTER/NEXT repeat AFTER/NEXT signal AFTER/NEXT start'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The rule is naturally a prerequisite, but its relation is only HAVE with REMOVE DONE. AFTER/NEXT does not unambiguously determine forward versus reverse execution order."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_7] Statement: agent_7: node 𘆄 points to 𗘺. Action/Submit: agent_7 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "hypothesis": "Statement: agent_7: node 𘆄 points to 𗘺. Action/Submit: agent_7 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "scoring_hypothesis": "Statement: agent_7: node 𘆄 points to 𗘺. Action/Submit: agent_7 submits sequence vector [𗘺, 𘆄, 𗪐, 𘋍].",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1876161497626996
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 35,
+        "hypothesis": 35,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 59,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":9}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":9}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":9}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":9}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":9}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 60,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𗣎 𗹕 𘚜 𗶞 𘚐 𘒳 𗥐 agent_3 𗃚 𘆄 𘅌",
+      "reference": "The resource value is 2. I execute 'repeat'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The second clause asserts execution, not completion or success. No particular resource is named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘆄.",
+      "hypothesis": "Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘆄.",
+      "scoring_hypothesis": "Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘆄.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2760517163982002
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 61,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":10}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":10}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":10}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":10}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":10}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 62,
+      "sender": "agent_1",
+      "source": "𘚑 𗪩 agent_1 𗼛 𗱓 𘉝 𗄪 𗊑 𘒳 𗥐 agent_1 𗃚 𗘺 𘅌",
+      "reference": "I agree with the proposal. I execute 'remove'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The agreement clause matches the frozen reference example, including the separate AGREE_ACTION verb. The proposal being accepted is not identified, and execution is not a success claim."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_1] Alert: agent_1 warns invalid submission format. And agent_1: select node 𗘺.",
+      "hypothesis": "Alert: agent_1 warns invalid submission format. And agent_1: select node 𗘺.",
+      "scoring_hypothesis": "Alert: agent_1 warns invalid submission format. And agent_1: select node 𗘺.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1409083467942594
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 21,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 63,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":11}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":11}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":11}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":11}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":11}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 64,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𘆄 𗾨 𘒳 𗥐 agent_6 𗃚 𗪐 𘅌",
+      "reference": "'Repeat' is done. I execute 'signal'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Completion is asserted for REPEAT only; no result of executing SIGNAL is stated."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_6] Statement: agent_6: from node 𘆄 step to node 𗪐.",
+      "hypothesis": "Statement: agent_6: from node 𘆄 step to node 𗪐.",
+      "scoring_hypothesis": "Statement: agent_6: from node 𘆄 step to node 𗪐.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.29085700669219694
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 65,
+      "sender": "agent_2",
+      "source": "𗀉 𗪩 agent_2 𗼛 𗭵 𗤄 𘚜 agent_7 𗑸 𘊌 𗪩 agent_2 𗼛 𗘺 𘅌 𗳵",
+      "reference": "agent_7, what private information do you know? Execution of 'remove' fails.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "No tense is marked. FAIL may denote failure, abort or error; the reason is omitted."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_2] Question: agent_2: who has info for agent_7? Statement: agent_2: node 𗘺 is first.",
+      "hypothesis": "Question: agent_2: who has info for agent_7? Statement: agent_2: node 𗘺 is first.",
+      "scoring_hypothesis": "Question: agent_2: who has info for agent_7? Statement: agent_2: node 𗘺 is first.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.5497203558515265
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 20,
+        "hypothesis": 27,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 66,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𗣎 𗹕 𘚜 𗊓 𘚐 𘒳 𗥐 agent_3 𗃚 𗪐 𘅌",
+      "reference": "The resource value is 5. I execute 'signal'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The second clause does not state a result, and no particular resource is named."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Statement: agent_3: property 𗣎 is 𗊓. And agent_3: step node 𗪐.",
+      "hypothesis": "Statement: agent_3: property 𗣎 is 𗊓. And agent_3: step node 𗪐.",
+      "scoring_hypothesis": "Statement: agent_3: property 𗣎 is 𗊓. And agent_3: step node 𗪐.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.24286927899478777
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 67,
+      "sender": "task",
+      "source": "{\"stage\":1,\"invalid_attempts\":12}",
+      "reference": "{\"stage\":1,\"invalid_attempts\":12}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":1,\"invalid_attempts\":12}",
+      "hypothesis": "{\"stage\":1,\"invalid_attempts\":12}",
+      "scoring_hypothesis": "{\"stage\":1,\"invalid_attempts\":12}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 68,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𗪐 𗾨 𘒳 𗥐 agent_6 𗃚 𘋍 𘅌",
+      "reference": "'Signal' is done. I execute 'start'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Completion is asserted for SIGNAL only. The message does not itself assert that START succeeded."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_6] Statement: agent_6: from node 𗪐 step to node 𘋍.",
+      "hypothesis": "Statement: agent_6: from node 𗪐 step to node 𘋍.",
+      "scoring_hypothesis": "Statement: agent_6: from node 𗪐 step to node 𘋍.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.27590117799527214
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 69,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":12}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":12}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":2,\"invalid_attempts\":12}",
+      "hypothesis": "{\"stage\":2,\"invalid_attempts\":12}",
+      "scoring_hypothesis": "{\"stage\":2,\"invalid_attempts\":12}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 70,
+      "sender": "agent_5",
+      "source": "𘊌 𗪩 agent_5 𗼛 𗘺 𘍂 𘚜 𗲅 𘚄 𗱓 𗥐 agent_5 𗃚 𘙠 𗟆 𗘺 𗘗 𘆄 𗘗 𗪐 𗘗 𘋍 𗱓 𗪩 agent_5 𗼛 𗘺 𘅌",
+      "reference": "The rule for 'remove' equals none. I propose the order 'remove AFTER/NEXT repeat AFTER/NEXT signal AFTER/NEXT start'. I propose executing 'remove'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "NONE can mean no rule, zero or an empty condition; 'no prerequisite' is a contextual reading. The middle proposal omits a final predicate. AFTER/NEXT leaves execution direction ambiguous."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Statement: agent_5: node 𗘺 relation is 𗲅. Action/Submit: agent_5 submits sequence [𗘺, 𘆄, 𗪐, 𘋍] and node 𗘺.",
+      "hypothesis": "Statement: agent_5: node 𗘺 relation is 𗲅. Action/Submit: agent_5 submits sequence [𗘺, 𘆄, 𗪐, 𘋍] and node 𗘺.",
+      "scoring_hypothesis": "Statement: agent_5: node 𗘺 relation is 𗲅. Action/Submit: agent_5 submits sequence [𗘺, 𘆄, 𗪐, 𘋍] and node 𗘺.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2371778570973643
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 38,
+        "hypothesis": 37,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 71,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":13}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":13}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":2,\"invalid_attempts\":13}",
+      "hypothesis": "{\"stage\":2,\"invalid_attempts\":13}",
+      "scoring_hypothesis": "{\"stage\":2,\"invalid_attempts\":13}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 72,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𗘺 𗳵 𗏶 𗥐 agent_0 𗃚 𘆄 𘅌",
+      "reference": "'Remove' fails. I propose executing 'repeat'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "FAIL can mean failure, abort or error; no cause or tense is specified. The second clause remains a proposal."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_0] Statement: agent_0: node 𗘺 first, then agent_0: step node 𘆄.",
+      "hypothesis": "Statement: agent_0: node 𗘺 first, then agent_0: step node 𘆄.",
+      "scoring_hypothesis": "Statement: agent_0: node 𗘺 first, then agent_0: step node 𘆄.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.21712514641598607
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 21,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 73,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":14}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":14}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":2,\"invalid_attempts\":14}",
+      "hypothesis": "{\"stage\":2,\"invalid_attempts\":14}",
+      "scoring_hypothesis": "{\"stage\":2,\"invalid_attempts\":14}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 74,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𗣎 𗹕 𘚜 𗶞 𘚐 𘒳 𗥐 agent_3 𗃚 𘋍 𘅌",
+      "reference": "The resource value is 2. I execute 'start'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The public status already indicates level 2, but this message still asserts START; it is not rewritten as a different action or a successful one."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘋍.",
+      "hypothesis": "Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘋍.",
+      "scoring_hypothesis": "Statement: agent_3: property 𗣎 is 𗶞. And agent_3: step node 𘋍.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.25455314875165463
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 22,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 75,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":15}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":15}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":2,\"invalid_attempts\":15}",
+      "hypothesis": "{\"stage\":2,\"invalid_attempts\":15}",
+      "scoring_hypothesis": "{\"stage\":2,\"invalid_attempts\":15}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 76,
+      "sender": "agent_6",
+      "source": "𘊌 𗪩 agent_6 𗼛 𘝞 𗶞 𗿋 𘒳 𗥐 agent_6 𗃚 𗍽 𗊓 𗁳 𗹕 𗟆 𗾌 𘚐 𗀉 𗪩 agent_6 𗼛 𗇽 𘚺 𗄼 𗁳 𗹕 𘚜 𗘈 𗑸",
+      "reference": "Level 2 is active. 'Shape 5' has an added value of 3. Everyone, what are the door symbols and added values?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SHAPE 5 remains an undefined numeric shape label. ADD VALUE may be an increment, contribution or value associated with adding; the message does not specify an arithmetic formula."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Statement: agent_6: clue 𗶞 noted. And agent_6: property 𗍽 𗊓 is 𗾌. Question: agent_6: category 𗇽 and clue is what?",
+      "hypothesis": "Statement: agent_6: clue 𗶞 noted. And agent_6: property 𗍽 𗊓 is 𗾌. Question: agent_6: category 𗇽 and clue is what?",
+      "scoring_hypothesis": "Statement: agent_6: clue 𗶞 noted. And agent_6: property 𗍽 𗊓 is 𗾌. Question: agent_6: category 𗇽 and clue is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.3531674540405264
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 29,
+        "hypothesis": 36,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 77,
+      "sender": "agent_4",
+      "source": "𘊌 𗪩 agent_4 𗼛 𗘺 𗳵 𗱓 𗪩 agent_4 𗼛 𘆄 𘅌",
+      "reference": "'Remove' fails. I propose executing 'repeat'.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "FAIL gives no reason. The proposal is preserved even though the public status has changed to level 2."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_4] Statement: agent_4: node 𗘺 is first. Action: agent_4: step node 𘆄.",
+      "hypothesis": "Statement: agent_4: node 𗘺 is first. Action: agent_4: step node 𘆄.",
+      "scoring_hypothesis": "Statement: agent_4: node 𗘺 is first. Action: agent_4: step node 𘆄.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2165467159543167
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 23,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 78,
+      "sender": "task",
+      "source": "{\"stage\":2,\"invalid_attempts\":16}",
+      "reference": "{\"stage\":2,\"invalid_attempts\":16}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":2,\"invalid_attempts\":16}",
+      "hypothesis": "{\"stage\":2,\"invalid_attempts\":16}",
+      "scoring_hypothesis": "{\"stage\":2,\"invalid_attempts\":16}",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    },
+    {
+      "id": 79,
+      "sender": "agent_5",
+      "source": "𘊌 𗪩 agent_5 𗼛 𗇽 𗡕 𗶞 𘚜 𗍽 𗊓 𘚐 𗀉 𗥐 agent_5 𗃚 𗇽 𗤄 𗟆 𗘈 𗑸",
+      "reference": "Door position 2 has 'shape 5'. Everyone, what information do you have about the door?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "SHAPE 5 is not explicitly defined as a particular geometric shape. DOOR POSITION may be a position on a door or a numbered door location."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Statement: agent_5: category 𗇽 property [𗡕 𗶞] is 𗍽 𗊓. Question: agent_5: category 𗇽 who has it?",
+      "hypothesis": "Statement: agent_5: category 𗇽 property [𗡕 𗶞] is 𗍽 𗊓. Question: agent_5: category 𗇽 who has it?",
+      "scoring_hypothesis": "Statement: agent_5: category 𗇽 property [𗡕 𗶞] is 𗍽 𗊓. Question: agent_5: category 𗇽 who has it?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.11061677348001332
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 31,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 80,
+      "sender": "agent_1",
+      "source": "𗱓 𗪩 agent_1 𗼛 𗘈 𗡑 𗸽",
+      "reference": "I propose that all agents wait.",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The duration and stopping condition for waiting are not stated."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_1] Action: agent_1 acknowledges unknown state / pause.",
+      "hypothesis": "Action: agent_1 acknowledges unknown state / pause.",
+      "scoring_hypothesis": "Action: agent_1 acknowledges unknown state / pause.",
+      "prediction_status": "partial_unknown",
+      "decoder_contains_unknown": true,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.5485770136048459
+      },
+      "historical_prediction_status": "partial_unknown",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 9,
+        "hypothesis": 13,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 81,
+      "sender": "agent_2",
+      "source": "𗀉 𗪩 agent_2 𗼛 𗘺 𘍂 𗄼 𗅲 𗣎 𘚜 agent_3 𗄼 agent_5 𗑸",
+      "reference": "agent_3 and agent_5, what do you know about the rule for 'remove' and the base resource?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The message does not allocate one question to each recipient or explicitly include a numeric VALUE."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_2] Question: agent_2: node 𗘺 relation and property 𗣎 belongs to agent_3 and agent_5?",
+      "hypothesis": "Question: agent_2: node 𗘺 relation and property 𗣎 belongs to agent_3 and agent_5?",
+      "scoring_hypothesis": "Question: agent_2: node 𗘺 relation and property 𗣎 belongs to agent_3 and agent_5?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.6058328454784517
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 24,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 82,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𗎶 𘍧 𘆎 𗁳 𘚜 𗶞 𘚐 𗀉 𗥐 agent_0 𗃚 𗇽 𘚺 𗟆 𗘈 𗑸",
+      "reference": "'Cold-light' has a new addition of 2. Everyone, what are the door symbols?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "COLD LIGHT remains an undefined symbol label. NEW ADD is interpreted as a new increment; its target or arithmetic role is unstated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_0] Statement: agent_0: attribute 𗎶 𘍧 is 𗶞. Question: agent_0: category 𗇽 link is what?",
+      "hypothesis": "Statement: agent_0: attribute 𗎶 𘍧 is 𗶞. Question: agent_0: category 𗇽 link is what?",
+      "scoring_hypothesis": "Statement: agent_0: attribute 𗎶 𘍧 is 𗶞. Question: agent_0: category 𗇽 link is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.22415099022968266
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 22,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 83,
+      "sender": "agent_3",
+      "source": "𘊌 𗪩 agent_3 𗼛 𗇽 𗡕 𘁁 𘚜 𗷤 𗉞 𘚐 𗀉 𗥐 agent_3 𗃚 𗷤 𗉞 𗁳 𗹕 𗟆 𗘈 𗑸",
+      "reference": "Door position 1 has 'blue-move'. Everyone, what is the added value for 'blue-move'?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "BLUE MOVE is an improvised label, not a dictionary-defined pictured symbol. ADD VALUE may mean an increment or another value associated with adding."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_3] Statement: agent_3: category 𗇽 property [𗡕 𘁁] is 𗷤 𗉞. Question: agent_3: attribute 𗷤 𗉞 is what?",
+      "hypothesis": "Statement: agent_3: category 𗇽 property [𗡕 𘁁] is 𗷤 𗉞. Question: agent_3: attribute 𗷤 𗉞 is what?",
+      "scoring_hypothesis": "Statement: agent_3: category 𗇽 property [𗡕 𘁁] is 𗷤 𗉞. Question: agent_3: attribute 𗷤 𗉞 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17027624874883016
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 31,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 84,
+      "sender": "agent_4",
+      "source": "𘊌 𗪩 agent_4 𗼛 𘅪 𘚺 𘆎 𗁳 𘚜 𘇩 𘚐",
+      "reference": "The 'hot' symbol has a new addition of 4.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "NEW ADD is interpreted as an increment, but the quantity to which it applies is not explicitly stated. HOT does not identify a particular symbol."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_4] Statement: agent_4: clue 𘅪 link attribute is 𘇩.",
+      "hypothesis": "Statement: agent_4: clue 𘅪 link attribute is 𘇩.",
+      "scoring_hypothesis": "Statement: agent_4: clue 𘅪 link attribute is 𘇩.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.3204880124402666
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 14,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 85,
+      "sender": "agent_6",
+      "source": "𗱓 𗪩 agent_6 𗼛 𘅌 𘆮 𗀉 𗥐 agent_6 𗃚 𗇽 𘚺 𗄼 𗁳 𗹕 𘚜 𗘈 𗑸",
+      "reference": "I propose stopping execution. Everyone, what are the door symbols and added values?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "EXECUTE STOP can mean stop performing actions or execute a stop operation. ADD VALUE does not specify a formula or target amount."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_6] Action: agent_6 marks complete. Question: agent_6: category 𗇽 link and property is what?",
+      "hypothesis": "Action: agent_6 marks complete. Question: agent_6: category 𗇽 link and property is what?",
+      "scoring_hypothesis": "Action: agent_6 marks complete. Question: agent_6: category 𗇽 link and property is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.252045929636995
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 18,
+        "hypothesis": 24,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 86,
+      "sender": "agent_5",
+      "source": "𗀉 𗪩 agent_5 𗼛 𗇽 𗡕 𘁁 𗄼 𗾌 𗄼 𘇩 𘚜 𗘈 𗑸 𘆣 𗥐 agent_5 𗃚 𘅪 𗄼 𗷤 𗉞 𗁳 𗹕 𗟆 𗘈 𗑸",
+      "reference": "Everyone, what do you know about door positions 1, 3 and 4? Everyone, what are the added values for 'hot' and 'blue-move'?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "The first query omits SYMBOL. In the second query, ADD VALUE is read as applying to both HOT and BLUE MOVE, but compound scope is not formally specified."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_5] Question: agent_5: category 𗇽 values [𘁁, 𗾌, 𘇩] is what? Alternative: agent_5: clue 𘅪 and 𗷤 𗉞 is what?",
+      "hypothesis": "Question: agent_5: category 𗇽 values [𘁁, 𗾌, 𘇩] is what? Alternative: agent_5: clue 𘅪 and 𗷤 𗉞 is what?",
+      "scoring_hypothesis": "Question: agent_5: category 𗇽 values [𘁁, 𗾌, 𘇩] is what? Alternative: agent_5: clue 𘅪 and 𗷤 𗉞 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.20612176694102127
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 35,
+        "hypothesis": 35,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 87,
+      "sender": "agent_2",
+      "source": "𘊌 𗪩 agent_2 𗼛 𗷤 𗉞 𘆎 𗁳 𘚜 𘁁 𘚐 𗀉 𗥐 agent_2 𗃚 𗇽 𗡕 𘚺 𗟆 𗘈 𗑸",
+      "reference": "'Blue-move' has a new addition of 1. Everyone, what are the symbols at the door positions?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "BLUE MOVE has an unknown pictured referent. NEW ADD may mean an increment; the affected quantity is not stated."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_2] Statement: agent_2: attribute 𗷤 𗉞 is 𘁁. Question: agent_2: category 𗇽 property is what?",
+      "hypothesis": "Statement: agent_2: attribute 𗷤 𗉞 is 𘁁. Question: agent_2: category 𗇽 property is what?",
+      "scoring_hypothesis": "Statement: agent_2: attribute 𗷤 𗉞 is 𘁁. Question: agent_2: category 𗇽 property is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.23717653100512479
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 26,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 88,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𗇽 𗡕 𗾌 𗄼 𘇩 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about door positions 3 and 4?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The requested property is omitted; symbols are suggested by the surrounding public queries."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Question: agent_3: category 𗇽 values [𗾌, 𘇩] is what?",
+      "hypothesis": "Question: agent_3: category 𗇽 values [𗾌, 𘇩] is what?",
+      "scoring_hypothesis": "Question: agent_3: category 𗇽 values [𗾌, 𘇩] is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.2161822231187507
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 89,
+      "sender": "agent_1",
+      "source": "𘊌 𗪩 agent_1 𗼛 𗇽 𗡕 𗾌 𘚜 𗎶 𘍧 𘚐",
+      "reference": "Door position 3 has 'cold-light'.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "COLD LIGHT is an undefined label; LIGHT is not separately defined as illumination."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_1] Statement: agent_1: category 𗇽 property 𗾌 is 𗎶 𘍧.",
+      "hypothesis": "Statement: agent_1: category 𗇽 property 𗾌 is 𗎶 𘍧.",
+      "scoring_hypothesis": "Statement: agent_1: category 𗇽 property 𗾌 is 𗎶 𘍧.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1538399039707745
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 12,
+        "hypothesis": 16,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 90,
+      "sender": "agent_6",
+      "source": "𗀉 𗪩 agent_6 𗼛 𗇽 𗡕 𗾌 𗄼 𘇩 𘚺 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what are the symbols at door positions 3 and 4?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "SYMBOL is read as applying to both positions; the exact symbols are requested, not supplied."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_6] Question: agent_6: category 𗇽 values [𗾌, 𘇩] link is what?",
+      "hypothesis": "Question: agent_6: category 𗇽 values [𗾌, 𘇩] link is what?",
+      "scoring_hypothesis": "Question: agent_6: category 𗇽 values [𗾌, 𘇩] link is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.31838199595543487
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 20,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 91,
+      "sender": "agent_5",
+      "source": "𗀉 𗪩 agent_5 𗼛 𗇽 𗡕 𗾌 𗄼 𘇩 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about door positions 3 and 4?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The requested property is omitted; surrounding questions suggest symbols."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_5] Question: agent_5: category 𗇽 values [𗾌, 𘇩] is what?",
+      "hypothesis": "Question: agent_5: category 𗇽 values [𗾌, 𘇩] is what?",
+      "scoring_hypothesis": "Question: agent_5: category 𗇽 values [𗾌, 𘇩] is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.1646635911023988
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 19,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 92,
+      "sender": "agent_4",
+      "source": "𗀉 𗪩 agent_4 𗼛 𗇽 𗡕 𗾌 𗄼 𘇩 𘚺 𘚜 𗘈 𗑸 𘒳 𗥐 agent_4 𗃚 𘅪 𘚺 𘆎 𗁳 𗟆 𘇩 𘚐",
+      "reference": "Everyone, what are the symbols at door positions 3 and 4? The 'hot' symbol has a new addition of 4.",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "HOT is an undefined symbol label, and NEW ADD leaves its arithmetic target implicit. The first clause requests symbols rather than asserting their identities."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_4] Question: agent_4: category 𗇽 values [𗾌, 𘇩] link is what? And agent_4: clue 𘅪 link attribute is 𘇩.",
+      "hypothesis": "Question: agent_4: category 𗇽 values [𗾌, 𘇩] link is what? And agent_4: clue 𘅪 link attribute is 𘇩.",
+      "scoring_hypothesis": "Question: agent_4: category 𗇽 values [𗾌, 𘇩] link is what? And agent_4: clue 𘅪 link attribute is 𘇩.",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.37326476552058074
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 27,
+        "hypothesis": 32,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 93,
+      "sender": "agent_7",
+      "source": "𗀉 𗪩 agent_7 𗼛 𗣎 𗹕 𘚜 agent_3 𗑸 𘆣 𗥐 agent_7 𗃚 𗘺 𗌩 𗟆 agent_5 𗑸",
+      "reference": "agent_3, what is the resource value? agent_5, what is the cost of 'remove'?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "Neither the particular resource nor the cost units are stated in this message."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_7] Question: agent_7: property 𗣎 is agent_3? Alternative: agent_7: node 𗘺 attribute is agent_5?",
+      "hypothesis": "Question: agent_7: property 𗣎 is agent_3? Alternative: agent_7: node 𗘺 attribute is agent_5?",
+      "scoring_hypothesis": "Question: agent_7: property 𗣎 is agent_3? Alternative: agent_7: node 𗘺 attribute is agent_5?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.4773465617757057
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 25,
+        "hypothesis": 29,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 94,
+      "sender": "agent_3",
+      "source": "𗀉 𗪩 agent_3 𗼛 𗇽 𗡕 𘇩 𘚜 𗘈 𗑸",
+      "reference": "Everyone, what do you know about door position 4?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The requested property is omitted; the surrounding public discussion suggests its symbol."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_3] Question: agent_3: category 𗇽 value 𘇩 is what?",
+      "hypothesis": "Question: agent_3: category 𗇽 value 𘇩 is what?",
+      "scoring_hypothesis": "Question: agent_3: category 𗇽 value 𘇩 is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.17821529858551927
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 13,
+        "hypothesis": 15,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 95,
+      "sender": "agent_0",
+      "source": "𘊌 𗪩 agent_0 𗼛 𗎶 𘍧 𗜀 𘚜 𗡒 𘚐 𗀉 𗥐 agent_0 𗃚 𗇽 𗡕 𘁁 𗄼 𗾌 𗄼 𘇩 𗟆 𗘈 𗑸",
+      "reference": "'Cold-light' has code 9. Everyone, what do you know about door positions 1, 3 and 4?",
+      "reference_confidence": "medium",
+      "reference_ambiguities": [
+        "CODE is explicit and is not replaced with BASE VALUE or ADD VALUE. COLD LIGHT is an undefined label. The question does not explicitly name symbols."
+      ],
+      "reference_uncertain_or_partial": true,
+      "hypothesis_original": "[agent_0] Statement: agent_0: attribute 𗎶 𘍧 answer is 𗡒. Question: agent_0: category 𗇽 values [𘁁, 𗾌, 𘇩] is what?",
+      "hypothesis": "Statement: agent_0: attribute 𗎶 𘍧 answer is 𗡒. Question: agent_0: category 𗇽 values [𘁁, 𗾌, 𘇩] is what?",
+      "scoring_hypothesis": "Statement: agent_0: attribute 𗎶 𘍧 answer is 𗡒. Question: agent_0: category 𗇽 values [𘁁, 𗾌, 𘇩] is what?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.19495931422598298
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 26,
+        "hypothesis": 34,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 96,
+      "sender": "agent_1",
+      "source": "𗀉 𗪩 agent_1 𗼛 𗇽 𗡕 𘇩 𘚜 agent_7 𗑸",
+      "reference": "agent_7, what do you know about door position 4?",
+      "reference_confidence": "high",
+      "reference_ambiguities": [
+        "The requested property is omitted; the surrounding public discussion suggests its symbol."
+      ],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[agent_1] Question: agent_1: category 𗇽 value 𘇩 belongs to agent_7?",
+      "hypothesis": "Question: agent_1: category 𗇽 value 𘇩 belongs to agent_7?",
+      "scoring_hypothesis": "Question: agent_1: category 𗇽 value 𘇩 belongs to agent_7?",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": null,
+      "scorable": true,
+      "included_in_primary_mean": true,
+      "scores": {
+        "cosine": 0.42855325021124496
+      },
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null,
+      "embedding_tokens": {
+        "reference": 15,
+        "hypothesis": 18,
+        "max_seq_length": 256,
+        "reference_truncated": false,
+        "hypothesis_truncated": false
+      }
+    },
+    {
+      "id": 97,
+      "sender": "task",
+      "source": "{\"stage\":3,\"invalid_attempts\":16}",
+      "reference": "{\"stage\":3,\"invalid_attempts\":16}",
+      "reference_confidence": "high",
+      "reference_ambiguities": [],
+      "reference_uncertain_or_partial": false,
+      "hypothesis_original": "[task] {\"stage\":3,\"invalid_attempts\":16}\n---",
+      "hypothesis": "{\"stage\":3,\"invalid_attempts\":16} ---",
+      "scoring_hypothesis": "{\"stage\":3,\"invalid_attempts\":16} ---",
+      "prediction_status": "present",
+      "decoder_contains_unknown": false,
+      "excluded_reason": "task_status",
+      "scorable": false,
+      "included_in_primary_mean": false,
+      "scores": null,
+      "historical_prediction_status": "present",
+      "historical_unknown_reason": null
+    }
+  ],
+  "embedding_truncation": {
+    "measured_pairs": 77,
+    "reference_lines_truncated": 0,
+    "hypothesis_lines_truncated": 0
+  },
+  "metric_definition": {
+    "cosine": "Arithmetic mean of paired MiniLM cosine against public-message English references; decoder 'unknown' answers and structural glosses are embedded as ordinary text. Task status, discarded messages, and unscorable references are excluded. Not percent accuracy.",
+    "unknown_detection": "Lexical flags are descriptive only; do not alter text or score inclusion.",
+    "missing": "Historical cells must have complete alignment. Fresh follow-ups may retain missing entries as unscored with coverage shown; no invented text.",
+    "historical_classifications": "Retained for audit only; do not alter text or score inclusion."
+  }
+}
