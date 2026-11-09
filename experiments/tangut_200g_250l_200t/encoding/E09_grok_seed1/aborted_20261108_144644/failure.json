@@ -1,0 +1,30 @@
+{
+  "status": "aborted_by_operator",
+  "aborted_at": "2026-11-08T16:20 local (23:20 UTC), about 94 min after launch",
+  "reason": "Emma cancelled the run after the analysis at 93 minutes: no agent had set done; agents patched the draft they saw (line similarity 0.8-0.9) but 6-8 minute turns with eight concurrent writers made last-writer-wins thrash between lineages; one draft in eight decoded to non-Tangut garbage because Grok wrote the glyphs as JSON escapes numbered from an arbitrary base; surrogate poisonings every 5-20 minutes each burned 1-4 scheduled turns and lost the call record. The process ran on the partial surrogate fix (raw text only). A latency test on a logged turn showed low effort cuts reasoning from 46k to 9.9k tokens and latency from 642 s to 122 s (smoke_test/latency_result_2026-11-08.json).",
+  "logged_calls": 59,
+  "chat_messages": 64,
+  "errors": 17,
+  "unlogged_replies": 5,
+  "applied_documents": 58,
+  "garbage_documents": 7,
+  "done_flags_at_abort": 0,
+  "scheduled_turns_consumed_approx": 76,
+  "logged_cost_usd": 20.1172,
+  "key_spend": {
+    "primary_key_to_exhaustion_usd": 7.99,
+    "fallback_key_delta_usd_including_0.53_tests": 18.51
+  },
+  "per_turn_observed": {
+    "reasoning_tokens_mean": 45794,
+    "latency_s_mean": 563,
+    "latency_s_max": 2619,
+    "cost_usd_mean": 0.341
+  },
+  "last_applied_draft": {
+    "agent_turn": "agent_6 t10",
+    "lines": 81,
+    "garbage": true
+  },
+  "not_a_receipt": "Preserved as a failure; not a source for any later phase."
+}

@@ -1,0 +1,34 @@
+{
+  "id": "D17",
+  "stage": "decoding",
+  "owner": "emma_krentz",
+  "model": "x-ai/grok-4.7",
+  "encoder_family": "grok",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "R09",
+  "condition": "no_task",
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "allow_turn_limited_gameplay_source": true,
+  "protocol_differences": [
+    {
+      "field": "request_timeout_s",
+      "protocol": 300,
+      "value": 1800,
+      "reason": "Grok 4.7 turns in E09 ran 620-880 s at medium effort (45k reasoning tokens on average), so 900 s risked SDK retries of generations the provider may still bill. Raised to 1800 s on 2026-11-08."
+    },
+    {
+      "field": "reasoning_effort",
+      "protocol": "medium",
+      "value": "low",
+      "reason": "Chosen by Emma on 2026-11-08 after two cancelled medium-effort attempts: on the same logged turn, medium used 45,958 reasoning tokens in 642 s for $0.36 and low used 9,901 in 122 s for $0.11 with clean glyphs; a reasoning token budget was ignored. Precedent for a per-model effort: DeepSeek V4-Pro ran at high."
+    },
+    {
+      "field": "monitor_reasoning_effort",
+      "protocol": "medium",
+      "value": "low",
+      "reason": "Same choice as reasoning_effort; Grok decoders and Grok phases run at low. Sol decoders keep medium."
+    }
+  ]
+}

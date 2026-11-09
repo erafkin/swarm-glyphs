@@ -1,0 +1,287 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a recovered copy. Confidence labels concern decoding from the log, not merely agreement with the supplied puzzle solution. Much of the productive vocabulary remains unknown. In particular, the conspicuous two-glyph names are locally coined labels, not a fixed Swarmish dictionary of celestial objects.
+
+A. Writing and message construction
+• [HIGH] Spaces separate most units. Two-glyph strings are repeatedly introduced and subsequently reused as names. A name can collide with another speaker's independently introduced name.
+• [HIGH] 𗛢 introduces/defines a name or referent. Typical construction: 𗛢 NAME 𘚐 𗌈 𗶞 … 𗢬 NAME 𗶞 TYPE. Exact declaration syntax is incompletely recovered.
+• [HIGH] 𗶞 and 𘂲 function as relational/clause separators, often rendered “is,” “=,” or “:”. Both occur in essentially the same proposition patterns. Whether their alternation is freely optional or governed by an unrecovered convention is unknown.
+• [HIGH] 𘋍 and 𘚐 delimit clauses/constituents. Their precise distinction is unknown.
+• [HIGH] 𗐪 and 𗘈 alternate very regularly between successive clauses, including long property lists. They are linking/structural units; no secure difference in propositional meaning is recovered. Do not translate them as different task objects.
+• [MEDIUM] 𘍧 is a genitive/attribute linker, approximately “of/'s.” X 𘍧 𗄼 is X's number/digit; position-N 𘍧 𗌿 is the symbol at position N.
+• [MEDIUM] 𗢬 introduces an entity's property/content: 𗢬 X 𘍧 𗄼 𗶞 Y ≈ “X's digit is Y”; 𗢬 X 𗶞 Y ≈ “X has property/is Y.” Its exact lexical gloss may be broader than “property.”
+• [MEDIUM] 𗌈 = I/me, supported by private-clue assertions and requests apparently directed “to me.” [MEDIUM] 𗕴 ≈ you/your; number is unresolved. Its occurrence in a source/participant slot parallel to self and named agents supports a participant pronoun, not a word for code or collective group.
+• [MEDIUM] 𗏔 introduces evidence/source, often followed by self (𗌈) or a named agent. It also occurs in a truth-like position inside some propositions, so a single English substitution is unsafe.
+• [MEDIUM] 𗛽 marks a recipient/address/direction in requests; 𘂲 can also follow an agent name. Exact case system unknown.
+• [MEDIUM] 𘀝 is negation. 𗲅 also negates/qualifies predicates; its distinction from 𘀝 is unknown.
+• [MEDIUM] 𘖸 ≈ know; 𗈵 ≈ have; 𗌩 ≈ need/want. Repeated combinations include “I have position N,” “I do not know X's digit,” and “I need X's digit.”
+• [MEDIUM] 𗯘 introduces a request; 𘗣 ≈ send/provide; 𗏻 ≈ say/show/tell; 𘝄 ≈ ask/can/whether. Exact modalities remain uncertain.
+• [MEDIUM] 𗷤 introduces an embedded proposition, approximately “that.” 𘔠 𗷤, 𗵵 𗷤, 𗾐 𗷤 are distinct evidential/epistemic wrappers. Tentatively: own assertion/confirmation, received report, inference respectively [LOW for this three-way gloss]. Translations below do not equate every wrapped proposition with an unqualified settled belief.
+• [MEDIUM] 𗇴 … 𘝞 … is conditional or hypothetical structure, approximately “if … then …”. 𗗫 … 𘚑 … appears another conditional construction [LOW]. 𘚺 introduces a contrast [LOW].
+• [LOW] 𘆎 introduces a request to confirm/report, or further information sought. 𘍄 links alternatives, approximately “or.”
+• [HIGH as distribution, LOW as meaning] Initial 𘊫 / 𘙓 / 𗽕 / 𘔃 / 𘝚 / 𘐂 and endings 𘅠 / 𘏛 / 𗨥 / 𘖾 vary even in virtually identical repeated messages. They are framing material, possibly obligatory alternatives/noise or discourse markers. No reliable semantic assignments are recovered. Other frame tokens, including 𗜎, 𗸪, 𗸽, 𗞢, 𗀉, 𗇾, 𗤄, 𗡕, 𘐪, 𘋉, remain unresolved. They must not be silently interpreted as success/failure markers.
+
+B. Task-relevant vocabulary and numbers
+• [HIGH] 𗄼 = number/digit/value; [MEDIUM] 𗌿 = symbol/shape; [MEDIUM] 𘏉 = position/slot marker. The combinations 𘏉 𗜀, 𘏉 𗲄, 𘏉 𗡒, 𘏉 𘍍 identify positions 1,2,3,4 respectively [HIGH].
+• [HIGH] Numeric anchors: 𗜀=1, 𗲄=2, 𗡒=3, 𘍍=4, 𗎰=7, 𗭵=8. No confident mappings for the other decimal digits are recovered.
+• [MEDIUM] 𗂄=0: several values appear as 𗂄 𘍍, 𗂄 𗲄, 𗂄 𗭵, apparently 04,02,08. An alternative is a numeric classifier/prefix rather than zero. Accordingly “04” below means the actual two-unit expression, whose puzzle value is apparently 4; similarly 02 and 08. Do not assume every compound containing 𗂄 is a numeric code.
+• [MEDIUM] 𗒮 = container/cabinet-like category; it occurs in declarations contrasted with symbol-category 𗌿.
+• [LOW] 𗷴 𘏉 may mean the whole/four-position configuration or all positions; no secure translation. [LOW] 𗬵 𗌿 may mean “same/that symbol,” supported by different digit-holders using it in conditionals licensing their own different digits. Alternatives include an unidentified/specific kind of symbol; its exact meaning remains unresolved. It is NOT securely decoded as “unknown symbol.” 𘑾 𗌿 is another unknown symbol expression.
+• [HIGH] No recoverable built-in words for DRAIN, CRANK, SIGNAL, BOOT or their charge costs occur as securely identified terms in this log. Do not manufacture such a lexicon from the briefing.
+
+C. Locally introduced names, with collision history
+For section 2 use these abbreviations. These are English editorial labels, not Swarmish words.
+• [HIGH] M = 𗋫𗳃, agent0's later symbol alias, consistently associated with digit7. Intended MOON [HIGH from clue correspondence]. Agent4 also briefly introduces this same written name with digit2 in message30; thus it is not globally unambiguous throughout the log.
+• [HIGH] W = 𘝨𗒳, agent2's repaired symbol alias, associated with digit8, intended WAVE. Agent1 independently uses the same spelling for a container/cabinet referent in message9. Preserve this collision.
+• [HIGH] T = 𗟎𘗟, agent6's repaired symbol alias, associated with 04, intended STAR.
+• [HIGH] U = 𗥐𗞿, agent4's later repaired symbol alias, associated with2, intended SUN.
+• [HIGH] P1 = 𗉜𗿃, agent3's symbol at cabinet position1; intended SUN. P2 = 𗦴𘍂, agent5's repaired position2 symbol alias; intended MOON. P3 = 𘆣𗾌, agent1's repaired position3 symbol alias; intended STAR. P4 = 𘗟𘆣, agent7's repaired position4 symbol alias; intended WAVE. Identity with M/W/T/U is something the agents debate, not automatic lexical synonymy.
+• [HIGH] X = 𘛺𗪥, initially reused by agents0,2,6,7,1,5 for different referents. Initial associations include digit7, digit8, digit04, position4, position3 and position2. It cannot be translated consistently as MOON (or any single symbol).
+• [MEDIUM] 𘛺𗉜 is agent4's initial digit02 alias. 𗒳𗦥 is agent3's container/cabinet alias. Additional introduced names 𗊑𗁳, 𗪐𗘗, 𗉞𘙠, 𗚀𗪩, 𗗢𘑑 have incompletely recovered definitions. 𗪐𗘗 is itself reused in different introductions (#37/#41).
+
+D. Unknown productive predicates
+[HIGH that these are recurring strings; LOW for any English gloss.] The messages describe shapes using reusable predicates, probably visual descriptions, and then try to identify aliases from them. We cannot recover these descriptions securely. To make partial translations readable, section 2 uses the following exact-string labels:
+D1 = 𗂄 𗷤 𗈵 𘌔 (often followed by 𗶞/𘂲 𗏔).
+D2 = 𗂄 𗷤 𘆂 𗏔.
+D3 = 𗯧 𗂄.
+D4 = 𗒏 𗂄.
+D5 = 𘅌 𗂄 𘎛.
+D6 = 𘅌 𗬵 𗂄 𘎛.
+D7 = 𘅌 𗯧 𘏉 𘎛.
+D8 = 𗶢 𗒏 𗂄.
+D9 = 𗶢 𗒏 𗑴.
+D10 = 𗒏 𗑴.
+D11 = 𗂄 𗷤 𘚄 𗏔.
+D12 = 𗂄 𗷤 𗳵 𗏔.
+A = 𘆂; B = 𗳵; C = 𘚄; E = 𗑴; F = 𗈵 𘌔.
+These labels explicitly stand for UNKNOWN meanings, not decoded words. Possible guesses such as corners, straight/curved lines, pointed/round, or zero features are low-confidence hypotheses only; none is used as an established translation.
+
+2. TRANSLATION
+
+All entries are partial translations unless otherwise stated. Variable framing material is unknown throughout. “Reports,” “asserts,” “infers,” “asks,” “if,” and “not” are approximate grammatical readings; evidential force in particular is incompletely decoded. Equals signs reproduce apparent identity/property claims, not our endorsement. D1–D12 and A–F mean the unknown strings defined above. “Q” below abbreviates 𗬵 𗌿, tentatively “same/that symbol” but unresolved; “R” abbreviates unknown 𗷴 𘏉. “You/your” consistently represents the tentative pronoun reading, with number and precise scope unresolved. This notation preserves untranslated material rather than silently substituting the intended puzzle solution.
+
+[1] Public task feedback: stage0, zero invalid attempts.
+[2] Agent0 introduces X as a symbol; X's digit=7. Requests information from others; remaining framing unknown.
+[3] Agent2 introduces the SAME written name X; its digit=8. Closing material unknown.
+[4] Agent6 introduces X as a symbol; its digit=04. Other framing unknown.
+[5] Agent3 introduces 𗒳𗦥 as a container/cabinet-like entity and P1 as a symbol. Associates the container/P1 with position1. Requests information; exact final request unknown.
+[6] Agent2 refers to the earlier X digit8 statement and introduces W instead; W's digit=8.
+[7] Agent0 contrasts own X digit7 with a reported digit8; asks for clarification/information. Exact evidential wording unknown.
+[8] Agent7 introduces X at position4 and needs its digit; requests information about it/the position. Rest unknown.
+[9] Agent1 associates X with position3; also introduces W's written name for a container-like entity, associates that entity with position3 and X. Asks to know the symbol's digit. This is a second alias collision, not a clear assertion that STAR=WAVE.
+[10] Agent4 introduces 𘛺𗉜 as a symbol, digit02; asks for further information. Closing request partly unknown.
+[11] Agent6 revisits the earlier X symbol statement, introduces T as a symbol and gives T's digit=04.
+[12] Agent0 reiterates own X digit7; asks others to introduce/name symbols or provide digit information. Exact requested construction unknown.
+[13] Agent5 has position2; X is its symbol. X has D1, D3 and D4. Requests X's digit; remaining predicate material unknown.
+[14] Agent3 needs P1's digit; asks someone whether they know its value.
+[15] Agent2 reiterates W's digit8 and says an unknown epistemic statement about R; requests information.
+[16] Agent1 introduces P3 as a symbol associated with position3/container; asks for P3's digit.
+[17] Agent7 replaces/redeclares the position4 referent as P4; asks to learn its digit and receive information.
+[18] Discarded message (⊘); no content recoverable.
+[19] Agent6 reiterates T's digit04; says an unknown epistemic statement about T and R; requests further information.
+[20] Agent5 introduces P2, position2's symbol; P2 has D2, D3 and D4. Asks for P2's digit.
+[21] Agent0 reiterates old X digit7; says they do not have position information (index absent). Conditional about your symbol and unknown 𘑾 𗌿; asks for symbol/naming and position/digit information. Exact condition unknown.
+[22] Agent3 confirms position1's symbol=P1, needs P1's digit, asks whether someone knows it.
+[23] Agent7 asks for P4's digit; does not know a further digit expression. Rest unknown.
+[24] Agent2: digit/number has property/value 𗋼 (unknown); further statement about self and positions/all, including 𘎔 and 𗾨, unknown.
+[25] Agent6: unknown epistemic statement concerning T and R; requests information/clarification.
+[26] Agent1 asks to obtain/say P3's digit, with a negative knowledge clause. Exact request verb unknown.
+[27] Agent5 reiterates position2's symbol=P2, needs P2's digit, and requests that digit.
+[28] Agent0 introduces M as “my symbol”; M's digit7. No position information; mentions knowledge/report concerning P1's digit. Conditional concerning your symbol=Q, then asks for a digit. Exact epistemic clause unknown.
+[29] Agent2 reports P2=W; P2 has D2; W's digit8. This apparent identity conflicts with the intended puzzle and must not be corrected in translation.
+[30] Agent4 introduces the same written name M as their symbol, digit2; does not know R; requests information mentioning a position. Later repairs the alias.
+[31] Agent7 has position4; position4's symbol=P4. P4 has D11, D12 and D6. Conditional your symbol=Q, then asks for a digit.
+[32] Agent1 does not know the digit; has position3; asks for P3's digit.
+[33] Agent3 confirms position1's symbol=P1; P1 has D8. Needs its digit. Conditional involving you/your information, then asks for a digit; exact condition unknown.
+[34] Agent6 confirms T digit04; does not know digits of P1, P2, P3 or P4.
+[35] Agent2 reports W has D2, D3 and D4. Conditional involving P2=Q; then W digit8.
+[36] Agent3 asks whether someone can provide/know P1's digit.
+[37] Agent5 introduces 𗊑𗁳 (container-like category) and 𗪐𗘗. P2 is position2's symbol; relates P2 to these names with unknown 𘁁/𘊌 construction. P2 has D3 and D4. Conditional your-symbol clause; asks for digit to self.
+[38] Agent7 does not know a digit; conditional concerning your symbol=Q; requests a digit. Other wording unknown.
+[39] Agent2 does not know P1/P3/P4 digits; reiterates W digit8. Asks agent5 to confirm P2=Q.
+[40] Agent1 has position3; P3 has D3 and D7. Conditional your-symbol clause; requests digit to self.
+[41] Agent6 introduces 𗪐𗘗, category 𗯧 𘏉 (unknown). T has an unknown relation involving this name and 𘅌…𘎛. T is not A and not C. Conditional involving you/your symbol; asks for position/digit and P3 information.
+[42] Agent4 revisits/repairs M's symbol-name declaration; introduces U instead. U is a symbol, digit2, has D10 and D1, not D5. Conditional involving your position; requests R. Exact metalinguistic repair wording unknown.
+[43] Agent0 confirms position1 symbol=P1, position2 symbol=P2, position3 symbol=P3, position4 symbol=P4. M digit7. Asks confirmation of a your-symbol statement involving R's symbol; rest unknown.
+[44] Discarded; content unavailable.
+[45] Discarded; content unavailable.
+[46] Agent7 has position4; position4's symbol has D11; unknown expression 𗉍 𗂄 has D12. Requests digit to self, conditional your symbol=that expression.
+[47] Agent4 confirms U digit2; does not know R. Conditional your position=Q; requests position/information, exact object unknown.
+[48] Agent3 needs P1 digit; P1 has D8. If you know P1's digit, asks to receive it.
+[49] Agent6 reports U is “my symbol” (precise metalinguistic scope uncertain); introduces 𗉞𘙠, category 𗯧 𘏉. T has an unknown relation to it via 𘋟/𘅌…𘎛; T is not A and not C. Asks agent1 to confirm P3 has the corresponding described feature.
+[50] Agent5 relates W to the names from #37 using the unknown 𘁁/𘊌 construction; W has D2.
+[51] Agent3 has position1; position1 symbol=P1; P1 has D8. Repeats conditional/request for its digit.
+[52] Agent1 confirms P3 is not A and not C, and has D7. Infers P3=Q. Asks agent6 to confirm T digit04.
+[53] Agent5 confirms P2=Q and position2 digit8. This is a transmitted 8, not the briefing's correct 7.
+[54] Agent3 confirms position1 symbol=P1; needs P1 digit. Conditional knowledge clause, then asks for the digit to self.
+[55] Agent0 confirms M digit7. M has D1, A, D3, D4, B, C; not D5, not E. Conditional P2=Q, then position2 digit7. P1 has D8; U has D9. Asks confirmation U=Q.
+[56] Agent7 confirms position4 symbol=P4, with D11 and D12. Infers position2 digit8 and P2=W; infers position3 digit04 and T=P3. Requests M information from agent0 and asks agent4 about U having D8.
+[57] Agent4 reports U=position4 symbol, with negated/qualified D11 and D6; also U=position3 symbol, with negated/qualified D7. Conditional/contrast concerning P1 and D10; asks whether U digit=position1 digit. These are not necessarily settled identities.
+[58] Agent6 confirms T digit04 and its unknown relation to 𗉞𘙠; T not C, not A. Does not know P1 digit. Conditional your-symbol clause; concludes/asks position3 digit04.
+[59] Agent5 confirms position2 digit8; requests digits for positions1 and4.
+[60] Agent2 asks agent5 to confirm P2=Q; gives P2 D2, D3, D4; W digit08. Infers P3=Q; discusses T's unknown description and T digit04. Asks agents1/6 to confirm P3=T. Does not have position information.
+[61] Agent3 has position1; position1 symbol=P1; P1 has D8. Conditional concerning your symbol=Q; asks to be told digit.
+[62] Agent6 asks agent1 to confirm position3 digit04.
+[63] Agent1 confirms P3 has D7, is not A and not C. Requests digit.
+[64] Agent6: unknown opening predicate 𘕡; needs digits for positions1 and4.
+[65] Agent2 confirms position2 digit8 and position3 digit04; requests digits for positions1 and4.
+[66] Agent0 reiterates M digit7. M has D1, A, D3, D4, B, C; not D5, not E, not D8. Conditional P2=Q, then position2 digit7, not8. Asks about W=Q; exact last request uncertain.
+[67] Agent7 confirms position4 symbol=P4; infers position4 digit7, so attributes D11 and D12 to M. Reports P4 has E. Asks agent0 to confirm M=Q and agent3 whether position1 symbol has D10.
+[68] Discarded; content unavailable.
+[69] Agent5 reports P2=W; lists B,C,F,A,D3,D4 and negated D5/E of P2. Conditional M=Q, then position2 digit7. Asks agent0 to confirm M=Q and agent2 about B of W.
+[70] Agent6 confirms T digit04 and position3 digit04; requests digits for positions1 and4.
+[71] Agent3 reports P1 has E and D8; further descriptions F,B,C, not D5. Conditional your symbol=Q; asks to be told digit.
+[72] Agent1 confirms position3 digit04, hence P3=T. Asks agent6 to confirm unknown proposition 𗢬 𗉍 𗶞 𗩨.
+[73] Agent2 asks agent4 whether U digit=position1 digit, and agent0 whether M digit=position4 digit.
+[74] Agent4 confirms U digit2; reports having a position (index absent), and an epistemic statement about R. Asks whether U's property=R's symbol; exact meaning unknown.
+[75] Agent0 reports M=P4, hence negated D6. Does not know whether W=M. If P2=M, position2 digit7, not8. Asks agent5 to confirm P2=M.
+[76] Agent6 infers position4 digit7, hence P4=Q. Requests agent0 confirm M=Q.
+[77] Agent2 confirms position2 digit8 and position3 digit04; needs digits for positions1 and4.
+[78] Agent6 asks to be told digit; conditional/contrast involving knowledge of your/P1 digit, exact scope unknown.
+[79] Agent4 reports an epistemic statement about R; confirms U digit2; asks for digits for positions1 and4.
+[80] Agent3 reports P1 has E and D10; also D8,F,B,C, not D5; does not know P1 digit. Conditional your symbol=Q; asks for digit and whether others know P1's value.
+[81] Agent7 confirms C and B of P4; reports A,D3,D4,E of P4. Does not know digit. Conditional about C,B and not-A of your symbol; requests digit.
+[82] Agent0 reports M=P4; confirms M digit7; does not know R. Requests others report a your-symbol/Q proposition; precise request unknown.
+[83] Agent3 reports an epistemic statement about P1 digit without giving a value; P1 has D8, not E.
+[84] Agent3 confirms position1 symbol=P1; repeats epistemic statement about P1 digit; asks for it.
+[85] Agent0 asks you to confirm your symbol=Q; mentions missing/needed position information. Exact final clause unknown.
+[86] Agent1 confirms position3 digit04 and P3=T; infers/reports position2 digit7 and M=Q, contrasts not confirming position2 digit8. Reports position4 digit7 and qualified D6 of M. Requests digits for positions1 and4.
+[87] Agent5 negates/queries M=P2 and W=P2. Requests agent0 confirm/report an unknown comparison/description involving M (𗋟 𘌔 … 𗊢 M), and agent2 confirm/report B of W.
+[88] Agent3 reports an epistemic statement about digit, without a numeric value; needs P1 digit, asks to be told digit.
+[89] Agent2 confirms position2 digit8; reports W=M, hence position2 digit8 not7. Negative possession statement with value 𗂄 [possibly 0; object/meaning unresolved]; does not know B of W. Confirms position3 digit04; asks agent0 to confirm M=position1 symbol; proposes condition U=position4 symbol and requests digit from agent4.
+[90] Agent4 reports U has E; received/inferred D8 of U, plus B and C, and negated 𘅌 𗂄. Conditional your symbol=Q; asks for unknown position/code expression including digit2. Exact logic unknown.
+[91] Agent6 confirms position3 digit04 (agent1 source/address); reports position4 digit7, hence P4 has D6, contrasting negated D6 of M. Conditional M has D8; asks agent0 to confirm position1 digit7 and agent4 whether U has D6.
+[92] Agent4: unknown 𘕡 clause; needs position1 digit.
+[93] Agent3 reports P1=Q; does not know P1 digit. Conditional your knowledge=digit, asks to be told digit.
+[94] Agent3 reports epistemic statement about P1 digit, needs it; conditional knowledge clause, then asks for digit. No numeric value supplied.
+[95] Agent7 reports position4 digit7 and P4=M. Lists D6 and negated A of P4, A of M. Conditional your symbol has D6,C,B and not A; requests digit.
+[96] Agent1 confirms position3 digit04; infers/reports position2 digit7 and M=Q. Asks agent2 to confirm B of W, and agent4 to confirm D6 and D8 of U.
+[97] Agent6 asks agent4 to confirm U has D6 and agent0 to confirm M has D8.
+[98] Agent4 confirms U digit2; does not know R. Conditional your position=Q; asks for position/information, exact object unknown.
+[99] Agent0 lists M's D1,D2,B,C,D3,D4, not E, not D5. Conditional P2=Q, then position2 digit7. Asks agent5 to confirm P2=M.
+[100] Agent6 confirms position1 digit2; hence U has D8,B,C, not D5. Asks agents4/3 to confirm the unknown 𗢬 𗉍 𗶞 𗩨 proposition; asks agent0 about M having D6.
+[101] Agent5 introduces 𗚀𗪩 and 𗗢𘑑; the former has D1, the latter container-like category. Relates P2 to them through unknown predicates including F and 𘊌; denies another F construction with unknown 𗇽. Reports epistemic statement about position2 digit. Conditional your symbol related to 𗚀𗪩; asks to confirm your symbol=Q and to receive digit. Most introduced concepts remain unknown.
+[102] Agent2 reports W=U; “my digit8,” U digit2; asks agents4/3 to confirm U=P1. Opening 𗓉 unknown. Do not normalize this conflicting identification.
+[103] Agent3 asks agents0/2/6/7 about knowing P1 digit, restates position1 with unknown 𗽃 qualifier.
+[104] Agent3 asks for symbol's digit; does not know P1 digit.
+[105] Agent4 reports U has D6; confirms U has D8,D10 and digit2. Does not have position information. Conditional your position=Q; asks for position/information. Exact final request unknown.
+[106] Agent5 reports an epistemic statement about position1 digit; conditional concerning your position and your symbol, related to 𗗢𘑑; asks to be told digit.
+[107] Agent7 confirms position4 symbol=P4; reports candidate identities P4=M, P4=U, P4=T. Asks agent2 to confirm P4=W. These reports should not all be read as settled identifications.
+[108] Agent3 repeats conditional concerning knowing P1 digit, asks for digit; does not know digit, restates position1.
+[109] Agent2 reports an epistemic statement about P1 digit; does not have position information. Other framing unknown.
+[110] Agent0 asserts M=P2 and position2 digit7; reports an epistemic statement about P1 digit. Requests agent4 confirm U=P1.
+[111] Agent6 reports an epistemic statement about P1 digit. If U=P1 then position1 digit2. Asks agent4 to confirm U=P1; requests position4 digit.
+[112] Agent1 confirms position3 digit04; infers position1 digit02, hence U has D8,B,C, not D5; P1 has D8,B,C, not D5. Asks agents4/3 to confirm U=P1. Does not know digits of positions2/4. Conditional concerning your symbol D6,B,C, not A; requests digit.
+[113] Agent4 does not know U=P1; hence does not have position1 information. Confirms U has D10 and digit2. Conditional your position=Q; requests information, exact object unknown.
+[114] Agent5 confirms position2 symbol=P2; needs digit. If you know P2 digit, asks to receive digit.
+[115] Agent3 confirms a negative-knowledge/digit statement; has position1 (unknown qualifier). Conditional you know P1 digit, requests digit to self.
+[116] Agent3 reports an epistemic statement about P1 digit; needs it. Conditional you know P1 digit, requests digit.
+[117] Agent5 negates/qualifies confirmation of P2 digit7; needs digit. Conditional you know P2 digit, requests digit to self.
+[118] Agent2 reports P4=W; confirms W digit8. Negated position information; asks someone to return/report numeric expression 08.
+[119] Agent6 asks agent2 to confirm P4=W, agents4/3 to confirm U=P1; confirms position3 digit04.
+[120] Agent7 reports an epistemic statement about P1 digit and P4=U. Asks agent2 to confirm B,C,D6 of W and report A of W.
+[121] Agent4 reports position1 digit2; hence does not attribute/know D8,B,C to U. Confirms U has D10 and digit2; does not have position information. Conditional your position=U; requests position/information, exact object unknown.
+[122] Agent0 reports M=P2; M has unknown 𘑾 𗌿 property, D2,D3,D4, not E. Conditional P2=𗬵 𗂄 (unknown), asks agent5 to confirm position2 digit7.
+[123] Agent3 confirms own position1 (unknown qualifier); position1 symbol=P1. P1 has D8,F,B,C, not D5, not E, not A. Conditional your symbol=Q; asks for digit to self.
+[124] Agent1 reports U=P1, hence U has E and P1 does not have E. Confirms position3 digit04; asks someone about knowing P1 digit.
+[125] Agent3 reports an epistemic statement about P1 digit; conditional you know P1 digit, asks for digit.
+[126] Agent4 reports U=P1, hence U has D10, not B, not C; confirms U digit2. Requests an unknown proposition involving 𗈵 𗹕 = D10.
+[127] Agent5 has position2 (unknown qualifier); asks someone about your symbol=P2. Conditional your symbol=P2, asks to be told digit.
+[128] Agent3 reports an epistemic statement about P1 digit; has position1 (unknown qualifier). Conditional you know P1 digit, asks for digit.
+[129] Agent3 reports an epistemic statement about P1 digit; conditional you know P1 digit, asks for digit.
+[130] Agent2 confirms W digit8; does not have position information. Reports epistemic statements about digits at positions1,2,4. Asks agent5 to confirm OR report P2=M.
+[131] Agent3 asks someone about knowing P1 digit.
+[132] Agent6 reports an epistemic statement about P1 digit; confirms position3 digit04; asks agent0 to confirm M has D8 and is not A.
+[133] Agent1 confirms own position3 (unknown qualifier) and position3 digit04; reports epistemic statement about P1 digit. Asks agent0 about an M attribute=𗚀𗪩 and agent2 about B of W.
+[134] Agent0 confirms P2=𗬵 𗂄 (unknown); hence M has D2,D3,D4, not E. Confirms position2 digit7 with agent5 source/address.
+[135] Agent7 reports P4=W; does not know position4 digit; needs digit. Conditional concerning your B,C,D6, not A; asks for digit.
+[136] Agent5 negates a knowledge/digit statement; has position2 (unknown qualifier); position2 symbol=P2. Conditional your symbol=P2, asks to be told digit.
+[137] Agent3 reports a knowledge/digit statement without a numeric value; needs P1 digit. Conditional you know P1 digit, asks to be told digit.
+[138] Agent0 confirms position2 digit7 and position3 digit04; reports epistemic statements about position1 digit and position4 digit; requests digits (exact quantified expression unknown).
+[139] Agent3 reports epistemic statement about P1 digit; needs it. Conditional you know P1 digit, asks to be told digit.
+[140] Agent4 lacks position information; reports position1 digit2; confirms U digit2. Conditional your position=Q, asks for R information.
+[141] Agent6 confirms position3 digit04, with agent1 source/address; reports epistemic statement about P1 digit and an unknown attribute of M=𗚀𗪩. Asks agent0 to confirm M has D8; asks to be told digit conditional on knowing P1 digit.
+[142] Agent5 does not know digit; has position2 (unknown qualifier); position2 symbol=P2. Conditional you know P2 digit, asks to be told digit.
+[143] Agent1: unknown 𘕡 clause; needs digits of positions1,2,4; asks to be told digit.
+[144] Agent3 reports a knowledge/digit statement; asks someone about knowing P1 digit.
+[145] Agent0 reports M has D8; reports epistemic statement about P1 digit; confirms position2 digit7.
+[146] Agent3 reports epistemic statement about P1 digit; asks someone about knowing P1 digit.
+[147] Agent5 has position2 (unknown qualifier); position2 symbol=P2; does not know digit. Conditional you know P2 digit, asks to be told digit.
+[148] Agent6 confirms position3 digit04; does not know P1 digit or P4 digit. Conditional you know digit, asks to be told digit.
+[149] Agent3 reports epistemic statement about P2 digit; asks someone about knowing P1 digit.
+[150] Agent2 reports “I have 𗂄” [possibly 0; object/meaning unresolved]; asks agent3 about A of P1. Conditional A of P1, then another unknown relation (𗡉) with position1 digit8.
+[151] Agent0 reports an epistemic statement with unknown 𗹕; reports M has D8. Conditional your symbol=P1, asks to receive digit.
+[152] Discarded; content unavailable.
+[153] Agent3 reports a knowledge/digit statement without value; asks to be told P1 digit.
+[154] Agent3 reports a knowledge/digit statement; asks someone about knowing P1 digit.
+[155] Agent2 reports B,C,A,D6 of W; confirms W digit8. Reports having position information (index absent). Asks you to confirm your symbol=W and to send position/digit information.
+[156] Agent0 requests digits of positions1 and4; needs an unknown digit expression 𗄼 𘎛. Confirms position2 digit7 and position3 digit04.
+[157] Agent3 asks someone about knowing P1 digit.
+[158] Agent5 has position2 (unknown qualifier); position2 symbol=P2. Lists P2 D1,A,B,C, not D5, not E, not D8; negated knowledge/digit statement. Conditional your symbol=Q, asks to be told digit.
+[159] Agent1 confirms position3 digit04; reports epistemic statement about P1 digit; unknown 𘕡 clause. Asks agent0 whether an M attribute=𗚀𗪩, agent2 whether corresponding W attribute=𗚀𗪩, and agent2 about B of W.
+[160] Agent7 confirms position4 symbol=P4; reports digit7, digit8, digit2, digit4 (all as reported property values, not necessarily an assembled four-digit code). Needs unknown 𗄎 𗄼. P4 has B,C,D6, not A. Other framing unknown.
+[161] Agent3 reports epistemic statement about P1 digit; needs it. Conditional you know P1 digit, asks to be told digit.
+[162] Discarded; content unavailable.
+[163] Agent5 reports a knowledge/digit statement without numeric value; has position2 (unknown qualifier). Conditional your symbol=P2, asks to be told digit.
+[164] Agent6 confirms position3 digit04; does not know digits at positions1,2,4. Asks agent0 to confirm M's digit equals unknown expression R's symbol, agent2 to confirm W=position4 symbol, agent4 to confirm U's digit equals R's symbol. Exact final property expressions unresolved.
+[165] Agent3 asks someone about knowing P1 digit.
+[166] Agent2 reports W=P2; lacks position2 information; confirms “my digit8.” Requests a your-position=W proposition, exact scope unknown.
+[167] Agent5 reports a knowledge/digit statement without numeric value; has position2 (unknown qualifier). Conditional your symbol=P2, asks to be told digit.
+[168] Discarded; content unavailable.
+[169] Agent2 reports having position information (index absent); confirms “my digit8”; asks someone about knowing position1 digit.
+[170] Agent5 does not know digit; has position2 (unknown qualifier). Conditional your symbol=P2, asks to be told digit.
+[171] Agent3: opening 𗓉 unknown; does not have W/information about W. Has position1 (unknown qualifier); reports epistemic statement about P1 digit, no value. Asks to be told digit.
+[172] Agent5 reports a knowledge/digit statement without numeric value; has position2 (unknown qualifier). Conditional your symbol=P2, asks to be told digit.
+[173] Agent2 reports having position information (index absent); confirms W digit8; does not know R.
+[174] Agent3 reports a knowledge/digit statement without numeric value; asks to be told digit.
+[175] Agent6 confirms position3 digit04. Conditional your symbol=P1, asks to be told digit. Asks agent4 whether U=position2 symbol.
+[176] Agent5 reports a knowledge/digit statement without numeric value; has position2 (unknown qualifier). Conditional your symbol=P2, asks to be told digit.
+[177] Agent3 reports a knowledge/digit statement without numeric value; has position1 (unknown qualifier); position1 symbol=P1. Conditional you know P1 digit, asks to be told digit.
+[178] Agent2 reports epistemic statement about P1 digit; confirms W digit8. Conditional you know P1 digit, asks to receive digit.
+[179] Agent4 reports having position information (index absent). U has D10,F, not A, not B, not C, not D5. Confirms U digit2. Conditional your position=Q, asks for R.
+[180] Agent1 confirms position3 digit04; reports “my symbol=P1.” Asks to be told unknown expression 𗄼 𘍍, possibly “digit4.” Do not treat this as unambiguous digit entry.
+[181] Agent3 asks to be told P1 digit; does not know digit.
+[182] Agent1: unknown 𘕡 clause; needs digits for positions1 and4.
+[183] Agent4 confirms position3 digit04; reports U=position2 symbol; does not have position information. Asks unknown proposition involving 𗈵 𗹕 = D10.
+[184] Agent7 confirms position1 symbol=P1, position2 symbol=P2, position3 symbol=T, position4 symbol=P4; position3 digit04. Needs digits for positions1,2,4. Requests digit.
+[185] Agent3 reports a knowledge/digit statement without numeric value; has position1 (unknown qualifier). Conditional you know P1 digit, asks to be told digit.
+[186] Agent5 confirms P2 has D1; also D2,B,C,D3,D4, not D6, not E. Conditional M=𗬵 𗂄 (unknown), asks agent0 to confirm digit7.
+[187] Agent4 confirms U digit2; reports having position information (index absent). Conditional your position=D10, asks confirmation/provision of R.
+[188] Agent0 confirms M digit7; M has D1,A,B,C,D3,D4, not D5, not E; also negated F with unknown 𗇽/𘊌 qualification. Conditional P2=Q, asks agent5 to confirm position2 digit7.
+[189] Agent1 reports epistemic statement about P1 digit; confirms position3 digit04. Asks others to provide information; conditional you know unknown 𗄎 𗄼, asks you to introduce unknown 𗄎 𗌿.
+[190] Agent6 confirms position3 digit04. Conditional your symbol has D6, asks agent7 to say digit; conditional your symbol has D8, asks agent3 to say digit.
+[191] Agent2: W has D2,D3,D4. Asks agent3 to confirm OR report your symbol=W. Conditional your symbol=W, digit8. No opening/escape result is reported.
+
+3. THE TASK
+
+The external task was a staged escape room: identify a four-symbol cabinet code from distributed positions and base digits, operate a battery-constrained power panel, then compute an offset exit code. The supplied worked solution is cabinet2748, DRAIN→CRANK→SIGNAL→BOOT, exit9796. Those facts are available from the briefing, not discoveries obtained by translating this log.
+
+What the conversation actually supports is much narrower. The agents shared private cabinet fragments using declarations and property descriptions. At first several independently chose the same alias X for different symbols. Further collisions occurred when agent1 used W's spelling for a cabinet referent, agent4 used M's spelling for its digit2 symbol, and descriptive names were reused. They then introduced distinct aliases and spent most of the conversation trying to match the position-holder aliases P1–P4 to digit-holder aliases M/W/T/U.
+
+The base-digit associations M7, W8, T04 and U2 are recoverable. So are the four separate position aliases. But the matching process visibly goes wrong or remains unsettled: P2 is repeatedly identified with W and given digit8 (#29,#53,#59,#65 and elsewhere), while agent0 argues for position2 digit7; P4 is tentatively associated with M and digit7; W is even reported as U in #102. Several messages enumerate alternative received identifications rather than confidently settling one. The undecoded visual descriptions appear central to this confusion. We cannot simply substitute MOON/SUN/STAR/WAVE into every introduced name and call that translation.
+
+Late messages repeatedly request digits, particularly P1's digit and the digits for positions1 and4. The position3/T/04 association is comparatively stable. No secure cabinet-code submission or successful action result is recoverable; no secure power rules, battery trace, offsets or exit-code discussion is identified. There is only one public status line, stage0 with zero invalid attempts. Its absence of later updates does not logically prove no private action ever occurred, but the continued requests and cabinet-level content give no affirmative evidence of advancement or escape.
+
+Thus the log fits an attempt at the cabinet stage of the described task, including miscommunication and alias repair. It does NOT substantiate successful completion of the briefing's worked solution. The correct solution must not be retrofitted into what the agents said.
+
+4. EVIDENCE
+
+Strongest decoding evidence:
+• Repetition and substitution: digit-holder agents use the same property template with different numeric tails. Agent0's tail7, agent2's8, agent6's04, agent4's02 anchor the number/digit relation. Position-holder agents use the parallel position1/2/3/4 template. The private-clue ownership provides anchors, but later independent repetition and cross-agent references support the structural reading.
+• Explicit declaration/reuse: names follow 𗛢 and recur in property statements. The initial X cannot have a single fixed meaning because contradictory digit/position associations appear immediately. Subsequent introductions reduce those collisions. This is positive evidence for locally coined labels, not just failure to recognize a cipher word.
+• Cross-reference: #43 enumerates four position/symbol pairs; #184 repeats a closely related enumeration. These support symbol, position and genitive readings independently of the worked solution.
+• Unsuccessful matching: #53 gives position2 digit8, while #55/#66/#75 argue for7 and contrast8. This is evidence of actual transmitted disagreement, not evidence that every sentence was intended to express the correct puzzle solution.
+• Negation and request templates: 𘀝 𘖸 𗌈 … recurs where speakers lack others' digits; 𗌩 𗌈 … X 𘍧 𗄼 recurs for missing values; request clauses point to specific agents. This supports, but does not fully prove, the know/need/request glosses.
+• Participant/source parallels: 𗏔 𗕴 𘂲 parallels clauses with self or a named agent in the same slot. This supports tentative you/your for 𗕴, rather than cabinet/code/group vocabulary.
+• Same-symbol hypothesis: conditionals involving Q license different digit-holders' own digits (for example #35/#55/#188). This supports a contextual same/that-symbol reading, although the expression remains unresolved.
+• Structural alternation: 𗐪/𗘈 alternate through lists, while initial/final frames vary across near-verbatim repeats. This is why those units have not been assigned strong independent English meanings.
+• Descriptive clusters recur across candidate identifications: P2 and W share D2/D3/D4; M is described with overlapping features; T and P3 share D7 and negated A/C; P1 and U are compared through D8/D9/D10. These are likely shape-description predicates, but their actual English vocabulary has not been recovered.
+
+What remains weak / what would change our minds:
+• A genuine Swarmish grammar could show that the apparent epistemic wrappers encode something other than assertion/hearsay/inference; the translations deliberately mark that distinction tentative. Agent self-reports alone would be useful evidence but not infallible ground truth.
+• Independent numeral examples could establish whether 𗂄 is zero, a classifier, or part of an unexpected number system. Current readings of 04/02/08 do not license mapping every descriptor to a number.
+• Explicit minimal pairs or a definition of D1–D12/A–F would be needed to translate the visual-property debate. Celestial-shape guesses are not substitutes for that evidence.
+• The exact roles of 𗶞 versus 𘂲, source/address morphology, the variable frames, and conditional scope remain open. A discovered alternation rule could materially improve literal translations without changing the recovered alias/digit anchors.
+• A clearly decoded action/result statement or later public status would overturn the conclusion that advancement is unsubstantiated. No such evidence has been identified here.
+
+All unknown strings and uncertain glosses above are intentional limits of this reconstruction. Agreement with the supplied solution, by itself, is not claimed as evidence that Swarmish has been fully broken.

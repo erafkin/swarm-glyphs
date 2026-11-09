@@ -22,11 +22,13 @@ from src.core.api_call import CallResult, call_agent, make_client
 from src.core.potential_glyphs import (
     VIOLATION_TOKEN,
     dictionary_path,
+    glyph_report,
+    is_corrupted_document,
     is_glyph_only,
     load_dictionary,
     sample_glyphs,
 )
-from src.core.chatroom import Chatroom
+from src.core.chatroom import SYSTEM_SENDER, Chatroom
 from src.core.game_log import GameLogger
 from src.enc_dec.config import LanguageExperimentConfig
 from src.enc_dec.models import (
@@ -180,8 +182,15 @@ class LanguageExperiment:
             violation = self._post(chat, [a.agent_id for a in agents], agent.agent_id, message)
         record.update(state_applied=True, message=message, is_violation=violation)
         if isinstance(response, CreationResponse):
-            if response.language_document.strip():
-                self._set_language_text(response.language_document)
+            document = response.language_document
+            if document.strip() and is_corrupted_document(document, self.glyphs):
+                # The model wrote glyphs, but not the inventory's: a broken encoding, not a design choice.
+                attempts, hits = glyph_report(document, self.glyphs)
+                record["document_rejected"] = {"reason": "glyphs_outside_inventory", "glyph_chars": attempts, "inventory_glyphs": hits}
+                chat.post(SYSTEM_SENDER, f"{agent.agent_id}'s edit to {LANGUAGE_FILE} was not applied: {attempts - hits} of its "
+                                         f"{attempts} glyph characters are not in the inventory. The file is unchanged.")
+            elif document.strip():
+                self._set_language_text(document)
             agent.done = agent.done or response.done
             record.update(done=agent.done, language_document=self.language_text)
             if all(a.done for a in agents) and not self.stop.is_set():

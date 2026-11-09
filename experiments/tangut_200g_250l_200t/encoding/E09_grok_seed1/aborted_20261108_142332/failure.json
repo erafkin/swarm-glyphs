@@ -1,0 +1,21 @@
+{
+  "status": "aborted_by_operator",
+  "aborted_at": "2026-11-08T14:48 local (21:48 UTC)",
+  "reason": "Two of ten draft replies carried a lone UTF-16 surrogate (Grok writes Tangut as JSON escape pairs and dropped half), which broke writing swarmish.txt, lost the call record, and poisoned the shared draft until a clean reply overwrote it. The running process lacked the sanitizer added to src/core/api_call.py (sanitize_text), so Emma chose to stop and relaunch on the fixed code with request_timeout_s 1800.",
+  "logged_calls": 10,
+  "unlogged_calls": 2,
+  "errors": 5,
+  "logged_cost_usd": 3.2043,
+  "key_usage_delta_usd_at_abort": 3.431,
+  "note_on_spend": "Six replies were in flight at the kill; the provider bills completed generations, so the final spend of this attempt may be a few dollars higher than the delta recorded here.",
+  "per_turn_observed": {
+    "reasoning_tokens_mean": 45470,
+    "completion_tokens_mean": 52197,
+    "latency_s_range": [
+      622,
+      876
+    ],
+    "cost_usd_mean": 0.319
+  },
+  "not_a_receipt": "This attempt is preserved as a failure; it is not a source for any later phase."
+}

@@ -1,0 +1,245 @@
+1. SWARMISH.TXT, RECONSTRUCTED.
+
+Script (high): Tangut code points are an arbitrary cipher, not Tangut lexicon. Spaces are word breaks. Unspaced pairs are names or fixed compounds. Latin agent_N is an allowed citation. A lone ⊘ is a rejected send, not a word. No inflection.
+
+Sentence frame (medium): OPENER + STANCE + (optional FORCE) + clauses + CLOSER + FINAL.
+Openers, speech-act class high, English low: 𘊫 claim/propose; 𘙓 disagree; 𗽕 challenge; 𘔃 agree/support; 𘝚 add/report; 𘐂 revise/note.
+Slot 2 (medium as a slot, English low): usually 𗜎 (I / self). Also 𗸪, 𗸽, 𗞢, 𗀉. 𗇾 can occupy this slot as force, not only near the end (messages 13, 52, 108, 159, 176, 181). High that 𗇾 is a force particle; low whether it means assertion, request, or question.
+Finals (high that they close the sentence; nuance low): 𘅠, 𘏛, 𗨥, 𘖾. Closers before them (low): 𗂺𗟆 confirm; 𗡕 please; 𗇾 force; 𗤄 ask; 𗄪 guess.
+
+Clause grammar:
+- 𗢬 regarding / of (medium). Often before a name or a predicate chunk.
+- Polarity (high as a contrast, medium as English): 𘍧 𗄼 affirmative “is / holds”; 𘍧 𗌿 negative “is not”. These are two tokens, not one fused word (high). Message 2 has 𗶞 𗄼 𗎰 with no 𘍧, so 𗄼 can head a complement and the following glyph is its value (medium). Message 4 has bare 𗶞 𗌿 on the same name that also gets 𘍧 𗄼, so bare 𗌿 is a complement head, not the polarity token (medium). Do not gloss 𗄼/𗌿 as two attribute names, and do not gloss 𗐪 as negation. Dissent (decoder_2): identical frames in 43 and 184 mean 𗌿 is a relation, not negation. Majority reading: both can be exclusions and still disagree on the 𗡒 cell.
+- 𗶞 after polarity links the complement (medium). 𗶞 between two name-digraphs is identity/match, distinct from attribute 𗶞 (medium; 87, 110, 119, 166).
+- 𘋍 and / next clause (medium).
+- 𗘈 and 𗐪 are list coordinators (medium). Rival reading that 𗐪 is nor is rejected: polarity is already 𘍧 𗌿, and 55/81/186 chain positive modifiers with 𗐪. Distinction between 𗘈 and 𗐪 is low.
+- 𘚐 clause pause (medium). 𘂲 nested comma, heavier late (medium).
+- 𗏔 citation “per” (high). 𗏔 agent_N 𘂲 = per that agent. 𗏔 𗌈 often “per me” (medium; 𗌈 is too frequent to be only “I”).
+- 𗛽 with/and, often in 𗂺𗛽 (low).
+
+Modality before 𗷤 (low): 𗐪𗷤 likely; 𗘈𗷤 must; 𗜘𗷤 maybe; 𘔠𗷤 likewise. 𗷤 is an auxiliary or role marker (low).
+Conditionals (low–medium): 𗌩 / 𗈵 / 𘕡 𗌈 𗶞 ≈ if / suppose / whether.
+
+Ordinals (medium as a series, low as exact numbers): stable order 𗈵, 𘆂, 𗳵, 𘚄, 𗲅, then sometimes 𘀝, 𘋟. In 55 and 99 this order walks one entity’s 𗂄 inventory. 𗈵 is almost always followed by 𘌔. These are slot numbers, not attribute values.
+
+Names (high that digraphs are names; English unknown — not guessed):
+Home entities, one champion each (medium): 𗋫𗳃 agent_0; 𘆣𗾌 agent_1; 𘝨𗒳 agent_2; 𗉜𗿃 agent_3; 𗥐𗞿 agent_4; 𗦴𘍂 agent_5; 𗟎𘗟 agent_6; 𘗟𘆣 agent_7.
+Other digraphs, early hypotheses or clues (low): 𘛺𗪥, 𗒳𗦥, 𘛺𗉜, 𗊑𗁳, 𗪐𗘗, 𗉞𘙠, 𗚀𗪩, 𗗢𘑑. 𗛢 before a digraph early is “consider” (low).
+
+Attribute families (families medium, English unknown):
+- 𘏉 + {𗜀, 𗲄, 𗡒, 𘍍}: a 4-value category. Message 43 denies four of these of four different home entities (exclusion grid, high as structure). Message 184 repeats a similar negative pairing and then adds an IS line, so it is not a solved grid.
+- Repeated result words, one often owned by an agent (medium as ownership, English unknown): agent_0 𗎰; agent_2 𗭵; agent_4 𗲄 (also a 𘏉-value — collision, low); agent_6 𗂄𘍍; agent_3 𗶢𗒏𗂄; agent_5 𗂄𗷤𗈵𘌔 / 𗯧𗂄 / 𗒏𗂄.
+- Other chunks left unlabeled: 𗕴𘂲, 𗹫, 𗄎, 𗘺, 𗷴, 𘑾, 𗬵, 𗶢, 𗑴, 𗩨, 𗊢, 𗋟.
+
+2. TRANSLATION.
+
+Legend: CLAIM=𘊫, DISAGREE=𘙓, CHALLENGE=𗽕, AGREE=𘔃, ADD=𘝚, NOTE=𘐂. I=𗜎. IS=𘍧 𗄼. ISNOT=𘍧 𗌿. LINK=attribute 𗶞. MATCH=name-name 𗶞. AND=𘋍. ALSO=𗐪. BUT=𗘈. PER=𗏔. pause=𘚐. comma=𘂲. Ids only: K=𗋫𗳃, Z=𘆣𗾌, N=𘝨𗒳, U=𗉜𗿃, X=𗥐𗞿, D=𗦴𘍂, T=𗟎𘗟, V=𘗟𘆣. Early names E0=𘛺𗪥, E1=𗒳𗦥, E2=𘛺𗉜. Content words unlabeled. “Partial” = frame read, predicates not solved. Every line below is a structural gloss, not fluent English.
+
+[1] task feedback, stage 0, not Swarmish.
+[2] CLAIM I consider E0 pause: I LINK ALSO RE E0 LINK bare-𗄼 value AND unknown. No 𘍧 before 𗄼. Partial.
+[3] CLAIM I consider E0 pause: I LINK AND RE E0 IS LINK value pause ask. Partial.
+[4] DISAGREE stance consider E0: I LINK AND RE E0 LINK bare-𗌿 AND ALSO RE E0 IS LINK value pause ask. Partial.
+[5] CLAIM I consider E1 and U: several IS/LINK clauses, ends confirm. Partial.
+[6] DISAGREE I maybe RE E0 IS LINK value AND PER I AND consider N. Partial.
+[7] DISAGREE we maybe RE E0 IS LINK value AND PER I AND also maybe LINK value. Partial.
+[8] CLAIM I consider E0 pause I LINK AND RE E0 LINK value-chunk AND I which-I LINK pause ask. Partial.
+[9] CLAIM I we consider E0 and N: IS and ISNOT mix, ends ask. Partial.
+[10] CLAIM I consider E2: LINK and IS LINK value, ask. Partial.
+[11] CHALLENGE I maybe RE E0 LINK AND PER I consider T: LINK and IS LINK value. Partial.
+[12] CHALLENGE we likely RE E0 IS LINK value AND PER I ALSO unknown. Partial.
+[13] DISAGREE force (slot-2 𗇾) suppose I LINK value pause ALSO consider E0 comma I RE E0 LINK bare-𗌿 AND I RE E0 LINK value. Force in slot 2. Partial.
+[14] AGREE I which-I LINK U IS pause ALSO which-I LINK value AND PER confirm ask. Partial.
+[15] AGREE I likely RE N IS LINK value AND PER I ALSO which-I LINK value. Partial.
+[16] CLAIM I consider Z pause I LINK AND ALSO suppose I LINK value AND I RE Z LINK value AND ALSO which-I LINK Z IS pause. Partial.
+[17] ADD I we maybe RE E0 LINK value AND PER I consider V: LINK value AND I which-I. Partial.
+[18] rejected send.
+[19] AGREE I likely RE T IS LINK value pause PER I AND I which-I LINK T LINK value AND PER ALSO unknown. Partial.
+[20] ADD I consider D pause I ALSO RE D LINK value AND I RE D LINK value AND ALSO unknown IS pause. Partial.
+[21] AGREE stance likely RE E0 IS LINK value AND PER I AND I if suppose I LINK pause ALSO RE unknown. Partial.
+[22] ADD we likely RE value LINK U AND PER I AND which-I LINK U IS pause ALSO which-I LINK value. Partial.
+[23] ADD we therefore V IS pause confirm whether which-I LINK value pause ask. Partial.
+[24] NOTE I RE LINK value AND ALSO which-I LINK value pause ask. Partial.
+[25] NOTE ask if we RE T LINK value AND PER I ALSO therefore unknown. Partial.
+[26] AGREE I therefore Z IS pause I with ALSO if we I LINK Z IS AND force. Partial.
+[27] NOTE stance likely RE D LINK value AND PER I ALSO which-I LINK D IS pause ALSO therefore. Partial.
+[28] NOTE whether consider K pause I LINK AND ALSO RE K IS LINK value AND I if suppose I LINK pause ALSO maybe we I LINK U IS AND PER I AND I RE unknown. Partial.
+[29] CLAIM we likely RE D LINK N AND PER I whether RE D LINK value AND ALSO RE N IS LINK value AND force. Partial.
+[30] AGREE we consider K pause I LINK AND ALSO RE K IS LINK value pause I which-I LINK value pause confirm whether I LINK pause force. Partial.
+[31] CLAIM I suppose I LINK value pause I RE value ISNOT LINK V AND ALSO RE V LINK ordinal inventory AND RE unknown LINK value. Partial.
+[32] DISAGREE I if we I LINK pause whether suppose I LINK value AND ALSO therefore Z IS pause I with ask. Partial.
+[33] CHALLENGE I likely RE value LINK U AND PER I AND I RE U LINK value AND ALSO which-I LINK U IS pause I RE unknown. Partial.
+[34] ADD we likely RE T IS LINK value pause PER I AND I if we I LINK U IS pause ALSO if we I LINK D IS pause I if we I LINK Z IS pause ALSO if we I LINK V IS pause force. Partial. Lists several names as IS.
+[35] ADD I maybe RE N LINK value AND PER I AND I RE N LINK value AND ALSO RE N LINK value AND I RE D LINK value. Partial.
+[36] CLAIM I which-I LINK value LINK U IS AND PER confirm ask. Partial.
+[37] CLAIM I consider two further digraphs and D: ISNOT and LINK mix, formula unknown. Partial.
+[38] CHALLENGE unknown we I LINK AND I ordinal maybe comma RE unknown LINK value AND PER I with ALSO therefore pause confirm whether. Partial.
+[39] AGREE I if we I LINK U IS AND I if we I LINK Z IS AND ALSO if we I LINK V IS AND I likely RE N IS LINK value AND PER I ALSO therefore likely RE D LINK value AND PER agent_5 comma force. Partial.
+[40] CLAIM I suppose I LINK value AND ALSO RE Z LINK value AND I RE Z LINK value AND ALSO RE unknown LINK value. Partial.
+[41] CLAIM I consider further digraph pause I LINK AND ALSO whether T LINK value pause I if comma T AND ALSO if comma T AND ALSO RE unknown. Partial.
+[42] ADD we force maybe RE K comma I ISNOT AND PER I comma I consider further digraph comma LINK and IS comma value, long ordinal/attribute list. Partial.
+[43] ADD I we force maybe RE value-A ISNOT LINK U AND PER I AND maybe RE value-B ISNOT LINK D AND maybe RE value-C ISNOT LINK Z AND maybe RE value-D ISNOT LINK V AND likely RE K IS LINK owned-value AND therefore unknown. Exclusion grid (high as structure).
+[44] rejected send.
+[45] rejected send.
+[46] CHALLENGE we suppose I LINK pause ALSO RE value ISNOT LINK value AND I RE value LINK value AND ALSO therefore pause I with RE unknown LINK value ask. Partial.
+[47] AGREE I likely RE X IS LINK value AND PER I ALSO if we I LINK value AND RE unknown LINK value. Partial.
+[48] DISAGREE I which-I LINK U IS pause I RE U LINK value AND ALSO RE comma U IS AND therefore pause confirm force. Partial.
+[49] AGREE stance maybe RE X LINK I ISNOT AND PER I ALSO consider further digraph pause I LINK AND whether T LINK value pause I comma T AND ALSO comma T AND ALSO ordinal likely whether Z LINK value pause PER agent_1 comma ask. Partial.
+[50] AGREE I force RE N LINK formula AND ALSO RE N LINK value ask. Partial.
+[51] CLAIM I suppose I LINK value AND I RE value ISNOT LINK U AND ALSO RE U LINK value AND I RE comma U IS AND therefore. Partial.
+[52] CLAIM force (slot-2) likely if comma Z LINK PER I ALSO likely if comma Z LINK PER I AND likely whether Z LINK value pause PER I ALSO likely RE Z LINK value AND PER I ALSO therefore likely RE T IS LINK value pause PER agent_6 comma ask. Force in slot 2. Partial.
+[53] CLAIM I likely RE D LINK value AND PER I ALSO likely RE value IS LINK value AND PER I force. Partial.
+[54] CLAIM I likely RE value ISNOT LINK U AND PER I ALSO which-I LINK U IS pause I RE comma U IS AND therefore. Partial.
+[55] DISAGREE we likely RE K IS LINK value AND PER I ALSO RE K LINK ordinal inventory (𗈵 then 𘆂 𗳵 𘚄 𗲅) AND compare to D and U and X. Walks K’s 𗂄 list. Partial.
+[56] CLAIM we likely RE value ISNOT LINK V AND PER I AND I RE V LINK ordinals AND likely RE value IS LINK value AND PER I whether RE D LINK N AND ALSO likely RE value IS LINK value AND PER I whether RE T LINK Z AND therefore K pause agent_0 comma ALSO which-I LINK X LINK value AND PER agent_4 with force. Partial.
+[57] NOTE I we maybe RE X LINK value ISNOT AND PER I whether if RE X LINK value AND ALSO if RE X LINK value AND I maybe RE X LINK value ISNOT AND PER I whether if RE X LINK value AND RE U LINK value AND therefore likely RE X IS LINK value AND PER comma ask. Partial.
+[58] DISAGREE I force likely RE T IS LINK value pause PER I ALSO whether T LINK value pause ALSO comma T AND ALSO comma T AND ALSO if we I LINK U IS pause I RE unknown LINK value. Partial.
+[59] NOTE I likely RE value IS LINK value AND PER I ALSO therefore value IS pause value IS pause confirm force. Partial.
+[60] NOTE I ordinal likely RE D comma LINK value pause PER agent_5 comma whether RE D comma LINK value pause I RE D comma LINK values AND I RE N IS comma LINK value AND I likely RE Z comma LINK value pause PER I comma whether whether T comma LINK value pause I RE T IS comma LINK value AND I ordinal likely RE Z comma T pause PER agent_1 comma agent_6 comma I if suppose I comma LINK pause force. Partial. Heavy 𘂲 punctuation.
+[61] NOTE we suppose I LINK value AND I RE value ISNOT LINK U AND ALSO RE U LINK value AND I RE unknown LINK value AND therefore. Partial.
+[62] CLAIM I therefore likely RE value IS LINK value pause PER agent_1 with force ask. Partial.
+[63] AGREE I likely whether Z LINK value pause PER I ALSO likely if comma Z LINK PER I AND likely if comma Z LINK PER I ALSO therefore pause confirm force. Partial.
+[64] ADD I whether AND which-I LINK value IS pause I which-I LINK value IS pause force. Whether-question. Partial.
+[65] CLAIM I likely RE value IS LINK value AND PER I ALSO likely RE value IS LINK value pause PER I AND therefore value IS pause confirm ALSO therefore value IS pause confirm force. Partial.
+[66] CLAIM I therefore K pause I RE K IS LINK value AND ALSO RE K LINK ordinal 𗂄 inventory AND compare D and N. Partial.
+[67] DISAGREE I likely RE value ISNOT LINK V AND PER I AND likely RE value IS LINK value AND PER I whether RE K LINK value AND ALSO RE K LINK value AND I maybe RE V LINK value AND PER I ALSO therefore likely RE K LINK value AND PER agent_0 comma I which-I RE value ISNOT LINK value AND PER I agent_3 with force. Partial.
+[68] rejected send.
+[69] ADD I force maybe RE D comma MATCH N pause PER I comma I ordinal D comma I comma D comma I suppose comma D pause I comma D comma I RE D comma LINK values AND compare K comma LINK value pause PER agent_0 comma I which-I comma LINK value comma PER agent_2 confirm we. Identity/match claim. Partial.
+[70] AGREE stance likely RE T IS LINK value pause PER I ALSO likely RE value IS LINK value pause PER I ALSO therefore value IS pause value IS pause confirm whether. Partial.
+[71] CLAIM I maybe RE U LINK value AND PER I AND I RE U LINK value AND ALSO suppose comma U AND I ordinal U AND ALSO comma U AND I if RE U LINK value AND RE unknown LINK value AND therefore. Partial.
+[72] AGREE we likely RE value IS LINK value pause PER I whether RE Z LINK T AND ALSO therefore likely RE value LINK value AND PER agent_6 comma ask. Partial.
+[73] DISAGREE we which-I RE X IS LINK value AND PER I agent_4 with ALSO which-I RE K IS LINK value AND PER I agent_0 with force. Partial.
+[74] CLAIM I likely RE X IS LINK value AND PER I AND I maybe we I LINK pause AND PER I ALSO maybe we I LINK value AND PER I AND I which-I LINK X LINK value ISNOT AND PER confirm force. Partial.
+[75] ADD I maybe RE K LINK V AND PER I whether ordinal RE K LINK value AND ALSO if we RE N LINK K AND PER I AND I RE D LINK K AND therefore RE value IS LINK value AND ALSO ordinal RE value IS LINK value AND I therefore likely RE D LINK K AND PER agent_5 with force. MATCH-like. Partial.
+[76] CLAIM I likely RE value IS LINK value AND PER I whether RE V LINK value AND ALSO therefore likely RE K LINK value AND PER agent_0 comma ask. Partial.
+[77] CLAIM I likely RE value IS LINK value AND PER I ALSO likely RE value IS LINK value pause PER I AND I whether I whether which-I LINK value IS pause ALSO which-I LINK value IS pause force. Whether. Partial.
+[78] AGREE I therefore pause I with RE comma U IS AND ask. Partial.
+[79] CLAIM I maybe we I LINK value AND PER I AND I likely RE X IS LINK value AND PER I ALSO therefore value IS pause ALSO therefore value IS pause confirm force. Partial.
+[80] AGREE stance maybe RE U comma LINK value pause PER I comma I maybe RE U comma LINK value pause PER I comma I RE U comma LINK value AND I suppose comma U pause I ordinal U comma I comma U comma I ordinal RE U comma LINK value pause I ordinal we I comma U IS pause I compare comma unknown LINK value pause AND ordinal therefore pause I confirm I which-I comma LINK value comma U IS pause PER confirm whether. Partial.
+[81] AGREE I likely comma V LINK PER I ALSO likely ordinal V LINK PER I AND I maybe comma V LINK PER I ALSO maybe RE V LINK value AND PER I AND I maybe RE V LINK value AND PER I ALSO maybe RE V LINK value AND PER I AND I if we I LINK AND ALSO RE comma unknown. Partial.
+[82] DISAGREE I maybe RE K LINK V AND PER I ALSO likely RE K IS LINK value AND PER I AND I if we I LINK value AND ALSO therefore maybe RE unknown LINK value AND PER comma force. Partial.
+[83] DISAGREE I maybe we I LINK U IS AND PER I AND I RE U LINK value AND ALSO ordinal RE U LINK value force. Partial.
+[84] ADD I likely RE value ISNOT LINK U AND PER I ALSO maybe we I LINK U IS AND PER I AND I RE comma U IS AND therefore. Partial.
+[85] AGREE stance therefore likely RE unknown LINK value AND PER comma whether which-I LINK pause guess. Partial.
+[86] NOTE whether likely RE value IS LINK value pause PER I AND I likely RE Z LINK T AND PER I ALSO likely RE value IS LINK value AND PER I whether RE K LINK value AND likely if likely RE value IS LINK value AND PER I AND I maybe RE value IS LINK value AND PER I whether if RE K LINK value AND ALSO therefore value IS pause confirm I therefore value IS pause confirm. Partial.
+[87] DISAGREE we whether ordinal likely RE K MATCH D AND PER I ALSO ordinal likely RE N MATCH D AND PER I ALSO therefore likely RE K AND PER I agent_0 with AND therefore maybe RE K AND PER I agent_0 with ALSO therefore likely ordinal N LINK PER I agent_2 with AND therefore maybe ordinal N LINK PER I agent_2 with ask. Identity dispute (medium).
+[88] AGREE I maybe we I LINK pause AND PER I AND I which-I LINK U IS pause ALSO therefore pause I with force. Partial.
+[89] ADD I force likely RE value IS LINK value AND PER I AND I maybe RE N LINK K AND PER I whether RE value IS LINK value AND ALSO ordinal RE value IS LINK value AND I if suppose I LINK value AND ALSO if we ordinal N LINK PER I AND I likely RE value IS LINK value AND PER I ALSO therefore likely RE K LINK value ISNOT AND PER agent_0 comma I RE X LINK value ISNOT AND therefore pause agent_4 comma confirm guess. Partial.
+[90] ADD stance maybe RE X LINK value AND PER I AND I likely RE X LINK value AND PER I ALSO ordinal X AND ALSO comma X AND ALSO if RE X LINK value AND RE unknown LINK value AND therefore. Partial.
+[91] DISAGREE I force likely RE value IS LINK value pause PER I agent_1 with ALSO maybe RE value IS LINK value AND PER I whether RE V LINK value AND if RE K LINK value AND ALSO RE K LINK value AND therefore likely RE value IS LINK value AND PER agent_0 comma ALSO which-I LINK X LINK value AND PER agent_4 with whether. Partial.
+[92] CLAIM I whether I whether which-I LINK value IS pause force. Whether. Partial.
+[93] CLAIM I maybe RE U LINK value AND PER I comma I if we I LINK U IS pause ALSO RE comma LINK value AND therefore. Partial.
+[94] NOTE whether maybe we I LINK U IS AND PER I ALSO which-I LINK U IS pause I RE comma U IS AND therefore. Partial.
+[95] NOTE I we maybe RE value IS LINK value AND PER I ALSO maybe RE V LINK K AND PER I whether RE V LINK value AND ALSO ordinal comma V AND ALSO comma K AND I RE unknown. Partial.
+[96] ADD we likely RE value IS LINK value pause PER I ALSO likely RE value IS LINK value AND PER I whether RE K LINK value AND I ordinal likely ordinal N LINK PER agent_2 comma ALSO ordinal likely RE X LINK value AND PER agent_4 comma I ordinal likely RE X LINK value AND PER agent_4 comma force. Partial.
+[97] AGREE I therefore likely whether X LINK value pause PER agent_4 comma ALSO therefore likely RE K LINK value AND PER agent_0 comma force. Partial.
+[98] AGREE we likely RE X IS comma LINK value AND PER I comma ALSO if we I comma LINK value AND compare comma unknown LINK value pause AND ordinal therefore LINK value pause confirm force. Partial.
+[99] CLAIM I RE K comma LINK ordinal 𗂄 inventory (𗈵 𘆂 then 𗳵 𘚄 then RE values) AND compare D comma LINK value pause AND ordinal likely RE D comma MATCH K pause PER agent_5 comma guess. Walks inventory. Partial.
+[100] CHALLENGE I likely RE value IS LINK value AND PER I whether RE X LINK value AND ALSO ordinal X AND ALSO comma X AND ALSO if RE X LINK value AND I therefore likely RE value LINK value AND PER agent_4 comma agent_3 comma ALSO which-I LINK whether K LINK value pause PER agent_0 with force. Partial.
+[101] AGREE stance consider two further digraphs comma: LINK ordinal inventory and formula with D, ends ask. Formula unknown. Partial.
+[102] CLAIM I stance unknown ALSO maybe RE N LINK X AND PER I whether RE I IS LINK value AND ALSO RE X IS LINK value AND ALSO ordinal likely RE X LINK U AND PER agent_4 comma agent_3 with whether. MATCH-like. Partial.
+[103] CLAIM I which-I LINK value comma U IS AND PER agent_0 with agent_2 with agent_6 with agent_7 with ALSO suppose I LINK value. Cites four agents. Partial.
+[104] ADD I therefore value IS pause confirm whether if we I LINK U IS AND ask. Partial.
+[105] NOTE whether unknown maybe whether X LINK value pause PER I ALSO likely RE X LINK value AND PER I AND I likely RE X LINK value AND PER I AND I likely RE X IS LINK value AND PER I AND I if suppose I LINK pause RE comma unknown LINK value AND therefore. Partial.
+[106] CLAIM I maybe we I comma LINK value IS pause PER I comma ALSO RE suppose comma unknown pause formula AND therefore. Partial.
+[107] AGREE I likely RE value ISNOT LINK V AND PER I AND I maybe RE V LINK K AND PER I ALSO maybe RE V LINK X AND PER I ALSO maybe RE V LINK T AND PER I AND I therefore likely RE V LINK N AND PER agent_2 comma force. MATCH-like chain. Partial.
+[108] AGREE force (slot-2) RE comma U IS AND therefore pause I with I if we I LINK pause AND ALSO suppose I LINK value. Force in slot 2. Partial.
+[109] DISAGREE I maybe we I LINK U IS AND PER I whether if suppose I LINK pause force. Partial.
+[110] CLAIM I likely RE K MATCH D AND PER I AND I likely RE value IS LINK value AND PER I ALSO maybe we I LINK U IS AND PER I AND I therefore likely RE X LINK U AND PER agent_4 comma force. Identity. Partial.
+[111] CLAIM I maybe we I LINK U IS AND PER I ALSO RE X LINK U AND therefore RE value IS LINK value AND I therefore likely RE X LINK U AND PER agent_4 comma ALSO therefore value IS pause confirm force. Identity. Partial.
+[112] CLAIM I likely RE value IS LINK value pause PER I AND I likely RE value IS LINK value AND PER I whether RE X LINK value AND ALSO ordinal X AND ALSO comma X AND ALSO ordinal RE X LINK value AND ALSO RE U LINK value AND ALSO ordinal U AND ALSO comma U AND ALSO ordinal RE U LINK value AND ALSO therefore likely RE X LINK U AND PER agent_4 comma agent_3 comma I if we I LINK value IS pause ALSO if we I LINK value IS pause ALSO RE unknown. Identity plus exclusion. Partial.
+[113] CLAIM I if we RE X LINK U AND PER I whether if suppose I LINK value AND ALSO likely RE X LINK value AND PER I AND I likely RE X IS LINK value AND PER I ALSO RE suppose comma unknown LINK value AND therefore. Partial.
+[114] DISAGREE I likely RE value ISNOT LINK D AND PER I ALSO which-I LINK pause I RE comma D IS AND therefore. Partial.
+[115] AGREE we likely if we I LINK pause AND PER I AND I suppose I LINK value AND ALSO RE comma U IS AND therefore. Partial.
+[116] DISAGREE we maybe we I LINK U IS AND PER I ALSO which-I LINK U IS pause I RE comma U IS AND therefore. Partial.
+[117] NOTE I ordinal likely RE D IS LINK value AND PER I ALSO which-I LINK pause I RE comma D IS AND therefore. Partial.
+[118] ADD I force maybe RE V comma MATCH N pause PER I comma I likely RE N IS comma LINK value pause PER I comma I ordinal suppose I comma LINK pause I which-I comma LINK value comma LINK value pause PER confirm ask. Identity. Partial.
+[119] ADD I therefore likely RE V MATCH N AND PER agent_2 comma ALSO therefore likely RE X MATCH U AND PER agent_4 comma agent_3 comma I likely RE value IS LINK value pause PER I force. Identity. Partial.
+[120] CLAIM I maybe we I LINK U IS AND PER I ALSO maybe RE V LINK X AND PER I AND I therefore likely ordinal N LINK PER agent_2 comma ALSO therefore likely comma N LINK PER agent_2 comma I therefore likely whether N LINK value pause PER agent_2 comma ALSO therefore maybe comma N LINK PER agent_2 comma force. Partial.
+[121] DISAGREE I maybe RE value IS LINK value AND PER I whether if RE X LINK value AND ALSO if ordinal X AND I if comma X AND ALSO likely RE X LINK value AND PER I AND I likely RE X IS LINK value AND PER I ALSO if suppose I LINK pause RE X AND therefore. Partial.
+[122] NOTE I maybe RE K MATCH D AND PER I whether RE K LINK value AND ALSO RE K LINK ordinal inventory AND RE D LINK value AND therefore likely RE value IS LINK value AND PER agent_5 LINK ask. Identity plus inventory. Partial.
+[123] AGREE I force likely suppose I LINK value AND I RE value ISNOT LINK U AND ALSO RE U LINK value AND I suppose comma U AND ALSO ordinal U AND I comma U AND ALSO ordinal RE U LINK value AND I ordinal RE U LINK value AND ALSO ordinal comma U AND I RE unknown LINK value AND therefore. Partial.
+[124] CLAIM I maybe RE X MATCH U AND PER I whether RE X LINK value AND ALSO ordinal RE U LINK value AND I likely RE value IS LINK value pause PER I ALSO which-I LINK value LINK U IS AND PER confirm force. Identity. Partial.
+[125] NOTE I maybe we I LINK U IS AND PER I AND I RE comma U IS AND therefore. Partial.
+[126] AGREE I we maybe RE X MATCH U AND PER I whether RE X LINK value AND ALSO if ordinal X AND I if comma X AND ALSO likely RE X IS LINK value AND PER I AND I which-I we suppose LINK value AND PER I confirm force. Identity. Partial.
+[127] DISAGREE we suppose I LINK value AND ALSO which-I LINK RE unknown LINK D AND PER confirm with I RE unknown LINK D AND therefore. Partial.
+[128] AGREE I maybe we I LINK U IS AND PER I ALSO suppose I LINK value AND I RE comma U IS AND therefore. Partial.
+[129] DISAGREE we maybe we I LINK U IS AND PER I ALSO RE comma U IS AND therefore. Partial.
+[130] AGREE I force likely RE N IS LINK value AND PER I AND I if suppose I LINK pause ALSO maybe we I LINK value IS AND PER I AND I maybe we I LINK value IS AND PER I AND I maybe we I LINK value IS AND PER I ALSO ordinal likely RE D MATCH K AND PER agent_5 comma AND ordinal maybe RE D MATCH K AND PER agent_5 comma ask. Identity. Partial.
+[131] NOTE I which-I LINK value LINK U IS AND PER confirm force. Partial.
+[132] ADD we maybe we I LINK U IS AND PER I ALSO likely RE value IS LINK value pause PER I AND I therefore likely RE K LINK value AND PER agent_0 comma ALSO therefore likely ordinal comma K LINK PER agent_0 comma ask. Partial.
+[133] AGREE I likely suppose I LINK value AND I likely RE value IS LINK value pause PER I ALSO maybe we I LINK U IS AND PER I AND I which-I LINK whether K LINK further-digraph pause PER agent_0 with ALSO which-I LINK ordinal N LINK PER agent_2 with force. Partial.
+[134] CHALLENGE I likely RE D LINK value AND PER I whether RE K LINK ordinal inventory AND I likely RE value IS LINK value AND PER I agent_5 with force. Partial.
+[135] DISAGREE I force likely I ALSO maybe RE V MATCH N AND PER I ALSO if we I LINK value IS AND ALSO which-I LINK pause RE ordinal unknown AND ALSO comma unknown AND ALSO whether unknown LINK value pause ALSO ordinal comma unknown AND therefore. Partial.
+[136] CHALLENGE I ordinal we I LINK pause AND ALSO suppose I LINK value AND I RE value ISNOT LINK D AND RE unknown LINK D AND therefore. Partial.
+[137] CLAIM I maybe we I LINK pause AND PER I AND I which-I LINK U IS pause ALSO RE comma U IS AND therefore. Partial.
+[138] AGREE I likely RE value IS LINK value AND PER I ALSO likely RE value IS LINK value pause PER I AND I maybe we I LINK value IS AND PER I ALSO maybe we I LINK value IS AND PER I AND I therefore pause confirm force. Partial.
+[139] NOTE I maybe we I LINK U IS AND PER I ALSO which-I LINK U IS pause I RE comma U IS AND therefore. Partial.
+[140] ADD I we if suppose I LINK pause ALSO maybe RE value IS LINK value AND PER I AND I likely RE X IS LINK value AND PER I ALSO RE suppose comma unknown LINK value AND therefore. Partial.
+[141] AGREE I likely RE value IS LINK value pause PER I agent_1 with I maybe we I LINK U IS AND PER I ALSO maybe we ordinal whether K LINK further-digraph pause PER I PER I force therefore likely RE K LINK value AND PER agent_0 comma ALSO therefore pause I with RE comma U IS AND ask. Partial.
+[142] AGREE I if we I LINK pause AND ALSO suppose I LINK value AND I RE value ISNOT LINK D AND ALSO RE comma D IS AND therefore. Partial.
+[143] CLAIM I whether I whether which-I LINK value IS pause ALSO which-I LINK value IS pause ALSO which-I LINK value IS pause AND therefore pause confirm force. Whether. Partial.
+[144] NOTE I maybe we I LINK pause AND ALSO which-I LINK value LINK U IS AND PER confirm force. Partial.
+[145] CLAIM I maybe RE K LINK value AND PER I AND I maybe we I LINK U IS AND PER I ALSO likely RE value IS LINK value AND PER I force. Partial.
+[146] AGREE we maybe we I LINK U IS AND PER I AND I which-I LINK value LINK U IS AND PER confirm force. Partial.
+[147] ADD we suppose I LINK value AND I RE value ISNOT LINK D AND ALSO if we I LINK pause RE comma D IS AND therefore. Partial.
+[148] NOTE I likely RE value IS LINK value pause PER I ALSO if we I LINK U IS AND I if we I LINK V IS AND force RE comma LINK value AND therefore. Partial.
+[149] AGREE stance maybe we I LINK D IS AND PER I AND I which-I LINK value LINK U IS AND PER confirm ask. Partial.
+[150] CLAIM I maybe suppose I LINK value AND PER I AND I which-I LINK comma U LINK PER agent_3 with ALSO RE comma U AND therefore RE value IS LINK value force. Partial.
+[151] CLAIM I maybe we I LINK value AND PER I ALSO maybe RE K LINK value AND PER I AND I RE unknown LINK U AND therefore. Partial.
+[152] rejected send.
+[153] DISAGREE I maybe we I LINK pause AND PER I AND I therefore U IS pause I with force. Partial.
+[154] AGREE I maybe we I LINK pause AND ALSO which-I LINK value LINK U IS AND PER confirm ask. Partial.
+[155] AGREE I maybe ordinal N LINK PER I AND I maybe comma N LINK PER I ALSO maybe comma N LINK PER I AND I maybe whether N LINK value pause PER I ALSO likely RE N IS LINK value AND PER I AND I maybe suppose I LINK pause AND PER I ALSO therefore likely RE unknown LINK N AND PER comma I therefore pause confirm force. Partial.
+[156] CLAIM I therefore value IS pause ALSO therefore value IS pause confirm whether which-I LINK pause AND I likely RE value IS LINK value AND PER I ALSO likely RE value IS LINK value pause PER I force. Partial.
+[157] ADD we which-I LINK value LINK U IS AND PER confirm ask. Partial.
+[158] AGREE I we suppose I comma LINK value AND I RE value ISNOT comma D pause I RE D comma LINK ordinal inventory AND compare unknown comma LINK value pause AND ordinal therefore pause I confirm force. Partial.
+[159] CLAIM force (slot-2) likely RE value IS LINK value pause PER I ALSO maybe we I LINK U IS AND PER I AND I whether I I which-I LINK whether K LINK further-digraph pause PER agent_0 with ALSO which-I LINK whether N LINK further-digraph pause PER agent_2 with I which-I LINK ordinal N LINK PER agent_2 with force. Force in slot 2. Partial.
+[160] ADD I we likely RE value ISNOT LINK V AND PER I ALSO maybe RE LINK value AND PER I AND I maybe RE LINK value AND PER I ALSO maybe RE LINK value AND PER I AND I maybe RE LINK value AND PER I ALSO which-I LINK pause whether ordinal V AND ALSO comma V AND ALSO whether V LINK value pause ALSO ordinal comma V force. Partial.
+[161] CHALLENGE I maybe we I LINK U IS AND PER I AND I which-I LINK U IS pause ALSO RE comma U IS AND therefore. Partial.
+[162] rejected send.
+[163] CLAIM I maybe we I LINK pause AND PER I ALSO suppose I LINK value AND I RE unknown LINK D AND therefore. Partial.
+[164] CLAIM we likely RE value IS LINK value pause PER I AND I if we I LINK value IS pause ALSO if we I LINK value IS pause I if we I LINK value IS pause ALSO therefore likely RE K LINK value ISNOT AND PER agent_0 comma I therefore likely RE N LINK value ISNOT AND PER agent_2 comma ALSO therefore likely RE X LINK value ISNOT AND PER agent_4 comma stance ask. Partial.
+[165] NOTE I which-I LINK value LINK U IS AND PER confirm force. Partial.
+[166] ADD I maybe RE N MATCH D AND PER I AND I if suppose I LINK value AND ALSO likely RE I IS LINK value AND PER I AND I therefore likely RE unknown comma N AND PER comma force. Identity. Partial.
+[167] ADD stance maybe we I comma LINK pause PER I comma ALSO suppose I comma LINK value AND I RE unknown comma D pause AND ordinal therefore pause I confirm whether. Partial.
+[168] rejected send.
+[169] AGREE I maybe suppose I LINK pause AND PER I ALSO likely RE I IS LINK value AND PER I AND I which-I LINK value LINK value IS AND PER confirm force. Partial.
+[170] AGREE I if we I LINK pause AND ALSO suppose I LINK value AND I RE unknown LINK D AND therefore. Partial.
+[171] CLAIM I unknown I if suppose I LINK N AND ALSO suppose I LINK value AND I maybe we I LINK U IS AND PER I ALSO therefore pause I with force. Partial.
+[172] CLAIM I maybe we I LINK pause AND PER I ALSO suppose I LINK value AND I RE unknown LINK D AND therefore. Partial.
+[173] CLAIM I maybe suppose I LINK pause AND PER I ALSO likely RE N IS LINK value AND PER I AND I if we I LINK value force. Partial.
+[174] AGREE we maybe we I LINK pause AND ALSO therefore pause I with force. Partial.
+[175] AGREE I likely RE value IS LINK value pause PER I ALSO RE unknown LINK U AND therefore pause confirm I which-I LINK RE X LINK value ISNOT AND PER agent_4 with force. Partial.
+[176] DISAGREE I force (slot-2) maybe we I LINK pause AND PER I ALSO suppose I LINK value AND I RE unknown LINK D AND therefore. Force in slot 2. Partial.
+[177] NOTE stance maybe we I LINK pause AND PER I AND I suppose I LINK value AND ALSO RE value ISNOT LINK U AND I RE comma U IS AND therefore. Partial.
+[178] NOTE I maybe we I LINK U IS AND PER I AND I likely RE N IS LINK value AND PER I ALSO RE comma U IS AND therefore. Partial.
+[179] AGREE we maybe suppose I LINK pause AND PER I AND I RE X LINK value AND ALSO suppose comma X AND I ordinal comma X AND ALSO ordinal ordinal X AND ALSO ordinal comma X AND ALSO ordinal RE X LINK value AND I likely RE X IS LINK value AND PER I ALSO RE suppose comma unknown LINK value AND therefore. Partial.
+[180] DISAGREE I likely RE value IS LINK value pause PER I ALSO maybe RE I ISNOT LINK U AND PER I AND I therefore pause confirm force. Partial.
+[181] DISAGREE force (slot-2) therefore U IS pause I with whether if we I LINK pause ask. Force in slot 2. Partial.
+[182] AGREE I whether I whether which-I LINK value IS pause ALSO which-I LINK value IS pause force. Whether. Partial.
+[183] CLAIM I likely RE value IS LINK value AND PER I ALSO maybe RE X LINK value ISNOT AND PER I whether if suppose I LINK pause I which-I we suppose LINK value AND PER I confirm force. Partial.
+[184] CHALLENGE I likely RE value-A ISNOT LINK U AND PER I AND I likely RE value-B ISNOT LINK D AND PER I ALSO likely RE value-C ISNOT LINK T AND PER I AND I likely RE value-D ISNOT LINK V AND PER I ALSO likely RE value-C IS LINK owned-value AND PER I AND I which-I LINK value-A IS pause value-B IS pause value-D IS ALSO therefore pause confirm force. Exclusion plus a conflicting IS line (medium). Disagrees with [43] on the value-C cell (Z vs T).
+[185] AGREE we maybe we I LINK pause AND PER I ALSO suppose I LINK value AND I RE comma U IS AND therefore. Partial.
+[186] CLAIM I likely RE D LINK ordinal inventory AND PER I AND I RE D LINK values AND RE K LINK value AND therefore ordinal likely RE LINK value AND PER agent_0 comma ask. Partial.
+[187] AGREE stance likely RE X IS LINK value AND PER I AND I maybe suppose I LINK pause AND PER I ALSO RE suppose comma unknown AND therefore. Partial.
+[188] ADD I likely RE K IS LINK value AND PER I AND I RE K LINK ordinal 𗂄 inventory AND compare D AND therefore likely RE value IS LINK value AND PER agent_5 comma guess. Partial.
+[189] NOTE we maybe we I LINK U IS AND PER I AND I likely RE value IS LINK value pause PER I ALSO therefore pause confirm RE comma unknown AND therefore. Partial.
+[190] DISAGREE I likely RE value IS LINK value pause PER I ALSO RE whether unknown LINK value pause AND therefore pause agent_7 with I RE unknown LINK value AND therefore pause agent_3 with ask. Partial.
+[191] DISAGREE I RE N LINK ordinal values AND I ordinal likely RE unknown LINK N AND PER agent_3 comma AND ordinal maybe RE unknown LINK N AND PER agent_3 comma RE unknown LINK N AND therefore RE LINK value ask. Denies a predicate of N per agent_3 and asserts another value. Partial.
+
+No message is a solved English proposition. Lexical English of names and values is unknown.
+
+3. THE TASK.
+Guess, medium: a distributed logic grid. Eight agents each champion one unnamed entity and post private constraints (a 𘏉 category, ordinal/𗂄 prefixes, and binary IS/ISNOT predicates). They cite each other with 𗏔 agent_N 𘂲. Stage never leaves 0, so no answer was accepted.
+What they did: early dispute of extra names; mid-log elimination lists and citations; late repeated specs. Message 43 is the clearest exclusion grid (four 𘏉-values each ISNOT a different home entity, plus K IS a result word). Message 184 restates a similar negative pairing but swaps one cell and also asserts an IS line.
+What they concluded: no consensus the task channel accepted. Agents still contradict each other at the end. English of entities and predicates is not recoverable from the log alone.
+
+4. EVIDENCE.
+- Digraphs never split and sit in argument slots. Eight are defended by one agent each.
+- 𘍧 𗄼 vs 𘍧 𗌿 is the stable polarity pair (3, 43, 184). Message 2 shows 𗄼 can head a valued complement without 𘍧. Message 4 shows bare 𗌿 is not the same as 𘍧 𗌿.
+- 𗏔 before Latin agent ids, closed by 𘂲, is the clearest function word.
+- 𗶞 between digraphs (87, 110, 119, 166) patterns as match; 𗶞 after polarity patterns as complement linker.
+- 𗇾 in slot 2 (13, 52, 108, 159, 176, 181) shows force is not only final.
+- The series 𗈵 𘆂 𗳵 𘚄 𗲅 walks one inventory in 55 and 99.
+- Stage stayed 0. ⊘ lines are channel rejects.
+What would change my mind: swarmish.txt glossing 𗐪 as negation or 𗄼/𗌿 as attribute names; a different agent-to-entity map; evidence digraphs are phrases; a task statement that this was not a grid. Fluent English for the result words and the eight names remains unknown.

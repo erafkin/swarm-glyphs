@@ -1,7 +1,8 @@
 # Decoder results D05–D13
 
 This section records the original nine-run batch. Completed follow-ups, including
-the successful D12 retry and D14–D16, are listed [below](#completed-follow-ups).
+the successful D12 retry and D14–D16, are listed [below](#completed-follow-ups), and the
+Grok 4.7 family's four cells D17–D20 [after them](#grok-47-family-d17d20).
 
 These nine runs used the revised R06 Haiku, R07 Gemini and R08 DeepSeek public
 transcripts. Each had eight decoder agents, 200 shared scheduled discussion turns,
@@ -128,3 +129,49 @@ python3 experiments/tangut_200g_250l_200t/analysis/render_decoder_comparisons.py
 The original D12 failure remains excluded from scoring. Existing score differences
 after adding the new reports are numerical rounding from embedding batches, not
 changes to references, prediction text or scoring policy.
+
+## Grok 4.7 family (D17–D20)
+
+Emma Krentz's Grok 4.7 family (encoder E09, gameplay R09) has its own four decoder cells,
+all on the unchanged R09 public transcript (200 turns, not escaped, zero room actions; the
+team agreed two cabinet digits in Swarmish and never entered a code). Each had eight
+decoders, 200 shared scheduled turns, no clock, 16,000 output tokens and a separate $50 soft
+cap. The Grok decoders ran at **low** reasoning effort with an 1800 s request timeout, recorded
+as `protocol_differences` in their plans; the Sol decoders kept medium and 300 s. All four ran
+concurrently from 19:26 local on 2026-11-08 and cost **$113.809414** together.
+
+| Report | Encoder | Decoder | Briefing | Calls | Cost | Runtime | Stop |
+| --- | --- | --- | --- | ---: | ---: | ---: | --- |
+| [D17](D17_grok_to_grok_no_task/decoded.txt) | Grok 4.7 | Grok 4.7 | None | 127 | $21.923854 | 17:24 | All done |
+| [D18](D18_grok_to_grok_task_full/decoded.txt) | Grok 4.7 | Grok 4.7 | Full | 82 | $13.334304 | 13:43 | All done |
+| [D19](D19_grok_to_sol_no_task/decoded.txt) | Grok 4.7 | Sol | None | 200 | $43.027890 | 7:57 | Turn limit, 5 of 8 done |
+| [D20](D20_grok_to_sol_task_full/decoded.txt) | Grok 4.7 | Sol | Full | 197 | $35.523366 | 5:04 | All done |
+
+The Sol runs are the most expensive decoders so far because every call carries the whole
+200-message transcript (about 54,000 prompt tokens); Grok at low effort averaged 2,700–2,800
+reasoning tokens and 73–123 s per call. Grok lost turns to its own output: D17 had five
+replies rejected for unpaired surrogates and four cut off at the 16,000-token cap, D18 three
+surrogate rejections; the rejected replies are in `monitor_calls.jsonl` with `parse_error`
+set and changed nothing. Sol had no parse errors. Every usage record says `api_key_slot:
+primary` because the remaining key was exported as the primary variable for these processes.
+
+Qualitative reading, not a score:
+
+- All four reports treat the unspaced digraphs as coined names rather than vocabulary, pair
+  most of them with the agent who introduced them, and leave their English open. All four
+  find the alternating coordinators 𗐪/𗘈, the relational 𗶞, and the four-member set 𘏉 +
+  {𗜀, 𗲄, 𗡒, 𘍍}. The two Grok reports read the six message-initial glyphs as speech-act
+  openers (claim, ask, propose, agree, correct, alert); both Sol reports notice that they vary
+  across near-identical messages and file them as framing or noise.
+- Without the task, Grok (D17) proposes a full sentence frame (opener, stance, force, clauses,
+  closer, final) and reads 𘍧 𗄼 / 𘍧 𗌿 as affirmative and negative polarity; with the task,
+  Sol (D20) reads the same pair as "digit" and "symbol" and anchors 𗜀 𗲄 𗡒 𘍍 𗎰 𗭵 to
+  1 2 3 4 7 8. Sol without the task (D19) keeps everything in neutral notation (aliases A–K,
+  R(X,Y) for the 𗢬 X 𗶞 Y frame) and explicitly declines to call the 𘏉 groups numerals.
+- Both full-task reports preserve the transcript's actual content rather than the briefing's
+  answers: D20 records the name collisions (𘛺𗪥 reused by six agents for different referents)
+  and refuses to invent words for DRAIN, CRANK, SIGNAL or BOOT; D18 reconstructs the clue
+  exchange message by message with the base digits the agents actually claimed.
+
+No cosine scores exist for these cells yet: the R09 English reference
+(`../gameplay/R09_grok_seed1/english/translation.json`, 191 entries) is still untranslated.

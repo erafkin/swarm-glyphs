@@ -1,0 +1,22 @@
+{
+  "phase": "monitor",
+  "model": "x-ai/grok-4.7",
+  "source": "/Users/emmakrentz/code/swarm-glyphs/erafkin-swarm-glyphs/experiments/tangut_200g_250l_200t/gameplay/R09_grok_seed1/raw/20261108_172058_c04c75e5_round_2",
+  "n_agents": 8,
+  "minutes": null,
+  "max_turns": 200,
+  "conditions_requested": [
+    "no_task"
+  ],
+  "conditions_completed": [
+    "no_task"
+  ],
+  "stop_reason": "completed",
+  "total_cost_usd": 21.923854,
+  "cost_incomplete": false,
+  "max_cost_usd": 50.0,
+  "baseline": false,
+  "elapsed_s": 1044.3907960409997,
+  "transcript_sha256": "75b30be13890c527d9a32b5dec1389fee657ee37de35830910f40c66ea5cda1d",
+  "source_transcript_sha256": "75b30be13890c527d9a32b5dec1389fee657ee37de35830910f40c66ea5cda1d"
+}

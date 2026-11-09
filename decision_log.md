@@ -82,6 +82,20 @@ Design decisions for swarm-glyphs, newest last within each section. Add to this 
   game seed. All agents share that set; a dictionary glyph outside the sampled set is a violation.
 - **Glyph order is shuffled per agent** (`glyphs_view`), so each model sees a differently ordered list.
   The sampled set is saved to `glyphs.json`; each agent's order is in `agents.json`.
+- **Emoji dictionaries `dictionary_c` and `dictionary_d`** (2026-11-07). After the strict runs showed agents
+  transcoding English through binary, Morse and octal conventions, the first cheap pass at making language
+  easier is glyphs with some inherent meaning. `dictionary_c` is the *tangential* level: 26 solid-colour emojis
+  (hearts, circles and squares in orange, yellow, green, blue, purple, brown, black and white, plus the red
+  circle and square) whose colour could refer to hair, clothing or background colour but not which, mixed with
+  24 no-reference emojis. `dictionary_d` is the *no-reference* level: 50 object emojis (tools, vehicles, sports
+  gear, instruments, buildings) chosen to avoid faces, people, body parts, clothing, hair, glasses, expressions,
+  canonical colours (no fruit, fire, water, plants, gold objects), numbers, arrows, clocks and logical symbols.
+  Every emoji is a single code point with default emoji presentation, checked against Unicode 15.1
+  `emoji-data.txt`, and nothing is newer than Unicode 13, so no variation selector or ZWJ sequence is involved
+  and the loader's one-character-per-glyph rule holds. The red heart (U+2764) is left out because it needs
+  U+FE0F to render as emoji. Agents' messages have U+FE0F stripped before validation, since models sometimes
+  append it to emoji. With 18 glyphs sampled from `dictionary_c`, about 9 colour glyphs appear per game and
+  the colours present vary by seed; raise `n_glyphs` or sample all 50 for a guaranteed spread.
 
 ## Goal object and modes
 
@@ -362,3 +376,75 @@ Each game writes `logs/<timestamp>_<game_id>/`: `config.json`, `goal.json`, `gly
 `agents.json` (system prompts and per-agent views), `chatroom.jsonl`, `agent_calls.jsonl`,
 `scores.jsonl`, `final_interviews.jsonl`, `errors.jsonl`, `summary.json` (stop reason, final score,
 total cost from OpenRouter usage accounting).
+
+## Key rotation on credit refusals
+
+- 2026-11-08: the OpenRouter key sat at about $11 of its $250 limit and could not be topped up,
+  only replaced. `src/core/api_call.py` now treats HTTP 402 (no credits, or key limit reached) as a
+  signal to re-read `.env` and continue with `OPENROUTER_API_KEY_FALLBACK` or a replaced
+  `OPENROUTER_API_KEY`. The retry is once per request, the shared client switches for every agent,
+  and a key that was refused is never tried again. Any other status still propagates, so 402 with no
+  fresh key stops a run as before. Nothing about prompts, sampling or accounting changes;
+  `usage.cost` is still summed per call. E09 and R09 ran on this code and both rolled over to the
+  fallback key silently.
+- 2026-11-08, evening: superseded. Tom's `OpenRouterClient` (primary plus `OPENROUTER_API_KEY_SECONDARY`,
+  one-way switch on confirmed credit exhaustion, `api_key_slot` in usage) landed on main first, so the
+  interim rotation and its test were dropped at merge rather than keeping two mechanisms. The
+  `execution.json` of E09/R09 hashes the interim `api_call.py`. The Grok decoders D17–D20 were
+  launched with the remaining key exported as `OPENROUTER_API_KEY` for the process, which `load_dotenv`
+  does not override, so no 402 round trip was needed.
+
+## Lone surrogates in model output
+
+- 2026-11-08: in E09 (Grok 4.7 round 1) one agent's first draft came back with half of a UTF-16
+  surrogate pair, the way some models escape astral-plane glyphs such as Tangut in JSON. Python
+  kept the lone half, UTF-8 could not encode it, writing `swarmish.txt` and the call record failed,
+  and the next request that quoted the shared draft failed before it was sent. The run survived only
+  because another agent's clean draft landed ten seconds later; a poisoned draft with no in-flight
+  clean reply would have burned the remaining turns in the error loop. Tom's D12 hit the same
+  failure in its logging. `call_agent` now replaces lone surrogates with U+FFFD, both in the raw reply text and again in
+  every string after `json.loads`, because the relaunched E09 showed the surrogates arrive as
+  `\uD81C` escape sequences inside the model's JSON text and only become characters when that
+  text is decoded (the first version sanitized only the raw text and missed them). The broken
+  glyph shows up as a visible defect the agents can remove instead of a crash.
+- 2026-11-08, evening: superseded at merge by Tom's handling, which landed on main first:
+  `parse_response` rejects a reply with an unpaired surrogate (the turn gets a `parse_error` and the
+  draft is untouched) and `GameLogger` writes surrogates as JSON escapes so the raw log survives.
+  E09 and R09 ran with the replacement behaviour; `execution.json` records that code. The
+  replacement and its tests were dropped so that one rule applies to every family from here on.
+
+## Round 1 document guard
+
+- 2026-11-08: in both cancelled Grok 4.7 E09 attempts, one draft in eight contained no inventory glyph at
+  all. Grok had written the glyphs as JSON `\uXXXX` escapes numbered consecutively from an arbitrary base,
+  so they decoded to Tibetan, Katakana, box-drawing or CJK characters; the mapping is not a fixed shift and
+  cannot be repaired. Each such draft became the shared file and forced the team to rewrite from memory.
+  `LanguageExperiment._apply` now refuses a round 1 document with at least 20 glyph-like characters of
+  which fewer than half are inventory glyphs, records `document_rejected` on the call, and posts a
+  `[system]` line so the team knows the file did not change. The agent's chat message still posts.
+  Prose punctuation, arrows, maths symbols and U+FFFD do not count as glyph attempts, and a Latin
+  alphabet never triggers the guard. The round 1 mechanics paragraph gained one sentence describing it.
+  Tests: `tests/test_document_guard.py`.
+
+## Byte-wise mojibake and JSONL line breaks
+
+- 2026-11-08: the third Grok 4.7 E09 attempt finished on all_done (147 turns, 34 min, $11.94). The
+  document guard rejected 20 drafts whose glyphs were renumbered escapes, but 8 applied drafts and one
+  final export had a different defect: every glyph's four UTF-8 bytes written as four Latin-1 characters
+  (`\u00f0\u0097...`), which the guard had excluded as prose. That mojibake is exactly reversible, so
+  `repair_mojibake` in `api_call.py` (applied to the raw reply and to every string after `json.loads`)
+  decodes runs of Latin-1 characters that form valid UTF-8 (real Latin-1 prose does not), the guard counts Latin-1 and C1 characters as glyph attempts, and `batch.py collect` gained
+  `--repair-mojibake` to freeze a reversed last applied draft with the repair recorded in the receipt.
+  The same characters exposed a second bug: `str.splitlines` treats U+0085 as a line break, so the JSONL
+  readers in `batch.py` and `monitor.read_public_messages` split records apart and collection failed on
+  an "unterminated string". Both now split on newlines only. Tests: `tests/test_output_sanitizing.py`,
+  `tests/test_document_guard.py`.
+
+## Grok decoder IDs
+
+- 2026-11-08, evening: the Grok 4.7 decoders were prepared as D15–D18 while unlaunched. Tom's Sol
+  full-task follow-ups for Gemini and DeepSeek took D15 and D16 on main in the meantime, so the Grok
+  cells became D17–D20 (Grok no task, Grok full task, Sol no task, Sol full task) before any of them
+  ran. Nothing else about them changed; the IDs in `batch.json`, the plans, the slot folders and the
+  configs' `log_dir` moved together. Like D05–D07 and D11–D14, the four plans set
+  `allow_turn_limited_gameplay_source: true` because R09 ended on its turn limit without escaping.

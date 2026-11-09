@@ -4,6 +4,9 @@ OpenRouter API calls (OPENROUTER_API_KEY and optional OPENROUTER_API_KEY_SECONDA
 Each call sends a system prompt and a turn prompt. With a schema, the reply is parsed into
 response_model. With both set to None, the reply is free text and only `raw` is filled in.
 The caller logs the result.
+
+Byte-wise Latin-1 mojibake of multi-byte characters is reversed in the text and in parsed JSON
+strings (see repair_mojibake); unpaired surrogates make parse_response reject the response.
 """
 
 import asyncio
@@ -84,6 +87,46 @@ class OpenRouterClient:
         await asyncio.gather(*(client.close() for client in self._clients))
 
 
+# A run of Latin-1 characters that is really the UTF-8 bytes of other characters: some models (Grok 4.7
+# in E09) escape each byte of an astral-plane glyph as \u00XX, so 𗎶 arrives as four characters in
+# U+0080-U+00FF. The mapping is exactly reversible, and real Latin-1 prose almost never forms valid
+# multi-byte UTF-8 sequences, so repairing only such runs is safe.
+_LATIN1_RUN = re.compile(r"[\x80-\xff]{2,}")
+
+
+def repair_mojibake(text: str) -> str:
+    """Decode runs of Latin-1 characters that form valid UTF-8 sequences; leave anything else untouched."""
+    def fix(match: re.Match) -> str:
+        data = match.group(0).encode("latin-1")
+        out, i = [], 0
+        while i < len(data):
+            lead = data[i]
+            width = 4 if lead >= 0xF0 else 3 if lead >= 0xE0 else 2 if lead >= 0xC0 else 1
+            chunk = data[i : i + width]
+            try:
+                if width == 1 or len(chunk) < width:
+                    raise UnicodeDecodeError("utf-8", chunk, 0, 1, "not a lead byte")
+                out.append(chunk.decode("utf-8"))
+                i += width
+            except UnicodeDecodeError:
+                out.append(chr(lead))
+                i += 1
+        return "".join(out)
+    return _LATIN1_RUN.sub(fix, text)
+
+
+def repair_json(value):
+    """repair_mojibake over every string in a decoded JSON value. Needed after json.loads, because
+    \\u00XX escapes inside the model's JSON text only become Latin-1 characters when decoded."""
+    if isinstance(value, str):
+        return repair_mojibake(value)
+    if isinstance(value, list):
+        return [repair_json(v) for v in value]
+    if isinstance(value, dict):
+        return {k: repair_json(v) for k, v in value.items()}
+    return value
+
+
 class CallResult(BaseModel):
     raw: str
     parsed: BaseModel | None  # instance of the response_model passed to call_agent
@@ -126,7 +169,7 @@ def parse_response(raw: str, response_model: type[BaseModel]) -> BaseModel:
     except UnicodeEncodeError as exc:
         code_point = ord(exc.object[exc.start])
         raise ValueError(f"response contains an unpaired Unicode surrogate U+{code_point:04X}") from exc
-    return response_model.model_validate(data)
+    return response_model.model_validate(repair_json(data))
 
 
 async def call_agent(
@@ -164,7 +207,7 @@ async def call_agent(
     if completion is None:
         completion, key_slot = await _create_completion(client, **kwargs)
 
-    raw = completion.choices[0].message.content or ""
+    raw = repair_mojibake(completion.choices[0].message.content or "")
     usage = completion.usage.model_dump() if completion.usage else None
     if usage is not None and key_slot is not None:
         usage["api_key_slot"] = key_slot

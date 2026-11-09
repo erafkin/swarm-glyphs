@@ -1,0 +1,194 @@
+SWARMISH
+Lookup only. Do not spell English. Do not use letter order, glyph codes, positions, or arithmetic.
+No spaces in a message. No Latin letters. No agent ids. Each glyph is a whole word. 𗼿 ends a clause and is not a word. 𗢬 is not a word; it plus the next glyph is one nonce. The glyph after 𗢬 keeps none of its table meaning. Do not use 𗼿 as that glyph.
+A line with two glyphs, such as I 𗉜 𗽕, lists two synonyms. Either glyph alone means that. Never write both. Mix synonyms. Do not always use the left one. Do not copy the synonym someone else just used. Never repeat a clause in the other synonyms.
+Order is free except where a rule says immediately. Vary it. Do not start every clause the same way. Say only what the task needs.
+A phrase is quantity and quality glyphs, then one head, then one role glyph. The role marks that phrase. Head is a pronoun, a name, a noun, or a nonce. Two nouns before one role: the last noun is the head, the earlier specifies it. A pronoun, name, or nonce is a head alone. You may omit a phrase whose role is already known.
+No mood means state. A question, promise, refusal, or command must carry its mood. If two moods appear, the last wins. past, now, and future may stand anywhere and set time. yes or no may be a whole clause.
+not immediately before a verb, quality, or quantity negates that glyph. Do not put not between a head and its role, or inside a num sequence. Other links should stand first and join this clause to the previous one.
+Yes-no question: mood askyn. Wh-question: the wh pronoun in the asked role, mood askwh. Promise or agreement: mood commit, or yes, without new content words. Refusal: no, or mood reject, or dont before the verb. Command or please: mood urge.
+give: doer gives undergoer to receiver. put: doer puts undergoer at place. tell: doer tells undergoer to receiver. come and go use place. Owner marks a possessor. An instrument is the undergoer of use.
+more or less immediately before a quality compares. than marks the standard. first and last pick ends of a list. next picks the following item.
+num immediately before digit words names that digit sequence in order, as a decimal numeral. It is not a sum of the digits and not a code. hundred and ten are quantities by themselves. A num phrase may be a head, or may stand immediately before the noun it counts.
+A nonce keeps its pair forever. Define it once: nonce, topic, be, a describing phrase, state. Do not spell English. If no table word fits, coin a nonce and describe it, in several clauses if needed.
+Prefer I and you. Use an agent name only for someone who is not the speaker and not the addressee.
+If you cannot split a clause into words from this file, ask for that clause again.
+DOUBLES
+I 𗉜 𗽕
+you 𗂄 𘉮
+we 𗋮 𘚺
+this 𗄎 𗹫
+that 𗪐 𗑸
+what 𘑋 𘀝
+who 𗛢 𘄘
+be 𗃚 𗤴
+do 𗷴 𗌸
+have 𗂱 𘗇
+want 𘆣 𗭒
+know 𘎛 𗌿
+say 𘝄 𗇴
+go 𗩠 𗳃
+not 𗭵 𘔃
+and 𗲅 𗗢
+or 𗄪 𗣑
+if 𗨥 𘅪
+yes 𘄊 𗛽
+no 𘊫 𗣎
+state 𗒏 𗳵
+askyn 𗎰 𗜎
+askwh 𗯧 𗪩
+commit 𗩨 𗧬
+reject 𘒄 𗾐
+urge 𗓉 𘙨
+doer 𗏾 𗼛
+undergoer 𗚋 𗊑
+place 𗄼 𘍂
+time 𗻲 𗐪
+thing 𗌈 𘝚
+person 𗗅 𗽃
+good 𗦴 𘚑
+bad 𘙠 𗪺
+true 𘋉 𘔠
+false 𘍍 𗞢
+ROLES
+receiver 𘚐
+topic 𗁳
+owner 𗈽
+goal 𗿃
+source 𗬵
+than 𗡉
+MOODS
+maybe 𘆎
+must 𘖾
+can 𗒳
+dont 𗵵
+LINKS
+but 𘍠
+then 𘉝
+because 𗋟
+before 𗋼
+after 𗉍
+PRONOUNS
+someone 𗥐
+where 𗠄
+when 𘝨
+why 𗱓
+how 𘚒
+everyone 𗂺
+NAMES
+agent_0 𗞿
+agent_1 𗉞
+agent_2 𗲄
+agent_3 𗎿
+agent_4 𗡑
+agent_5 𘜇
+agent_6 𗵫
+agent_7 𘋟
+QTY
+zero 𘚜
+one 𘃉
+two 𗶞
+three 𘙓
+four 𗜀
+five 𗤄
+six 𗘝
+seven 𘏛
+eight 𗷤
+nine 𗟆
+ten 𗗹
+hundred 𘆂
+all 𗶢
+some 𗋭
+none 𗡕
+many 𗈃
+more 𗯘
+less 𘅊
+num 𗨽
+first 𘂮
+last 𗇽
+next 𗎶
+NOUNS
+group 𗗫
+name 𗘈
+message 𗑴
+task 𗋫
+problem 𘐪
+plan 𗭯
+result 𗏔
+reason 𗥊
+way 𗸽
+place 𗜑
+time 𗚽
+part 𗘺
+list 𘇩
+item 𘆄
+secret 𗏻
+choice 𗊓
+question 𗘏
+answer 𘋍
+error 𗪤
+word 𗅋
+number 𗅲
+VERBS
+ask 𗽀
+think 𘆮
+take 𘂲
+make 𗘗
+use 𘁜
+find 𘌔
+give 𘕡
+stay 𗿋
+begin 𘉫
+stop 𘑑
+help 𘎌
+choose 𘖽
+change 𘗟
+keep 𗪥
+check 𘗣
+agree 𘊌
+see 𗞉
+show 𗾌
+put 𗈵
+come 𗹕
+try 𘚄
+need 𘒳
+tell 𘖸
+wait 𗌩
+send 𗦥
+QUALS
+big 𗡒
+small 𗜘
+same 𗨞
+different 𘅌
+new 𘍧
+old 𘍄
+important 𗱑
+possible 𘝞
+ready 𘑾
+clear 𗟎
+correct 𗕴
+wrong 𗏶
+easy 𘛺
+hard 𗚀
+near 𘈩
+far 𘀦
+left 𘅠
+right 𗊢
+open 𗒮
+closed 𘁁
+COLORS
+red 𗦢
+blue 𘎔
+green 𗇾
+yellow 𗀉
+black 𗍽
+white 𘐂
+TIME
+past 𘏉
+now 𗾨
+future 𗢬
+EX I have a secret: 𗽕𗏾𘆄𗚋𘗇𗳵𗼿
+EX do you know that: 𘉮𗼛𗑸𗊑𗌿𗎰𗼿
+EX the result is 37: 𗏔𗏾𗨽𘙓𘏛𗊑𗃚𗳵𗼿
+EX if you come, I will stay: 𗨥𗂄𗏾𗈵𗒏𗼿𘉝𗉜𗼛𘕡𗩨𗼿
+EX nonce defined as secret: 𗢬𗦢𗁳𗤴𘆄𗳵𗼿

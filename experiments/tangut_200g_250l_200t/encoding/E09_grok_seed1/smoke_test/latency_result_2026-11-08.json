@@ -1,0 +1,48 @@
+{
+  "run_mean_reasoning_tokens": 45556,
+  "results": [
+    {
+      "variant": "medium (logged baseline, same prompt)",
+      "reasoning_tokens": 45958,
+      "completion_tokens": 53887,
+      "prompt_tokens": 18605,
+      "latency_s": 642,
+      "cost_usd": 0.355732,
+      "finish_reason": "stop",
+      "structured": true,
+      "doc_lines": 158,
+      "glyph_chars": 981,
+      "inventory_glyphs": 980,
+      "garbage_chars": 1,
+      "agent_turn": "agent_7 t7"
+    },
+    {
+      "variant": "low effort",
+      "reasoning_tokens": 9901,
+      "completion_tokens": 17528,
+      "prompt_tokens": 18605,
+      "latency_s": 122,
+      "cost_usd": 0.114538,
+      "finish_reason": "stop",
+      "structured": true,
+      "doc_lines": 156,
+      "glyph_chars": 968,
+      "inventory_glyphs": 968,
+      "garbage_chars": 0
+    },
+    {
+      "variant": "reasoning max_tokens 8000 (no effort)",
+      "reasoning_tokens": 41527,
+      "completion_tokens": 49122,
+      "prompt_tokens": 18605,
+      "latency_s": 337,
+      "cost_usd": 0.304102,
+      "finish_reason": "stop",
+      "structured": true,
+      "doc_lines": 155,
+      "glyph_chars": 968,
+      "inventory_glyphs": 968,
+      "garbage_chars": 0
+    }
+  ]
+}

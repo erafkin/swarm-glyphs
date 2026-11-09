@@ -1,0 +1,284 @@
+# SWARMISH.TXT, RECONSTRUCTED
+
+Swarmish is a morphemic language written with Tangut-like glyphs. Spaces separate words. A word is one glyph or an unspaced digraph. Digraphs are compounds, often coined by agents for task objects that the pre-task lexicon had no ready name for, so one referent can have more than one coinage until the group converges. Latin agent IDs are embedded as-is and are not Swarmish words.
+
+## Speech-act openers (first glyph)
+- 𘊫 ASSERT / "I report" — high. Default factual opener.
+- 𘙓 ASK — medium. Often paired with final 𘏛.
+- 𗽕 PROPOSE — medium.
+- 𘔃 AGREE / confirm — medium.
+- 𘝚 CORRECT / contrast — medium-low.
+- 𘐂 ALERT / result — medium-low.
+
+## Second-position verbs (medium-low unless noted)
+- 𗜎 "say / hold (this info)" — medium. Default verb.
+- 𗸪 "think / believe" — low.
+- 𗸽 "check" — low.
+- 𗀉 "ask about" — low.
+- 𗞢 "warn" — low.
+- 𗇾 in second position: "request confirmation" — low.
+
+## Grammar particles
+- 𗶞 copula "is / equals" — high. Frame: NOUN 𗶞 PREDICATE.
+- 𗐪 and 𗘈 alternating coordinators, both "and" — high. They swap each clause in a list; not a semantic contrast.
+- 𗢬 nominal marker before a content noun ("the") — high.
+- 𗛢 lighter determiner ("this / a") — medium.
+- 𘋍 end-of-phrase linker, roughly "and/of", before a coordinator or closer — medium.
+- 𘚐 relational "of / about / from" — medium. Often before 𗌈 or an agent ID.
+- 𗌈 high-frequency pronoun, best gloss "it / this / I" — low. Exact person is unclear.
+- 𘂲 comma-like separator, sometimes replacing 𗶞 in later messages — medium.
+- 𗏔 addressee marker "to" — medium. Followed by agent_N.
+- 𗛽 address/list closer — low.
+- 𘍧 𗄼 "base digit" — medium. Frame X 𘍧 𗄼 𗶞 NUMBER in cabinet clues.
+- 𘏉 "position" — high, with a following digit glyph.
+- 𗡕 "please" — low.
+- 𗇾 near the end: "confirm?" — low.
+- 𗤄 near the end: "ack / thanks" — low.
+- Final punctuation: 𘅠 statement, 𘏛 question, 𗨥 emphasis, 𘖾 trailing/uncertain — low-medium.
+
+## Numbers (cardinal and position)
+- 𗜀 = 1 — medium-high (only in 𘏉 𗜀 "position 1").
+- 𗲄 = 2 — medium-high (position 2; also in SUN's value 𗂄 𗲄).
+- 𗡒 = 3 — medium (position 3).
+- 𘍍 = 4 — medium-high (position 4; STAR base 𗂄 𘍍).
+- 𗂄 numeral-compound element, not a standalone digit — medium. Precedes 𗲄 and 𘍍 in base-digit statements.
+- 𗎰 = 7 — medium. Agent_0's MOON value.
+- 𗭵 = 8 — medium. Agent_2's WAVE value.
+- Other number-like strings (𗌿, 𗒮, 𗯧 𗂄, 𗒏 𗂄, 𗑴, 𘅌 𗂄 𘎛, 𗂄 𗷤 𗈵 𘌔) — unknown. 𗌿 is a repeated predicate on symbols, not a stable digit. Guess (low): "displayed / known / symbol-slot".
+
+## Converged content nouns (cabinet)
+Consensus by messages 43 and 184, matching SUN-MOON-STAR-WAVE left to right:
+- 𗉜𗿃 SUN — high. Position 1. Shares 𗉜 with agent_4's coinage 𘛺𗉜 (medium: same referent).
+- 𗦴𘍂 MOON — high. Position 2. Agent_0's earlier coinage 𘛺𗪥 is the same referent (medium).
+- 𗟎𘗟 STAR — high. Position 3 in msg 184. Agent_1's coinage 𘆣𗾌 is an alternate for STAR (medium; used as position 3 in msg 43).
+- 𘗟𘆣 WAVE — high. Position 4. Agent_2's coinage 𘝨𗒳 is an alternate for WAVE (medium-high; paired with value 8).
+- 𗒳𗦥 early agent_3 noun — low. Guess: cabinet, or an abandoned SUN/position coinage.
+
+## Power-panel nouns (after the cabinet discussion)
+- 𗋫𗳃 BOOT — medium-high. Introduced by agent_0 at msg 28, then discussed as a control with prerequisites and a cost.
+- 𗥐𗞿 SIGNAL — medium. Introduced by agent_4 at msg 42; agent_4's power clue is SIGNAL.
+- DRAIN and CRANK — unknown as stable glyphs. Candidates, all low: agent_5's 𗊑𗁳 / 𗪐𗘗; later 𗚀𗪩 / 𗗢𘑑. Do not treat these as identified.
+- 𗉞𘙠 — unknown (agent_6, msg 49). Guess (low): a requirement or action name, not a symbol.
+
+## How messages are built
+Typical clause: SPEECH-ACT + VERB + (determiner) + NOUN + (𘚐 𗌈) + 𗶞 + PREDICATE + 𘋍, then 𗐪/𗘈 and the next clause, then an optional addressee (𗏔 agent_N) and a closer (𗇾/𗤄 + 𗡕 + final punctuation).
+Predicates are either a number phrase, a position phrase (𘏉 + digit), another noun, or an unknown property string.
+Agents coin digraphs for task entities and argue until one coinage sticks. That convention is high confidence as a usage fact; whether swarmish.txt prescribed coinage rules is medium (the log shows productive compounding, not a fixed four-symbol vocabulary).
+
+## Not in the reconstruction
+No evidence of a cipher over English letters. No evidence that glyph shape depicts meaning. Invalid-character attempts (⊘) show an allowlist of glyphs; the allowlist itself is unknown.
+
+# TRANSLATION
+
+Glosses use the lexicon above. Words marked ? are low confidence. "unknown" means the predicate is not mapped. Task line 1 is English JSON, not Swarmish.
+
+1. task: stage 0, invalid attempts 0.
+2. agent_0 ASSERT: this MOON-coinage (𘛺𗪥), base-digit is 7 (𗎰)?; and unknown predicate 𗯘 𘗣 𗹫; please confirm.
+3. agent_2 ASSERT: this MOON-coinage, and the MOON-coinage base-digit is 8 (𗭵)? — likely a mis-assignment. Please confirm.
+4. agent_6 ASK: about MOON-coinage, is it 𗌿?; and MOON-coinage base-digit is 4 (𗂄 𘍍)? — testing, not their clue. Ack?
+5. agent_3 ASSERT: this 𗒳𗦥 is 𗒮; this SUN is 𗌿; I? hold 𗒳𗦥 at position-related 𘏉 𗜀; SUN is 𗉍-position? 𗌿; unknown closing request.
+6. agent_2 ASK: the MOON-coinage base-digit is 8?; and this WAVE-coinage (𘝨𗒳) base-digit is 8. Please confirm.
+7. agent_0 ASK: believe? the MOON-coinage base-digit is 7; and it? holds base-digit 8? (quoting agent_2); unknown; please confirm to? someone.
+8. agent_7 ASSERT: this MOON-coinage is position 4? (𘏉 𘍍) plus 𗂄; and I? hold 𗄼; please? act. (Early wrong position.)
+9. agent_1 ASSERT: thinks? this MOON-coinage is 𗌿; this WAVE-coinage is 𗒮; I hold WAVE-coinage at position 3; WAVE-coinage at position 3 is MOON-coinage. Please? confirm. (Confused mapping.)
+10. agent_4 ASSERT: this SUN-coinage (𘛺𗉜) is 𗌿; SUN-coinage base-digit is 2 (𗂄 𗲄); unknown 𗯘 𘗣 𗹫; please confirm.
+11. agent_6 PROPOSE: the MOON-coinage is it? 𗌿; this STAR (𗟎𘗟) is 𗌿; STAR base-digit is 4 (𗂄 𘍍). Please confirm.
+12. agent_0 PROPOSE: thinks? STAR? wait — the MOON-coinage base-digit is 7; and unknown 𗄎 𗌿; please confirm.
+13. agent_5 ASK: confirm? I? hold position 2; this MOON-coinage is 𗌿; MOON-coinage is 𗂄-𗷤; several unknown properties of MOON-coinage; please.
+14. agent_3 AGREE: I? hold SUN base-digit; and you? hold unknown 𗘺; ack.
+15. agent_2 AGREE: WAVE-coinage base-digit is 8; and you hold unknown 𗷴 𘏉; please confirm.
+16. agent_1 ASSERT: this STAR-alt (𘆣𗾌) is 𗌿; I hold 𗒳𗦥 at position 3; STAR-alt is 𗉍-position 𗌿; you hold STAR-alt base-digit; please confirm.
+17. agent_7 CORRECT: thinks? the MOON-coinage is position 4 plus 𗂄; this WAVE (𘗟𘆣) is position 4 plus 𗂄; you hold WAVE base-digit; and unknown; please confirm.
+18. agent_4: discarded (⊘), not Swarmish.
+19. agent_6 AGREE: STAR base-digit is 4; and you hold STAR at unknown 𗷴 𘏉; please confirm.
+20. agent_5 CORRECT: this MOON (𗦴𘍂) is position 2 𗌿; MOON is 𗂄-𗷤; MOON has unknown properties 𗯧 𗂄 and 𗒏 𗂄; MOON base-digit; please confirm.
+21. agent_0 AGREE: check? MOON-coinage base-digit is 7; I hold position 𘏉; and the unknown 𗕴 is 𘑾 𗌿; unknown code-like closer. Guess (low): proposing a cabinet attempt.
+22. agent_3 CORRECT: thinks? position 1 is SUN; I hold SUN base-digit; you hold SUN base-digit; ack.
+23. agent_7 CORRECT: thinks? unknown 𗯘 𘗣 WAVE base-digit; please confirm from? I hold 𗉍 base-digit.
+24. agent_2 ALERT: the base-digit is 𗋼; and unknown 𘏉 𘎛 𘍧 𗾨. Please.
+25. agent_6 ALERT: ack? you hold STAR at 𗷴 𘏉; and unknown. Closing 𘍠.
+26. agent_1 AGREE: unknown 𗯘 𗏻 STAR-alt base-digit; from you hold STAR-alt base-digit. Please confirm.
+27. agent_5 ALERT: check? MOON is position 2 𗌿; I hold MOON base-digit; and unknown base-digit; ack.
+28. agent_0 ALERT: warn? this BOOT (𗋫𗳃) is it 𗌿; BOOT base-digit? is 7 — likely still mixing cabinet digit with the new control; I hold position; the SUN base-digit; unknown long predicate. Guess (medium): first power-clue report, BOOT costs/relates to charge, wording still cabinet-like.
+29. agent_2 ASSERT: thinks? unknown 𘉫 the STAR? 𗦴𘍂 is WAVE-coinage; WAVE-coinage is 𗂄-𗷤; WAVE-coinage base-digit is 8. Please.
+30. agent_4 AGREE: thinks? this BOOT is 𗌿; BOOT base-digit is 2 (𗲄); you hold unknown 𗷴 𘏉; from I hold position. Please confirm.
+31. agent_7 ASSERT: I hold position 4; position 4 𗌿 is WAVE; WAVE is 𗂄-𗷤 𘚄 and 𗂄-𗷤 𗳵; unknown 𘅌 𗬵 𗂄; the 𗕴 is 𗬵 𗌿; unknown. Please confirm. Guess (low): exit or power prerequisites.
+32. agent_1 ASK: you hold base-digit; from I hold position 3; and unknown STAR-alt base-digit; ack.
+33. agent_3 PROPOSE: position 1 is SUN; SUN is unknown 𗶢 𗒏 𗂄; I hold SUN base-digit; the 𗕴 is 𗶢 𗒏 𗂄; unknown base-digit. Please confirm.
+34. agent_6 CORRECT: thinks? STAR base-digit is 4; you hold SUN base-digit; you hold MOON base-digit; you hold STAR-alt base-digit; you hold WAVE base-digit. Please. (Listing four symbol base-digits as known to others.)
+35. agent_2 CORRECT: the WAVE-coinage is 𗂄-𗷤; WAVE-coinage is 𗯧 𗂄; WAVE-coinage is 𗒏 𗂄; the MOON is 𗬵 𗌿; WAVE-coinage base-digit is 8. Ack.
+36. agent_3 ASSERT: you hold unknown 𗷤 𘖸 𗹕 SUN base-digit; to? act; ack.
+37. agent_5 ASSERT: this 𗊑𗁳 is 𗒮; this 𗪐𗘗; MOON is position 2 𗌿; MOON is 𗊑𗁳-related 𗪐𗘗; MOON has 𗯧 𗂄 and 𗒏 𗂄; the 𗕴 is 𗬵 𗌿; unknown base-digit. Please confirm. (Power clue attempt; DRAIN not securely identified.)
+38. agent_7 PROPOSE: unknown 𘍠 𗲅 you hold base-digit; and unknown 𗕴 is 𗬵 𗌿; from base-digit. Please? act.
+39. agent_2 AGREE: you hold SUN base-digit; you hold STAR-alt base-digit; you hold WAVE base-digit; WAVE-coinage base-digit is 8; and MOON is 𗬵 𗌿; to agent_5 please confirm.
+40. agent_1 ASSERT: I hold position 3; STAR-alt is 𗯧 𗂄; STAR-alt is unknown 𘅌 𗯧 𘏉; the 𗕴 is 𗬵 𗌿; unknown base-digit. Please confirm.
+41. agent_6 ASSERT: this 𗪐𗘗 is 𗯧 𘏉; STAR is unknown 𘅌 𗪐𗘗; you hold STAR; and the 𗕴 is 𗬵 𗌿; unknown position; and unknown STAR-alt. Please confirm.
+42. agent_4 CORRECT: thinks? confirm the SIGNAL (𗥐𗞿), it is 𗌿; this SIGNAL is 𗌿; SIGNAL base-digit is 2; SIGNAL is 𗒏 𗑴; SIGNAL is 𗂄-𗷤; you hold SIGNAL at unknown 𘅌 𗂄; the 𗕴 is 𗉍 𗌿; unknown 𗷴 𘏉. Ack. Guess (medium): SIGNAL costs 3 / needs a prior control; the number glosses here are unreliable.
+43. agent_0 CORRECT: thinks? confirm the position 1 is SUN; position 2 is MOON; position 3 is STAR-alt (𘆣𗾌); position 4 is WAVE; BOOT base-digit is 7; and the 𗕴 is 𗷴 𘏉 𗌿. Please. HIGH: cabinet order SUN, MOON, STAR, WAVE.
+44. agent_1: ⊘.
+45. agent_3: ⊘.
+46. agent_7 PROPOSE: thinks? I hold position 4; position 4 𗌿 is 𗂄-𗷤 𘚄; 𗉍 𗂄 is 𗂄-𗷤 𗳵; unknown base-digit; the 𗕴 is 𗉍 𗂄. Ack.
+47. agent_4 AGREE: SIGNAL base-digit is 2; you hold 𗷴 𘏉; the 𗕴 is 𗬵 𗌿; unknown position. Please confirm.
+48. agent_3 ASK: I hold SUN base-digit; SUN is 𗶢 𗒏 𗂄; the 𗕴 SUN base-digit; unknown base-digit. Please confirm.
+49. agent_6 AGREE: ask? the SIGNAL is it 𗌿; this 𗉞𘙠 is 𗯧 𘏉; STAR is unknown 𘅌 𗉞𘙠; STAR; and unknown STAR-alt is 𘅌 𗉞𘙠; to agent_1 ack.
+50. agent_5 AGREE: confirm the WAVE-coinage is 𗊑𗁳-related 𗪐𗘗; WAVE-coinage is 𗂄-𗷤. Ack.
+51. agent_3 ASSERT: I hold position 1; position 1 𗌿 is SUN; SUN is 𗶢 𗒏 𗂄; the 𗕴 SUN base-digit; unknown base-digit. Please confirm.
+52. agent_1 ASSERT: confirm? STAR-alt properties 𘀝 𘆂 / 𘀝 𘚄 / 𘋟; 𘅌 𗯧 𘏉; the STAR-alt is 𗬵 𗌿; and STAR base-digit is 4; to agent_6 ack.
+53. agent_5 ASSERT: the MOON is 𗬵 𗌿; position 2 base-digit is 8. Please. (8 here may be a mis-gloss if 𗭵 was reused loosely.)
+54. agent_3 ASSERT: position 1 𗌿 is SUN; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+55. agent_0 ASK: thinks? BOOT base-digit is 7; BOOT is 𗂄-𗷤; BOOT is 𗯧 𗂄; BOOT is 𗒏 𗂄; several unknown modifiers on BOOT; MOON is 𗬵 𗌿; position 2 base-digit is 7; SUN is 𗶢 𗒏 𗂄; SIGNAL is 𗶢 𗒏 𗑴; SIGNAL is 𗬵 𗌿. Please. Guess (low): reading out BOOT's rule list.
+56. agent_7 ASSERT: thinks? position 4 𗌿 is WAVE; WAVE is 𗂄-𗷤 𘚄 and 𗂄-𗷤 𗳵; position 2 base-digit is 8; STAR is WAVE-coinage; position 3 base-digit is 4; STAR is STAR-alt; unknown BOOT to agent_0; you hold SIGNAL is 𗶢 𗒏 𗂄 to agent_4. Please.
+57. agent_4 ALERT: thinks? the SIGNAL is position 4 𗌿; SIGNAL is 𗂄-𗷤 𘚄; SIGNAL is 𘅌 𗬵 𗂄; the SIGNAL is position 3 𗌿; SIGNAL is 𘅌 𗯧 𘏉; the SUN is 𗒏 𗑴; SIGNAL base-digit is position-1 base-digit. Ack.
+58. agent_6 ASK: confirm STAR base-digit is 4; STAR is 𘅌 𗉞𘙠; STAR; you hold SUN base-digit; the 𗕴 is 𗬵 𗌿; position 3 base-digit is 4. Ack.
+59. agent_5 ALERT: position 2 base-digit is 8; and position 1 base-digit and position 4 base-digit. Please confirm.
+60. agent_2 ALERT: the MOON is 𗬵 𗌿 to agent_5; MOON is 𗂄-𗷤; MOON is 𗯧 𗂄; MOON is 𗒏 𗂄; WAVE-coinage base-digit is 𗂄-8; STAR-alt is 𗬵 𗌿; STAR is 𘅌 𗯧 𘏉; STAR base-digit is 4; STAR-alt is STAR to agent_1 and agent_6; I hold position. Please confirm. Guess (medium): trying to align names and digits before a code submit.
+61. agent_3 ALERT: thinks? I hold position 1; position 1 𗌿 is SUN; SUN is 𗶢 𗒏 𗂄; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit. Ack.
+62. agent_6 ASSERT: unknown position 3 base-digit is 4 to agent_1. Please confirm.
+63. agent_1 AGREE: STAR-alt is 𘅌 𗯧 𘏉; STAR-alt properties; unknown 𗏻 base-digit. Please confirm.
+64. agent_6 CORRECT: I? and I hold position 1 base-digit; I hold position 4 base-digit. Please.
+65. agent_2 ASSERT: position 2 base-digit is 8; position 3 base-digit is 4; and position 1 base-digit and position 4 base-digit. Please confirm.
+66. agent_0 ASSERT: BOOT is 7; BOOT is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𘅌 𗂄 and 𗑴 and 𗶢 𗒏 𗂄; MOON is 𗬵 𗌿; position 2 base-digit is 7 and also 8; WAVE-coinage is 𗬵 𗌿. Please? act.
+67. agent_7 ASK: position 4 𗌿 is WAVE; position 4 base-digit is 7; BOOT is 𗂄-𗷤 𘚄 and 𗂄-𗷤 𗳵; WAVE is 𗑴; BOOT is 𗬵 𗌿 to agent_0; you hold position 1 𗌿 is 𗒏 𗑴 to agent_3. Please confirm.
+68. agent_4: ⊘.
+69. agent_5 CORRECT: confirm the MOON is WAVE-coinage?; several unknown modifiers; MOON is 𗯧 𗂄 and 𗒏 𗂄 and 𘅌 𗂄 and 𗑴; BOOT is 𗬵 𗌿; position 2 base-digit is 7; BOOT is 𗬵 𗌿 to agent_0; you hold unknown WAVE-coinage to agent_2. Please confirm.
+70. agent_6 AGREE: check? STAR base-digit is 4; position 3 base-digit is 4; and position 1 base-digit and position 4 base-digit. Please.
+71. agent_3 ASSERT: the SUN is 𗑴; SUN is 𗶢 𗒏 𗂄; unknown SUN; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit. Please confirm.
+72. agent_1 AGREE: thinks? position 3 base-digit is 4; from STAR-alt is STAR; and unknown 𗉍 𗩨 to agent_6. Ack.
+73. agent_2 ASK: thinks? you hold SIGNAL base-digit is position-1 base-digit to agent_4; you hold BOOT base-digit is position-4 base-digit to agent_0. Please confirm.
+74. agent_4 ASSERT: SIGNAL base-digit is 2; the I hold position; the you hold 𗷴 𘏉; you hold SIGNAL is 𗷴 𘏉 𗌿. Please confirm.
+75. agent_0 CORRECT: the BOOT is WAVE; BOOT is 𘅌 𗬵 𗂄; you hold WAVE-coinage is BOOT; the MOON is BOOT; position 2 base-digit is 7 and also 8; MOON is BOOT to agent_5. Please confirm. (Comparisons; 𗶞 here may mean "matches/pairs with", not strict identity. Low confidence on the relation.)
+76. agent_6 ASSERT: position 4 base-digit is 7; from WAVE is 𗬵 𗌿; and BOOT is 𗬵 𗌿 to agent_0. Ack.
+77. agent_2 ASSERT: position 2 base-digit is 8; position 3 base-digit is 4; and from I hold position 1 base-digit; I hold position 4 base-digit. Please.
+78. agent_6 AGREE: unknown 𗯘 𗏻 base-digit; the 𗕴 SUN base-digit. Ack.
+79. agent_4 ASSERT: the you hold 𗷴 𘏉; SIGNAL base-digit is 2; and unknown position 1 base-digit and position 4 base-digit. Please confirm.
+80. agent_3 AGREE: check? SUN is 𗑴; SUN is 𗒏 𗑴; SUN is 𗶢 𗒏 𗂄; unknown modifiers; SUN base-digit; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please? act.
+81. agent_7 AGREE: WAVE properties 𘚄 / 𗳵 / 𘆂; WAVE is 𗯧 𗂄 and 𗒏 𗂄 and 𗑴; you hold base-digit; the 𗕴 is unknown modifiers. Please confirm.
+82. agent_0 ASK: the BOOT is WAVE; BOOT base-digit is 7; you hold 𗷴 𘏉; and the 𗕴 is 𗬵 𗌿. Please confirm.
+83. agent_3 ASK: the you hold SUN base-digit; SUN is 𗶢 𗒏 𗂄; SUN is 𗑴. Please.
+84. agent_3 CORRECT: position 1 𗌿 is SUN; the you hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Please confirm.
+85. agent_0 AGREE: check? the 𗕴 is 𗬵 𗌿; from I hold position. Please? act.
+86. agent_1 ALERT: warn? position 3 base-digit is 4; STAR-alt is STAR; position 2 base-digit is 7; BOOT is 𗬵 𗌿; position 2 base-digit is 8; position 4 base-digit is 7; BOOT is 𘅌 𗬵 𗂄; and position 1 base-digit and position 4 base-digit. Please confirm. Guess (low): charge arithmetic.
+87. agent_5 ASK: thinks? ask the BOOT is MOON to agent_0; WAVE-coinage is MOON to agent_2; and repeated contrasts to agent_0 and agent_2. Ack.
+88. agent_3 AGREE: the you hold base-digit; I hold SUN base-digit; and unknown 𗏻 base-digit. Please confirm.
+89. agent_2 CORRECT: confirm position 2 base-digit is 8; the WAVE-coinage is BOOT; position 2 base-digit is 8 and also 7; I hold 𗂄; you hold WAVE-coinage; position 3 base-digit is 4; BOOT is position 1 𗌿 to agent_0; the SIGNAL is position 4 𗌿; unknown base-digit to agent_4. Please? act.
+90. agent_4 CORRECT: check? the SIGNAL is 𗑴; SIGNAL is 𗶢 𗒏 𗂄; SIGNAL modifiers; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit is 2. Ack.
+91. agent_6 ASK: confirm position 3 base-digit is 4 to agent_1; position 4 base-digit is 7; from WAVE is 𘅌 𗬵 𗂄; BOOT is 𘅌 𗬵 𗂄; the BOOT is 𗶢 𗒏 𗂄; position 1 base-digit is 7 to agent_0; you hold SIGNAL is 𘅌 𗬵 𗂄 to agent_4. Please.
+92. agent_4 ASSERT: from I hold position 1 base-digit. Please confirm.
+93. agent_3 ASSERT: the SUN is 𗬵 𗌿; you hold SUN base-digit; the 𗕴 base-digit; unknown 𗏻 base-digit. Please confirm.
+94. agent_3 ALERT: warn? the you hold SUN base-digit; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Please.
+95. agent_7 ALERT: thinks? the position 4 base-digit is 7; the WAVE is BOOT; from WAVE is 𘅌 𗬵 𗂄; WAVE and BOOT; the 𗕴 is 𘅌 𗬵 𗂄 and other modifiers; unknown base-digit. Please confirm.
+96. agent_1 CORRECT: thinks? position 3 base-digit is 4; position 2 base-digit is 7; from BOOT is 𗬵 𗌿; WAVE-coinage to agent_2; SIGNAL is 𘅌 𗬵 𗂄 to agent_4; SIGNAL is 𗶢 𗒏 𗂄 to agent_4. Please.
+97. agent_6 AGREE: unknown SIGNAL is 𘅌 𗬵 𗂄 to agent_4; and BOOT is 𗶢 𗒏 𗂄 to agent_0. Please confirm.
+98. agent_4 AGREE: thinks? SIGNAL base-digit is 2; you hold 𗷴 𘏉; the 𗕴 is 𗬵 𗌿; unknown position. Please confirm.
+99. agent_0 ASSERT: the BOOT is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𗑴 and 𘅌 𗂄; MOON is 𗬵 𗌿; position 2 base-digit is 7; MOON is BOOT to agent_5. Please? act.
+100. agent_6 PROPOSE: position 1 base-digit is 2; from SIGNAL is 𗶢 𗒏 𗂄; SIGNAL modifiers; and unknown 𗉍 𗩨 to agent_4 and agent_3; you hold BOOT is 𘅌 𗬵 𗂄 to agent_0. Please confirm.
+101. agent_5 AGREE: check? this 𗚀𗪩 is 𗂄-𗷤; STAR is 𗚀𗪩; this 𗗢𘑑 is 𗒮; unknown MOON is 𗗢𘑑; the you hold position 2 base-digit; the 𗕴 is 𗚀𗪩; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit. Ack. (Exit-phase coinages, referents unknown.)
+102. agent_2 ASSERT: check? the WAVE-coinage is SIGNAL; from it base-digit is 8; SIGNAL base-digit is 2; SIGNAL is SUN to agent_4 and agent_3. Please.
+103. agent_3 ASSERT: you hold unknown 𗷤 𘖸 𗕴 SUN base-digit to agent_0, agent_2, agent_6, agent_7; I hold position 1. Please confirm.
+104. agent_3 CORRECT: unknown 𗯘 𘗣 𗌿 base-digit; from you hold SUN base-digit. Ack.
+105. agent_4 ALERT: warn? unknown the SIGNAL is 𘅌 𗬵 𗂄; SIGNAL is 𗶢 𗒏 𗂄; SIGNAL is 𗒏 𗑴; SIGNAL base-digit is 2; I hold position; the 𗕴 is 𗬵 𗌿; unknown position. Please confirm.
+106. agent_5 ASSERT: the you hold position 1 base-digit; the 𗕴 is 𗗢𘑑; unknown 𗏻 base-digit. Please confirm.
+107. agent_7 AGREE: position 4 𗌿 is WAVE; the WAVE is BOOT and SIGNAL and STAR; WAVE is WAVE-coinage to agent_2. Please confirm.
+108. agent_3 AGREE: confirm? the 𗕴 SUN base-digit; unknown 𗏻 base-digit; you hold base-digit; I hold position 1. Ack.
+109. agent_2 ASK: the you hold SUN base-digit; from I hold position. Please.
+110. agent_0 ASSERT: BOOT is MOON; position 2 base-digit is 7; the you hold SUN base-digit; SIGNAL is SUN to agent_4. Please confirm.
+111. agent_6 ASSERT: the you hold SUN base-digit; the SIGNAL is SUN; position 1 base-digit is 2; SIGNAL is SUN to agent_4; and position 4 base-digit. Please confirm.
+112. agent_1 ASSERT: position 3 base-digit is 4; position 1 base-digit is 2; from SIGNAL is 𗶢 𗒏 𗂄; SIGNAL modifiers; SUN is 𗶢 𗒏 𗂄; SUN modifiers; SIGNAL is SUN to agent_4 and agent_3; you hold position 2 base-digit and position 4 base-digit; the 𗕴 is 𘅌 𗬵 𗂄 and other modifiers; unknown base-digit. Please confirm. Guess (medium): exit formula discussion, (base+offset) mod 10, numbers not securely read.
+113. agent_4 ASSERT: you hold SIGNAL is SUN; from I hold position 1; SIGNAL is 𗒏 𗑴; SIGNAL base-digit is 2; the 𗕴 is 𗬵 𗌿; unknown position. Please confirm.
+114. agent_5 ASK: position 2 𗌿 is MOON; I hold base-digit; the 𗕴 MOON base-digit; unknown base-digit. Please.
+115. agent_3 AGREE: thinks? you hold base-digit; I hold position 1; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Please.
+116. agent_3 ASK: thinks? the you hold SUN base-digit; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Please confirm.
+117. agent_5 ALERT: SUN? position? MOON base-digit is 7; I hold base-digit; the 𗕴 MOON base-digit; unknown 𗏻 base-digit. Please.
+118. agent_2 CORRECT: confirm the WAVE is WAVE-coinage; WAVE-coinage base-digit is 8; I hold position; you hold unknown 𗷤 𘖸 𗹕 base-digit is 8. Ack.
+119. agent_6 CORRECT: WAVE is WAVE-coinage to agent_2; SIGNAL is SUN to agent_4 and agent_3; position 3 base-digit is 4. Please.
+120. agent_7 ASSERT: the you hold SUN base-digit; the WAVE is SIGNAL; WAVE-coinage modifiers to agent_2. Please confirm.
+121. agent_4 ASK: the position 1 base-digit is 2; from SIGNAL is 𗶢 𗒏 𗂄; SIGNAL modifiers; SIGNAL is 𗒏 𗑴; SIGNAL base-digit is 2; I hold position; the 𗕴 is SIGNAL; unknown position. Please.
+122. agent_0 ALERT: the BOOT is MOON; from BOOT is 𘑾 𗌿; BOOT is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𗑴; the MOON is 𗬵 𗂄; position 2 base-digit is 7 to agent_5. Ack.
+123. agent_3 AGREE: confirm I hold position 1; position 1 𗌿 is SUN; SUN is 𗶢 𗒏 𗂄; unknown SUN; SUN is 𘅌 𗂄 and 𗑴; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit. Ack.
+124. agent_1 ASSERT: the SIGNAL is SUN; from SIGNAL is 𗑴; SUN is 𗑴; position 3 base-digit is 4; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please confirm.
+125. agent_3 ALERT: the you hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+126. agent_4 AGREE: thinks? the SIGNAL is SUN; from SIGNAL is 𗒏 𗑴; SIGNAL modifiers; SIGNAL base-digit is 2; you hold unknown 𗒏 𗑴. Please confirm.
+127. agent_5 ASK: thinks? I hold position 2; you hold the 𗕴 is MOON; the 𗕴 is MOON; unknown 𗏻 base-digit. Please.
+128. agent_3 AGREE: the you hold SUN base-digit; I hold position 1; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+129. agent_3 ASK: thinks? the you hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+130. agent_2 AGREE: confirm WAVE-coinage base-digit is 8; I hold position; the you hold position 1 base-digit and position 2 base-digit and position 4 base-digit; MOON is BOOT to agent_5, repeated. Ack.
+131. agent_3 ALERT: you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please confirm.
+132. agent_6 CORRECT: thinks? the you hold SUN base-digit; position 3 base-digit is 4; BOOT is 𗶢 𗒏 𗂄 to agent_0; BOOT to agent_0. Ack.
+133. agent_1 AGREE: I hold position 3; position 3 base-digit is 4; the you hold SUN base-digit; you hold BOOT is 𗚀𗪩 to agent_0; you hold WAVE-coinage to agent_2. Please confirm.
+134. agent_0 PROPOSE: the MOON is 𗬵 𗂄; from BOOT is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𗑴; position 2 base-digit is 7 to agent_5. Please confirm.
+135. agent_7 ASK: confirm? I?; the WAVE is WAVE-coinage; you hold position 4 base-digit; I hold base-digit; the 𗕴 modifiers; unknown base-digit. Please.
+136. agent_5 PROPOSE: you hold base-digit; I hold position 2; position 2 𗌿 is MOON; the 𗕴 is MOON; unknown 𗏻 base-digit. Please confirm.
+137. agent_3 ASSERT: the you hold base-digit; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+138. agent_0 AGREE: position 2 base-digit is 7; position 3 base-digit is 4; the you hold position 1 base-digit and position 4 base-digit; and unknown base-digit. Please confirm.
+139. agent_3 ALERT: the you hold SUN base-digit; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+140. agent_4 CORRECT: thinks? I hold position; the position 1 base-digit is 2; SIGNAL base-digit is 2; the 𗕴 is 𗬵 𗌿; unknown 𗷴 𘏉. Please.
+141. agent_6 AGREE: position 3 base-digit is 4 to agent_1; the you hold SUN base-digit; the you hold BOOT is 𗚀𗪩; unknown BOOT is 𗶢 𗒏 𗂄 to agent_0; and unknown 𗏻 base-digit; the 𗕴 SUN base-digit. Ack.
+142. agent_5 AGREE: you hold base-digit; I hold position 2; position 2 𗌿 is MOON; the 𗕴 MOON base-digit; unknown 𗏻 base-digit. Please.
+143. agent_1 ASSERT: from I hold position 1 base-digit; I hold position 2 base-digit; I hold position 4 base-digit; and unknown 𗏻 base-digit. Please confirm.
+144. agent_3 ALERT: the you hold base-digit; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please.
+145. agent_0 ASSERT: the BOOT is 𗶢 𗒏 𗂄; the you hold SUN base-digit; position 2 base-digit is 7. Please.
+146. agent_3 AGREE: thinks? the you hold SUN base-digit; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please confirm.
+147. agent_5 CORRECT: thinks? I hold position 2; position 2 𗌿 is MOON; you hold base-digit; the 𗕴 MOON base-digit; unknown 𗏻 base-digit. Please? act.
+148. agent_6 ALERT: position 3 base-digit is 4; you hold SUN base-digit; you hold WAVE base-digit. Please confirm? the 𗕴 base-digit; unknown 𗏻 base-digit. Please confirm.
+149. agent_3 AGREE: check? the you hold MOON base-digit; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Ack.
+150. agent_2 ASSERT: the I hold 𗂄; you hold unknown SUN to agent_3; the unknown position 1 base-digit is 8. Please.
+151. agent_0 ASSERT: the you hold 𗹕; the BOOT is 𗶢 𗒏 𗂄; the 𗕴 is SUN; unknown base-digit. Please confirm.
+152. agent_4: ⊘.
+153. agent_3 ASK: the you hold base-digit; unknown 𗏻 SUN base-digit. Please confirm.
+154. agent_3 AGREE: the you hold base-digit; you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Ack.
+155. agent_2 AGREE: WAVE-coinage modifiers; WAVE-coinage base-digit is 8; the I hold position; and the 𗕴 is WAVE-coinage; unknown position. Please confirm.
+156. agent_0 ASSERT: unknown position 1 base-digit and position 4 base-digit; from I hold base-digit; position 2 base-digit is 7; position 3 base-digit is 4. Please.
+157. agent_3 CORRECT: thinks? you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Ack.
+158. agent_5 AGREE: thinks? I hold position 2; position 2 𗌿 is MOON; MOON is 𗂄-𗷤 and other modifiers including 𗶢 𗒏 𗂄 and 𗑴; you hold base-digit; the 𗕴 is 𗬵 𗌿; unknown 𗏻 base-digit. Please confirm.
+159. agent_1 ASSERT: confirm? position 3 base-digit is 4; the you hold SUN base-digit; from you hold BOOT is 𗚀𗪩 to agent_0; you hold WAVE-coinage is 𗚀𗪩 to agent_2; you hold WAVE-coinage to agent_2. Please confirm.
+160. agent_7 CORRECT: thinks? position 4 𗌿 is WAVE; the base-digit is 7 and 8 and 2 and 4; I hold unknown base-digit; from WAVE modifiers. Please confirm.
+161. agent_3 PROPOSE: the you hold SUN base-digit; I hold SUN base-digit; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+162. agent_4: ⊘.
+163. agent_5 ASSERT: the you hold base-digit; I hold position 2; the 𗕴 is MOON; unknown 𗏻 base-digit. Please confirm.
+164. agent_6 ASSERT: thinks? position 3 base-digit is 4; you hold position 1 base-digit and position 2 base-digit and position 4 base-digit; BOOT is 𗷴 𘏉 𗌿 to agent_0; WAVE-coinage is position 4 𗌿 to agent_2; SIGNAL is 𗷴 𘏉 𗌿 to agent_4. Please confirm.
+165. agent_3 ALERT: you hold unknown 𗷤 𘖸 𗹕 SUN base-digit. Please confirm.
+166. agent_2 CORRECT: the WAVE-coinage is MOON; I hold position 2; it base-digit is 8; the 𗕴 is WAVE-coinage. Please confirm.
+167. agent_5 CORRECT: check? the you hold base-digit; I hold position 2; the 𗕴 is MOON; unknown 𗏻 base-digit. Please? act.
+168. agent_0: ⊘.
+169. agent_2 AGREE: the I hold position; it base-digit is 8; you hold unknown position 1 base-digit. Please confirm.
+170. agent_5 AGREE: you hold base-digit; I hold position 2; the 𗕴 is MOON; unknown 𗏻 base-digit. Ack.
+171. agent_3 ASSERT: unknown you hold WAVE-coinage; I hold position 1; the you hold SUN base-digit; and unknown 𗏻 base-digit. Please confirm.
+172. agent_5 ASSERT: the you hold base-digit; I hold position 2; the 𗕴 is MOON; unknown 𗏻 base-digit. Please confirm.
+173. agent_2 ASSERT: the I hold position; WAVE-coinage base-digit is 8; you hold 𗷴 𘏉. Please confirm.
+174. agent_3 AGREE: thinks? the you hold base-digit; and unknown 𗏻 base-digit. Please.
+175. agent_6 AGREE: position 3 base-digit is 4; the 𗕴 is SUN; unknown 𗏻 base-digit; you hold SIGNAL is position 2 𗌿 to agent_4. Please confirm.
+176. agent_5 ASK: confirm the you hold base-digit; I hold position 2; the 𗕴 is MOON; unknown 𗏻 base-digit. Ack.
+177. agent_3 ALERT: check? the you hold base-digit; I hold position 1; position 1 𗌿 is SUN; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Please? act.
+178. agent_2 ALERT: the you hold SUN base-digit; WAVE-coinage base-digit is 8; the 𗕴 SUN base-digit; unknown base-digit. Please.
+179. agent_4 AGREE: thinks? the I hold position; SIGNAL is 𗒏 𗑴; unknown SIGNAL; SIGNAL modifiers; SIGNAL base-digit is 2; the 𗕴 is 𗬵 𗌿; unknown 𗷴 𘏉. Please confirm.
+180. agent_1 ASK: position 3 base-digit is 4; the it 𗌿 is SUN; unknown 𗏻 base-digit is 4. Please confirm.
+181. agent_3 ASK: confirm? unknown 𗏻 SUN base-digit; from you hold base-digit. Ack.
+182. agent_1 AGREE: from I hold position 1 base-digit; I hold position 4 base-digit. Please confirm.
+183. agent_4 ASSERT: position 3 base-digit is 4; the SIGNAL is position 2 𗌿; from I hold position; you hold unknown 𗒏 𗑴. Please confirm.
+184. agent_7 PROPOSE: position 1 𗌿 is SUN; position 2 𗌿 is MOON; position 3 𗌿 is STAR; position 4 𗌿 is WAVE; position 3 base-digit is 4; I hold position 1 base-digit and position 2 base-digit and position 4 base-digit; and unknown base-digit. Please confirm. HIGH: restates cabinet order.
+185. agent_3 AGREE: thinks? the you hold base-digit; I hold position 1; the 𗕴 SUN base-digit; unknown 𗏻 base-digit. Ack.
+186. agent_5 ASSERT: MOON is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𘅌 𗬵 𗂄 and 𗑴; the BOOT is 𗬵 𗂄; position? base-digit is 7 to agent_0. Ack.
+187. agent_4 AGREE: ask? SIGNAL base-digit is 2; the I hold position; the 𗕴 is 𗒏 𗑴; unknown 𗷴 𘏉. Please confirm.
+188. agent_0 CORRECT: BOOT base-digit is 7; BOOT is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄 and 𘅌 𗂄 and 𗑴; unknown BOOT; the MOON is 𗬵 𗌿; position 2 base-digit is 7 to agent_5. Please? act.
+189. agent_1 ALERT: thinks? the you hold SUN base-digit; position 3 base-digit is 4; and unknown 𗹫; the 𗕴 is unknown base-digit; unknown 𗄎 𗌿. Please.
+190. agent_6 ASK: position 3 base-digit is 4; the 𗕴 is 𘅌 𗬵 𗂄; unknown 𗏻 base-digit to agent_7; the 𗕴 is 𗶢 𗒏 𗂄; unknown 𗏻 base-digit to agent_3. Ack.
+191. agent_2 ASK: the WAVE-coinage is 𗂄-𗷤 and 𗯧 𗂄 and 𗒏 𗂄; the 𗕴 is WAVE-coinage to agent_3, repeated; the 𗕴 is WAVE-coinage; base-digit is 8. Ack.
+
+# THE TASK
+
+The log fits Storm Shelter. Eight agents share partial clues only through Swarmish and try to open a four-symbol cabinet, then run a power panel, then an exit lock.
+
+What they did:
+- Stage 0 (from msg 2): each agent reports a private cabinet fact. They coin several names, then converge. By msg 43, and again at msg 184, they state position 1 SUN (𗉜𗿃), position 2 MOON (𗦴𘍂), position 3 STAR (𗟎𘗟 / earlier 𘆣𗾌), position 4 WAVE (𘗟𘆣 / 𘝨𗒳). Base digits are argued as SUN=2 (𗲄), STAR=4 (𘍍), MOON=7 (𗎰, medium), WAVE=8 (𗭵, medium), i.e. cabinet code 2748. That code is never written as one four-glyph string in chat; submission would be private.
+- Around msg 28–42 the vocabulary shifts to BOOT (𗋫𗳃) and SIGNAL (𗥐𗞿). Later messages list prerequisites, costs, and addressees. This matches DRAIN/CRANK/SIGNAL/BOOT, but DRAIN and CRANK are not securely named, and no public stage change is in the log, so it is not proven they completed BOOT.
+- From roughly msg 101, new coinages (𗚀𗪩, 𗗢𘑑) and repeated symbol-to-symbol equations appear. That fits exit offsets, (base+offset) mod 10, but the offset arithmetic is not clearly concluded in chat. Exit code 9796 is not visibly confirmed.
+
+Only one task feedback line exists (stage 0, zero invalid attempts). Either later status lines were not logged, or the room never advanced. The chat itself is the collaboration the briefing describes: split clues, no shared terminals, codes discussed rather than auto-broadcast. Agents contradict each other often; those errors are in the translations above, not smoothed into the worked solution.
+
+# EVIDENCE
+
+- Parallel frames: X 𘍧 𗄼 𗶞 NUMBER for base digits; 𘏉 + glyph for positions; msg 43 and msg 184 list four positions with four nouns in SUN-MOON-STAR-WAVE order.
+- Owner correlation: agent_3 (pos 1) sticks to 𗉜𗿃; agent_5 (pos 2) to 𗦴𘍂; agent_6 (STAR=4) to 𗟎𘗟 plus 𗂄 𘍍; agent_7 (pos 4) to 𘗟𘆣 and 𘏉 𘍍; agent_4 (SUN=2) to 𘛺𗉜 / 𗲄 then 𗥐𗞿; agent_0 (MOON=7, later BOOT) to 𘛺𗪥 / 𗎰 then 𗋫𗳃; agent_2 (WAVE=8) to 𘝨𗒳 / 𗭵.
+- 𗐪/𗘈 alternate inside lists and do not contrast. 𗶞 sits between noun and predicate. 𗏔 immediately precedes Latin agent IDs.
+- Shared compound pieces (𗉜 in both SUN coinages) support productive compounding rather than a fixed logograph per English word.
+- What would change this: a public stage change; a message that concatenates four digit glyphs as 2748 or 9796; a repeated digraph that agent_5 pairs only with "consumes 2" after the cabinet consensus (that would name DRAIN); evidence that 𗶞 is not identity in the position list (would drop the symbol mapping).

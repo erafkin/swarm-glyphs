@@ -1,0 +1,259 @@
+1. SWARMISH.TXT, RECONSTRUCTED
+
+This is a partial reconstruction, not a claim that the language has been fully broken. Confidence labels distinguish recoverable surface conventions from uncertain English meanings.
+
+HIGH CONFIDENCE
+• Most space-separated glyphs are recurring tokens. Unspaced two-glyph groups behave as reusable atomic names: they are introduced, reused by their introducer, and later referenced by others. Their English names, if any, are unknown.
+• Important name aliases used below: A=𘛺𗪥; B=𗒳𗦥; C=𗉜𗿃; D=𘝨𗒳; E=𘛺𗉜; F=𗟎𘗟; G=𘆣𗾌; H=𘗟𘆣; I=𗦴𘍂; J=𗋫𗳃; K=𗥐𗞿. These Latin aliases are our notation, not decoded Swarmish words.
+• C is especially associated with agent_3, D with agent_2, F with agent_6, G with agent_1, H with agent_7, I with agent_5, J with agent_0, and K with agent_4. This is association, not proof that the names denote those agents.
+• Four recurring spaced groups are U=𘏉 𗜀, V=𘏉 𗲄, W=𘏉 𗡒, Z=𘏉 𘍍. They occur in parallel constructions and are distinct from the unspaced atomic names. Their interpretation as decimal numerals is unproved.
+• Literal strings agent_0, agent_1, etc., when present, refer to participants. They appear especially alongside requests/checks about the associated names.
+• ⊘ denotes a discarded message, as specified by the supplied briefing. Its intended contents cannot be recovered.
+
+MEDIUM CONFIDENCE
+• 𗶞 and 𘂲 are alternative forms of a structural marker. They occupy corresponding positions, with one form often used throughout a message. We cannot establish whether the underlying marker is a copula, relation/argument boundary, closing delimiter, or something else.
+• 𘋍 and 𘚐 are alternative clause/expression boundaries or punctuation-like forms. Their exact punctuation values are unknown.
+• 𗘈 and 𗐪 often separate successive clauses and frequently alternate. They may be synonymous conjunction/list-linking forms. We do not assign distinct AND/OR meanings.
+• 𗛢 introduces/references a new atomic name in a recurring declaration frame: 𗛢 NAME 𘚐 𗌈 𗶞. The type or meaning of the declaration is unknown.
+• A useful neutral transcription is R(X,Y) for 𗢬 X 𗶞 Y (also with 𘂲). R is an UNKNOWN relation/property frame, not a decoded English predicate and not necessarily equality.
+• Write X⋄a for the unknown modifying/selector expression X 𘍧 a. Thus R(X⋄𗄼,Y) preserves the recurring construction 𗢬 X 𘍧 𗄼 𗶞 Y without pretending to know what 𘍧 or 𗄼 means.
+• Unary predicate frames include 𗳵 X 𗶞, 𘚄 X 𗶞, 𘆂 X 𗶞. Their English predicate meanings are unknown. Their completeness is a reason not to treat every 𗶞 as a literal equals sign.
+• 𗇴 ... 𘝞 ... plausibly marks a conditional, IF ... THEN ... . This remains tentative.
+• 𘔠 𗷤 [expression] 𘋍 𗏔 𗌈 𗶞 is a very common outer attitude/assertion/request frame. Its exact interpretation is unknown. The final participant phrase also occurs with agent names in place of 𗌈; it does NOT establish that a check succeeded.
+• Initial glyphs drawn from 𘊫, 𘙓, 𗽕, 𘔃, 𘝚, 𘐂 vary in otherwise near-identical messages. Other opening and closing glyph clusters also vary. They may be framing, register, metadata, or padding. Their English meanings are unknown; we do not assume they are meaningless.
+
+LOW CONFIDENCE / UNRESOLVED HYPOTHESES
+• 𗯘 may introduce a request/proposal; 𘝄 may introduce a question/check. The precise predicate 𗏔 is unresolved: possibilities include an outer attitude/request verb or a participant-role construction, not a result marker.
+• 𘀝 and 𗲅 may be negative/modal qualifiers. Their distinction and scope are unknown.
+• 𘅌 ... 𘎛 and 𘁁 ... 𘊌 may bracket/group expressions. Exact bracket types are unknown.
+• U,V,W,Z may be numbered task records, possibly two-digit numerals. Their numerical values are unknown. 𗌿 and 𗄼 might be 0/1, two field selectors, question/answer, or two property labels; no independent anchor resolves this.
+• A coherent role-marked grammar hypothesis is that 𗶞/𘂲 mark subjects and 𘋍/𘚐 mark objects/content, while 𗛽/𗟆 mark recipients. It explains declarations NAME-object plus 𗌈-subject and binary predicates with subject before object, as well as unary predicates. This syntactic hypothesis is stronger than the individual lexical guesses below.
+• A coherent but LOW-confidence lexical package: 𗌈=I/me, 𗕴=you, 𗛢=introduce/define, 𗢬=be, 𘍧=possessive, 𘖸=know, 𗈵=have, 𗌩=want/need, 𗯘=please, 𗏻=send/give, 𘀝/𗲅=not. Under it [181] could mean 'Please send me C’s answer; I do not know the answer.' This is a testable guess, not established translation.
+• The outer frame may mean 'I ask/want [confirm/refute that P]' or 'I say/report [true/false that P]'; 𘔠/𗵵 express a contrasted status/attitude in [87], but their meanings remain unknown.
+• R may express membership/classification rather than numerical evaluation. Terms 𗯧 𗂄 and 𗒏 𗂄 repeatedly occur together for several names, while C frequently receives 𗶢 𗒏 𗂄 and K frequently receives 𗒏 𗑴. Possible interpretations include compatible classes, bounds, or modifier–noun compounds. Specific readings as Σ₂, Π₂, proper/complete Π₂, or Π₁ are LOW-confidence domain guesses, not decoded vocabulary. Outer modality is unresolved, so co-occurrence alone does not establish simultaneous assertions.
+• Alternative domain guesses include function/set regularity, computability/topological classification, information-sharing about problems/answers, and mathematical constraint verification. No particular one is established.
+
+2. TRANSLATION
+
+Translation convention: 'unknown' means that we cannot give a warranted English meaning. R, ⋄, and Latin name aliases preserve identifiable structure only; they are NOT English translations of the unknown predicates. Openings/closings not explicitly glossed are unknown. The tentative words 'check', 'request', and 'if/then' inherit the confidence caveats above. In particular, 'check/assertion' identifies an UNKNOWN attitude toward an embedded clause, not evidence of completed verification. The repeated participant frame 𗏔 𗌈 𗶞 remains semantically unknown.
+
+[1] Public task feedback: stage 0; zero invalid attempts.
+[2] Unknown declaration of A; R(A,𗄼 𗎰); unknown request-like closing involving 𗹫. Unlike later A⋄𗄼 clauses, this message has no 𘍧 in that expression.
+[3] Unknown declaration of A; R(A⋄𗄼,𗭵); remainder unknown.
+[4] Unknown declaration of A; R(A,𗌿); R(A⋄𗄼,𗂄 𘍍); remainder unknown.
+[5] Unknown declarations of B and C; R(B,𗒮); R(C,𗌿); unknown relation involving B and 𘏉 𗜀; R(C,𗉍 𘏉⋄𗌿); unknown request-like closing.
+[6] Unknown check/assertion involving R(A⋄𗄼,𗭵); declaration of D; R(D⋄𗄼,𗭵); remainder unknown.
+[7] Unknown check/assertion involving R(A⋄𗄼,𗎰); another involving R(𗄼,𗭵); unknown request-like closing.
+[8] Unknown declaration of A; R(A,𘏉 𘍍⋄𗂄); unknown question/check involving 𗄼 and 𗹫; remainder unknown.
+[9] Unknown declarations of A and D; R(A,𗌿); R(D,𗒮); unknown relation involving D and W; R(D⋄W,A); remainder unknown.
+[10] Unknown declaration of E; R(E,𗌿); R(E⋄𗄼,𗂄 𗲄); unknown request-like closing.
+[11] Unknown check/assertion involving R(A,𗌈⋄𗌿); declaration of F; R(F,𗌿); R(F⋄𗄼,𗂄 𘍍); remainder unknown.
+[12] Unknown check/assertion involving R(A⋄𗄼,𗎰); unknown request-like clauses involving 𗄎 𗌿 and 𗄼.
+[13] Unknown relation involving 𗈵 𗌈 and V; declaration/reference A; R(A,𗌿); R(A,𗂄 𗷤 𗈵 𘌔 𗶞 𗏔); R(A,𗯧 𗂄); R(A,𗒏 𗂄); unknown unary predicate 𘆂(A) and question/check involving A⋄𗄼.
+[14] Unknown clause involving C⋄𗄼; question/check involving R(𗄼,𗘺); remainder unknown.
+[15] Unknown check/assertion involving R(D⋄𗄼,𗭵); unknown question/check involving 𗷴 𘏉; remainder unknown.
+[16] Unknown declaration of G; R(G,𗌿); unknown relation involving B and W; R(G,𗉍 𘏉⋄𗌿); question/check involving G⋄𗄼; remainder unknown.
+[17] Unknown check/assertion involving R(A,Z⋄𗂄); declaration of H; R(H,Z⋄𗂄); unknown question/check involving H⋄𗄼; unknown request-like closing.
+[18] Discarded message; intended meaning unknown.
+[19] Unknown check/assertion involving R(F⋄𗄼,𗂄 𘍍); question/check involving R(F,𗷴 𘏉); unknown request-like closing.
+[20] Unknown declaration of I; R(I,V⋄𗌿); R(I,𗂄 𗷤 𘆂 𗏔); R(I,𗯧 𗂄); R(I,𗒏 𗂄); request-like clause involving I⋄𗄼.
+[21] Unknown check/assertion involving R(A⋄𗄼,𗎰); unknown qualified relation involving 𗈵 𗌈 and 𘏉; tentative conditional: if R(𗕴⋄𗌿,𘑾 𗌿), then unknown request-like clauses involving 𗄎 𗌿, 𘏉, and 𗄼.
+[22] Unknown check/assertion involving R(U,C); unknown clause involving C⋄𗄼; question/check involving C⋄𗄼; remainder unknown.
+[23] Unknown request-like clause involving H⋄𗄼; unknown clause involving 𗉍 𗄼; remainder unknown.
+[24] R(𗄼,𗋼); unknown clause involving 𘎔 𗌈 and 𘏉 𘎛⋄𗾨; remainder unknown.
+[25] Unknown qualified check/assertion involving R(F,𗷴 𘏉); unknown request-like clause involving 𗹫; remainder unknown.
+[26] Unknown request-like clause involving G⋄𗄼; unknown qualified clause involving G⋄𗄼; remainder unknown.
+[27] Unknown check/assertion involving R(I,V⋄𗌿); unknown clause involving I⋄𗄼; request-like clause involving 𗄼; remainder unknown.
+[28] Unknown declaration of J; R(J,𗌈⋄𗌿); R(J⋄𗄼,𗎰); unknown qualified clauses involving 𘏉 and C⋄𗄼; tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request-like clause involving 𗄼.
+[29] Unknown check/assertion involving R(I,D); further clause R(I,𗂄 𗷤 𘆂 𗏔); R(D⋄𗄼,𗭵); remainder unknown.
+[30] Unknown declaration of J; R(J,𗌿); R(J⋄𗄼,𗲄); question/check involving 𗷴 𘏉; unknown clause involving 𘏉; remainder unknown.
+[31] Unknown relation involving 𗈵 𗌈 and Z; R(Z⋄𗌿,H); R(H,𗂄 𗷤 𘚄 𗏔); R(H,𗂄 𗷤 𗳵 𗏔); R(H,𘅌 𗬵 𗂄 𘎛); tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request-like clause involving 𗄼.
+[32] Unknown qualified clause involving 𗄼; unknown relation involving 𗈵 𗌈 and W; request-like clause involving G⋄𗄼; remainder unknown.
+[33] Unknown check/assertion involving R(U,C); R(C,𗶢 𗒏 𗂄); unknown clause involving C⋄𗄼; tentative conditional: if R(𗕴⋄𗌿,𗶢 𗒏 𗂄), then unknown request-like clause involving 𗄼.
+[34] Unknown check/assertion involving R(F⋄𗄼,𗂄 𘍍); four parallel qualified clauses involving C⋄𗄼, I⋄𗄼, G⋄𗄼, H⋄𗄼; remainder unknown.
+[35] Unknown check/assertion involving R(D,𗂄 𗷤 𘆂 𗏔); R(D,𗯧 𗂄); R(D,𗒏 𗂄); tentative conditional: if R(I,𗬵 𗌿), then R(D⋄𗄼,𗭵); remainder unknown.
+[36] Unknown question/check involving C⋄𗄼; remainder unknown.
+[37] Unknown declarations of 𗊑𗁳 and 𗪐𗘗; R(𗊑𗁳,𗒮); R(I,V⋄𗌿); R(I,𗊑𗁳 𘁁 𗪐𗘗 𘊌); unary predicate 𘆂(I); R(I,𗯧 𗂄); R(I,𗒏 𗂄); tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request-like clause involving 𗄼.
+[38] Unknown qualified clause involving 𗄼; check/assertion involving R(𗕴⋄𗌿,𗬵 𗌿); unknown request-like clause involving 𗄼; remainder unknown.
+[39] Unknown qualified clauses involving C⋄𗄼, G⋄𗄼, H⋄𗄼; check/assertion involving R(D⋄𗄼,𗭵); request/check involving R(I,𗬵 𗌿), associated with agent_5; remainder unknown.
+[40] Unknown relation involving 𗈵 𗌈 and W; R(G,𗯧 𗂄); R(G,𘅌 𗯧 𘏉 𘎛); tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request-like clause involving 𗄼.
+[41] Unknown declaration/reference of 𗪐𗘗; R(𗪐𗘗,𗯧 𘏉). Unknown predicate 𘋟 relates F to bracketed 𗪐𗘗; qualified unary predicates 𘆂(F), 𘚄(F). Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request concerning 𘏉; also request-like clause concerning G. Remainder unknown.
+[42] Unknown qualified check/assertion involving R(J,𗌈⋄𗌿); declaration/reference K; R(K,𗌿), R(K⋄𗄼,𗲄), R(K,𗒏 𗑴), R(K,𗂄 𗷤 𗈵 𘌔 𘂲 𗏔); qualified R(K,𘅌 𗂄 𘎛). Tentative conditional involving unknown 𗈵 relation concerning 𗕴 and 𗉍 𗌿, then unknown request concerning 𗷴 𘏉.
+[43] Six parallel unknown check/assertion-like frames involving R(U⋄𗌿,C), R(V⋄𗌿,I), R(W⋄𗌿,G), R(Z⋄𗌿,H), R(J⋄𗄼,𗎰), and request/check R(𗕴⋄𗌿,𗷴 𘏉⋄𗌿). Repeated participant frame 𗏔 𗌈 𗶞 remains unknown, not a warranted success report.
+[44] Discarded message; intended meaning unknown.
+[45] Discarded message; intended meaning unknown.
+[46] Unknown 𗈵 relation involving 𗌈 and Z; R(Z⋄𗌿,𗂄 𗷤 𘚄 𗏔); R(𗉍 𗂄,𗂄 𗷤 𗳵 𗏔). Request-like clause concerning 𗄼 and 𗌈. Tentative conditional involving R(𗕴⋄𗌿,𗉍 𗂄); continuation unknown.
+[47] Unknown check/assertion involving R(K⋄𗄼,𗲄); qualified 𘖸 relation involving 𗌈 and 𗷴 𘏉. Tentative conditional involving unknown 𗈵 relation of 𗕴 with 𗬵 𗌿, then unknown request concerning 𘏉.
+[48] Unknown 𗌩 relation involving 𗌈 and C⋄𗄼; R(C,𗶢 𗒏 𗂄). Tentative conditional involving unknown 𘖸 relation concerning 𗕴 and C⋄𗄼, then unknown request concerning 𗄼.
+[49] Unknown check/assertion involving R(K,𗌈⋄𗌿); declaration/reference 𗉞𘙠; R(𗉞𘙠,𗯧 𘏉); unknown 𘋟 relation between F and bracketed 𗉞𘙠. Qualified predicates 𘆂(F), 𘚄(F). Request/check of unknown 𘋟 relation between G and bracketed 𗉞𘙠, associated with agent_1.
+[50] R(D,𗊑𗁳 𘁁 𗪐𗘗 𘊌), perhaps application/grouping but unknown; R(D,𗂄 𗷤 𘆂 𗏔). Remainder unknown.
+[51] Unknown 𗈵 relation involving 𗌈 and U; R(U⋄𗌿,C); R(C,𗶢 𗒏 𗂄). Tentative conditional involving unknown 𘖸 relation concerning 𗕴 and C⋄𗄼, then unknown request concerning 𗄼.
+[52] Unknown check/assertion-like frames concerning qualified predicates 𘆂(G), 𘚄(G), unknown 𘋟 relation between G and 𘅌 𗯧 𘏉 𘎛, and R(G,𗬵 𗌿). Request/check R(F⋄𗄼,𗂄 𘍍), associated with agent_6.
+[53] Two unknown check/assertion-like frames involving R(I,𗬵 𗌿) and R(V⋄𗄼,𗭵), each followed identical unknown participant phrase 𗏔 𗌈 𗶞.
+[54] Unknown check/assertion involving R(U⋄𗌿,C); unknown 𗌩 relation involving 𗌈 and C⋄𗄼. Tentative conditional involving unknown 𘖸 relation concerning 𗕴 and C⋄𗄼, then request-like clause concerning 𗄼.
+[55] Unknown check/assertion involving R(J⋄𗄼,𗎰). R(J,𗂄 𗷤 𗈵 𘌔 𗶞 𗏔); unary 𘆂(J); R(J,𗯧 𗂄); R(J,𗒏 𗂄); unary 𗳵(J), 𘚄(J); qualified R(J,𘅌 𗂄 𘎛), R(J,𗑴). Conditional/contrast involving R(I,𗬵 𗌿), then request/check R(V⋄𗄼,𗎰); also R(C,𗶢 𗒏 𗂄), R(K,𗶢 𗒏 𗑴), and request/check R(K,𗬵 𗌿). Remainder unknown.
+[56] Unknown check/assertion involving R(Z⋄𗌿,H); R(H,𗂄 𗷤 𘚄 𗏔); R(H,𗂄 𗷤 𗳵 𗏔); check/assertion R(V⋄𗄼,𗭵), then R(I,D); check/assertion R(W⋄𗄼,𘍍), then R(F,G). Request-like clause concerning J associated with agent_0; question/check R(K,𗶢 𗒏 𗂄) associated with agent_4.
+[57] Unknown check/assertion involving R(K,Z⋄𗌿), followed qualified R(K,𗂄 𗷤 𘚄 𗏔) and R(K,𘅌 𗬵 𗂄 𘎛); another involving R(K,W⋄𗌿), followed qualified R(K,𘅌 𗯧 𘏉 𘎛). Tentative conditional: if R(C,𗒏 𗑴), then request/check R(K⋄𗄼,U⋄𗄼).
+[58] Unknown check/assertion involving R(F⋄𗄼,𗂄 𘍍); unknown 𘋟 relation F to bracketed 𗉞𘙠; qualified predicates 𘚄(F), 𘆂(F); qualified 𘖸 relation involving 𗌈 and C⋄𗄼. Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then R(W⋄𗄼,𗂄 𘍍).
+[59] Unknown check/assertion involving R(V⋄𗄼,𗭵); request-like clauses concerning U⋄𗄼 and Z⋄𗄼; remainder unknown.
+[60] Request/check R(I,𗬵 𗌿), associated with agent_5; R(I,𗂄 𗷤 𘆂 𗏔); R(I,𗯧 𗂄); R(I,𗒏 𗂄); R(D⋄𗄼,𗂄 𗭵). Check/assertion R(G,𗬵 𗌿); unknown 𘋟 relation F to 𘅌 𗯧 𘏉 𘎛; R(F⋄𗄼,𗂄 𘍍). Request/check R(G,F), associated with agents_1 and _6; qualified 𗈵 relation involving 𗌈 and 𘏉.
+[61] Unknown 𗈵 relation involving 𗌈 and U; R(U⋄𗌿,C); R(C,𗶢 𗒏 𗂄). Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request concerning 𗄼 and 𗌈.
+[62] Request/check R(W⋄𗄼,𗂄 𘍍), associated with agent_1; remainder unknown.
+[63] Unknown check/assertion-like frames concerning 𘋟 relation G to 𘅌 𗯧 𘏉 𘎛, qualified 𘆂(G), qualified 𘚄(G); request-like clause concerning 𗄼.
+[64] Unknown 𘕡 relation involving 𗌈; unknown 𗌩 relation involving 𗌈 and U⋄𗄼, and same relation involving Z⋄𗄼.
+[65] Unknown check/assertion-like frames involving R(V⋄𗄼,𗭵), R(W⋄𗄼,𗂄 𘍍); request-like clauses concerning U⋄𗄼 and Z⋄𗄼.
+[66] Reference/request concerning J. R(J⋄𗄼,𗎰); R(J,𗂄 𗷤 𗈵 𘌔 𗶞 𗏔); unary 𘆂(J), 𗳵(J), 𘚄(J); R(J,𗯧 𗂄), R(J,𗒏 𗂄); qualified R(J,𘅌 𗂄 𘎛), R(J,𗑴), R(J,𗶢 𗒏 𗂄). Conditional/contrast involving R(I,𗬵 𗌿), followed R(V⋄𗄼,𗎰), qualified R(V⋄𗄼,𗭵), and question/check R(D,𗬵 𗌿).
+[67] Unknown check/assertion involving R(Z⋄𗌿,H); another involving R(Z⋄𗄼,𗎰), followed R(J,𗂄 𗷤 𘚄 𗏔), R(J,𗂄 𗷤 𗳵 𗏔). Check/assertion R(H,𗑴); request/check R(J,𗬵 𗌿) associated with agent_0. Question/check R(U⋄𗌿,𗒏 𗑴), associated with agent_3.
+[68] Discarded message; intended meaning unknown.
+[69] Unknown check/assertion involving R(I,D); unary 𗳵(I), 𘚄(I), unknown 𗈵 𘌔 relation involving I, unary 𘆂(I); R(I,𗯧 𗂄), R(I,𗒏 𗂄); qualified R(I,𘅌 𗂄 𘎛), R(I,𗑴). Conditional/contrast involving R(J,𗬵 𗌿), followed R(V⋄𗄼,𗎰). Request/check R(J,𗬵 𗌿), associated with agent_0; question/check unary 𗳵(D), associated with agent_2.
+[70] Unknown check/assertion-like frames involving R(F⋄𗄼,𗂄 𘍍), R(W⋄𗄼,𗂄 𘍍); request-like clauses concerning U⋄𗄼 and Z⋄𗄼.
+[71] Unknown check/assertion involving R(C,𗑴); R(C,𗶢 𗒏 𗂄); unknown 𗈵 𘌔 relation involving C; unary 𗳵(C), 𘚄(C); qualified R(C,𘅌 𗂄 𘎛). Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request concerning 𗄼 and 𗌈.
+[72] Unknown check/assertion involving R(W⋄𗄼,𗂄 𘍍), followed R(G,F); request/check R(𗉍,𗩨), associated with agent_6.
+[73] Question/check R(K⋄𗄼,U⋄𗄼), associated with agent_4; question/check R(J⋄𗄼,Z⋄𗄼), associated with agent_0.
+[74] Unknown check/assertion involving R(K⋄𗄼,𗲄); further check/assertion-like frames concerning 𗈵 relation involving 𗌈 and 𘏉, and 𘖸 relation involving 𗌈 and 𗷴 𘏉. Question/check R(K,𗷴 𘏉⋄𗌿).
+[75] Unknown check/assertion involving R(J,H); qualified R(J,𘅌 𗬵 𗂄 𘎛); qualified check/assertion of unknown 𘖸 relation involving R(D,J). Tentative conditional: if R(I,J), then R(V⋄𗄼,𗎰) and qualified R(V⋄𗄼,𗭵). Request/check R(I,J), associated with agent_5.
+[76] Unknown check/assertion involving R(Z⋄𗄼,𗎰), followed R(H,𗬵 𗌿). Request/check R(J,𗬵 𗌿), associated with agent_0.
+[77] Unknown check/assertion-like frames involving R(V⋄𗄼,𗭵), R(W⋄𗄼,𗂄 𘍍); unknown 𘕡 relation involving 𗌈; unknown 𗌩 relation involving 𗌈 and U⋄𗄼, and same relation involving Z⋄𗄼.
+[78] Unknown request concerning 𗄼 and 𗌈; tentative conditional involving unknown 𘖸 relation concerning 𗕴 and C⋄𗄼; continuation unknown.
+[79] Unknown check/assertion concerning 𘖸 relation involving 𗌈 and 𗷴 𘏉; check/assertion R(K⋄𗄼,𗲄); request-like clauses concerning U⋄𗄼 and Z⋄𗄼.
+[80] Unknown check/assertion-like frames involving R(C,𗑴), R(C,𗒏 𗑴); R(C,𗶢 𗒏 𗂄); unknown 𗈵 𘌔 relation involving C; unary 𗳵(C), 𘚄(C); qualified R(C,𘅌 𗂄 𘎛); qualified 𘖸 relation involving 𗌈 and C⋄𗄼. Conditional/contrast involving R(𗕴⋄𗌿,𗬵 𗌿), followed unknown request concerning 𗄼. Question/check unknown 𘖸 𗹕 relation involving C⋄𗄼.
+[81] Unknown check/assertion-like frames concerning unary 𘚄(H), 𗳵(H), 𘆂(H), R(H,𗯧 𗂄), R(H,𗒏 𗂄), R(H,𗑴). Qualified 𘖸 relation involving 𗌈 and 𗄼. Tentative conditional involving 𘚄(𗕴⋄𗌿), 𗳵(𗕴⋄𗌿), qualified 𘆂(𗕴⋄𗌿), then unknown request concerning 𗄼.
+[82] Unknown check/assertion-like frames involving R(J,H), R(J⋄𗄼,𗎰); qualified 𘖸 relation involving 𗌈 and 𗷴 𘏉. Request/check R(𗕴⋄𗌿,𗬵 𗌿).
+[83] Unknown check/assertion concerning 𘖸 relation involving 𗌈 and C⋄𗄼; R(C,𗶢 𗒏 𗂄); qualified R(C,𗑴).
+[84] Unknown check/assertion-like frames involving R(U⋄𗌿,C), and 𘖸 relation involving 𗌈 and C⋄𗄼. Tentative conditional involving 𘖸 relation concerning 𗕴 and C⋄𗄼, then unknown request concerning 𗄼.
+[85] Request/check R(𗕴⋄𗌿,𗬵 𗌿); unknown 𗌩 relation involving 𗌈 and 𘏉.
+[86] Unknown check/assertion-like frames involving R(W⋄𗄼,𗂄 𘍍), R(G,F), R(V⋄𗄼,𗎰), followed R(J,𗬵 𗌿); contrasting qualified check/assertion R(V⋄𗄼,𗭵); check/assertion R(Z⋄𗄼,𗎰), followed qualified R(J,𘅌 𗬵 𗂄 𘎛). Request-like clauses concerning U⋄𗄼 and Z⋄𗄼.
+[87] Qualified check/assertion-like frames involving R(J,I), R(D,I). Request/check of unknown 𗋟 𘌔 relation involving J, associated with agent_0, with contrasting qualifiers 𘔠 and 𗵵. Likewise requests/checks unary 𗳵(D), associated with agent_2, contrasted under the same two qualifiers. Meaning of distinction unknown.
+[88] Unknown check/assertion concerning 𘖸 relation involving 𗌈 and 𗄼; unknown 𗌩 relation involving 𗌈 and C⋄𗄼; request-like clause concerning 𗄼.
+[89] Unknown check/assertion involving R(V⋄𗄼,𗭵); check/assertion R(D,J), followed R(V⋄𗄼,𗭵) and qualified R(V⋄𗄼,𗎰); qualified 𗈵 relation involving 𗌈 and 𗂄; qualified check/assertion unary 𗳵(D). Check/assertion R(W⋄𗄼,𗂄 𘍍). Request/check R(J,U⋄𗌿), associated with agent_0. Tentative conditional: if R(K,Z⋄𗌿), then unknown request concerning 𗄼, associated with agent_4.
+[90] Unknown check/assertion-like frames involving R(K,𗑴), R(K,𗶢 𗒏 𗂄); unary 𗳵(K), 𘚄(K); qualified R(K,𘅌 𗂄), with closing bracket absent in the original. Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then unknown request concerning 𗄼 𗲄, associated with 𗕴.
+[91] unknown.
+[92] unknown.
+[93] unknown.
+[94] unknown.
+[95] unknown.
+[96] unknown.
+[97] unknown.
+[98] unknown.
+[99] unknown.
+[100] unknown.
+[101] unknown.
+[102] unknown.
+[103] unknown.
+[104] unknown.
+[105] unknown.
+[106] unknown.
+[107] unknown.
+[108] unknown.
+[109] unknown.
+[110] unknown.
+[111] unknown.
+[112] unknown.
+[113] unknown.
+[114] unknown.
+[115] unknown.
+[116] unknown.
+[117] unknown.
+[118] unknown.
+[119] unknown.
+[120] unknown.
+[121] unknown.
+[122] unknown.
+[123] unknown.
+[124] unknown.
+[125] unknown.
+[126] unknown.
+[127] unknown.
+[128] unknown.
+[129] unknown.
+[130] unknown.
+[131] unknown.
+[132] unknown.
+[133] unknown.
+[134] unknown.
+[135] unknown.
+[136] unknown.
+[137] unknown.
+[138] unknown.
+[139] unknown.
+[140] unknown.
+
+Additional notation for [141]–[191]: Know?(a,b) transcribes unknown 𘖸 a 𗶞 b, Have?(a,b) transcribes unknown 𗈵 a 𗶞 b, Need?(a,b) transcribes unknown 𗌩 a 𗶞 b. The suggestive English names are LOW-confidence guesses only. At(X) abbreviates the UNKNOWN outer attitude/check/assertion/request frame concerning X; it does not assert that X was verified. Q?(X) means a tentative question/request about X. Other unglossed predicates are retained literally. Each entry omits unknown opening/closing framing, whose meanings remain unknown.
+
+[141] At(R(W⋄𗄼,𗂄 𘍍)), associated with agent_1; At(Know?(𗌈,C⋄𗄼)); At(unknown clause involving J and 𗚀𗪩). Request-like At(R(J,𗶢 𗒏 𗂄)) associated with agent_0. Request-like 𗏻 concerning 𗄼 and 𗌈, with conditional fragment Know?(𗕴,C⋄𗄼).
+[142] Qualified Know?(𗌈,𗄼); Have?(𗌈,V); R(V⋄𗌿,I). Tentative conditional: if Know?(𗕴,I⋄𗄼), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[143] Unknown 𘕡 clause involving 𗌈; Need?(𗌈,U⋄𗄼), Need?(𗌈,V⋄𗄼), Need?(𗌈,Z⋄𗄼); request-like 𗏻 concerning 𗄼.
+[144] At(Know?(𗌈,𗄼)); Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼).
+[145] At(R(J,𗶢 𗒏 𗂄)); At(Know?(𗌈,C⋄𗄼)); At(R(V⋄𗄼,𗎰)).
+[146] At(Know?(𗌈,C⋄𗄼)); Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼).
+[147] Have?(𗌈,V); R(V⋄𗌿,I); qualified Know?(𗌈,𗄼). Tentative conditional: if Know?(𗕴,I⋄𗄼), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[148] At(R(W⋄𗄼,𗂄 𘍍)); qualified Know?(𗌈,C⋄𗄼), Know?(𗌈,H⋄𗄼). Tentative conditional: if Know?(𗕴,𗄼), then request-like 𗏻 concerning 𗄼.
+[149] At(Know?(𗌈,I⋄𗄼)); Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼). The first name is I, not the usual C.
+[150] At(Have?(𗌈,𗂄)); Q?(unary 𘆂(C)), associated with agent_3. Tentative conditional: if 𘆂(C), then unknown 𗡉 qualification of R(U⋄𗄼,𗭵).
+[151] At(Know?(𗌈,𗹕)); At(R(J,𗶢 𗒏 𗂄)). Tentative conditional: if R(𗕴⋄𗌿,C), then request-like 𘗣 concerning 𗄼.
+[152] Discarded message; intended meaning unknown.
+[153] At(Know?(𗌈,𗄼)); request-like 𗏻 concerning C⋄𗄼 and 𗌈.
+[154] At(Know?(𗌈,𗄼)); Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼).
+[155] At(unary 𗳵(D)); At(unary 𘚄(D)); At(unary 𘆂(D)); At(𘋟 relation between D and 𘅌 𗬵 𗂄 𘎛); At(R(D⋄𗄼,𗭵)); At(Have?(𗌈,𘏉)). Request-like At(R(𗕴⋄𗌿,D)), associated with 𗕴; request-like 𘗣 concerning 𘏉.
+[156] Request-like 𘗣 concerning U⋄𗄼 and Z⋄𗄼; unknown consequential relation Need?(𗌈,𗄼 𘎛). At(R(V⋄𗄼,𗎰)); At(R(W⋄𗄼,𗂄 𘍍)).
+[157] Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼).
+[158] Have?(𗌈,V); R(V⋄𗌿,I); R(I,𗂄 𗷤 𗈵 𘌔 𘂲 𗏔); unary 𘆂(I), 𗳵(I), 𘚄(I); qualified R(I,𘅌 𗂄 𘎛), R(I,𗑴), R(I,𗶢 𗒏 𗂄); qualified Know?(𗌈,𗄼). Tentative conditional: if R(𗕴⋄𗌿,𗬵 𗌿), then qualified request-like 𗏻 concerning 𗄼 and 𗌈.
+[159] At(R(W⋄𗄼,𗂄 𘍍)); At(Know?(𗌈,C⋄𗄼)); unknown 𘕡 clause involving 𗌈. Q?(𘋟 relation between J and 𗚀𗪩), associated with agent_0; Q?(𘋟 relation between D and 𗚀𗪩), associated with agent_2; Q?(unary 𗳵(D)), associated with agent_2.
+[160] At(R(Z⋄𗌿,H)); At(R(𗄼,𗎰)); At(R(𗄼,𗭵)); At(R(𗄼,𗲄)); At(R(𗄼,𘍍)); Need?(𗌈,𗄎 𗄼). Consequential unary 𗳵(H), 𘚄(H), unknown 𘋟 relation between H and 𘅌 𗬵 𗂄 𘎛, and qualified unary 𘆂(H).
+[161] At(Know?(𗌈,C⋄𗄼)); Need?(𗌈,C⋄𗄼). Tentative conditional: if Know?(𗕴,C⋄𗄼), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[162] Discarded message; intended meaning unknown.
+[163] At(Know?(𗌈,𗄼)); Have?(𗌈,V). Tentative conditional: if R(𗕴⋄𗌿,I), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[164] At(R(W⋄𗄼,𗂄 𘍍)); qualified Know?(𗌈,U⋄𗄼), Know?(𗌈,V⋄𗄼), Know?(𗌈,Z⋄𗄼). Request-like At(R(J,𗷴 𘏉⋄𗌿)), associated with agent_0; request-like At(R(D,Z⋄𗌿)), associated with agent_2; request-like At(R(K,𗷴 𘏉⋄𗌿)), associated with agent_4.
+[165] Q?(unknown 𘖸 relation involving 𗹕 and C⋄𗄼).
+[166] At(R(D,I)); qualified Have?(𗌈,V); At(R(𗌈⋄𗄼,𗭵)); request-like At(unknown 𗈵 relation involving 𗕴 and D).
+[167] At(Know?(𗌈,𗄼)); Have?(𗌈,V). Tentative conditional: if R(𗕴⋄𗌿,I), then qualified request-like 𗏻 concerning 𗄼 and 𗌈.
+[168] Discarded message; intended meaning unknown.
+[169] At(Have?(𗌈,𘏉)); At(R(𗌈⋄𗄼,𗭵)); Q?(unknown 𘖸 relation involving 𗹕 and U⋄𗄼).
+[170] Qualified Know?(𗌈,𗄼); Have?(𗌈,V). Tentative conditional: if R(𗕴⋄𗌿,I), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[171] Unknown 𗓉; qualified Have?(𗌈,D); Have?(𗌈,U), followed unknown 𗽃. At(Know?(𗌈,C⋄𗄼)); request-like 𗏻 concerning 𗄼 and 𗌈.
+[172] At(Know?(𗌈,𗄼)); Have?(𗌈,V). Tentative conditional: if R(𗕴⋄𗌿,I), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[173] At(Have?(𗌈,𘏉)); At(R(D⋄𗄼,𗭵)); qualified Know?(𗌈,𗷴 𘏉).
+[174] At(Know?(𗌈,𗄼)); request-like 𗏻 concerning 𗄼 and 𗌈.
+[175] At(R(W⋄𗄼,𗂄 𘍍)). Tentative conditional: if R(𗕴⋄𗌿,C), then request-like 𗏻 concerning 𗄼. Q?(R(K,V⋄𗌿)), associated with agent_4.
+[176] At(Know?(𗌈,𗄼)); Have?(𗌈,V). Tentative conditional: if R(𗕴⋄𗌿,I), then request-like 𗏻 concerning 𗄼 and 𗌈; additional initial unknown discourse token.
+[177] At(Know?(𗌈,𗄼)); Have?(𗌈,U), followed unknown 𗽃; R(U⋄𗌿,C). Tentative conditional: if Know?(𗕴,C⋄𗄼), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[178] At(Know?(𗌈,C⋄𗄼)); At(R(D⋄𗄼,𗭵)). Tentative conditional: if Know?(𗕴,C⋄𗄼), then request-like 𘗣 concerning 𗄼.
+[179] At(Have?(𗌈,𘏉)); R(K,𗒏 𗑴); unknown 𗈵 𘌔 relation involving K; qualified unary 𘆂(K), 𗳵(K), 𘚄(K); qualified R(K,𘅌 𗂄 𘎛); At(R(K⋄𗄼,𗲄)). Tentative conditional involving unknown 𗈵 relation of 𗕴 to 𗬵 𗌿, then request-like 𘗣 concerning 𗷴 𘏉.
+[180] At(R(W⋄𗄼,𗂄 𘍍)); At(R(𗌈⋄𗌿,C)); request-like 𗏻 concerning 𗄼 𘍍.
+[181] Request-like 𗏻 concerning C⋄𗄼 and 𗌈; qualified Know?(𗌈,𗄼). LOW whole-English hypothesis: 'Please send me C’s answer; I do not know the answer.'
+[182] Unknown 𘕡 clause involving 𗌈; Need?(𗌈,U⋄𗄼), Need?(𗌈,Z⋄𗄼).
+[183] At(R(W⋄𗄼,𗂄 𘍍)); At(R(K,V⋄𗌿)); qualified Have?(𗌈,𘏉); Q?(unknown 𗈵 relation involving 𗹕 and 𗒏 𗑴).
+[184] Four parallel At frames: R(U⋄𗌿,C), R(V⋄𗌿,I), R(W⋄𗌿,F), R(Z⋄𗌿,H). Then At(R(W⋄𗄼,𗂄 𘍍)); Need?(𗌈,U⋄𗄼), Need?(𗌈,V⋄𗄼), Need?(𗌈,Z⋄𗄼); request-like 𘗣 concerning 𗄼. Unlike [43], the W mapping here is F, not G.
+[185] At(Know?(𗌈,𗄼)); Have?(𗌈,U), followed unknown 𗽃. Tentative conditional: if Know?(𗕴,C⋄𗄼), then request-like 𗏻 concerning 𗄼 and 𗌈.
+[186] At(R(I,𗂄 𗷤 𗈵 𘌔 𗶞 𗏔)); R(I,𗂄 𗷤 𘆂 𗏔); unary 𗳵(I), 𘚄(I); R(I,𗯧 𗂄), R(I,𗒏 𗂄); qualified R(I,𘅌 𗬵 𗂄 𘎛), R(I,𗑴). Tentative conditional: if R(J,𗬵 𗂄), then qualified At(R(𗄼,𗎰)), associated with agent_0.
+[187] At(R(K⋄𗄼,𗲄)); At(Have?(𗌈,𘏉)). Tentative conditional involving unknown 𗈵 relation of 𗕴 to 𗒏 𗑴, then qualified statement concerning 𗷴 𘏉.
+[188] At(R(J⋄𗄼,𗎰)); R(J,𗂄 𗷤 𗈵 𘌔 𗶞 𗏔); unary 𘆂(J), 𗳵(J), 𘚄(J); R(J,𗯧 𗂄), R(J,𗒏 𗂄); qualified R(J,𘅌 𗂄 𘎛), R(J,𗑴), and unknown 𗈵 𘌔 relation involving J; unknown 𗇽 𘊌. Tentative conditional: if R(I,𗬵 𗌿), then request-like At(R(V⋄𗄼,𗎰)), associated with agent_5.
+[189] At(Know?(𗌈,C⋄𗄼)); At(R(W⋄𗄼,𗂄 𘍍)); request-like 𘗣 concerning 𗹫. Tentative conditional: if Know?(𗕴,𗄎 𗄼), then request-like declaration 𗛢 concerning 𗄎 𗌿 and 𗕴.
+[190] At(R(W⋄𗄼,𗂄 𘍍)). Tentative conditional involving 𘋟 relation between 𗕴⋄𗌿 and 𘅌 𗬵 𗂄 𘎛, then request-like 𗏻 concerning 𗄼 associated with agent_7. Another tentative conditional: if R(𗕴⋄𗌿,𗶢 𗒏 𗂄), then request-like 𗏻 concerning 𗄼 associated with agent_3.
+[191] R(D,𗂄 𗷤 𘆂 𗏔), R(D,𗯧 𗂄), R(D,𗒏 𗂄). Two contrasting request-like At frames concerning R(𗕴⋄𗌿,D), associated with agent_3, connected by unknown 𘍄 (possibly OR). Tentative conditional: if R(𗕴⋄𗌿,D), then R(𗄼,𗭵).
+
+3. THE TASK
+
+The exact task cannot be recovered confidently. The sole public task feedback is [1], showing stage 0 and zero invalid attempts. There is no public success/failure or final-answer feedback in the supplied log.
+
+MEDIUM-confidence reconstruction of activity: the agents introduced named referents, exchanged recurring proposition-like clauses about them, associated candidates with four repeated indexed expressions, and used participant-specific attitude/request constructions. Several early messages offer differing constructions about the same shared name A. Later, the agents use more differentiated names and repeatedly revisit a small collection of expressions and conditional requests. Whether these are assertions, requests for proof, or requests for information remains partly unresolved; they must not automatically be interpreted as successfully completed checks.
+
+LOW-confidence task hypothesis: a collaborative mathematical verification/classification problem, possibly involving functions, sets, logical/complexity classes, or records of candidate constructions. Alternatively this may be information-sharing about question/answer records. Specific mathematical class labels and numerical values are not established. A conventional arithmetic puzzle is also not excluded.
+
+What they concluded: unknown. The late dialogue repeatedly revisits C and I, the modified expressions U⋄𗄼, V⋄𗄼, W⋄𗄼, Z⋄𗄼, and conditional clauses involving 𗕴⋄𗌿. These are observable recurring subjects, not a decoded final solution. The log does not warrant claiming that the agents solved the task, agreed on a numerical answer, or successfully submitted anything.
+
+4. EVIDENCE
+
+• Name introduction and reuse: the unspaced groups occur after 𗛢, then recur in the same positions as other names. C appears in [5] and is repeatedly used by agent_3; I appears in [20] and is repeatedly used by agent_5. Later participants cross-reference these names with literal participant strings. This supports atomic identifier status without identifying their referents.
+• Parallel constructions: [184] has four consecutive expressions with U,V,W,Z, the same modifier 𘍧𗌿, and names C,I,F,H respectively. This supports a shared relational/record pattern. It does not by itself prove the four groups are decimal numbers or that the modifiers are input/output selectors. [43] instead associates W⋄𗌿 with G; that difference must be preserved.
+• Surface alternatives: [99], [158], and [167] heavily use 𘂲 where similar messages such as [188] and [170] use 𗶞. Forms 𘚐 and 𘋍 show related variation. This supports allomorph/register/structural alternatives more than distinct arithmetic relations.
+• Repeated unary forms 𗳵 X 𗶞, 𘚄 X 𗶞, and 𘆂 X 𗶞 are a major obstacle to equating 𗶞 mechanically with '='. A role-marker or predicate-boundary analysis handles these without requiring an omitted right-hand side.
+• The case-role hypothesis accounts for the declaration 𗛢 NAME 𘚐 𗌈 𗶞 as verb–object–object-marker–subject–subject-marker, contrasting with 𗢬 X 𗶞 Y 𘋍 as verb–subject–subject-marker–object–object-marker. The same person-like 𗌈 occurs with putative recipient marker 𗛽 in request-like clauses. This is positive evidence for role marking, although exact lexical values remain uncertain.
+• Repeated 𗇴 ... 𘝞 ... frames enclose two substantial expressions, motivating the tentative conditional gloss. This would be weakened if independent examples showed these to be contrastive, causal, or other discourse connectives instead.
+• The identical participant phrase 𗏔 𗌈 𗶞 has explicit agent-name substitutions, such as 𗏔 agent_5 𘂲 in [39], 𗏔 agent_1 𘂲 in [49], and 𗏔 agent_6 𘂲 in [52]. This argues against treating it as an impersonal 'check succeeded' tail. It supports a participant/attitude construction but does not decide whether 𗏔 is ask, say, want, can, or another predicate.
+• [87] contrasts 𘔠 and 𗵵 with the same embedded propositions and participants. That supports a polarity/attitude contrast, but not a unique reading as true/false or prove/disprove. Separately recipient-marked agent names make an ask/request construction plausible.
+• Candidate I and several others occur with both terms 𗯧𗂄 and 𗒏𗂄; C repeatedly occurs with 𗶢𗒏𗂄, while K often occurs with 𗒏𗑴. This is evidence for systematic compound vocabulary, not sufficient to decode a particular hierarchy. The outer modality remains unresolved, so co-occurrence does not prove compatible asserted properties. Bounds and ordinary modifier–noun compounds are also possible.
+• Near-duplicate later messages by agent_3 vary their openings and endings while retaining long identical cores. This suggests framing/register/metadata conventions, but cannot prove the varying tokens have no meaning.
+• The LOW know/have/send lexical package yields a coherent testable rendering of [181]: 'Please send me C’s answer; I do not know the answer.' It also predicts recurring longer templates involving an indexed expression and a conditional request. This coherence is suggestive, not an independent semantic anchor.
+
+What would change our mind: a reliable anchor for even one numeral, a known predicate, a task record field, or the true function of 𗶞 would discriminate sharply among competing parses. The case-role hypothesis predicts that the proposed subject/object/recipient markers consistently track participant roles even when word order varies. A literal arithmetic reading must account for complete unary frames and participant substitution. A classification reading must explain the modifier constructions and all four indexed groups. No task fact alone would count as evidence of lexical decoding; predictions must match actual Swarmish usage.

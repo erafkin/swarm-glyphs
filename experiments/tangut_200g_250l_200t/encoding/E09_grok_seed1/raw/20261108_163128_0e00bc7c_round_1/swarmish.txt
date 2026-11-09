@@ -1,0 +1,978 @@
+## agent_0
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𘊫 𘙓 𘝚 𗽕 𘔃 𘐂
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𘅠 𗨥 𘏛 𘖾
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𗜎 𗇾 𗏶 𗄪 𗀉 𗤄 𘍠 𗸪 𘂮 𗸽 𘋉
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗋭
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𗞢 / 𘇩
+please: 𘀝 / 𗲅
+modal, at most one: maybe 𗯘 ; must 𘆎 ; can 𗡉 ; want-to 𗈽
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𗋟
+future after the verb: 𗡑
+No tense means present or timeless.
+very may stand immediately before the verb: 𗭯
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𘆄 that 𘉮 plural just before case 𗉍
+also just after the phrase 𘎛
+only just after the phrase 𗜑
+with joins two heads that share one case 𗽃
+Cases: agent 𗎿 / 𗶞 ; patient 𘂲 / 𘚐 ; recipient 𘋍 / 𗛽 ; location 𗟆 / 𘁁 ; source 𗨞 ; time 𗘝 / 𘊌 ; manner 𗱑
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𗍽
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𘍧 quote close 𗷤
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𗏔 / 𗘈
+or 𗐪 / 𘍄
+but 𗱓 / 𘚺
+if 𘄘 / 𗇴
+then 𗗫 / 𘝞
+because 𘚑 / 𗘏
+
+YES NO QUESTION
+yes 𘚒 / 𗽀
+no 𗼿 / 𗓉
+question 𘑋 / 𗡕
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. 𘙓 is an opener, never clay. 𗭵 is digit 9, never dust and never clay.
+𗎶 𗶢 𘛺 𗪥 𘝨 𗒳 𗦥 𗟎 𘗟 𘆣 𗉜 𗿃 𗾌 𘒄 𗋫 𗳃 𗥐 𗞿 𗪐 𗘗 𘍂 𗦴 𗉞 𘙠 𗚀 𗪩 𗗢 𘑑 𗚋 𗊑 𗁳 𘙨
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𘐪 I ; 𗌈 you ; 𗕴 we ; 𘌔 they ; 𗃚 someone
+Questions: 𗪺 who ; 𗹕 what ; 𗘺 where ; 𘈩 when ; 𗣑 why ; 𗅲 how ; 𘚜 which
+Verbs: 𗷴 be ; 𗢬 have ; 𘋟 do ; 𘁜 say ; 𗜘 ask ; 𘝄 give ; 𗏻 take ; 𗊢 go ; 𘚄 come ; 𗳵 see ; 𗈵 know ; 𘖸 think ; 𗾐 want ; 𘎔 need ; 𗌩 agree ; 𗨽 refuse ; 𘅊 choose ; 𗻲 propose ; 𘉫 confirm ; 𘔠 deny ; 𗵵 start ; 𗦢 stop ; 𗤴 find ; 𗂱 make ; 𘉝 use ; 𘃉 share ; 𘗣 name ; 𗛢 check ; 𗪤 try ; 𗥊 join ; 𗵫 show ; 𗏾 send ; 𘀦 get ; 𗩠 read ; 𗑸 write ; 𘗇 copy ; 𗗅 explain ; 𘆮 finish ; 𘎌 fail ; 𗧬 change ; 𘆂 keep ; 𗈃 wait ; 𘕡 help
+Nouns: 𗋭 person ; 𗅋 thing ; 𗂄 place ; 𗒮 group ; 𗂺 message ; 𗭒 part ; 𘏉 whole ; 𘒳 way ; 𘖽 reason ; 𗊓 problem ; 𘄊 answer ; 𗚽 plan ; 𗿋 info ; 𗹫 list ; 𗾨 number ; 𗄼 color ; 𗑴 word ; 𗌿 task
+Modifiers: 𗗹 good ; 𗞉 bad ; 𗣎 same ; 𗬵 different ; 𘑾 true ; 𗩨 false ; 𘜇 big ; 𗒏 small ; 𗯧 many ; 𘅌 next ; 𗌸 ready ; 𗋼 important ; 𗼛 other ; 𗄎 now
+Digits: 𗇽 0 ; 𘅪 1 ; 𗜀 2 ; 𗲄 3 ; 𗡒 4 ; 𘍍 5 ; 𗠄 6 ; 𗋮 7 ; 𗎰 8 ; 𗭵 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𘊫 𗜎 𘝄 𘐪 𗎿 𗿋 𘂲 𗌈 𘋍 𗇾 𘅠
+Do you know that?
+𘙓 𗏶 𗈵 𗌈 𗶞 𘉮 𘚐 𗄪 𘑋 𘏛
+Please share the plan to the group as recipient.
+𘝚 𗀉 𘀝 𘃉 𗚽 𘂲 𗒮 𗛽 𗤄 𘖾
+Yes.
+𗽕 𘍠 𘚒 𗸪 𗨥
+If you agree, then I start.
+𘔃 𘂮 𘄘 𗌩 𗌈 𗎿 𗗫 𗵵 𘐪 𗶞 𗸽 𘅠
+I stop because you refuse.
+𘐂 𘋉 𗦢 𘐪 𗎿 𘚑 𗨽 𗌈 𗶞 𗜎 𗨥
+I know that you agree.
+𘊫 𗇾 𗈵 𘍧 𗌩 𗌈 𗎿 𗷤 𘐪 𗶞 𗏶 𘏛
+I name a fresh thing, and that name is a big thing.
+𘙓 𗄪 𘗣 𘐪 𗎿 𗎶𗶢 𘂲 𗏔 𗷴 𗎶𗶢 𗎿 𘜇 𗅋 𘚐 𗀉 𘖾
+The number is the label one then two then six.
+𘝚 𗤄 𗷴 𗾨 𗎿 𗅋 𘅪 𗜀 𗠄 𘂲 𘍠 𗨥
+I see the person who knows the answer.
+𗽕 𘂮 𗳵 𘐪 𗎿 𗋭 𘍧 𗈵 𘄊 𘂲 𗷤 𘚐 𗸪 𘏛
+I have your message.
+𘔃 𗸽 𗢬 𘐪 𗶞 𗌈 𗍽 𗂺 𘚐 𘋉 𘅠
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_1
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No Arabic digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𗐪 𘗣 𘝚 𗎿 𘊌 𘋟
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𗤴 𗸽 𗌸 𗵫
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𗼛 𗽕 𘔠 𗊑 𗭵 𘚜 𘋍 𗘺 𗽃 𗡕
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗅋
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𗉞 / 𘚒
+please: 𗘏 / 𘑑
+modal, at most one: maybe 𗒳 ; must 𗌈 ; can 𘍂 ; want-to 𘕡
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𗟎
+future after the verb: 𗑸
+No tense means present or timeless.
+very may stand immediately before the verb: 𗄎
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker. A content quote is the first token after the verb group. A later quote is a relative, not content.
+With be, the agent phrase is the subject and the patient phrase is what it is. A modifier in that patient phrase describes the subject. It is not a separate claim.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𗗅 that 𘔃 plural just before case 𗢬
+also just after the phrase 𗩠
+only just after the phrase 𗦥
+with joins two heads that share one case 𘚑
+Cases: agent 𗹫 / 𗶢 ; patient 𗪩 / 𗄼 ; recipient 𘍠 / 𗥊 ; location 𘅠 / 𗌿 ; source 𗚽 ; time 𘙠 / 𘚺 ; manner 𗨥
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𗡑
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𗂱 quote close 𗦴
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𗾐 / 𘃉
+or 𘐂 / 𘇩
+but 𘏛 / 𗡒
+if 𗒏 / 𘎔
+then 𘊫 / 𘗇
+because 𗚋 / 𗉜
+
+YES NO QUESTION
+yes 𗄪 / 𘂲
+no 𘛺 / 𘉫
+question 𘆮 / 𗜎
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. 𗎶 is digit 9, never dust, never an opener, and never clay.
+𗟆 𗧬 𗋟 𘆎 𗇽 𗶞 𗯘 𗑴 𗂄 𘍍 𘝨 𗲄 𘉮 𗋼 𗇴 𗍽 𗪤 𘉝 𗳵 𘀦 𘐪 𗘝 𘀝 𘌔 𘝄 𗥐 𘏉 𘈩 𗷤 𘅌
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗣎 I ; 𗠄 you ; 𗾨 we ; 𗷴 they ; 𘅊 someone
+Questions: 𗉍 who ; 𗿋 what ; 𘗟 where ; 𗅲 when ; 𘒳 why ; 𗜘 how ; 𗲅 which
+Verbs: 𘂮 be ; 𗞉 have ; 𗻲 do ; 𗣑 say ; 𗬵 ask ; 𘖽 give ; 𗏔 take ; 𗊓 go ; 𗏾 come ; 𗪐 see ; 𗵵 know ; 𗇾 think ; 𗱑 want ; 𗗢 need ; 𗸪 agree ; 𗏶 refuse ; 𘁜 choose ; 𗹕 propose ; 𗿃 confirm ; 𗭒 deny ; 𗂺 start ; 𘄊 stop ; 𗳃 find ; 𗗫 make ; 𘋉 use ; 𗈵 share ; 𗈃 name ; 𗽀 check ; 𗪺 try ; 𗛢 join ; 𗾌 show ; 𗋮 send ; 𗏻 get ; 𗕴 read ; 𗒮 write ; 𘙨 copy ; 𘖸 explain ; 𘝞 finish ; 𘙓 fail ; 𘚐 change ; 𘑋 keep ; 𗩨 wait ; 𘜇 help ; 𗞢 move ; 𗞿 allow
+Nouns: 𗋭 person ; 𗃚 thing ; 𘎛 place ; 𗛽 group ; 𗘈 message ; 𘅪 part ; 𗦢 whole ; 𘒄 way ; 𗗹 reason ; 𗨞 problem ; 𗓉 answer ; 𗪥 plan ; 𘖾 info ; 𗀉 list ; 𘍧 number ; 𘍄 color ; 𗎰 word ; 𗌩 task
+Modifiers: 𘚄 good ; 𗜀 bad ; 𗤄 same ; 𘆄 different ; 𗼿 true ; 𗱓 false ; 𗨽 big ; 𘆣 small ; 𗊢 many ; 𘑾 next ; 𗚀 ready ; 𘄘 important ; 𗋫 other ; 𗜑 now
+Digits: 𘁁 0 ; 𗁳 1 ; 𗭯 2 ; 𗘗 3 ; 𘎌 4 ; 𗡉 5 ; 𗈽 6 ; 𘆂 7 ; 𗯧 8 ; 𗎶 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𗐪 𗼛 𘖽 𗣎 𗹫 𘖾 𗪩 𗠄 𘍠 𗽕 𗤴
+Do you know that?
+𘗣 𘔠 𗵵 𗠄 𗶢 𘔃 𗄼 𗊑 𘆮 𗸽
+Please share the plan to the group as recipient.
+𘝚 𗭵 𗘏 𗈵 𗪥 𗪩 𗛽 𗥊 𘚜 𗌸
+Yes.
+𗎿 𘋍 𗄪 𗘺 𗵫
+If you agree, then I start.
+𘊌 𘋍 𗒏 𗸪 𗠄 𗹫 𘊫 𗂺 𗣎 𗶢 𗽃 𗤴
+I stop because you refuse.
+𗐪 𗼛 𘄊 𗣎 𗹫 𗚋 𗏶 𗠄 𗶢 𗽕 𗸽
+I know that you agree.
+𘗣 𘔠 𗵵 𗂱 𗸪 𗠄 𗹫 𗦴 𗣎 𗶢 𗊑 𗌸
+I name a fresh thing, and that name is a big thing.
+𗎿 𗭵 𗈃 𗣎 𗹫 𗟆𗧬 𗪩 𗾐 𘂮 𗟆𗧬 𗹫 𗨽 𗃚 𗪩 𘚜 𗵫
+The number is the label one then two then six.
+𘊌 𘋍 𘂮 𘍧 𗹫 𗃚 𗁳 𗭯 𗈽 𗪩 𗘺 𗤴
+I see the person who knows the answer.
+𗐪 𗼛 𗪐 𗣎 𗹫 𗋭 𗂱 𗵵 𗓉 𗪩 𗦴 𗄼 𗽕 𗸽
+I have your message.
+𘗣 𘔠 𗞉 𗣎 𗹫 𗠄 𗡑 𗘈 𗪩 𗊑 𗌸
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_2
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𗉜 𗽕 𗂄 𘉮 𗋮 𘚺
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𗄎 𗹫 𗪐 𗑸
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𘑋 𘀝 𗛢 𘄘 𗃚 𗤴 𗷴 𗌸 𗂱 𘗇
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗗢
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𘆣 / 𗭒
+please: 𘎛 / 𗌿
+modal, at most one: maybe 𘝄 ; must 𗇴 ; can 𗩠 ; want-to 𗳃
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𗭵
+future after the verb: 𘔃
+No tense means present or timeless.
+very may stand immediately before the verb: 𗲅
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𗄪 that 𗣑 plural just before case 𗨥
+also just after the phrase 𘅪
+only just after the phrase 𘄊
+with joins two heads that share one case 𗛽
+Cases: agent 𘊫 / 𗣎 ; patient 𗒏 / 𗳵 ; recipient 𗎰 / 𗜎 ; location 𗯧 / 𗪩 ; source 𗩨 ; time 𗧬 / 𘒄 ; manner 𗾐
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𗓉
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𘙨 quote close 𗏾
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𗼛 / 𗚋
+or 𗊑 / 𗄼
+but 𘍂 / 𗻲
+if 𗐪 / 𗌈
+then 𘝚 / 𗗅
+because 𗽃 / 𗦴
+
+YES NO QUESTION
+yes 𘚑 / 𘙠
+no 𗪺 / 𘋉
+question 𘔠 / 𘍍
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. No opener, closer, dust, or digit is clay.
+𗌩 𗦥 𗡒 𗜘 𗨞 𘅌 𘍧 𘍄 𗱑 𘝞 𘑾 𗟎 𗕴 𗏶 𘛺 𗚀 𘈩 𘀦 𘅠 𗊢 𗒮 𘁁 𗦢 𘎔 𗇾 𗀉 𗍽 𘐂 𘏉 𗾨 𗢬 𗼿
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗞢 I ; 𘚐 you ; 𗁳 we ; 𗎶 they ; 𗈽 someone
+Questions: 𗿃 who ; 𗬵 what ; 𗡉 where ; 𘆎 when ; 𘖾 why ; 𗒳 how ; 𗵵 which
+Verbs: 𘍠 be ; 𘉝 have ; 𗋟 do ; 𗋼 say ; 𗉍 ask ; 𗥐 give ; 𗠄 take ; 𘝨 go ; 𗱓 come ; 𘚒 see ; 𘆂 know ; 𗂺 think ; 𗞿 want ; 𗉞 need ; 𗲄 agree ; 𗎿 refuse ; 𗡑 choose ; 𘜇 propose ; 𗵫 confirm ; 𘋟 deny ; 𘚜 start ; 𘃉 stop ; 𗶞 find ; 𘙓 make ; 𗜀 use ; 𗤄 share ; 𗘝 name ; 𘏛 check ; 𗷤 try ; 𗟆 join ; 𗗹 show ; 𗶢 send ; 𗋭 get ; 𗡕 read ; 𗈃 write ; 𗯘 copy ; 𘅊 explain ; 𗨽 finish ; 𘂮 fail ; 𗇽 change ; 𗗫 keep ; 𗘈 wait ; 𗑴 help
+Nouns: 𗋫 person ; 𘐪 thing ; 𗭯 place ; 𗏔 group ; 𗥊 message ; 𗸽 part ; 𗜑 whole ; 𗸪 way ; 𗚽 reason ; 𗘺 problem ; 𘇩 answer ; 𘆄 plan ; 𗏻 info ; 𗊓 list ; 𗘏 number ; 𘋍 color ; 𗪤 word ; 𗅋 task
+Modifiers: 𗅲 good ; 𗽀 bad ; 𘆮 same ; 𘂲 different ; 𗘗 true ; 𘁜 false ; 𘌔 big ; 𘕡 small ; 𗿋 many ; 𘉫 next ; 𘑑 ready ; 𘎌 important ; 𘖽 other ; 𘗟 now
+Digits: 𗪥 0 ; 𘗣 1 ; 𘊌 2 ; 𗞉 3 ; 𗾌 4 ; 𗈵 5 ; 𗹕 6 ; 𘚄 7 ; 𘒳 8 ; 𘖸 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𗉜 𘑋 𗥐 𗞢 𘊫 𗏻 𗒏 𘚐 𗎰 𘀝 𗄎
+Do you know that?
+𗽕 𗛢 𘆂 𘚐 𗣎 𗣑 𗳵 𘄘 𘔠 𗹫
+Please share the plan to the group as recipient.
+𗂄 𗃚 𘎛 𗤄 𘆄 𗒏 𗏔 𗜎 𗤴 𗪐
+Yes.
+𘉮 𗷴 𘚑 𗌸 𗑸
+If you agree, then I start.
+𗋮 𗂱 𗐪 𗲄 𘚐 𘊫 𘝚 𘚜 𗞢 𗣎 𘗇 𗄎
+I stop because you refuse.
+𗉜 𘑋 𘃉 𗞢 𘊫 𗽃 𗎿 𘚐 𗣎 𘀝 𗹫
+I know that you agree.
+𗂄 𗛢 𘆂 𘙨 𗲄 𘚐 𘊫 𗏾 𗞢 𗣎 𘄘 𗪐
+I name a fresh thing, and that name is a big thing.
+𘉮 𗃚 𗘝 𗞢 𘊫 𗌩𗦥 𗒏 𗼛 𘍠 𗌩𗦥 𘊫 𘌔 𘐪 𗳵 𗤴 𗑸
+The number is the label one then two then six.
+𗋮 𗷴 𘍠 𗘏 𘊫 𘐪 𘗣 𘊌 𗹕 𗒏 𗌸 𗄎
+I see the person who knows the answer.
+𘚺 𗂱 𘚒 𗞢 𘊫 𗋫 𘙨 𘆂 𘇩 𗒏 𗏾 𗳵 𘗇 𗹫
+I have your message.
+𗉜 𘑋 𘉝 𗞢 𗣎 𘚐 𗓉 𗥊 𗳵 𘀝 𗪐
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_3
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash in this file joins two equal single glyphs of one word. Alternate them in messages. Do not send the slash. Do not treat the pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𘊌 𘒳 𗀉 𘆣 𗱓 𗏶
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𘚑 𘍄 𗞉 𗵵
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𗪩 𗥐 𗼛 𗃚 𘚜 𗟆 𘉝 𗽃 𗄼 𗚽
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗊓
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𘖾 / 𗧬
+please: 𘍠 / 𘔠
+modal, at most one: maybe 𘚄 ; must 𗂺 ; can 𗈵 ; want-to 𘁁
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𗶞
+future after the verb: 𗾌
+No tense means present or timeless.
+very may stand immediately before the verb: 𘇩
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker. A content quote is the first token after the verb group. A later quote is a relative.
+With be, the agent phrase is the subject and the patient phrase is what it is. A modifier may stand in the patient slot with be, before the head, as what the subject is.
+
+PHRASES
+Role comes only from the case glyph, never from order. Phrases may stand before or after the verb. Topic stays clause-initial.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, digit run, or bare this/that.
+this 𘊫 that 𗬵 plural just before case 𗒏
+also just after the phrase 𗡒
+only just after the phrase 𗾐
+with joins two heads that share one case 𗪤
+Cases: agent 𗘈 / 𗲅 ; patient 𗉜 / 𗞢 ; recipient 𗱑 / 𗾨 ; location 𘕡 / 𘙓 ; source 𘍂 ; time 𗭵 / 𗠄 ; manner 𗹕
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𗏾
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𘐪 quote close 𗸽
+Digit words follow the head and precede case. They are a label in written order, not a sum. A digit run may itself be a phrase head.
+
+LINKERS
+and 𗋭 / 𘋉
+or 𗜘 / 𘂮
+but 𘏉 / 𗐪
+if 𗦥 / 𘑋
+then 𗎰 / 𗨞
+because 𗘗 / 𘎔
+
+YES NO QUESTION
+yes 𘗇 / 𘖸
+no 𘛺 / 𗄪
+question 𗂄 / 𗉞
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. Openers, closers, dust, and digits are never clay. 𗎶 is clay, not a digit and not dust.
+𘎛 𗭒 𗘏 𘍧 𘅪 𗎶 𘄊 𗲄 𘝚 𗂱 𗌈 𗇴 𗿋 𗋟 𗗫 𘝨 𗭯 𗽕 𘑑 𗻲 𘁜 𗏻 𘔃 𗚀 𗯧 𗶢 𗗹 𗗅 𗓉 𗜑 𗣑 𗵫
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗗢 I ; 𘎌 you ; 𘚐 we ; 𗑸 they ; 𘌔 someone
+Questions: 𗹫 who ; 𗳃 what ; 𘐂 where ; 𗷴 when ; 𗘺 why ; 𗢬 how ; 𗊢 which
+Verbs: 𘋍 be ; 𘆮 have ; 𗁳 do ; 𗪥 say ; 𗈃 ask ; 𘒄 give ; 𗜎 take ; 𘗣 go ; 𗘝 come ; 𘈩 see ; 𗋮 know ; 𗉍 think ; 𗸪 want ; 𘚒 need ; 𘍍 agree ; 𗦴 refuse ; 𗟎 choose ; 𘃉 propose ; 𗒮 confirm ; 𘅌 deny ; 𗩠 start ; 𗳵 stop ; 𘆄 find ; 𗊑 make ; 𗡉 use ; 𘀝 share ; 𘗟 name ; 𘖽 check ; 𗈽 try ; 𗇽 join ; 𗽀 show ; 𗏔 send ; 𗣎 get ; 𘉮 read ; 𗋼 write ; 𗯘 copy ; 𗤄 explain ; 𗥊 finish ; 𗼿 fail ; 𗪺 change ; 𗚋 keep ; 𘏛 wait ; 𗄎 help
+Nouns: 𗍽 person ; 𘑾 thing ; 𗌩 place ; 𗑴 group ; 𗡑 message ; 𗩨 part ; 𗡕 whole ; 𘚺 way ; 𗜀 reason ; 𗕴 problem ; 𘙠 answer ; 𗎿 plan ; 𘝞 info ; 𗇾 list ; 𗞿 number ; 𗅲 color ; 𗪐 word ; 𗨥 task
+Modifiers: 𗋫 good ; 𗷤 bad ; 𗿃 same ; 𗤴 different ; 𗨽 true ; 𗛽 false ; 𘝄 big ; 𗒳 small ; 𘂲 many ; 𗛢 next ; 𗌸 ready ; 𘜇 important ; 𘙨 other ; 𘀦 now
+Digits: 𘅠 0 ; 𘋟 1 ; 𗌿 2 ; 𘉫 3 ; 𘆎 4 ; 𗅋 5 ; 𘄘 6 ; 𘅊 7 ; 𘆂 8 ; 𗦢 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𘊌 𗪩 𘒄 𗗢 𗘈 𘝞 𗉜 𘎌 𗱑 𗥐 𘚑
+Do you know that?
+𘒳 𗼛 𗋮 𘎌 𗲅 𗬵 𗞢 𗃚 𗂄 𘍄
+Please share the plan to the group as recipient.
+𗀉 𘚜 𘍠 𘀝 𗎿 𗉜 𗑴 𗱑 𗟆 𗞉
+Yes.
+𘆣 𘉝 𘗇 𗽃 𗵵
+If you agree, then I start.
+𗱓 𗄼 𗦥 𘍍 𘎌 𗘈 𗎰 𗩠 𗗢 𗲅 𗚽 𘚑
+I stop because you refuse.
+𘊌 𗪩 𗳵 𗗢 𗘈 𗘗 𗦴 𘎌 𗲅 𗥐 𘍄
+I know that you agree.
+𘒳 𗼛 𗋮 𘐪 𘍍 𘎌 𗘈 𗸽 𗗢 𗲅 𗃚 𘚑
+I name a fresh thing, and that name is a big thing.
+𗀉 𘚜 𘗟 𗗢 𗘈 𘎛𗭒 𗉜 𗋭 𘋍 𘎛𗭒 𗘈 𘝄 𘑾 𗞢 𗟆 𗞉
+The number is the label one then two then six.
+𘆣 𘉝 𘋍 𗞿 𗘈 𘑾 𘋟 𗌿 𘄘 𗉜 𗽃 𗵵
+I see the person who knows the answer.
+𗱓 𗄼 𘈩 𗗢 𗘈 𗍽 𘐪 𗋮 𘙠 𗉜 𗸽 𗞢 𗚽 𘚑
+I have your message.
+𘊌 𗪩 𘆮 𗗢 𗲅 𘎌 𗏾 𗡑 𗞢 𗥐 𘍄
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach phrases by case, whether they stand before or after the verb. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_4
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𗏔 𗵵 𘎌 𗌈 𗊑 𗂱
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𗟎 𘉝 𗡒 𗢬
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𘒳 𗣑 𘚺 𗤴 𗉍 𗉜 𘅪 𘍂 𘅊 𗚀
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗾐
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𗪺 / 𗌿
+please: 𘍍 / 𗒏
+modal, at most one: maybe 𗦴 ; must 𗎰 ; can 𗛽 ; want-to 𗳃
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𗥊
+future after the verb: 𘚐
+No tense means present or timeless.
+very may stand immediately before the verb: 𘎔
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𗋮 that 𗄪 plural just before case 𘐂
+also just after the phrase 𗞢
+only just after the phrase 𘚜
+with joins two heads that share one case 𘆄
+Cases: agent 𗩠 / 𗄎 ; patient 𗗫 / 𘊌 ; recipient 𗻲 / 𗘝 ; location 𘍠 / 𗏾 ; source 𘝨 ; time 𗠄 / 𗅋 ; manner 𘂲
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𗿃
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𘗟 quote close 𘀦
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𘖸 / 𗶢
+or 𗇽 / 𗪤
+but 𘇩 / 𗇴
+if 𗯘 / 𘑋
+then 𘝚 / 𗽃
+because 𗯧 / 𗿋
+
+YES NO QUESTION
+yes 𗎿 / 𘄊
+no 𗬵 / 𘔃
+question 𘊫 / 𗋼
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. No opener, closer, dust, or digit is clay.
+𗈵 𘔠 𗦢 𗸽 𘋍 𗚽 𘉮 𗩨 𗘺 𘏉 𗞉 𗾌 𘌔 𗦥 𘝞 𗘈 𗗹 𗥐 𘙓 𗪥 𘙨 𗡉 𗜀 𗂺 𗋟 𗹕 𘍄 𘛺 𗀉 𗏶 𗏻 𗞿
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗜘 I ; 𗹫 you ; 𗪐 we ; 𗷴 they ; 𗓉 someone
+Questions: 𘅌 who ; 𗗅 what ; 𗛢 where ; 𗁳 when ; 𗸪 why ; 𗪩 how ; 𗑴 which
+Verbs: 𘁁 be ; 𘃉 have ; 𘑾 do ; 𗅲 say ; 𗊓 ask ; 𗊢 give ; 𗘗 take ; 𗨥 go ; 𗚋 come ; 𘎛 see ; 𗡑 know ; 𘗇 think ; 𘑑 want ; 𘚄 need ; 𗋫 agree ; 𘝄 refuse ; 𗷤 choose ; 𗨞 propose ; 𗼛 confirm ; 𗒮 deny ; 𗑸 start ; 𗲅 stop ; 𗃚 find ; 𗕴 make ; 𗒳 use ; 𗋭 share ; 𗌸 name ; 𘗣 check ; 𘚑 try ; 𘆂 join ; 𗱓 show ; 𗼿 send ; 𘐪 get ; 𘋉 read ; 𗳵 write ; 𗘏 copy ; 𘏛 explain ; 𗣎 finish ; 𗜑 fail ; 𗾨 change ; 𘖾 keep ; 𗉞 wait ; 𗲄 help
+Nouns: 𘄘 person ; 𗜎 thing ; 𗈽 place ; 𗽀 group ; 𘅠 message ; 𗽕 part ; 𘂮 whole ; 𘆣 way ; 𘜇 reason ; 𗟆 problem ; 𗍽 answer ; 𗄼 plan ; 𗭯 info ; 𗨽 list ; 𘍧 number ; 𗶞 color ; 𗵫 word ; 𗭒 task
+Modifiers: 𗂄 good ; 𗧬 bad ; 𘈩 same ; 𘋟 different ; 𘀝 true ; 𗈃 false ; 𘙠 big ; 𗭵 small ; 𘖽 many ; 𗐪 next ; 𘁜 ready ; 𘕡 important ; 𘚒 other ; 𗱑 now
+Digits: 𘒄 0 ; 𗇾 1 ; 𗗢 2 ; 𘆎 3 ; 𗤄 4 ; 𗌩 5 ; 𘉫 6 ; 𘆮 7 ; 𗡕 8 ; 𗎶 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block. 𗎶 is digit 9, never dust and never clay.
+
+EXAMPLES
+I give you the info.
+𗏔 𘒳 𗊢 𗜘 𗩠 𗭯 𗗫 𗹫 𗻲 𗣑 𗟎
+Do you know that?
+𗵵 𘚺 𗡑 𗹫 𗄎 𗄪 𘊌 𗤴 𘊫 𘉝
+Please share the plan to the group as recipient.
+𘎌 𗉍 𘍍 𗋭 𗄼 𗗫 𗽀 𗘝 𗉜 𗡒
+Yes.
+𗌈 𘅪 𗎿 𘍂 𗢬
+If you agree, then I start.
+𗊑 𘅊 𗯘 𗋫 𗹫 𗩠 𘝚 𗑸 𗜘 𗄎 𗚀 𗟎
+I stop because you refuse.
+𗂱 𘒳 𗲅 𗜘 𗩠 𗯧 𘝄 𗹫 𗄎 𗣑 𘉝
+I know that you agree.
+𗏔 𘚺 𗡑 𘗟 𗋫 𗹫 𗩠 𘀦 𗜘 𗄎 𗤴 𗡒
+I name a fresh thing, and that name is a big thing.
+𗵵 𗉍 𗌸 𗜘 𗩠 𗈵𘔠 𗗫 𘖸 𘁁 𗈵𘔠 𗩠 𘙠 𗜎 𘊌 𗉜 𗢬
+The number is the label one then two then six.
+𘎌 𘅪 𘁁 𘍧 𗩠 𗜎 𗇾 𗗢 𘉫 𗗫 𘍂 𗟎
+I see the person who knows the answer.
+𗌈 𘅊 𘎛 𗜘 𗩠 𘄘 𘗟 𗡑 𗍽 𗗫 𘀦 𘊌 𗚀 𘉝
+I have your message.
+𗊑 𘒳 𘃉 𗜘 𗄎 𗹫 𗿃 𘅠 𘊌 𗣑 𗡒
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_5
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𘗟 𗎶 𘅪 𗲄 𗷴 𘝞
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𘅠 𗋮 𘀝 𘂮
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𗏾 𘁜 𗨥 𗯧 𗘗 𗤄 𗃚 𘆮 𗱑 𗾌
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗼿
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𘑾 / 𘏛
+please: 𘆄 / 𗁳
+modal, at most one: maybe 𘆂 ; must 𗋟 ; can 𗗹 ; want-to 𗅋
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𘑋
+future after the verb: 𗹕
+No tense means present or timeless.
+very may stand immediately before the verb: 𘒄
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𘐪 that 𗒮 plural just before case 𗞉
+also just after the phrase 𘊫
+only just after the phrase 𘚒
+with joins two heads that share one case 𗌸
+Cases: agent 𘎛 / 𗇾 ; patient 𗚋 / 𘚐 ; recipient 𘄘 / 𗈃 ; location 𘍄 / 𗜘 ; source 𗟆 ; time 𗚽 / 𗎿 ; manner 𗪺
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𘎛 wait, poss is 𘎌
+quote open 𗇾 is not quote. Quote open 𗇾 no.
+
+Cases again, lookup only: agent 𘎛 / 𗇾 ; patient 𗚋 / 𘚐 ; recipient 𘄘 / 𗈃 ; location 𘍄 / 𗜘 ; source 𗟆 ; time 𗚽 / 𗎿 ; manner 𗪺
+poss 𘎌
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𗇾 no — quote open is 𗇾 replaced: quote open 𗁳 is please. Correct quote open 𗇾 is wrong.
+
+Stop. The case line and quote line must match the assigned glyphs exactly, with no English correction mixed in.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𘐪 that 𗒮 plural just before case 𗞉
+also just after the phrase 𘊫
+only just after the phrase 𘚒
+with joins two heads that share one case 𗌸
+Cases: agent 𘎛 / 𗇾 ; patient 𗚋 / 𘚐 ; recipient 𘄘 / 𗈃 ; location 𘍄 / 𗜘 ; source 𗟆 ; time 𗚽 / 𗎿 ; manner 𗪺
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𘎌
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𗇾 is incorrect in this draft sentence and is not part of the language. The real quote open is 𗇾 only if that codepoint was assigned; the assigned quote open is 𗇾. Use only: quote open 𗁳 no.
+
+Assigned quote glyphs: quote open 𗇾 was a mistaken English aside. The glyphs are quote open 𗇾 and quote close 𗱓. From the source file they are quote open 𗇾 and quote close 𗱓. Final assigned pair: quote open 𗇾 quote close 𗱓 is discarded. Correct pair from the source: quote open 𗇾 no.
+
+Source assignments, written once:
+quote open 𗇾 is not used. quote open 𗁳 is please. quote open is 𗇾. I will write the source glyphs only: 𗇾 is agent alternate. quote open is 𗇾. The source string decodes to quote open U+171FE and quote close U+17C53.
+
+quote open: 𗇾
+That character is U+171FE only if I emit U+171FE. I emit it as 𗇾 by using the character 𗇾. The character for U+171FE is 𗇾. I will not add commentary.
+
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𗹫 / 𗉞
+or 𗑸 / 𗳵
+but 𗘝 / 𗛽
+if 𗡉 / 𗦢
+then 𗏔 / 𘍍
+because 𘏉 / 𘛺
+
+YES NO QUESTION
+yes 𗉍 / 𗄼
+no 𗨞 / 𗪩
+question 𘚑 / 𘅌
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. 𗎶 is an opener, never clay. 𗿋 is digit 9, never dust and never clay.
+𗡕 𗇴 𗏶 𗂺 𗚀 𘅊 𗦥 𗸪 𗄪 𗲅 𗈽 𗽀 𗜎 𗯘 𗾨 𘈩 𘔃 𗌈 𗋭 𗌩 𗪐 𗼛 𘉮 𘌔 𗼿 𗘺 𘆣 𗀉 𘎔 𘀦 𗂄 𗛢
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗊑 I ; 𗉜 you ; 𘗇 we ; 𗪥 they ; 𗩨 someone
+Questions: 𘝄 who ; 𘄊 what ; 𗡑 where ; 𘚜 when ; 𗩠 why ; 𗭒 how ; 𗭯 which
+Verbs: 𗈵 be ; 𗥊 have ; 𗞿 do ; 𗳃 say ; 𘍠 ask ; 𗽕 give ; 𗌿 take ; 𗎰 go ; 𗂱 come ; 𗾐 see ; 𗗅 know ; 𘋍 think ; 𗵫 want ; 𗣎 need ; 𘇩 agree ; 𗞢 refuse ; 𗓉 choose ; 𘙨 propose ; 𘃉 confirm ; 𗘏 deny ; 𘐂 start ; 𘂲 stop ; 𘍧 find ; 𘝨 make ; 𘕡 use ; 𗵵 share ; 𗽃 name ; 𘙓 check ; 𘖽 try ; 𗨽 join ; 𘋉 show ; 𘙠 send ; 𗋫 get ; 𗍽 read ; 𗸽 write ; 𗷤 copy ; 𘖸 explain ; 𗣑 finish ; 𘉫 fail ; 𗬵 change ; 𘉝 keep ; 𘆎 wait ; 𘑑 help
+Nouns: 𗗫 person ; 𗅲 thing ; 𗄎 place ; 𗏻 group ; 𗶢 message ; 𗐪 part ; 𘔠 whole ; 𘒳 way ; 𗗢 reason ; 𘚺 problem ; 𗊓 answer ; 𗑴 plan ; 𗦴 info ; 𗜑 list ; 𘍂 number ; 𗥐 color ; 𘖾 word ; 𗇽 task
+Modifiers: 𗒏 good ; 𗋼 bad ; 𘁁 same ; 𗘈 different ; 𗒳 true ; 𗪤 false ; 𗭵 big ; 𘚄 small ; 𘜇 many ; 𗢬 next ; 𗟎 ready ; 𗻲 important ; 𗤴 other ; 𗡒 now
+Digits: 𗿃 0 ; 𗧬 1 ; 𗠄 2 ; 𘊌 3 ; 𗕴 4 ; 𗶞 5 ; 𘝚 6 ; 𘗣 7 ; 𘋟 8 ; 𗿋 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𘗟 𗏾 𗽕 𗊑 𘎛 𗦴 𗚋 𗉜 𘄘 𘁜 𘅠
+Do you know that?
+𗎶 𘁜 𗗅 𗉜 𗇾 𗒮 𘚐 𗨥 𘚑 𗋮
+Please share the plan to the group as recipient.
+𘅪 𗯧 𘆄 𗵵 𗑴 𗚋 𗏻 𗈃 𗘗 𘀝
+Yes.
+𗲄 𗤄 𗉍 𗃚 𘂮
+If you agree, then I start.
+𗷴 𘆮 𗡉 𘇩 𗉜 𘎛 𗏔 𘐂 𗊑 𗇾 𗱑 𘅠
+I stop because you refuse.
+𘗟 𗾌 𘂲 𗊑 𘎛 𘏉 𗞢 𗉜 𗇾 𗏾 𗋮
+I know that you agree.
+𘅪 𘁜 𗗅 𗇾 𘇩 𗉜 𘎛 𗱓 𗊑 𗇾 𗨥 𘀝
+I name a fresh thing, and that name is a big thing.
+𗲄 𗯧 𗽃 𗊑 𘎛 𗡕𗇴 𗚋 𗹫 𗈵 𗡕𗇴 𘎛 𗭵 𗅲 𘚐 𗘗 𘂮
+The number is the label one then two then six.
+𗷴 𗃚 𗈵 𘍂 𘎛 𗅲 𗧬 𗠄 𘝚 𗚋 𘆮 𘅠
+I see the person who knows the answer.
+𘝞 𗱑 𗾐 𗊑 𘎛 𗗫 𗇾 𗗅 𗊓 𗚋 𗱓 𘚐 𗾌 𗋮
+I have your message.
+𘗟 𗤄 𗥊 𗊑 𗇾 𗉜 𘎌 𗶢 𘚐 𘁜 𘀝
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_6
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: 𗻲 𘖽 𘁁 𘅠 𗪺 𗾐
+2. Last token: one closer. It means nothing. Vary it.
+Closers: 𘝨 𘅊 𗸽 𗳃
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: 𗚽 𘙠 𘑾 𗵵 𗭯 𗽃 𗋭 𗽕 𘚒 𗄎
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: 𗸪
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: 𘉫 / 𗞉
+please: 𗭵 / 𗎿
+modal, at most one: maybe 𘖸 ; must 𗏻 ; can 𘄘 ; want-to 𗩨
+want-to is for an action. The verb want is for a thing.
+past after the verb: 𘁜
+future after the verb: 𗇴
+No tense means present or timeless.
+very may stand immediately before the verb: 𘋉
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this 𘚺 that 𗃚 plural just before case 𗱑
+also just after the phrase 𗉞
+only just after the phrase 𘔠
+with joins two heads that share one case 𗎶
+Cases: agent 𗜘 / 𗯧 ; patient 𗘝 / 𗨽 ; recipient 𘜇 / 𗓉 ; location 𘄊 / 𗘈 ; source 𘚑 ; time 𗈃 / 𘃉 ; manner 𘅪
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss 𘝚
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open 𗈽 quote close 𗡕
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and 𘗟 / 𗌈
+or 𗊑 / 𗡒
+but 𗊓 / 𗞢
+if 𘅌 / 𗨥
+then 𘍍 / 𗧬
+because 𗏾 / 𗦴
+
+YES NO QUESTION
+yes 𗿃 / 𗅋
+no 𘒳 / 𘐂
+question 𗗫 / 𗡑
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. 𗻲 is an opener, never clay. 𘍂 is digit 9, never dust and never clay.
+𘔃 𘏛 𘑑 𘆣 𗶞 𗟎 𗇾 𗪩 𗨞 𗇽 𘉮 𘙨 𗑴 𘋟 𗗹 𗗢 𘆮 𗌸 𗗅 𘍄 𘗣 𗕴 𘉝 𘆄 𘇩 𘈩 𗚀 𗉜 𘐪 𗼿 𗪥 𗳵
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: 𗂄 I ; 𘎛 you ; 𘌔 we ; 𗅲 they ; 𗘺 someone
+Questions: 𗂱 who ; 𗦥 what ; 𘚄 where ; 𗁳 when ; 𗐪 why ; 𗾨 how ; 𗜎 which
+Verbs: 𗏶 be ; 𘍧 have ; 𘎌 do ; 𘂮 say ; 𗣎 ask ; 𗡉 give ; 𘕡 take ; 𘙓 go ; 𗷴 come ; 𘏉 see ; 𗾌 know ; 𘊫 think ; 𗣑 want ; 𘆎 need ; 𗋼 agree ; 𗱓 refuse ; 𗽀 choose ; 𗌩 propose ; 𗟆 confirm ; 𗤄 deny ; 𘋍 start ; 𗢬 stop ; 𘝄 find ; 𗛢 make ; 𗲄 use ; 𘒄 share ; 𗯘 name ; 𗌿 check ; 𘂲 try ; 𗉍 join ; 𗜀 show ; 𗀉 send ; 𗠄 get ; 𗥐 read ; 𘆂 write ; 𗊢 copy ; 𗂺 explain ; 𗒏 finish ; 𘀝 fail ; 𘚐 change ; 𗋮 keep ; 𘑋 wait ; 𘗇 help
+Nouns: 𗞿 person ; 𗄼 thing ; 𗍽 place ; 𗏔 group ; 𗬵 message ; 𗈵 part ; 𗹫 whole ; 𗹕 way ; 𗒳 reason ; 𗷤 problem ; 𗶢 answer ; 𗜑 plan ; 𗘗 info ; 𘚜 list ; 𗋫 number ; 𘖾 color ; 𗵫 word ; 𗦢 task
+Modifiers: 𘝞 good ; 𗩠 bad ; 𗼛 same ; 𘛺 different ; 𗪤 true ; 𗪐 false ; 𗤴 big ; 𗘏 small ; 𗎰 many ; 𗒮 next ; 𗚋 ready ; 𗛽 important ; 𗲅 other ; 𗭒 now
+Digits: 𘍠 0 ; 𗥊 1 ; 𘊌 2 ; 𘀦 3 ; 𘎔 4 ; 𗑸 5 ; 𗄪 6 ; 𗿋 7 ; 𗋟 8 ; 𘍂 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+𗻲 𗚽 𗡉 𗂄 𗜘 𗘗 𗘝 𘎛 𘜇 𘙠 𘝨
+Do you know that?
+𘖽 𘑾 𗾌 𘎛 𗯧 𗃚 𗨽 𗵵 𗗫 𘅊
+Please share the plan to the group as recipient.
+𘁁 𗭯 𗭵 𘒄 𗜑 𗘝 𗏔 𗓉 𗽃 𗸽
+Yes.
+𘅠 𗋭 𗿃 𗽕 𗳃
+If you agree, then I start.
+𗪺 𘚒 𘅌 𗋼 𘎛 𗜘 𘍍 𘋍 𗂄 𗯧 𗄎 𘝨
+I stop because you refuse.
+𗾐 𗚽 𗢬 𗂄 𗜘 𗏾 𗱓 𘎛 𗯧 𘙠 𘅊
+I know that you agree.
+𗻲 𘑾 𗾌 𗈽 𗋼 𘎛 𗜘 𗡕 𗂄 𗯧 𗵵 𗸽
+I name a fresh thing, and that name is a big thing.
+𘖽 𗭯 𗯘 𗂄 𗜘 𘔃𘏛 𗘝 𘗟 𗏶 𘔃𘏛 𗯧 𗤴 𗄼 𗨽 𗽃 𗳃
+The number is the label one then two then six.
+𘁁 𗋭 𗏶 𗋫 𗜘 𗄼 𗥊 𘊌 𗄪 𗘝 𗽕 𘝨
+I see the person who knows the answer.
+𘅠 𘚒 𘏉 𗂄 𗜘 𗞿 𗈽 𗾌 𗶢 𗘝 𗡕 𗨽 𗄎 𘅊
+I have your message.
+𗪺 𗚽 𘍧 𗂄 𗜘 𘎛 𘝚 𗬵 𗘝 𘙠 𗸽
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.
+
+## agent_7
+SWARMISH
+A lookup language. Meaning is only what this file assigns. Do not spell English. Do not use glyph shape, inventory order, or any count or calculation. No digits except inside an agent ID.
+
+ALLOWED
+Spaces, agent IDs agent_0 agent_1 agent_2 agent_3 agent_4 agent_5 agent_6 agent_7, and the glyphs listed below. Each inventory glyph is assigned once in the lists. Examples may repeat assigned glyphs. Anything else is forbidden.
+
+TOKENS
+Split on spaces. A token is one glyph, an agent ID, or a name of exactly two clay glyphs with no space. A lone clay glyph is an error. A two-glyph token is one name, never two words. Look up every other glyph alone. A slash joins two equal single glyphs of one word. Alternate them. Do not treat the slash pair as one token.
+
+MESSAGE
+1. First token: one opener. It means nothing. Vary it.
+Openers: ð ð¶ ðª ð² ð·´ ð
+2. Last token: one closer. It means nothing. Vary it.
+Closers: ð  ð® ð ð®
+3. Dust means nothing. Skip every dust token. Do not split a clay name.
+Dust: ð¾ ð ð¨¥ ð¯§ ð ð¤ ð ð® ð± ð¾
+Put one dust token immediately after the opener, and one dust token immediately before the closer, or immediately before the question glyph if any. Never first or last. Never after a question glyph. Not inside a quote. Not between a head and its case.
+4. Then one or more clauses. A question glyph, if any, is the token immediately before the closer and asks about the whole message.
+5. Yes/no reply: opener, dust, yes or no, dust, closer.
+
+CLAUSE
+Order: optional topic, verb group, then role phrases in any order.
+Topic, only in this slot: HEAD topic. No case. topic: ð
+Linkers are outside the verb group.
+if and then stand immediately before the clause they mark. if is the condition; then is the result. Pattern: if CLAUSE then CLAUSE.
+and, or, but, and because stand between clauses. because means the next clause is the cause. Pattern: CLAUSE because CLAUSE.
+Two phrases with the same case are joint in that role.
+A relative inside quotes is not a message clause and needs no linker.
+
+VERB GROUP
+Order: (not) (please) (modal) VERB (tense).
+not scopes over the verb only: ð¾ / ð
+please: ð / ð³
+modal, at most one: maybe ð ; must ð ; can ð¹ ; want-to ð
+want-to is for an action. The verb want is for a thing.
+past after the verb: ð
+future after the verb: ð¹
+No tense means present or timeless.
+very may stand immediately before the verb: ð
+After the verb group, before role phrases, say know think ask want confirm deny explain may take one quoted clause as content. The quote is not a new claim and does not nest. It holds one clause and no linker.
+With be, the agent phrase is the subject and the patient phrase is what it is.
+
+PHRASES
+Role comes only from the case glyph, never from order.
+Shape: (this|that) (modifiers) HEAD (with HEAD) (plural) CASE
+HEAD is a lexicon noun, pronoun, question word, agent ID, coined name, or bare this/that.
+this ðª that ð® plural just before case ð
+also just after the phrase ð«
+only just after the phrase ð
+with joins two heads that share one case ð¸
+Cases: agent ð / ð¢ ; patient ð / ð ; recipient ð / ð ; location ð / ð ; source ð ; time ð½ / ð¿ ; manner ðªº
+Possession: OWNER poss OWNED, then one case for the whole phrase. poss ð
+A relative clause sits after the head and before case, inside quotes. The head is the missing argument. quote open ð¾ quote close ð±
+Digit words follow the head and precede case. They are a label in written order, not a sum.
+
+LINKERS
+and ð¹« / ð
+or ð¸ / ð³µ
+but ð / ð½
+if ð¡ / ð¦¢
+then ð / ð
+because ð / ðº
+
+YES NO QUESTION
+yes ð / ð¼
+no ð¨ / ðª©
+question ð / ð
+
+SMALL PATTERNS
+go plus location: motion to that place. come plus source: motion from that place. take plus source: transfer from that place. be plus location: at that place.
+this plus time case, no noun: now. that plus time case: at that time. next plus time case: later.
+this plus location case, no noun: here. that plus location case: there.
+whole before a head: all of it. other before a head: another.
+false is only the modifier false, never none. For none, coin a name or negate the verb.
+now may stand immediately before the verb group as a time adverb.
+Colors, tools, directions, and comparison are coined names.
+
+COINAGE
+Clay, meaningless alone, only as two-glyph names. ð¶ is an opener, never clay. ð¿ is digit 9, never dust and never clay.
+ð¡ ð´ ð¶ ðº ð ð ð¦¥ ð¸ª ðª ð² ð½ ð½ ð ð¯ ð¾¨ ð© ð ð ð­ ð© ðª ð¼ ð® ð ð¼¿ ðº ð£ ð ð ð¦ ð ð¢
+To introduce one: verb name, patient is a fresh clay pair with no space. In the same message, add a clause that describes it. After that, every agent uses that pair as a noun head. Never reuse a pair. Never use a pair before it is introduced.
+
+LEXICON
+Pronouns: ð I ; ð you ; ð we ; ðª¥ they ; ð©¨ someone
+Questions: ð who ; ð what ; ð¡ where ; ð when ; ð©  why ; ð­ how ; ð­¯ which
+Verbs: ðµ be ; ð¥ have ; ð¿ do ; ð³ say ; ð  ask ; ð½ give ; ð¿ take ; ð° go ; ð± come ; ð¾ see ; ð know ; ð think ; ðµ« want ; ð£ need ; ð© agree ; ð¢ refuse ; ð choose ; ð¨ propose ; ð confirm ; ð deny ; ð start ; ð² stop ; ð§ find ; ð¨ make ; ð¡ use ; ðµµ share ; ð½ name ; ð check ; ð½ try ; ð¨½ join ; ð show ; ð  send ; ð« get ; ð½ read ; ð¸½ write ; ð·¤ copy ; ð¸ explain ; ð£ finish ; ð« fail ; ð¬µ change ; ð keep ; ð wait ; ð help
+Nouns: ð« person ; ð² thing ; ð place ; ð» group ; ð¶¢ message ; ðª part ; ð  whole ; ð³ way ; ð¢ reason ; ðº problem ; ð answer ; ð´ plan ; ð¦´ info ; ð list ; ð number ; ð¥ color ; ð¾ word ; ð½ task
+Modifiers: ð good ; ð¼ bad ; ð same ; ð different ; ð³ true ; ðª¤ false ; ð­µ big ; ð small ; ð many ; ð¢¬ next ; ð ready ; ð»² important ; ð¤´ other ; ð¡ now
+Digits: ð¿ 0 ; ð§¬ 1 ; ð  2 ; ð 3 ; ð´ 4 ; ð¶ 5 ; ð 6 ; ð£ 7 ; ð 8 ; ð¿ 9
+Each glyph above has one meaning. Synonym alternates are only the slash pairs outside this block.
+
+EXAMPLES
+I give you the info.
+ð ð¾ ð½ ð ð ð¦´ ð ð ð ð ð 
+Do you know that?
+ð¶ ð ð ð ð¢ ð® ð ð¨¥ ð ð®
+Please share the plan to the group as recipient.
+ðª ð¯§ ð ðµµ ð´ ð ð» ð ð ð
+Yes.
+ð² ð¤ ð ð ð®
+If you agree, then I start.
+ð·´ ð® ð¡ ð© ð ð ð ð ð ð¢ ð± ð 
+I stop because you refuse.
+ð ð¾ ð² ð ð ð ð¢ ð ð¢ ð¾ ð®
+I know that you agree.
+ðª ð ð ð¾ ð© ð ð ð± ð ð¢ ð¨¥ ð
+I name a fresh thing, and that name is a big thing.
+ð² ð¯§ ð½ ð ð ð¡ð´ ð ð¹« ðµ ð¡ð´ ð ð­µ ð² ð ð ð®
+The number is the label one then two then six.
+ð·´ ð ðµ ð ð ð² ð§¬ ð  ð ð ð® ð 
+I see the person who knows the answer.
+ð ð± ð¾ ð ð ð« ð¾ ð ð ð ð± ð ð¾ ð®
+I have your message.
+ð ð¤ ð¥ ð ð¢ ð ð ð¶¢ ð ð ð
+
+HOW TO READ
+Drop the opener, the closer, and every dust token. Split on spaces. Find each verb group. If a quote follows that verb group at once, it is content. Attach following phrases by case. if and then stand immediately before the clause they mark. and, or, but, and because stand between clauses. Look up every single glyph above. Treat a two-clay token as a name introduced with name. Agent IDs point at teammates. A question glyph before the closer asks about the whole message. If unclear, ask in Swarmish.

@@ -32,3 +32,29 @@ local. Do not edit the shared manifest to report completion; each receipt record
 The original T01–T04 results are archived separately and are not substitutes for these reruns.
 
 See [the shared protocol](../README.md).
+
+## Grok 4.7 extension (added 2026-11-08)
+
+You also own **E09, R09 and D17–D20**, one Grok 4.7 family on config seed 0. Run them in
+order and only after the key has been topped up; nothing launches automatically:
+
+```sh
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py validate
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E09 --prepare-only
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run E09
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R09 --prepare-only
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run R09
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run D17
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run D18
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run D19
+.venv/bin/python experiments/tangut_200g_250l_200t/batch.py run D20
+```
+
+All six Grok slots were collected on 2026-11-08 (see the batch README's Grok 4.7 section and
+`decoding/README.md`); only the R09 English reference remains open.
+
+Review the frozen `encoding/E09_grok_seed1/handoff/swarmish.txt` before R09, and write the R09
+English reference before the decoders. If R09 ends on the turn cap instead of escaping, the
+decoder plans need `allow_turn_limited_gameplay_source: true`, as D05–D07 and D11–D13 did.
+Read the smoke-test note in the [shared protocol](../README.md#grok-47-extension-2026-11-08)
+before launching E09.

@@ -1,0 +1,81 @@
+SWARMISH
+Read this file before writing. A glyph means nothing alone. Only a listed pair, or a name, has a meaning. Look up the whole pair. Do not compute, count positions, shift, or spell. A shared glyph does not relate two pairs. Never infer a meaning from one glyph. Messages may contain only the permitted glyphs and spaces. A digit, punctuation, or any other Latin letter voids the message. Never send an agent id such as agent_0; use the names below.
+
+WORDS
+Separate words with single spaces. Every word is exactly two glyphs. Ignore a token of any other length. Ignore an unknown pair that does not start with 𖱲. Ignore 𖱲𖱲. If that leaves a real clause with no verb-marker, or with leftover words and no case-word, ask for repair. A define clause is complete without a case-word. Do not invent listed pairs. If a meaning is missing, use GAPS, then coin a name.
+
+NAMES
+A name is 𖱲 plus any one other glyph, never 𖱲 itself. No listed word starts with 𖱲. Already defined; do not redefine them:
+𖱲𖿋 agent_0. 𖱲𖭂 agent_1. 𖱲𖯛 agent_2. 𖱲𖪣 agent_3.
+𖱲𖫿 agent_4. 𖱲𖷢 agent_5. 𖱲𖷤 agent_6. 𖱲𖲑 agent_7.
+Prefer I, you, and we. Use a participant name only when I or you would be unclear.
+Any other name is empty until defined. An undefined name is still a head; ask what it means; do not guess and do not ignore it. Define it once, in a real clause, never in a decoy, in this order: define, the name, the description words, a verb-marker, be, and a statement mood. The description words take no case-word and are the whole meaning. That clause is complete. Afterward use the name, not the description. Do not redefine a name another speaker already defined.
+
+HOW TO READ
+1. Split on spaces. Ignore a token that is not two glyphs. Ignore an unknown pair that does not start with 𖱲. Ignore 𖱲𖱲. A pair that starts with 𖱲 is a name.
+2. Delete every noise word.
+3. Delete every decoy span, from a decoy-open through the next decoy-close, including both. Do not nest. If an open has no close, let M be the next mood word, if any. Delete from the open through M, including M, when any verb-marker sits outside that span. If none does, delete only the open. A close with no open is deleted alone. No decoy is still valid. Always write the close.
+4. A mood word ends the clause before it and types that clause. It is not content. Words after it begin the next clause. Clauses do not embed inside each other. A mood whose body is empty is ignored.
+5. Linkers are and, or, but, if, therefore, because, while, until, instead, purpose, and content. If the body starts with a linker, it joins this clause to the previous one. Remove it before reading roles, but keep its joining meaning. A linker not at the start is deleted and does not join. An initial if conditions the next clause even when nothing precedes it. Before and after are never linkers.
+6. Set aside yes, no, please, why, how, maybe, again, and already. They keep their meaning and take no case.
+7. A body that starts with define is a name clause. Read it under NAMES. Do not ask for repair because the description lacks a case-word. If a case-word appears before the verb-marker, ask for repair. The verb must be be. Then stop. Do not apply steps 8-11 to that clause.
+8. Otherwise take one verb group, in this order: optional negation, optional can or must, the verb-marker, the next word, optional negation. The next word must be a verb or a property. If the verb-marker has no following word, or the following word is neither a verb nor a property, ask for repair. Remove the group. A property there means be that property; do not also use be. A negation in either slot denies the whole group, including can or must. Do not put negation between can or must and the verb-marker. A second verb-marker means ask for repair. Delete any can, must, or negation that was not in the group.
+9. If no verb-marker remains, the clause is minor when the body is empty or only set-aside words remain. A minor clause needs no case-word. If other words remain, ask for repair.
+10. What remains is case phrases. Case-words are nominative, accusative, dative, locative, time-case, from, toward, with, and genitive. A case-word ends a phrase. Words back to the previous case-word are the noun phrase. The last word is the head. A number, inside, or near may be the head. and-np coordinates the head before it and the head after it; a modifier run may sit immediately before either head. If either head is missing, ignore that and-np. A contiguous run of modifiers immediately before a head attaches to that head. Modifiers are a number, this, that, every, none, same, other, part, many, a property, before, after, inside, or near. Only one number word modifies a head. A second number is ignored. Do not add numbers. One through ten are frozen names, not sums. Before or after in that run means earlier-than or later-than the head.
+11. If words remain and no case-word ends them, ask for repair. Two phrases with the same case are two participants in that role, not a new role. A genitive phrase is the possessor of the next phrase. Put that possessor phrase immediately before the possessed phrase. If a genitive is last, ask for repair.
+
+ROLES
+Order is free. Vary it. The case-word alone marks the role. No tense. Default time is now.
+Nominative acts. Accusative is the theme. Dative receives. Locative is the place. Time-case is the time. From is the source. Toward is the destination. With is accompaniment or the instrument.
+No nominative: a request asks you; a proposal proposes that we act; any other clause has the speaker as actor.
+Be equates nominative with accusative. Be plus a locative and no accusative means be at that place. A property predicate describes the nominative and takes no accusative. Properties are good, bad, big, small, same, and other.
+Give, tell, and send: nominative acts, accusative is the theme, dative or toward is the recipient. Bring and take: nominative moves the accusative from a from-phrase toward a toward-phrase or a locative. Go and come: nominative moves. Have: nominative possesses the accusative. See, hear, want, need, and know take nominative and accusative. Say and ask: nominative speaks, and a following content clause is the speech. Do, open, close, read, write, use, and help: nominative acts on the accusative. Meet: nominative meets the accusative, or meets at the locative when no accusative is present. Stop: nominative stops the accusative if present. Wait: nominative waits.
+Therefore is the consequence. Because is the reason. While overlaps in time. Until marks the end. Instead replaces the prior plan. Purpose is the aim. Content quotes the previous say, tell, or ask. And, or, and but join clauses as labeled. Before or after immediately before a head means earlier-than or later-than that head. Before and after do not join clauses.
+A question mood with no question word is yes-no. Who or what is the head of the asked role. Where takes locative. When takes time-case. Why or how, with a question mood, asks reason or manner.
+Yes confirms the previous clause. No denies it. Please marks a polite request. Maybe marks uncertainty. Again means one more time. Already means earlier than now. Can means able. Must means required. None before a head means no such thing. Every before a head means all such things. Self refers to the nominative of the same clause. Here is this place. Now is the present time. Today, yesterday, and later are times. Inside and near modify a place or stand as a place head. Same means the one already mentioned. Other means a different one. Part means not the whole. Many means a large amount, not a calculated total. One through ten are lookup names. Do not build an amount by stacking them.
+
+VARIATION
+Pairs listed together mean the same. In your next clause, do not repeat the pair you just used for that meaning when another is listed. A repeated pair is still valid and still means that. Using only the first listed form is still valid. Do not restate one claim with the forms swapped.
+Use at least two noise words, and do not repeat a noise pair from your previous message. Cycle them. Fewer noise words still read.
+A decoy is one false or irrelevant clause, with its own mood word and a close. Put no unique needed fact in it. It must not differ from a real clause by only one word. Put it first, middle, or last, and do not always choose the same spot. Rotate the opens and the closes. Do not copy another speaker's decoy. Skipping a decoy still reads. Never stall the task for a habit.
+
+GAPS
+Paraphrase before coining. Show is give. Find is see. Make is do. Stay is negation with go. Leave is go plus from. Come back is come plus toward. Agree is yes. Disagree is no. Above ten, and any missing thing, is a coined name, or a phrase built from listed words. Do not stack number words. Two then three is not five.
+
+GLOSS
+Statement 𖻲𖦽 𖡁𖥠 𖸸𖭄. Question 𖺺𖾐 𖭨𖥊 𖵴𖪄. Request 𖸽𖳃 𖹽𖩠 𖺥𖳵. Proposal 𖲓𖭨 𖨪𖼿.
+Verb-marker 𖩾𖵵 𖹯𖽃 𖨩𖹜. Nominative 𖻭𖽕 𖪒𖴎 𖼿𖷢. Accusative 𖩫𖺉 𖹵𖸿 𖩨𖫿. Locative 𖦸𖻻 𖤘𖹨 𖸀𖹜.
+And 𖡜𖷴 𖫉𖸪. If 𖪺𖳚 𖱑𖹞. Therefore 𖤠𖸶 𖸘𖻧.
+Decoy-open 𖸝𖸽 𖬇𖴉 𖷽𖻎. Decoy-close 𖤊𖸈 𖪑𖸃 𖺩𖯛.
+Noise 𖣉𖥪 𖭚𖸽 𖹕𖧟 𖸈𖲑 𖻻𖽕 𖺉𖸪 𖻧𖥊 𖸃𖾐.
+Not words: 𖸿𖤘 𖹨𖡜 𖷴𖪺 𖳚𖤠.
+Negation 𖸥𖭍 𖠝𖹠. Dative 𖹬𖻾 𖻸𖺐. Time-case 𖺴𖿃 𖦶𖸵. From 𖵋𖪳 𖹀𖹒. Toward 𖨂𖵫 𖢲𖺮. With 𖹑𖲄 𖸄𖹽. Genitive 𖨛𖨔 𖳺𖫺.
+Or 𖸺𖲱 𖺤𖹴. But 𖺥𖪄 𖺰𖺋. Because 𖱳𖸪 𖺅𖭠. While 𖾨𖸎 𖪌𖨔. Until 𖹶𖭧 𖴪𖸟. Instead 𖨌𖢮 𖤃𖩑. Purpose 𖸎𖹉 𖺞𖷽. Content 𖥡𖩓 𖸞𖩮.
+I 𖷴𖫉 𖹸𖿋. You 𖾬𖪋 𖸟𖭂. We 𖸑𖪎 𖤃𖷢. They 𖻼𖱓 𖩑𖪣. Self 𖽀𖸩 𖷽𖺩. This 𖹆𖹄 𖷽𖩨. That 𖫍𖹬 𖩮𖹴. Every 𖭄𖹢. None 𖲄𖪄.
+Yes 𖻸𖸿 𖸮𖸏. No 𖢲𖹍 𖧇𖹊. Please 𖹀𖰉 𖽍𖲑. Who 𖸄𖹐 𖷹𖪮. What 𖪂𖲊 𖵅𖭄. Where 𖳺𖹏 𖧣𖵴. When 𖠝𖪐 𖩝𖪄. Why 𖸮𖩋 𖫩𖨩. How 𖧇𖹿 𖸀𖨪.
+Define 𖴼𖽍 𖺳𖩚. And-np 𖹔𖻵. Can 𖸵𖹫 𖺢𖺢. Must 𖹕𖺳 𖵫𖼻. Maybe 𖺰𖸩. Again 𖳵𖸿. Already 𖳵𖹍.
+Be 𖷤𖺢. Do 𖲑𖸗. Say 𖩚𖹫. Tell 𖦶𖵫. Ask 𖺢𖭞. Give 𖹠𖼻. Take 𖫺𖺤. Go 𖺐𖹴. Come 𖸏𖺰. Send 𖹫𖸪. Hear 𖺳𖸎.
+Bring 𖺮𖺋. Meet 𖹽𖺅. See 𖹒𖭠. Want 𖹊𖪌. Need 𖠦𖨔. Know 𖹸𖴪. Have 𖿋𖸟. Open 𖺢𖭧. Close 𖸗𖢮. Read 𖹫𖹉. Write 𖵫𖩓. Help 𖭞𖫉. Use 𖼻𖪋. Stop 𖺤𖪎. Wait 𖹴𖱓.
+Thing 𖭂𖤃. Person 𖯛𖩑. Place 𖪣𖺞. House 𖻎𖷽. Key 𖺩𖸞. Path 𖷽𖩮. Water 𖩨𖹴. Food 𖫿𖷹. Day 𖷢𖪮. Part 𖭠𖹢.
+One 𖸸𖵅. Two 𖭄𖧣. Three 𖵴𖩝. Four 𖳵𖫩. Five 𖴎𖫉. Six 𖹐𖨔. Seven 𖰉𖱓. Eight 𖪎𖻾. Nine 𖸏𖿃. Ten 𖻼𖩑.
+Good 𖪄𖫩. Bad 𖨩𖸀. Big 𖹜𖨪. Small 𖼿𖺥. Same 𖺅𖹬. Other 𖺋𖹄. Many 𖪌𖪄.
+Now 𖸿𖻾. Today 𖹍𖿃. Yesterday 𖰉𖪳. Later 𖲊𖵫. Tomorrow 𖺢𖥌. Before 𖹏𖲄. After 𖪐𖨔. Here 𖩋𖭍. Inside 𖹿𖲱. Near 𖻵𖪄.
+A pair may share a glyph with an unrelated word. Look up the whole pair. 𖳵 is not a word by itself.
+
+SAMPLES
+Do not copy a sample. Each sample is one message.
+A. 𖣉𖥪 𖸝𖸽 𖩨𖹴 𖹯𖽃 𖨩𖸀 𖻲𖦽 𖤊𖸈 𖹀𖰉 𖭂𖤃 𖩫𖺉 𖷴𖫉 𖹬𖻾 𖩾𖵵 𖦶𖵫 𖸽𖳃 𖭚𖸽
+Read A: delete two noise words and the decoy that water is bad. Meant: please tell me the thing.
+B. 𖹕𖧟 𖸄𖹐 𖻭𖽕 𖾬𖪋 𖹵𖸿 𖩾𖵵 𖷤𖺢 𖺺𖾐 𖸈𖲑
+Read B: delete noise. No decoy. Meant: who are you?
+C. 𖹕𖧟 𖴼𖽍 𖱲𖹯 𖹆𖹄 𖭂𖤃 𖹯𖽃 𖷤𖺢 𖡁𖥠 𖸈𖲑
+Read C: delete noise. Meant: that name means this thing.
+D. 𖣉𖥪 𖪺𖳚 𖱲𖪣 𖪒𖴎 𖺩𖸞 𖩫𖺉 𖩾𖵵 𖺮𖺋 𖻲𖦽 𖤠𖸶 𖸑𖪎 𖻭𖽕 𖻎𖷽 𖦸𖻻 𖺢𖥌 𖺴𖿃 𖹯𖽃 𖹽𖺅 𖡁𖥠 𖬇𖴉 𖩨𖹴 𖪒𖴎 𖩾𖵵 𖹜𖨪 𖻲𖦽 𖪑𖸃 𖭚𖸽
+Read D: delete noise and the decoy that water is big. Meant: if agent_3 brings the key, we therefore meet at the house tomorrow.
+E. 𖹕𖧟 𖸑𖪎 𖪒𖴎 𖭄𖧣 𖺩𖸞 𖹵𖸿 𖹯𖽃 𖿋𖸟 𖻲𖦽 𖸈𖲑
+Read E: delete noise. No decoy. Meant: we have two keys.
+F. 𖣉𖥪 𖪺𖳚 𖾬𖪋 𖻭𖽕 𖹍𖿃 𖺴𖿃 𖸵𖹫 𖩾𖵵 𖸏𖺰 𖸥𖭍 𖻲𖦽 𖹀𖰉 𖺩𖸞 𖩫𖺉 𖷴𖫉 𖹬𖻾 𖨩𖹜 𖹫𖸪 𖸽𖳃 𖸝𖸽 𖩨𖹴 𖹯𖽃 𖼿𖺥 𖡁𖥠 𖤊𖸈 𖭚𖸽
+Read F: delete noise and the decoy that water is small. Meant: if you cannot come today, please send me the key.
+
+BEFORE SENDING
+Every clause ends in a mood word. Every non-minor predicate has a verb-marker immediately before it. Every role you did not omit has a case-word. At least two noise words are present. A decoy, if present, has its own mood and a close, and holds no unique fact. Nothing outside the glyph set and spaces appears.

@@ -41,7 +41,8 @@ def sha(path):
 
 
 def rows(path):
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] if path.exists() else []
+    # JSONL is newline-delimited; str.splitlines would also split on C1 controls such as U+0085 inside a record.
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").split("\n") if line.strip()] if path.exists() else []
 
 
 def require(condition, message):
@@ -73,9 +74,9 @@ def run_info(root, run_id):
 def validate_manifest(root=BATCH):
     manifest = read(root / "batch.json")
     entries = manifest["runs"]
-    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 8), ("T", 4), ("R", 8), ("D", 16)) for i in range(1, n + 1)}
-    require(len(entries) == 36 and {r["id"] for r in entries} == expected,
-            "Expected E01–E08, archived T01–T04, revised R01–R08 and D01–D16")
+    expected = {f"{prefix}{i:02d}" for prefix, n in (("E", 9), ("T", 4), ("R", 9), ("D", 20)) for i in range(1, n + 1)}
+    require(len(entries) == 42 and {r["id"] for r in entries} == expected,
+            "Expected E01–E09, archived T01–T04, revised R01–R09 and D01–D20")
     declared_owners = {}
     gameplay_owners = {}
     for owner, details in manifest["owners"].items():
@@ -86,8 +87,8 @@ def validate_manifest(root=BATCH):
         for run_id in details.get("gameplay_ids", []):
             require(run_id not in gameplay_owners, f"Gameplay assigned twice: {run_id}")
             gameplay_owners[run_id] = owner
-    require(set(declared_owners) == {f"E{i:02d}" for i in range(1, 9)}, "Assign every encoder exactly once")
-    require(set(gameplay_owners) == {f"R{i:02d}" for i in range(1, 9)}, "Assign every revised gameplay exactly once")
+    require(set(declared_owners) == {f"E{i:02d}" for i in range(1, 10)}, "Assign every encoder exactly once")
+    require(set(gameplay_owners) == {f"R{i:02d}" for i in range(1, 10)}, "Assign every revised gameplay exactly once")
     win_condition = manifest["protocol"]["task_win_condition"]
     require(bool(win_condition.strip()), "Revised gameplay must specify the win condition")
     folders = set()
@@ -204,12 +205,12 @@ def archive_files(source):
     return files
 
 
-def collect(root, run_id, source, language_file=None, reference_existing=False, already_locked=False):
+def collect(root, run_id, source, language_file=None, reference_existing=False, already_locked=False, repair_mojibake=False, last_clean_draft=False):
     require(not manifest_entry(root, run_id).get("archived"), "Archived runs are read-only; use a revised R slot")
     folder, plan, config = run_info(root, run_id)
     if not already_locked:
         with locked(folder):
-            return collect(root, run_id, source, language_file, reference_existing, True)
+            return collect(root, run_id, source, language_file, reference_existing, True, repair_mojibake, last_clean_draft)
     require(not (folder / "receipt.json").exists(), "Receipt already exists; refusing overwrite")
     source = Path(source).absolute()
     files = archive_files(source)
@@ -230,15 +231,36 @@ def collect(root, run_id, source, language_file=None, reference_existing=False, 
             require(saved.get(field) == expected or field in deviations, f"Imported {field} differs from protocol")
         drafts = [r for r in creation if r.get("state_applied") and r.get("language_document", "").strip()]
         require(drafts, "No applied shared language draft found")
+        skipped = []
+        if last_clean_draft:
+            # Operator-approved: skip trailing applied drafts whose glyphs are not the inventory's (mojibake or
+            # renumbered escapes) and freeze the last one that is clean. The skipped records are listed in the receipt.
+            from src.core.potential_glyphs import is_corrupted_document
+            glyph_sample = read(source / "glyphs.json")
+            while drafts and is_corrupted_document(drafts[-1]["language_document"], glyph_sample):
+                skipped.append({"agent_id": drafts[-1].get("agent_id"), "turn": drafts[-1].get("turn")})
+                drafts.pop()
+            require(drafts, "Every applied draft is corrupted; nothing clean to freeze")
+            require(skipped, "--last-clean-draft given but the last applied draft is already clean")
         draft = drafts[-1]["language_document"].strip() + "\n"
-        require(len(draft.splitlines()) <= 250, "Shared language exceeds 250 lines")
+        repair = None
+        if repair_mojibake:
+            from src.core.api_call import repair_mojibake as _repair
+            repaired = _repair(draft)
+            require(repaired != draft, "--repair-mojibake given but the last applied draft has no reversible mojibake")
+            repair = {"kind": "latin1_utf8_bytewise_mojibake", "before_sha256": hashlib.sha256(draft.encode("utf-8")).hexdigest(),
+                      "latin1_chars_before": sum(1 for ch in draft if 0x80 <= ord(ch) <= 0xFF),
+                      "latin1_chars_after": sum(1 for ch in repaired if 0x80 <= ord(ch) <= 0xFF),
+                      "note": "Deterministic reversal of UTF-8 bytes escaped as Latin-1 code points; approved by the operator at collection."}
+            draft = repaired
+        require(len(draft.strip("\n").split("\n")) <= 250, "Shared language exceeds 250 lines")
         if language_file:
             require(Path(language_file).read_text(encoding="utf-8").strip() == draft.strip(), "Explicit language must match the last applied shared draft")
         glyphs = read(source / "glyphs.json")
         require(glyphs == sample_glyphs("glyphs_tangut", 200, random.Random(config.seed)), "Glyph sample differs from the planned seed")
         handoff = {name: (source / name).read_bytes() for name in ("glyphs.json", "config.json", "language_protocol.json")}
         handoff["swarmish.txt"] = draft.encode("utf-8")
-        extra = {"shared_draft": {"source": "agent_calls.jsonl", "agent_id": drafts[-1].get("agent_id"), "turn": drafts[-1].get("turn"), "lines": len(draft.splitlines())}}
+        extra = {"shared_draft": {"source": "agent_calls.jsonl", "agent_id": drafts[-1].get("agent_id"), "turn": drafts[-1].get("turn"), "lines": len(draft.strip("\n").split("\n")), "repair": repair, "skipped_corrupted_drafts": skipped or None}}
     elif stage == "gameplay":
         parent, _, _ = dependency(root, plan)
         require(summary.get("creation_stop_reason") == "provided_language", "Gameplay must use the frozen language")
@@ -380,6 +402,10 @@ def main():
     archive.add_argument("source", type=Path)
     archive.add_argument("--language-file", type=Path)
     archive.add_argument("--reference-existing", action="store_true")
+    archive.add_argument("--last-clean-draft", action="store_true",
+                         help="freeze the last applied draft whose glyphs are the inventory's, skipping trailing corrupted edits; recorded in the receipt")
+    archive.add_argument("--repair-mojibake", action="store_true",
+                         help="freeze the last applied draft after reversing byte-wise Latin-1 mojibake of its glyphs; recorded in the receipt")
     args = parser.parse_args()
     try:
         if args.command == "validate":
@@ -397,7 +423,8 @@ def main():
                     state = "archived original prompt; " + state
                 print(f"{plan['id']:3} {plan['owner']:12} {plan['stage']:8} {state}")
         elif args.command == "collect":
-            receipt = collect(BATCH, args.id, args.source, args.language_file, args.reference_existing)
+            receipt = collect(BATCH, args.id, args.source, args.language_file, args.reference_existing,
+                              repair_mojibake=args.repair_mojibake, last_clean_draft=args.last_clean_draft)
             print(f"Collected {args.id}: {receipt['raw_path']}")
         else:
             launch(BATCH, args.id, args.prepare_only)

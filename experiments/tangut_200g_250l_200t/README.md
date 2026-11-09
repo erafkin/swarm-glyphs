@@ -3,6 +3,8 @@
 Eight frozen encoders, eight revised-prompt Storm Shelter slots, and thirteen planned
 independent decoder conditions. Four earlier playthroughs are retained as a separate
 [original-prompt archive](gameplay/archive/original_prompt_20261107/README.md).
+A Grok 4.7 family (E09, R09, D17–D20) was added on 2026-11-08; see
+[Grok 4.7 extension](#grok-47-extension-2026-11-08).
 
 ## Current phase: revised Storm Shelter prompt
 
@@ -29,6 +31,7 @@ Sol playthroughs; import her results into the matching slots rather than duplica
 | R06 | Tom Taylor | Haiku seed 1 | E06 | 0 |
 | R07 | Tom Taylor | Gemini seed 1 | E07 | 0 |
 | R08 | Tom Taylor | DeepSeek seed 1 | E08 | 0 |
+| R09 | Emma Krentz | Grok 4.7 seed 1 | E09 | 0 |
 
 Read the operator instructions: [Emma](assignments/emma_krentz.md) and [Tom](assignments/tom.md).
 Each slot owns its config, plan, raw logs, execution record, receipt and English reference.
@@ -120,6 +123,8 @@ are read-only and excluded as sources for the revised decoder plan.
 | D14 | R06, Haiku | Sol: full task |
 | D15 | R07, Gemini | Sol: full task |
 | D16 | R08, DeepSeek | Sol: full task |
+| D17–D18 | R09, Grok 4.7 | Grok 4.7: no task, full task |
+| D19–D20 | R09, Grok 4.7 | Sol: no task, full task |
 
 The original plan has one four-condition set for Sol seed 1. Tom reports that its task-summary
 and wrong-task runs were completed in another task, and Emma completed no-task and full-task
@@ -151,6 +156,74 @@ explicitly set `allow_turn_limited_gameplay_source: true`; decode these unsucces
 playthroughs as recorded, without modifying the language or transcript. Execution records
 and receipts retain the source outcome and receipt hash. All other source checks remain,
 including rejection of archived, interrupted, fatal-error, cost-incomplete or tampered runs.
+
+## Grok 4.7 extension (2026-11-08)
+
+Emma added a fifth encoder family on `x-ai/grok-4.7`, the newest Grok on OpenRouter
+($2 per million input tokens, $6 output, $0.50 cache read; no "Pro" variant exists). The slots
+copy the E07/R07/D08–D10 pattern with the model swapped: config seed 0, so the glyph sample is
+the one E01, E06, E07 and E08 share; eight agents; 200 shared turns in every round; 250 lines;
+16,000 output tokens; the $50 soft cap; the revised win condition; and Tom's 200-turn gameplay cap.
+After two cancelled medium-effort attempts, every Grok phase runs at **low** reasoning effort (the
+Sol decoders D19–D20 keep medium), and round 1 has a document guard: an edit whose glyph characters
+are mostly outside the inventory is not applied and a `[system]` line in the chat says so. The
+mechanics paragraph of the round 1 prompt gained that one sentence. Both are recorded under
+`protocol_differences` in the plans, as is the longer request timeout: the four Grok slot configs raise
+`request_timeout_s` from 300 to 1800 s; the two Sol decoders keep 300 s. The decoder IDs were
+D15–D18 while unlaunched; they became D17–D20 when Tom's Sol follow-ups D15 and D16 landed first.
+
+| Slot | Stage | Model | Briefing |
+| --- | --- | --- | --- |
+| E09 | Encoding | Grok 4.7 | — |
+| R09 | Gameplay on E09 | Grok 4.7 | — |
+| D17 | Decoding R09 | Grok 4.7 | no task |
+| D18 | Decoding R09 | Grok 4.7 | full task |
+| D19 | Decoding R09 | Sol | no task |
+| D20 | Decoding R09 | Sol | full task |
+
+Smoke test before any slot ran (`encoding/E09_grok_seed1/smoke_test/`, four calls through the
+harness client with the real E09 agent_0 system prompt, $0.17 in total):
+
+- Grok tokenizes the 200-glyph sample at 4.99 tokens per Tangut glyph, the same rate as Sol's
+  o200k, so prompt costs project one to one from the Sol runs.
+- Exact reproduction of 20 sampled glyphs: 20 of 20. Structured output with `CREATION_SCHEMA`
+  was accepted and parsed; a first-turn draft of 142 lines used 274 glyphs, none outside the sample.
+- The one round 1 style turn at medium effort produced 21,831 reasoning tokens and 24,791
+  completion tokens in 373 s for $0.154. Sol averaged about 200 completion tokens per encoding
+  turn. Reasoning is not bounded by `max_tokens` on this route, and the call outlasted the
+  300 s `request_timeout_s` without failing. On the same logged turn, low effort used 9,901 reasoning
+  tokens in 122 s for $0.11 against 45,958 in 642 s for $0.36 at medium, and a reasoning token budget
+  was ignored (`smoke_test/latency_result_2026-11-08.json`).
+- Two E09 attempts on 2026-11-08 were cancelled and preserved under `encoding/E09_grok_seed1/aborted_*`
+  with `failure.json` notes: surrogate poisoning, one draft in eight with every glyph corrupted by
+  mis-numbered JSON escapes, and last-writer-wins thrash between lineages at 6-8 minute turns, with no
+  agent done after 59 replies and about $26. Combined spend on failed attempts is about $29.
+- **E09 result (third attempt, 2026-11-08 16:31–17:06):** all_done after 147 scheduled turns, 34 minutes
+  and $11.94; reasoning averaged 6.4k tokens and 95 s per turn at low effort. The guard rejected 20 drafts
+  of renumbered-escape garbage. A second defect, every glyph's UTF-8 bytes written as Latin-1 characters,
+  passed the guard in 8 applied drafts and one export; the client now reverses it and the guard counts
+  those characters. The five last applied edits were such mojibake, so at Emma's instruction the frozen
+  handoff is the last clean applied draft, agent_7 turn 24, 140 lines, 328 inventory glyphs, applied
+  unchanged by six agents in the preceding minute (`receipt.json` lists the skipped records; the plan
+  records the deviation). The mojibake edits reverse to a 117-line sibling of the same grammar with a
+  different lexicon, which most final exports resemble; round 2 sees only the frozen file.
+- **R09 result (2026-11-08 17:20–17:41):** turn_limit_reached after 200 shared turns, 20.7 minutes and
+  $15.60, not escaped, still at the cabinet with zero room actions and zero invalid attempts. Every reply
+  chose to wait; the private notes show the team agreeing on two of the four cabinet digits in Swarmish and
+  refusing to enter a code until all four were known. Messages were entirely inventory glyphs apart from
+  the renumbered-escape corruption, which the glyph check dropped. Like R06 and R08, it can feed decoders
+  only with `allow_turn_limited_gameplay_source: true`.
+- **D17–D20 results (2026-11-08 19:26–19:44, concurrent):** Grok no task all done after 127 turns for
+  $21.92; Grok full task all done after 82 turns for $13.33; Sol no task hit the 200-turn cap with five of
+  eight done for $43.03; Sol full task all done after 197 turns for $35.52. $113.81 in total; the Sol runs
+  are the dearest decoders so far because each call carries the 200-message transcript. Reports, lost
+  turns and a qualitative comparison are in the [decoder results](decoding/README.md#grok-47-family-d17d20).
+  No cosine scores until the R09 English reference is translated.
+- E09 and R09 ran with an interim client that re-read `.env` on a credit refusal and continued on
+  `OPENROUTER_API_KEY_FALLBACK`; both rolled over to it silently. That code was replaced at merge by
+  Tom's `OpenRouterClient` (`OPENROUTER_API_KEY_SECONDARY`, repository README). The decoders D17–D20
+  were started with the remaining key as `OPENROUTER_API_KEY` in the process environment, which
+  `load_dotenv` does not override. Receipts record every call's cost either way.
 
 ## English references
 

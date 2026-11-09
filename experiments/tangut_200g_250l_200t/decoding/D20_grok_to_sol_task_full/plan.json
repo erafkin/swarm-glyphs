@@ -1,0 +1,22 @@
+{
+  "id": "D20",
+  "stage": "decoding",
+  "owner": "emma_krentz",
+  "model": "openai/gpt-6.1-sol",
+  "encoder_family": "grok",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": "R09",
+  "condition": "task_full",
+  "approved_deviations": [],
+  "prompt_condition": "escape_and_stay_undecoded",
+  "allow_turn_limited_gameplay_source": true,
+  "protocol_differences": [
+    {
+      "field": "reasoning_effort",
+      "protocol": "medium",
+      "value": "low",
+      "reason": "Chosen by Emma on 2026-11-08 after two cancelled medium-effort attempts: on the same logged turn, medium used 45,958 reasoning tokens in 642 s for $0.36 and low used 9,901 in 122 s for $0.11 with clean glyphs; a reasoning token budget was ignored. Precedent for a per-model effort: DeepSeek V4-Pro ran at high."
+    }
+  ]
+}

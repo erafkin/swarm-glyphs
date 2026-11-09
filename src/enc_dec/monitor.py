@@ -42,7 +42,9 @@ def read_public_messages(path: Path, n_agents: int) -> list[dict]:
     allowed_senders = {f"agent_{i}" for i in range(n_agents)} | {TASK_SENDER}
     if not path.exists():
         return messages  # A silent custom task with feedback disabled has no chat stream.
-    for line in path.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").split("\n"):  # not splitlines: C1 controls are not record breaks
+        if not line.strip():
+            continue
         row = json.loads(line)
         if row["sender"] not in allowed_senders or not isinstance(row["text"], str):
             raise ValueError("Transcript sender/text does not match the saved task configuration")

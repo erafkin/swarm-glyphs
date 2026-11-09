@@ -2,7 +2,7 @@
   "schema_version": 2,
   "batch_id": "tangut_200g_250l_200t",
   "created_date": "2026-11-07",
-  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and sixteen decoder conditions targeting the revised primary playthroughs.",
+  "description": "Eight frozen encoders, four archived original-prompt gameplay attempts, eight revised-prompt gameplay slots, and sixteen decoder conditions targeting the revised primary playthroughs. Extended 2026-11-08 with a Grok 4.7 family: encoder E09, gameplay R09 and decoders D17–D20.",
   "repository": "https://github.com/erafkin/swarm-glyphs",
   "planning_budget_usd": 350,
   "estimated_all_new_runs_usd": 224.575,
@@ -25,7 +25,8 @@
       "E01",
       "E06",
       "E07",
-      "E08"
+      "E08",
+      "E09"
     ],
     "same_sample": "Primary encoder config seeds are all 0, so their sampled Tangut set matches under the same dictionary and sampler.",
     "budget_note": "$350 is a planning budget, not a global enforced cap. Each run retains a $50 soft cap; in-flight/export calls may overshoot. Check receipts across both operators before more paid runs.",
@@ -38,7 +39,8 @@
       "R05",
       "R06",
       "R07",
-      "R08"
+      "R08",
+      "R09"
     ],
     "historical_gameplay_ids": [
       "T01",
@@ -46,11 +48,12 @@
       "T03",
       "T04"
     ],
-    "gameplay_stop_rule": "R06–R08 stop on escape, 200 shared scheduled task turns, the $50 soft cost cap, fatal error, or operator intervention. R01–R05 preserve Emma’s existing no-turn-cap configuration; record their actual settings when importing. No gameplay time cap.",
+    "gameplay_stop_rule": "R06–R09 stop on escape, 200 shared scheduled task turns, the $50 soft cost cap, fatal error, or operator intervention. R01–R05 preserve Emma’s existing no-turn-cap configuration; record their actual settings when importing. No gameplay time cap.",
     "gameplay_turn_limit_ids": [
       "R06",
       "R07",
-      "R08"
+      "R08",
+      "R09"
     ]
   },
   "owners": {
@@ -61,14 +64,22 @@
         "E02",
         "E03",
         "E04",
-        "E05"
+        "E05",
+        "E09"
       ],
       "gameplay_ids": [
         "R01",
         "R02",
         "R03",
         "R04",
-        "R05"
+        "R05",
+        "R09"
+      ],
+      "decoding_ids": [
+        "D17",
+        "D18",
+        "D19",
+        "D20"
       ]
     },
     "tom": {
@@ -281,6 +292,56 @@
     {
       "id": "D16",
       "path": "decoding/D16_deepseek_to_sol_task_full"
+    },
+    {
+      "id": "E09",
+      "path": "encoding/E09_grok_seed1"
+    },
+    {
+      "id": "R09",
+      "path": "gameplay/R09_grok_seed1"
+    },
+    {
+      "id": "D17",
+      "path": "decoding/D17_grok_to_grok_no_task"
+    },
+    {
+      "id": "D18",
+      "path": "decoding/D18_grok_to_grok_task_full"
+    },
+    {
+      "id": "D19",
+      "path": "decoding/D19_grok_to_sol_no_task"
+    },
+    {
+      "id": "D20",
+      "path": "decoding/D20_grok_to_sol_task_full"
     }
-  ]
+  ],
+  "grok_extension_2026_11_08": {
+    "model": "x-ai/grok-4.7",
+    "openrouter_pricing_per_million": {
+      "input": 2.0,
+      "output": 6.0,
+      "cache_read": 0.5
+    },
+    "runs": [
+      "E09",
+      "R09",
+      "D15",
+      "D16",
+      "D17",
+      "D18"
+    ],
+    "decoder_cells": {
+      "D17": "Grok, no task",
+      "D18": "Grok, full task",
+      "D19": "Sol, no task",
+      "D20": "Sol, full task"
+    },
+    "estimated_usd": "about 60-85 at low effort (Grok turns about $0.11); two cancelled medium-effort attempts cost about $29",
+    "note": "Same protocol as E07/R07/D08–D10: config seed 0, 200 glyphs, 8 agents, 200 turns, 250 lines, low reasoning for Grok (medium for the Sol decoders), 16k tokens, $50 soft cap, 200-turn gameplay cap, revised win condition.",
+    "reasoning_effort": "low (Grok phases and Grok decoders); Sol decoders medium",
+    "round1_document_guard": "rejects documents whose glyph characters are mostly outside the inventory; see E09 plan"
+  }
 }

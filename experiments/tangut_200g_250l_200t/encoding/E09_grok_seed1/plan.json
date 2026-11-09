@@ -1,0 +1,55 @@
+{
+  "id": "E09",
+  "stage": "encoding",
+  "owner": "emma_krentz",
+  "model": "x-ai/grok-4.7",
+  "encoder_family": "grok",
+  "seed_index": 1,
+  "config_seed": 0,
+  "source_run_id": null,
+  "condition": null,
+  "approved_deviations": [
+    {
+      "field": "shared_draft_selection",
+      "planned": "last applied shared draft",
+      "observed": "last uncorrupted applied draft (agent_7 turn 24), skipping five trailing edits whose glyphs were byte-wise Latin-1 mojibake",
+      "reason": "Emma's instruction on 2026-11-08: 'just use the last edit that wasn't mojibake'. The skipped records are listed in receipt.json shared_draft.skipped_corrupted_drafts; the mojibake edits reverse to a 117-line document that most final exports resemble, but the operator chose the last clean applied draft as the protocol intends."
+    }
+  ],
+  "protocol_differences": [
+    {
+      "field": "request_timeout_s",
+      "protocol": 300,
+      "value": 1800,
+      "reason": "Grok 4.7 turns in the aborted first attempt ran 620-880 s at medium effort (45k reasoning tokens on average), so 900 s risked SDK retries of generations the provider may still bill. Raised to 1800 s on 2026-11-08."
+    },
+    {
+      "field": "reasoning_effort",
+      "protocol": "medium",
+      "value": "low",
+      "reason": "Chosen by Emma on 2026-11-08 after two cancelled medium-effort attempts: on the same logged turn, medium used 45,958 reasoning tokens in 642 s for $0.36 and low used 9,901 in 122 s for $0.11 with clean glyphs; a reasoning token budget was ignored. Precedent for a per-model effort: DeepSeek V4-Pro ran at high."
+    },
+    {
+      "field": "monitor_reasoning_effort",
+      "protocol": "medium",
+      "value": "low",
+      "reason": "Same choice as reasoning_effort; Grok decoders and Grok phases run at low. Sol decoders keep medium."
+    },
+    {
+      "field": "round1_document_guard",
+      "protocol": "every returned document is applied (last writer wins)",
+      "value": "a document whose glyph characters are mostly outside the inventory is not applied; a [system] line in the chat says so; the mechanics paragraph of the system prompt gained one sentence",
+      "reason": "In the cancelled attempts one draft in eight had every glyph corrupted because Grok wrote the inventory as JSON escapes numbered from an arbitrary base; each such draft forced the team to rewrite. The guard rejects only documents with at least 20 glyph-like characters of which under half are inventory glyphs."
+    }
+  ],
+  "aborted_attempts": [
+    "aborted_20261108_142332",
+    "aborted_20261108_144644"
+  ],
+  "known_issues": [
+    {
+      "issue": "see_aborted_attempts",
+      "detail": "Both 2026-11-08 attempts were cancelled; their failure.json files explain the surrogate poisoning, the glyph-escape corruption and the stale-edit thrash. The next attempt's settings and guards are recorded in protocol_differences when chosen."
+    }
+  ]
+}
